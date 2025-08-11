@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about common C programming errors with examples, fixes, and clear explanations to help you debug and write error-free code." />
+  <meta name="keywords" content="C Programming Errors, C Syntax Mistakes, Debugging in C, Programming Examples, Common C Bugs, C Language Fixes" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Top 10 Common C Programming Errors — Examples, Fixes & Explanations | Salman Blogs</title>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Top 10 Common C Programming Errors — Examples, Fixes & Explanations" />
+  <meta property="og:description" content="See 10 common C programming mistakes with their corrected versions and explanations to improve your coding skills." />
+  <meta property="og:image" content="https://salmanblogs.com/images/programming/c-errors-fixes.png" />
+  <meta property="og:url" content="https://salmanblogs.com/common-c-programming-errors.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Top 10 Common C Programming Errors — Examples, Fixes & Explanations" />
+  <meta name="twitter:description" content="Learn how to fix common C programming errors with examples and explanations." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/programming/c-errors-fixes.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<!--  Use of internal CSS.  -->
+<style>
+code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+</style>
+<body>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Top 10 Common C Programming Errors Examples, Fixes &amp; Explanations</h1>
+    <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>
+    <img src="images/10-CS-IMAGES/errors in c.png" alt="Common C Programming Errors" class="post-image" />
+
+    <div class="post-content">
+      <h2>Introduction</h2>
+      <p>C is a powerful programming language, but beginners often make small mistakes that can cause big problems. Here are 10 common C programming errors, their corrected versions, and explanations so you can avoid them in your own code.</p>
+
+      <h2>Examples &amp; Fixes</h2>
+      <ol>
+        <li>
+          <strong>Missing Semicolon</strong>
+          <pre><code>// With Error
+#include &lt;stdio.h&gt;
+
+int main() {
+    int number = 42
+    printf("Number: %d\n", number);
+    return 0;
+}</code></pre>
+          <pre><code>// Fixed
+#include &lt;stdio.h&gt;
+
+int main() {
+    int number = 42; // Added semicolon
+    printf("Number: %d\n", number);
+    return 0;
+}</code></pre>
+          <p><em>Explanation:</em> In C, each statement must end with a semicolon. Without it, the compiler will throw a syntax error.</p>
+        </li>
+
+        <li>
+          <strong>Missing Semicolon in Multiple Declarations</strong>
+          <pre><code>// With Error
+#include &lt;stdio.h&gt;
+
+int main() {
+    int x = 5, y = 10
+    printf("x + y = %d\n", x + y);
+    return 0;
+}</code></pre>
+          <pre><code>// Fixed
+#include &lt;stdio.h&gt;
+
+int main() {
+    int x = 5, y = 10; // Added semicolon
+    printf("x + y = %d\n", x + y);
+    return 0;
+}</code></pre>
+          <p><em>Explanation:</em> When declaring multiple variables in one line, the declaration must end with a semicolon.</p>
+        </li>
+
+        <li>
+          <strong>Undeclared Variable</strong>
+          <pre><code>// With Error
+#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 7;
+    sum = a + 3;
+    printf("Sum = %d\n", sum);
+    return 0;
+}</code></pre>
+          <pre><code>// Fixed
+#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 7;
+    int sum = a + 3; // Declared sum before using it
+    printf("Sum = %d\n", sum);
+    return 0;
+}</code></pre>
+          <p><em>Explanation:</em> All variables must be declared before they are used in C.</p>
+        </li>
+
+        <li>
+          <strong>Typo in Variable Name</strong>
+          <pre><code>// With Error
+#include &lt;stdio.h&gt;
+
+int main() {
+    int height = 180;
+    printf("Height: %d\n", heigth);
+    return 0;
+}</code></pre>
+          <pre><code>// Fixed
+#include &lt;stdio.h&gt;
+
+int main() {
+    int height = 180;
+    printf("Height: %d\n", height); // Corrected spelling
+    return 0;
+}</code></pre>
+          <p><em>Explanation:</em> Misspelled variable names cause compile-time errors because the compiler cannot find that identifier.</p>
+        </li>
+
+        <li>
+          <strong>Wrong Format Specifier for Float</strong>
+          <pre><code>// With Error
+#include &lt;stdio.h&gt;
+
+int main() {
+    float price = 19.99;
+    printf("Price: %d\n", price);
+    return 0;
+}</code></pre>
+          <pre><code>// Fixed
+#include &lt;stdio.h&gt;
+
+int main() {
+    float price = 19.99;
+    printf("Price: %.2f\n", price); // Changed %d to %.2f
+    return 0;
+}</code></pre>
+          <p><em>Explanation:</em> %d is for integers; %f or %.2f is for floating-point numbers.</p>
+        </li>
+
+        <li>
+          <strong>Wrong Format Specifier for Integer</strong>
+          <pre><code>// With Error
+#include &lt;stdio.h&gt;
+
+int main() {
+    int age = 25;
+    printf("Age: %f\n", age);
+    return 0;
+}</code></pre>
+          <pre><code>// Fixed
+#include &lt;stdio.h&gt;
+
+int main() {
+    int age = 25;
+    printf("Age: %d\n", age); // Changed %f to %d
+    return 0;
+}</code></pre>
+          <p><em>Explanation:</em> %f is for floats/doubles; %d is for integers.</p>
+        </li>
+
+        <li>
+          <strong>Missing Closing Quote in String</strong>
+          <pre><code>// With Error
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!\n);
+    return 0;
+}</code></pre>
+          <pre><code>// Fixed
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!\n"); // Added closing quote
+    return 0;
+}</code></pre>
+          <p><em>Explanation:</em> Strings in C must start and end with double quotes.</p>
+        </li>
+
+        <li>
+          <strong>Mismatched Braces</strong>
+          <pre><code>// With Error
+#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 10;
+    if (a > 5) {
+        printf("a is greater than 5\n");
+    // Missing closing brace
+}</code></pre>
+          <pre><code>// Fixed
+#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 10;
+    if (a > 5) {
+        printf("a is greater than 5\n");
+    } // Closed if block
+} // Closed main function
+</code></pre>
+          <p><em>Explanation:</em> Every opening brace { must have a matching closing }.</p>
+        </li>
+
+        <li>
+          <strong>Extra Comma in Variable Declaration</strong>
+          <pre><code>// With Error
+#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b,;
+    a = 2;
+    b = 3;
+    printf("Sum = %d\n", a + b);
+    return 0;
+}</code></pre>
+          <pre><code>// Fixed
+#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b; // Removed extra comma
+    a = 2;
+    b = 3;
+    printf("Sum = %d\n", a + b);
+    return 0;
+}</code></pre>
+          <p><em>Explanation:</em> Extra commas are not allowed in variable declarations.</p>
+        </li>
+
+        <li>
+          <strong>Wrong Return Type for main</strong>
+          <pre><code>// With Error
+#include &lt;stdio.h&gt;
+
+void main() {
+    printf("Program Running...\n");
+    return 0;
+}</code></pre>
+          <pre><code>// Fixed
+#include &lt;stdio.h&gt;
+
+int main() { // Changed void to int
+    printf("Program Running...\n");
+    return 0; // Proper return value for int main
+}</code></pre>
+          <p><em>Explanation:</em> The standard return type for main is int, and it should return 0 on success.</p>
+        </li>
+      </ol>
+
+      <h2>Conclusion</h2>
+      <p>Most C programming errors are small syntax issues or misunderstandings about the language. By learning to spot these mistakes early, you can save time debugging and write cleaner, more reliable code.</p>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+</body>
+</html>

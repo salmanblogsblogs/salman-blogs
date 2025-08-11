@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Statements in C: Sequence, Selection & Repetition Explained</title>
+    <meta name="description" content="Learn about control statements in C programming including Sequence, Selection, and Repetition with examples, quick notes, and MCQs.">
+    <meta name="keywords" content="Control Statements in C, Sequence in C, Selection in C, Repetition in C, C programming loops, C programming decision making">
+    <meta property="og:title" content="Control Statements in C: Sequence, Selection & Repetition Explained">
+    <meta property="og:description" content="Learn about control statements in C programming including Sequence, Selection, and Repetition with examples, quick notes, and MCQs.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="control-statements-c.jpg">
+    <meta property="og:url" content="https://salmanblogs.com/control-statements-c.html">
+    <meta name="twitter:title" content="Control Statements in C: Sequence, Selection & Repetition Explained">
+    <meta name="twitter:description" content="Learn about control statements in C programming including Sequence, Selection, and Repetition with examples, quick notes, and MCQs.">
+    <meta name="twitter:image" content="control-statements-c.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Use of internal css. -->
+ <style>
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #0077cc;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+ </style>
+    <header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+    <main class="post-container">
+        <article class="blog-post">
+            <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>            
+            <h1 class="post-title">Control Statements in C: Sequence, Selection & Repetition Explained</h1>
+            <img src="images/10-CS-IMAGES/control-statements.png" alt="chapter-8-lecture1-notes" class="post-image" />
+            <p>Control Statements are instructions that control the flow of execution in a C program. They make programs flexible, interactive, and efficient by adding decision-making and looping capabilities.</p>
+
+            <h2>Types of Control Statements in C</h2>
+            <p>There are three main types:</p>
+
+            <h3>1. Sequence (Sequential Control)</h3>
+            <p><strong>Definition:</strong> The default way of executing statements — one after another.</p>
+            <p><strong>How it works:</strong> No jumps, no decisions, no loops — just straight execution.</p>
+            <pre><code>printf("Enter number: ");
+scanf("%d", &num);
+printf("You entered %d", num);
+</code></pre>
+            <p>Here, each statement runs in order.</p>
+
+            <h3>2. Selection (Decision-Making)</h3>
+            <p><strong>Definition:</strong> Executes a block of code only if a certain condition is true.</p>
+            <p><strong>Purpose:</strong> Allows branching (choosing between two or more paths).</p>
+            <p><strong>Common statements:</strong> if, if-else, if-else if-else, switch</p>
+            <pre><code>if (marks >= 50) {
+    printf("Pass");
+} else {
+    printf("Fail");
+}
+</code></pre>
+
+            <h3>3. Repetition (Looping)</h3>
+            <p><strong>Definition:</strong> Executes a block of code multiple times until a condition becomes false.</p>
+            <p><strong>Purpose:</strong> Avoids repeating code manually.</p>
+            <p><strong>Common loops:</strong> for loop, while loop, do-while loop</p>
+            <pre><code>for (int i = 1; i <= 5; i++) {
+    printf("%d\n", i);
+}
+</code></pre>
+
+            <h2>Summary Table</h2>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Examples in C</th>
+                </tr>
+                <tr>
+                    <td>Sequence</td>
+                    <td>Runs statements in order</td>
+                    <td>Normal statement execution</td>
+                </tr>
+                <tr>
+                    <td>Selection</td>
+                    <td>Chooses path based on condition</td>
+                    <td>if, if-else, switch</td>
+                </tr>
+                <tr>
+                    <td>Repetition</td>
+                    <td>Repeats code until a condition is false</td>
+                    <td>for, while, do-while</td>
+                </tr>
+            </table>
+
+            <h2>Quick Notes – Control Statements in C</h2>
+            <ul>
+                <li>Control Statements – Instructions that control the flow of execution in a C program.</li>
+                <li>Three Main Types:
+                    <ul>
+                        <li><strong>Sequence:</strong> Default execution; runs statements one after another in order.</li>
+                        <li><strong>Selection:</strong> Decision-making; chooses which code block to run based on conditions (if, if-else, switch).</li>
+                        <li><strong>Repetition:</strong> Looping; repeats a block of code multiple times until a condition is false (for, while, do-while).</li>
+                    </ul>
+                </li>
+                <li><strong>Purpose:</strong> To make programs flexible, interactive, and efficient by adding decision-making and looping capabilities.</li>
+            </ul>
+
+            <h2>MCQs</h2>
+            <p><strong>1. Which control statement type runs statements one after another?</strong></p>
+            <ul>
+                <li>a) Sequence</li>
+                <li>b) Selection</li>
+                <li>c) Repetition</li>
+                <li>d) Function</li>
+            </ul>
+            <p><strong>Answer:</strong> a) Sequence</p>
+
+            <p><strong>2. Which control statement allows decision-making?</strong></p>
+            <ul>
+                <li>a) Sequence</li>
+                <li>b) Selection</li>
+                <li>c) Looping</li>
+                <li>d) Recursion</li>
+            </ul>
+            <p><strong>Answer:</strong> b) Selection</p>
+
+            <p><strong>3. Which control statement repeats a block of code?</strong></p>
+            <ul>
+                <li>a) Looping</li>
+                <li>b) Selection</li>
+                <li>c) Sequence</li>
+                <li>d) Condition</li>
+            </ul>
+            <p><strong>Answer:</strong> a) Looping</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Salman Blogs. All rights reserved.</p>
+    </footer>
+
+    <script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+</body>
+</html>
