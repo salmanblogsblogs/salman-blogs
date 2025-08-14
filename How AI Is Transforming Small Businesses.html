@@ -103,7 +103,26 @@
     <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
   </footer>
 
-  <script>
+
+  <scrip<!-- ADDING COMMENTS. -->
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+    this.page.url = window.location.href;  // Your page's canonical URL
+    this.page.identifier = document.title; // A unique identifier for the page
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://salmanblogs-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>
+    Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>t>
     document.getElementById("navToggle").addEventListener("click", function () {
       document.getElementById("navLinks").classList.toggle("show");
     });
