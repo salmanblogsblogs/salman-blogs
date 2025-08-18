@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://salmanblogs.com/sitemap.xml
+Sitemap: 
+https://salmanblogs.com/sitemap.xml
