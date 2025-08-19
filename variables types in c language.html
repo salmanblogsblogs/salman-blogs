@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn C programs using variables (int, float, char), with examples, practice exercises, and MCQs on data types." />
+  <meta name="keywords" content="C Programming, Variables, int, float, char, printf, Data Types, MCQs" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>C Programs with Variables — Examples, Practice & MCQs | Salman Blogs</title>
+
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" 
+    data-cbid="7033a1a8-7ffd-4c75-b8ea-af3497426e3f" 
+    data-blockingmode="auto" type="text/javascript"></script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2195317151918571"
+  crossorigin="anonymous"></script>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="C Programs with Variables — Examples, Practice & MCQs" />
+  <meta property="og:description" content="Understand variables in C with simple programs, practice statements, and MCQs on data types." />
+  <meta property="og:image" content="https://salmanblogs.com/images/technology/c-programming-variables.png" />
+  <meta property="og:url" content="https://salmanblogs.com/c-programming-variables.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="C Programs with Variables — Examples, Practice & MCQs" />
+  <meta name="twitter:description" content="Learn how to use variables in C with examples, exercises, and MCQs on data types." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/c-programming-variables.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">C Programs with Variables</h1>
+    <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>
+    <img src="images/10-CS-IMAGES/variabes-types-in-c-language.png" alt="c-programming-variables" class="post-image" />
+
+    <div class="post-content">
+      <h3>Single Variable Programs</h3>
+
+      <h4>1. Program with int</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int age = 22;
+    printf("My age is %d\n", age);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong><br />My age is 22</p>
+
+      <h4>2. Program with float</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    float height = 5.9;
+    printf("My height is %.1f feet\n", height);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong><br />My height is 5.9 feet</p>
+
+      <h4>3. Program with char</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    char grade = 'A';
+    printf("My grade is %c\n", grade);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong><br />My grade is A</p>
+
+      <h3>Two Variables Programs</h3>
+
+      <h4>4. Program with int and float</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int rollNo = 101;
+    float marks = 87.5;
+    printf("Roll No: %d\n", rollNo);
+    printf("Marks: %.1f\n", marks);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong><br />Roll No: 101<br />Marks: 87.5</p>
+
+      <h4>5. Program with int and char</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int age = 20;
+    char grade = 'B';
+    printf("Age: %d\n", age);
+    printf("Grade: %c\n", grade);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong><br />Age: 20<br />Grade: B</p>
+
+      <h3>Three Variables Program</h3>
+
+      <h4>6. Program with int, float, and char</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int id = 123;
+    float salary = 55000.75;
+    char grade = 'A';
+    
+    printf("Employee ID: %d\n", id);
+    printf("Salary: %.2f\n", salary);
+    printf("Grade: %c\n", grade);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong><br />Employee ID: 123<br />Salary: 55000.75<br />Grade: A</p>
+
+      <h3>Programs with Same Type Variables</h3>
+
+      <h4>1. Using int x, y, z</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int x = 10, y = 20, z = 30;
+    printf("Value of x: %d\n", x);
+    printf("Value of y: %d\n", y);
+    printf("Value of z: %d\n", z);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong><br />Value of x: 10<br />Value of y: 20<br />Value of z: 30</p>
+
+      <h4>2. Using float a, b, c</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    float a = 2.5, b = 4.8, c = 6.3;
+    printf("Value of a: %.1f\n", a);
+    printf("Value of b: %.1f\n", b);
+    printf("Value of c: %.1f\n", c);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong><br />Value of a: 2.5<br />Value of b: 4.8<br />Value of c: 6.3</p>
+
+      <h4>3. Using char ch1, ch2, ch3</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    char ch1 = 'A', ch2 = 'B', ch3 = 'C';
+    printf("First character: %c\n", ch1);
+    printf("Second character: %c\n", ch2);
+    printf("Third character: %c\n", ch3);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong><br />First character: A<br />Second character: B<br />Third character: C</p>
+
+      <h3>Programs with Same Type Variables (Single Line printf)</h3>
+
+      <h4>1. Using int x, y, z</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int x = 10, y = 20, z = 30;
+    printf("x = %d, y = %d, z = %d\n", x, y, z);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong><br />x = 10, y = 20, z = 30</p>
+
+      <h4>2. Using float a, b, c</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    float a = 2.5, b = 4.8, c = 6.3;
+    printf("a = %.1f, b = %.1f, c = %.1f\n", a, b, c);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong><br />a = 2.5, b = 4.8, c = 6.3</p>
+
+      <h4>3. Using char ch1, ch2, ch3</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    char ch1 = 'A', ch2 = 'B', ch3 = 'C';
+    printf("Characters: %c, %c, %c\n", ch1, ch2, ch3);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong><br />Characters: A, B, C</p>
+
+      <h2>Practice Statements</h2>
+      <ul>
+        <li>Declare 3 integer variables a, b, c with any values and print them in a single line using printf.</li>
+        <li>Declare 2 float variables price and discount, assign values, and print them with 1 decimal place.</li>
+        <li>Declare 3 char variables ch1, ch2, ch3 (e.g., 'X', 'Y', 'Z') and print them in one line.</li>
+        <li>Declare an integer rollNo, a float marks, and a char grade, and print them in one printf.</li>
+        <li>Declare 2 integer variables by any name and print only the second one.</li>
+      </ul>
+
+      <h2>MCQs on Data Types (int, float, char)</h2>
+      <ol>
+        <li>
+          <strong>Which of the following is the correct format specifier for int in C?</strong><br />
+          a) %d<br />b) %f<br />c) %c<br />d) %s<br />
+          <p><strong>Answer:</strong> a) %d</p>
+        </li>
+        <li>
+          <strong>What is the size of int in most 32-bit compilers?</strong><br />
+          a) 1 byte<br />b) 2 bytes<br />c) 4 bytes<br />d) 8 bytes<br />
+          <p><strong>Answer:</strong> c) 4 bytes</p>
+        </li>
+        <li>
+          <strong>Which of the following can store decimal (fractional) values in C?</strong><br />
+          a) int<br />b) char<br />c) float<br />d) double<br />
+          <p><strong>Answer:</strong> c) float</p>
+        </li>
+        <li>
+          <strong>What is the correct format specifier for float in printf?</strong><br />
+          a) %f<br />b) %d<br />c) %c<br />d) %lf<br />
+          <p><strong>Answer:</strong> a) %f</p>
+        </li>
+        <li>
+          <strong>Which data type is best to store a single character like 'A'?</strong><br />
+          a) int<br />b) char<br />c) float<br />d) double<br />
+          <p><strong>Answer:</strong> b) char</p>
+        </li>
+        <li>
+          <strong>What is the output of the following code?</strong><br />
+          <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    char ch = 'X';
+    printf("%c", ch);
+    return 0;
+}</code></pre>
+          a) X<br />b) x<br />c) 88<br />d) Error<br />
+          <p><strong>Answer:</strong> a) X</p>
+        </li>
+        <li>
+          <strong>What will be the output of this program?</strong><br />
+          <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int a = 5;
+    float b = 3.2;
+    printf("%d %.1f", a, b);
+    return 0;
+}</code></pre>
+          a) 5 3.2<br />b) a b<br />c) 5 3<br />d) Error<br />
+          <p><strong>Answer:</strong> a) 5 3.2</p>
+        </li>
+        <li>
+          <strong>Which of the following is true about char in C?</strong><br />
+          a) It can store multiple letters<br />b) It always stores ASCII values of characters<br />c) It is 4 bytes in size<br />d) It is same as float<br />
+          <p><strong>Answer:</strong> b) It always stores ASCII values of characters</p>
+        </li>
+        <li>
+          <strong>Which of these can represent both positive and negative numbers?</strong><br />
+          a) int<br />b) char<br />c) float<br />d) All of the above<br />
+          <p><strong>Answer:</strong> d) All of the above</p>
+        </li>
+        <li>
+          <strong>Which of the following is invalid in C?</strong><br />
+          a) int age = 20;<br />b) float price = 99.99;<br />c) char name = "Ali";<br />d) char grade = 'A';<br />
+          <p><strong>Answer:</strong> c) char name = "Ali"; (A char can only store one character, not a string).</p>
+        </li>
+      </ol>
+    </div>
+  </article>
+</main>
+
+<!-- Comments -->
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+    this.page.url = window.location.href;  
+    this.page.identifier = document.title; 
+};
+
+(function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://salmanblogs-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>
+    Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+<footer>
+  <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+</body>
+</html>
