@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Auto-generated SEO -->
+  <meta name="description" content="Learn Computer Networks: clear definitions of network, nodes, links, switches, routers; packet-switching example, an easy air-travel analogy, quick notes, and MCQs with answers." />
+  <meta name="keywords" content="Computer Network, Nodes, Links, Switch, Router, Packet Switching, LAN, WAN, Networking Basics, MCQs" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Computer Network — Definitions, Quick Notes, Analogy & MCQs | Salman Blogs</title>
+
+  <!-- Cookiebot -->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" 
+    data-cbid="7033a1a8-7ffd-4c75-b8ea-af3497426e3f" 
+    data-blockingmode="auto" type="text/javascript"></script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2195317151918571"
+  crossorigin="anonymous"></script>
+
+  <!-- Open Graph Meta Tags (Auto-generated) -->
+  <meta property="og:title" content="Computer Network — Definitions, Quick Notes, Analogy & MCQs" />
+  <meta property="og:description" content="Understand networks with simple definitions, packet-switching example, an air-travel analogy, concise notes, and MCQs with answers." />
+  <meta property="og:image" content="https://salmanblogs.com/images/technology/computer-network-basics.png" />
+  <meta property="og:url" content="https://salmanblogs.com/computer-network-basics.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Meta Tags (Auto-generated) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Computer Network — Definitions, Quick Notes, Analogy & MCQs" />
+  <meta name="twitter:description" content="Learn core networking terms (nodes, links, switches, routers), packet switching, analogy, notes, and MCQs." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/computer-network-basics.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Computer Network — Basics, Examples & MCQs</h1>
+    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+    <img src="images/9-CS-IMAGES/chapter 6/chapter-6-lecture1-notes.png" alt="computer-network-basics" class="post-image" />
+
+    <div class="post-content">
+      <h2>Full Definitions</h2>
+
+      <h3>Computer Network</h3>
+      <p>
+        A computer network is a system of two or more connected devices (such as computers, printers, and smartphones) 
+        that can exchange data and share resources. It allows communication and collaboration between devices. 
+        Networks can be small, like a Local Area Network (LAN) inside a home or office, or very large, like a 
+        Wide Area Network (WAN), which includes the Internet.
+      </p>
+
+      <h3>Nodes</h3>
+      <p>
+        Nodes are the devices connected to a network. These devices can send, receive, or process data. 
+        Examples include computers, smartphones, tablets, servers, and printers. Each node in a network has an address that identifies it.
+      </p>
+
+      <h3>Links</h3>
+      <p>
+        Links are the communication channels that connect nodes together in a network. They can be wired links 
+        (like Ethernet cables and fiber optic cables) or wireless links (like Wi-Fi, Bluetooth, or mobile signals). 
+        Links allow data to travel between devices.
+      </p>
+
+      <h3>Switches</h3>
+      <p>
+        A switch is a device used inside a network to connect multiple nodes. It receives data packets, reads their 
+        destination MAC address, and forwards them only to the correct device (instead of sending to all). 
+        This makes communication efficient and secure.
+      </p>
+
+      <h3>Routers</h3>
+      <p>
+        A router is a device that connects different networks together, such as connecting a home network (LAN) to the Internet (WAN). 
+        Routers read the destination IP address of data packets and choose the best path to deliver them to the final destination.
+      </p>
+
+      <h3>Packet Switching Example (File Transfer)</h3>
+      <p>
+        When you send a file to another computer in the network, the file is broken into smaller parts called packets. 
+        Each packet has a destination address. A switch forwards the packets only to the correct device. 
+        The receiving computer reassembles the packets into the complete file.
+      </p>
+
+      <h3>Analogy: Air Travel System</h3>
+      <p>
+        Computer networks work like air travel:
+        <br />Passengers = Data
+        <br />Groups of passengers = Packets
+        <br />Flights = Paths data takes
+        <br />Airports = Routers
+        <br />Even if groups (packets) take different flights (paths) through different airports (routers), 
+        they still reach the same destination.
+      </p>
+
+      <h2>Quick Notes</h2>
+      <ul>
+        <li><strong>Computer Network:</strong> A group of connected devices that share data and resources.</li>
+        <li><strong>Nodes:</strong> Devices connected to a network (e.g., PC, smartphone, printer). Each node has an address to identify it.</li>
+        <li><strong>Links:</strong> Connections between nodes — wired (Ethernet/fiber) or wireless (Wi-Fi/Bluetooth/cellular).</li>
+        <li><strong>Switches:</strong> Connect multiple devices inside a network; forward packets only to the correct destination port.</li>
+        <li><strong>Routers:</strong> Connect different networks; route packets toward their final IP destination.</li>
+      </ul>
+
+      <h3>Example — Using Switches</h3>
+      <ul>
+        <li>File transfer between two office computers.</li>
+        <li>File is split into packets with destination MAC address.</li>
+        <li>Packets go to the switch → switch forwards only to the correct port.</li>
+        <li>Receiving computer reassembles packets into the original file.</li>
+      </ul>
+
+      <h3>Analogy — Air Travel System</h3>
+      <ul>
+        <li>Passengers = Data</li>
+        <li>Groups = Packets</li>
+        <li>Flights = Paths</li>
+        <li>Airports = Routers</li>
+        <li>Different groups may take different routes but reach the same final destination (IP address).</li>
+      </ul>
+
+      <h2>MCQs – Computer Network</h2>
+      <ol>
+        <li>
+          <strong>What is a computer network?</strong><br />
+          a) A single computer working alone<br />
+          b) A system of linked devices exchanging data<br />
+          c) A storage device for files<br />
+          d) A type of software<br />
+          <p><strong>Answer:</strong> b) A system of linked devices exchanging data</p>
+        </li>
+        <li>
+          <strong>Which network is usually used within a small office or home?</strong><br />
+          a) WAN<br />
+          b) Internet<br />
+          c) LAN<br />
+          d) MAN<br />
+          <p><strong>Answer:</strong> c) LAN</p>
+        </li>
+        <li>
+          <strong>Which device connects different networks and directs data packets?</strong><br />
+          a) Switch<br />
+          b) Router<br />
+          c) Node<br />
+          d) Link<br />
+          <p><strong>Answer:</strong> b) Router</p>
+        </li>
+        <li>
+          <strong>Which device connects multiple nodes inside the same network?</strong><br />
+          a) Router<br />
+          b) Switch<br />
+          c) Hub<br />
+          d) Link<br />
+          <p><strong>Answer:</strong> b) Switch</p>
+        </li>
+        <li>
+          <strong>In the air travel analogy of networks, what do airports represent?</strong><br />
+          a) Packets<br />
+          b) Nodes<br />
+          c) Routers<br />
+          d) Switches<br />
+          <p><strong>Answer:</strong> c) Routers</p>
+        </li>
+        <li>
+          <strong>What do we call the devices (computers, printers, phones) connected to a network?</strong><br />
+          a) Nodes<br />
+          b) Links<br />
+          c) Routers<br />
+          d) Switches<br />
+          <p><strong>Answer:</strong> a) Nodes</p>
+        </li>
+        <li>
+          <strong>In a file transfer, what ensures packets are sent only to the correct destination port?</strong><br />
+          a) Router<br />
+          b) Switch<br />
+          c) Link<br />
+          d) Node<br />
+          <p><strong>Answer:</strong> b) Switch</p>
+        </li>
+      </ol>
+    </div>
+  </article>
+</main>
+
+<!-- Comments -->
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+    this.page.url = window.location.href;  
+    this.page.identifier = document.title; 
+};
+
+(function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://salmanblogs-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>
+    Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+<footer>
+  <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+</body>
+</html>
