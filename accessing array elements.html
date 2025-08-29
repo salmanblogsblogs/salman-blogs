@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about accessing array elements in C, including definitions, indexing, syntax, and examples with loops." />
+  <meta name="keywords" content="C Programming, Arrays, Accessing Array Elements, Indexing, Array Syntax, Examples in C" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Accessing Array Elements — Definition, Indexing, Syntax & Examples | Salman Blogs</title>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
+    data-cbid="7033a1a8-7ffd-4c75-b8ea-af3497426e3f"
+    data-blockingmode="auto" type="text/javascript"></script>
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Accessing Array Elements — Definition, Indexing, Syntax & Examples" />
+  <meta property="og:description" content="Understand how to access array elements in C, including indexing, syntax, definitions, and practical examples with loops." />
+  <meta property="og:image" content="https://salmanblogs.com/images/technology/arrays-accessing-elements.png" />
+  <meta property="og:url" content="https://salmanblogs.com/accessing-array-elements.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Accessing Array Elements — Definition, Indexing, Syntax & Examples" />
+  <meta name="twitter:description" content="Learn about accessing array elements in C programming with indexing, syntax, and examples." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/arrays-accessing-elements.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+      </div>
+      <div class="nav-toggle" id="navToggle">&#9776;</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="post-container">
+    <article class="blog-post">
+      <h1 class="post-title">Accessing Array Elements</h1>
+      <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+      <img src="images/10-CS-IMAGES/Accessing Array Elements in C.png" alt="Accessing Array Elements in C" class="post-image" />
+
+      <div class="post-content">
+        <h2>Definition</h2>
+        <p>Accessing array elements means retrieving or modifying data stored in an array using its index (position number).</p>
+
+        <h2>Explanation & Main Points</h2>
+        <h3>Indexing</h3>
+        <ul>
+          <li>Index starts from 0 in most programming languages.</li>
+          <li>First element → index 0</li>
+          <li>Second element → index 1</li>
+          <li>And so on...</li>
+        </ul>
+
+        <h3>Syntax</h3>
+        <pre><code>array_name[index]</code></pre>
+
+        <h3>Array Elements</h3>
+        <p>The individual values stored inside an array are called <strong>array elements</strong>. Each element is stored at a specific position in the array.</p>
+
+        <p><strong>Example:</strong></p>
+        <pre><code>int arr[5] = {10, 20, 30, 40, 50};
+// Elements → 10, 20, 30, 40, 50</code></pre>
+
+        <h3>Index Number</h3>
+        <p>The position number used to access an element in an array. Indexing in C starts from 0 (zero-based indexing).</p>
+
+        <pre><code>arr[0] = 10   // first element
+arr[1] = 20   // second element
+arr[4] = 50   // last element (size = 5)</code></pre>
+
+        <p>👉 <strong>In short:</strong><br>
+        Array element = value stored<br>
+        Index number = position used to access that value</p>
+
+        <h2>Examples in C</h2>
+
+        <h3>1. Accessing Specific Elements</h3>
+        <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    printf("First element: %d\n", arr[0]); // 10
+    printf("Second element: %d\n", arr[1]); // 20
+    printf("Last element: %d\n", arr[4]);   // 50
+    return 0;
+}</code></pre>
+
+        <h3>2. Traversing with Loop</h3>
+        <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int arr[4] = {2, 4, 6, 8};
+    printf("Array elements:\n");
+    for(int i = 0; i &lt; 4; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}</code></pre>
+      </div>
+    </article>
+  </main>
+
+  <!-- ADDING COMMENTS. -->
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = window.location.href;
+      this.page.identifier = document.title;
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://salmanblogs-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>
+    Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+
+  <footer>
+    <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("navToggle").addEventListener("click", function () {
+      document.getElementById("navLinks").classList.toggle("show");
+    });
+  </script>
+</body>
+</html>
