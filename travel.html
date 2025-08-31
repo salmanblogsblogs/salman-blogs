@@ -12,6 +12,17 @@
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
      crossorigin="anonymous"></script>
+  <!-- Link to subscribe. -->
+   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "7767f376-2167-4797-b953-1b7115505484",
+    });
+  });
+  
+</script>
   <!-- Favicon for all browsers -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <!-- High-res PNG for modern browsers & Google Search -->
