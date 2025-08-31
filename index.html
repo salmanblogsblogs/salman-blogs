@@ -93,7 +93,7 @@
       <!-- Blog Post 2 -->
       <div class="recommended-card">
           <img src="images/technology/top-10-ai-tools-2025.png" alt="Top 10 AI tools 2025 — ChatGPT, MidJourney, Notion AI, and more">
-          <h3>TTop 10 AI Tools You Should Be Using in 2025</h3>
+          <h3>Top 10 AI Tools You Should Be Using in 2025</h3>
           <p>Uncover the must-have AI tools of 2025 that boost productivity, creativity, and everyday efficiency.</p>
         <a href="Top 10 AI Tools You Should Be Using in 2025.html" class="read-more">Read More</a>
       </div>
@@ -139,5 +139,23 @@
     document.getElementById("navLinks").classList.toggle("show");
     });
   </script>
+
+   <!-- OneSignal Push Notification -->
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "7767f376-2167-4797-b953-1b7115505484", 
+      notifyButton: {
+        enable: true, // shows a floating bell for subscription
+        size: 'medium', // small | medium | large
+        theme: 'default', // default | inverse
+        position: 'bottom-right', // bottom-left | bottom-right
+        showCredit: false // removes OneSignal branding
+      },
+    });
+  });
+</script>
 </body>
 </html>
