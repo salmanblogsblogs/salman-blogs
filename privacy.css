@@ -35,8 +35,6 @@
   padding-left: 0;
 }
 
-<<<<<<< HEAD
-=======
 /* ===== FAQ Styles (Improved) ===== */
 .faq-section {
   margin-top: 40px;
@@ -76,7 +74,6 @@
   line-height: 1.6;
 }
 
->>>>>>> fd5b42c (Initial commit with my website files)
 @media (max-width: 768px) {
   .privacy-box {
     padding: 20px;
