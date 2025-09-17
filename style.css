@@ -1,0 +1,350 @@
+/* ===================== RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================== BASE STYLES ===================== */
+:root {
+  --navbar-height: 60px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===================== LOGO ===================== */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-first {
+  color: #ffffff;
+}
+
+.logo-last {
+  color: #ffcc00;
+  margin-left: 5px;
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #003366;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #005599;
+  border-radius: 4px;
+}
+
+/* Nav Toggle */
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ===================== HERO SECTION ===================== */
+.hero {
+  text-align: center;
+  padding: 8rem 2rem;
+  background-color: #e8f0fe;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #003366;
+}
+
+.hero p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* ===================== RECOMMENDED BLOGS ===================== */
+.recommended-section {
+  padding: 60px 40px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.recommended-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #003366;
+}
+
+.recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+.recommended-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.recommended-card:hover {
+  transform: translateY(-5px);
+}
+
+.recommended-card img {
+  width: 100%;
+  height: auto;      /* fully responsive */
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.recommended-card .card-body {
+  flex: 1;
+  padding: 15px;
+}
+
+.recommended-card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  color: #003366;
+}
+
+.recommended-card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* ===================== CATEGORIES ===================== */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.category-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.category-card a {
+  text-decoration: none;
+  color: #003366;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.category-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* ===================== BLOG POST ===================== */
+.post-container {
+  max-width: 800px;
+  margin: calc(var(--navbar-height) + 2rem) auto;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.blog-post h1.post-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-meta {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+  object-fit: contain; /* ensures full image visible */
+}
+
+.post-content h2 {
+  margin-top: 1.5rem;
+  color: #003366;
+}
+
+.post-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 991px) {
+  .post-container {
+    margin: calc(var(--navbar-height) + 1rem) 1rem;
+    padding: 1.5rem;
+  }
+  .blog-post h1.post-title {
+    font-size: 1.6rem;
+  }
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  .recommended-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #003366;
+    width: 100%;
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    z-index: 999;
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+
+  .recommended-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .recommended-card img {
+    height: auto;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-container {
+    margin: calc(var(--navbar-height) + 0.5rem) 0.5rem;
+    padding: 0.8rem;
+  }
+  .blog-post h1.post-title {
+    font-size: 1.4rem;
+  }
+  .post-meta {
+    font-size: 0.8rem;
+  }
+  .post-content p {
+    font-size: 0.95rem;
+  }
+}
