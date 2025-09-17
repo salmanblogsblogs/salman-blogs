@@ -48,6 +48,10 @@
   width: 100%;
   height: 220px;
   object-fit: cover;
+<<<<<<< HEAD
+=======
+  /* object-fit: scale-down; */
+>>>>>>> fd5b42c (Initial commit with my website files)
 }
 
 .post-card h2 {
@@ -71,5 +75,16 @@
   height: 220px;
   object-fit: fill;
 }
+<<<<<<< HEAD
 
+=======
+}
+
+@media (min-width: 935px) and (max-width: 1030px) {
+  .post-card img {
+    height: auto;          /* let image keep its ratio */
+    max-height: 220px;     /* prevent it from getting too tall */
+    object-fit: contain;   /* no cropping */
+  }
+>>>>>>> fd5b42c (Initial commit with my website files)
 }
