@@ -29,8 +29,18 @@
   <meta name="twitter:image" content="https://salmanblogs.com/images/notes/subfields-ai.png" />
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about.css">
 </head>
 <body>
+<!-- Use of internal CSS. -->
+ <style>
+  .post-content h2,
+.post-content h3 {
+  border-left: 4px solid #0077cc;
+  padding-left: 12px;
+  margin-top: 25px;
+}
+</style>
 <header class="navbar">
   <div class="container">
     <div class="logo">
@@ -198,20 +208,58 @@
         By understanding definitions, quick notes, and practicing MCQs, students will 
         gain a strong foundation in Computer Science.
       </p>
-
-      <h2>FAQs — Subfields of AI</h2>
+      <h2>Lectures</h2>
       <ul>
-        <li><strong>Q1: Which is the most widely used subfield of AI?</strong><br>
-            <strong>A:</strong> Machine Learning, because it powers recommendation systems, fraud detection, and many daily-life apps.</li>
-        <li><strong>Q2: Is Deep Learning the same as Machine Learning?</strong><br>
-            <strong>A:</strong> Deep Learning is a subset of Machine Learning that uses neural networks for complex tasks.</li>
-        <li><strong>Q3: What is the role of NLP?</strong><br>
-            <strong>A:</strong> NLP helps machines understand and respond to human language, like chatbots or translators.</li>
-        <li><strong>Q4: How does Computer Vision work?</strong><br>
-            <strong>A:</strong> Computer Vision processes and interprets images/videos to identify objects, people, or scenes.</li>
-        <li><strong>Q5: Where is Robotics used today?</strong><br>
-            <strong>A:</strong> Robotics is used in homes (cleaning robots), industries (manufacturing robots), healthcare (surgery robots), and delivery systems (drones).</li>
+      <li><a href="9-class-chap-10-lecture-1.html">Previous</a></li>
+      <li><a href="9-class-chap-10-lecture-3.html">Next</a></li>
       </ul>
+      <h2 id="related-posts">Related Posts</h2>
+      <ul>
+        <li><a href="Top-10-Programming-Languages-in-2025.html">Top 10 Programming Languages in 2025</a></li>
+        <li><a href="how-ai-will-replace-and-create-jobs-by-2030.html">How AI Will Replace and Create Jobs by 2030</a></li>
+        <li><a href="Best-Online-Courses-for-High-Paying-Jobs.html">Best Online Courses for High-Paying Jobs in 2025</a></li>
+      </ul>
+
+      <h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
+<section class="faq-section">
+
+  <div class="faq-item">
+    <button class="faq-question">1. Which is the most widely used subfield of AI?</button>
+    <div class="faq-answer">
+      <p>Machine Learning, because it powers recommendation systems, fraud detection, and many daily-life apps.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">2. Is Deep Learning the same as Machine Learning?</button>
+    <div class="faq-answer">
+      <p>Deep Learning is a subset of Machine Learning that uses neural networks for complex tasks.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">3. What is the role of NLP?</button>
+    <div class="faq-answer">
+      <p>NLP helps machines understand and respond to human language, like chatbots or translators.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">4. How does Computer Vision work?</button>
+    <div class="faq-answer">
+      <p>Computer Vision processes and interprets images/videos to identify objects, people, or scenes.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">5. Where is Robotics used today?</button>
+    <div class="faq-answer">
+      <p>Robotics is used in homes (cleaning robots), industries (manufacturing robots), healthcare (surgery robots), and delivery systems (drones).</p>
+    </div>
+  </div>
+
+</section>
+
     </div>
   </article>
 </main>
@@ -241,6 +289,20 @@
 <script>
   document.getElementById("navToggle").addEventListener("click", function () {
     document.getElementById("navLinks").classList.toggle("show");
+  });
+
+   // FAQ toggle
+  const faqItems = document.querySelectorAll(".faq-question");
+  faqItems.forEach(btn => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const answer = this.nextElementSibling;
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+      } else {
+        answer.style.display = "block";
+      }
+    });
   });
 </script>
 </body>
