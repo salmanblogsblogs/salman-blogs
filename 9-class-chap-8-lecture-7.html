@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Auto-generated SEO -->
+  <meta name="description" content="Learn HTML Tables and Comments: full definitions, examples, quick notes, and MCQs with answers for beginners." />
+  <meta name="keywords" content="HTML, Tables, Comments, table tag, tr tag, td tag, th tag, HTML basics, MCQs" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>HTML Tables & Comments — Definitions, Notes & MCQs | Salman Blogs</title>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="HTML Tables & Comments — Definitions, Notes & MCQs" />
+  <meta property="og:description" content="Understand HTML Tables and Comments with full explanations, quick notes, examples, and solved MCQs." />
+  <meta property="og:image" content="https://salmanblogs.com/images/technology/html-tables-comments.png" />
+  <meta property="og:url" content="https://salmanblogs.com/html-tables-comments.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HTML Tables & Comments — Definitions, Notes & MCQs" />
+  <meta name="twitter:description" content="Learn HTML tables and comments: tags, examples, notes, and solved MCQs." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/html-tables-comments.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!-- Use of internal CSS. -->
+<style>
+code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+</style>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Fundamentals of Web Development[HTML CSS JAVASCRIPT] Lecture 7 Notes</h1>
+    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+    <img src="images/9-CS-IMAGES/chapter-8/chapter-8-lecture7-notes.png" alt="chapter-8-lecture7-notes" class="post-image" />
+
+    <div class="post-content">
+
+      <!-- INTRO -->
+      <h2>Introduction</h2>
+      <p>
+        Hello, I’m <strong>Salman Ahmad</strong>, a teacher and web developer. <br>
+        Welcome to today’s lecture on <strong>HTML Tables and Comments</strong>, an important part of web development for Class 9 Computer Science. 
+        Tables allow us to arrange data neatly into rows and columns, making it easy for users to read, compare, and analyze information. 
+        Comments, on the other hand, are used by developers to explain their code or keep notes inside HTML without affecting what the user sees in the browser.
+      </p>
+      <p>
+        In this lesson, we will cover the structure of tables, the purpose of comments, practical examples, common mistakes to avoid, 
+        and real-life applications of both. By the end, you will not only be able to create your own tables but also write clean, 
+        well-documented HTML code.
+      </p>
+
+      <!-- FULL DEFINITIONS -->
+      <h2>Full Definitions</h2>
+
+      <h3>HTML Tables</h3>
+      <p>
+        Tables in HTML are used to organize and present data in a structured format, making it easier to read and compare information.
+      </p>
+      <ul>
+        <li><code>&lt;table&gt;</code> → Creates the table.</li>
+        <li><code>&lt;tr&gt;</code> → Defines a table row.</li>
+        <li><code>&lt;td&gt;</code> → Defines a data cell.</li>
+        <li><code>&lt;th&gt;</code> → Defines a header cell (appears bold and centered by default).</li>
+      </ul>
+      <p>
+        Example: Student marks, product lists, or schedules can be displayed in a neat grid format using tables.
+      </p>
+
+      <h3>HTML Comments</h3>
+      <p>
+        Comments in HTML are notes written inside the code that are not displayed in the browser. They help developers explain the code, leave reminders, or temporarily disable parts of code.
+      </p>
+      <p>
+        Syntax: <code>&lt;!-- This is a comment --&gt;</code>
+      </p>
+      <p>
+        Browsers completely ignore everything written inside comment tags.
+      </p>
+
+      <!-- EXPANDED CONTENT -->
+      <h2>Understanding HTML Tables in Depth</h2>
+              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p>
+        A table is like a grid made up of rows and columns. Each row contains data cells, and each column represents a category of data. 
+        For example, a student report card might have subjects as column headers and marks as rows.
+      </p>
+
+      <h3>Basic Example of a Table</h3>
+      <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Class&lt;/th&gt;
+    &lt;th&gt;Marks&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ali&lt;/td&gt;
+    &lt;td&gt;9&lt;/td&gt;
+    &lt;td&gt;85&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ayesha&lt;/td&gt;
+    &lt;td&gt;9&lt;/td&gt;
+    &lt;td&gt;92&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+      <p>
+        This code creates a table with a header row and two student entries. Notice how <code>&lt;th&gt;</code> is used for headers and <code>&lt;td&gt;</code> for normal data.
+      </p>
+
+      <h3>Table Attributes</h3>
+              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <ul>
+        <li><strong>border</strong> → Adds borders to the table.</li>
+        <li><strong>cellpadding</strong> → Adds space inside each cell.</li>
+        <li><strong>cellspacing</strong> → Adds space between cells.</li>
+        <li><strong>rowspan</strong> → Merges cells vertically.</li>
+        <li><strong>colspan</strong> → Merges cells horizontally.</li>
+        <li><strong>caption</strong> → Adds a title to the table.</li>
+      </ul>
+
+      <h2>Importance of Comments in HTML</h2>
+              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p>
+        Comments are often overlooked by beginners, but they are extremely valuable in real projects. 
+        Imagine working in a team where multiple developers are editing the same file — comments help explain the purpose of each section of code.
+      </p>
+      <p>
+        Another benefit of comments is that they allow you to temporarily disable parts of code without deleting them. 
+        For example, if you want to test a layout without a table, you can wrap it in a comment.
+      </p>
+
+      <h3>Example of a Comment</h3>
+      <pre><code>&lt;!-- This table shows the marks of students --&gt;
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Marks&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Sara&lt;/td&gt;
+    &lt;td&gt;90&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+      <h2>Real-Life Applications of Tables</h2>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <ul>
+        <li>Timetables in schools and universities.</li>
+        <li>Product pricing lists in e-commerce websites.</li>
+        <li>Sports scoreboards.</li>
+        <li>Restaurant menus.</li>
+        <li>Employee salary sheets.</li>
+      </ul>
+
+      <h2>Common Mistakes to Avoid</h2>
+              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <ul>
+        <li>Forgetting to close tags like <code>&lt;/tr&gt;</code> or <code>&lt;/td&gt;</code>.</li>
+        <li>Using tables for layout instead of CSS (not recommended in modern design).</li>
+        <li>Not using headers, which makes tables less accessible for screen readers.</li>
+      </ul>
+
+      <h2>Best Practices</h2>
+              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <ul>
+        <li>Always use <code>&lt;th&gt;</code> for header cells.</li>
+        <li>Keep tables simple and easy to read.</li>
+        <li>Use comments to explain sections of your code.</li>
+        <li>Combine tables with CSS for better styling.</li>
+      </ul>
+
+      <!-- QUICK NOTES -->
+      <h2>Quick Notes</h2>
+      <h3>Tables in HTML</h3>
+      <ul>
+        <li>Tables organize data into rows and columns.</li>
+        <li><code>&lt;table&gt;</code> → Creates the table.</li>
+        <li><code>&lt;tr&gt;</code> → Defines a table row.</li>
+        <li><code>&lt;td&gt;</code> → Defines table data cell.</li>
+        <li><code>&lt;th&gt;</code> → Defines a table header cell.</li>
+      </ul>
+
+      <h3>Comments in HTML</h3>
+      <ul>
+        <li>Used for notes or reminders inside code.</li>
+        <li>Ignored by browsers.</li>
+        <li>Syntax: <code>&lt;!-- comment here --&gt;</code></li>
+      </ul>
+
+      <!-- MCQs -->
+      <h2>MCQs – HTML Tables & Comments</h2>
+      <ol>
+        <li>
+          <strong>Which tag is used to create a table in HTML?</strong><br />
+          a) &lt;tr&gt;<br />
+          b) &lt;table&gt; ✅<br />
+          c) &lt;td&gt;<br />
+          d) &lt;th&gt;
+        </li>
+        <li>
+          <strong>Which tag is used to define a row in an HTML table?</strong><br />
+          a) &lt;td&gt;<br />
+          b) &lt;tr&gt; ✅<br />
+          c) &lt;table&gt;<br />
+          d) &lt;th&gt;
+        </li>
+        <li>
+          <strong>What does the &lt;th&gt; tag represent in an HTML table?</strong><br />
+          a) Table row<br />
+          b) Table header ✅<br />
+          c) Table data<br />
+          d) Table border
+        </li>
+        <li>
+          <strong>Which attribute merges cells horizontally?</strong><br />
+          a) rowspan<br />
+          b) colspan ✅<br />
+          c) cellpadding<br />
+          d) cellspacing
+        </li>
+        <li>
+          <strong>Which attribute merges cells vertically?</strong><br />
+          a) colspan<br />
+          b) rowspan ✅<br />
+          c) border<br />
+          d) caption
+        </li>
+        <li>
+          <strong>What is the purpose of the &lt;caption&gt; tag in a table?</strong><br />
+          a) To add column headers<br />
+          b) To add a title to the table ✅<br />
+          c) To merge rows<br />
+          d) To set table borders
+        </li>
+        <li>
+          <strong>Which of the following adds space inside each cell of a table?</strong><br />
+          a) border<br />
+          b) cellpadding ✅<br />
+          c) cellspacing<br />
+          d) colspan
+        </li>
+        <li>
+          <strong>Which syntax correctly represents an HTML comment?</strong><br />
+          a) // This is a comment<br />
+          b) /* This is a comment */<br />
+          c) &lt;!-- This is a comment --&gt; ✅<br />
+          d) # This is a comment
+        </li>
+        <li>
+          <strong>What happens to the text written inside an HTML comment?</strong><br />
+          a) It is shown in the browser.<br />
+          b) It is hidden from the browser ✅<br />
+          c) It becomes bold.<br />
+          d) It appears as table data.
+        </li>
+      </ol>
+
+      <!-- SUMMARY -->
+      <h2>Summary</h2>
+      <p>
+        In this lecture, we explored two important parts of HTML: <strong>tables</strong> and <strong>comments</strong>. 
+        Tables are useful for presenting structured data, while comments help developers keep their code clean and organized. 
+        We learned the syntax, attributes, real-life applications, and best practices of both. 
+        With this knowledge, you can now create professional tables and write better HTML code.
+      </p>
+
+      <!-- FAQ -->
+      <h2>FAQs – HTML Tables & Comments</h2>
+      <h3>1. Can I use tables for website layouts?</h3>
+      <p>
+        While it was common in the past, modern websites use CSS for layout. Tables should only be used for displaying data.
+      </p>
+
+      <h3>2. Are comments visible to website visitors?</h3>
+      <p>
+        No, comments are completely ignored by the browser and are only visible in the source code.
+      </p>
+
+      <h3>3. What is the difference between &lt;td&gt; and &lt;th&gt;?</h3>
+      <p>
+        &lt;td&gt; defines a normal data cell, while &lt;th&gt; defines a header cell that appears bold and centered.
+      </p>
+
+      <h3>4. Can I add images inside a table?</h3>
+      <p>
+        Yes, tables can contain not just text but also images, links, and even other tables.
+      </p>
+
+      <h3>5. Why should I use comments?</h3>
+      <p>
+        Comments make your code easier to understand and maintain, especially when working on large projects or with multiple developers.
+      </p>
+
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+</body>
+</html>

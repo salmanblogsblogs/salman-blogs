@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Von Neumann Architecture, Computing Systems, Internet Protocols, and CPU working explained with examples, components, and objectives." />
+<meta name="keywords" content="Von Neumann Architecture, CPU, Memory, Input Output, Computing Systems, Internet, Protocols, TCP/IP, UDP, FTP, POP" />
+<meta name="author" content="Salman Ahmad" />
+<title>Von Neumann Architecture & Computing Systems | Salman Blogs</title>
+<meta property="og:title" content="Von Neumann Architecture & Computing Systems" />
+<meta property="og:description" content="Learn about Von Neumann Architecture, CPU components, computing systems, and Internet protocols with detailed explanations and extra insights." />
+<meta property="og:image" content="https://salmanblogs.com/images/computer-system.png" />
+<meta property="og:url" content="https://salmanblogs.com/von-neumann.html" />
+<meta property="og:type" content="article" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Von Neumann Architecture & Computing Systems" />
+<meta name="twitter:description" content="Detailed guide on Von Neumann Architecture, CPU, computing systems, and Internet protocols." />
+<meta name="twitter:image" content="https://salmanblogs.com/images/computer-system.png" />
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="about.css">
+<style>
+html { scroll-behavior: smooth; }
+.toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+.toc h2 { margin-top: 0; }
+.toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
+.toc a:hover { color: darkblue; }
+.toc li {list-style-type: none;}
+.post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+.important {background-color:#000; color:#fff; padding:8px; margin-top:5px; border-radius:5px;}
+</style>
+</head>
+<body>
+<header class="navbar">
+<div class="container">
+<div class="logo">
+<span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+</div>
+<div class="nav-toggle" id="navToggle">&#9776;</div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="categories.html">Categories</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+<li><a href="terms.html">Terms</a></li>
+</ul>
+</div>
+</header>
+
+<main class="post-container">
+<article class="blog-post">
+<div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+<img src="images/9-CS-IMAGES/chapter-1/chapter-1-lecture4-notes.png" alt="chapter-1-lecture4-notes" class="post-image" loading="lazy">
+
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#von-neumann-architecture">Von Neumann Architecture</a></li>
+<li><a href="#cpu-working">CPU Working (Fetch, Decode, Execute, Store)</a></li>
+<li><a href="#characteristics">Characteristics & Advantages/Disadvantages</a></li>
+<li><a href="#computing-systems">Computing Systems</a></li>
+<li><a href="#computer-networks">Computer Networks as Systems</a></li>
+<li><a href="#internet-system">Internet as a System</a></li>
+<li><a href="#extra-insights">Extra Insights</a></li>
+<li><a href="#mcqs">MCQs</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+
+<div class="post-content">
+
+<h2 id="von-neumann-architecture">Von Neumann Architecture</h2>
+<p>The Von Neumann architecture is a model of computer design with four main parts: Memory, CPU, Input devices, and Output devices. Proposed by John von Neumann in the 1940s.</p>
+
+<h3>Components</h3>
+<img src="images/9-CS-IMAGES/chapter-1/von-neumann-architecture.png" alt="von-neumann-architecture" class="post-image" loading="lazy">
+<ul>
+<li><strong>Memory:</strong> Stores both data and program instructions for the CPU. <br>Example: RAM stores a program for faster execution than hard disk.</li>
+<li><strong>CPU:</strong> Executes instructions from memory and performs calculations. <br>Subcomponents: 
+<ul>
+<li>Arithmetic Logic Unit (ALU): Performs math and logical operations. Example: Adding 2 + 2</li>
+<li>Control Unit (CU): Manages CPU operations and directs ALU and memory. Example: CU supervises ALU steps</li>
+</ul>
+</li>
+<li><strong>Input Devices:</strong> Allow users to enter data. Examples: Keyboard, mouse, microphone</li>
+<li><strong>Output Devices:</strong> Show results. Examples: Monitor, printer</li>
+<li><strong>System Bus:</strong> Connects all components. Types: Data Bus, Address Bus, Control Bus</li>
+</ul>
+
+<h2 id="cpu-working">CPU Working (Fetch, Decode, Execute, Store)</h2>
+<ol>
+<li><strong>Fetching:</strong> CPU retrieves an instruction from memory using Program Counter (PC) and Instruction Register (IR). Example: PC points to “Add 2 + 2” instruction and IR stores it.</li>
+<li><strong>Decoding:</strong> Control Unit interprets the instruction. Example: CU identifies addition operation and selects required ALU operation.</li>
+<li><strong>Execution:</strong> ALU performs calculations; CU coordinates data flow. Example: ALU adds 2 + 2 → result 4.</li>
+<li><strong>Storing (Write-back):</strong> Result stored in memory or sent to output. Example: Sum (4) stored in memory and displayed on monitor.</li>
+</ol>
+
+<h2 id="characteristics">Characteristics & Advantages/Disadvantages</h2>
+<ul>
+<li>Single Memory Store: Data and instructions share memory. Example: Game code + player scores in RAM</li>
+<li>Sequential Execution: Instructions processed one by one</li>
+<li>Stored Program Concept: Programs stored in memory can be updated</li>
+<li><strong>Advantages:</strong> Simplified design, easy to modify programs</li>
+<li><strong>Disadvantages:</strong> Von Neumann bottleneck (single memory limits CPU speed), security risk (data + instructions together)</li>
+</ul>
+
+<h2 id="computing-systems">Computing Systems</h2>
+<p>A computing system is a structured set of hardware and software designed to process data and perform tasks. Objectives: Solve problems, control processes, manage data, aid communication.</p>
+<ul>
+<li>Hardware: CPU, RAM, storage, input/output devices</li>
+<li>Software: System software (OS) & Application software</li>
+<li>Types: Computers, Software Systems, Computer Networks, Internet</li>
+</ul>
+
+<h2 id="computer-networks">Computer Networks as Systems</h2>
+<p>A network connects computers/devices for resource sharing, communication, and data management.</p>
+<ul>
+<li>Networking Hardware: Routers, Switches, Network cables</li>
+<li>Network Software: Protocols (TCP/IP), Network OS (Windows Server)</li>
+</ul>
+
+<h2 id="internet-system">Internet as a System</h2>
+<p>The Internet is a global network for communication and data exchange.</p>
+<h3>Internet Protocols</h3>
+<ul>
+<li><strong>TCP/IP (Transmission Control Protocol / Internet Protocol):</strong> A set of rules that ensures reliable data transfer and communication over the Internet.</li>
+
+<li><strong>UDP (User Datagram Protocol):</strong> Sends data quickly without checking for errors, often used for live streaming and online games where speed matters more than accuracy.</li>
+
+<li><strong>FTP (File Transfer Protocol):</strong> Used to transfer files between computers over a network, such as uploading or downloading files from a web server.</li>
+
+<li><strong>POP (Post Office Protocol):</strong> Used by email clients to retrieve messages from a mail server and download them to a local device.</li>
+
+</ul>
+
+<h2 id="extra-insights">Extra Insights / Expanded Knowledge</h2>
+<ul>
+<li><strong>Von Neumann Bottleneck:</strong> Single memory for instructions and data can slow CPU.
+<div class="important">Insight: CPU caches were developed to reduce this bottleneck.</div></li>
+
+<li><strong>CPU Optimization:</strong> Efficient ALU + CU improves processing speed.
+<div class="important">Insight: Reduces energy consumption and computation time.</div></li>
+
+<li><strong>Networking Protocols:</strong> TCP/IP, UDP, FTP, and POP manage data flow across networks.
+<div class="important">Insight: Choosing the right protocol is critical for reliability and speed.</div></li>
+
+<li><strong>Memory Management:</strong> Efficient RAM and storage usage improves system performance.
+<div class="important">Insight: Virtual memory helps run large programs smoothly.</div></li>
+
+<li><strong>Input/Output Devices:</strong> Proper device selection impacts user efficiency.
+<div class="important">Insight: Fast SSDs, high-resolution monitors, and responsive keyboards improve workflow.</div></li>
+
+<li><strong>System Bus:</strong> Acts as a highway connecting CPU, memory, and devices.
+<div class="important">Insight: Wider buses allow faster data transfer and improved overall performance.</div></li>
+
+<li><strong>Fetch-Decode-Execute Cycle:</strong> Central to CPU operation, ensures sequential instruction processing.
+<div class="important">Insight: Pipeline architectures can improve CPU throughput by handling multiple instructions simultaneously.</div></li>
+
+<li><strong>Stored Program Concept:</strong> Programs stored in memory can be modified dynamically.
+<div class="important">Insight: Enables software updates without changing hardware.</div></li>
+
+<li><strong>Internet Protocol Choice:</strong> Protocols like TCP/IP and UDP have different use cases.
+<div class="important">Insight: TCP/IP ensures reliability for file transfers, while UDP is preferred for streaming and gaming due to lower latency.</div></li>
+
+<li><strong>Output Devices Efficiency:</strong> Fast and accurate output devices enhance user experience.
+<div class="important">Insight: High refresh rate monitors and low-latency printers improve response time in critical applications.</div></li>
+</ul>
+
+<h2 id="mcqs">MCQs</h2>
+<ol>
+<li>Which component executes instructions in a Von Neumann computer?<br>a) Memory<br>b) CPU ✅<br>c) Input Device<br>d) Output Device</li>
+<li>Which unit performs arithmetic and logical operations?<br>a) Control Unit<br>b) ALU ✅<br>c) RAM<br>d) System Bus</li>
+<li>What does the Program Counter (PC) do?<br>a) Stores data permanently<br>b) Holds address of next instruction ✅<br>c) Executes operations<br>d) Controls input devices</li>
+<li>Which bus transmits control signals?<br>a) Data Bus<br>b) Address Bus<br>c) Control Bus ✅<br>d) Power Bus</li>
+<li>Which protocol is used for reliable Internet data transfer?<br>a) UDP<br>b) FTP<br>c) TCP/IP ✅<br>d) POP</li>
+</ol>
+
+<h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
+<section class="faq-section">
+<div class="faq-item">
+<button class="faq-question">1. Who proposed the Von Neumann Architecture?</button>
+<div class="faq-answer"><p>John von Neumann, a mathematician and physicist in the 1940s.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-question">2. What are the subcomponents of CPU?</button>
+<div class="faq-answer"><p>Arithmetic Logic Unit (ALU) and Control Unit (CU).</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-question">3. What is a computing system?</button>
+<div class="faq-answer"><p>A structured set of hardware and software designed to process data and perform tasks.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-question">4. Name two types of Internet protocols.</button>
+<div class="faq-answer"><p>TCP/IP and UDP.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-question">5. What is the Von Neumann bottleneck?</button>
+<div class="faq-answer"><p>Single memory for instructions and data, limiting CPU speed.</p></div>
+</div>
+</section>
+
+</div>
+</article>
+</main>
+
+<footer class="footer">
+<p>&copy; 2025 Salman Blogs. All Rights Reserved.</p>
+</footer>
+
+<script>
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+const faqItems = document.querySelectorAll('.faq-question');
+faqItems.forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('active');
+    const answer = button.nextElementSibling;
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+    } else {
+      answer.style.display = "block";
+    }
+  });
+});
+</script>
+</body>
+</html>

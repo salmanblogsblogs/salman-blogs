@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn C programs using variables (int, float, char), with examples, practice exercises, common mistakes, and MCQs on data types." />
+  <meta name="keywords" content="C Programming, Variables, int, float, char, printf, Data Types, Examples, Practice, MCQs" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>C Programs with Variables — Full Guide with Examples, Practice & MCQs | Salman Blogs</title>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="C Programs with Variables — Full Guide with Examples, Practice & MCQs" />
+  <meta property="og:description" content="Learn C variables step by step, with detailed examples, practice exercises, common mistakes, and MCQs for beginners." />
+  <meta property="og:image" content="https://salmanblogs.com/images/technology/c-programming-variables.png" />
+  <meta property="og:url" content="https://salmanblogs.com/c-programming-variables.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="C Programs with Variables — Full Guide with Examples, Practice & MCQs" />
+  <meta name="twitter:description" content="Step-by-step guide to C variables for beginners with programs, exercises, and MCQs." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/c-programming-variables.png" />
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- Use of internal CSS. -->
+<style>
+code, pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+</style>
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">C Programs with Variables: Full Beginner’s Guide with Examples, Practice & MCQs</h1>
+    <div class="post-meta">Posted in <strong>Computer Science</strong></div>
+    <img src="images/10-CS-IMAGES/variabes-types-in-c-language.png" alt="C programming variables" class="post-image" />
+
+    <div class="post-content">
+      <h2>Introduction</h2>
+      <p>In C programming, <strong>variables</strong> are like containers that store data. They allow programmers to manipulate and store values such as numbers, characters, and decimals during program execution. Understanding variables is one of the first and most important steps to becoming a successful C programmer.</p>
+      <p>Variables have different types depending on the kind of data they store. The most commonly used types in C are:</p>
+      <ul>
+        <li><strong>int</strong>: Stores whole numbers, e.g., 1, 25, -10</li>
+        <li><strong>float</strong>: Stores decimal numbers, e.g., 3.14, 7.5</li>
+        <li><strong>char</strong>: Stores a single character, e.g., 'A', 'b', '9'</li>
+      </ul>
+      <p>In this tutorial, we will explain each type in detail with simple programs, common mistakes, practice exercises, and multiple-choice questions (MCQs) for effective learning.</p>
+
+      <h2>Single Variable Programs</h2>
+      <p>Single variable programs are the simplest C programs and are a great way to understand variable declaration, assignment, and printing values.</p>
+
+      <h3>1. Program Using int</h3>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int age = 22;
+    printf("My age is %d\n", age);
+    return 0;
+}</code></pre>
+      <p><strong>Explanation:</strong> Here, <code>age</code> is an integer variable. We use <code>%d</code> in printf to print its value. This program demonstrates how to declare, assign, and print an integer variable.</p>
+      <p><strong>Output:</strong> My age is 22</p>
+      <p><strong>Common Mistake:</strong> Forgetting to use <code>%d</code> or using quotes incorrectly will cause errors.</p>
+
+      <h3>2. Program Using float</h3>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    float height = 5.9;
+    printf("My height is %.1f feet\n", height);
+    return 0;
+}</code></pre>
+      <p><strong>Explanation:</strong> The variable <code>height</code> stores decimal numbers. The <code>%.1f</code> specifier ensures the number is printed with 1 decimal point. Float variables are used when precise decimal values are needed.</p>
+      <p><strong>Output:</strong> My height is 5.9 feet</p>
+
+      <h3>3. Program Using char</h3>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    char grade = 'A';
+    printf("My grade is %c\n", grade);
+    return 0;
+}</code></pre>
+      <p><strong>Explanation:</strong> Char stores a single character. The <code>%c</code> specifier prints the character. Characters must be enclosed in single quotes (' ').</p>
+      <p><strong>Output:</strong> My grade is A</p>
+
+      <h2>Programs with Two Variables</h2>
+      <p>Using two variables allows programs to handle multiple pieces of information. Let’s see some examples combining different types:</p>
+
+      <h3>1. int and float</h3>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int rollNo = 101;
+    float marks = 87.5;
+    printf("Roll No: %d\n", rollNo);
+    printf("Marks: %.1f\n", marks);
+    return 0;
+}</code></pre>
+      <p>This program demonstrates storing both integer and decimal data for a student. It shows how to print multiple variables using separate <code>printf</code> statements.</p>
+      <p><strong>Output:</strong><br>Roll No: 101<br>Marks: 87.5</p>
+
+      <h3>2. int and char</h3>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int age = 20;
+    char grade = 'B';
+    printf("Age: %d\n", age);
+    printf("Grade: %c\n", grade);
+    return 0;
+}</code></pre>
+      <p>This program stores an integer and a character together. Such combinations are useful in real-life applications like student records or employee data.</p>
+      <p><strong>Output:</strong><br>Age: 20<br>Grade: B</p>
+
+      <h2>Programs with Three Variables</h2>
+      <p>We can also declare multiple variables of different types in one program to handle complex data.</p>
+
+      <h3>int, float, and char</h3>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int id = 123;
+    float salary = 55000.75;
+    char grade = 'A';
+    
+    printf("Employee ID: %d\n", id);
+    printf("Salary: %.2f\n", salary);
+    printf("Grade: %c\n", grade);
+    return 0;
+}</code></pre>
+      <p><strong>Explanation:</strong> This program demonstrates storing an employee’s ID, salary, and performance grade. It highlights how variables of different types can coexist in the same program.</p>
+      <p><strong>Output:</strong><br>Employee ID: 123<br>Salary: 55000.75<br>Grade: A</p>
+
+      <h2>Programs Using Multiple Same-Type Variables</h2>
+      <p>Sometimes you need multiple variables of the same type. C allows declaring them in a single line.</p>
+
+      <h3>1. Multiple int variables</h3>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int x = 10, y = 20, z = 30;
+    printf("x = %d, y = %d, z = %d\n", x, y, z);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong> x = 10, y = 20, z = 30</p>
+
+      <h3>2. Multiple float variables</h3>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    float a = 2.5, b = 4.8, c = 6.3;
+    printf("a = %.1f, b = %.1f, c = %.1f\n", a, b, c);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong> a = 2.5, b = 4.8, c = 6.3</p>
+
+      <h3>3. Multiple char variables</h3>
+      <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    char ch1 = 'A', ch2 = 'B', ch3 = 'C';
+    printf("Characters: %c, %c, %c\n", ch1, ch2, ch3);
+    return 0;
+}</code></pre>
+      <p><strong>Output:</strong> Characters: A, B, C</p>
+
+      <h2>Common Mistakes with Variables</h2>
+      <ul>
+        <li>Using wrong format specifier: e.g., printing <code>int</code> with <code>%f</code></li>
+        <li>Not initializing variables before using them</li>
+        <li>Using double quotes for char variables</li>
+        <li>Using undeclared variables</li>
+      </ul>
+
+      <h2>Practice Exercises</h2>
+      <ul>
+        <li>Declare 3 integers a, b, c and print in one line.</li>
+        <li>Declare 2 floats price and discount, print with 1 decimal.</li>
+        <li>Declare 3 chars ch1, ch2, ch3 and print in one line.</li>
+        <li>Declare an int, float, and char and print all three in one printf.</li>
+        <li>Try incorrect declarations to see compiler errors and learn debugging.</li>
+      </ul>
+
+      <h2>MCQs on Variables and Data Types</h2>
+      <ol>
+        <li>Correct format specifier for int in C? a <li>Correct format specifier for int in C? <br>
+            a) %d<br>
+            b) %f<br>
+            c) %c<br>
+            d) %s<br>
+            <strong>Answer:</strong> a) %d. The %d specifier is used for printing integer values in C.
+        </li>
+        <li>What is the size of int in most 32-bit systems? <br>
+            a) 1 byte<br>
+            b) 2 bytes<br>
+            c) 4 bytes<br>
+            d) 8 bytes<br>
+            <strong>Answer:</strong> c) 4 bytes. This can vary based on the compiler and system architecture.
+        </li>
+        <li>Which data type stores decimal values? <br>
+            a) int<br>
+            b) char<br>
+            c) float<br>
+            d) None of the above<br>
+            <strong>Answer:</strong> c) float. Use float for decimal numbers.
+        </li>
+        <li>Correct printf format for float? <br>
+            a) %f<br>
+            b) %d<br>
+            c) %c<br>
+            d) %lf<br>
+            <strong>Answer:</strong> a) %f. Use %.2f or %.1f to control decimal precision.
+        </li>
+        <li>Best data type for a single character? <br>
+            a) int<br>
+            b) char<br>
+            c) float<br>
+            d) double<br>
+            <strong>Answer:</strong> b) char. Characters are stored using single quotes, e.g., 'A'.
+        </li>
+        <li>What is the output of the program:<br>
+            <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    char ch = 'X';
+    printf("%c", ch);
+    return 0;
+}</code></pre>
+            a) X<br>
+            b) x<br>
+            c) 88<br>
+            d) Error<br>
+            <strong>Answer:</strong> a) X. The program prints the character stored in ch.
+        </li>
+        <li>Which variables can represent negative numbers? <br>
+            a) int<br>
+            b) float<br>
+            c) char<br>
+            d) All of the above<br>
+            <strong>Answer:</strong> d) All of the above. Use signed int, float, or signed char to store negative numbers.
+        </li>
+        <li>Invalid variable declaration in C? <br>
+            a) int age = 20;<br>
+            b) float price = 99.99;<br>
+            c) char name = "Ali";<br>
+            d) char grade = 'A';<br>
+            <strong>Answer:</strong> c) char name = "Ali"; (char stores only one character).
+        </li>
+      </ol>
+
+      <h2>Related Articles</h2>
+        <ul>
+          <li><a href="how-ai-is-changing-our-world.html">How AI Is Changing Our World: A Deep Dive into the Future</a></li>
+          <li><a href="how-ai-will-replace-and-create-jobs-by-2030.html">How AI Will Replace and Create Jobs by 2030</a></li>
+        </ul>
+
+      <h2>Final Thoughts</h2>
+      <p>Learning C programming requires patience, practice, and a clear understanding of variables and their types. Variables are the foundation of all programming logic, allowing you to store, manipulate, and display data in your programs. Starting with simple programs and gradually increasing complexity is the best approach for beginners.</p>
+      <p>Try all the practice exercises in this guide. Understand the common mistakes and why they occur. Review the MCQs to test your knowledge, and don’t hesitate to revisit previous tutorials on data types, operators, and loops for better clarity. Mastering variables is the first step toward becoming a confident C programmer.</p>
+
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+</body>
+</html>

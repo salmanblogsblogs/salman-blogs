@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Statements in C: Sequence, Selection & Repetition Explained</title>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+    <meta name="description" content="Learn about control statements in C programming including Sequence, Selection, and Repetition with examples, quick notes, MCQs, and FAQs.">
+    <meta name="keywords" content="Control Statements in C, Sequence in C, Selection in C, Repetition in C, C programming loops, C programming decision making">
+    <meta property="og:title" content="Control Statements in C: Sequence, Selection & Repetition Explained">
+    <meta property="og:description" content="Learn about control statements in C programming including Sequence, Selection, and Repetition with examples, quick notes, MCQs, and FAQs.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="control-statements-c.jpg">
+    <meta property="og:url" content="https://salmanblogs.com/control-statements-c.html">
+    <meta name="twitter:title" content="Control Statements in C: Sequence, Selection & Repetition Explained">
+    <meta name="twitter:description" content="Learn about control statements in C programming including Sequence, Selection, and Repetition with examples, quick notes, MCQs, and FAQs.">
+    <meta name="twitter:image" content="control-statements-c.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Internal CSS for tables -->
+<style>
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #0077cc;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+</style>
+
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+    <article class="blog-post">
+        <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>            
+        <h1 class="post-title">Control Statements in C: Sequence, Selection & Repetition Explained</h1>
+        <img src="images/10-CS-IMAGES/control-statements.png" alt="control-statements-c" class="post-image" loading="lazy">
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <p>In programming, we often need to control the way statements are executed. If every program only executed line by line, it would be very limited. Thankfully, C provides **Control Statements** — instructions that allow the programmer to decide the order in which statements are executed, whether to skip certain parts, repeat blocks of code, or make decisions based on conditions.</p>
+
+        <p>In this detailed guide, we will explore the three main types of control statements in C: **Sequence, Selection, and Repetition**. Along with definitions, we’ll look at practical examples, step-by-step explanations, and real-world applications. This lecture is designed to help students deeply understand these concepts and apply them confidently in programming.</p>
+
+        <h1>Control Statement</h1>
+        <p>The statement this is used to control the flow of the execution of the program. </p>
+        <h2>Types of Control Statements in C</h2>
+        <p>C provides three fundamental types of control statements that form the backbone of structured programming:</p>
+
+        <h3>1. Sequence (Sequential Control)</h3>
+        <p><strong>Definition:</strong> The sequence is the default execution mode in C. It means statements are executed one after the other in the order they appear.</p>
+        <p><strong>How it works:</strong> No conditions, no loops, no jumps. Each line executes once in order.</p>
+
+        <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int num;
+    printf("Enter number: ");
+    scanf("%d", &num);
+    printf("You entered %d", num);
+    return 0;
+}
+</code></pre>
+
+        <p><strong>Explanation:</strong> In this program, the statements run one after another:</p>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <ul>
+            <li>The program asks the user for a number.</li>
+            <li>The number is read from input.</li>
+            <li>The number is displayed back to the user.</li>
+        </ul>
+        <p>This is a **sequential flow** without any branching or looping.</p>
+
+        <h3>2. Selection (Decision-Making)</h3>
+        <p><strong>Definition:</strong> Selection statements allow the program to choose different paths based on conditions.</p>
+        <p><strong>Purpose:</strong> To make decisions in the program.</p>
+        <p><strong>Common statements:</strong> <code>if</code>, <code>if-else</code>, <code>if-else if-else</code>, <code>switch</code>.</p>
+
+        <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int marks;
+    printf("Enter marks: ");
+    scanf("%d", &marks);
+
+    if (marks >= 50) {
+        printf("Pass");
+    } else {
+        printf("Fail");
+    }
+    return 0;
+}
+</code></pre>
+
+        <p><strong>Explanation:</strong> This program checks the condition:</p>
+        <ul>
+            <li>If <code>marks >= 50</code>, it prints "Pass".</li>
+            <li>Otherwise, it prints "Fail".</li>
+        </ul>
+        <p>Thus, the flow of execution depends on the **decision** made at runtime.</p>
+
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <h4>Example: Switch Statement</h4>
+        <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int choice;
+    printf("Enter 1 for Tea, 2 for Coffee: ");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1:
+            printf("You chose Tea");
+            break;
+        case 2:
+            printf("You chose Coffee");
+            break;
+        default:
+            printf("Invalid choice");
+    }
+    return 0;
+}
+</code></pre>
+
+        <p><strong>Explanation:</strong> A <code>switch</code> is useful when multiple possible conditions exist. Here:</p>
+        <ul>
+            <li>If the user enters 1 → "You chose Tea".</li>
+            <li>If the user enters 2 → "You chose Coffee".</li>
+            <li>For any other input → "Invalid choice".</li>
+        </ul>
+
+        <h3>3. Repetition (Looping)</h3>
+        <p><strong>Definition:</strong> Loops are used to execute a block of code repeatedly until a condition becomes false.</p>
+        <p><strong>Purpose:</strong> To save effort and avoid writing the same statement multiple times.</p>
+        <p><strong>Common loops:</strong> <code>for</code>, <code>while</code>, <code>do-while</code>.</p>
+
+        <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        printf("%d\n", i);
+    }
+    return 0;
+}
+</code></pre>
+
+        <p><strong>Explanation:</strong> This loop prints numbers from 1 to 5. Instead of writing five <code>printf</code> statements, the loop executes the statement repeatedly.</p>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <h4>Example: While Loop</h4>
+        <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int i = 1;
+    while (i <= 5) {
+        printf("%d\n", i);
+        i++;
+    }
+    return 0;
+}
+</code></pre>
+
+        <p><strong>Explanation:</strong> The <code>while</code> loop keeps running as long as <code>i &lt;= 5</code>. Each time, it prints the value and increments <code>i</code>.</p>
+
+        <h4>Example: Do-While Loop</h4>
+        <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int i = 1;
+    do {
+        printf("%d\n", i);
+        i++;
+    } while (i <= 5);
+    return 0;
+}
+</code></pre>
+        <p><strong>Explanation:</strong> A <code>do-while</code> loop guarantees that the block runs at least once, even if the condition is false.</p>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <h2>Summary Table</h2>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Purpose</th>
+                <th>Examples in C</th>
+            </tr>
+            <tr>
+                <td>Sequence</td>
+                <td>Runs statements in order</td>
+                <td>Normal statement execution</td>
+            </tr>
+            <tr>
+                <td>Selection</td>
+                <td>Chooses path based on condition</td>
+                <td>if, if-else, switch</td>
+            </tr>
+            <tr>
+                <td>Repetition</td>
+                <td>Repeats code until a condition is false</td>
+                <td>for, while, do-while</td>
+            </tr>
+        </table>
+
+        <h2>Quick Notes – Control Statements in C</h2>
+        <ul>
+            <li>Control Statements – Instructions that control the flow of execution in a C program.</li>
+            <li>Three Main Types:
+                <ul>
+                    <li><strong>Sequence:</strong> Default execution; runs statements one after another in order.</li>
+                    <li><strong>Selection:</strong> Decision-making; chooses which code block to run based on conditions (if, if-else, switch).</li>
+                    <li><strong>Repetition:</strong> Looping; repeats a block of code multiple times until a condition is false (for, while, do-while).</li>
+                </ul>
+            </li>
+            <li><strong>Purpose:</strong> To make programs flexible, interactive, and efficient by adding decision-making and looping capabilities.</li>
+        </ul>
+
+        <h2>MCQs</h2>
+        <p><strong>1. Which control statement type runs statements one after another?</strong></p>
+        <ul>
+            <li>a) Sequence</li>
+            <li>b) Selection</li>
+            <li>c) Repetition</li>
+            <li>d) Function</li>
+        </ul>
+        <p><strong>Answer:</strong> a) Sequence</p>
+
+        <p><strong>2. Which control statement allows decision-making?</strong></p>
+        <ul>
+            <li>a) Sequence</li>
+            <li>b) Selection</li>
+            <li>c) Looping</li>
+            <li>d) Recursion</li>
+        </ul>
+        <p><strong>Answer:</strong> b) Selection</p>
+
+        <p><strong>3. Which control statement repeats a block of code?</strong></p>
+        <ul>
+            <li>a) Looping</li>
+            <li>b) Selection</li>
+            <li>c) Sequence</li>
+            <li>d) Condition</li>
+        </ul>
+        <p><strong>Answer:</strong> a) Looping</p>
+
+        <h2>FAQs on Control Statements in C</h2>
+        <p><strong>Q1: What are control statements in C?</strong></p>
+        <p>Control statements are instructions that direct the order of execution of statements in a C program. They allow conditional execution and looping.</p>
+
+        <p><strong>Q2: Why are control statements important?</strong></p>
+        <p>They make programs flexible and efficient by allowing decision-making and repetition instead of writing the same code multiple times.</p>
+
+        <p><strong>Q3: What is the difference between sequence and selection?</strong></p>
+        <p>Sequence follows a straight flow of execution, while selection makes decisions based on conditions.</p>
+
+        <p><strong>Q4: What is the main difference between while and do-while loop?</strong></p>
+        <p>In while, the condition is checked first. In do-while, the block runs at least once before checking the condition.</p>
+
+        <p><strong>Q5: Can we use nested control statements in C?</strong></p>
+        <p>Yes, control statements can be nested, such as using a loop inside an if-statement.</p>
+
+        <p><strong>Q6: When should we use switch instead of if-else?</strong></p>
+        <p>Switch is preferred when we need to compare a variable against multiple constant values, while if-else is better for range-based conditions.</p>
+
+        <p><strong>Q7: What happens if we forget to use break in switch?</strong></p>
+        <p>The control falls through to the next case, executing multiple cases unintentionally.</p>
+
+        <p><strong>Q8: Can loops run infinitely?</strong></p>
+        <p>Yes, if the terminating condition is never met. For example, <code>while(1)</code> is an infinite loop.</p>
+
+        <p><strong>Q9: Are goto statements also control statements?</strong></p>
+        <p>Yes, but they are generally discouraged as they make the code unstructured.</p>
+
+        <p><strong>Q10: Which is the most commonly used control statement?</strong></p>
+        <p>The <code>for</code> loop is one of the most commonly used because it’s compact and well-suited for counting iterations.</p>
+    </article>
+</main>
+<footer>
+    <p>&copy; 2025 Salman Blogs. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+});
+</script>
+</body>
+</html>

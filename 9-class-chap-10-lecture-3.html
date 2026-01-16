@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI Algorithms and Techniques explained with examples, types, advantages, applications, and MCQs for students." />
+  <meta name="keywords" content="AI Algorithms, Artificial Intelligence Techniques, Whitebox Algorithms, Blackbox Algorithms, Decision Trees, Neural Networks, Deep Learning, Linear Regression, Rule-Based Systems, MCQs" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>AI Algorithms and Techniques — Definition, Types, Examples & MCQs | Salman Blogs</title>
+    <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+  <meta property="og:title" content="AI Algorithms and Techniques — Definition, Types, Examples & MCQs" />
+  <meta property="og:description" content="Understand AI algorithms with examples, advantages, disadvantages, applications, and MCQs for practice." />
+  <meta property="og:image" content="https://salmanblogs.com/images/ai/ai-algorithms.png" />
+  <meta property="og:url" content="https://salmanblogs.com/ai-algorithms-techniques.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Algorithms and Techniques — Definition, Types, Examples & MCQs" />
+  <meta name="twitter:description" content="Learn AI Algorithms and Techniques — types, examples, pros/cons, real-world applications, and MCQs." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/ai/ai-algorithms.png" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+<!-- Use Of Internal CSS. -->
+ <style>
+    html { scroll-behavior: smooth; }
+    .toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+    .toc h2 { margin-top: 0; }
+    .toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
+    .toc a:hover { color: darkblue; }
+    .toc li {list-style-type: none;}
+    .post-content h2,
+.post-content h3 {
+  border-left: 4px solid #0077cc;
+  padding-left: 12px;
+  margin-top: 25px;
+}
+
+ </style>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Emerging Technologies Lecture 3 Notes</h1>
+    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+    <img src="images/9-CS-IMAGES/chapter-10/chapter-10-lecture3-notes.png" alt="chapter-10-lecture3-notes" class="post-image" loading="lazy">
+    <!-- Table of Contents -->
+    <nav class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#definition">Definition</a></li>
+        <li><a href="#whitebox">1. Explainable (Whitebox) Algorithms</a></li>
+        <ul>
+          <li><a href="#decision-trees">a) Decision Trees</a></li>
+          <li><a href="#linear-regression">b) Linear Regression</a></li>
+          <li><a href="#rule-based">c) Rule-Based Systems</a></li>
+        </ul>
+        <li><a href="#blackbox">2. Unexplainable (Blackbox) Algorithms</a></li>
+        <ul>
+          <li><a href="#neural-networks">a) Neural Networks</a></li>
+          <li><a href="#deep-learning">b) Deep Learning</a></li>
+        </ul>
+        <li><a href="#quick-notes">Quick Notes</a></li>
+        <li><a href="#advantages-whitebox">Advantages of Whitebox Algorithms</a></li>
+        <li><a href="#disadvantages-whitebox">Disadvantages of Whitebox Algorithms</a></li>
+        <li><a href="#advantages-blackbox">Advantages of Blackbox Algorithms</a></li>
+        <li><a href="#disadvantages-blackbox">Disadvantages of Blackbox Algorithms</a></li>
+        <li><a href="#applications">Applications of AI Algorithms</a></li>
+        <li><a href="#mcqs">MCQs</a></li>
+        <li><a href="#related-posts">Relted Posts</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+      </ul>
+    </nav>
+
+    <div class="post-content">
+      <h2 id="definition">Definition</h2>
+      <p>
+        Artificial Intelligence (AI) algorithms are step-by-step methods or instructions that help machines perform tasks requiring human-like intelligence such as learning, decision-making, and problem-solving.
+      </p>
+      <p>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <br>
+        These algorithms are the backbone of AI systems. They allow computers to process vast amounts of data, recognize patterns, and make decisions with or without human guidance. Depending on how transparent and interpretable they are, AI algorithms can be divided into two broad categories:
+      </p>
+      <ul>
+        <li><strong>Explainable (Whitebox) Algorithms</strong> → Transparent and easy to understand.</li>
+        <li><strong>Unexplainable (Blackbox) Algorithms</strong> → Complex and hard to interpret.</li>
+      </ul>
+
+      <h2 id="whitebox">1. Explainable (Whitebox) Algorithms</h2>
+      <p>
+        Whitebox algorithms are simple, transparent, and allow humans to understand how decisions are made. They are widely used in education, finance, healthcare, and other fields where interpretability and trust are very important.
+      </p>
+
+      <h3 id="decision-trees">a) Decision Trees</h3>
+      <p>
+        Decision Trees work like a flowchart with a series of “yes/no” questions. Each question leads to another branch until a decision or classification is reached. 
+        <br><strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <br>
+        They are especially useful for classification and regression tasks.
+      </p>
+      <p><strong>Example:</strong> Identifying an animal:</p>
+      <ul>
+        <li>Does it have feathers? → Yes → It’s a bird.</li>
+        <li>Does it have fur? → Yes → It’s a mammal.</li>
+      </ul>
+      <p>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        Decision Trees are commonly used in medical diagnosis, credit scoring, and fraud detection because they are simple to explain to non-technical stakeholders.
+      </p>
+
+      <h3 id="linear-regression">b) Linear Regression</h3>
+      <p>
+        Linear Regression is one of the simplest and most widely used algorithms in AI and statistics. It finds a straight-line relationship between two or more variables. The model tries to fit the best line through the data points, minimizing the error.
+      </p>
+      <p><strong>Example:</strong> Study time vs. grades. The more hours you study, the higher your expected score.</p>
+      <p>
+        Linear regression is used in predicting house prices, forecasting stock markets, and even in sports analytics to evaluate performance trends.
+      </p>
+
+      <h3 id="rule-based">c) Rule-Based Systems</h3>
+      <p>
+        Rule-based systems are among the earliest AI methods. They rely on human-written rules in the form of "if-then" conditions to make decisions.
+      </p>
+      <p><strong>Example:</strong> In a game: If obstacle ahead → then jump.</p>
+      <p>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        These systems are still used in chatbots, medical expert systems, and automated troubleshooting because they are easy to build and explain, although they lack flexibility compared to modern AI.
+      </p>
+
+      <h2 id="blackbox">2. Unexplainable (Blackbox) Algorithms</h2>
+      <p>
+        Blackbox algorithms are advanced algorithms where the decision-making process is very complex and difficult for humans to interpret. 
+        <br><strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        While they are extremely powerful, they lack transparency. This can be problematic in fields where ethical decisions or fairness are important.
+      </p>
+
+      <h3 id="neural-networks">a) Neural Networks</h3>
+      <p>
+        Neural Networks are inspired by the human brain. They consist of interconnected layers of nodes (neurons) that process information. They are especially strong in pattern recognition.
+      </p>
+      <p><strong>Applications:</strong> Facial recognition, spam email detection, handwriting recognition.</p>
+      <p>
+        The drawback of neural networks is their complexity. While they can achieve high accuracy, it is often difficult to explain exactly why they made a certain decision.
+      </p>
+
+      <h3 id="deep-learning">b) Deep Learning</h3>
+      <p>
+        Deep Learning is a subset of machine learning that uses multiple layers of neural networks to model complex patterns in data. Each layer extracts features and passes them to the next, creating highly sophisticated models.
+      </p>
+      <p><strong>Applications:</strong> Voice assistants (Siri, Alexa), self-driving cars, advanced medical image analysis.</p>
+      <p>
+        While Deep Learning systems achieve state-of-the-art performance in many tasks, they are often referred to as "black boxes" because even experts struggle to interpret how the layers contribute to the final decision.
+      </p>
+
+      <h2 id="quick-notes">Quick Notes – AI Algorithms & Techniques</h2>
+      <ul>
+        <li><strong>AI Algorithms:</strong> Methods that help machines learn, analyze, and make decisions.</li>
+        <li><strong>Whitebox (Explainable):</strong> Transparent, easy to understand, humans can see how decisions are made. Examples: Decision Trees, Linear Regression, Rule-Based Systems.</li>
+        <li><strong>Blackbox (Unexplainable):</strong> Complex, humans cannot easily understand the decision process. Examples: Neural Networks, Deep Learning models.</li>
+        <li><strong>Key Difference:</strong> Whitebox = simple and interpretable; Blackbox = powerful but not easily explainable.</li>
+      </ul>
+
+      <h2 id="advantages-whitebox">Advantages of Whitebox Algorithms</h2>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <ul>
+        <li>Easy to interpret and explain to non-technical users.</li>
+        <li>Helpful in industries where trust and accountability are critical (healthcare, finance).</li>
+        <li>Require less computing power compared to blackbox algorithms.</li>
+        <li>Better for smaller datasets where transparency is preferred.</li>
+      </ul>
+
+      <h2 id="disadvantages-whitebox">Disadvantages of Whitebox Algorithms</h2>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <ul>
+        <li>Limited accuracy when dealing with highly complex data.</li>
+        <li>Not suitable for tasks requiring deep pattern recognition like image or speech recognition.</li>
+        <li>Performance may decline with very large datasets.</li>
+      </ul>
+
+      <h2 id="advantages-blackbox">Advantages of Blackbox Algorithms</h2>
+       <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <ul>
+        <li>Highly accurate in complex problem-solving.</li>
+        <li>Can process massive datasets effectively.</li>
+        <li>Great for image processing, voice recognition, and natural language processing.</li>
+      </ul>
+
+      <h2 id="disadvantages-blackbox">Disadvantages of Blackbox Algorithms</h2>
+       <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <ul>
+        <li>Lack of transparency difficult to explain results.</li>
+        <li>Require huge computational resources.</li>
+        <li>Risk of bias hidden in data and not easily detectable.</li>
+      </ul>
+
+      <h2 id="applications">Applications of AI Algorithms</h2>
+       <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <ul>
+        <li><strong>Healthcare:</strong> Disease diagnosis, drug discovery, medical imaging.</li>
+        <li><strong>Finance:</strong> Fraud detection, credit scoring, algorithmic trading.</li>
+        <li><strong>Education:</strong> Personalized learning systems, automated grading.</li>
+        <li><strong>Transportation:</strong> Self-driving cars, traffic management.</li>
+        <li><strong>Robotics:</strong> Industrial automation, service robots.</li>
+        <li><strong>Daily Life:</strong> Virtual assistants, recommendation systems (YouTube, Netflix).</li>
+      </ul>
+
+      <h2 id="mcqs">MCQs – AI Algorithms & Techniques</h2>
+      <ol>
+        <li><strong>Which of the following is an example of a Whitebox algorithm?</strong><br>
+          a) Decision Trees ✅<br>
+          b) Neural Networks<br>
+          c) Deep Learning<br>
+          d) None of the above</li>
+        <li><strong>Blackbox algorithms are called so because:</strong><br>
+          a) They are easy to understand<br>
+          b) Their decision-making process is hidden ✅<br>
+          c) They don’t work on data<br>
+          d) They only use rules</li>
+        <li><strong>Linear Regression is mainly used to:</strong><br>
+          a) Classify animals<br>
+          b) Find a relationship between variables ✅<br>
+          c) Control a robot<br>
+          d) Translate languages</li>
+        <li><strong>Rule-Based Systems work on the principle of:</strong><br>
+          a) Yes/No questions<br>
+          b) If-Then rules ✅<br>
+          c) Neural layers<br>
+          d) Random guesses</li>
+        <li><strong>Which of the following is a Blackbox algorithm?</strong><br>
+          a) Rule-Based Systems<br>
+          b) Decision Trees<br>
+          c) Neural Networks ✅<br>
+          d) Linear Regression</li>
+      </ol>
+
+      <h2>Lectures</h2>
+      <ul>
+      <li><a href="9-class-chap-10-lecture-2.html">Previous</a></li>
+      <li><a href="9-class-chap-10-lecture-4.html">Next</a></li>
+      </ul>
+      <h2 id="related-posts">Related Posts</h2>
+      <ul>
+        <li><a href="Top-10-Programming-Languages-in-2025.html">Top 10 Programming Languages in 2025</a></li>
+        <li><a href="how-ai-will-replace-and-create-jobs-by-2030.html">How AI Will Replace and Create Jobs by 2030</a></li>
+        <li><a href="Best-Online-Courses-for-High-Paying-Jobs.html">Best Online Courses for High-Paying Jobs in 2025</a></li>
+      </ul>
+
+      <h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
+<section class="faq-section">
+
+  <div class="faq-item">
+    <button class="faq-question">1. What are AI algorithms?</button>
+    <div class="faq-answer">
+      <p>Step-by-step instructions that allow machines to learn, analyze, and make decisions like humans.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">2. What is the difference between Whitebox and Blackbox algorithms?</button>
+    <div class="faq-answer">
+      <p>Whitebox algorithms are transparent and interpretable, while Blackbox algorithms are complex and hard to interpret.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">3. Why are Blackbox algorithms powerful?</button>
+    <div class="faq-answer">
+      <p>They can process massive amounts of data and identify deep patterns, achieving high accuracy.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">4. Where are Decision Trees used?</button>
+    <div class="faq-answer">
+      <p>In medical diagnosis, fraud detection, and classification tasks where interpretability is important.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">5. What are the risks of Blackbox algorithms?</button>
+    <div class="faq-answer">
+      <p>They may hide bias, are difficult to explain, and require huge computing power.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">6. Is Linear Regression still relevant today?</button>
+    <div class="faq-answer">
+      <p>Yes, it is widely used for predictions in economics, business, and data analysis.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">7. Why do industries prefer Whitebox algorithms in sensitive areas?</button>
+    <div class="faq-answer">
+      <p>Because they can explain decisions, which is crucial in fields like healthcare and law.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">8. What is a real-life example of Deep Learning?</button>
+    <div class="faq-answer">
+      <p>Voice assistants like Siri and Alexa that understand and respond to human speech.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">9. How are Rule-Based Systems different from Neural Networks?</button>
+    <div class="faq-answer">
+      <p>Rule-based systems depend on human-written logic, while neural networks learn automatically from data.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">10. Which type of AI algorithm is best?</button>
+    <div class="faq-answer">
+      <p>It depends on the task: Whitebox for transparency and trust, Blackbox for power and accuracy.</p>
+    </div>
+  </div>
+
+</section>
+    </div>
+  </article>
+</main>
+<footer>
+  <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+ });
+    // FAQ toggle
+  const faqItems = document.querySelectorAll(".faq-question");
+  faqItems.forEach(btn => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const answer = this.nextElementSibling;
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+      } else {
+        answer.style.display = "block";
+      }
+    });
+  });
+
+</script>
+</body>
+</html>

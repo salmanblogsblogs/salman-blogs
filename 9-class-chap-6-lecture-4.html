@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about network topology, its types (Bus, Star, Ring, Mesh), advantages, disadvantages, applications, examples, FAQs, and MCQs." />
+  <meta name="keywords" content="Network Topology, Bus Topology, Star Topology, Ring Topology, Mesh Topology, Computer Networks, Applications, MCQs" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Network Topology — Types, Advantages, Disadvantages, Applications & MCQs | Salman Blogs</title>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Network Topology — Types, Advantages, Disadvantages, Applications & MCQs" />
+  <meta property="og:description" content="Understand network topology, including bus, star, ring, and mesh structures with examples, pros & cons, applications, and MCQs." />
+  <meta property="og:image" content="https://salmanblogs.com/images/technology/network-topology.png" />
+  <meta property="og:url" content="https://salmanblogs.com/network-topology.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Network Topology — Types, Advantages, Disadvantages, Applications & MCQs" />
+  <meta name="twitter:description" content="Learn about different network topologies (bus, star, ring, mesh) with advantages, disadvantages, applications, and examples." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/network-topology.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+      </div>
+      <div class="nav-toggle" id="navToggle">&#9776;</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </div>
+  </header>
+  <main class="post-container">
+    <article class="blog-post">
+       <h1 class="post-title">Introduction To Networks Lecture 4 Notes</h1>
+      <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+      <img src="images/9-CS-IMAGES/chapter-6/chapter-6-lecture4-notes.png" alt="chapter-6-lecture4-notes" class="post-image" />
+      <div class="post-content">
+
+        <!-- INTRODUCTION -->
+        <h2>Introduction</h2>
+        <p>These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>. 
+         In today’s lecture, we are going to explore one of the most important concepts in Computer Science and That’s <strong>Network Topology</strong>. Understanding topology is crucial because it forms the foundation of how computers communicate with each other. Whether you are setting up a small home network, building a school computer lab, or managing the IT infrastructure of a large organization, knowing about topologies helps in making the right design choices. This lesson is specially designed for <strong>Class 9 Computer Science students</strong>, but it is equally useful for anyone who wants to strengthen their basics of networking.</p>
+
+        <p>In this article, we will cover:</p>
+        <ul>
+          <li>The definition of network topology.</li>
+          <li>Different types of topologies (Bus, Star, Ring, Mesh).</li>
+          <li>Advantages and disadvantages of each topology.</li>
+          <li>Real-world applications of each topology.</li>
+          <li>MCQs for practice and revision.</li>
+          <li>Additional FAQs for better understanding.</li>
+        </ul>
+
+        <h2>What is Network Topology?</h2>
+        <p><strong>Network topology</strong> is the arrangement or structure in which the devices (computers, printers, etc.) are connected in a network. It shows how devices are linked and how data flows between them.</p>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <p>Think of it as the "map" of the network. Just like the design of a road network affects traffic flow in a city, the design of a network topology affects how efficiently computers exchange information.</p>
+
+        <h2>Types of Network Topology</h2>
+
+        <!-- BUS TOPOLOGY -->
+        <h3>1. Bus Topology</h3>
+        <p>All devices are connected to a single central cable (called bus or backbone). Data travels along the bus, and all devices receive it, but only the addressed device accepts it.</p>
+        <img src="images/9-CS-IMAGES/chapter 6/bus.PNG" alt="Bus Topology Diagram" class="post-image">
+        <ul>
+          <li><strong>Advantages:</strong>
+            <ul>
+              <li>Easy to set up.</li>
+              <li>Cost-effective (uses less cable).</li>
+            </ul>
+          </li>
+          <li><strong>Disadvantages:</strong>
+            <ul>
+              <li>If the main cable fails, the whole network goes down.</li>
+              <li>Performance decreases when many devices are connected.</li>
+            </ul>
+          </li>
+          <li><strong>Example:</strong> Small LAN setups.</li>
+        </ul>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <p><strong>Explanation:</strong> Bus topology was one of the earliest types used in computer networking. Imagine a classroom where the teacher speaks, and all students hear the same message. Only the student whose name is called responds. That’s how data flows on a bus topology. However, if the teacher loses their voice (the main cable fails), communication stops completely. Today, bus topology is rare, but it is still taught as it explains the foundation of networking.</p>
+        <!-- STAR TOPOLOGY -->
+        <h3>2. Star Topology</h3>
+        <p>All devices are connected to a central hub or switch. Devices communicate through the hub.</p>
+        <img src="images/9-CS-IMAGES/chapter 6/star.PNG" alt="Star Topology Diagram" class="post-image" />
+        <ul>
+          <li><strong>Advantages:</strong>
+            <ul>
+              <li>Easy to manage and troubleshoot.</li>
+              <li>If one cable fails, only that device is affected.</li>
+            </ul>
+          </li>
+          <li><strong>Disadvantages:</strong>
+            <ul>
+              <li>If the hub/switch fails, the entire network stops working.</li>
+              <li>Requires more cable than bus topology.</li>
+            </ul>
+          </li>
+          <li><strong>Example:</strong> Office networks using switches.</li>
+        </ul>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <p><strong>Explanation:</strong> Star topology is one of the most commonly used designs today. Picture an airport: all airplanes (devices) connect to the control tower (hub/switch). If one airplane’s radio fails, others are unaffected. But if the control tower stops working, all communication breaks down. This makes the hub/switch a single point of failure, but because hubs are affordable and reliable today, star topology remains a favorite for most local area networks (LANs).</p>
+
+        <!-- RING TOPOLOGY -->
+        <h3>3. Ring Topology</h3>
+        <p>Each device is connected to two other devices, forming a circular path (ring). Data travels in one direction (or both in dual ring) until it reaches the destination.</p>
+        <img src="images/9-CS-IMAGES/chapter 6/ring.PNG" alt="Ring Topology Diagram" class="post-image" />
+        <ul>
+          <li><strong>Advantages:</strong>
+            <ul>
+              <li>Data flows in an orderly manner (less chance of collision).</li>
+              <li>Equal access for all devices.</li>
+            </ul>
+          </li>
+          <li><strong>Disadvantages:</strong>
+            <ul>
+              <li>If one device/cable fails, the whole network may stop.</li>
+              <li>Adding/removing devices is difficult.</li>
+            </ul>
+          </li>
+          <li><strong>Example:</strong> Used in some old LANs and token ring networks.</li>
+        </ul>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <p><strong>Explanation:</strong> Ring topology works like a relay race. Each runner (computer) passes the baton (data) to the next until it reaches the finish line (destination). This ensures smooth flow but creates dependency, if one runner drops the baton (a device fails), the whole race stops. While not very common today, ring topology introduced important ideas about data passing and orderly communication.</p>
+
+        <!-- MESH TOPOLOGY -->
+        <h3>4. Mesh Topology</h3>
+        <p>Every device is connected to every other device in the network.</p>
+        <img src="images/9-CS-IMAGES/chapter 6/mesh.PNG" alt="Mesh Topology Diagram" class="post-image" />
+        <ul>
+          <li><strong>Advantages:</strong>
+            <ul>
+              <li>Very reliable (if one link fails, data can use another path).</li>
+              <li>Provides high security and redundancy.</li>
+            </ul>
+          </li>
+          <li><strong>Disadvantages:</strong>
+            <ul>
+              <li>Expensive (requires many cables).</li>
+              <li>Complex to set up and maintain.</li>
+            </ul>
+          </li>
+          <li><strong>Example:</strong> Used in military networks and critical systems.</li>
+        </ul>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <p><strong>Explanation:</strong> Mesh topology is like building multiple roads between every pair of cities. If one road is blocked, vehicles can take another. This redundancy ensures communication never fails. That’s why mesh topology is used in military bases, banks, and data centers where failure is not acceptable. However, due to its high cost and complexity, it is not common in small networks.</p>
+
+        <!-- APPLICATIONS -->
+        <h2>Applications of Network Topology</h2>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <p>Understanding where each topology fits is important. Let’s see real-world applications:</p>
+        <ul>
+          <li><strong>Bus Topology:</strong> Small home or temporary networks where cost is a concern.</li>
+          <li><strong>Star Topology:</strong> Schools, offices, and Wi-Fi networks at homes.</li>
+          <li><strong>Ring Topology:</strong> Industrial setups where data transmission order matters.</li>
+          <li><strong>Mesh Topology:</strong> Military, banking, and research labs requiring high reliability.</li>
+        </ul>
+
+        <!-- MCQs -->
+        <h2>MCQs</h2>
+        <ol>
+          <li><strong>Which topology uses a single backbone cable?</strong><br>
+            a) Star<br>
+            b) Ring<br>
+            c) Bus<br>
+            d) Mesh<br>
+            <p><strong>Answer:</strong> c) Bus</p>
+          </li>
+          <li><strong>In which topology does failure of central hub affect the entire network?</strong><br>
+            a) Bus<br>
+            b) Star<br>
+            c) Ring<br>
+            d) Mesh<br>
+            <p><strong>Answer:</strong> b) Star</p>
+          </li>
+          <li><strong>Which topology provides the highest reliability and redundancy?</strong><br>
+            a) Bus<br>
+            b) Ring<br>
+            c) Mesh<br>
+            d) Star<br>
+            <p><strong>Answer:</strong> c) Mesh</p>
+          </li>
+          <li><strong>Which topology is most cost-effective and easiest to install?</strong><br>
+            a) Bus<br>
+            b) Mesh<br>
+            c) Star<br>
+            d) Ring<br>
+            <p><strong>Answer:</strong> a) Bus</p>
+          </li>
+          <li><strong>In a Ring topology, data travels:</strong><br>
+            a) Randomly<br>
+            b) In one direction only<br>
+            c) In both directions simultaneously<br>
+            d) Depends on network design<br>
+            <p><strong>Answer:</strong> b) In one direction only (unless dual ring)</p>
+          </li>
+        </ol>
+
+        <!-- SUMMARY -->
+        <h2>Summary</h2>
+        <p>Network topology defines the structure of a network. We discussed bus, star, ring, and mesh topologies with their pros, cons, and applications. Choosing the right topology depends on budget, reliability needs, and scalability. For example, star is great for schools, mesh is used in military, and bus is suitable only for small setups.</p>
+
+        <!-- FAQs -->
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <h3>Q1: Why is network topology important?</h3>
+        <p>It determines how data flows in the network, how failures affect the system, and how easy it is to expand or troubleshoot.</p>
+        <h3>Q2: Which topology is used in Wi-Fi networks?</h3>
+        <p>Most Wi-Fi networks follow star topology where all devices connect to a central router.</p>
+        <h3>Q3: Can we mix different topologies?</h3>
+        <p>Yes, hybrid topology is a combination of two or more topologies. For example, a large office may use both star and mesh together.</p>
+        <h3>Q4: Which topology is best for beginners to learn?</h3>
+        <p>Star topology, because it is widely used and easy to understand.</p>
+        <h3>Q5: Why is bus topology not common today?</h3>
+        <p>Because it is less reliable and performance drops quickly as more devices are added.</p>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("navToggle").addEventListener("click", function () {
+      document.getElementById("navLinks").classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

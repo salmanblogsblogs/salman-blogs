@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn the fundamentals of web development with clear definitions, quick revision notes, MCQs and expanded real-world examples, best practices and FAQs." />
+  <meta name="keywords" content="Fundamentals of Web Development, HTML, CSS, JavaScript, Digital Literacy, MCQs, Revision, Responsive Design, Hosting, Git, SEO" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Fundamentals of Web Development — Definitions, Quick Notes & MCQs | Salman Blogs</title>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Fundamentals of Web Development — Definitions, Quick Notes & MCQs" />
+  <meta property="og:description" content="Understand HTML, CSS, JavaScript and other core web development concepts with definitions, quick notes and MCQs for practice." />
+  <meta property="og:image" content="https://salmanblogs.com/images/technology/fundamentals-web-development.png" />
+  <meta property="og:url" content="https://salmanblogs.com/fundamentals-of-web-development.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fundamentals of Web Development — Definitions, Quick Notes & MCQs" />
+  <meta name="twitter:description" content="Clear definitions, quick notes and MCQs to help you learn the basics of web development." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/fundamentals-web-development.png" />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .lead { font-size: 1.05rem; line-height: 1.6; }
+    .tip { background:#f7f9fc; border-left:4px solid #0077cc; padding:10px 12px; margin:12px 0; }
+    .code { background:#272e36; color:#e6edf3; padding:12px; border-radius:6px; overflow:auto; font-family:monospace; }
+    .section-title { margin-top:1.6rem; }
+    .two-col { display:flex; gap:20px; flex-wrap:wrap; }
+    .col { flex:1; min-width:260px; }
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Fundamentals of Web Development[HTML CSS JAVASCRIPT] Lecture 1 Notes</h1>
+    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+    <img src="images/9-CS-IMAGES/chapter-8/chapter-8-lecture1-notes.png" alt="chapter-8-lecture1-notes" class="post-image" />
+
+    <div class="post-content">
+      <h2>Introduction</h2>
+      <p class="lead">
+        Hello! I'm <strong>Salman Ahmad</strong>. Your Computer Science teacher and also a web developer. In this lesson we're going to dig into the fundamentals of web development. 
+        If you've ever asked yourself how websites are built, why some pages look pretty while others don't, or how interactive things on a page work, this guide is for you.
+      </p>
+
+      <p class="lead">
+        We'll cover the basics (HTML, CSS, JavaScript), why each one matters, how they work together, and practical tips you can use to build simple web pages. There are examples, revision notes, MCQs, and extra sections like responsive design, performance tips, security basics, hosting and deployment, and career advice so you get a full picture.
+      </p>
+
+      <div class="tip">
+        Quick practical idea: open your browser and press <strong>Ctrl+U</strong> (or right-click → View Page Source) to see HTML. Then press <strong>F12</strong> to open DevTools and poke CSS & JavaScript live. It's the fastest way to learn.
+      </div>
+
+      <h2 class="section-title">Full Definitions</h2>
+      <ol>
+        <li>
+          <strong>HTML (HyperText Markup Language)</strong>
+          <p>HTML is the language used to create the basic structure of a webpage. It tells the browser what each part of the page is, like headings, text, pictures, and links.</p>
+        </li>
+        <li>
+          <strong>CSS (Cascading Style Sheets)</strong>
+          <p>CSS is the language used to style a webpage. It controls colors, fonts, layouts, and designs to make the page look attractive.</p>
+        </li>
+        <li>
+          <strong>JavaScript</strong>
+          <p>JavaScript is the language that makes a webpage active and interactive. It allows the page to respond when users click, type, or move things.</p>
+        </li>
+        <li>
+          <strong>Web Development</strong>
+          <p>Web development is the process of creating and maintaining websites or web applications. It involves using different languages and tools to design, build, and manage web pages.</p>
+        </li>
+        <li>
+          <strong>Why Learn Web Development</strong>
+          <p>Learning web development is important because it helps you understand how websites work, opens career opportunities, improves problem-solving skills, allows creativity, and can help you start your own online business.</p>
+        </li>
+        <li>
+          <strong>Digital Literacy</strong>
+          <p>Digital literacy is understanding how digital technology works. In web development, it means knowing how HTML, CSS, and JavaScript work together to create a website and understanding how the internet functions.</p>
+        </li>
+        <li>
+          <strong>Career Opportunities</strong>
+          <p>Career opportunities are different types of jobs you can get with certain skills. Web development skills can help you work as a web developer, web designer, or other related roles in the IT industry.</p>
+        </li>
+        <li>
+          <strong>Problem-Solving</strong>
+          <p>Problem-solving is the ability to find and fix issues. In web development, this could mean figuring out why a website is slow or fixing errors so it works better.</p>
+        </li>
+        <li>
+          <strong>Creativity</strong>
+          <p>Creativity is the ability to make new and interesting things. In web development, it means designing websites with unique layouts, colors, and interactive features.</p>
+        </li>
+        <li>
+          <strong>Entrepreneurship</strong>
+          <p>Entrepreneurship is starting and running your own business. With web development skills, you can create a website to sell products, share services, or launch a new online idea.</p>
+        </li>
+      </ol>
+
+      <!-- Expanded: How HTML, CSS, JS work together -->
+      <h2 class="section-title">How HTML, CSS and JavaScript Work Together (the big picture)</h2>
+          <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p class="lead">
+        Think of a website like a human body:
+      </p>
+      <ul>
+        <li><strong>HTML is the skeleton:</strong> it provides structure by using headings, paragraphs, images, tables etc.</li>
+        <li><strong>CSS is the clothing and makeup:</strong> it makes the structure look attractive by using colors, spacing, alignment.</li>
+        <li><strong>JavaScript is the muscles and nerves:</strong> it makes things move and respond.</li>
+      </ul>
+
+      <p class="lead">
+        When someone types a web address in the browser, the browser requests HTML from a server. The server responds with HTML, which the browser parses into a DOM (Document Object Model). CSS files referenced in the HTML are downloaded and applied to the DOM to style it. JavaScript runs and can change the DOM in real time, making the page interactive.
+      </p>
+
+      <div class="two-col">
+        <div class="col">
+          <h3>Simple Example: A heading with color and a click</h3>
+          <div class="code">
+&lt;!-- HTML -- &gt;
+&lt;h1 id="title"&gt;Hello World&lt;/h1&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+
+&lt;!-- styles.css --&gt;
+#title { color: blue; font-family: Arial, sans-serif; }
+
+&lt;!-- script.js --&gt;
+document.getElementById('title').addEventListener('click', function() {
+  alert('You clicked the title!');
+});
+          </div>
+        </div>
+        <div class="col">
+          <h3>What happens</h3>
+          <p class="lead">HTML creates the &lt;h1&gt; element, CSS gives it blue color and a font, and JavaScript listens for a click and shows an alert. That simple trio demonstrates structure, style, and behavior.</p>
+        </div>
+      </div>
+
+      <!-- Expanded: Browser, Server, Client-Server model -->
+      <h2 class="section-title">Browser, Server &amp; the Client-Server Model</h2>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p class="lead">
+        The web works on a client-server model. The browser (client) requests resources; the server responds. This request/response loop uses the HTTP protocol (or HTTPS for secure sites).
+      </p>
+
+      <h3>What is a browser?</h3>
+      <p class="lead">
+        A browser (Chrome, Firefox, Safari, Edge) renders HTML and CSS, runs JavaScript, and provides developer tools to inspect structure, style, and network requests. Browsers also implement security measures (same-origin policy, CORS).
+      </p>
+
+      <h3>What is a server?</h3>
+      <p class="lead">
+        A server is a computer that stores website files and responds to HTTP requests. When you visit example.com, your browser asks the server for index.html; the server sends files back.
+      </p>
+
+      <h3>HTTP and HTTPS (basic idea)</h3>
+      <p class="lead">
+        HTTP (HyperText Transfer Protocol) is the set of rules for requesting and delivering web content. HTTPS is HTTP over TLS/SSL. It encrypts the data between browser and server so eavesdroppers cannot read it.
+      </p>
+
+      <div class="tip">
+        Tip: always prefer HTTPS for real sites. Browsers mark non-HTTPS pages as “Not secure.”
+      </div>
+
+      <!-- Expanded: HTML basics - tags, semantics, accessibility -->
+      <h2 class="section-title">HTML Essentials: Tags, Semantics and Accessibility</h2>
+              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p class="lead">
+        HTML uses tags like &lt;h1&gt;, &lt;p&gt;, &lt;img&gt;, &lt;a&gt;, &lt;form&gt; and more. Modern best-practice is to use <em>semantic</em> tags (like &lt;header&gt;, &lt;main&gt;, &lt;article&gt;, &lt;nav&gt;, &lt;footer&gt;) so the page is easier to read for humans, search engines and assistive technologies.
+      </p>
+
+      <h3>Accessibility (a11y) basics</h3>
+      <ul>
+        <li>Use <code>alt</code> attributes for images: &lt;img src="photo.jpg" alt="A child reading a book"&gt;</li>
+        <li>Use proper heading order (h1 → h2 → h3) so screen readers can follow structure.</li>
+        <li>Label forms correctly with &lt;label for="name"&gt;Name&lt;/label&gt; and input IDs.</li>
+        <li>Ensure contrast between text and background for readability.</li>
+      </ul>
+
+      <div class="tip">
+        Accessibility is not optional. It helps people who use screen readers, improves SEO, and broadens your audience.
+      </div>
+
+      <!-- Expanded: CSS essentials -->
+      <h2 class="section-title">CSS Essentials: Selectors, Box Model and Responsive Layouts</h2>
+              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p class="lead">
+        CSS controls how HTML looks. Some key concepts:
+      </p>
+      <ul>
+        <li><strong>Selectors:</strong> Choose elements to style (element, class, ID, attribute selectors).</li>
+        <li><strong>Box model:</strong> Every element has content, padding, border, margin. Learning this helps with layout and spacing.</li>
+        <li><strong>Flexbox & Grid:</strong> Modern layout systems. Flexbox is great for single-dimensional layouts, Grid is powerful for two-dimensional layouts.</li>
+        <li><strong>Responsive design:</strong> Media queries let your site adapt to mobile, tablet, and desktop screens.</li>
+      </ul>
+
+      <h3>Example: simple responsive rule</h3>
+      <div class="code">
+@media (max-width: 600px) {
+  .sidebar { display: none; }
+  .content { width: 100%; }
+}
+      </div>
+
+      <!-- Expanded: JavaScript essentials -->
+      <h2 class="section-title">JavaScript Essentials: Interaction, DOM and APIs</h2>
+              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p class="lead">
+        JavaScript runs in the browser to make pages interactive:
+      </p>
+      <ul>
+        <li><strong>DOM (Document Object Model):</strong> JavaScript can add/remove/change HTML elements in the DOM.</li>
+        <li><strong>Events:</strong> Clicks, input, scroll — JS listens for events to react.</li>
+        <li><strong>APIs:</strong> Fetch data from servers (AJAX/fetch), work with browser storage, Web APIs like Geolocation or Canvas.</li>
+      </ul>
+
+      <h3>Small example: fetch API</h3>
+      <div class="code">
+fetch('https://api.example.com/data')
+  .then(resp =&gt; resp.json())
+  .then(data =&gt; console.log(data));
+      </div>
+
+      <!-- Expanded: Tools & Workflow -->
+      <h2 class="section-title">Tools &amp; Workflow — DevTools, Editors, Version Control</h2>
+              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p class="lead">
+        Real web development uses tools that speed up work and keep projects organized:
+      </p>
+      <ul>
+        <li><strong>Code editors:</strong> VS Code, Sublime, Atom (VS Code is widely used).</li>
+        <li><strong>Browser DevTools:</strong> Inspect DOM/CSS, debug JS, audit performance and accessibility.</li>
+        <li><strong>Version control (Git):</strong> Track changes and collaborate with others. Platforms: GitHub, GitLab, Bitbucket.</li>
+        <li><strong>Package managers and build tools:</strong> npm/yarn, and bundlers like Vite, Webpack for modern JS projects.</li>
+      </ul>
+
+      <div class="tip">
+        Practical workflow: write code locally → test in browser → commit to Git → push to GitHub → deploy (e.g., Netlify or GitHub Pages).
+      </div>
+
+      <!-- Expanded: Responsive Design & Mobile-first -->
+      <h2 class="section-title">Responsive Design & Mobile-First Approach</h2>
+              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p class="lead">
+        Most web traffic is on mobile. Build mobile-first: design for small screens first, then scale up. Use flexible units (%, rem) and media queries.
+      </p>
+
+      <h3>Checklist for responsive pages</h3>
+      <ul>
+        <li>Fluid layouts that adapt to screen width</li>
+        <li>Images that scale with CSS (<code>max-width:100%</code>)</li>
+        <li>Readable font sizes (use <code>rem</code>)</li>
+        <li>Touchable targets for buttons (minimum ~44px)</li>
+      </ul>
+
+      <!-- Expanded: Performance & Optimization -->
+      <h2 class="section-title">Performance & Optimization</h2>
+              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p class="lead">
+        Fast pages = better user experience + better SEO. A few practical optimizations:
+      </p>
+      <ul>
+        <li>Compress images and use modern formats (WebP).</li>
+        <li>Minify CSS & JavaScript files for production.</li>
+        <li>Use lazy loading for images below the fold.</li>
+        <li>Leverage browser caching and CDN (Content Delivery Network).</li>
+      </ul>
+
+      <!-- Expanded: Security basics -->
+      <h2 class="section-title">Basic Web Security</h2>
+              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p class="lead">
+        Basic practices to keep sites secure:
+      </p>
+      <ul>
+        <li>Use HTTPS to encrypt data in transit.</li>
+        <li>Never store sensitive secrets in client-side code.</li>
+        <li>Validate user input on server side to prevent injection attacks.</li>
+        <li>Keep dependencies up to date (run audits with npm).</li>
+      </ul>
+
+      <!-- Expanded: Hosting & Deployment -->
+      <h2 class="section-title">Hosting & Deployment (How your site goes live)</h2>
+              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>      
+      <p class="lead">
+        After building a website, you host it on a server so others can visit it. Options for beginners:
+      </p>
+      <ul>
+        <li><strong>GitHub Pages:</strong> Free hosting for static sites.</li>
+        <li><strong>Netlify / Vercel:</strong> Easy deploys + continuous deployment from Git.</li>
+        <li><strong>Shared hosting / VPS:</strong> For more control, choose providers like DigitalOcean, Linode.</li>
+      </ul>
+
+      <h3>Example deployment flow</h3>
+      <ol>
+        <li>Push your project to GitHub.</li>
+        <li>Connect the repo to Netlify/Vercel.</li>
+        <li>On each push, the platform builds and deploys the site automatically.</li>
+      </ol>
+
+      <!-- Expanded: Learning path & small projects -->
+      <h2 class="section-title">Learning Path & Small Projects to Try</h2>
+              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p class="lead">
+        How to practice and build real skills:
+      </p>
+      <ul>
+        <li><strong>Beginner:</strong> Build a static personal page with HTML & CSS (about page, photo, contact).</li>
+        <li><strong>Intermediate:</strong> Add JavaScript: form validation, image gallery, to-do app.</li>
+        <li><strong>Advanced:</strong> Learn a framework (React/Vue), connect to an API, deploy full site.</li>
+      </ul>
+
+      <h3>Suggested mini projects</h3>
+      <ul>
+        <li>Personal portfolio site.</li>
+        <li>Simple blog with static pages.</li>
+        <li>To-do list app (local storage).</li>
+        <li>Weather app using a free API.</li>
+      </ul>
+
+      <!-- Quick Notes - must remain unchanged per request -->
+      <h2 class="section-title">Quick Notes – Fundamentals of Web Development</h2>
+      <ul>
+        <li><strong>HTML</strong> – Builds the structure of a webpage (headings, text, pictures, links).</li>
+        <li><strong>CSS</strong> – Adds style to a webpage (colors, fonts, layouts, designs).</li>
+        <li><strong>JavaScript</strong> – Makes a webpage active and interactive (responds to clicks, typing, moving things).</li>
+        <li><strong>Web Development</strong> – Making and maintaining websites using different languages and tools.</li>
+        <li><strong>Why Learn Web Development</strong> – Helps you understand websites, get jobs, solve problems, be creative, and start your own business.</li>
+        <li><strong>Digital Literacy</strong> – Knowing how digital tools work; in web development, it means understanding HTML, CSS, JavaScript, and how the internet works.</li>
+        <li><strong>Career Opportunities</strong> – Jobs you can get with web development skills (web developer, web designer, etc.).</li>
+        <li><strong>Problem-Solving</strong> – Finding and fixing problems in websites to make them work better.</li>
+        <li><strong>Creativity</strong> – Designing unique and attractive websites with your own ideas.</li>
+        <li><strong>Entrepreneurship</strong> – Using your skills to create your own business or sell things online.</li>
+      </ul>
+
+      <!-- Conclusion - expanded with encouragement and next steps -->
+      <h2 class="section-title">Conclusion</h2>
+      <p class="lead">
+        The fundamentals of web development give you the building blocks to make websites and web apps. Start small: learn HTML tags and structure, layer on CSS for design, then add JavaScript for interactivity. Use browser DevTools, practice with mini projects, and deploy your work to see it live on the web.
+      </p>
+
+      <p class="lead">
+        If you're studying for exams, use the <strong>Full Definitions</strong> for deep understanding and the <strong>Quick Notes</strong> for last-minute revision. For hands-on learning, build one small project every week. Consistency beats cramming every time.
+      </p>
+
+      <!-- MCQs - must remain unchanged per request -->
+      <h2 class="section-title">MCQs – Fundamentals of Web Development</h2>
+      <ol>
+        <li>
+          <strong>What does HTML do in a webpage?</strong><br />
+          a) Adds style<br />
+          b) Creates structure<br />
+          c) Makes it interactive<br />
+          d) Stores data<br />
+          <p><strong>Answer:</strong> b) Creates structure</p>
+        </li>
+
+        <li>
+          <strong>Which language adds colors, fonts, and layouts to a webpage?</strong><br />
+          a) HTML<br />
+          b) JavaScript<br />
+          c) CSS<br />
+          d) PHP<br />
+          <p><strong>Answer:</strong> c) CSS</p>
+        </li>
+
+        <li>
+          <strong>Which language makes a webpage respond to clicks and typing?</strong><br />
+          a) HTML<br />
+          b) CSS<br />
+          c) JavaScript<br />
+          d) Python<br />
+          <p><strong>Answer:</strong> c) JavaScript</p>
+        </li>
+
+        <li>
+          <strong>What is web development?</strong><br />
+          a) Creating mobile apps<br />
+          b) Making and maintaining websites<br />
+          c) Installing software<br />
+          d) Writing books<br />
+          <p><strong>Answer:</strong> b) Making and maintaining websites</p>
+        </li>
+
+        <li>
+          <strong>Which of these is NOT a reason to learn web development?</strong><br />
+          a) Career opportunities<br />
+          b) Creativity<br />
+          c) Cooking skills<br />
+          d) Entrepreneurship<br />
+          <p><strong>Answer:</strong> c) Cooking skills</p>
+        </li>
+
+        <li>
+          <strong>What does “Digital Literacy” mean in web development?</strong><br />
+          a) Reading books online<br />
+          b) Understanding HTML, CSS, JavaScript, and how the internet works<br />
+          c) Learning to code in Python<br />
+          d) Writing essays<br />
+          <p><strong>Answer:</strong> b) Understanding HTML, CSS, JavaScript, and how the internet works</p>
+        </li>
+
+        <li>
+          <strong>Which of these is a job you can get with web development skills?</strong><br />
+          a) Web designer<br />
+          b) Doctor<br />
+          c) Pilot<br />
+          d) Farmer<br />
+          <p><strong>Answer:</strong> a) Web designer</p>
+        </li>
+
+        <li>
+          <strong>Which skill helps you find and fix problems in a website?</strong><br />
+          a) Creativity<br />
+          b) Problem-solving<br />
+          c) Digital literacy<br />
+          d) Entrepreneurship<br />
+          <p><strong>Answer:</strong> b) Problem-solving</p>
+        </li>
+
+        <li>
+          <strong>Which point is about making websites look unique and attractive?</strong><br />
+          a) Problem-solving<br />
+          b) Creativity<br />
+          c) Entrepreneurship<br />
+          d) Career opportunities<br />
+          <p><strong>Answer:</strong> b) Creativity</p>
+        </li>
+
+        <li>
+          <strong>Which term means starting your own business using your skills?</strong><br />
+          a) Digital literacy<br />
+          b) Career opportunities<br />
+          c) Entrepreneurship<br />
+          d) Web development<br />
+          <p><strong>Answer:</strong> c) Entrepreneurship</p>
+        </li>
+      </ol>
+
+      <!-- FAQs expanded -->
+      <h2 class="section-title">Frequently Asked Questions (FAQ)</h2>
+
+      <h3>Q1: Where should I start if I'm a complete beginner?</h3>
+      <p>Start with HTML: learn basic tags like &lt;h1&gt;, &lt;p&gt;, &lt;a&gt;, &lt;img&gt;, &lt;ul&gt;/&lt;ol&gt;. Then add CSS to style your page and finally JavaScript to add simple interactivity. Build very small projects as you go.</p>
+
+      <h3>Q2: How long does it take to build a real website?</h3>
+      <p>For a simple static website (personal page or portfolio) it can take a few days to a week if you learn as you build. Larger, dynamic websites take longer. Consistent practice shortens the learning curve.</p>
+
+      <h3>Q3: Do I need to learn frameworks like React or Vue immediately?</h3>
+      <p>No. Learn the core languages (HTML, CSS, JavaScript) first. Frameworks make development faster but they assume you know the basics.</p>
+
+      <h3>Q4: Can I make money with web development?</h3>
+      <p>Yes. Web development skills can lead to jobs (frontend developer, UI/UX designer), freelance work, or your own online business. Start with small freelance jobs or local businesses.</p>
+
+      <h3>Q5: What is the difference between a web designer and a web developer?</h3>
+      <p>A web designer focuses on visual appearance and user experience (UI/UX), while a web developer turns designs into functioning websites using code. Many people do both when starting out.</p>
+
+      <h3>Q6: How do I practice safely when learning?</h3>
+      <p>Use local development (your computer) or GitHub Pages / Netlify for hosting demo sites. Never publish sensitive data (passwords, API keys) in public repos.</p>
+
+      <h3>Q7: Any tips for studying for exams?</h3>
+      <p>Use the Full Definitions to understand concepts deeply, then memorize Quick Notes for fast revision. Practice small code snippets and be prepared to explain what HTML/CSS/JS do in simple terms.</p>
+
+      <div class="tip">
+        Final note from me: build something small today. Even a single page that says "Hello, I'm learning web dev" and a button that changes color when clicked — that's progress, and it teaches you the complete flow from idea → code → browser.
+      </div>
+
+    </div>
+  </article>
+</main>
+<footer>
+  <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+</body>
+</html>

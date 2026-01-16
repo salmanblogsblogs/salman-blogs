@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about CSS including its definition, structure, integration methods, fonts, backgrounds, quick notes, MCQs, importance, best practices, and FAQs to master CSS." />
+  <meta name="keywords" content="CSS, Styling with CSS, Inline CSS, Internal CSS, External CSS, Fonts in CSS, Backgrounds in CSS, Web Development, MCQs, CSS selectors, CSS box model, responsive CSS" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Styling with CSS — Definitions, Setup, Quick Notes & MCQs | Salman Blogs</title>
+  
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="7033a1a8-7ffd-4c75-b8ea-af3497426e3f" data-blockingmode="auto" type="text/javascript"></script>
+
+  <!-- Google AdSense Code -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2195317151918571" crossorigin="anonymous"></script>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Styling with CSS — Definitions, Setup, Quick Notes & MCQs" />
+  <meta property="og:description" content="Understand CSS, its structure, integration methods, fonts, backgrounds, quick notes, MCQs, and advanced uses." />
+  <meta property="og:image" content="https://salmanblogs.com/images/technology/styling-with-css.png" />
+  <meta property="og:url" content="https://salmanblogs.com/styling-with-css.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Styling with CSS — Definitions, Setup, Quick Notes & MCQs" />
+  <meta name="twitter:description" content="Learn CSS basics, structure, fonts, backgrounds, and integration with quick notes and MCQs." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/styling-with-css.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!-- Use of internal CSS. -->
+<style>
+code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+</style>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+      </div>
+      <div class="nav-toggle" id="navToggle">&#9776;</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="post-container">
+    <article class="blog-post">
+      <h1 class="post-title">Styling with CSS</h1>
+      <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+      <img src="images/9-CS-IMAGES/chapter-8/chapter-8-lecture8-notes.png" alt="schapter-8-lecture8-notes" class="post-image" />
+
+      <div class="post-content">
+
+        <!-- INTRO -->
+        <h2>Introduction</h2>
+        <p>
+          When you visit a website, what catches your attention first? It’s usually not just the text, but the way the page looks, the colors, the fonts, the spacing, and how neatly everything is arranged. All of this is possible because of CSS (Cascading Style Sheets). Without CSS, websites would appear as plain text and simple structures, with little or no design. 
+        </p>
+        <p>
+          CSS is one of the core technologies of the web, alongside HTML and JavaScript. While HTML provides the structure and content of a webpage, CSS is responsible for presentation. It separates style from content, giving developers the power to control design consistently across multiple pages. In this lecture, we’ll break down what CSS is, how it works, why it matters, and how students in Class 9 can begin applying it in practical web development projects.
+        </p>
+
+        <!-- FULL DEFINITIONS -->
+        <h2>Full Definitions</h2>
+        
+        <h3>Definition of CSS</h3>
+        <p>CSS (Cascading Style Sheets) is a style sheet language used to control the presentation and design of web pages. It allows developers to define how HTML elements should be displayed by specifying properties like colors, fonts, layout, spacing, and backgrounds.</p>
+        
+        <h3>Definition of CSS Rule</h3>
+        <p>A CSS rule or basic structure of CSS is a set of instructions that tells the browser how to style specific HTML elements. It consists of:</p>
+        <ul>
+          <li><strong>Selector:</strong> the HTML element to target.</li>
+          <li><strong>Declaration block:</strong> one or more style rules inside <code>{ }</code>.</li>
+          <li><strong>Declaration:</strong> each contains a property and its value.</li>
+        </ul>
+        <p><strong>Example:</strong> <code>h1 { color: red; font-size: 24px; }</code></p>
+        
+        <h3>Integrating CSS in HTML</h3>
+        <p>There are 3 ways to add CSS to HTML:</p>
+        <ol>
+          <li><strong>Inline CSS:</strong> Applied directly to a single element using the <code>style</code> attribute. Best for quick styling but not for large projects.<br>
+          <code>&lt;h1 style="color: blue;"&gt;Hello World&lt;/h1&gt;</code></li>
+          
+          <li><strong>Internal CSS:</strong> Written inside the <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section. Applies to that specific page only.<br>
+          <code>&lt;style&gt; h1 { color: yellow; } &lt;/style&gt;</code></li>
+          
+          <li><strong>External CSS:</strong> Stored in a separate <code>.css</code> file and linked with the <code>&lt;link&gt;</code> tag. Best for large projects.<br>
+          <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></li>
+        </ol>
+
+        <h3>Definition of Fonts in CSS</h3>
+        <p>Fonts in CSS control the appearance of text. Properties include:</p>
+        <ul>
+          <li><strong>font-family:</strong> sets typeface (e.g., Arial, Times New Roman).</li>
+          <li><strong>font-size:</strong> sets text size (px, em, %, rem).</li>
+          <li><strong>font-weight:</strong> normal, bold, lighter.</li>
+          <li><strong>font-style:</strong> normal, italic, oblique.</li>
+        </ul>
+
+        <h3>Definition of Backgrounds in CSS</h3>
+        <p>Backgrounds in CSS define the color, image, position, and size of a webpage’s background. Common properties:</p>
+        <ul>
+          <li><strong>background-color:</strong> sets a solid background color.<br><code>body { background-color: blue; }</code></li>
+          <li><strong>background-image:</strong> sets an image as background.<br><code>body { background-image: url("image.jpg"); }</code></li>
+          <li><strong>background-repeat:</strong> repeat, no-repeat.<br><code>body { background-repeat: repeat; }</code></li>
+          <li><strong>background-position:</strong> sets image position (top, center, bottom).<br><code>body { background-position: center; }</code></li>
+          <li><strong>background-size:</strong> auto, cover, contain.<br><code>body { background-size: cover; }</code></li>
+        </ul>
+
+        <!-- QUICK NOTES -->
+        <h2>Quick Notes – Styling with CSS</h2>
+        <p><strong>Definition:</strong> CSS (Cascading Style Sheets) is used to style and format HTML elements, separating design from content. It controls colors, fonts, layouts, spacing, and overall look of webpages.</p>
+
+        <h3>Basic Structure of CSS</h3>
+        <p>A CSS rule has two parts:</p>
+        <ul>
+          <li><strong>Selector:</strong> chooses the HTML element(s).</li>
+          <li><strong>Declaration:</strong> property + value.</li>
+        </ul>
+        <p><strong>Example:</strong> <code>h1 { color: red; font-size: 24px; }</code></p>
+
+        <h3>Ways to Add CSS in HTML</h3>
+        <ul>
+          <li><strong>Inline CSS:</strong> added inside the HTML element using the <code>style</code> attribute. Best for small changes.<br>
+            Example: <code>&lt;h1 style="color: blue;"&gt;Hello&lt;/h1&gt;</code></li>
+          <li><strong>Internal CSS:</strong> written inside <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code>. Affects the whole page.</li>
+          <li><strong>External CSS:</strong> written in a separate <code>.css</code> file and linked with <code>&lt;link&gt;</code> tag. Best for large projects.</li>
+        </ul>
+
+        <h3>Styling Fonts</h3>
+        <ul>
+          <li><strong>font-family:</strong> changes font type (Arial, Times New Roman, etc.).</li>
+          <li><strong>font-size:</strong> sets text size.</li>
+          <li><strong>font-weight:</strong> normal, bold.</li>
+          <li><strong>font-style:</strong> normal, italic.</li>
+        </ul>
+        <p><strong>Example:</strong> <code>p { font-family: Arial; font-size: 16px; font-weight: bold; font-style: italic; }</code></p>
+
+        <h3>Backgrounds in CSS</h3>
+        <p>Backgrounds in CSS define the color, image, position, and size of the background of a webpage or an element.</p>
+        
+        <h3>Styling Backgrounds</h3>
+        <ul>
+          <li><strong>background-color:</strong> sets solid background color.<br><code>body { background-color: blue; }</code></li>
+          <li><strong>background-image:</strong> sets an image as background.<br><code>body { background-image: url("image.jpg"); }</code></li>
+          <li><strong>background-repeat:</strong> repeat, no-repeat.<br><code>body { background-repeat: repeat; }</code></li>
+          <li><strong>background-position:</strong> sets image position (top, center, bottom).<br><code>body { background-position: center; }</code></li>
+          <li><strong>background-size:</strong> auto, cover, contain.<br><code>body { background-size: cover; }</code></li>
+        </ul>
+
+        <!-- MCQs -->
+        <h2>MCQs</h2>
+        <ol>
+          <li><strong>CSS stands for:</strong><br>
+            a) Cascading Style Structure<br>
+            b) Cascading Style Sheets ✅<br>
+            c) Creative Style System<br>
+            d) Computer Styling Source</li>
+          
+          <li><strong>Which of the following is NOT a way to integrate CSS with HTML?</strong><br>
+            a) Inline CSS<br>
+            b) Internal CSS<br>
+            c) External CSS<br>
+            d) Procedural CSS ✅</li>
+
+          <li><strong>In CSS, which part selects the HTML element to be styled?</strong><br>
+            a) Declaration<br>
+            b) Selector ✅<br>
+            c) Property<br>
+            d) Value</li>
+
+          <li><strong>What is the correct syntax for a CSS rule?</strong><br>
+            a) selector { property = value; }<br>
+            b) selector { property: value; } ✅<br>
+            c) selector ( property: value )<br>
+            d) selector : property = value;</li>
+
+          <li><strong>Inline CSS is written using which attribute?</strong><br>
+            a) style ✅<br>
+            b) css<br>
+            c) font<br>
+            d) design</li>
+
+          <li><strong>The &lt;style&gt; tag is used in which section of an HTML document?</strong><br>
+            a) &lt;body&gt;<br>
+            b) &lt;footer&gt;<br>
+            c) &lt;head&gt; ✅<br>
+            d) &lt;title&gt;</li>
+
+          <li><strong>Which is the most efficient method for large projects to apply CSS?</strong><br>
+            a) Inline CSS<br>
+            b) Internal CSS<br>
+            c) External CSS ✅<br>
+            d) Embedded CSS</li>
+
+          <li><strong>Which CSS property is used to change the text color?</strong><br>
+            a) text-color<br>
+            b) background-color<br>
+            c) color ✅<br>
+            d) font-color</li>
+
+          <li><strong>If you want a background image to cover the entire page, which property do you use?</strong><br>
+            a) background-fill<br>
+            b) background-position<br>
+            c) background-size: cover ✅<br>
+            d) background-repeat</li>
+
+          <li><strong>Which of the following is TRUE about CSS?</strong><br>
+            a) CSS mixes content and style in the same file.<br>
+            b) CSS makes webpages responsive and reusable. ✅<br>
+            c) CSS can only be used for colors, not layouts.<br>
+            d) CSS is mandatory for all webpages.</li>
+        </ol>
+
+      
+        <h2>Why CSS is Important</h2>
+            <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <p>
+          CSS is important for many reasons. It improves user experience, makes websites visually appealing, and enables efficient maintenance.
+        </p>
+        <ul>
+          <li><strong>Separation of concerns:</strong> CSS keeps presentation separate from HTML content. This makes your HTML cleaner and easier to read.</li>
+          <li><strong>Consistency:</strong> With external CSS, you can change the look of your whole website by changing a single file. This keeps style consistent across pages.</li>
+          <li><strong>Performance:</strong> External CSS is cached by browsers, so pages load faster after the first visit.</li>
+          <li><strong>Accessibility:</strong> Proper use of CSS can improve readability for users with visual impairments (larger fonts, contrast, spacing).</li>
+          <li><strong>Responsive design:</strong> CSS enables websites to adapt to different screen sizes, from phones to desktops.</li>
+          <li><strong>Design freedom:</strong> You can create complex layouts, animations, and visual effects without changing HTML structure.</li>
+        </ul>
+
+        <h2>CSS Selectors in Detail</h2>
+        <p>
+          Selectors are the heart of CSS. They choose which elements to style. Understanding selectors gives you control and precision.
+        </p>
+
+        <h3>Common selector types</h3>
+        <ul>
+          <li><strong>Type selector:</strong> targets elements by tag name. Example: <code>p {}</code>, <code>h1 {}</code>.</li>
+          <li><strong>Class selector:</strong> targets elements with a class attribute. Starts with a dot. Example: <code>.highlight {}</code>. Multiple elements can share a class.</li>
+          <li><strong>ID selector:</strong> targets one unique element with an id. Starts with a hash. Example: <code>#header {}</code>. IDs should be unique per page.</li>
+          <li><strong>Attribute selector:</strong> selects elements with a specific attribute. Example: <code>a[target="_blank"] {}</code>.</li>
+          <li><strong>Descendant selector:</strong> targets elements inside another element. Example: <code>nav a {}</code> (targets links inside nav).</li>
+          <li><strong>Child selector:</strong> selects direct children only. Example: <code>ul > li {}</code>.</li>
+          <li><strong>Pseudo-classes:</strong> style elements in special states, e.g., <code>a:hover</code>, <code>input:focus</code>.</li>
+          <li><strong>Pseudo-elements:</strong> style sub-parts of elements, e.g., <code>p::first-line</code>, <code>::before</code>, <code>::after</code>.</li>
+        </ul>
+
+        <h3>Specificity and cascade</h3>
+        <p>
+          When multiple rules apply to the same element, CSS uses the <em>cascade</em> and <em>specificity</em> to decide which rule wins:
+        </p>
+        <ul>
+          <li>Inline styles (style="") have highest priority.</li>
+          <li>ID selectors are stronger than class selectors.</li>
+          <li>Class selectors are stronger than type selectors.</li>
+          <li>Later rules override earlier rules if specificity is equal.</li>
+        </ul>
+
+        <h3>Example: Combining selectors</h3>
+<pre><code>/* style all paragraphs inside .article */
+.article p { line-height: 1.6; }
+
+/* highlight links inside nav when hovered */
+nav a:hover { text-decoration: underline; }
+</code></pre>
+
+        <h2>The CSS Box Model</h2>
+        <p>
+          The box model is a core concept that describes how elements are sized and spaced. Every HTML element is treated as a rectangular box composed of:
+        </p>
+        <ul>
+          <li><strong>Content</strong> – the text or media inside the box.</li>
+          <li><strong>Padding</strong> – space between content and border.</li>
+          <li><strong>Border</strong> – the line around the padding (optional).</li>
+          <li><strong>Margin</strong> – space outside the border separating elements.</li>
+        </ul>
+
+        <h3>Why it matters</h3>
+        <p>
+          Understanding the box model helps you control spacing and layout precisely. For example, two elements with margins can collapse (margin collapse), affecting layout unexpectedly unless you anticipate it.
+        </p>
+
+        <h3>Example:</h3>
+<pre><code>div.card {
+  padding: 16px;    /* space inside card */
+  border: 1px solid #ccc;
+  margin-bottom: 12px; /* space outside card */
+}
+</code></pre>
+
+        <h2>Responsive Web Design with CSS</h2>
+        <p>
+          Responsive design ensures your website looks good on devices of all sizes. CSS provides tools to build responsive layouts without separate mobile sites.
+        </p>
+
+        <h3>Key techniques</h3>
+        <ul>
+          <li><strong>Fluid layouts:</strong> Use percentages instead of fixed pixels for widths so elements scale with the screen.</li>
+          <li><strong>Flexible images:</strong> Make images responsive with <code>max-width: 100%;</code> so they shrink inside containers.</li>
+          <li><strong>Media queries:</strong> Apply different styles at different screen widths. Example: <code>@media (max-width: 600px) { ... }</code>.</li>
+          <li><strong>Responsive units:</strong> Use <code>em</code>, <code>rem</code>, <code>vw</code>, and <code>vh</code> units for scalable typography and spacing.</li>
+          <li><strong>Mobile-first approach:</strong> Write styles for mobile first, then add media queries for larger screens.</li>
+        </ul>
+
+        <h3>Simple media query example</h3>
+<pre><code>/* default mobile styles */
+.container { padding: 12px; }
+
+/* larger screens */
+@media (min-width: 768px) {
+  .container { padding: 24px; max-width: 900px; margin: 0 auto; }
+}
+</code></pre>
+
+        <h2>Best Practices for Writing CSS</h2>
+        <p>Good habits make CSS easier to maintain and less error-prone. Here are practical tips:</p>
+        <ul>
+          <li><strong>Use external stylesheets</strong> for site-wide consistency.</li>
+          <li><strong>Name classes meaningfully</strong> (e.g., <code>.btn-primary</code> rather than <code>.red</code>), so styles describe purpose, not appearance.</li>
+          <li><strong>Keep selectors specific but not too specific</strong> — avoid overly long selector chains that are hard to override.</li>
+          <li><strong>Organize stylesheet logically</strong> (reset/base → layout → components → utilities).</li>
+          <li><strong>Use comments</strong> to explain non-obvious decisions: <code>/* card layout */</code>.</li>
+          <li><strong>Prefer classes for reusable styles</strong> instead of styling tags directly.</li>
+          <li><strong>Avoid inline styles</strong> except for quick testing; they’re harder to maintain.</li>
+          <li><strong>Use CSS variables (custom properties)</strong> for repeated values like colors and spacing: <code>:root { --main-color: #2a7ae2; }</code>.</li>
+          <li><strong>Test across browsers</strong> and use vendor prefixes only when necessary (or tools like Autoprefixer).</li>
+          <li><strong>Keep accessibility in mind</strong>: ensure sufficient color contrast and readable font sizes.</li>
+        </ul>
+
+        <!-- FAQs on CSS -->
+        <h2>FAQs on CSS</h2>
+        <h3>1. What is the difference between HTML and CSS?</h3>
+        <p>HTML provides the structure of a webpage (headings, paragraphs, links, images), while CSS defines the styling (colors, fonts, spacing, layout). Together, they create a complete and visually appealing webpage.</p>
+
+        <h3>2. Why is CSS called "Cascading" Style Sheets?</h3>
+        <p>CSS is called cascading because styles are applied in a priority order — inline styles override internal styles, and internal styles override external styles unless overridden with <code>!important</code>. This "cascade" determines which rules take effect when conflicts occur.</p>
+
+        <h3>3. Can CSS be used without HTML?</h3>
+        <p>No, CSS cannot work on its own. It must be applied to HTML (or XML/other markup languages). CSS describes how markup elements should appear in the browser.</p>
+
+        <h3>4. Which is better: Inline, Internal, or External CSS?</h3>
+        <p>For small projects, internal CSS is fine. For quick fixes, inline CSS may be used. But for professional, large projects, external CSS is always recommended because it keeps design separate from structure and allows reusability across pages.</p>
+
+        <h3>5. How does CSS improve website performance?</h3>
+        <p>By using external stylesheets, browsers can cache CSS files, reducing load times for repeated visits. It also keeps code organized, making it easier to update styles without editing each HTML file individually.</p>
+
+        <h3>6. What are CSS Selectors?</h3>
+        <p>CSS selectors are patterns used to target HTML elements for styling. Examples include element selectors (<code>p</code>), class selectors (<code>.classname</code>), ID selectors (<code>#id</code>), and attribute selectors (<code>input[type="text"]</code>).</p>
+
+        <h3>7. What is the difference between relative units (em, rem, %) and absolute units (px)?</h3>
+        <p><strong>Pixels (px)</strong> are fixed-size units, while <strong>relative units</strong> (em, rem, %) scale based on parent or root element size. Relative units help make designs more flexible and responsive.</p>
+
+        <h3>8. What is the difference between CSS2 and CSS3?</h3>
+        <p>CSS3 introduced many new features like rounded corners (<code>border-radius</code>), transitions, animations, shadows, gradients, and responsive media queries. CSS2 was more limited to basic styling without these advanced visual features.</p>
+
+        <h3>9. Can CSS be used for animations?</h3>
+        <p>Yes! CSS supports animations and transitions. For example, <code>transition: all 0.3s ease;</code> can animate color or size changes smoothly. Full animations can be created using <code>@keyframes</code>.</p>
+
+        <h3>10. Is learning CSS still important in 2025?</h3>
+        <p>Absolutely. While frameworks (like Tailwind, Bootstrap) exist, they are all built on CSS. A strong understanding of CSS fundamentals is necessary to customize designs, fix issues, and build professional websites.</p>
+
+        </div>
+  </article>
+</main>
+<footer>
+  <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+</body>
+</html>

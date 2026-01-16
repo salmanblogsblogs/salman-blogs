@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Get in Touch with Salman Ahmad</title>
+  <meta name="description" content="Salman Blogs - Explore insightful blogs on Technology, Health, Travel, Food, Lifestyle, and more.">
+  <meta name="keywords" content="Salman Blogs, Technology Blogs, Health Tips, Travel Guides, Food Recipes, Lifestyle Advice, Programming">
+  <meta name="author" content="Salman Ahmad">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact.css" />
+
+  <!-- Favicon for all browsers -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- High-res PNG for modern browsers & Google Search -->
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+  <!-- Apple Touch Icon (optional, for iPhones/iPads) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-512.png">
+    <!-- Open Graph -->
+  <meta property="og:title" content="Contact Salman Ahmad - Salman Blog Zone" />
+  <meta property="og:description" content="Have questions or feedback? Contact me via email, WhatsApp, or Instagram." />
+  <meta property="og:image" content="https://salmanblogs.com/images/og-contact.png" />
+  <meta property="og:url" content="https://salmanblogs.com/contact.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Salman Ahmad - Salman Blogs" />
+  <meta name="twitter:description" content="Reach out for blog feedback, queries, or collaborations." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/og-contact.png" />
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS with your Public Key
+    (function(){
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual public key
+    })();
+  </script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="contact-container">
+  <section class="contact-box">
+    <h1>Contact Me</h1>
+    <p>If you have any questions, feedback,feel free to get in touch!</p>
+    <div class="contact-info">
+      
+    </div>
+
+    <!-- EmailJS-enabled contact form -->
+    <form class="contact-form" id="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+<div id="form-status" class="form-status"></div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("BylCo49k0pBx6P7pA"); // Replace with your EmailJS Public Key
+  })();
+</script>
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_b7czylk", "template_1xct7wh", this)
+      .then(function () {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset(); // Clear the form
+      }, function (error) {
+        alert("Failed to send message. Please try again.");
+        console.log("FAILED...", error);
+      });
+  });
+</script>
+
+</body>
+</html>

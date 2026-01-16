@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about networking devices including Switch, Router, and Access Point with their working, quick notes, examples, applications, comparisons, and MCQs to test your knowledge." />
+  <meta name="keywords" content="Networking Devices, Switch, Router, Access Point, LAN, Wi-Fi, Data Communication, Computer Science Class 9, MCQs" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Networking Devices — Switch, Router, Access Point, Quick Notes & MCQs | Salman Blogs</title>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Networking Devices — Switch, Router, Access Point, Quick Notes & MCQs" />
+  <meta property="og:description" content="Understand networking devices including Switch, Router, and Access Point with definitions, working, quick notes, and MCQs." />
+  <meta property="og:image" content="https://salmanblogs.com/images/technology/networking-devices.png" />
+  <meta property="og:url" content="https://salmanblogs.com/networking-devices.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Networking Devices — Switch, Router, Access Point, Quick Notes & MCQs" />
+  <meta name="twitter:description" content="Learn about networking devices, their roles, and test your knowledge with quick notes and MCQs." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/networking-devices.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+      </div>
+      <div class="nav-toggle" id="navToggle">&#9776;</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="post-container">
+    <article class="blog-post">
+      <h1 class="post-title">Introduction To Networks Lecture 3 Notes</h1>
+      <div class="post-meta">Posted in <strong>Class 9 - Computer Science</strong></div>
+
+      <img src="images/9-CS-IMAGES/chapter-6/chapter-6-lecture3-notes.png" alt="chapter-6-lecture3-notes" class="post-image" />
+
+      <div class="post-content">
+        
+        <h2>Introduction</h2>
+        <p>
+            These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>. 
+          Networking devices are the backbone of communication in the digital world. Without them, 
+          our computers, smartphones, and tablets would remain isolated machines unable to 
+          exchange information. These devices form the bridges, switches, and gateways that 
+          make modern communication possible. 
+        </p>
+        <p>
+          In this lecture, we will explore the most important networking devices: 
+          <strong>Switch</strong>, <strong>Router</strong>, and <strong>Access Point</strong>. 
+          These devices are found everywhere, from small home setups to huge corporate data centers. 
+          Understanding how they work is essential for both students and professionals in computer science.
+        </p>
+
+        <h2>Importance of Networking Devices</h2>
+            <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+
+        <p>
+          Every time you open a website, send a message, or watch a video, these devices are 
+          working in the background. Switches manage communication within local networks, 
+          routers guide data between networks, and access points bring wireless convenience. 
+          Without them, the internet would collapse into chaos, as there would be no 
+          organized way of sending and receiving data.
+        </p>
+        <ul>
+          <li><strong>Efficiency:</strong> They reduce unnecessary data traffic by directing packets to the right destination.</li>
+          <li><strong>Scalability:</strong> Allow networks to grow from a few computers to thousands of devices.</li>
+          <li><strong>Connectivity:</strong> Enable wired and wireless devices to stay connected at all times.</li>
+          <li><strong>Security:</strong> Routers and switches can filter data and block unauthorized access.</li>
+        </ul>
+
+        <h2>Full Definitions</h2>
+        <p>Networking devices are hardware components that manage, control, and direct data traffic within or between networks. They ensure efficient communication between connected devices. The main devices are <strong>Switch</strong>, <strong>Router</strong>, and <strong>Access Point</strong>.</p>
+
+        <h3>Switch</h3>
+        <p>A switch is a device that connects multiple devices (computers, printers, servers) within a local network (LAN).</p>
+        <ul>
+          <li>Operates at the <strong>Data Link Layer (Layer 2)</strong> of the OSI model.</li>
+          <li>Uses <strong>MAC addresses</strong> to forward data only to the correct device.</li>
+        </ul>
+        <p><strong>How it works:</strong></p>
+        <ul>
+          <li>Data is divided into packets.</li>
+          <li>Each packet contains the MAC address of the destination device.</li>
+          <li>The switch checks this address and sends the packet only to that device’s port.</li>
+        </ul>
+        <p><em>Example:</em> Sending a file from your PC to your colleague’s PC → the switch forwards the packets directly to your colleague’s PC only.</p>
+
+        <h3>Router</h3>
+        <p>A router connects different networks together (e.g., home network to the Internet).</p>
+        <ul>
+          <li>Works like a <strong>traffic director</strong> on the Internet.</li>
+          <li>Uses <strong>IP addresses</strong> to determine the best path for each data packet.</li>
+        </ul>
+        <p><strong>How it works:</strong></p>
+        <ul>
+          <li>Data is split into packets.</li>
+          <li>Each packet contains the destination IP address.</li>
+          <li>The router checks the address and forwards the packet through the best route until it reaches its destination.</li>
+        </ul>
+
+        <h3>Access Point (AP)</h3>
+        <p>An Access Point connects wireless devices (like laptops, tablets, and smartphones) to a wired network.</p>
+        <ul>
+          <li>Works as a <strong>bridge</strong> between wired and wireless communication.</li>
+          <li>Mainly used to provide <strong>Wi-Fi connectivity</strong>.</li>
+        </ul>
+        <p><strong>How it works:</strong></p>
+        <ul>
+          <li>Receives data from the wired network and transmits it wirelessly.</li>
+          <li>Also receives data from wireless devices and forwards it to the wired network.</li>
+        </ul>
+        <p><em>Example:</em> In your home, the Wi-Fi access point lets your phone or laptop connect to the Internet through your router.</p>
+
+        <h2>Applications of Networking Devices</h2>
+            <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+
+        <ul>
+          <li><strong>Homes:</strong> Routers connect your home devices to the Internet while switches handle wired connections.</li>
+          <li><strong>Schools:</strong> Access points provide Wi-Fi to hundreds of students at once.</li>
+          <li><strong>Offices:</strong> Switches manage hundreds of computers while routers handle external communication.</li>
+          <li><strong>Hospitals:</strong> Networking devices ensure doctors can instantly access patient records.</li>
+          <li><strong>Banks:</strong> Secure routers manage online banking transactions safely.</li>
+        </ul>
+
+        <h2>Comparison of Networking Devices</h2>
+            <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+        <table border="1" cellpadding="8">
+          <tr>
+            <th>Feature</th>
+            <th>Switch</th>
+            <th>Router</th>
+            <th>Access Point</th>
+          </tr>
+          <tr>
+            <td>Main Function</td>
+            <td>Connects devices within a LAN</td>
+            <td>Connects different networks</td>
+            <td>Connects wireless devices to a wired network</td>
+          </tr>
+          <tr>
+            <td>Address Used</td>
+            <td>MAC Address</td>
+            <td>IP Address</td>
+            <td>MAC + Wireless Standards</td>
+          </tr>
+          <tr>
+            <td>OSI Layer</td>
+            <td>Layer 2 (Data Link)</td>
+            <td>Layer 3 (Network)</td>
+            <td>Operates between Physical & Data Link</td>
+          </tr>
+          <tr>
+            <td>Example</td>
+            <td>File sharing in office LAN</td>
+            <td>Home router connecting to Internet</td>
+            <td>Wi-Fi hotspot</td>
+          </tr>
+        </table>
+
+        <h2>Quick Notes – Networking Devices</h2>
+        <!-- (Original Quick Notes unchanged, kept same as user provided) -->
+        <ul>
+          <li><strong>Devices:</strong> Switch, Router, Access Point → manage and direct network communication.</li>
+          <li><strong>Switch:</strong>
+            <ul>
+              <li>Connects devices within a LAN.</li>
+              <li>Works at Layer 2 (Data Link Layer).</li>
+              <li>Uses MAC addresses to send data only to the correct device.</li>
+              <li><em>Example:</em> File transfer between two office PCs.</li>
+            </ul>
+          </li>
+          <p><strong>How it works:</strong></p>
+        <ul>
+          <li>Data is divided into packets.</li>
+          <li>Each packet contains the MAC address of the destination device.</li>
+          <li>The switch checks this address and sends the packet only to that device’s port.</li>
+        </ul>
+
+          <li><strong>Router:</strong>
+            <ul>
+              <li>Connects different networks (LAN ↔ Internet).</li>
+              <li>Uses IP addresses to find the best path for data packets.</li>
+              <li>Works like a traffic controller.</li>
+              <li><em>Example:</em> Home router connects to ISP for Internet.</li>
+            </ul>
+          </li>
+          <p><strong>How it works:</strong></p>
+        <ul>
+          <li>Data is split into packets.</li>
+          <li>Each packet contains the destination IP address.</li>
+          <li>The router checks the address and forwards the packet through the best route until it reaches its destination.</li>
+        </ul>
+          <li><strong>Access Point (AP):</strong>
+            <ul>
+              <li>Provides wireless access to a wired network.</li>
+              <li>Connects laptops, tablets, smartphones.</li>
+              <li>Acts as a bridge between wired and wireless.</li>
+              <li><em>Example:</em> Wi-Fi hotspot.</li>
+            </ul>
+          </li>
+        </ul>
+        <p><strong>How it works:</strong></p>
+        <ul>
+          <li>Receives data from the wired network and transmits it wirelessly.</li>
+          <li>Also receives data from wireless devices and forwards it to the wired network.</li>
+        </ul>
+
+        <h2>MCQs</h2>
+        <ol>
+          <li><strong>Which networking device connects multiple devices within the same LAN?</strong><br/>
+            a) Router<br/> b) Switch ✅<br/> c) Access Point<br/> d) Hub</li>
+
+          <li><strong>Switches use which address to forward data?</strong><br/>
+            a) IP Address<br/> b) Port Number<br/> c) MAC Address ✅<br/> d) Domain Name</li>
+
+          <li><strong>A router mainly works at which level?</strong><br/>
+            a) Physical Layer<br/> b) Data Link Layer<br/> c) Network Layer ✅<br/> d) Transport Layer</li>
+
+          <li><strong>Which device connects wireless devices to a wired network?</strong><br/>
+            a) Switch<br/> b) Router<br/> c) Access Point ✅<br/> d) Hub</li>
+
+          <li><strong>Which device acts like a traffic director on the Internet?</strong><br/>
+            a) Switch<br/> b) Router ✅<br/> c) Access Point<br/> d) Bridge</li>
+
+          <li><strong>Which of the following provides Wi-Fi to laptops and smartphones?</strong><br/>
+            a) Switch<br/> b) Access Point ✅<br/> c) Router only<br/> d) Repeater</li>
+        </ol>
+
+        <h2>Summary</h2>
+        <p>
+          Networking devices are the silent heroes of communication. 
+          Switches handle data flow inside local networks, routers manage connections between different networks, 
+          and access points provide wireless convenience. Together, they form the essential infrastructure 
+          of the Internet. With this lecture, you now understand not only their functions but also their applications in real life.
+        </p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+          <h3>1. Can a switch connect to the Internet directly?</h3>
+          <p>No, a switch only manages devices within a local network. You need a router to connect to the Internet.</p>
+
+          <h3>2. What is the difference between a router and an access point?</h3>
+          <p>A router connects different networks using IP addresses, while an access point provides Wi-Fi access to connect wireless devices to a network.</p>
+
+          <h3>3. Why do switches use MAC addresses instead of IP addresses?</h3>
+          <p>Switches work at Layer 2 (Data Link) of the OSI model, where devices are identified by their hardware addresses (MAC addresses).</p>
+
+          <h3>4. Do I need both a router and an access point at home?</h3>
+          <p>Most home routers already come with built-in Wi-Fi, which functions as an access point. In large homes or offices, extra access points are added to extend coverage.</p>
+
+          <h3>5. Which device is most important in cybersecurity?</h3>
+          <p>The router plays the biggest role in cybersecurity because it can block unauthorized access and filter harmful traffic before it enters the local network.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("navToggle").addEventListener("click", function () {
+      document.getElementById("navLinks").classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

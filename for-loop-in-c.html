@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about loops in C programming including definition, purpose, syntax, working, examples, and MCQs with answers." />
+  <meta name="keywords" content="Loop in C, For Loop in C, Loops in C programming, C programming basics, Control Structures in C, Programming MCQs" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Loop in C — Definition, Syntax, Examples & MCQs | Salman Blogs</title>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Loop in C — Definition, Syntax, Examples & MCQs" />
+  <meta property="og:description" content="Understand loops in C programming with definition, purpose, syntax, working, examples, and MCQs for practice." />
+  <meta property="og:image" content="https://salmanblogs.com/images/technology/loop-in-c.png" />
+  <meta property="og:url" content="https://salmanblogs.com/loop-in-c.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Loop in C — Definition, Syntax, Examples & MCQs" />
+  <meta name="twitter:description" content="Learn loops in C programming including syntax, examples, working, and MCQs with answers." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/loop-in-c.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!--  Use of internal CSS.  -->
+<style>
+code, pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+</style>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+      </div>
+      <div class="nav-toggle" id="navToggle">&#9776;</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="post-container">
+    <article class="blog-post">
+      <h1 class="post-title">Loop in C: Definition, Syntax, Examples &amp; MCQs</h1>
+      <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>
+      <img src="images/10-CS-IMAGES/loop-in-c.png" alt="loop in c" class="post-image" />
+
+      <div class="post-content">
+        <h2>What is a Loop?</h2>
+        <p>A <strong>loop in C</strong> is a control structure that allows us to repeat a block of code multiple times without writing it again and again.</p>
+
+        <h2>Purposes of Loop</h2>
+        <ul>
+          <li>To reduce repetition in code.</li>
+          <li>To make programs shorter, cleaner, and easier to maintain.</li>
+          <li>To perform tasks multiple times like printing, adding numbers, processing arrays, etc.</li>
+          <li>To save time and effort for both programmer and computer.</li>
+        </ul>
+
+        <h2>For Loop in C</h2>
+        <p><strong>Syntax:</strong></p>
+<pre>
+for(initialization; condition; increment/decrement) {
+    // statements to repeat
+}
+</pre>
+
+        <h2>Flowchart of For Loop</h2>
+        <img src="images/10-CS-IMAGES/for-loop-flowchart.PNG" alt="for loop flowchart" class="post-image" /
+        style="width: 80%;">
+
+        <h2>Working of For Loop</h2>
+        <ul>
+          <li>The loop initializes a variable (like i=1).</li>
+          <li>It checks the condition (e.g., i &lt;= 10).</li>
+          <li>If true → executes the block.</li>
+          <li>After block → updates the variable (e.g., i++).</li>
+          <li>Goes back to condition check.</li>
+          <li>Repeats until condition becomes false.</li>
+        </ul>
+
+        <h2>Examples</h2>
+        <h3>Example 1 – Print “I love Pakistan” 10 times</h3>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i;
+    for(i = 1; i &lt;= 10; i++) {
+        printf("I love Pakistan\n");
+    }
+    return 0;
+}
+</pre>
+        <p><strong>Output:</strong></p>
+<pre>
+I love Pakistan
+I love Pakistan
+I love Pakistan
+...
+(total 10 times)
+</pre>
+
+        <h3>Example 2 – Print “I am a Programmer” 20 times</h3>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i;
+    for(i = 1; i &lt;= 20; i++) {
+        printf("I am a Programmer\n");
+    }
+    return 0;
+}
+</pre>
+        <p><strong>Output:</strong></p>
+<pre>
+I am a Programmer
+I am a Programmer
+...
+(total 20 times)
+</pre>
+
+        <h2>MCQs on Loops in C</h2>
+        <ol>
+          <li>
+            <strong>What is the main purpose of using a loop in C?</strong><br />
+            A) To make the program slower<br />
+            B) To avoid repeating code again and again<br />
+            C) To create errors in the program<br />
+            D) To replace functions
+            <p><strong>Answer:</strong> B) To avoid repeating code again and again</p>
+          </li>
+          <li>
+            <strong>Which of the following is the correct syntax of a for loop in C?</strong><br />
+            A) for(condition; initialization; update)<br />
+            B) for(initialization; condition; update)<br />
+            C) for(update; condition; initialization)<br />
+            D) for(initialization; update; condition)
+            <p><strong>Answer:</strong> B) for(initialization; condition; update</p>
+          </li>
+          <li>
+            <strong>In a for loop, which part is executed first?</strong><br />
+            A) Condition<br />
+            B) Initialization<br />
+            C) Update<br />
+            D) Body of the loop
+            <p><strong>Answer:</strong> B) Initialization</p>
+          </li>
+          <li>
+            <strong>What will the following code print?</strong><br />
+<pre>
+for(int i = 1; i &lt;= 5; i++) {
+    printf("Hello\n");
+}
+</pre>
+            A) Prints "Hello" 1 time<br />
+            B) Prints "Hello" 5 times<br />
+            C) Prints "Hello" infinitely<br />
+            D) Error in code
+            <p><strong>Answer:</strong> B) Prints "Hello" 5 times</p>
+          </li>
+          <li>
+            <strong>What is the output of this code?</strong><br />
+<pre>
+for(int i = 1; i &lt;= 3; i++) {
+    printf("%d ", i);
+}
+</pre>
+            A) 1 2 3<br />
+            B) 0 1 2<br />
+            C) 1 2 3 4<br />
+            D) Infinite Loop
+            <p><strong>Answer:</strong> A) 1 2 3</p>
+          </li>
+          <li>
+            <strong>In a for loop, the update step is executed:</strong><br />
+            A) Before initialization<br />
+            B) After the loop body executes<br />
+            C) Before checking condition<br />
+            D) Never
+            <p><strong>Answer:</strong> B) After the loop body executes</p>
+          </li>
+          <li>
+            <strong>Which loop guarantees at least one execution of the body, even if the condition is false?</strong><br />
+            A) for loop<br />
+            B) while loop<br />
+            C) do-while loop<br />
+            D) nested loop
+            <p><strong>Answer:</strong> C) do-while loop</p>
+          </li>
+          <li>
+            <strong>If the condition in a for loop is always true, what will happen?</strong><br />
+            A) Program will stop immediately<br />
+            B) Program will run infinitely<br />
+            C) Program will run once<br />
+            D) Error will occur
+            <p><strong>Answer:</strong> B) Program will run infinitely</p>
+          </li>
+        </ol>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("navToggle").addEventListener("click", function () {
+      document.getElementById("navLinks").classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

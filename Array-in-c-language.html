@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn C array basics with simple examples, outputs, explanations, and practice statements for beginners." />
+  <meta name="keywords" content="C Programming, Arrays in C, Display Array Elements, Sum of Arrays, Float Array, Char Array, Practice Problems" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Arrays in C — Examples, Output & Practice Statements | Salman Blogs</title>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Arrays in C — Examples, Output & Practice Statements" />
+  <meta property="og:description" content="Understand arrays in C programming with simple examples, outputs, explanations, and practice problems." />
+  <meta property="og:image" content="https://salmanblogs.com/images/programming/arrays-in-c.png" />
+  <meta property="og:url" content="https://salmanblogs.com/arrays-in-c.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Arrays in C — Examples, Output & Practice Statements" />
+  <meta name="twitter:description" content="Clear C programming array examples, outputs, and practice problems for beginners." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/programming/arrays-in-c.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!--  Use of internal CSS.  -->
+<style>
+code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+</style>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Arrays in C: Examples, Output &amp; Practice Statements</h1>
+    <div class="post-meta">Posted in <strong>10 Class</strong></div>
+    <img src="images/10-CS-IMAGES/array-in-c.png" alt="Arrays-in-C-programming" class="post-image" loading="lazy">
+
+    <div class="post-content">
+      <h2>Introduction to Arrays in C</h2>
+      <p>
+        In C programming, arrays are one of the most fundamental concepts for storing and processing data. An array is a collection of elements of the same type stored in contiguous memory locations. Instead of declaring multiple variables to store similar values, an array lets us store and manage them efficiently. For example, instead of creating five separate integer variables (<code>int a, b, c, d, e;</code>), we can declare a single array (<code>int numbers[5];</code>) that stores all values in one place.
+      </p>
+      <p>
+        Arrays are especially useful when dealing with large amounts of data, such as marks of students, sales figures of products, or sensor readings in scientific experiments. They also serve as the foundation for more advanced data structures like matrices, strings, stacks, and queues.
+      </p>
+      <p>
+        In this lecture, we will explore arrays in C programming with <strong>simple examples, step-by-step explanations, outputs, and practice problems</strong>. By the end of this lesson, you will be able to create and use arrays in different scenarios confidently.
+      </p>
+
+      <h2>Example 1 – Display Array Elements</h2>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int numbers[5] = {10, 20, 30, 40, 50};
+
+    printf("%d ", numbers[0]);
+    printf("%d ", numbers[1]);
+    printf("%d ", numbers[2]);
+    printf("%d ", numbers[3]);
+    printf("%d", numbers[4]);
+
+    return 0;
+}
+</code></pre>
+      <p><strong>Output:</strong></p>
+      <pre><code>10 20 30 40 50</code></pre>
+      <p><strong>Explanation:</strong> Each element is accessed by its index (<code>numbers[0]</code> to <code>numbers[4]</code>) and printed individually. Arrays in C use <strong>zero-based indexing</strong>, meaning the first element has index 0, the second element has index 1, and so on.</p>
+      <p><strong>Deep Explanation:</strong> In memory, these integers are stored in consecutive memory locations. Suppose <code>numbers[0]</code> is stored at memory address 2000, then <code>numbers[1]</code> will be at 2004 (since an <code>int</code> typically takes 4 bytes). This makes accessing array elements fast and efficient.</p>
+
+      <h2>Example 2 – Sum of Array Elements</h2>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[5] = {1, 2, 3, 4, 5};
+    int sum;
+
+    sum = arr[0] + arr[1] + arr[2] + arr[3] + arr[4];
+
+    printf("Sum = %d", sum);
+    return 0;
+}
+</code></pre>
+      <p><strong>Output:</strong></p>
+      <pre><code>Sum = 15</code></pre>
+      <p><strong>Explanation:</strong> We directly add each element without a loop and store the result in <code>sum</code>.</p>
+      <p><strong>Deep Explanation:</strong> While this method works for small arrays, it becomes impractical for larger ones. Imagine an array of 1000 elements. You cannot write <code>sum = arr[0] + arr[1] + ... + arr[999];</code>. This is where <strong>loops</strong> come into play. Later in advanced lessons, we will use <code>for</code> loops to handle such cases easily.</p>
+
+      <h2>Example 3 – Display Float Array Elements</h2>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    float prices[4] = {12.5, 45.99, 7.25, 30.0};
+
+    printf("%f ", prices[0]);
+    printf("%f ", prices[1]);
+    printf("%f ", prices[2]);
+    printf("%f", prices[3]);
+
+    return 0;
+}
+</code></pre>
+      <p><strong>Output:</strong></p>
+      <pre><code>12.500000 45.990002 7.250000 30.000000</code></pre>
+      <p><strong>Explanation:</strong> <code>%f</code> prints float values with default six decimal places in C.</p>
+      <p><strong>Deep Explanation:</strong> Even though we entered <code>45.99</code>, the output shows <code>45.990002</code>. This is due to the way floating-point numbers are stored in binary form, which can lead to tiny precision errors. This is a common concept in all programming languages, not just C.</p>
+
+      <h2>Example 4 – Sum of Float Array Elements</h2>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    float marks[3] = {88.5, 92.0, 75.25};
+    float sum;
+
+    sum = marks[0] + marks[1] + marks[2];
+
+    printf("Total Marks = %f", sum);
+    return 0;
+}
+</code></pre>
+      <p><strong>Output:</strong></p>
+      <pre><code>Total Marks = 255.750000</code></pre>
+      <p><strong>Explanation:</strong> We directly add each float element without loops. <code>%f</code> displays the sum in default float format.</p>
+      <p><strong>Deep Explanation:</strong> This example demonstrates how arrays can be used to store marks of students. Later, by using loops, we can calculate the sum, average, highest, and lowest marks of a whole class efficiently.</p>
+
+      <h2>Example 5 – Display Char Array Elements</h2>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    char vowels[5] = {'A', 'E', 'I', 'O', 'U'};
+
+    printf("%c ", vowels[0]);
+    printf("%c ", vowels[1]);
+    printf("%c ", vowels[2]);
+    printf("%c ", vowels[3]);
+    printf("%c", vowels[4]);
+
+    return 0;
+}
+</code></pre>
+      <p><strong>Output:</strong></p>
+      <pre><code>A E I O U</code></pre>
+      <p><strong>Explanation:</strong> Here, we have created a <code>char</code> array to store English vowels and displayed them individually.</p>
+      <p><strong>Deep Explanation:</strong> A <code>char</code> array is often used to store text or strings in C. For example, the word <code>"HELLO"</code> is actually stored as a <code>char</code> array: <code>{'H','E','L','L','O','\0'}</code>, where <code>'\0'</code> is the null character marking the end of the string.</p>
+
+      <h2>Practice Statements</h2>
+      <ol>
+        <li>Store and display three integers without loops.</li>
+        <li>Add two integer array elements and print the result.</li>
+        <li>Store and display three float values without loops.</li>
+        <li>Add three float values and print the total.</li>
+        <li>Store five vowels in a char array and print them one by one.</li>
+      </ol>
+
+      <h2>Additional Theory and Notes</h2>
+      <p>
+        Arrays provide many benefits:
+      </p>
+      <ul>
+        <li><strong>Efficiency:</strong> Accessing elements by index is very fast.</li>
+        <li><strong>Memory Management:</strong> Values are stored in continuous memory blocks.</li>
+        <li><strong>Code Simplicity:</strong> Reduces the need for multiple variables.</li>
+        <li><strong>Foundation:</strong> Arrays form the basis of advanced data structures.</li>
+      </ul>
+      <p>
+        However, arrays also have limitations:
+      </p>
+      <ul>
+        <li><strong>Fixed Size:</strong> Once declared, the size cannot be changed.</li>
+        <li><strong>Same Data Type:</strong> All elements must be of the same type.</li>
+        <li><strong>No Bounds Checking:</strong> Accessing beyond the declared size may cause errors.</li>
+      </ul>
+
+      <h2>Frequently Asked Questions (FAQs)</h2>
+      <ol>
+        <li><strong>Q1: What is an array in C?</strong><br>
+        An array is a collection of elements of the same type stored in contiguous memory locations, accessible using an index.</li>
+
+        <li><strong>Q2: What is the default index of the first element in a C array?</strong><br>
+        The first element of an array always starts at index 0.</li>
+
+        <li><strong>Q3: Can we change the size of an array after declaration?</strong><br>
+        No, arrays in C have a fixed size determined at compile time.</li>
+
+        <li><strong>Q4: What is the difference between an array and a normal variable?</strong><br>
+        A variable stores a single value, while an array stores multiple values of the same type.</li>
+
+        <li><strong>Q5: How are arrays stored in memory?</strong><br>
+        Arrays are stored in contiguous memory locations, making access efficient.</li>
+
+        <li><strong>Q6: Can we store different data types in a single array?</strong><br>
+        No, all elements of an array must be of the same type.</li>
+
+        <li><strong>Q7: What happens if we access an index outside the array range?</strong><br>
+        This causes undefined behavior and may lead to program crashes.</li>
+
+        <li><strong>Q8: How do we calculate the size of an array?</strong><br>
+        We can use the formula <code>sizeof(array) / sizeof(array[0])</code> to get the total number of elements.</li>
+
+        <li><strong>Q9: Can arrays be passed to functions?</strong><br>
+        Yes, arrays can be passed to functions as arguments in C.</li>
+
+        <li><strong>Q10: What is the difference between a 1D and 2D array?</strong><br>
+        A 1D array stores elements in a single row, while a 2D array stores elements in rows and columns like a table (matrix).</li>
+      </ol>
+    </div>
+  </article>
+</main>
+<footer>
+  <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+</body>
+</html>

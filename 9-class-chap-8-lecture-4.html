@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn the basic structure of an HTML document with detailed explanations, examples, types of tags, quick notes, MCQs, FAQs, and real-world applications." />
+  <meta name="keywords" content="HTML Structure, HTML Tags, Paired Tags, Self-closing Tags, HTML Basics, Web Development, MCQs, FAQs, Salman Ahmad" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>HTML Basic Structure — Full Notes, Examples, Quick Notes & MCQs | Salman Blogs</title>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="HTML Basic Structure — Full Notes, Examples, Quick Notes & MCQs" />
+  <meta property="og:description" content="Understand the structure of an HTML document, paired and unpaired tags, quick notes, MCQs, FAQs, and teacher-friendly explanations." />
+  <meta property="og:image" content="https://salmanblogs.com/images/technology/html-basic-structure.png" />
+  <meta property="og:url" content="https://salmanblogs.com/html-basic-structure.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HTML Basic Structure — Full Notes, Examples, Quick Notes & MCQs" />
+  <meta name="twitter:description" content="Clear explanation of HTML structure, tags, quick notes, MCQs, FAQs, and summary for easy learning." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/html-basic-structure.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Fundamentals of Web Development[HTML CSS JAVASCRIPT] Lecture 4 Notes</h1>
+    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+    <img src="images/9-CS-IMAGES/chapter-8/chapter-8-lecture4-notes.png" alt="HTML Basic Structure illustration" class="post-image" />
+
+    <div class="post-content">
+
+      <h2>Introduction</h2>
+      <p>Hello! I am <strong>Salman Ahmad</strong>, a passionate teacher and web developer. My aim is to simplify computer science concepts for students so they not only prepare for exams but also gain practical knowledge useful in the real world. In this lecture, we will explore the <strong>Basic Structure of an HTML Document</strong>. HTML (HyperText Markup Language) is the foundation of web development, and understanding its structure is the first step towards becoming a web developer. By the end of this lesson, you will have a strong understanding of how an HTML page is written, how different tags are used, and how to differentiate between paired and unpaired tags.</p>
+
+      <p>This lesson is designed for <strong>Class 9 Computer Science students</strong>, but anyone who wants to begin their journey in web development will benefit from it. Alongside explanations, I have included examples, quick notes for revision, multiple-choice questions (MCQs), and even frequently asked questions (FAQs) to help strengthen your concepts.</p>
+
+      <h2>Basic Structure of an HTML Document</h2>
+      <p>Every HTML document follows a common structure. This structure acts like the “skeleton” of a webpage. Just like a building has a foundation, walls, and rooms, an HTML page has elements that define its layout and content. Here’s the basic outline:</p>
+
+      <ul>
+        <li><code>&lt;!DOCTYPE html&gt;</code> – Declares that the file is written in HTML5, the latest standard.</li>
+        <li><code>&lt;html&gt;</code> – The root element; everything on the page must be inside this tag.</li>
+        <li><code>&lt;head&gt;</code> – Contains page information (metadata, title, CSS, and scripts). This part is not directly visible on the page but plays an important role.</li>
+        <li><code>&lt;title&gt;</code> – Defines the webpage title (appears on the browser tab and is important for SEO).</li>
+        <li><code>&lt;body&gt;</code> – Contains the actual content that users see in the browser such as headings, paragraphs, images, and links.</li>
+        <li><code>&lt;h1&gt;</code> – Defines the largest heading. HTML has six levels of headings (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>).</li>
+        <li><code>&lt;p&gt;</code> – Defines a paragraph of text.</li>
+      </ul>
+
+      <p>Understanding this structure is essential because every webpage you create will follow this format. If the structure is wrong, the browser may not display your content properly. Think of it like writing an essay: you must have a title, introduction, body paragraphs, and conclusion. Similarly, an HTML page has a structured format.</p>
+
+      <h2>HTML Tags</h2>
+      <p>HTML documents are made up of <strong>tags</strong>. Tags are like instructions that tell the browser how to display content. Every tag is enclosed in angle brackets <code>&lt; &gt;</code>. Some tags come in pairs (open and close), while others are self-closing.</p>
+
+      <h3>1. Paired Tags (Container / Open-Close Tags)</h3>
+      <p>These tags always come in pairs: an opening tag and a closing tag. The closing tag is written with a forward slash <code>/</code>. Content goes between the opening and closing tags.</p>
+      <ul>
+        <li><code>&lt;p&gt; ... &lt;/p&gt;</code> → Defines a paragraph.</li>
+        <li><code>&lt;h1&gt; ... &lt;/h1&gt;</code> → Defines a heading.</li>
+        <li><code>&lt;title&gt; ... &lt;/title&gt;</code> → Defines the title of the page.</li>
+        <li><code>&lt;div&gt; ... &lt;/div&gt;</code> → Creates a division or section.</li>
+        <li><code>&lt;span&gt; ... &lt;/span&gt;</code> → Defines an inline container.</li>
+        <li><code>&lt;ul&gt; ... &lt;/ul&gt;</code> → Defines an unordered list.</li>
+      </ul>
+
+      <h3>2. Unpaired Tags (Self-closing / Empty Tags)</h3>
+      <p>Some tags do not need a closing tag. They are used for tasks like adding line breaks, images, or input fields.</p>
+      <ul>
+        <li><code>&lt;br&gt;</code> → Inserts a line break.</li>
+        <li><code>&lt;hr&gt;</code> → Inserts a horizontal line.</li>
+        <li><code>&lt;img&gt;</code> → Displays an image.</li>
+        <li><code>&lt;input&gt;</code> → Creates an input field.</li>
+        <li><code>&lt;meta&gt;</code> → Provides metadata.</li>
+        <li><code>&lt;link&gt;</code> → Links external CSS files.</li>
+      </ul>
+
+      <h2>Quick Notes – HTML Basic Structure</h2>
+      <h2>HTML Tags</h2>
+      <p>HTML documents are made up of tags. Tags define the structure and content of a webpage.</p>
+      <ul>
+        <li>Basic HTML structure includes:
+          <ul>
+            <li><code>&lt;!DOCTYPE html&gt;</code> → Declares document type (HTML5).</li>
+            <li><code>&lt;html&gt;</code> → Root of the document.</li>
+            <li><code>&lt;head&gt;</code> → Contains metadata, links, scripts, title.</li>
+            <li><code>&lt;title&gt;</code> → Title shown on browser tab.</li>
+            <li><code>&lt;body&gt;</code> → Contains visible content.</li>
+            <li><code>&lt;h1&gt; to &lt;h6&gt;</code> → Headings (h1 is largest, h6 is smallest).</li>
+            <li><code>&lt;p&gt;</code> → Paragraph of text.</li>
+          </ul>
+        </li>
+        <li><strong>HTML Tags Types:</strong>
+          <ul>
+            <li><strong>Paired Tags</strong> = Container Tags / Open-Close Tags (e.g., <code>&lt;p&gt; ... &lt;/p&gt;</code>, <code>&lt;div&gt; ... &lt;/div&gt;</code>).</li>
+            <li><strong>Unpaired Tags</strong> = Self-closing Tags / Empty Tags (e.g., <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code>).</li>
+          </ul>
+        </li>
+        <li><strong>Best Practice:</strong> Always use proper nesting & indentation for readability.</li>
+      </ul>
+
+      <h2>MCQs – HTML Basic Structure</h2>
+      <ol>
+        <li>
+          <strong>Which tag is used to declare the type of HTML version in use?</strong><br />
+          a) &lt;html&gt;<br />
+          b) &lt;head&gt;<br />
+          c) &lt;!DOCTYPE html&gt;<br />
+          d) &lt;title&gt;<br />
+          <p><strong>Answer:</strong> c) &lt;!DOCTYPE html&gt;</p>
+        </li>
+        <li>
+          <strong>Which of the following is NOT a paired tag?</strong><br />
+          a) &lt;h1&gt;<br />
+          b) &lt;p&gt;<br />
+          c) &lt;br&gt;<br />
+          d) &lt;div&gt;<br />
+          <p><strong>Answer:</strong> c) &lt;br&gt;</p>
+        </li>
+        <li>
+          <strong>Which tag is an example of a self-closing tag?</strong><br />
+          a) &lt;p&gt;<br />
+          b) &lt;img&gt;<br />
+          c) &lt;h1&gt;<br />
+          d) &lt;title&gt;<br />
+          <p><strong>Answer:</strong> b) &lt;img&gt;</p>
+        </li>
+        <li>
+          <strong>The content inside the &lt;title&gt; tag appears where?</strong><br />
+          a) Inside the webpage<br />
+          b) Browser tab<br />
+          c) Bottom of the page<br />
+          d) Console<br />
+          <p><strong>Answer:</strong> b) Browser tab</p>
+        </li>
+        <li>
+          <strong>Which of the following are examples of paired tags?</strong><br />
+          a) &lt;ul&gt; ... &lt;/ul&gt;<br />
+          b) &lt;br&gt;<br />
+          c) &lt;hr&gt;<br />
+          d) &lt;img&gt;<br />
+          <p><strong>Answer:</strong> a) &lt;ul&gt; ... &lt;/ul&gt;</p>
+        </li>
+        <li>
+          <strong>The &lt;meta&gt; tag belongs to which type?</strong><br />
+          a) Paired Tag<br />
+          b) Self-closing Tag<br />
+          c) Nested Tag<br />
+          d) None<br />
+          <p><strong>Answer:</strong> b) Self-closing Tag</p>
+        </li>
+      </ol>
+
+      <h2>Summary</h2>
+      <p>In this lecture, we explored the <strong>Basic Structure of an HTML Document</strong>. We learned about the importance of <code>&lt;!DOCTYPE html&gt;</code>, the role of the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> tags, and the difference between paired and unpaired tags. We also looked at best practices and provided quick notes for revision. Finally, MCQs helped reinforce the learning by testing key concepts.</p>
+      <p>Remember, HTML is the backbone of every webpage. If you understand this foundation well, you can move on to CSS and JavaScript with confidence. Practicing writing small HTML programs will build your confidence and make you a better web developer.</p>
+
+      <h2>FAQs – HTML Basic Structure</h2>
+      <ul>
+        <li><strong>Q1: What is the purpose of <code>&lt;!DOCTYPE html&gt;</code>?</strong><br>It tells the browser that the document is written in HTML5, ensuring modern rendering standards are used.</li>
+        <li><strong>Q2: Are HTML tags case-sensitive?</strong><br>No, HTML tags are not case-sensitive. Both <code>&lt;P&gt;</code> and <code>&lt;p&gt;</code> work, but lowercase is recommended.</li>
+        <li><strong>Q3: What is the difference between paired and unpaired tags?</strong><br>Paired tags require an opening and closing tag, while unpaired (self-closing) tags do not.</li>
+        <li><strong>Q4: Can we use multiple <code>&lt;h1&gt;</code> tags in one page?</strong><br>Yes, but best practice is to use only one <code>&lt;h1&gt;</code> for the main heading, followed by <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, etc. for subheadings.</li>
+        <li><strong>Q5: What is the difference between <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code>?</strong><br><code>&lt;div&gt;</code> is a block-level container, while <code>&lt;span&gt;</code> is an inline container.</li>
+      </ul>
+
+    </div>
+  </article>
+</main>
+<footer>
+  <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+
+</body>
+</html>

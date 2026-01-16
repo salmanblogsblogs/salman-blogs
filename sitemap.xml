@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.salmanblogs.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Static Pages -->
+  <url><loc>https://www.salmanblogs.com/about</loc></url>
+  <url><loc>https://www.salmanblogs.com/business</loc></url>
+  <url><loc>https://www.salmanblogs.com/categories</loc></url>
+  <url><loc>https://www.salmanblogs.com/contact</loc></url>
+  <url><loc>https://www.salmanblogs.com/health</loc></url>
+  <url><loc>https://www.salmanblogs.com/lifestyle</loc></url>
+  <url><loc>https://www.salmanblogs.com/online-learning</loc></url>
+  <url><loc>https://www.salmanblogs.com/privacy-policy</loc></url>
+  <url><loc>https://www.salmanblogs.com/technology</loc></url>
+  <url><loc>https://www.salmanblogs.com/terms</loc></url>
+  <url><loc>https://www.salmanblogs.com/travel</loc></url>
+
+  <!-- Blog Posts -->
+  <url><loc>https://www.salmanblogs.com/9-computer-science</loc></url>
+  <url><loc>https://www.salmanblogs.com/10-computer-science</loc></url>
+  <url><loc>https://www.salmanblogs.com/10-daily-habits</loc></url>
+  <url><loc>https://www.salmanblogs.com/ai-powered-fitness-with-a-virtual-trainer-and-wearable-devices</loc></url>
+  <url><loc>https://www.salmanblogs.com/best-budget-friendly-travel-destinations</loc></url>
+  <url><loc>https://www.salmanblogs.com/best-online-courses-for-high-paying-jobs</loc></url>
+  <url><loc>https://www.salmanblogs.com/boost-your-immune-system</loc></url>
+  <url><loc>https://www.salmanblogs.com/boost-your-mental-health-naturally</loc></url>
+  <url><loc>https://www.salmanblogs.com/how-ai-is-changing-our-world</loc></url>
+  <url><loc>https://www.salmanblogs.com/how-ai-is-transforming-small-businesses</loc></url>
+  <url><loc>https://www.salmanblogs.com/how-ai-powered-travel-apps</loc></url>
+  <url><loc>https://www.salmanblogs.com/how-ai-will-replace-and-create-jobs-by-2030</loc></url>
+  <url><loc>https://www.salmanblogs.com/how-to-build-a-morning-routine</loc></url>
+  <url><loc>https://www.salmanblogs.com/the-future-of-remote-work</loc></url>
+  <url><loc>https://www.salmanblogs.com/the-future-of-smartphones</loc></url>
+  <url><loc>https://www.salmanblogs.com/top-10-must-visit-travel-destinations</loc></url>
+  <url><loc>https://www.salmanblogs.com/top-10-ai-tools-you-should-be-using-in-2025</loc></url>
+  <url><loc>https://www.salmanblogs.com/top-10-business-trends</loc></url>
+  <url><loc>https://www.salmanblogs.com/top-10-health-trends-in-2025</loc></url>
+  <url><loc>https://www.salmanblogs.com/top-10-programming-languages-in-2025</loc></url>
+  <url><loc>https://www.salmanblogs.com/top-websites-to-learn-coding-for-free</loc></url>
+  <url><loc>https://www.salmanblogs.com/why-sleep-is-your-superpower</loc></url>
+
+</urlset>

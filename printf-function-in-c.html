@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn simple C programs for printing text using printf, including examples with explanations, practice exercises, MCQs, and FAQs." />
+  <meta name="keywords" content="C Programming, Hello World, Print Text, printf, Escape Sequences, MCQs, FAQs, C Examples" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Simple Programs for Printing Text in C — Examples, Explanations, Practice, MCQs & FAQs | Salman Blogs</title>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Simple Programs for Printing Text in C — Examples, Explanations, Practice, MCQs & FAQs" />
+  <meta property="og:description" content="Understand C programming basics with simple text printing programs, explanations, practice statements, MCQs, and FAQs with answers." />
+  <meta property="og:image" content="https://salmanblogs.com/images/technology/c-programming-printing.png" />
+  <meta property="og:url" content="https://salmanblogs.com/c-printing-text.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Simple Programs for Printing Text in C — Examples, Explanations, Practice, MCQs & FAQs" />
+  <meta name="twitter:description" content="Learn C printing text basics with examples, explanations, practice tasks, MCQs, and FAQs with answers." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/c-programming-printing.png" />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    code, pre { white-space: pre-wrap; word-wrap: break-word; }
+    .faq { margin-top: 30px; }
+    .faq h2 { margin-bottom: 15px; }
+    .faq h3 { margin-top: 15px; }
+    .explanation { background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-left: 4px solid #007BFF; }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Simple Programs for Printing Text in C</h1>
+    <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>
+    <img src="images/10-CS-IMAGES/printf-in-c.png" alt="c-programming-printing-text" class="post-image" />
+
+    <div class="post-content">
+      <h2>Full Definitions</h2>
+      <h3>Simple Programs for Printing Text</h3>
+      
+      <h4>Example 1 – Hello World</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!");
+    return 0;
+}</code></pre>
+      <div class="explanation">
+        <p>This is the most basic C program. <code>#include &lt;stdio.h&gt;</code> allows us to use the <code>printf()</code> function. The <code>main()</code> function is the entry point of the program. The <code>printf()</code> prints "Hello, World!" on the screen. <code>return 0;</code> indicates that the program executed successfully.</p>
+      </div>
+      <p><strong>Output:</strong><br />Hello, World!</p>
+
+      <h4>Example 2 – Print Your Name</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("My name is Salman.");
+    return 0;
+}</code></pre>
+      <div class="explanation">
+        <p>This program prints your name. The string inside <code>printf()</code> can be any text. It shows how you can display personalized information using C.</p>
+      </div>
+      <p><strong>Output:</strong><br />My name is Salman.</p>
+
+      <h4>Example 3 – Print Multiple Lines</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Pakistan\nZindabad");
+    return 0;
+}</code></pre>
+      <div class="explanation">
+        <p>The <code>\n</code> is an escape sequence that moves the cursor to a new line. This program prints "Pakistan" on the first line and "Zindabad" on the second line.</p>
+      </div>
+      <p><strong>Output:</strong><br />Pakistan<br />Zindabad</p>
+
+      <h4>Example 4 – Print a Quote</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("C Programming is Fun!");
+    return 0;
+}</code></pre>
+      <div class="explanation">
+        <p>This program prints a motivational message. It demonstrates that <code>printf()</code> can print any text string enclosed in double quotes.</p>
+      </div>
+      <p><strong>Output:</strong><br />C Programming is Fun!</p>
+
+      <h4>Example 5 – Print a Poem (2 Lines)</h4>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Twinkle, twinkle, little star\nHow I wonder what you are!");
+    return 0;
+}</code></pre>
+      <div class="explanation">
+        <p>This example shows how to print multiple lines of a poem. The <code>\n</code> ensures the second line starts below the first line.</p>
+      </div>
+      <p><strong>Output:</strong><br />Twinkle, twinkle, little star<br />How I wonder what you are!</p>
+
+      <h2>Practice Statements</h2>
+      <ul>
+        <li>Print your name, age, city, and full address on the screen.</li>
+        <li>Print your school/college/university name and your roll number with marks.</li>
+        <li>Print your favorite quote and also print Pakistan Zindabad.</li>
+        <li>Print your contact number and email address on the screen.</li>
+        <li>Print the following exactly as it looks: <br />C Programming is Fun!</li>
+      </ul>
+
+      <h2>MCQs – Printing Text with printf</h2>
+      <ol>
+        <li>
+          <strong>Which of the following will correctly print: Hello World</strong><br />
+          a) printf(Hello World);<br />
+          b) printf("Hello World");<br />
+          c) printf('Hello World');<br />
+          d) print("Hello World");<br />
+          <p><strong>Answer:</strong> b) printf("Hello World");</p>
+        </li>
+        <li>
+          <strong>Which escape sequence is used to print text on a new line?</strong><br />
+          a) \t<br />b) \n<br />c) \\<br />d) \b<br />
+          <p><strong>Answer:</strong> b) \n</p>
+        </li>
+        <li>
+          <strong>What will be the output of the following?<br />printf("Pakistan\nZindabad");</strong><br />
+          a) Pakistan Zindabad<br />b) PakistanZindabad<br />c) Pakistan<br />Zindabad<br />d) Error<br />
+          <p><strong>Answer:</strong> c) Pakistan<br />Zindabad</p>
+        </li>
+        <li>
+          <strong>To print double quotes around a text, which of the following is correct?</strong><br />
+          a) printf(""C Programming"");<br />
+          b) printf("\"C Programming\"");<br />
+          c) printf("'C Programming'");<br />
+          d) printf("C Programming");<br />
+          <p><strong>Answer:</strong> b) printf("\"C Programming\"");</p>
+        </li>
+        <li>
+          <strong>Which statement correctly prints a 2-line poem?</strong><br />
+          a) printf("Twinkle, twinkle, little star How I wonder what you are");<br />
+          b) printf("Twinkle, twinkle, little star\nHow I wonder what you are");<br />
+          c) printf('Twinkle, twinkle, little star\nHow I wonder what you are');<br />
+          d) print("Twinkle, twinkle, little star\nHow I wonder what you are");<br />
+          <p><strong>Answer:</strong> b) printf("Twinkle, twinkle, little star\nHow I wonder what you are");</p>
+        </li>
+        <li>
+          <strong>Which of the following is incorrect?</strong><br />
+          a) printf("My name is Ali");<br />
+          b) printf("Age: 20\n");<br />
+          c) printf('Pakistan');<br />
+          d) printf("City: Lahore");<br />
+          <p><strong>Answer:</strong> c) printf('Pakistan');</p>
+        </li>
+      </ol>
+
+      <h2>Frequently Asked Questions (FAQs)</h2>
+      <section class="faq">
+        <h3>1. What is the purpose of printf() in C?</h3>
+        <p>The <code>printf()</code> function is used to print text, numbers, and variables on the screen. It is essential for displaying output to the user.</p>
+
+        <h3>2. How do I print text on multiple lines?</h3>
+        <p>Use the newline escape sequence <code>\n</code> within the string, e.g., <code>printf("Line1\nLine2");</code>.</p>
+
+        <h3>3. Can I print both text and variables together?</h3>
+        <p>Yes. You can mix text and variables using format specifiers like %d for integers, %f for floats, and %c for characters.</p>
+
+        <h3>4. How to print double quotes inside text?</h3>
+        <p>Use the escape character <code>\</code> before double quotes, e.g., <code>printf("\"C Programming\"");</code>.</p>
+
+        <h3>5. Is printf() only for text?</h3>
+        <p>No. <code>printf()</code> can print numbers, characters, variables, and formatted output as well.</p>
+
+        <h3>6. How do I print a tab space?</h3>
+        <p>Use the tab escape sequence <code>\t</code> inside the string, e.g., <code>printf("A\tB\tC");</code>.</p>
+
+        <h3>7. Can I print Unicode or special symbols?</h3>
+        <p>Yes, using the <code>\u</code> or <code>\x</code> escape sequences, depending on the compiler support.</p>
+
+        <h3>8. What is the difference between printf() and puts()?</h3>
+        <p><code>printf()</code> allows formatted output, while <code>puts()</code> prints a string and automatically adds a newline at the end.</p>
+
+        <h3>9. Do I need to include any library to use printf()?</h3>
+        <p>Yes. You must include <code>#include &lt;stdio.h&gt;</code> at the top of your program.</p>
+
+        <h3>10. Can printf() be used in loops?</h3>
+        <p>Absolutely. You can use <code>printf()</code> inside loops to print text or variables multiple times efficiently.</p>
+      </section>
+
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about Internet Protocol (IP) Address including IPv4, IPv6, Protocols, DNS, DHCP, Network Security, practical applications, FAQs, quick notes, and MCQs to test your knowledge." />
+  <meta name="keywords" content="IP Address, IPv4, IPv6, Protocols, DNS, DHCP, Network Security, Subnetting, NAT, VPN, IoT, Cloud, Computer Science, MCQs" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Internet Protocol (IP) Address — IPv4, IPv6, Protocols, DNS, DHCP & Security | Salman Blogs</title>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+  <meta property="og:title" content="Internet Protocol (IP) Address — IPv4, IPv6, Protocols, DNS, DHCP & Security" />
+  <meta property="og:description" content="Understand IP Address, IPv4, IPv6, Protocols, DNS, DHCP, and Network Security with practical applications, quick notes, FAQs, and MCQs." />
+  <meta property="og:image" content="https://salmanblogs.com/images/technology/ip-address.png" />
+  <meta property="og:url" content="https://salmanblogs.com/ip-address.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Internet Protocol (IP) Address — IPv4, IPv6, Protocols, DNS, DHCP & Security" />
+  <meta name="twitter:description" content="Learn about IP Address, IPv4, IPv6, Protocols, DNS, DHCP, and Network Security with practical applications, FAQs, quick notes, and MCQs." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/ip-address.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+     <h1 class="post-title">Introduction To Networks Lecture 5 Notes</h1>
+    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+    <img src="images/9-CS-IMAGES/chapter-6/chapter-6-lecture5-notes.png" alt="chapter-6-lecture5-notes" class="post-image" />
+
+    <div class="post-content">
+
+      <h2>Introduction</h2>
+      <p>These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>. 
+         In today’s lecture, we are going to explore one of the most essential topics in networking and That’s <strong>Internet Protocol (IP) Address</strong>. This is a fundamental concept that powers the internet, making it possible for billions of devices to communicate with one another. Whether you are sending a message on WhatsApp, browsing your favorite website, or streaming a YouTube video, IP addresses are silently working in the background to make this possible.</p>
+      <p>In this detailed lecture, we will not only cover the definitions and technical aspects of IP addresses, but also dive deeper into practical applications, challenges, and modern uses in areas like cloud computing, IoT, and cybersecurity. By the end of this lesson, you will have a strong foundation in understanding how networks work, and you’ll be better prepared for advanced concepts in computer science.</p>
+
+      <h2>Full Definitions</h2>
+
+      <h3>Internet Protocol (IP) Address</h3>
+      <p>An Internet Protocol (IP) address is a unique numerical identifier assigned to each device connected to a network. It allows devices to communicate with each other over the internet or local networks.</p>
+
+      <h3>IPv4 (Internet Protocol version 4)</h3>
+      <p><strong>Definition:</strong> IPv4 is the fourth version of the Internet Protocol that uses a 32-bit address scheme, providing about 4.3 billion unique addresses (2³²).</p>
+      <p><strong>Explanation:</strong> IPv4 addresses are written in dotted decimal format (e.g., 192.168.1.1). Due to the growing number of internet users and devices, IPv4 addresses are running out.</p>
+      <p><strong>Example (Daily Life Analogy):</strong> Imagine you are numbering houses on a street, but there are only 4.3 billion numbers available. Once you run out, you cannot assign new house numbers. That’s the limitation of IPv4.</p>
+
+      <h3>IPv6 (Internet Protocol version 6)</h3>
+      <p><strong>Definition:</strong> IPv6 is the sixth and most recent version of the Internet Protocol. It uses a 128-bit address scheme, allowing for an extremely large number of unique addresses (2¹²⁸).</p>
+      <p><strong>Explanation:</strong> IPv6 addresses are written in hexadecimal separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334). It was introduced to replace IPv4 due to address exhaustion. It supports faster routing, better security, and improved performance.</p>
+      <p><strong>Example (Daily Life Analogy):</strong> Unlike IPv4’s limited numbers, IPv6 can assign a unique address to every grain of sand on a beach. That’s how huge its capacity is.</p>
+
+      <h3>Protocols</h3>
+      <p><strong>Definition:</strong> Protocols are sets of rules and standards that define how data is transmitted and communicated across networks.</p>
+      <ul>
+        <li><strong>TCP (Transmission Control Protocol):</strong> Breaks big data into small packets, numbers them, and makes sure they reach safely and in the correct order.</li>
+        <li><strong>IP (Internet Protocol):</strong> Works like a postal address. It puts the address on each packet so it knows where to go.</li>
+        <li><strong>HTTP:</strong> Transfers web pages between browsers and servers.</li>
+        <li><strong>FTP:</strong> Transfers files between computers.</li>
+        <li><strong>SMTP:</strong> Sends emails.</li>
+      </ul>
+      <p><strong>Example:</strong> When you open www.example.com, HTTP works with TCP/IP to load the web page.</p>
+
+      <h3>DNS (Domain Name System)</h3>
+      <p><strong>Definition:</strong> DNS is a service that translates domain names into IP addresses so that users can easily access websites.</p>
+      <p><strong>Example:</strong> Typing www.google.com in your browser → DNS converts it into the IP address of Google’s server.</p>
+
+      <h3>DHCP (Dynamic Host Configuration Protocol)</h3>
+      <p><strong>Definition:</strong> DHCP is a protocol that automatically assigns IP addresses and other network configurations to devices when they connect to a network.</p>
+      <p><strong>Example:</strong> When your phone connects to Wi-Fi, DHCP automatically gives it an IP address so it can access the internet.</p>
+
+      <h3>Network Security</h3>
+      <p><strong>Definition:</strong> Network security refers to the practices and technologies used to protect computer networks from unauthorized access, misuse, and attacks.</p>
+      <p><strong>Importance:</strong></p>
+      <ul>
+        <li><strong>Data Protection:</strong> Prevents theft or alteration of sensitive information.</li>
+        <li><strong>Preventing Attacks:</strong> Protects against hackers, malware, and viruses.</li>
+        <li><strong>Maintaining Privacy:</strong> Safeguards personal and confidential information.</li>
+        <li><strong>Ensuring Availability:</strong> Keeps network services accessible to authorized users.</li>
+      </ul>
+
+      <h2>Practical Applications of IP Addressing</h2>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p>IP addresses are not just technical terms, they are at the heart of modern technology. Every application you use, every online transaction you make, and every digital service you enjoy relies on IP addressing. Let’s explore where and how IP addresses are practically applied:</p>
+      <ul>
+        <li><strong>Web Browsing:</strong> Every time you type a web address, your device uses DNS and IP addresses to connect you to the correct server.</li>
+        <li><strong>Email Communication:</strong> When you send an email, SMTP and IP addresses ensure it reaches the correct recipient.</li>
+        <li><strong>Cloud Services:</strong> Platforms like Google Drive, AWS, and Microsoft Azure use IP addressing for storage, security, and access management.</li>
+        <li><strong>IoT Devices:</strong> Smart home devices such as cameras, thermostats, and assistants rely on IP addresses to communicate.</li>
+        <li><strong>Mobile Networks (4G/5G):</strong> IP addresses are assigned dynamically to smartphones to enable seamless internet access.</li>
+        <li><strong>VPNs:</strong> Virtual Private Networks mask your real IP to secure browsing and bypass restrictions.</li>
+      </ul>
+
+      <h2>Subnetting and IP Management</h2>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p>Subnetting is a way of dividing a network into smaller parts to increase efficiency and security. For example, a university can assign different IP ranges to its library, admin, and student departments. This ensures better performance and security. Similarly, Internet Service Providers (ISPs) use subnetting to manage millions of customer IPs effectively.</p>
+
+      <h2>Challenges with IP Addressing</h2>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <ul>
+        <li><strong>IPv4 Exhaustion:</strong> The demand for new addresses is higher than the supply, which is why IPv6 adoption is important.</li>
+        <li><strong>Security Issues:</strong> Hackers can misuse IP addresses to track users or launch attacks.</li>
+        <li><strong>Configuration Errors:</strong> Improper IP assignment can cause network failures.</li>
+        <li><strong>Compatibility:</strong> Transitioning from IPv4 to IPv6 remains a global challenge.</li>
+      </ul>
+
+      <h2>Quick Notes</h2>
+      <ul>
+        <li><strong>IP Address:</strong> Unique identifier for devices on a network.</li>
+        <li><strong>IPv4:</strong> 32-bit, 4.3 billion addresses, format 192.168.1.1.</li>
+        <li><strong>IPv6:</strong> 128-bit, nearly unlimited addresses, format 2001:0db8:85a3::7334.</li>
+        <li><strong>Protocols:</strong> TCP/IP, HTTP, FTP, SMTP.</li>
+        <li><strong>DNS:</strong> Converts names to IP (e.g., google.com → 142.250.x.x).</li>
+        <li><strong>DHCP:</strong> Automatically assigns IPs when connecting to Wi-Fi.</li>
+        <li><strong>Network Security:</strong> Protects against unauthorized access, theft, and attacks.</li>
+      </ul>
+
+      <ul>
+        <li><strong>Data Protection:</strong> Prevents theft or alteration of sensitive information.</li>
+        <li><strong>Preventing Attacks:</strong> Protects against hackers, malware, and viruses.</li>
+        <li><strong>Maintaining Privacy:</strong> Safeguards personal and confidential information.</li>
+        <li><strong>Ensuring Availability:</strong> Keeps network services accessible to authorized users.</li>
+      </ul>
+
+      <h2>MCQs</h2>
+      <ol>
+        <li><strong>IPv4 uses how many bits for addressing?</strong><br>
+          a) 64<br>
+          b) 32 ✅<br>
+          c) 128<br>
+          d) 16</li>
+        <li><strong>Total number of IPv4 addresses available is:</strong><br>
+          a) 2³² ≈ 4.3 billion ✅<br>
+          b) 2¹²⁸<br>
+          c) 2¹⁶<br>
+          d) 2⁶⁴</li>
+        <li><strong>Which of the following is NOT true about IPv6?</strong><br>
+          a) It uses 128-bit addressing.<br>
+          b) It allows almost unlimited addresses.<br>
+          c) It is written in dotted decimal format. ✅<br>
+          d) It replaces IPv4.</li>
+        <li><strong>Which protocol translates domain names into IP addresses?</strong><br>
+          a) FTP<br>
+          b) DNS ✅<br>
+          c) DHCP<br>
+          d) HTTP</li>
+        <li><strong>DHCP is used for:</strong><br>
+          a) Assigning IP addresses automatically ✅<br>
+          b) Sending emails<br>
+          c) Transferring files<br>
+          d) Encrypting data</li>
+        <li><strong>Which of the following is a network security goal?</strong><br>
+          a) Making networks slower<br>
+          b) Protecting data ✅<br>
+          c) Allowing all users to access data freely<br>
+          d) Disabling protocols</li>
+        <li><strong>HTTP is mainly used for:</strong><br>
+          a) Transferring files<br>
+          b) Sending emails<br>
+          c) Transferring web pages ✅<br>
+          d) Assigning IP addresses</li>
+        <li><strong>IPv6 addresses are written in:</strong><br>
+          a) Binary form<br>
+          b) Decimal dotted notation<br>
+          c) Hexadecimal with colons ✅<br>
+          d) Octal notation</li>
+      </ol>
+
+      <h2>Summary</h2>
+      <p>In summary, IP addresses are the digital backbone of communication in our modern world. From the early days of IPv4 to the vast expansion of IPv6, from DNS and DHCP services to critical security measures, every aspect of networking revolves around proper addressing. As students of computer science, understanding IP addressing not only strengthens your academic foundation but also prepares you for real-world challenges in IT, web development, and cybersecurity.</p>
+
+      <h2>Frequently Asked Questions (FAQs)</h2>
+      <h3>1. Why do we need IP addresses?</h3>
+      <p>We need IP addresses so that each device on a network can be uniquely identified and data can be routed correctly to its destination.</p>
+
+      <h3>2. Is IPv4 still in use?</h3>
+      <p>Yes, IPv4 is still widely used, but due to its limitations, IPv6 adoption is increasing globally.</p>
+
+      <h3>3. Can two devices have the same IP address?</h3>
+      <p>Not on the same network. If two devices share the same IP address, it causes a conflict and neither will work properly.</p>
+
+      <h3>4. What’s the difference between a public and private IP?</h3>
+      <p>Public IPs are globally unique and used for internet communication. Private IPs are used within local networks and are not directly accessible from the internet.</p>
+
+      <h3>5. How does NAT (Network Address Translation) work?</h3>
+      <p>NAT allows multiple devices on a local network to share a single public IP address for internet access. It is commonly used in home routers.</p>
+
+      <h3>6. Why is IPv6 adoption slow?</h3>
+      <p>IPv6 requires infrastructure upgrades, hardware compatibility, and training. Many organizations still rely on IPv4 due to cost and complexity.</p>
+
+      <h3>7. How do IP addresses relate to cybersecurity?</h3>
+      <p>Attackers can misuse IPs for hacking or tracking. Securing networks involves monitoring IP traffic, using firewalls, and encryption protocols.</p>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+</body>
+</html>

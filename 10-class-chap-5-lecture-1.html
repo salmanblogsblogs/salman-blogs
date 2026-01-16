@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn Functions in C — definition, types, advantages with examples, detailed program explanations, and MCQs to test your knowledge." />
+  <meta name="keywords" content="Functions in C, C Programming, User-defined Functions, Library Functions, Advantages of Functions, MCQs, FAQs" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Functions in C — Definition, Examples, Explanations & MCQs | Salman Blogs</title>
+    <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+  <meta property="og:title" content="Functions in C — Definition, Examples & MCQs" />
+  <meta property="og:description" content="Understand Functions in C with examples, detailed explanations, advantages, and MCQs for practice." />
+  <meta property="og:image" content="https://salmanblogs.com/images/c/functions.png" />
+  <meta property="og:url" content="https://salmanblogs.com/functions-in-c.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Functions in C — Definition, Examples & MCQs" />
+  <meta name="twitter:description" content="Learn Functions in C, their types, examples, detailed explanations, and advantages with MCQs." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/c/functions.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Functions in C</h1>
+    <div class="post-meta">Posted in <strong>10 Class</strong></div>
+    <img src="images/10-CS-IMAGES/CHAPTER 5/chapter-5-lecture1-notes.png" alt="functions-in-c" class="post-image" loading="lazy">
+
+    <div class="post-content">
+      <h2>Introduction</h2>
+      <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p>
+        Functions are one of the most powerful and useful features of the C programming language. Without functions, writing large programs would become confusing, repetitive, and hard to maintain. Imagine writing a program where the same piece of logic is needed in multiple places. Without functions, you would have to copy and paste the same code again and again. This not only increases the length of the code but also makes debugging a nightmare. Functions solve this problem by allowing you to write a block of code once and reuse it wherever needed.
+      </p>
+      <p>
+        In this article, we will go step by step through the concept of functions in C, their types, advantages, detailed program examples, and explanations. At the end, you will also find a section of frequently asked questions (FAQs) along with multiple-choice questions (MCQs) to test your understanding. By the time you finish reading, you will not only understand the theory but also know how to apply functions effectively in your own programs.
+      </p>
+
+      <h2>Definition</h2>
+      <p>
+        A function in C is a block of reusable code that performs a specific task. Functions help avoid repetition, organize code, and make programs easier to maintain. 
+        <br><strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.] <br></strong>
+        A function can take inputs (parameters), perform some operations, and may return a value.
+      </p>
+
+      <h2>Types of Functions in C</h2>
+      <h3>Library Functions (Built-in Functions)</h3>
+      <p>These are predefined functions provided by C and stored in header files.</p>
+      <ul>
+        <li><code>printf()</code> → prints output (&lt;stdio.h&gt;)</li>
+        <li><code>scanf()</code> → takes input (&lt;stdio.h&gt;)</li>
+        <li><code>sqrt()</code> → square root (&lt;math.h&gt;)</li>
+      </ul>
+
+      <h3>User-Defined Functions</h3>
+      <p>These are created by programmers to perform specific tasks as per program requirements.</p>
+      <pre><code>void display();
+void add();
+void subtract();
+void data();</code></pre>
+
+      <h2>Advantages of Functions</h2>
+
+      <h3>Reusability</h3>
+      <p>Write once and use multiple times, reducing code duplication.</p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void printHello() {
+    printf("Hello World!\n");
+}
+
+int main() {
+    printHello();   // reused
+    printHello();   // reused again
+    printHello();   // reused again
+    return 0;
+}</code></pre>
+      <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p><strong>Explanation:</strong> In this program, the function <code>printHello()</code> is written once but called three times in the main function. Instead of writing the same line of code three times, we simply reuse the function. This makes the code shorter and cleaner.</p>
+
+      <h3>Modularity</h3>
+      <p>Divides a large program into smaller, independent modules.</p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+void addition() {
+    int a = 10, b = 5;
+    printf("Addition = %d\n", a + b);
+}
+
+void subtraction() {
+    int a = 10, b = 5;
+    printf("Subtraction = %d\n", a - b);
+}
+
+int main() {
+    addition();
+    subtraction();
+    return 0;
+}</code></pre>
+      <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p><strong>Explanation:</strong> The above program is divided into two separate functions: one for addition and one for subtraction. Each function handles its own task, which makes the program modular and easy to understand.</p>
+
+      <h3>Separation of Task</h3>
+      <p>Each function performs a separate task, making code more structured and easier to manage.</p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int num1, num2, result;
+
+void inputNumbers() {
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+}
+
+void multiplyNumbers() {
+    result = num1 * num2;
+}
+
+void displayResult() {
+    printf("Result = %d\n", result);
+}
+
+int main() {
+    inputNumbers();
+    multiplyNumbers();
+    displayResult();
+    return 0;
+}</code></pre>
+      <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p><strong>Explanation:</strong> This program demonstrates the idea of separation of tasks. One function is responsible for taking input, another for performing multiplication, and a third for displaying the result. This separation makes the program well-structured and easier to maintain.</p>
+
+      <h3>Readability</h3>
+      <p>Programs are easier to understand because logic is separated into meaningful functions.</p>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int x = 5, y = 7, sum;
+
+void calculateSum() {
+    sum = x + y;
+}
+
+void printSum() {
+    printf("Sum = %d\n", sum);
+}
+
+int main() {
+    calculateSum();
+    printSum();
+    return 0;
+}</code></pre>
+      <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p><strong>Explanation:</strong> The program is more readable because the function names clearly indicate their purpose. A reader can quickly understand that <code>calculateSum()</code> calculates the sum, and <code>printSum()</code> prints it.</p>
+
+      <h2>MCQs: Functions in C</h2>
+      <ol>
+        <li><strong>What is a function in C?</strong><br>
+          a) A block of code that performs a specific task ✅<br>
+          b) A variable that stores data<br>
+          c) A loop structure<br>
+          d) A header file</li>
+        <li><strong>Which keyword is used to define a function in C?</strong><br>
+          a) define<br>
+          b) function<br>
+          c) return<br>
+          d) void / data type ✅</li>
+        <li><strong>What is the main advantage of using functions in C?</strong><br>
+          a) Slows down execution<br>
+          b) Increases code duplication<br>
+          c) Reusability and Modularity ✅<br>
+          d) Reduces program readability</li>
+        <li><strong>The function main() in C is:</strong><br>
+          a) A user-defined function<br>
+          b) A pre-defined function ✅<br>
+          c) Both user-defined and pre-defined<br>
+          d) None of the above</li>
+        <li><strong>Which of the following is NOT an advantage of functions?</strong><br>
+          a) Code reusability<br>
+          b) Better readability<br>
+          c) Debugging becomes harder ✅<br>
+          d) Separation of task</li>
+        <li><strong>A function in C without parameters and without return type is written as:</strong><br>
+          a) function()<br>
+          b) void function() ✅<br>
+          c) int function(int x)<br>
+          d) function void()</li>
+        <li><strong>In C, which function is executed first?</strong><br>
+          a) printf()<br>
+          b) scanf()<br>
+          c) main() ✅<br>
+          d) user-defined function</li>
+        <li><strong>Which of the following shows Separation of Task using functions?</strong><br>
+          a) One function does everything<br>
+          b) Multiple functions, each doing a separate job ✅<br>
+          c) Copy-pasting code everywhere<br>
+          d) Writing code without any functions</li>
+      </ol>
+
+      <h2>FAQs: Functions in C</h2>
+      <ul>
+        <li><strong>Q1: Why are functions important in C programming?</strong><br>Functions help in organizing code, improving readability, and reducing duplication. They allow reusability and modular programming.</li>
+        <li><strong>Q2: Can a function return multiple values in C?</strong><br>No, a function in C can only return one value directly. However, you can return multiple values using pointers or structures.</li>
+        <li><strong>Q3: What is the difference between user-defined and library functions?</strong><br>Library functions are built-in and provided by C (e.g., printf), while user-defined functions are created by programmers for specific tasks.</li>
+        <li><strong>Q4: Can we call a function inside another function?</strong><br>Yes, this is called <em>function calling</em>, and it is commonly used in modular programming.</li>
+        <li><strong>Q5: Is it necessary to declare a function before using it?</strong><br>Yes, you should declare a function (function prototype) before using it in the program, unless it is defined above <code>main()</code>.</li>
+        <li><strong>Q6: What happens if we don’t use functions in large programs?</strong><br>The code becomes repetitive, harder to debug, less readable, and more error-prone.</li>
+        <li><strong>Q7: Can functions in C be recursive?</strong><br>Yes, a function can call itself. This is known as recursion and is useful for problems like factorial, Fibonacci, and tree traversal.</li>
+        <li><strong>Q8: What is the default return type of a function in C?</strong><br>By default, if not specified, the return type is <code>int</code>. But it’s always good practice to mention the return type explicitly.</li>
+        <li><strong>Q9: How are parameters passed to functions in C?</strong><br>Parameters can be passed either by <em>value</em> (copy of data) or by <em>reference</em> (using pointers).</li>
+        <li><strong>Q10: Can two functions have the same name in C?</strong><br>No, function overloading is not supported in C. Each function must have a unique name.</li>
+      </ul>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2025 Salman Ahmad. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+</body>
+</html>
