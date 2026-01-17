@@ -102,7 +102,7 @@
 
     <h1 class="post-title">Class 10 Girls – Result 2026</h1>
     <div class="post-meta">Private Result | Password Protected</div>
-    <strong>Click on the below image and then enter password.</strong>
+    <strong>Click on the image below and then enter the password.</strong>
 
     <!-- Thumbnail -->
     <img
@@ -142,20 +142,17 @@
           </tr>
         </thead>
         <tbody id="resultTable">
-          <tbody id="resultTable">
-  <tr><td></td><td>Isha</td><td>19</td><td>63.33%</td></tr>
-  <tr><td></td><td>Aleena</td><td>10</td><td>33.33%</td></tr>
-  <tr><td></td><td>Rania</td><td>23</td><td>76.67%</td></tr>
-  <tr><td></td><td>Asma</td><td>21</td><td>70%</td></tr>
-  <tr><td></td><td>Zainab</td><td>24</td><td>80%</td></tr>
-  <tr><td></td><td>Asra</td><td>19</td><td>63.33%</td></tr>
-  <tr><td></td><td>Namal</td><td>18</td><td>60%</td></tr>
-  <tr><td></td><td>Mahnoor</td><td>18</td><td>60%</td></tr>
-  <tr><td></td><td>Samiya</td><td>12</td><td>40%</td></tr>
-  <tr><td></td><td>Iqra</td><td>21</td><td>70%</td></tr>
-  <tr><td></td><td>Amna</td><td>11</td><td>36.67%</td></tr>
-</tbody>
-
+          <tr><td></td><td>Isha</td><td>19</td><td>63.33%</td></tr>
+          <tr><td></td><td>Aleena</td><td>10</td><td>33.33%</td></tr>
+          <tr><td></td><td>Rania</td><td>23</td><td>76.67%</td></tr>
+          <tr><td></td><td>Asma</td><td>21</td><td>70%</td></tr>
+          <tr><td></td><td>Zainab</td><td>24</td><td>80%</td></tr>
+          <tr><td></td><td>Asra</td><td>19</td><td>63.33%</td></tr>
+          <tr><td></td><td>Namal</td><td>18</td><td>60%</td></tr>
+          <tr><td></td><td>Mahnoor</td><td>18</td><td>60%</td></tr>
+          <tr><td></td><td>Samiya</td><td>12</td><td>40%</td></tr>
+          <tr><td></td><td>Iqra</td><td>21</td><td>70%</td></tr>
+          <tr><td></td><td>Amna</td><td>11</td><td>36.67%</td></tr>
         </tbody>
       </table>
 
@@ -184,23 +181,6 @@
     input.type = input.type === "password" ? "text" : "password";
   }
 
-  function calculatePositions() {
-    const rows = document.querySelectorAll("#resultTable tr");
-    let lastMarks = null;
-    let position = 0;
-
-    rows.forEach(row => {
-      const marks = parseInt(row.children[2].innerText);
-
-      if (marks !== lastMarks) {
-        position++;
-        lastMarks = marks;
-      }
-
-      row.children[0].innerText = position;
-    });
-  }
-
   function unlockResult() {
     const password = document.getElementById("passwordInput").value;
 
@@ -211,6 +191,32 @@
     } else {
       document.getElementById("errorMsg").innerText = "❌ Incorrect password";
     }
+  }
+
+  function calculatePositions() {
+    const table = document.getElementById("resultTable");
+    const rows = Array.from(table.querySelectorAll("tr"));
+
+    // Sort descending by marks
+    rows.sort((a, b) => parseInt(b.children[2].innerText) - parseInt(a.children[2].innerText));
+
+    // Append rows in sorted order
+    rows.forEach(row => table.appendChild(row));
+
+    // Calculate positions with ties
+    let lastMarks = null;
+    let position = 0;
+
+    rows.forEach((row, index) => {
+      const marks = parseInt(row.children[2].innerText);
+
+      if (marks !== lastMarks) {
+        position++;
+        lastMarks = marks;
+      }
+
+      row.children[0].innerText = position;
+    });
   }
 </script>
 
