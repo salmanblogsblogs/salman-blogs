@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about Data Science, types of data, data gathering, and methods to organize and analyze data with examples and key features." />
+  <meta name="keywords" content="Data Science, Data Gathering, Types of Data, Qualitative Data, Quantitative Data, Organizing Data, Analyzing Data, Data Tables, Charts, Graphs" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Data Science: Types of Data, Gathering, and Analysis — Examples and Features | Salman Blogs</title>
+  <meta property="og:title" content="Data Science: Types of Data, Gathering, and Analysis — Examples and Features" />
+  <meta property="og:description" content="Explore Data Science, data gathering, types of data, and how to organize and analyze data with examples and best practices." />
+  <meta property="og:image" content="https://salmanblogs.com/images/data-science.png" />
+  <meta property="og:url" content="https://salmanblogs.com/data-science.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Data Science: Types of Data, Gathering, and Analysis — Examples and Features" />
+  <meta name="twitter:description" content="Comprehensive guide on Data Science, types of data, data gathering, and analysis methods. Includes examples and tips for organizing data effectively." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/data-science.png" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    .toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+    .toc h2 { margin-top: 0; }
+    .toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
+    .toc a:hover { color: darkblue; }
+    .toc li {list-style-type: none;}
+    .post-content h2,
+    .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+    <img src="images/9-CS-IMAGES/chapter-9/data-science.png" alt="data-science" class="post-image" loading="lazy">
+
+    <nav class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#data-science">Introduction to Data Science</a></li>
+        <li><a href="#data-gathering">Data Gathering</a></li>
+        <li><a href="#data-definition">What is Data?</a></li>
+        <li><a href="#types-of-data">Types of Data</a></li>
+        <li><a href="#qualitative-data">Qualitative Data</a></li>
+        <li><a href="#quantitative-data">Quantitative Data</a></li>
+        <li><a href="#organizing-data">Organizing and Analyzing Data</a></li>
+        <li><a href="#importance-organizing">Importance of Organizing Data</a></li>
+        <li><a href="#ways-organize">Ways to Organize Data</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#extra-insights">Extra-Insights</a></li>
+      </ul>
+    </nav>
+
+    <div class="post-content">
+
+      <h2 id="data-science">Introduction to Data Science</h2>
+      <p><strong>Data Science:</strong> The study of collecting, analyzing, and understanding data to find useful information and make decisions.</p>
+
+      <h2 id="data-gathering">Data Gathering</h2>
+      <p>It’s the process of collecting information or facts from different sources for a specific purpose.</p>
+
+      <h2 id="data-definition">What is Data?</h2>
+      <p>Data is raw information we collect about things around us. We can use it to create useful information. Data can be numbers, words, measurements, observations, images, or sounds from different sources.</p>
+
+      <h2 id="types-of-data">Types of Data</h2>
+      <h3 id="qualitative-data">1. Qualitative Data</h3>
+      <p>Describes qualities or characteristics, not numbers.</p>
+      <p><strong>Examples:</strong> Names of students (Ali, Badar), colors of cars (red, blue).</p>
+
+      <h4>Types of Qualitative Data</h4>
+      <p><strong>Non-Numerical Data (Qualitative Data)</strong></p>
+      <p><strong>Definition:</strong> Data that is not in numbers. It describes qualities, characteristics, or categories.</p>
+      <h4>Key Features:</h4>
+      <ul>
+        <li><strong>Descriptive:</strong> Uses words, labels, or symbols to describe something. <br><em>Example:</em> Colors of cars (red, blue, green), student names (Ali, Sara).</li>
+        <li><strong>Categorical:</strong> Can be grouped into categories or classes. <br><em>Example:</em> Types of fruit (apple, banana), job titles (manager, engineer).</li>
+      </ul>
+
+      <h3 id="quantitative-data">2. Quantitative Data (Numbers and Measurements)</h3>
+      <p><strong>Definition:</strong> Data that tells “how much” or “how many” using numbers.</p>
+      <h4>Key Features:</h4>
+      <ul>
+        <li><strong>Numerical:</strong> It is always in numbers. <br><em>Example:</em> Test scores (85, 90), height (160 cm), weight (55 kg).</li>
+        <li><strong>Measurable:</strong> Can be measured using tools or instruments. <br><em>Example:</em> Use a ruler for length, a scale for weight, a thermometer for temperature.</li>
+        <li><strong>Countable:</strong> Can be counted one by one, especially whole numbers (discrete data). <br><em>Example:</em> Number of students in a class, number of cars in a parking lot.</li>
+        <li><strong>Arithmetical:</strong> Can be used in calculations like addition, subtraction, multiplication, or division. <br><em>Example:</em> Multiply the price of a fruit by its weight to get total cost, or calculate total school fees by multiplying monthly fee by number of months.</li>
+      </ul>
+
+      <h2 id="organizing-data">Organizing and Analyzing Data</h2>
+      <p>Organizing data makes it easier to understand and reduces mistakes. <br><em>Example:</em> A messy list of student scores may cause errors, but a table keeps things clear.</p>
+
+      <h2 id="importance-organizing">Importance of Organizing Data</h2>
+      <ul>
+        <li><strong>Saves time:</strong> Easier to find and analyze.</li>
+        <li><strong>Improves clarity:</strong> Charts or graphs make it easier to understand data trends.</li>
+        <li><strong>Helps in decision-making:</strong> Organized data quickly shows patterns or comparisons.</li>
+      </ul>
+
+      <h2 id="ways-organize">Ways to Organize Data</h2>
+      <ul>
+        <li><strong>Tables:</strong> Show data neatly for easy comparison. <br><em>Example:</em> Students’ scores in subjects.</li>
+        <li><strong>Charts:</strong> Visuals to show trends and patterns. Types: bar chart, line chart, pie chart.</li>
+        <li><strong>Graphs:</strong> Show relationships between data points. Types: line graph, bar graph, scatter plot, histogram.</li>
+      </ul>
+
+      <h2 id="extra-insights">Extra Insights on Data Science</h2>
+<p>Data Science is not just about collecting data; it’s about <strong>transforming raw data into meaningful information</strong> that can guide decisions, improve processes, and solve real-world problems. Understanding the nuances of data, its types, and proper handling methods is crucial for accuracy and effectiveness.</p>
+
+<h3>1. Raw Data vs. Information</h3>
+<ul>
+  <li><strong>Raw Data:</strong> Unprocessed facts and figures collected from observations, surveys, sensors, or digital platforms. <br><em>Example:</em> Student scores, website clicks, temperature readings.</li>
+  <li><strong>Information:</strong> Processed, organized, or analyzed data that provides insights. <br><em>Example:</em> Average class score, website traffic trends, daily temperature patterns.</li>
+</ul>
+
+<h3>2. Real-Life Applications of Data Types</h3>
+<ul>
+  <li><strong>Qualitative Data:</strong> Used to understand characteristics, opinions, or categories. <br><em>Example:</em> Customer reviews, product colors, survey responses.</li>
+  <li><strong>Quantitative Data:</strong> Used to measure, count, and analyze trends numerically. <br><em>Example:</em> Sales figures, revenue growth, student grades, population statistics.</li>
+</ul>
+
+<h3>3. Data Collection Methods</h3>
+<p>Gathering accurate and relevant data is a key step in Data Science. Common methods include:</p>
+<ul>
+  <li><strong>Surveys and Questionnaires:</strong> Collect opinions, ratings, or feedback from individuals.</li>
+  <li><strong>Observations:</strong> Recording events, behaviors, or phenomena directly.</li>
+  <li><strong>Interviews:</strong> In-depth conversations to gather detailed qualitative information.</li>
+  <li><strong>Digital Sources:</strong> Website analytics, social media data, IoT sensors, transaction records.</li>
+  <li><strong>Secondary Sources:</strong> Published reports, research papers, government databases.</li>
+</ul>
+
+<h3>4. Importance of Organizing and Analyzing Data</h3>
+<p>Organizing data is not optional, it is essential. Well-structured data allows:</p>
+<ul>
+  <li><strong>Faster Analysis:</strong> Quickly identify trends, patterns, and anomalies.</li>
+  <li><strong>Better Decision-Making:</strong> Make informed choices based on reliable data.</li>
+  <li><strong>Reduced Errors:</strong> Minimize mistakes caused by messy or inconsistent data.</li>
+  <li><strong>Enhanced Communication:</strong> Visualizations like charts and graphs make findings easy to understand.</li>
+</ul>
+
+<h3>5. Tools Commonly Used in Data Science</h3>
+<p>Data Science involves a mix of programming, statistical, and visualization tools. Key tools include:</p>
+<ul>
+  <li><strong>Programming Languages:</strong> Python, R, SQL</li>
+  <li><strong>Data Visualization Tools:</strong> Tableau, Power BI, Matplotlib, Seaborn</li>
+  <li><strong>Spreadsheet Software:</strong> Microsoft Excel, Google Sheets</li>
+  <li><strong>Statistical Tools:</strong> SPSS, SAS</li>
+  <li><strong>Big Data Platforms:</strong> Hadoop, Spark</li>
+  <li><strong>Data Storage & Cloud:</strong> SQL databases, Google Cloud, AWS, Azure</li>
+</ul>
+
+<h3>6. Best Practices in Handling Data</h3>
+<ul>
+  <li>Always verify the source of your data for accuracy and reliability.</li>
+  <li>Clean and preprocess data before analysis (remove duplicates, handle missing values).</li>
+  <li>Use visualizations to make complex data understandable.</li>
+  <li>Ensure privacy and security when handling sensitive information.</li>
+  <li>Document data sources, assumptions, and methods for reproducibility.</li>
+</ul>
+
+<h3>7. Key Takeaways</h3>
+<ul>
+  <li>Data Science transforms raw data into actionable insights.</li>
+  <li>Understanding data types is critical for correct analysis.</li>
+  <li>Organizing and visualizing data improves comprehension and decision-making.</li>
+  <li>Using proper tools and techniques ensures efficiency and accuracy.</li>
+</ul>
+
+      <h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
+      <section class="faq-section">
+        <div class="faq-item">
+          <button class="faq-question">1. What is Data Science?</button>
+          <div class="faq-answer"><p>Data Science is the study of collecting, analyzing, and understanding data to find useful information and make decisions.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">2. What is data gathering?</button>
+          <div class="faq-answer"><p>Data gathering is the process of collecting information or facts from different sources for a specific purpose.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">3. What is the difference between qualitative and quantitative data?</button>
+          <div class="faq-answer"><p>Qualitative data describes qualities or characteristics using words or categories, while quantitative data uses numbers to measure or count.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">4. Why is organizing data important?</button>
+          <div class="faq-answer"><p>Organizing data saves time, improves clarity, reduces mistakes, and helps in decision-making by showing patterns and trends clearly.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">5. What are common ways to organize data?</button>
+          <div class="faq-answer"><p>Common ways include using tables, charts (bar, line, pie), and graphs (line graph, bar graph, scatter plot, histogram).</p></div>
+        </div>
+      </section>
+
+    </div>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  const faqItems = document.querySelectorAll('.faq-question');
+  faqItems.forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('active');
+      const answer = button.nextElementSibling;
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+      } else {
+        answer.style.display = "block";
+      }
+    });
+  });
+</script>
+</body>
+</html>

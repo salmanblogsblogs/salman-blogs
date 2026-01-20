@@ -100,8 +100,10 @@ html { scroll-behavior: smooth; }
 <li>Single Memory Store: Data and instructions share memory. Example: Game code + player scores in RAM</li>
 <li>Sequential Execution: Instructions processed one by one</li>
 <li>Stored Program Concept: Programs stored in memory can be updated</li>
-<li><strong>Advantages:</strong> Simplified design, easy to modify programs</li>
-<li><strong>Disadvantages:</strong> Von Neumann bottleneck (single memory limits CPU speed), security risk (data + instructions together)</li>
+<li><strong>Advantages:</strong> <b>Simplified design </b>[By combining instructions and data
+   into a single memory area, architecture is simplified.], <b>Flexibility </b> [easy to modify programs]</li>
+<li><strong>Disadvantages:</strong> <b>Von Neumann bottleneck </b> [The CPU uses one memory path for both instructions and data, so it can only get one at a time, which slows down processing.], 
+  <b>security risk </b>[If data and instructions are stored together, a harmful instruction can change or mess with other instructions, making the system unsafe.]</li>
 </ul>
 
 <h2 id="computing-systems">Computing Systems</h2>

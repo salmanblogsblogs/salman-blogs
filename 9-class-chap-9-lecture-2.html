@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about data collection methods and tools, types of data, data visualization, data pre-processing, analysis, cloud storage, backups, and remote access." />
+  <meta name="keywords" content="Data Collection, Surveys, Questionnaires, Interviews, Observations, Structured Data, Unstructured Data, Data Visualization, Data Pre-Processing, Cloud Storage, Data Backup" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Data Collection: Methods and Tools | Salman Blogs</title>
+
+  <meta property="og:title" content="Data Collection: Methods and Tools" />
+  <meta property="og:description" content="Complete notes on data collection methods, data types, visualization, preprocessing, cloud storage, and backups." />
+  <meta property="og:image" content="https://salmanblogs.com/images/data-collection.png" />
+  <meta property="og:url" content="https://salmanblogs.com/data-collection-methods.html" />
+  <meta property="og:type" content="article" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Data Collection: Methods and Tools" />
+  <meta name="twitter:description" content="Simple and exam-ready notes on data collection, visualization, preprocessing, and cloud storage." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/data-collection.png" />
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+    .toc li { list-style: none; }
+    .toc a { display: block; padding: 5px 0; color: #333; text-decoration: none; }
+    .toc a:hover { color: darkblue; }
+    .post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px; }
+  </style>
+</head>
+
+<body>
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v24.0&appId=APP_ID"></script>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+    <img src="images/9-CS-IMAGES/chapter-9/data-collection.png" alt="data-collection" class="post-image" loading="lazy">
+
+    <nav class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#methods">Methods of Data Collection</a></li>
+        <li><a href="#types">Types of Data</a></li>
+        <li><a href="#visualization">Data Visualization</a></li>
+        <li><a href="#preprocessing">Data Pre-Processing & Analysis</a></li>
+        <li><a href="#cloud">Cloud Storage & Backups</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+      </ul>
+    </nav>
+
+    <div class="post-content">
+
+      <h2 id="intro">Introduction</h2>
+      <p>Data collection means gathering information to answer questions, make decisions, or understand something better.</p>
+
+      <h2 id="methods">Methods of Data Collection</h2>
+
+      <h3>Surveys</h3>
+      <p>Surveys collect information by asking people questions.</p>
+      <p><strong>Example:</strong> Asking classmates about their favourite ice cream flavour.</p>
+
+      <h4>Good Survey Practices</h4>
+      <ul>
+        <li>Ask clear and simple questions</li>
+        <li>Keep the survey short</li>
+        <li>Use multiple-choice or rating questions</li>
+        <li>Keep answers anonymous</li>
+        <li>Test the survey first</li>
+        <li>Analyze results carefully</li>
+      </ul>
+
+      <h3>Questionnaires</h3>
+      <p>Written forms with a set of questions.</p>
+      <p><strong>Example:</strong> A school questionnaire asking students about activities.</p>
+
+      <h3>Interviews</h3>
+      <p>One-on-one discussions for detailed information.</p>
+      <p><strong>Example:</strong> Interviewing a teacher about their experience.</p>
+      <h3>Observations</h3>
+      <p>Watching real situations to understand behavior.</p>
+
+      <h3>Online Data Sources</h3>
+      <p>Websites, databases, and digital tools.</p>
+
+      <h3>Data Extraction</h3>
+      <p>Data extraction means selecting and saving only the important information from a large amount of data.</p>
+
+      <h2 id="types">Types of Data (Based on Storage)</h2>
+
+      <h3>Structured Data</h3>
+      <p>Structured data is well-organized and easy to search. It is stored in rows and columns, like spreadsheets or databases.</p>
+      <p><strong>Example:</strong>A table with student ID, name, class, date of birth, and fees.</p>
+
+      <h3>Unstructured Data</h3>
+      <p>Unstructured data has no fixed format. This data is harder to organize but still very useful.</p>
+      <p><strong>Example:</strong>Emails, social media posts, images, videos, and text messages.</p>
+      <h2 id="visualization">Data Visualization</h2>
+      <p>Data visualization means showing data using pictures like charts and graphs. It helps us understand data easily by showing patterns and trends.</p>
+
+      <h3>Importance</h3>
+      <ul>
+        <li>Makes data easy to understand</li>
+        <li>Saves time</li>
+        <li>Helps quickly see trends and comparisons</li>
+        <li>Easier than reading long lists of numbers</li>
+      </ul>
+
+      <h2 id="preprocessing">Data Pre-Processing & Analysis</h2>
+
+      <h2>Data Pre-Processing</h2>
+      <p>Cleaning and organizing data before analysis.</p>
+      <h2>Data Pre-Processing Techniques</h2>
+      <h3>1. Checking Data Quality</h3>
+      <p>
+        Ensure data is correct, complete, and up-to-date. 
+      </p>
+      <p><strong>Example</strong>Ensuring every enrolled student has an accurate, up-to-date test score recorded.</p>
+      <h3>2. Common Problems</h3>
+      <ul>
+        <li><strong>Errors:</strong>Wrong data values i.e. Score recorded as 105 when maximum is 100</li>
+        <li><strong>Outliers:</strong> Values that are unusually high or low compared to the rest of the data.i.e. One student scoring 5 when most students scored between 50 and 80.</li>
+        <li><strong>Bias:</strong> The distortions that effect the accuracy of data.   i.e. Using survey results from one school to represent all schools in a city.</li>
+      </ul>
+
+      <h3>Validation & Cleaning</h3>
+      <p><strong>Validation: </strong>Check that data is complete and correct.</p>
+      <p><strong>Cleaning: </strong>Fix or remove wrong data, fill missing values, and handle outliers.</p>
+      <h3>Data Analysis Techniques</h3>
+      <ul>
+        <li><strong>Quantitative:</strong> Uses numbers and measurements to find patterns and trends.</li>
+        <li><strong>Qualitative:</strong>Uses non-numerical data like text, images, and sounds to understand meanings and experiences.</li>
+      </ul>
+
+      <h2 id="cloud">Cloud Storage</h2>
+      <p><strong>Cloud Storage: </strong>Cloud storage allows data to be stored on the internet. It helps in saving files, sharing data, and accessing information from any device.</p>
+      <h3>Benefits</h3>
+      <ul>
+        <li>Access from anywhere</li>
+        <li>Safe backups</li>
+        <li>Real-time sharing</li>
+      </ul>
+
+      <h2 id="cloud">Remote Access</h2>
+      <p>Remote access allows you to use a computer or network from another location. You can open files or software even when you are not physically present.</p>
+      <p><strong>Example: </strong>Google drive, One Drive are examples of remote access.</p>
+      <h3>Data Backups</h3>
+      <p>Data backups are copies of important files stored separately to prevent data loss. They protect data from deletion, system failure, or viruses.</p>
+      <p><strong>Example: </strong>Saving a school project on Google Drive or a USB.</p>
+      <h2 id="cloud">Automatic Backups</h2>
+      <p>Devices can be set to automatically back up data to cloud services like OneDrive.</p>      
+      <h2 id="mcqs">MCQs</h2>
+
+      <div class="mcq-item">
+        <p><strong>1. What is data collection?</strong></p>
+        <ul>
+          <li>A) Data deletion</li>
+          <li>B) Gathering information</li>
+          <li>C) Data storage</li>
+          <li>D) Data visualization</li>
+        </ul>
+        <p><em>Answer: B) Gathering information</em></p>
+      </div>
+
+      <div class="mcq-item">
+        <p><strong>2. Which method involves one-on-one discussion?</strong></p>
+        <ul>
+          <li>A) Survey</li>
+          <li>B) Observation</li>
+          <li>C) Interview</li>
+          <li>D) Questionnaire</li>
+        </ul>
+        <p><em>Answer: C) Interview</em></p>
+      </div>
+
+      <div class="mcq-item">
+        <p><strong>3. Data stored in rows and columns is called:</strong></p>
+        <ul>
+          <li>A) Unstructured Data</li>
+          <li>B) Raw Data</li>
+          <li>C) Structured Data</li>
+          <li>D) Visual Data</li>
+        </ul>
+        <p><em>Answer: C) Structured Data</em></p>
+      </div>
+
+      <div class="mcq-item">
+        <p><strong>4. Which of the following is an example of unstructured data?</strong></p>
+        <ul>
+          <li>A) Spreadsheet</li>
+          <li>B) Database table</li>
+          <li>C) Image</li>
+          <li>D) CSV file</li>
+        </ul>
+        <p><em>Answer: C) Image</em></p>
+      </div>
+
+      <div class="mcq-item">
+        <p><strong>5. Data visualization helps to:</strong></p>
+        <ul>
+          <li>A) Hide data</li>
+          <li>B) Make data harder</li>
+          <li>C) Understand trends easily</li>
+          <li>D) Delete data</li>
+        </ul>
+        <p><em>Answer: C) Understand trends easily</em></p>
+      </div>
+
+      <h2 id="faqs">FAQs</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">What is structured data?</div>
+        <div class="faq-answer">Data that is well organized in rows and columns.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Why is data pre-processing important?</div>
+        <div class="faq-answer">It improves data quality before analysis.</div>
+      </div>
+
+    </div>
+      <div class="faq-item">
+        <div class="faq-question">What is data collection?</div>
+        <div class="faq-answer">It is the process of gathering information for analysis.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Why is data visualization important?</div>
+        <div class="faq-answer">It makes data easier to understand and compare.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is cloud storage?</div>
+        <div class="faq-answer">It allows storing data online for easy access.</div>
+      </div>
+
+    </div>
+  </article>
+</main>
+
+<div class="fb-comments" data-href="https://salmanblogs.com/class-10-important-questions" data-width="1200" data-numposts="5"></div>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p>&copy; 2025 Salman Blogs. All Rights Reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('active');
+  });
+
+  document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+      const answer = item.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
