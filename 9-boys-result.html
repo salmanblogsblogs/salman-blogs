@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Class 9 Boys Result | Salman Blogs</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background: #002959;
+      color: #fff;
+    }
+
+    /* PASSWORD UI */
+    .password-box {
+      max-width: 350px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .password-wrapper input {
+      width: 100%;
+      padding: 12px 40px 12px 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .password-wrapper span {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .password-box button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 12px;
+      background: #002959;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .password-box button:hover {
+      background: #014080;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Ahmad</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+
+    <h1 class="post-title">Class 9 Boys – Result 2026</h1>
+    <div class="post-meta">Private Result | Password Protected</div>
+    <strong>Click on the below image and then enter password.</strong>
+
+    <!-- Thumbnail -->
+    <img
+      src="images/10-CS-IMAGES/student-marks.png"
+      class="post-image"
+      style="cursor:pointer;"
+      alt="Click to view result"
+      onclick="showPasswordBox()"
+    >
+
+    <!-- Password Box -->
+    <div id="passwordBox" class="password-box" style="display:none;">
+      <h3>🔒 Enter Password</h3>
+
+      <div class="password-wrapper">
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <span onclick="togglePassword()">👁️</span>
+      </div>
+
+      <button onclick="unlockResult()">Unlock Result</button>
+      <p id="errorMsg" style="color:red;margin-top:10px;"></p>
+    </div>
+
+    <!-- Result Content -->
+    <div class="post-content" id="resultContent" style="display:none;">
+
+      <h2>Result Sheet</h2>
+      <p><strong>Total Marks:</strong> 30</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Name</th>
+            <th>Marks</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody id="resultTable">
+          <tr><td>1</td><td>Hassan Ali Asif</td><td>16</td><td>53.33%</td></tr>
+  <tr><td>2</td><td>Fehar</td><td>15</td><td>50%</td></tr>
+  <tr><td>3</td><td>Abdullah Waseem</td><td>14</td><td>46.67%</td></tr>
+  <tr><td>4</td><td>Afzaal Arshad</td><td>12</td><td>40%</td></tr>
+
+  <tr><td>5</td><td>Ayan Bukhari</td><td>11</td><td>36.67% (Fail)</td></tr>
+  <tr><td>5</td><td>Balaaj</td><td>11</td><td>36.67% (Fail)</td></tr>
+
+  <tr><td>6</td><td>Ibrahim</td><td>7</td><td>23.33% (Fail)</td></tr>
+
+  <tr><td>7</td><td>Adan</td><td>5</td><td>16.67% (Fail)</td></tr>
+  <tr><td>7</td><td>Afnan</td><td>5</td><td>16.67% (Fail)</td></tr>
+  <tr><td>7</td><td>Abuzar</td><td>5</td><td>16.67% (Fail)</td></tr>
+
+  <tr><td>8</td><td>Hasnain Arif</td><td>3</td><td>10% (Fail)</td></tr>
+
+  <tr><td>9</td><td>Ali Hussain</td><td>2</td><td>6.67% (Fail)</td></tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  function showPasswordBox() {
+    document.getElementById("passwordBox").style.display = "block";
+  }
+
+  function togglePassword() {
+    const input = document.getElementById("passwordInput");
+    input.type = input.type === "password" ? "text" : "password";
+  }
+
+  function calculatePositions() {
+    const rows = document.querySelectorAll("#resultTable tr");
+    let lastMarks = null;
+    let position = 0;
+
+    rows.forEach(row => {
+      const marks = parseInt(row.children[2].innerText);
+
+      if (marks !== lastMarks) {
+        position++;
+        lastMarks = marks;
+      }
+
+      row.children[0].innerText = position;
+    });
+  }
+
+  function unlockResult() {
+    const password = document.getElementById("passwordInput").value;
+
+    if (password === "9boys.unique") {
+      document.getElementById("resultContent").style.display = "block";
+      document.getElementById("passwordBox").style.display = "none";
+      calculatePositions(); // ✅ correct ranking
+    } else {
+      document.getElementById("errorMsg").innerText = "❌ Incorrect password";
+    }
+  }
+</script>
+
+</body>
+</html>
