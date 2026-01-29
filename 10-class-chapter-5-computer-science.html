@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A complete guide to Functions in C programming. Learn definition, types, advantages, parts, calling, arguments, real-life examples, interview questions, and MCQs with answers." />
+  <meta name="keywords" content="Functions in C, C Programming Functions, Library Functions, User Defined Functions, Function Definition, Function Call, Parameters, Return Type, Function Header, Function Body, C MCQs, C Interview Questions" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Functions in C — Definition, Types, Advantages, Examples, Interview Questions, and MCQs | Salman Blogs</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+  <meta property="og:title" content="Functions in C — Definition, Types, Advantages, Examples, Interview Questions, and MCQs" />
+  <meta property="og:description" content="Master Functions in C with this comprehensive guide. Includes definition, types, advantages, parts, examples, real-world use cases, interview questions, and practice MCQs." />
+  <meta property="og:image" content="https://salmanblogs.com/images/c-programming/functions-in-c.png" />
+  <meta property="og:url" content="https://salmanblogs.com/functions-in-c.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Functions in C — Complete Guide with Examples and MCQs" />
+  <meta name="twitter:description" content="A deep dive into Functions in C programming. Learn everything from definition to interview questions and MCQs." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/c-programming/functions-in-c.png" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    .toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+    .toc h2 { margin-top: 0; }
+    .toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
+    .toc a:hover { color: darkblue; }
+    .toc li {list-style-type: none;}
+    .post-content h2,
+    .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+    pre { background: #f4f4f4; padding: 12px; border-radius: 6px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Functions in C</h1>
+    <div class="post-meta">Posted in <strong>10 Class</strong></div>
+    <img src="images/10-CS-IMAGES/CHAPTER 5/functions-in-c.jpg" alt="functions-in-c" class="post-image" loading="lazy">
+
+    <nav class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#definition">Definition</a></li>
+        <li><a href="#types">Types of Functions</a></li>
+        <li><a href="#advantages">Advantages of Functions</a></li>
+        <li><a href="#parts">Parts of a Function in C</a></li>
+        <li><a href="#calling">Calling a Function</a></li>
+        <li><a href="#arguments">Arguments</a></li>
+        <li><a href="#examples">Examples of Functions in C</a></li>
+        <li><a href="#interview">Interview Questions on Functions</a></li>
+        <li><a href="#real-life">Real-Life Applications</a></li>
+        <li><a href="#best-practices">Best Practices</a></li>
+        <li><a href="#mcqs">MCQs</a></li>
+        <li><a href="#related-posts">Related Posts</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+      </ul>
+    </nav>
+
+    <div class="post-content">
+
+      <h2 id="definition">Definition</h2>
+      <p>A function in C is a block of code that performs a specific task. Instead of writing the same code many times, we can write it once in a function and use it whenever needed.</p>
+      <p><strong>Example:</strong> A function <code>add()</code> can be used to add any two numbers in different parts of a program without rewriting the logic again.</p>
+
+      <p><strong>Why are functions important?</strong></p>
+       <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <ul>
+        <li>They bring structure and modularity to programs.</li>
+        <li>They allow collaborative development (different programmers can work on different functions).</li>
+        <li>They make debugging easier since issues can be isolated to specific functions.</li>
+      </ul>
+
+      <h2 id="types">Types of Functions</h2>
+
+      <h3>1. Library Functions</h3>
+      <p>These are predefined functions provided by the C standard library. They are ready-to-use and save development time.</p>
+      <p><strong>Examples:</strong> <code>printf()</code>, <code>scanf()</code>, <code>sqrt()</code>, <code>strlen()</code>, <code>strcmp()</code>.</p>
+
+      <h3>2. User-Defined Functions</h3>
+      <p>These are functions created by programmers to perform specific tasks as required by the program.</p>
+      <p><strong>Examples:</strong></p>
+<pre><code>void greet();
+void display();
+int add(int num1, int num2);
+</code></pre>
+
+      <h2 id="advantages">Advantages of Functions</h2>
+
+      <h3>1. Reusability</h3>
+      <p>Code written once can be reused multiple times, saving time and effort.</p>
+      <p><strong>Example:</strong> <code>Example: A function add() can be used to add any two numbers in different parts of the program.</code></p>
+      <h3>2. Separation of Task</h3>
+      <p>Each function performs a separate task, making programs modular and organized.</p>
+      <p><strong>Example:</strong> <code>Example: One function handles input, another handles calculation, and another displays output.</code></p>
+      <h3>3. Readability</h3>
+      <p>Programs become easier to read, understand, and maintain. Functions with meaningful names explain themselves.</p>
+      <p><strong>Example:</strong> <code>Example: A function named calculateSalary() makes the purpose clear.</code></p>
+      <h3>4. Handling Complexity</h3>
+      <p>Large problems are divided into smaller, manageable parts. Each function can be designed, tested, and debugged independently.</p>
+      <h3>5. Collaboration</h3>
+      <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p>In large projects, different team members can work on different functions simultaneously.</p>
+
+      <h3>6. Reduced Redundancy</h3>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <p>Repeating code multiple times increases errors and maintenance issues. Functions reduce duplication.</p>
+
+      <h2 id="parts">Parts of a Function in C</h2>
+
+      <h3>1. Function Signature</h3>
+      <p>Declares the return type, function name, and parameters.</p>
+      <p><strong>Example:</strong> <code>int add(int a, int b);</code></p>
+
+      <h3>2. Parameters</h3>
+      <p>Variables that receive values from the calling function.</p>
+       <p><strong>Example:</strong> <code>int add(int a, int b) → here a and b are parameters.</code></p>
+      <h3>3. Return Value</h3>
+      <p>The result produced by a function and sent back to the caller.</p>
+      <p><strong>Example:</strong> <code>Example: return sum;</code></p>
+      <h3>4. Return Keyword</h3>
+      <p>Used to send back a value or exit from a function.</p>
+      <p><strong>Example:</strong> <code>Example: return a + b;</code></p>
+
+      <h3>5. Function Definition</h3>
+      <p>The full implementation of the function.</p>
+      <p>Example:</p>
+<pre><code>int add(int x, int y) {
+    return x + y;
+}
+</code></pre>
+
+      <h3>6. Function Description</h3>
+      <p>A short explanation of what the function does.</p>
+      <p>Example: "add() takes two numbers and returns their sum."</p>
+       
+      <h3>7. Function Body</h3>
+      <p>The actual set of instructions inside { }.</p>
+<pre><code>void greet() {
+    printf("Hello, Welcome to C Functions!\\n");
+}
+</code></pre>
+
+      <h3>8. Function Header</h3>
+      <p>The first line of the function which includes return type, function name, and parameters.</p>
+      <p><strong>Example:</strong> <code>int add(int a, int b)</code></p>
+
+      <h2 id="calling">Calling a Function</h2>
+      <p>Calling a function means using the function in the program where it is needed.
+        A function is called by its name.
+      </p>
+<pre><code>void greet() {
+    printf("Hello, Welcome to C Functions!\n");
+}
+
+int main() {
+    greet(); // function call
+    greet(); // called again (reusability)
+    return 0;
+}
+</code></pre>
+
+      <h2 id="arguments">Arguments</h2>
+      <p>Actual values passed to a function when it is called.</p>
+      <p><strong>Example:</strong> <code>add(5, 10);</code> → here 5 and 10 are arguments.</p>
+
+      <h3>Parts of Function Definition (Enlist)</h3>
+      <ul>
+        <li>Return Type</li>
+        <li>Function Name</li>
+        <li>Parameters (if any)</li>
+        <li>Function Body</li>
+      </ul>
+
+      <h2 id="examples">Examples of Functions in C</h2>
+        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
+      <h3>Example 1: Addition Function</h3>
+<pre><code>#include &lt;stdio.h&gt;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int result = add(5, 7);
+    printf("Sum = %d", result);
+    return 0;
+}
+</code></pre>
+
+      <h3>Example 2: Greeting Function</h3>
+<pre><code>#include &lt;stdio.h&gt;
+
+void greet() {
+    printf("Hello, Welcome to Functions in C!\\n");
+}
+
+int main() {
+    greet();
+    return 0;
+}
+</code></pre>
+
+      <h2 id="interview">Interview Questions on Functions in C</h2>
+      <ul>
+        <li>What is the difference between call by value and call by reference?</li>
+        <li>Can a C function return multiple values?</li>
+        <li>What is recursion? Give an example of a recursive function.</li>
+        <li>Explain the difference between function declaration and function definition.</li>
+        <li>What are inline functions? Are they supported in C?</li>
+        <li>Why do we use header files in relation to functions?</li>
+      </ul>
+
+      <h2 id="real-life">Real-Life Applications of Functions</h2>
+      <ul>
+        <li><strong>Banking Systems:</strong> A function to calculate interest, another to handle transactions.</li>
+        <li><strong>Games:</strong> Functions to control movement, scoring, and rendering.</li>
+        <li><strong>Healthcare:</strong> Functions to process patient data, calculate BMI, and generate reports.</li>
+        <li><strong>Operating Systems:</strong> Functions manage memory allocation, file handling, and device drivers.</li>
+      </ul>
+
+      <h2 id="best-practices">Best Practices for Writing Functions</h2>
+      <ul>
+        <li>Use meaningful names (e.g., <code>calculateSalary()</code> instead of <code>cs()</code>).</li>
+        <li>Keep functions short and focused on one task.</li>
+        <li>Document each function with comments.</li>
+        <li>Avoid global variables; prefer parameters and return values.</li>
+        <li>Test functions individually before integrating them.</li>
+      </ul>
+
+      <h2 id="mcqs">MCQs – Functions in C</h2>
+      <ol>
+        <li>What is a function in C?<br>
+            a) A storage unit<br>
+            b) A block of code that performs a specific task ✅<br>
+            c) A variable type<br>
+            d) None of the above</li>
+        <li>Which of the following is a library function?<br>
+            a) add()<br>
+            b) greet()<br>
+            c) printf() ✅<br>
+            d) display()</li>
+        <li>User-defined functions are:<br>
+            a) Predefined in C<br>
+            b) Created by programmers ✅<br>
+            c) Built-in to the compiler<br>
+            d) None of the above</li>
+        <li>Which part of a function contains actual instructions?<br>
+            a) Function Header<br>
+            b) Function Body ✅<br>
+            c) Function Signature<br>
+            d) Return Type</li>
+        <li>What is the keyword used to return a value from a function?<br>
+            a) send<br>
+            b) give<br>
+            c) return ✅<br>
+            d) exit</li>
+        <li>Which of the following is true about recursion?<br>
+            a) A function calling itself ✅<br>
+            b) A function that never returns<br>
+            c) A loop inside a function<br>
+            d) None of the above</li>
+        <li>What is the default return type of a function in C (if not specified)?<br>
+            a) void<br>
+            b) int ✅<br>
+            c) float<br>
+            d) char</li>
+        <li>Why are header files important for functions?<br>
+            a) They provide function prototypes ✅<br>
+            b) They store variables<br>
+            c) They make functions run faster<br>
+            d) None of the above</li>
+        <li>Which function is always present in every C program?<br>
+            a) printf()<br>
+            b) scanf()<br>
+            c) main() ✅<br>
+            d) exit()</li>
+        <li>What is call by reference?<br>
+            a) Passing values<br>
+            b) Passing memory addresses ✅<br>
+            c) Copying arguments<br>
+            d) Ignoring arguments</li>
+      </ol>
+
+      <h2 id="related-posts">Related Posts</h2>
+      <ul>
+        <li><a href="variables-types-in-c-language.html">Variable Types in C</a></li>
+        <li><a href="for-loop-in-c.html">For Loop in C</a></li>
+        <li><a href="Top-10-Programming-Languages-in-2025.html">Top 10 Programming Languages in 2025</a></li>
+      </ul>
+
+      <h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
+      <section class="faq-section">
+        <div class="faq-item">
+          <button class="faq-question">1. What are functions in C?</button>
+          <div class="faq-answer">
+            <p>Functions in C are reusable blocks of code that perform specific tasks, making programs modular and efficient.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">2. What are the types of functions in C?</button>
+          <div class="faq-answer">
+            <p>C has two main types of functions: Library Functions (predefined in the standard library) and User-Defined Functions (created by programmers).</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">3. What is recursion in C functions?</button>
+          <div class="faq-answer">
+            <p>Recursion is when a function calls itself directly or indirectly. It is useful for problems like factorial, Fibonacci, and tree traversal.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">4. Can a function return multiple values?</button>
+          <div class="faq-answer">
+            <p>No, a function in C returns only one value directly. However, multiple values can be returned using pointers, arrays, or structures.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">5. Why are header files important for functions?</button>
+          <div class="faq-answer">
+            <p>Header files contain function prototypes that allow the compiler to understand how to call a function before it is defined.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+</footer>
+
+
+
+<script>
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+ });
+    // FAQ toggle
+  const faqItems = document.querySelectorAll(".faq-question");
+  faqItems.forEach(btn => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const answer = this.nextElementSibling;
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+      } else {
+        answer.style.display = "block";
+      }
+    });
+  });
+</script>
+</body>
+</html>
