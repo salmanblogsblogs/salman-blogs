@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about Software, types of software, system and application software, operating systems, and their functions with examples." />
+  <meta name="keywords" content="Software, System Software, Application Software, Operating System, OS Functions, Types of Software, Examples of Software" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Software: Types, System vs Application Software, and Operating Systems | Salman Blogs</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <meta property="og:title" content="Software: Types, System vs Application Software, and Operating Systems" />
+  <meta property="og:description" content="Explore Software, types of software, system and application software, operating systems, and their key functions with examples." />
+  <meta property="og:image" content="https://salmanblogs.com/images/software.png" />
+  <meta property="og:url" content="https://salmanblogs.com/software.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Software: Types, System vs Application Software, and Operating Systems" />
+  <meta name="twitter:description" content="Comprehensive guide on Software, types of software, system and application software, operating systems, and their functions with examples." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/software.png" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+    .toc h2 { margin-top: 0; }
+    .toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
+    .toc a:hover { color: darkblue; }
+    .toc li {list-style-type: none;}
+    .post-content h2,
+    .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+    .post-content h2, 
+.post-content h3 {
+  scroll-margin-top: 0; /* No extra offset */
+}
+    .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+    <img src="images/9-CS-IMAGES/chapter-5/9-class-computer-chapter-5-lecture1.webp" alt="9-class-computer-chapter-5-lecture1" class="post-image" loading="lazy">
+    <p>
+        These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science. 
+    </p>
+    <nav class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#software">Introduction to Software</a></li>
+        <li><a href="#types-of-software">Types of Software</a></li>
+        <li><a href="#system-software">System Software</a></li>
+        <li><a href="#application-software">Application Software</a></li>
+        <li><a href="#difference-software">Difference Between System and Application Software</a></li>
+        <li><a href="#operating-system">Operating System (OS)</a></li>
+        <li><a href="#common-os">Common Operating Systems</a></li>
+        <li><a href="#functions-os">Functions of an Operating System</a></li>
+      </ul>
+    </nav>
+
+    <div class="post-content">
+
+      <h2 id="software">Software</h2>
+      <p>Software is a set of programs and instructions that tell a computer how to work.
+        Without software, a computer cannot do anything useful.</p>
+
+      <h2 id="types-of-software">Types of Software</h2>
+      <h3 id="system-software">1. System Software</h3>
+      <p>System software manages computer hardware and helps application software run. It acts as a bridge between hardware and applications.</p>
+
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>Operating Systems: Windows, macOS, Linux</li>
+        <li>Device Drivers: Printer drivers, sound drivers</li>
+        <li>Utility Programs: Antivirus, disk cleanup, backup software</li>
+      </ul>
+
+      <h3 id="application-software">2. Application Software</h3>
+      <p>Application software helps users perform specific tasks.</p>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>Word Processors: Microsoft Word, Google Docs</li>
+        <li>Web Browsers: Chrome, Firefox, Safari</li>
+        <li>Games: Minecraft, Fortnite</li>
+        <li>Media Players: VLC Media Player</li>
+      </ul>
+
+      <h2 id="difference-software">Difference Between System and Application Software</h2>
+      <p><strong>Purpose:</strong> System software runs and manages the computer.<br>
+      Application software helps users do tasks.</p>
+      <p><strong>Installation:</strong> System software is usually pre-installed.<br>
+      Application software is installed by users.</p>
+
+      <h3>System Software</h3>
+      <p>System software is essential for a computer to function properly. It also provides a safe and stable platform for application software to run smoothly. Keeping system software updated helps the computer work faster, fix errors, and stay protected from security threats.</p>
+
+      <h2 id="operating-system">Operating System (OS)</h2>
+      <p>An operating system is system software that controls all hardware and software. It allows users and applications to use the computer easily and safely.</p>
+
+      <p style="margin-top:15px;">
+  🚀 <a href="Top-10-Programming-Languages-in-2025.html" 
+     style="color: #003366; font-weight:bold; text-decoration:none;">
+     Must Read: Top 10 Programming Languages in 2025
+      </a>
+      </p>
+
+      <h3 id="common-os">Common Operating Systems:</h3>
+      <ul>
+        <li><strong>Windows:</strong> Windows is one of the most widely used operating systems for personal computers. It is easy to use and supports many types of software and devices.</li>
+        <li><strong>macOS:</strong> macOS is an operating system developed by Apple for Mac computers. It is known for its smooth performance, simple design, and strong security features.</li>
+        <li><strong>Linux:</strong> Linux is a free and open-source operating system. It is commonly used on servers and desktop computers and is popular among programmers because it can be customized.</li>
+        <li><strong>Android:</strong> Android is an operating system developed by Google for smartphones and tablets. It is used on many devices and allows users to install a wide variety of apps.</li>
+        <li><strong>iOS:</strong> iOS is an operating system developed by Apple for iPhones and iPads. It is known for its fast performance, user-friendly interface, and strong privacy and security.</li>
+      </ul>
+
+      <h2 id="functions-os">Functions of an Operating System</h2>
+      <h3>1. Managing Hardware Resources</h3>
+      <p>The OS manages CPU, memory, storage, and devices like printers and keyboards. It ensures all applications get the resources they need.</p>
+      <p><em>Example:</em> Listening to music while browsing the internet. Both run smoothly because the OS manages resources.</p>
+      <h3>2. Providing a User Interface</h3>
+      <p>The OS allows users to interact with the computer.</p>
+      <p><strong>Types of User Interfaces:</strong></p>
+      <ul>
+        <li><strong>Graphical User Interface (GUI):</strong> Uses icons, windows, and menus. Easy to use. <br><em>Example:</em> Windows, macOS</li>
+        <li><strong>Command-Line Interface (CLI):</strong> Uses text commands. More powerful but harder for beginners. <br><em>Example:</em> Linux, DOS</li>
+      </ul>
+
+       <p style="margin-top:15px;">
+  🚀 <a href="Top-10-AI-Tools-You-Should-Be-Using-in-2025.html" 
+     style="color: #003366; font-weight:bold; text-decoration:none;">
+     Must Read: Top AI tools you should be using in 2025
+      </a>
+      </p>
+
+      <h3>3. Running Applications</h3>
+      <p>The OS loads applications into memory and controls how they run. It makes sure multiple programs can run at the same time without problems.</p>
+      <p><em>Example:</em> Opening Microsoft Word while other apps are running. The OS manages everything smoothly.</p>
+
+      <h2>Related Posts</h2>
+      <ul>
+        <li><a href="Top-10-Programming-Languages-in-2025.html">Top 10 Programming Languages in 2025</a></li>
+        <li><a href="how-ai-will-replace-and-create-jobs-by-2030.html">How AI Will Replace and Create Jobs by 2030</a></li>
+        <li><a href="Best-Online-Courses-for-High-Paying-Jobs.html">Best Online Courses for High-Paying Jobs in 2025</a></li>
+      </ul>
+      <br>
+      <a href="javascript:void(0)" style="pointer-events: none; color: gray; text-decoration: underline;">
+      Next Lecture # 2 [Not Uploaded Yet]
+    </a>
+
+      <!-- <a href="">Next Lecture # 2 [Not Uploaded Yet]</a> -->
+    </div>
+  </article>
+<h2 id="mcqs">15 Multiple Choice Questions (MCQs) on Software</h2>
+<section class="mcq-section" style="margin-bottom: 30px;">
+  <div class="mcq-item">
+    <div class="mcq-question">1. Which of the following is system software?</div>
+    <div class="mcq-options">
+      a. Microsoft Word<br>
+      b. Windows OS<br>
+      c. Chrome Browser<br>
+      d. VLC Media Player
+    </div>
+    <div class="mcq-answer">Answer: b. Windows OS</div>
+  </div>
+
+  <div class="mcq-item">
+    <div class="mcq-question">2. Which software helps users perform specific tasks?</div>
+    <div class="mcq-options">
+      a. System Software<br>
+      b. Application Software<br>
+      c. Device Drivers<br>
+      d. Utility Programs
+    </div>
+    <div class="mcq-answer">Answer: b. Application Software</div>
+  </div>
+
+  <div class="mcq-item">
+    <div class="mcq-question">3. Which of the following is an example of an operating system?</div>
+    <div class="mcq-options">
+      a. Firefox<br>
+      b. Linux<br>
+      c. Microsoft Word<br>
+      d. VLC Player
+    </div>
+    <div class="mcq-answer">Answer: b. Linux</div>
+  </div>
+
+  <div class="mcq-item">
+    <div class="mcq-question">4. What is the main purpose of system software?</div>
+    <div class="mcq-options">
+      a. To play games<br>
+      b. To manage hardware and run applications<br>
+      c. To browse the internet<br>
+      d. To write documents
+    </div>
+    <div class="mcq-answer">Answer: b. To manage hardware and run applications</div>
+  </div>
+
+  <div class="mcq-item">
+    <div class="mcq-question">5. Which of the following is NOT an application software?</div>
+    <div class="mcq-options">
+      a. Excel<br>
+      b. Antivirus<br>
+      c. Chrome<br>
+      d. Minecraft
+    </div>
+    <div class="mcq-answer">Answer: b. Antivirus</div>
+  </div>
+
+  <div class="mcq-item">
+    <div class="mcq-question">6. Which software type is usually pre-installed on a computer?</div>
+    <div class="mcq-options">
+      a. System Software<br>
+      b. Application Software<br>
+      c. Games<br>
+      d. Media Players
+    </div>
+    <div class="mcq-answer">Answer: a. System Software</div>
+  </div>
+
+  <div class="mcq-item">
+    <div class="mcq-question">7. Which interface uses icons, windows, and menus?</div>
+    <div class="mcq-options">
+      a. CLI<br>
+      b. GUI<br>
+      c. DOS<br>
+      d. Command-Line
+    </div>
+    <div class="mcq-answer">Answer: b. GUI</div>
+  </div>
+
+  <div class="mcq-item">
+    <div class="mcq-question">8. Which OS is developed by Apple for iPhones and iPads?</div>
+    <div class="mcq-options">
+      a. Android<br>
+      b. Linux<br>
+      c. iOS<br>
+      d. Windows
+    </div>
+    <div class="mcq-answer">Answer: c. iOS</div>
+  </div>
+
+  <div class="mcq-item">
+    <div class="mcq-question">9. Which OS is free and open-source?</div>
+    <div class="mcq-options">
+      a. Windows<br>
+      b. Linux<br>
+      c. macOS<br>
+      d. Android
+    </div>
+    <div class="mcq-answer">Answer: b. Linux</div>
+  </div>
+
+  <div class="mcq-item">
+    <div class="mcq-question">10. Which of the following is a utility program?</div>
+    <div class="mcq-options">
+      a. Word Processor<br>
+      b. Antivirus<br>
+      c. Chrome<br>
+      d. Minecraft
+    </div>
+    <div class="mcq-answer">Answer: b. Antivirus</div>
+  </div>
+
+  <div class="mcq-item">
+    <div class="mcq-question">11. Which software allows multiple programs to run at the same time?</div>
+    <div class="mcq-options">
+      a. Application Software<br>
+      b. System Software<br>
+      c. Utility Programs<br>
+      d. Device Drivers
+    </div>
+    <div class="mcq-answer">Answer: b. System Software</div>
+  </div>
+
+  <div class="mcq-item">
+    <div class="mcq-question">12. Which OS is commonly used on smartphones and tablets?</div>
+    <div class="mcq-options">
+      a. macOS<br>
+      b. Linux<br>
+      c. Android<br>
+      d. Windows
+    </div>
+    <div class="mcq-answer">Answer: c. Android</div>
+  </div>
+
+  <div class="mcq-item">
+    <div class="mcq-question">13. Which software helps fix errors and improve security?</div>
+    <div class="mcq-options">
+      a. System Software<br>
+      b. Application Software<br>
+      c. Games<br>
+      d. Browsers
+    </div>
+    <div class="mcq-answer">Answer: a. System Software</div>
+  </div>
+
+  <div class="mcq-item">
+    <div class="mcq-question">14. Which of these is an example of application software for writing documents?</div>
+    <div class="mcq-options">
+      a. Microsoft Word<br>
+      b. Windows OS<br>
+      c. Printer Driver<br>
+      d. Disk Cleanup
+    </div>
+    <div class="mcq-answer">Answer: a. Microsoft Word</div>
+  </div>
+
+  <div class="mcq-item">
+    <div class="mcq-question">15. What does an OS do when you open multiple applications?</div>
+    <div class="mcq-options">
+      a. Closes other apps<br>
+      b. Manages resources to run all apps smoothly<br>
+      c. Installs new software<br>
+      d. Deletes old files
+    </div>
+    <div class="mcq-answer">Answer: b. Manages resources to run all apps smoothly</div>
+  </div>
+</section>
+
+<h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
+<section class="faq-section">
+
+  <div class="faq-item">
+    <button class="faq-question">1. What is Software?</button>
+    <div class="faq-answer">
+      <p>Software is a set of programs and instructions that tell a computer how to work.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">2. What are the main types of software?</button>
+    <div class="faq-answer">
+      <p>The main types of software are System Software and Application Software.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">3. What is System Software?</button>
+    <div class="faq-answer">
+      <p>System software manages computer hardware and provides a platform for application software to run.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">4. What is Application Software?</button>
+    <div class="faq-answer">
+      <p>Application software helps users perform specific tasks like word processing, browsing the internet, or playing games.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">5. Give examples of System Software.</button>
+    <div class="faq-answer">
+      <p>Examples include Operating Systems (Windows, macOS, Linux), Device Drivers, and Utility Programs like Antivirus.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">6. Give examples of Application Software.</button>
+    <div class="faq-answer">
+      <p>Examples include Microsoft Word, Google Docs, Chrome, Firefox, VLC Media Player, and games like Minecraft.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">7. What is an Operating System (OS)?</button>
+    <div class="faq-answer">
+      <p>An OS is system software that controls all hardware and software, allowing users and applications to use the computer easily and safely.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">8. Name some common Operating Systems.</button>
+    <div class="faq-answer">
+      <p>Common OS include Windows, macOS, Linux, Android, and iOS.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">9. What is the function of an OS?</button>
+    <div class="faq-answer">
+      <p>The OS manages hardware resources, provides a user interface, and runs applications smoothly.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">10. What is a GUI?</button>
+    <div class="faq-answer">
+      <p>A Graphical User Interface (GUI) allows users to interact with the computer using icons, windows, and menus.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">11. What is a CLI?</button>
+    <div class="faq-answer">
+      <p>A Command-Line Interface (CLI) allows users to interact with the computer using text commands.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">12. Why should system software be updated?</button>
+    <div class="faq-answer">
+      <p>Updating system software helps the computer work faster, fix errors, and stay protected from security threats.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">13. Can multiple applications run at the same time?</button>
+    <div class="faq-answer">
+      <p>Yes, the OS manages resources to ensure multiple applications run smoothly without conflicts.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">14. What is the difference between system and application software?</button>
+    <div class="faq-answer">
+      <p>System software manages the computer and runs applications, while application software helps users perform tasks.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">15. Give an example of a utility program.</button>
+    <div class="faq-answer">
+      <p>An example of a utility program is Antivirus, Disk Cleanup, or Backup Software.</p>
+    </div>
+  </div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  const faqItems = document.querySelectorAll('.faq-question');
+  faqItems.forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('active');
+      const answer = button.nextElementSibling;
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+      } else {
+        answer.style.display = "block";
+      }
+    });
+  });
+</script>
+</body>
+</html>
+
+<script>
+  // Select all TOC links
+  const tocLinks = document.querySelectorAll('.toc a');
+
+  tocLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // Stop default anchor jump
+
+      // Get the target ID from href
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        // Calculate exact pixel position of heading
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+
+        // Scroll smoothly to the exact position
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
