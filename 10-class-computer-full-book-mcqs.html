@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about Software, types of software, system and application software, operating systems, and their functions with examples." />
+  <meta name="keywords" content="Software, System Software, Application Software, Operating System, OS Functions, Types of Software, Examples of Software" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Software: Types, System vs Application Software, and Operating Systems | Salman Blogs</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <meta property="og:title" content="Software: Types, System vs Application Software, and Operating Systems" />
+  <meta property="og:description" content="Explore Software, types of software, system and application software, operating systems, and their key functions with examples." />
+  <meta property="og:image" content="https://salmanblogs.com/images/software.png" />
+  <meta property="og:url" content="https://salmanblogs.com/software.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Software: Types, System vs Application Software, and Operating Systems" />
+  <meta name="twitter:description" content="Comprehensive guide on Software, types of software, system and application software, operating systems, and their functions with examples." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/software.png" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+    .toc h2 { margin-top: 0; }
+    .toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
+    .toc a:hover { color: darkblue; }
+    .toc li {list-style-type: none;}
+    .post-content h2,
+    .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+    .post-content h2, 
+.post-content h3 {
+  scroll-margin-top: 0; /* No extra offset */
+}
+    .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>
+    <strong>Ignore Below image. These are 10 class mcqs. I could not change below image due 
+      to lack of time. Enjoy the mcqs below.
+    </strong>
+    <img src="images/9-CS-IMAGES/chapter-5/9-class-computer-chapter-5-lecture1.webp" alt="9-class-computer-chapter-5-lecture1" class="post-image" loading="lazy">
+    <p>
+        These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science. 
+    </p>
+    <!-- <nav class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#software">Introduction to Software</a></li>
+        <li><a href="#types-of-software">Types of Software</a></li>
+        <li><a href="#system-software">System Software</a></li>
+        <li><a href="#application-software">Application Software</a></li>
+        <li><a href="#difference-software">Difference Between System and Application Software</a></li>
+        <li><a href="#operating-system">Operating System (OS)</a></li>
+        <li><a href="#common-os">Common Operating Systems</a></li>
+        <li><a href="#functions-os">Functions of an Operating System</a></li>
+      </ul>
+    </nav> -->
+    <div class="post-content">
+<h2 id="mcqs">Chapter-1</h2>
+<section class="mcq-section" style="margin-bottom: 30px;">
+  <div class="mcq-item">
+  <div class="mcq-question">
+    1. A software that facilitates programmers in writing computer programs is known as ..............
+  </div>
+  <div class="mcq-options">
+    a. A compiler<br>
+    b. An editor<br>
+    c. IDE<br>
+    d. A debugger
+  </div>
+  <div class="mcq-answer">
+    Answer: c. IDE
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    2. ..............is a software that is responsible for conversion of program files to machine understandable and executable code.
+  </div>
+  <div class="mcq-options">
+    a. Compiler<br>
+    b. Editor<br>
+    c. IDE<br>
+    d. Debugger
+  </div>
+  <div class="mcq-answer">
+    Answer: a. Compiler
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    3. Every programming language has some primitive building blocks and follows some grammar rules known as its .....................
+  </div>
+  <div class="mcq-options">
+    a. Programming rules<br>
+    b. Syntax<br>
+    c. Building blocks<br>
+    d. Semantic rules
+  </div>
+  <div class="mcq-answer">
+    Answer: b. Syntax
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    4. A list of words that are predefined and must not be used by the programmer to name his own variables are known as ....................
+  </div>
+  <div class="mcq-options">
+    a. Auto words<br>
+    b. Key-words<br>
+    c. Restricted words<br>
+    d. Predefined words
+  </div>
+  <div class="mcq-answer">
+    Answer: b. Key-words
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    5. “include” statements are written in ................. section.
+  </div>
+  <div class="mcq-options">
+    a. Header<br>
+    b. Main<br>
+    c. Comments<br>
+    d. Print
+  </div>
+  <div class="mcq-answer">
+    Answer: a. Header
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    6. ................. are added in the source code to further explain the techniques and algorithms used by the programmer.
+  </div>
+  <div class="mcq-options">
+    a. Messages<br>
+    b. Hints<br>
+    c. Comments<br>
+    d. Explanations
+  </div>
+  <div class="mcq-answer">
+    Answer: c. Comments
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    7. ................... are the values that do not change during the whole execution of program.
+  </div>
+  <div class="mcq-options">
+    a. Variables<br>
+    b. Constants<br>
+    c. Strings<br>
+    d. Comments
+  </div>
+  <div class="mcq-answer">
+    Answer: b. Constants
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    8. A “float” uses ................ bytes of memory.
+  </div>
+  <div class="mcq-options">
+    a. 3<br>
+    b. 4<br>
+    c. 5<br>
+    d. 6
+  </div>
+  <div class="mcq-answer">
+    Answer: b. 4
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    9. For initializing a variable, we use ................. operator.
+  </div>
+  <div class="mcq-options">
+    a. ?<br>
+    b. @<br>
+    c. =<br>
+    d. ->
+  </div>
+  <div class="mcq-answer">
+    Answer: c. =
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    10. ................ can be thought of as container to store constants.
+  </div>
+  <div class="mcq-options">
+    a. Box<br>
+    b. Jar<br>
+    c. Variable<br>
+    d. Collection
+  </div>
+  <div class="mcq-answer">
+    Answer: c. Variable
+  </div>
+
+  <div class="mcq-item">
+  <div class="mcq-question">
+    11. Let the following part of code, what will be the value of the variable a after execution?<br>
+    int a = 4;<br>
+    float b = 2.2;<br>
+    a = a * b;
+  </div>
+  <div class="mcq-options">
+    a. 8.8<br>
+    b. 8<br>
+    c. 8.0<br>
+    d. 8.2
+  </div>
+  <div class="mcq-answer">
+    Answer: b. 8
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    12. Which of the following is a valid line of code?
+  </div>
+  <div class="mcq-options">
+    a. Int = 20;<br>
+    b. grade = 'A'<br>
+    c. Line = this is a line<br>
+    d. None of these
+  </div>
+  <div class="mcq-answer">
+    Answer: b. grade = 'A'
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    13. What is true about C language?
+  </div>
+  <div class="mcq-options">
+    a. C is not a case sensitive language<br>
+    b. Keywords can be used as variables<br>
+    c. All logical operators are binary operators<br>
+    d. None of these
+  </div>
+  <div class="mcq-answer">
+    Answer: d. None of these
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    From the following ........... is a valid character.
+  </div>
+  <div class="mcq-options">
+    a. "here"<br>
+    b. "C Language"<br>
+    c. "a"<br>
+    d. ’a’
+  </div>
+  <div class="mcq-answer">
+    Answer: c. "a"
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    51. Which of following is a valid character?
+  </div>
+  <div class="mcq-options">
+    a. ’here’<br>
+    b. "a"<br>
+    c. ’9’<br>
+    d. "abc"
+  </div>
+  <div class="mcq-answer">
+    Answer: c. ’9’
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    52. ............. are the values that do not change during the whole execution of program.
+  </div>
+  <div class="mcq-options">
+    a. Variables<br>
+    b. Constants<br>
+    c. Strings<br>
+    d. Comments
+  </div>
+  <div class="mcq-answer">
+    Answer: b. Constants
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    53. From the following ........ is a valid line of code.
+  </div>
+  <div class="mcq-options">
+    a. int = 20<br>
+    b. grade = ’A’<br>
+    c. line = this is line<br>
+    d. float = 10
+  </div>
+  <div class="mcq-answer">
+    Answer: b. grade = ’A’
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    54. For initialize a variable, we use ........... operator.
+  </div>
+  <div class="mcq-options">
+    a. →<br>
+    b. =<br>
+    c. @<br>
+    d. ?
+  </div>
+  <div class="mcq-answer">
+    Answer: b. =
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    55. A float uses .......... bytes of memory.
+  </div>
+  <div class="mcq-options">
+    a. 3<br>
+    b. 4<br>
+    c. 5<br>
+    d. 2
+  </div>
+  <div class="mcq-answer">
+    Answer: b. 4
+  </div>
+</div>
+
+<h2>Chapter-2</h2>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    14. Which operator has highest precedence among the following?
+  </div>
+  <div class="mcq-options">
+    a. /<br>
+    b. =<br>
+    c. &gt;<br>
+    d. !
+  </div>
+  <div class="mcq-answer">
+    Answer: d. !
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    15. Which of the following is not a type of the operator?
+  </div>
+  <div class="mcq-options">
+    a. Arithmetic operator<br>
+    b. Relational operator<br>
+    c. Check operator<br>
+    d. Logical operator
+  </div>
+  <div class="mcq-answer">
+    Answer: c. Check operator
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    16. The operator % is used to calculate .................
+  </div>
+  <div class="mcq-options">
+    a. Percentage<br>
+    b. Remainder<br>
+    c. Factorial<br>
+    d. Square
+  </div>
+  <div class="mcq-answer">
+    Answer: b. Remainder
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    17. Which of the following is the condition to check a is a factor of c?
+  </div>
+  <div class="mcq-options">
+    a. A % c == 0<br>
+    b. C % a == 0<br>
+    c. A * c == 0<br>
+    d. A + c == 0
+  </div>
+  <div class="mcq-answer">
+    Answer: b. C % a == 0
+  </div>
+</div>
+
+
+<h2>Chapter-3</h2>
+<div class="mcq-item">
+  <div class="mcq-question">
+    18. Conditional logic helps in ...............
+  </div>
+  <div class="mcq-options">
+    a. Decisions<br>
+    b. Iterations<br>
+    c. Traversing<br>
+    d. All of these
+  </div>
+  <div class="mcq-answer">
+    Answer: a. Decisions
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    19. ................. statements describe the sequence in which statements of the program should be executed.
+  </div>
+  <div class="mcq-options">
+    a. Loop<br>
+    b. Conditional<br>
+    c. Control<br>
+    d. All of these
+  </div>
+  <div class="mcq-answer">
+    Answer: c. Control
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    20. In if statement, what happens if condition is false?
+  </div>
+  <div class="mcq-options">
+    a. Program crashes<br>
+    b. Index out of bound error<br>
+    c. Further code executes<br>
+    d. Compiler asks to change condition
+  </div>
+  <div class="mcq-answer">
+    Answer: c. Further code executes
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    21. Which of the following statements will execute?<br>
+    int a = 5;<br>
+    if (a &lt; 10)<br>
+    &nbsp;&nbsp;a++;<br>
+    else <br>
+    &nbsp;&nbsp;if (a &gt; 4)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;a--;
+  </div>
+  <div class="mcq-options">
+    a. A++;<br>
+    b. A--;<br>
+    c. Both A and B<br>
+    d. None of these
+  </div>
+  <div class="mcq-answer">
+    Answer: a. A++;
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    22. A condition can be any ................ expression.
+  </div>
+  <div class="mcq-options">
+    a. Arithmetic<br>
+    b. Logical<br>
+    c. Relational<br>
+    d. All of these
+  </div>
+  <div class="mcq-answer">
+    Answer: d. All of these
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    23. An if statement inside another if statement is called ............ structure.
+  </div>
+  <div class="mcq-options">
+    a. Nested<br>
+    b. Boxed<br>
+    c. Repeated<br>
+    d. Decomposed
+  </div>
+  <div class="mcq-answer">
+    Answer: a. Nested
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    24. A set of multiple instructions enclosed in braces is called a ...............
+  </div>
+  <div class="mcq-options">
+    a. Box<br>
+    b. List<br>
+    c. Block<br>
+    d. Job
+  </div>
+  <div class="mcq-answer">
+    Answer: c. Block
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    25. .................... structure allows repetition of a set of instructions.
+  </div>
+  <div class="mcq-options">
+    a. Loop<br>
+    b. Conditional<br>
+    c. Control<br>
+    d. Data
+  </div>
+  <div class="mcq-answer">
+    Answer: a. Loop
+  </div>
+</div>
+
+<strong>Assalamo Alaikum!
+  Respected Students. The belows mcqs are random but these are from your test syllabus.
+  Just due to lack of time, I am doing this. 
+  For next time preparation you will see proper adjustment of these mcqs according to chapter wise.
+</strong>
+<h2>Random Mcqs</h2>
+<div class="mcq-item">
+  <div class="mcq-question">
+    1. Include statements are written in section.
+  </div>
+  <div class="mcq-options">
+    a. Header<br>
+    b. Main<br>
+    c. Comments<br>
+    d. Prints
+  </div>
+  <div class="mcq-answer">
+    Answer: a. Header
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    2. From the following is a valid character.
+  </div>
+  <div class="mcq-options">
+    a. "here"<br>
+    b. "C Language"<br>
+    c. "a"<br>
+    d. ’a’
+  </div>
+  <div class="mcq-answer">
+    Answer: d. 'a'
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    3. For initialize a variable, we use operator.
+  </div>
+  <div class="mcq-options">
+    a. →<br>
+    b. =<br>
+    c. @<br>
+    d. ?
+  </div>
+  <div class="mcq-answer">
+    Answer: b. =
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    4. A float uses bytes of memory.
+  </div>
+  <div class="mcq-options">
+    a. 3<br>
+    b. 4<br>
+    c. 5<br>
+    d. 2
+  </div>
+  <div class="mcq-answer">
+    Answer: b. 4
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    5. A char uses bytes of memory.
+  </div>
+  <div class="mcq-options">
+    a. 1<br>
+    b. 2<br>
+    c. 3<br>
+    d. 4
+  </div>
+  <div class="mcq-answer">
+    Answer: a. 1
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    6. What will be the output of code?<br>
+    void main() { printf("1 "); }
+  </div>
+  <div class="mcq-options">
+    a. "1"<br>
+    b. "2"<br>
+    c. 1<br>
+    d. 2
+  </div>
+  <div class="mcq-answer">
+    Answer: c. 1
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    7. It is a very common mistake to forget operator in the scanf function.
+  </div>
+  <div class="mcq-options">
+    a. &<br>
+    b. %<br>
+    c. *<br>
+    d. $
+  </div>
+  <div class="mcq-answer">
+    Answer: a. &
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    8. What will be the output of the following?<br>
+    void main() { printf("Pakistan"); }
+  </div>
+  <div class="mcq-options">
+    a. Punjab<br>
+    b. Pak<br>
+    c. Pakistan<br>
+    d. Pun
+  </div>
+  <div class="mcq-answer">
+    Answer: c. Pakistan
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    9. Among the following operator has the lowest precedence.
+  </div>
+  <div class="mcq-options">
+    a. /<br>
+    b. =<br>
+    c. &lt; <br>
+    d. !
+  </div>
+  <div class="mcq-answer">
+    Answer: b. =
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    10. What will be the value of variable "a" after execution of the following part of code?<br>
+    int a = 4;<br>
+    float b = 2.2;<br>
+    a = a * b;
+  </div>
+  <div class="mcq-options">
+    a. 8<br>
+    b. 8.0<br>
+    c. 8.8<br>
+    d. 8.2
+  </div>
+  <div class="mcq-answer">
+    Answer: a. 8
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    11. The Operator that Operates on three Operands is called:
+  </div>
+  <div class="mcq-options">
+    a. Unary Operator<br>
+    b. Binary Operator<br>
+    c. Ternary Operator<br>
+    d. Tetra Operator
+  </div>
+  <div class="mcq-answer">
+    Answer: c. Ternary Operator
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    12. A selection statement within another selection statement is called selection structure.
+  </div>
+  <div class="mcq-options">
+    a. Nested<br>
+    b. Dual<br>
+    c. Infinite<br>
+    d. Complex
+  </div>
+  <div class="mcq-answer">
+    Answer: a. Nested
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    13. In if statement, what happens if condition is false?
+  </div>
+  <div class="mcq-options">
+    a. Program crashes<br>
+    b. Index out of bound<br>
+    c. Further code executes<br>
+    d. Compiler asks to change condition
+  </div>
+  <div class="mcq-answer">
+    Answer: c. Further code executes
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    14. Which of the following is the condition to check a is factor of c?
+  </div>
+  <div class="mcq-options">
+    a. a % c == 0<br>
+    b. c % a == 0<br>
+    c. a * c == 0<br>
+    d. a + c == 0
+  </div>
+  <div class="mcq-answer">
+    Answer: b. c % a == 0
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    15. A list of words that are predefined and must not be used by the programmer to name his own variables are known as:
+  </div>
+  <div class="mcq-options">
+    a. Auto words<br>
+    b. Reserved words<br>
+    c. Restricted words<br>
+    d. Predefined words
+  </div>
+  <div class="mcq-answer">
+    Answer: b. Reserved words
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    16. Which of the following keyword used for store integer data type:
+  </div>
+  <div class="mcq-options">
+    a. float<br>
+    b. char<br>
+    c. int<br>
+    d. Void
+  </div>
+  <div class="mcq-answer">
+    Answer: c. int
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    17. Printf() is used to print type of data:
+  </div>
+  <div class="mcq-options">
+    a. int<br>
+    b. float<br>
+    c. char<br>
+    d. All of these
+  </div>
+  <div class="mcq-answer">
+    Answer: d. All of these
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    18. There are ------ type of logical operators in C-language.
+  </div>
+  <div class="mcq-options">
+    a. 2<br>
+    b. 3<br>
+    c. 4<br>
+    d. 5
+  </div>
+  <div class="mcq-answer">
+    Answer: b. 3
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    19. Which of the following is True about C-Language:
+  </div>
+  <div class="mcq-options">
+    a. C is not a Case Sensitive Language<br>
+    b. Keywords can be used as variable names<br>
+    c. All Logical Operators are Binary Operators<br>
+    d. None of these
+  </div>
+  <div class="mcq-answer">
+    Answer: d. None of these
+  </div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">
+    20. What is the output of the following code?<br>
+    int x = 10;<br>
+    if (x &gt; 10) printf("Wrong"); else printf("Correct");
+  </div>
+  <div class="mcq-options">
+    a. Wrong<br>
+    b. Correct<br>
+    c. Error<br>
+    d. No output
+  </div>
+  <div class="mcq-answer">
+    Answer: b. Correct
+  </div>
+</div>
+
+</div>
+</section>
+
+<h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
+<section class="faq-section">
+
+  <div class="faq-item">
+    <button class="faq-question">1. What is Software?</button>
+    <div class="faq-answer">
+      <p>Software is a set of programs and instructions that tell a computer how to work.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">2. What are the main types of software?</button>
+    <div class="faq-answer">
+      <p>The main types of software are System Software and Application Software.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">3. What is System Software?</button>
+    <div class="faq-answer">
+      <p>System software manages computer hardware and provides a platform for application software to run.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">4. What is Application Software?</button>
+    <div class="faq-answer">
+      <p>Application software helps users perform specific tasks like word processing, browsing the internet, or playing games.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">5. Give examples of System Software.</button>
+    <div class="faq-answer">
+      <p>Examples include Operating Systems (Windows, macOS, Linux), Device Drivers, and Utility Programs like Antivirus.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">6. Give examples of Application Software.</button>
+    <div class="faq-answer">
+      <p>Examples include Microsoft Word, Google Docs, Chrome, Firefox, VLC Media Player, and games like Minecraft.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">7. What is an Operating System (OS)?</button>
+    <div class="faq-answer">
+      <p>An OS is system software that controls all hardware and software, allowing users and applications to use the computer easily and safely.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">8. Name some common Operating Systems.</button>
+    <div class="faq-answer">
+      <p>Common OS include Windows, macOS, Linux, Android, and iOS.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">9. What is the function of an OS?</button>
+    <div class="faq-answer">
+      <p>The OS manages hardware resources, provides a user interface, and runs applications smoothly.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">10. What is a GUI?</button>
+    <div class="faq-answer">
+      <p>A Graphical User Interface (GUI) allows users to interact with the computer using icons, windows, and menus.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">11. What is a CLI?</button>
+    <div class="faq-answer">
+      <p>A Command-Line Interface (CLI) allows users to interact with the computer using text commands.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">12. Why should system software be updated?</button>
+    <div class="faq-answer">
+      <p>Updating system software helps the computer work faster, fix errors, and stay protected from security threats.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">13. Can multiple applications run at the same time?</button>
+    <div class="faq-answer">
+      <p>Yes, the OS manages resources to ensure multiple applications run smoothly without conflicts.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">14. What is the difference between system and application software?</button>
+    <div class="faq-answer">
+      <p>System software manages the computer and runs applications, while application software helps users perform tasks.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">15. Give an example of a utility program.</button>
+    <div class="faq-answer">
+      <p>An example of a utility program is Antivirus, Disk Cleanup, or Backup Software.</p>
+    </div>
+  </div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  const faqItems = document.querySelectorAll('.faq-question');
+  faqItems.forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('active');
+      const answer = button.nextElementSibling;
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+      } else {
+        answer.style.display = "block";
+      }
+    });
+  });
+</script>
+</body>
+</html>
