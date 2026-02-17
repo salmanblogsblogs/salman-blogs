@@ -9,15 +9,16 @@
   <title>Software: Types, System vs Application Software, and Operating Systems | Salman Blogs</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="about.css">
-  <meta property="og:title" content="Software: Types, System vs Application Software, and Operating Systems" />
-  <meta property="og:description" content="Explore Software, types of software, system and application software, operating systems, and their key functions with examples." />
-  <meta property="og:image" content="https://salmanblogs.com/images/software.png" />
-  <meta property="og:url" content="https://salmanblogs.com/software.html" />
-  <meta property="og:type" content="article" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Software: Types, System vs Application Software, and Operating Systems" />
-  <meta name="twitter:description" content="Comprehensive guide on Software, types of software, system and application software, operating systems, and their functions with examples." />
-  <meta name="twitter:image" content="https://salmanblogs.com/images/software.png" />
+ <meta property="og:title" content="Software: Types, System vs Application Software, and Operating Systems" />
+<meta property="og:description" content="Explore Software, types of software, system and application software, operating systems, and their key functions with examples." />
+<meta property="og:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-5/9-class-computer-chapter-5-lecture1.webp" />
+<meta property="og:url" content="https://salmanblogs.com/software.html" />
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Software: Types, System vs Application Software, and Operating Systems" />
+<meta name="twitter:description" content="Comprehensive guide on Software, types of software, system and application software, operating systems, and their functions with examples." />
+<meta name="twitter:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-5/9-class-computer-chapter-5-lecture1.webp" />
   <style>
     html { scroll-behavior: smooth; }
     .toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
@@ -182,11 +183,10 @@
         <li><a href="Best-Online-Courses-for-High-Paying-Jobs.html">Best Online Courses for High-Paying Jobs in 2025</a></li>
       </ul>
       <br>
-      <a href="javascript:void(0)" style="pointer-events: none; color: gray; text-decoration: underline;">
-      Next Lecture # 2 [Not Uploaded Yet]
-    </a>
-
-      <!-- <a href="">Next Lecture # 2 [Not Uploaded Yet]</a> -->
+      <!-- <a href="javascript:void(0)" style="pointer-events: none; color: gray; text-decoration: underline;">
+      Next Lecture # 2 [Not Uploaded Yet] -->
+      
+      <a href="9-class-chap-5-lecture-2.html">Next Lecture # 2</a>
     </div>
   </article>
 <h2 id="mcqs">15 Multiple Choice Questions (MCQs) on Software</h2>
@@ -503,29 +503,3 @@
 </script>
 </body>
 </html>
-
-<script>
-  // Select all TOC links
-  const tocLinks = document.querySelectorAll('.toc a');
-
-  tocLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault(); // Stop default anchor jump
-
-      // Get the target ID from href
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-
-      if (targetElement) {
-        // Calculate exact pixel position of heading
-        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-
-        // Scroll smoothly to the exact position
-        window.scrollTo({
-          top: elementPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-</script>
