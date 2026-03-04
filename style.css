@@ -123,6 +123,46 @@ footer {
   margin-top: auto;
 }
 
+/* ===================== SEARCH BAR ================== */
+ .search-container {
+  padding: 25px 15px;
+  text-align: center;
+  background: #f4f6fa;
+}
+
+.search-box {
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #002959;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  font-size: 16px;
+  border: 2px solid #002959;
+  border-radius: 30px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+#searchInput:focus {
+  box-shadow: 0 0 12px rgba(0, 41, 89, 0.3);
+  transform: scale(1.02);
+}
+
+.post-card {
+  transition: 0.3s ease;
+}
 /* ===================== RECOMMENDED BLOGS ===================== */
 .recommended-section {
   padding: 60px 40px;
