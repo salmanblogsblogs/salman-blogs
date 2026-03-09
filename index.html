@@ -7,11 +7,8 @@
   <meta name="description" content="Salman blogs - Explore insightful blogs on Technology, Health, Travel, Food, Lifestyle, and more.">
   <meta name="keywords" content="Salman blogs, Technology Blogs, Health Tips, Travel Guides, Food Recipes, Lifestyle Advice, Programming">
   <meta name="author" content="Salman Ahmad">
-  <!-- Preload + CSS FIRST -->
-<link rel="preload" href="style.css" as="style">
-<link rel="preload" href="technology.css" as="style">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="technology.css">
+  <link rel="stylesheet" href="style.css">
+<!-- <link rel="stylesheet" href="technology.css"> -->
   <title>Salman Blogs | Explore Trending Blogs</title>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
@@ -55,12 +52,15 @@
     </ul>
   </div>
 </header>
-  <main class="main-content">
-    <section class="hero">
-      <h1>Welcome to My Blog website</h1>
-      <p>Explore quality articles on technology, lifestyle, and more.</p>
-    </section>
-  </main>
+ <main class="main-content">
+  <section class="hero">
+    <h1>Welcome to My Blog website</h1>
+    <p>
+      Explore quality articles on 
+      <span id="changing-word"></span>
+    </p>
+  </section>
+</main>
 
   <!-- ADDING RECOMMENDED BLOGS. -->
   <section class="recommended-section">
@@ -143,5 +143,43 @@
     document.getElementById("navLinks").classList.toggle("show");
     });
   </script>
+
+  <!-- AUTO TYPING CODE. -->
+   <script>
+const words = ["Technology", "Lifestyle", "Health", "Education", "Business", "Travel",
+  "9 Computer Science", "10 Computer Science"
+];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+  const element = document.getElementById("changing-word");
+  const currentWord = words[wordIndex];
+
+  if (!isDeleting) {
+    element.textContent = currentWord.substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === currentWord.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1200);
+      return;
+    }
+  } else {
+    element.textContent = currentWord.substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+    }
+  }
+
+  setTimeout(typeEffect, isDeleting ? 60 : 100);
+}
+
+typeEffect();
+</script>
 </body>
 </html>
