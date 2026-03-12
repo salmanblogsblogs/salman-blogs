@@ -71,6 +71,64 @@
     {
       margin: 0;
     }
+
+
+  .test-mcqs {
+  max-width: 700px;
+  margin: auto;
+}
+.test-mcqs .mcq-item {
+  background: #f7f7f7;
+  border-left: 4px solid #0077cc;
+  padding: 15px;
+  margin: 10px 0;
+}
+.mcq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mcq-options button {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  font-size: 16px;
+}
+.mcq-options button.correct {
+  background-color: #d4edda; 
+  border-color: #28a745;
+  color: #155724;
+}
+.mcq-options button.wrong {
+  background-color: #f8d7da; 
+  border-color: #dc3545;
+  color: #721c24;
+}
+.mcq-options button.correct::after {
+  content: " ✅";
+  float: right;
+}
+.mcq-options button.wrong::after {
+  content: " ❌";
+  float: right;
+}
+.mcq-options button:hover {
+  background-color: #e2e6ea;
+}
+
+.test-mcqs h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
   </style>
 </head>
 
@@ -583,6 +641,176 @@ UDP sends data faster than TCP but does not guarantee delivery.
 </div>
 </div>
 
+<!-- MCQs FOR TESTING. -->
+<section class="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs</h2>
+
+  <!-- MCQ 1 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">1. What does a router primarily do?</div>
+    <div class="mcq-options">
+      <button>a. Connects devices in a small network</button>
+      <button>b. Forwards data between different networks</button>
+      <button>c. Assigns IP addresses</button>
+      <button>d. Encrypts data</button>
+    </div>
+  </div>
+
+  <!-- MCQ 2 -->
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">2. Which protocol is used to send emails?</div>
+    <div class="mcq-options">
+      <button>a. SMTP</button>
+      <button>b. HTTP</button>
+      <button>c. FTP</button>
+      <button>d. DNS</button>
+    </div>
+  </div>
+
+  <!-- MCQ 3 -->
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">3. Which layer of OSI is responsible for end-to-end delivery?</div>
+    <div class="mcq-options">
+      <button>a. Network Layer</button>
+      <button>b. Data Link Layer</button>
+      <button>c. Transport Layer</button>
+      <button>d. Physical Layer</button>
+    </div>
+  </div>
+
+  <!-- MCQ 4 -->
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">4. Which protocol is connectionless?</div>
+    <div class="mcq-options">
+      <button>a. TCP</button>
+      <button>b. SMTP</button>
+      <button>c. FTP</button>
+      <button>d. UDP</button>
+    </div>
+  </div>
+
+  <!-- MCQ 5 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">5. Which network device broadcasts data to all devices?</div>
+    <div class="mcq-options">
+      <button>a. Router</button>
+      <button>b. Hub</button>
+      <button>c. Switch</button>
+      <button>d. Modem</button>
+    </div>
+  </div>
+
+  <!-- MCQ 6 -->
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">6. What does VPN stand for?</div>
+    <div class="mcq-options">
+      <button>a. Virtual Private Network</button>
+      <button>b. Virtual Public Network</button>
+      <button>c. Verified Private Network</button>
+      <button>d. Very Private Network</button>
+    </div>
+  </div>
+
+  <!-- MCQ 7 -->
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">7. Which network attack captures data between sender and receiver?</div>
+    <div class="mcq-options">
+      <button>a. DoS</button>
+      <button>b. Phishing</button>
+      <button>c. Man-in-the-Middle (MitM)</button>
+      <button>d. Malware</button>
+    </div>
+  </div>
+
+  <!-- MCQ 8 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">8. Which address is used to identify a network interface?</div>
+    <div class="mcq-options">
+      <button>a. IP Address</button>
+      <button>b. MAC Address</button>
+      <button>c. DNS</button>
+      <button>d. Port Number</button>
+    </div>
+  </div>
+
+  <!-- MCQ 9 -->
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">9. HTTPS uses which protocol for security?</div>
+    <div class="mcq-options">
+      <button>a. SSL/TLS</button>
+      <button>b. FTP</button>
+      <button>c. SMTP</button>
+      <button>d. DHCP</button>
+    </div>
+  </div>
+
+  <!-- MCQ 10 -->
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">10. Which network type connects multiple LANs within a limited area?</div>
+    <div class="mcq-options">
+      <button>a. WAN</button>
+      <button>b. PAN</button>
+      <button>c. CAN</button>
+      <button>d. MAN</button>
+    </div>
+  </div>
+
+  <!-- MCQ 11 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">11. What is the main purpose of DNS?</div>
+    <div class="mcq-options">
+      <button>a. Encrypt data</button>
+      <button>b. Translate domain names to IP addresses</button>
+      <button>c. Monitor network</button>
+      <button>d. Assign MAC addresses</button>
+    </div>
+  </div>
+
+  <!-- MCQ 12 -->
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">12. Which type of malware pretends to be legitimate software?</div>
+    <div class="mcq-options">
+      <button>a. Trojan Horse</button>
+      <button>b. Worm</button>
+      <button>c. Ransomware</button>
+      <button>d. Spyware</button>
+    </div>
+  </div>
+
+  <!-- MCQ 13 -->
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">13. Which layer of OSI handles logical addressing?</div>
+    <div class="mcq-options">
+      <button>a. Transport Layer</button>
+      <button>b. Data Link Layer</button>
+      <button>c. Network Layer</button>
+      <button>d. Application Layer</button>
+    </div>
+  </div>
+
+  <!-- MCQ 14 -->
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">14. What does SSL/TLS provide?</div>
+    <div class="mcq-options">
+      <button>a. Faster Internet speed</button>
+      <button>b. Assigns IP addresses</button>
+      <button>c. Monitors network traffic</button>
+      <button>d. Secure communication over the Internet</button>
+    </div>
+  </div>
+
+  <!-- MCQ 15 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">15. Which wireless technology is commonly used for PAN?</div>
+    <div class="mcq-options">
+      <button>a. Wi-Fi</button>
+      <button>b. Bluetooth</button>
+      <button>c. LTE</button>
+      <button>d. 5G</button>
+    </div>
+  </div>
+</section>
+
 <h2 id="faqs">FAQs</h2>
 
 <section class="faq-section">
@@ -674,6 +902,34 @@ UDP sends data faster than TCP but does not guarantee delivery.
       answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
     });
   });
+</script>
+
+ <!-- JavaScript for interactive test MCQs -->
+<script>
+document.querySelectorAll(".test-mcqs .mcq-item").forEach(item => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+      if (item.classList.contains("answered")) return;
+      item.classList.add("answered");
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+      } else {
+        button.classList.add("wrong");
+        // highlight the correct answer too
+        item.querySelectorAll(".mcq-options button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+    });
+  });
+});
 </script>
 </body>
 </html>
