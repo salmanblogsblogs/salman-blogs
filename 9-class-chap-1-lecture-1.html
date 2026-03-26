@@ -26,6 +26,138 @@ html { scroll-behavior: smooth; }
 .toc a:hover { color: darkblue; }
 .toc li {list-style-type: none;}
 .post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+
+ .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .post-content p
+    {
+      margin: 0;
+    }
+
+
+  .test-mcqs {
+  max-width: 700px;
+  margin: auto;
+}
+.test-mcqs .mcq-item {
+  background: #f7f7f7;
+  border-left: 4px solid #0077cc;
+  padding: 15px;
+  margin: 10px 0;
+}
+.mcq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mcq-options button {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  font-size: 16px;
+}
+.mcq-options button.correct {
+  background-color: #d4edda; 
+  border-color: #28a745;
+  color: #155724;
+}
+.mcq-options button.wrong {
+  background-color: #f8d7da; 
+  border-color: #dc3545;
+  color: #721c24;
+}
+.mcq-options button.correct::after {
+  content: " ✅";
+  float: right;
+}
+.mcq-options button.wrong::after {
+  content: " ❌";
+  float: right;
+}
+.mcq-options button:hover {
+  background-color: #e2e6ea;
+}
+
+.test-mcqs h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showResult {
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showResult:hover {
+  background: #005fa3;
+}
+
+#resultText {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight input or MCQ when missing */
+.highlight-unanswered {
+  border: 2px solid #dc3545 !important;
+  background-color: #ffe5e5;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}
 </style>
 </head>
 <body>
@@ -168,218 +300,185 @@ div id="fb-root"></div>
 <li>A biological system: plants absorb sunlight (input) and release oxygen (output).</li>
 </ul>
 
-<h2 id="extra-insights">Extra Insights / Expanded Knowledge</h2>
-<p>This section provides additional insights to deepen your understanding of systems in a practical, real-world context:</p>
-<ul>
-<li><strong>Systems Are Everywhere:</strong> Systems exist in nature, technology, organizations, and daily life—from ecosystems and the human body to computers and social networks.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Even a traffic signal, a smartphone, or your daily schedule is a system. Recognizing them helps improve efficiency in real life.
+<h2 id="mcqs">Multiple Choice Questions (MCQs)</h2>
+<div class="mcq-item">
+  <div class="mcq-question">2. Which of the following is an example of a deterministic system?</div>
+  <div class="mcq-options">
+    a. Calculator<br>
+    b. Lottery system<br>
+    c. Stock market<br>
+    d. Social media platform
   </div>
-</li>
+  <div class="mcq-answer">Answer: a. Calculator</div>
+</div>
 
-<li><strong>Feedback Loops:</strong> Many systems use feedback to self-correct and improve performance. For example, a thermostat adjusts temperature automatically when it senses changes.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Businesses, ecosystems, and AI systems use feedback loops to evolve dynamically, not just mechanical systems.
+<div class="mcq-item">
+  <div class="mcq-question">3. What is a system?</div>
+  <div class="mcq-options">
+    a. A random collection of parts<br>
+    b. Organized set of connected components<br>
+    c. Any machine<br>
+    d. Only software
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Organized set of connected components</div>
+</div>
 
-<li><strong>Types of Components:</strong> Components can be physical (hardware/organs), logical (software/processes), or human (users/operators), each critical for proper system functioning.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Understanding component types helps in designing or troubleshooting complex systems efficiently.
+<div class="mcq-item">
+  <div class="mcq-question">4. Which is a dynamic environment?</div>
+  <div class="mcq-options">
+    a. Library system<br>
+    b. Hospital emergency system<br>
+    c. Traffic light system<br>
+    d. School timetable
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Hospital emergency system</div>
+</div>
 
-<li><strong>System Efficiency:</strong> Well-organized systems maximize output with minimal input by optimizing processes, resources, and communication.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Efficiency involves energy conservation, error reduction, and sustainable long-term performance.
+<div class="mcq-item">
+  <div class="mcq-question">5. System components include:</div>
+  <div class="mcq-options">
+    a. CPU, memory, input/output devices<br>
+    b. Only hardware<br>
+    c. Only software<br>
+    d. Random objects
   </div>
-</li>
+  <div class="mcq-answer">Answer: a. CPU, memory, input/output devices</div>
+</div>
 
-<li><strong>Adaptation to Dynamic Environments:</strong> Successful systems can adapt to changes such as market trends, weather patterns, or user behavior to remain effective.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Dynamic adaptation is what separates static systems from intelligent ones, like AI-powered software learning from user behavior.
+<div class="mcq-item">
+  <div class="mcq-question">6. Non-deterministic systems produce:</div>
+  <div class="mcq-options">
+    a. Predictable outputs<br>
+    b. Random/probabilistic outputs<br>
+    c. Fixed outputs<br>
+    d. None of the above
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Random/probabilistic outputs</div>
+</div>
 
-<li><strong>Importance of Objectives:</strong> Clear system objectives ensure focused efforts and measurable results. Ambiguous objectives often lead to inefficient or failed systems.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Well-defined objectives guide decision-making, prioritize resources, and help measure success effectively.
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+<!-- MCQs FOR TESTING. -->
+<section class="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs</h2>
+  <!-- MCQ 1 -->
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">1. What is a dynamic environment?</div>
+  <div class="mcq-options">
+    <button>a. An environment that never changes</button>
+    <button>b. An environment that changes over time</button>
+    <button>c. An environment with fixed inputs</button>
+    <button>d. An environment without systems</button>
   </div>
-</li>
+</div>
 
-<li><strong>Interconnected Systems:</strong> Many systems are part of larger networks. For example, a smartphone system interacts with cloud servers, mobile networks, and app ecosystems.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Changes in one system often ripple across connected systems; understanding dependencies prevents failures.
+<!-- MCQ 2 -->
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">2. Which system always produces the same output for a given input?</div>
+  <div class="mcq-options">
+    <button>a. Deterministic system</button>
+    <button>b. Non-deterministic system</button>
+    <button>c. Dynamic system</button>
+    <button>d. Open system</button>
   </div>
-</li>
+</div>
 
-<li><strong>Redundancy for Reliability:</strong> Some systems include backup components to prevent failure, such as dual power supplies in data centers or multiple heart valves in biology.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Redundancy ensures continuity even under unexpected circumstances, critical in healthcare, IT, and transportation.
+<!-- MCQ 3 -->
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">3. Which of the following is a non-deterministic system?</div>
+  <div class="mcq-options">
+    <button>a. Calculator</button>
+    <button>b. Traffic light</button>
+    <button>c. Lottery system</button>
+    <button>d. Clock</button>
   </div>
-</li>
+</div>
 
-<li><strong>Human-Centric Systems:</strong> Systems involving humans (like hospitals, schools, or banks) must consider behavior, ethics, and user experience for efficiency and safety.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Ignoring human factors can make a technically perfect system fail in real-world use. Usability and user experience are key.
+<!-- MCQ 4 -->
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">4. What defines a system?</div>
+  <div class="mcq-options">
+    <button>a. Random parts</button>
+    <button>b. Connected components working together</button>
+    <button>c. Only machines</button>
+    <button>d. Only software</button>
   </div>
-</li>
+</div>
 
-<li><strong>Automation and Intelligence:</strong> Modern systems increasingly use AI and automation to make real-time decisions, like self-driving cars adjusting to traffic or AI-based stock trading systems.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Automation reduces human errors, increases speed, and handles repetitive tasks, but human supervision remains crucial for ethical decisions.
+<!-- MCQ 5 -->
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">5. Which of the following is NOT a system component?</div>
+  <div class="mcq-options">
+    <button>a. CPU</button>
+    <button>b. Memory</button>
+    <button>c. Input devices</button>
+    <button>d. Random objects</button>
   </div>
-</li>
+</div>
 
-<li><strong>Impact of Environment:</strong> Systems are influenced by social, economic, and physical environments. Understanding the environment helps predict outcomes and mitigate risks.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Environmental analysis helps adapt systems, plan resources, and reduce vulnerability to external factors.
+<!-- MCQ 6 -->
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">6. Which environment changes over time?</div>
+  <div class="mcq-options">
+    <button>a. Static environment</button>
+    <button>b. Fixed environment</button>
+    <button>c. Dynamic environment</button>
+    <button>d. Closed environment</button>
   </div>
-</li>
+</div>
 
-<li><strong>System Lifecycle:</strong> Systems have a lifecycle: design → implementation → operation → evaluation → improvement. Continuous assessment ensures longevity and relevance.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Proper lifecycle management prevents outdated systems, inefficiency, and unnecessary costs.
+<!-- MCQ 7 -->
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">7. Which system deals with unpredictable outputs?</div>
+  <div class="mcq-options">
+    <button>a. Deterministic system</button>
+    <button>b. Non-deterministic system</button>
+    <button>c. Static system</button>
+    <button>d. Mechanical system</button>
   </div>
-</li>
+</div>
 
-<li><strong>Visualization Tools:</strong> Flowcharts, diagrams, and block representations help understand system structure and interactions, making complex systems easier to analyze.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Visual tools aid communication between designers, operators, and stakeholders for better system understanding.
+<!-- MCQ 8 -->
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">8. Which is an example of a static environment?</div>
+  <div class="mcq-options">
+    <button>a. Library system</button>
+    <button>b. Emergency room</button>
+    <button>c. Stock market</button>
+    <button>d. Online gaming</button>
   </div>
-</li>
+</div>
 
-<li><strong>Real-Life Applications:</strong> Smart homes, autonomous vehicles, hospital management systems, climate monitoring networks, and IT infrastructures are all practical examples of advanced systems in action.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Observing these systems shows how theory translates into real-world efficiency, safety, and innovation.
+<!-- MCQ 9 -->
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">9. Which part of a system handles data processing?</div>
+  <div class="mcq-options">
+    <button>a. Input devices</button>
+    <button>b. Output devices</button>
+    <button>c. CPU</button>
+    <button>d. Storage devices</button>
   </div>
-</li>
+</div>
 
-<li><strong>Human Brain Example:</strong> The human brain processes 11 million bits of information per second, but we are consciously aware of only about 50 bits—an incredible example of efficiency in biological systems.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> This highlights selective attention and prioritization in human-centric systems.
+<!-- MCQ 10 -->
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">10. What type of system is a hospital emergency system?</div>
+  <div class="mcq-options">
+    <button>a. Static system</button>
+    <button>b. Dynamic system</button>
+    <button>c. Closed system</button>
+    <button>d. Deterministic system</button>
   </div>
-</li>
+</div>
 
-<li><strong>Open vs Closed Systems:</strong> Open systems interact with the environment, closed systems are isolated.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Most real-world systems are open, exchanging information, energy, or resources with their surroundings.
-  </div>
-</li>
+  </section>
 
-<li><strong>Scalability:</strong> Systems designed with scalability can grow or shrink without losing functionality.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Cloud computing and modular software often showcase excellent scalability.
-  </div>
-</li>
-
-<li><strong>Resilience:</strong> Resilient systems can recover from failures or shocks, like power grids or disaster management systems.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Designing for resilience reduces downtime, data loss, and operational risks.
-  </div>
-</li>
-
-<li><strong>Predictive Capabilities:</strong> Advanced systems like weather forecasting or stock prediction use historical data to anticipate outcomes.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Accurate predictions help decision-making and risk mitigation across industries.
-  </div>
-</li>
-
-<li><strong>Human-Machine Collaboration:</strong> Many systems combine human intelligence with machine processing for optimal results.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Hospitals using AI for diagnostics or financial institutions using AI analytics are prime examples.
-  </div>
-</li>
-
-<li><strong>Energy Management:</strong> Efficient systems minimize energy waste and maximize output.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Smart grids, LED lighting, and eco-friendly devices are modern energy-efficient systems.
-  </div>
-</li>
-
-<li><strong>Environmental Adaptation:</strong> Systems must adapt to environmental conditions to remain effective.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Drones, agricultural irrigation systems, and weather stations continuously adapt to changing conditions.
-  </div>
-</li>
-
-<li><strong>Security Measures:</strong> Protecting systems from unauthorized access or damage is vital.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Firewalls, antivirus software, encryption, and access controls safeguard digital systems.
-  </div>
-</li>
-
-<li><strong>System Documentation:</strong> Recording system design, processes, and components ensures clarity for maintenance.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Well-documented systems save time during troubleshooting and upgrades.
-  </div>
-</li>
-
-<li><strong>Reduces Complexity:</strong> Systems break down complex processes into manageable parts.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Understanding subsystems makes learning and optimization easier.
-  </div>
-</li>
-
-<li><strong>Decision Support:</strong> Many systems provide critical data for informed decision-making.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Enterprise Resource Planning (ERP) and Business Intelligence (BI) systems exemplify this principle.
-  </div>
-</li>
-
-<li><strong>Learning Systems:</strong> Some systems improve with experience, like AI algorithms or employee training systems.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Learning capabilities increase adaptability and efficiency over time.
-  </div>
-</li>
-
-<li><strong>Time Sensitivity:</strong> Some systems must act within precise timing, like air traffic control or emergency response systems.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Timing accuracy ensures safety, coordination, and reliability.
-  </div>
-</li>
-
-<li><strong>Cost Efficiency:</strong> Systems aim to achieve goals while minimizing cost and resource use.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Lean processes and optimized resource allocation reduce operational expenses.
-  </div>
-</li>
-
-<li><strong>Communication Within Systems:</strong> Proper interaction between components is critical for functioning.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Delays or miscommunication can lead to system failures or inefficiency.
-  </div>
-</li>
-
-<li><strong>Data Integration:</strong> Modern systems combine information from multiple sources for better analysis.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Integrated data improves decision-making and enhances system performance.
-  </div>
-</li>
-
-<li><strong>Innovation Through Systems:</strong> Well-structured systems foster innovation by simplifying processes and allowing experimentation.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Examples include tech startups using agile systems or research labs applying systematic methodologies.
-  </div>
-</li>
-
-<li><strong>Monitoring and Evaluation:</strong> Continuous monitoring ensures the system meets objectives and identifies improvement areas.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Insight:</strong> Key Performance Indicators (KPIs) and audits are commonly used for effective evaluation.
-  </div>
-</li>
-</ul>
-
-
-
-<h2 id="mcqs">MCQs</h2>
-<ol>
-<li>Which of the following is an example of a deterministic system?<br>a) Calculator ✅<br>b) Lottery system<br>c) Stock market<br>d) Social media platform</li>
-<li>What is a system?<br>a) A random collection of parts<br>b) Organized set of connected components ✅<br>c) Any machine<br>d) Only software</li>
-<li>Which is a dynamic environment?<br>a) Library system<br>b) Hospital emergency system ✅<br>c) Traffic light system<br>d) School timetable</li>
-<li>System components include:<br>a) CPU, memory, input/output devices ✅<br>b) Only hardware<br>c) Only software<br>d) Random objects</li>
-<li>Non-deterministic systems produce:<br>a) Predictable outputs<br>b) Random/probabilistic outputs ✅<br>c) Fixed outputs<br>d) None of the above</li>
-</ol>
+  <div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
 
 <h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
 <section class="faq-section">
@@ -443,6 +542,90 @@ faqItems.forEach(button => {
       answer.style.display = "block";
     }
   });
+});
+</script>
+
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
 });
 </script>
 </body>

@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Computational Thinking – 9 Computer Science | Salman Blogs</title>
+
+<meta name="description" content="Learn Computational Thinking concepts like Decomposition, Pattern Recognition, Abstraction, Algorithm, and Principles with examples. Complete notes for 9 Computer Science by Salman Ahmad at Salman Blogs.">
+
+<meta name="keywords" content="Computational Thinking, Decomposition, Pattern Recognition, Abstraction, Algorithm, 9 Computer Science, Salman Ahmad, Salman Blogs, problem solving, step by step, examples">
+
+<meta name="author" content="Salman Ahmad">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="about.css">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Computational Thinking | 9 Computer Science by Salman Blogs">
+<meta property="og:description" content="Detailed notes on Computational Thinking concepts like Decomposition, Pattern Recognition, Abstraction, Algorithm, and Principles for 9 Computer Science students by Salman Ahmad.">
+<meta property="og:image" content="https://salmanblogs.com/images/9-CS-IMAGES/computational-thinking.webp">
+<meta property="og:url" content="https://salmanblogs.com/9-class-computational-thinking.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Salman Blogs">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Computational Thinking | 9 Computer Science by Salman Blogs">
+<meta name="twitter:description" content="Learn Computational Thinking concepts like Decomposition, Pattern Recognition, Abstraction, Algorithm, and Principles with examples for 9 Computer Science students.">
+<meta name="twitter:image" content="https://salmanblogs.com/images/9-CS-IMAGES/computational-thinking.webp">
+
+<style>
+html { scroll-behavior: smooth; }
+.toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+.toc h2 { margin-top: 0; }
+.toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
+.toc a:hover { color: darkblue; }
+.toc li {list-style-type: none;}
+.post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+
+ .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .post-content p
+    {
+      margin: 0;
+    }
+
+
+  .test-mcqs {
+  max-width: 700px;
+  margin: auto;
+}
+.test-mcqs .mcq-item {
+  background: #f7f7f7;
+  border-left: 4px solid #0077cc;
+  padding: 15px;
+  margin: 10px 0;
+}
+.mcq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mcq-options button {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  font-size: 16px;
+}
+.mcq-options button.correct {
+  background-color: #d4edda; 
+  border-color: #28a745;
+  color: #155724;
+}
+.mcq-options button.wrong {
+  background-color: #f8d7da; 
+  border-color: #dc3545;
+  color: #721c24;
+}
+.mcq-options button.correct::after {
+  content: " ✅";
+  float: right;
+}
+.mcq-options button.wrong::after {
+  content: " ❌";
+  float: right;
+}
+.mcq-options button:hover {
+  background-color: #e2e6ea;
+}
+
+.test-mcqs h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showResult {
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showResult:hover {
+  background: #005fa3;
+}
+
+#resultText {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight input or MCQ when missing */
+.highlight-unanswered {
+  border: 2px solid #dc3545 !important;
+  background-color: #ffe5e5;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}    
+
+/* Back to top button styling */
+  #backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    font-size: 30px;
+    background-color: #002959;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #0055a5;
+  }
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="container">
+<div class="logo">
+<span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
+</div>
+
+<div class="nav-toggle" id="navToggle">&#9776;</div>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="categories.html">Categories</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+<li><a href="terms.html">Terms</a></li>
+</ul>
+</div>
+</header>
+
+<main class="post-container">
+
+<article class="blog-post">
+<h1 class="post-title">Computational Thinking: Concepts, Examples & Principles</h1>
+<div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+<img src="images/9-CS-IMAGES/chapter-7/9-Computer-Science-Chapter 7-Lecture 1.webp" alt="Computational Thinking Notes" class="post-image" loading="lazy">
+<p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
+  </p>
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#intro">Introduction to Computational Thinking</a></li>
+<li><a href="#examples">Examples of Computational Thinking</a></li>
+<li><a href="#decomposition">Decomposition</a></li>
+<li><a href="#pattern">Pattern Recognition</a></li>
+<li><a href="#abstraction">Abstraction</a></li>
+<li><a href="#algorithm">Algorithm</a></li>
+<li><a href="#principles">Principles of Computational Thinking</a></li>
+<li><a href="#problem-understanding">Problem Understanding</a></li>
+<li><a href="#problem-simplification">Problem Simplification</a></li>
+<li><a href="#solution-design">Solution Selection and Design</a></li>
+<li><a href="#mcqs">MCQs</a></li>
+<li><a href="#test-mcqs">MCQs for testing</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+
+<div class="post-content">
+<h2 id="intro">Computational Thinking</h2>
+<p>Computational thinking is a way of solving problems step by step like a computer. It is not only used in computer science but also in:</p>
+<ul style="margin-left:20px;">
+<li>Biology</li>
+<li>Mathematics</li>
+<li>Daily life</li>
+</ul>
+
+<h3 id="examples">Examples of Computational Thinking</h3>
+
+<p><strong>Example 1: Making Tea ☕</strong></p>
+<ul style="margin-left:20px;">
+<li>Boil water</li>
+<li>Add tea leaves</li>
+<li>Add sugar</li>
+<li>Pour into cup</li>
+</ul>
+<p>➡️ This step-by-step process is computational thinking</p>
+
+<p><strong>Example 2: Solving a Math Problem ➗</strong></p>
+<ul style="margin-left:20px;">
+<li>Read the question</li>
+<li>Identify numbers</li>
+<li>Choose formula</li>
+<li>Solve step by step</li>
+<li>Write answer</li>
+</ul>
+<p>➡️ This step-by-step process is computational thinking</p>
+
+<p><strong>Example 3: Getting Ready for School 🎒</strong></p>
+<ul style="margin-left:20px;">
+<li>Wake up</li>
+<li>Brush teeth</li>
+<li>Wear uniform</li>
+<li>Pack bag</li>
+<li>Go to school</li>
+</ul>
+<p>➡️ This step-by-step process is computational thinking</p>
+
+<h2 id="decomposition">Decomposition</h2>
+<p>Decomposition means breaking a big and difficult problem into smaller, easier parts. This makes the problem easier to solve step by step.</p>
+<p><strong>Example: Building a Birdhouse</strong></p>
+<ul style="margin-left:20px;">
+<li>Design the birdhouse (decide shape and size)</li>
+<li>Gather materials (wood, nails, tools)</li>
+<li>Cut the wood</li>
+<li>Assemble the parts</li>
+<li>Paint and decorate</li>
+<li>Install the birdhouse</li>
+</ul>
+<p>➡️ So, a big task becomes simple when divided into small steps.</p>
+<strong>Note: You can even use any example that are written in Computational Thinking Topic.</strong>
+<h2 id="pattern">Pattern Recognition</h2>
+<p>Pattern recognition means finding similarities or repeated patterns in problems.</p>
+<p><strong>Example1: 👉 While studying a book: 📚</strong></p>
+<ul style="margin-left:20px;">
+<li>You notice important questions repeat in exams.</li>
+<li>Some topics are similar in different chapters.</li>
+</ul>
+<p>➡️ Recognizing these similarities is pattern recognition</p>
+
+<p><strong>Example2: Math Problems ➗</strong></p>
+<ul style="margin-left:20px;">
+<li>Many questions follow the same formula</li>
+<li>You apply the same method repeatedly</li>
+</ul>
+
+<p><strong>Example3: Even and Odd Numbers</strong></p>
+<ul style="margin-left:20px;">
+<li>Sequence: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10</li>
+<strong>You notice a pattern:</strong>
+<li>Odd numbers → 1, 3, 5, 7, 9</li>
+<li>Even numbers → 2, 4, 6, 8, 10</li>
+</ul>
+<strong>Recognizing that there are 5 odd and 5 even numbers is finding a pattern</strong>
+
+<h2 id="abstraction">Abstraction</h2>
+<p>Abstraction means focusing only on important details and ignoring unnecessary ones. It helps reduce confusion and makes problems easier to understand.</p>
+
+<p><strong>Example 1: Studying for Exams 📚</strong></p>
+<ul style="margin-left:20px;">
+<li>Focus only on important points and formulas.</li>
+<li>Ignore unnecessary details like long stories or extra examples.</li>
+</ul>
+<p>➡️ This is abstraction</p>
+<p><strong>Example 2: Using a TV Remote 📺</strong></p>
+<ul style="margin-left:20px;">
+<li>You press buttons to change channels or volume</li>
+<li>You don’t need to know how the electronics inside work</li>
+</ul>
+<p>➡️ This is abstraction</p>
+<h2 id="algorithm">Algorithm</h2>
+<p>An algorithm is a step-by-step set of instructions to solve a problem. It’s like a recipe that tells exactly what to do and in what order.</p>
+<p><strong>Example: Studying a Book for Exams 📚</strong></p>
+<ul style="margin-left:20px;">
+<li>Divide book into chapters</li>
+<li>Study one chapter at a time</li>
+<li>Make notes of important points</li>
+<li>Revise all chapters</li>
+<li>Solve practice questions</li>
+</ul>
+<p>➡️ Step-by-step plan = algorithm</p>
+<strong>Note: You can even use any example mentioned in Computational Thinking.</strong>
+<h2 id="principles">Principles of Computational Thinking</h2>
+<p>The principles of computational thinking guide us on what steps to take before actually solving a problem.</p>
+<h3 id="problem-understanding">1. Problem Understanding</h3>
+<p>Before trying to solve a problem, you must fully understand it. This means identifying the main issue, the requirements, and the goals.</p>
+<h3>Importance [Advantages Of Understanding Problem]</h3>
+<ul style="margin-left:20px;">
+<li>Clarity and Focus: Understanding the problem clearly helps you focus on what is really important and avoid distractions.</li>
+<li>Defining Goals: When you understand the problem, you can define clear, achievable objectives. You know what the final solution should achieve.</li>
+<li>Efficient Solutions: A clear understanding allows you to choose the best methods and tools, saving time and resources.</li>
+<li>Avoiding Mistakes: Misunderstanding the problem can lead to wrong solutions and wasted effort.</li>
+</ul>
+
+<h3 id="problem-simplification">2. Problem Simplification (Decomposition)</h3>
+<p>Large or complex problems can be difficult to solve in one go. Simplifying the problem means breaking it into smaller, easier-to-handle parts (this is also called decomposition).</p>
+<p><strong>Example: Making Maggi 🍜</strong></p>
+<ul style="margin-left:20px;">
+<li>Boil water</li>
+<li>Add noodles</li>
+<li>Add masala</li>
+<li>Cook</li>
+<li>Serve</li>
+</ul>
+<p>➡️ Instead of one big task, you turn it into small, easy parts.</p>
+<p>➡️ This breaking into steps is called decomposition.</p>
+<p><strong>Example: Studying a Complete Book 📚</strong></p>
+<ul style="margin-left:20px;">
+<li>Divide book into chapters</li>
+<li>Study one chapter at a time</li>
+<li>Break each chapter into topics</li>
+<li>Make notes for each topic</li>
+<li>Revise step by step</li>
+</ul>
+<p>➡️ Instead of one big task, you turn it into small, easy parts.</p>
+<p>➡️ This breaking into steps is called decomposition.</p>
+<strong>Note: Dear Students, Again you can even use other examples as well mentioned 
+  in Computational Thinking topic.
+</strong>
+<h3 id="solution-design">3. Solution Selection and Design</h3>
+<p>When a problem has more than one possible solution, you choose the best one and plan how to do it step by step.</p>
+<p><strong>Example 1: Preparing for Exams 📚</strong></p>
+<ul style="margin-left:20px;">
+<p><strong>Problem:</strong> You need to finish a book before the exam.</p>
+<strong>Possible solutions:</strong>
+<li>Study all chapters in one day</li>
+<li>Study chapter by chapter over a week.</li>
+<p><strong>Best Solution:</strong>Study chapter by chapter → easier, less stressful, more effective.</p>
+</ul>
+
+<p><strong>Example 2: Traveling to School 🚌</strong></p>
+<ul style="margin-left:20px;">
+<p><strong>Problem:</strong> You need to reach school on time.</p>
+<strong>Possible solutions:</strong>
+<li>Walk</li>
+<li>Take a bus</li>
+<li>Ride a bicycle</li>
+<p><strong>Best Solution:</strong>Take a bus → faster and less tiring.</p>
+</ul>
+
+<h2 id="mcqs">Multiple Choice Questions (MCQs) on Computational Thinking</h2>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What is computational thinking?</div>
+  <div class="mcq-options">
+    a. A way to repair computers<br>
+    b. A step-by-step problem-solving method<br>
+    c. A programming language<br>
+    d. A hardware device
+  </div>
+  <div class="mcq-answer">Answer: b. A step-by-step problem-solving method</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. Computational thinking is used in:</div>
+  <div class="mcq-options">
+    a. Computer science only<br>
+    b. Biology only<br>
+    c. Daily life only<br>
+    d. All of these
+  </div>
+  <div class="mcq-answer">Answer: d. All of these</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. Decomposition means:</div>
+  <div class="mcq-options">
+    a. Combining problems<br>
+    b. Breaking a problem into smaller parts<br>
+    c. Ignoring problems<br>
+    d. Solving instantly
+  </div>
+  <div class="mcq-answer">Answer: b. Breaking a problem into smaller parts</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. Which is an example of decomposition?</div>
+  <div class="mcq-options">
+    a. Solving everything at once<br>
+    b. Dividing a task into steps<br>
+    c. Ignoring details<br>
+    d. Guessing answers
+  </div>
+  <div class="mcq-answer">Answer: b. Dividing a task into steps</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. Pattern recognition means:</div>
+  <div class="mcq-options">
+    a. Breaking problems<br>
+    b. Finding similarities<br>
+    c. Ignoring details<br>
+    d. Writing code
+  </div>
+  <div class="mcq-answer">Answer: b. Finding similarities</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. Even and odd numbers are an example of:</div>
+  <div class="mcq-options">
+    a. Decomposition<br>
+    b. Abstraction<br>
+    c. Pattern recognition<br>
+    d. Algorithm
+  </div>
+  <div class="mcq-answer">Answer: c. Pattern recognition</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. Abstraction means:</div>
+  <div class="mcq-options">
+    a. Focusing only on important details<br>
+    b. Solving everything<br>
+    c. Breaking problems<br>
+    d. Writing programs
+  </div>
+  <div class="mcq-answer">Answer: a. Focusing only on important details</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. Which is an example of abstraction?</div>
+  <div class="mcq-options">
+    a. Studying everything in detail<br>
+    b. Ignoring important points<br>
+    c. Focusing on key concepts only<br>
+    d. Writing code
+  </div>
+  <div class="mcq-answer">Answer: c. Focusing on key concepts only</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. An algorithm is:</div>
+  <div class="mcq-options">
+    a. A computer device<br>
+    b. A step-by-step instruction<br>
+    c. A software program<br>
+    d. A network
+  </div>
+  <div class="mcq-answer">Answer: b. A step-by-step instruction</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. Which is an example of an algorithm?</div>
+  <div class="mcq-options">
+    a. Guessing answers<br>
+    b. Following steps to solve a problem<br>
+    c. Ignoring steps<br>
+    d. Random thinking
+  </div>
+  <div class="mcq-answer">Answer: b. Following steps to solve a problem</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. Problem understanding means:</div>
+  <div class="mcq-options">
+    a. Solving quickly<br>
+    b. Fully understanding the problem before solving<br>
+    c. Ignoring the problem<br>
+    d. Writing code immediately
+  </div>
+  <div class="mcq-answer">Answer: b. Fully understanding the problem before solving</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. Why is problem simplification important?</div>
+  <div class="mcq-options">
+    a. Makes problems harder<br>
+    b. Saves time and effort<br>
+    c. Avoids solving problems<br>
+    d. Removes solutions
+  </div>
+  <div class="mcq-answer">Answer: b. Saves time and effort</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. Solution selection means:</div>
+  <div class="mcq-options">
+    a. Choosing the worst solution<br>
+    b. Choosing the best solution<br>
+    c. Ignoring solutions<br>
+    d. Random choice
+  </div>
+  <div class="mcq-answer">Answer: b. Choosing the best solution</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. Which is the best solution for studying?</div>
+  <div class="mcq-options">
+    a. Study everything in one day<br>
+    b. Study chapter by chapter<br>
+    c. Do nothing<br>
+    d. Skip chapters
+  </div>
+  <div class="mcq-answer">Answer: b. Study chapter by chapter</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. Computational thinking helps to:</div>
+  <div class="mcq-options">
+    a. Increase confusion<br>
+    b. Solve problems efficiently<br>
+    c. Avoid problems<br>
+    d. Waste time
+  </div>
+  <div class="mcq-answer">Answer: b. Solve problems efficiently</div>
+</div>
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Computational Thinking)</h2>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">1. Computational thinking is mainly used for:</div>
+    <div class="mcq-options">
+      <button>a. Playing games</button>
+      <button>b. Solving problems step by step</button>
+      <button>c. Watching videos</button>
+      <button>d. Using social media</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">2. Computational thinking is useful in:</div>
+    <div class="mcq-options">
+      <button>a. Biology</button>
+      <button>b. Mathematics</button>
+      <button>c. Daily life</button>
+      <button>d. All of these</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">3. Decomposition means:</div>
+    <div class="mcq-options">
+      <button>a. Breaking problems into smaller parts</button>
+      <button>b. Combining problems</button>
+      <button>c. Ignoring problems</button>
+      <button>d. Solving instantly</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">4. Which is an example of decomposition?</div>
+    <div class="mcq-options">
+      <button>a. Solving everything at once</button>
+      <button>b. Ignoring steps</button>
+      <button>c. Dividing a task into steps</button>
+      <button>d. Guessing answers</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">5. Pattern recognition helps to:</div>
+    <div class="mcq-options">
+      <button>a. Break problems</button>
+      <button>b. Find similarities</button>
+      <button>c. Ignore details</button>
+      <button>d. Write code</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">6. Even and odd numbers are an example of:</div>
+    <div class="mcq-options">
+      <button>a. Algorithm</button>
+      <button>b. Decomposition</button>
+      <button>c. Pattern recognition</button>
+      <button>d. Abstraction</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">7. Abstraction means:</div>
+    <div class="mcq-options">
+      <button>a. Focusing on important details</button>
+      <button>b. Solving everything</button>
+      <button>c. Breaking problems</button>
+      <button>d. Writing programs</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">8. Which is an example of abstraction?</div>
+    <div class="mcq-options">
+      <button>a. Studying everything</button>
+      <button>b. Ignoring important points</button>
+      <button>c. Focusing on key concepts only</button>
+      <button>d. Writing code</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">9. An algorithm is:</div>
+    <div class="mcq-options">
+      <button>a. A computer device</button>
+      <button>b. Step-by-step instructions</button>
+      <button>c. A software</button>
+      <button>d. A network</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">10. Which is an example of an algorithm?</div>
+    <div class="mcq-options">
+      <button>a. Guessing answers</button>
+      <button>b. Following steps</button>
+      <button>c. Ignoring steps</button>
+      <button>d. Random thinking</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">11. Problem understanding means:</div>
+    <div class="mcq-options">
+      <button>a. Solving quickly</button>
+      <button>b. Ignoring the problem</button>
+      <button>c. Understanding before solving</button>
+      <button>d. Writing code immediately</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">12. Problem simplification is also called:</div>
+    <div class="mcq-options">
+      <button>a. Pattern recognition</button>
+      <button>b. Decomposition</button>
+      <button>c. Abstraction</button>
+      <button>d. Algorithm</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">13. Solution selection means:</div>
+    <div class="mcq-options">
+      <button>a. Random choice</button>
+      <button>b. Choosing the best solution</button>
+      <button>c. Ignoring solutions</button>
+      <button>d. Avoiding problems</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. Best way to prepare for exams is:</div>
+    <div class="mcq-options">
+      <button>a. Study everything in one day</button>
+      <button>b. Study step by step</button>
+      <button>c. Skip chapters</button>
+      <button>d. Do nothing</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">15. Computational thinking helps to:</div>
+    <div class="mcq-options">
+      <button>a. Increase confusion</button>
+      <button>b. Solve problems efficiently</button>
+      <button>c. Waste time</button>
+      <button>d. Avoid learning</button>
+    </div>
+  </div>
+
+</section>
+
+ <div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+
+
+<h2 id="faqs">FAQs</h2>
+
+<section class="faq-section">
+
+<div class="faq-item">
+  <button class="faq-question">What is computational thinking?</button>
+  <div class="faq-answer"><p>Computational thinking is a problem-solving method that involves breaking problems into steps, identifying patterns, and creating solutions like a computer.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Where is computational thinking used?</button>
+  <div class="faq-answer"><p>It is used in computer science, biology, mathematics, and even in daily life activities like cooking or studying.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is decomposition?</button>
+  <div class="faq-answer"><p>Decomposition is the process of breaking a large problem into smaller, manageable parts to make it easier to solve.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is pattern recognition?</button>
+  <div class="faq-answer"><p>Pattern recognition means identifying similarities or repeated patterns in problems to solve them more efficiently.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is abstraction?</button>
+  <div class="faq-answer"><p>Abstraction means focusing on important details while ignoring unnecessary information to simplify a problem.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is an algorithm?</button>
+  <div class="faq-answer"><p>An algorithm is a step-by-step set of instructions used to solve a problem or complete a task.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Why is computational thinking important?</button>
+  <div class="faq-answer"><p>It helps in solving complex problems efficiently, improves logical thinking, and is useful in many real-life situations.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is problem understanding in computational thinking?</button>
+  <div class="faq-answer"><p>It means clearly understanding the problem, its requirements, and goals before starting to solve it.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is problem simplification?</button>
+  <div class="faq-answer"><p>Problem simplification means breaking a complex problem into smaller parts so it becomes easier to handle.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is solution selection and design?</button>
+  <div class="faq-answer"><p>It is the process of choosing the best solution among different options and planning how to implement it step by step.</p></div>
+</div>
+
+</section>
+
+</div>
+
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const answer = btn.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>
