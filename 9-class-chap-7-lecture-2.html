@@ -29,63 +29,112 @@
 
 <style>
 html { scroll-behavior: smooth; }
-
-.toc {
-  background: #f7f7f7;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-left: 4px solid darkblue;
-}
-
-.toc a {
-  display: block;
-  text-decoration: none;
-  color: #333;
-  padding: 5px 0;
-}
-
+.toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+.toc h2 { margin-top: 0; }
+.toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
 .toc a:hover { color: darkblue; }
+.toc li {list-style-type: none;}
+.post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
 
-.post-content h2, .post-content h3 {
-  border-left: 4px solid #0077cc;
-  padding-left: 12px;
-  margin-top: 25px;
+ .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .post-content p
+    {
+      margin: 0;
+    }
+
+
+  .test-mcqs {
+  max-width: 700px;
+  margin: auto;
 }
-
-/* MCQ */
-.mcq-item {
+.test-mcqs .mcq-item {
   background: #f7f7f7;
   border-left: 4px solid #0077cc;
   padding: 15px;
   margin: 10px 0;
 }
-
 .mcq-question {
   font-weight: bold;
   margin-bottom: 10px;
 }
-
 .mcq-options button {
   display: block;
+  text-align: left;
   margin: 5px 0;
   padding: 8px;
   width: 100%;
   border-radius: 4px;
   border: 1px solid #ccc;
   cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  font-size: 16px;
 }
-
 .mcq-options button.correct {
-  background: #d4edda;
+  background-color: #d4edda; 
   border-color: #28a745;
+  color: #155724;
 }
-
 .mcq-options button.wrong {
-  background: #f8d7da;
+  background-color: #f8d7da; 
   border-color: #dc3545;
+  color: #721c24;
+}
+.mcq-options button.correct::after {
+  content: " ✅";
+  float: right;
+}
+.mcq-options button.wrong::after {
+  content: " ❌";
+  float: right;
+}
+.mcq-options button:hover {
+  background-color: #e2e6ea;
 }
 
-/* Result */
+.test-mcqs h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
 .result-box {
   text-align: center;
   margin-top: 20px;
@@ -96,22 +145,51 @@ html { scroll-behavior: smooth; }
   background: #0077cc;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-/* Back to top */
-#backToTop {
-  display: none;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #002959;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 50%;
-  cursor: pointer;
+#showResult:hover {
+  background: #005fa3;
 }
+
+#resultText {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight input or MCQ when missing */
+.highlight-unanswered {
+  border: 2px solid #dc3545 !important;
+  background-color: #ffe5e5;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}    
+
+/* Back to top button styling */
+  #backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    font-size: 30px;
+    background-color: #002959;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #0055a5;
+  }
 </style>
 </head>
 
@@ -142,29 +220,41 @@ html { scroll-behavior: smooth; }
 
 <h1 class="post-title">Algorithm Design Methods: Flowcharts & Pseudocode</h1>
 <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
-
-<div class="post-content">
-
+<img src="images/9-CS-IMAGES/chapter-7/9-Computer-Science-Chapter-7-Lecture-2.webp" alt="9-Computer-Science-Chapter 7-Lecture-2" class="post-image" loading="lazy">
+<p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
+</p>
 <nav class="toc">
 <h2>Table of Contents</h2>
-<a href="#intro">Introduction</a>
-<a href="#flowchart">Flowcharts</a>
-<a href="#importance">Importance of Flowcharts</a>
-<a href="#pseudocode">Pseudocode</a>
-<a href="#why-pseudo">Why Use Pseudocode</a>
-<a href="#compare">Flowcharts vs Pseudocode</a>
-<a href="#mcqs">MCQs</a>
+<ul>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#flowchart">Flowcharts</a></li>
+<li><a href="#importance">Importance</a></li>
+<li><a href="#symbols">Symbols</a></li>
+<li><a href="#pseudocode">Pseudocode</a></li>
+<li><a href="#why-pseudo">Why Use Pseudocode</a></li>
+<li><a href="#compare">Flowcharts vs Pseudocode</a></li>
+<li><a href="#mcqs">MCQs</a></li>
+<li><a href="#test-mcqs">MCQs for testing</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
 </nav>
 
+<div class="post-content">
 <h2 id="intro">Algorithm Design Methods</h2>
 <p>
-Algorithm design methods are techniques used to create step-by-step solutions for solving problems.
-The two most common methods are Flowcharts and Pseudocode.
+Algorithm design methods are the different ways or techniques used to create and plan an algorithm (step-by-step solution to a problem).
 </p>
 
+<strong>There are 2 Methods to design an algorithm:</strong>
+<ol style="margin-left: 20px;">
+  <li>Flowcharts</li>
+  <li>Pseudocode</li>
+</ol>
 <h2 id="flowchart">Flowcharts</h2>
 <p>
-A flowchart is a diagram that represents steps of a process using symbols and arrows.
+A flowchart is a diagram that shows the steps of a process to solve any problem using symbols and arrows.
 It shows how a problem is solved in a visual way.
 </p>
 
@@ -172,10 +262,13 @@ It shows how a problem is solved in a visual way.
 
 <h2 id="importance">Importance of Flowcharts</h2>
 
-<p><strong>Clarity:</strong> Makes processes easy to understand.</p>
-<p><strong>Communication:</strong> Helps explain ideas visually.</p>
-<p><strong>Problem Solving:</strong> Helps in finding better solutions.</p>
-<p><strong>Documentation:</strong> Useful for future reference and learning.</p>
+<p><strong>Clarity:</strong>Flowcharts present processes in a clear and organized way, making them easy to understand quickly.</p>
+<p><strong>Communication:</strong>They help explain complex ideas in a simple visual form so everyone can understand easily.</p>
+<p><strong>Problem Solving:</strong>Flowcharts help in understanding the steps of a problem clearly in pictorial form, making it easier to think of better and more effective solutions.</p>
+<p><strong>Documentation:</strong>They are useful for saving process details for learning, training, and future reference.</p>
+
+<h2 id="symbols">Flowchart Symbols</h2>
+<img src="images/9-CS-IMAGES/chapter-7/flowchart-symbols.webp" alt="9-Computer-Science-Chapter 7-Lecture-2" class="post-image" loading="lazy">
 
 <h2 id="pseudocode">Pseudocode</h2>
 <p>
@@ -195,95 +288,572 @@ END
 
 <h2 id="why-pseudo">Why Use Pseudocode?</h2>
 
-<p><strong>Clarity:</strong> Easy to understand logic.</p>
-<p><strong>Planning:</strong> Helps organize ideas before coding.</p>
-<p><strong>Communication:</strong> Easy to explain algorithms to others.</p>
+<p><strong>Clarity:</strong>Pseudocode is easy to understand because it focuses only on the logic of the solution without worrying about complex programming rules or syntax.</p>
+<p><strong>Planning:</strong>It helps programmers organize their ideas and plan the steps of the algorithm before writing real code.</p>
+<p><strong>Communication:</strong>It provides a simple way to explain algorithms to others, so everyone can understand the logic clearly, even without programming knowledge.</p>
 
 <h2 id="compare">Flowcharts vs Pseudocode</h2>
 
 <p><strong>Pseudocode:</strong></p>
 <ul>
-<li>Written in simple English</li>
-<li>Step-by-step format</li>
-<li>Easy to convert into code</li>
+<li>Written in simple English.</li>
+<li>Looks like a story.</li>
+<li>Steps are written one by one.</li>
+<li>Easy to convert into programming code.</li>
 </ul>
 
 <p><strong>Flowcharts:</strong></p>
 <ul>
-<li>Uses diagrams and symbols</li>
-<li>Visual representation</li>
-<li>Easy to understand flow</li>
+<li>Uses diagrams and symbols.</li>
+<li>Looks like a visual map.</li>
+<li>Shows flow using arrows.</li>
+<li>Easy to understand the overall process quickly.</li>
 </ul>
 
-<h2 id="mcqs">MCQs</h2>
+<h2 id="mcqs">Multiple Choice Questions (MCQs)</h2>
 
 <div class="mcq-item">
-<div class="mcq-question">1. Flowchart is:</div>
-<div class="mcq-options">
-a. Code<br>
-b. Diagram<br>
-c. Language<br>
-d. Device
-</div>
-</div>
-
-<div class="mcq-item">
-<div class="mcq-question">2. Pseudocode is written in:</div>
-<div class="mcq-options">
-a. Machine language<br>
-b. Symbols only<br>
-c. Simple English-like statements<br>
-d. Binary code
-</div>
+  <div class="mcq-question">1. What are algorithm design methods?</div>
+  <div class="mcq-options">
+    a. Programming languages<br>
+    b. Techniques to design algorithms<br>
+    c. Computer hardware<br>
+    d. Internet tools
+  </div>
+  <div class="mcq-answer">Answer: b. Techniques to design algorithms</div>
 </div>
 
 <div class="mcq-item">
-<div class="mcq-question">3. Flowcharts use:</div>
-<div class="mcq-options">
-a. Numbers<br>
-b. Diagrams and arrows<br>
-c. Programming code<br>
-d. Text only
-</div>
+  <div class="mcq-question">2. Which of the following is an algorithm design method?</div>
+  <div class="mcq-options">
+    a. Flowchart<br>
+    b. Keyboard<br>
+    c. Monitor<br>
+    d. Printer
+  </div>
+  <div class="mcq-answer">Answer: a. Flowchart</div>
 </div>
 
 <div class="mcq-item">
-<div class="mcq-question">4. Pseudocode helps in:</div>
-<div class="mcq-options">
-a. Designing logic<br>
-b. Playing games<br>
-c. Drawing pictures<br>
-d. Internet browsing
-</div>
+  <div class="mcq-question">3. Flowcharts are:</div>
+  <div class="mcq-options">
+    a. Programming languages<br>
+    b. Diagrams showing steps<br>
+    c. Hardware devices<br>
+    d. Internet tools
+  </div>
+  <div class="mcq-answer">Answer: b. Diagrams showing steps</div>
 </div>
 
+<div class="mcq-item">
+  <div class="mcq-question">4. Flowcharts use:</div>
+  <div class="mcq-options">
+    a. Only text<br>
+    b. Symbols and arrows<br>
+    c. Numbers only<br>
+    d. Binary code
+  </div>
+  <div class="mcq-answer">Answer: b. Symbols and arrows</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. Flowcharts are used in:</div>
+  <div class="mcq-options">
+    a. Computer Science only<br>
+    b. Business only<br>
+    c. Engineering only<br>
+    d. All of these
+  </div>
+  <div class="mcq-answer">Answer: d. All of these</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. Flowcharts help in:</div>
+  <div class="mcq-options">
+    a. Making problems harder<br>
+    b. Understanding processes clearly<br>
+    c. Ignoring problems<br>
+    d. Playing games
+  </div>
+  <div class="mcq-answer">Answer: b. Understanding processes clearly</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. Which of the following is NOT an importance of flowcharts?</div>
+  <div class="mcq-options">
+    a. Clarity<br>
+    b. Communication<br>
+    c. Confusion<br>
+    d. Documentation
+  </div>
+  <div class="mcq-answer">Answer: c. Confusion</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. Pseudocode is written in:</div>
+  <div class="mcq-options">
+    a. Binary language<br>
+    b. Machine code<br>
+    c. Simple English-like statements<br>
+    d. Assembly language
+  </div>
+  <div class="mcq-answer">Answer: c. Simple English-like statements</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. Pseudocode is used to:</div>
+  <div class="mcq-options">
+    a. Design algorithms<br>
+    b. Repair hardware<br>
+    c. Browse internet<br>
+    d. Play games
+  </div>
+  <div class="mcq-answer">Answer: a. Design algorithms</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. What is the first step in the given pseudocode example?</div>
+  <div class="mcq-options">
+    a. INPUT A<br>
+    b. START<br>
+    c. PRINT SUM<br>
+    d. END
+  </div>
+  <div class="mcq-answer">Answer: b. START</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. Pseudocode helps in:</div>
+  <div class="mcq-options">
+    a. Planning algorithms<br>
+    b. Drawing diagrams<br>
+    c. Fixing computers<br>
+    d. Watching videos
+  </div>
+  <div class="mcq-answer">Answer: a. Planning algorithms</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. Flowcharts are best for:</div>
+  <div class="mcq-options">
+    a. Writing code<br>
+    b. Visual representation<br>
+    c. Hardware design<br>
+    d. Typing documents
+  </div>
+  <div class="mcq-answer">Answer: b. Visual representation</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. Pseudocode looks like:</div>
+  <div class="mcq-options">
+    a. A diagram<br>
+    b. A story in simple English<br>
+    c. A picture<br>
+    d. A graph
+  </div>
+  <div class="mcq-answer">Answer: b. A story in simple English</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. Flowcharts show:</div>
+  <div class="mcq-options">
+    a. Only text<br>
+    b. Only numbers<br>
+    c. Flow of steps using arrows<br>
+    d. Programming syntax
+  </div>
+  <div class="mcq-answer">Answer: c. Flow of steps using arrows</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. Which method is easier to convert into code?</div>
+  <div class="mcq-options">
+    a. Flowchart<br>
+    b. Pseudocode<br>
+    c. Diagram<br>
+    d. Symbol
+  </div>
+  <div class="mcq-answer">Answer: b. Pseudocode</div>
+</div>
+<!-- </div> -->
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+
+<section class="test-mcqs" id="test-mcqs">
+    <h2>Test Yourself: Interactive MCQs (Computational Thinking)</h2>
+  <div class="mcq-item" data-answer="b">
+  <div class="mcq-question">1. What are algorithm design methods?</div>
+  <div class="mcq-options">
+    <button>a. Programming languages</button>
+    <button>b. Techniques to design algorithms</button>
+    <button>c. Computer hardware</button>
+    <button>d. Internet tools</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">2. Which of the following is an algorithm design method?</div>
+  <div class="mcq-options">
+    <button>a. Flowchart</button>
+    <button>b. Keyboard</button>
+    <button>c. Monitor</button>
+    <button>d. Printer</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">3. Flowcharts are:</div>
+  <div class="mcq-options">
+    <button>a. Programming languages</button>
+    <button>b. Diagrams showing steps</button>
+    <button>c. Hardware devices</button>
+    <button>d. Internet tools</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">4. Flowcharts use:</div>
+  <div class="mcq-options">
+    <button>a. Only text</button>
+    <button>b. Symbols and arrows</button>
+    <button>c. Numbers only</button>
+    <button>d. Binary code</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">5. Flowcharts are used in:</div>
+  <div class="mcq-options">
+    <button>a. Computer Science only</button>
+    <button>b. Business only</button>
+    <button>c. Engineering only</button>
+    <button>d. All of these</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">6. Flowcharts help in:</div>
+  <div class="mcq-options">
+    <button>a. Making problems harder</button>
+    <button>b. Understanding processes clearly</button>
+    <button>c. Ignoring problems</button>
+    <button>d. Playing games</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">7. Which of the following is NOT an importance of flowcharts?</div>
+  <div class="mcq-options">
+    <button>a. Clarity</button>
+    <button>b. Communication</button>
+    <button>c. Confusion</button>
+    <button>d. Documentation</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">8. Pseudocode is written in:</div>
+  <div class="mcq-options">
+    <button>a. Binary language</button>
+    <button>b. Machine code</button>
+    <button>c. Simple English-like statements</button>
+    <button>d. Assembly language</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">9. Pseudocode is used to:</div>
+  <div class="mcq-options">
+    <button>a. Design algorithms</button>
+    <button>b. Repair hardware</button>
+    <button>c. Browse internet</button>
+    <button>d. Play games</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">10. What is the first step in the pseudocode example?</div>
+  <div class="mcq-options">
+    <button>a. INPUT A</button>
+    <button>b. START</button>
+    <button>c. PRINT SUM</button>
+    <button>d. END</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">11. Pseudocode helps in:</div>
+  <div class="mcq-options">
+    <button>a. Planning algorithms</button>
+    <button>b. Drawing diagrams</button>
+    <button>c. Fixing computers</button>
+    <button>d. Watching videos</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">12. Flowcharts are best for:</div>
+  <div class="mcq-options">
+    <button>a. Writing code</button>
+    <button>b. Visual representation</button>
+    <button>c. Hardware design</button>
+    <button>d. Typing documents</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">13. Pseudocode looks like:</div>
+  <div class="mcq-options">
+    <button>a. A diagram</button>
+    <button>b. A story in simple English</button>
+    <button>c. A picture</button>
+    <button>d. A graph</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">14. Flowcharts show:</div>
+  <div class="mcq-options">
+    <button>a. Only text</button>
+    <button>b. Only numbers</button>
+    <button>c. Flow of steps using arrows</button>
+    <button>d. Programming syntax</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">15. Which method is easier to convert into code?</div>
+  <div class="mcq-options">
+    <button>a. Flowchart</button>
+    <button>b. Pseudocode</button>
+    <button>c. Diagram</button>
+    <button>d. Symbol</button>
+  </div>
+</div>
+</section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+
+<h2 id="faqs">FAQs</h2>
+
+<section class="faq-section">
+
+<div class="faq-item">
+  <button class="faq-question">What are algorithm design methods?</button>
+  <div class="faq-answer"><p>Algorithm design methods are techniques used to create step-by-step solutions to solve problems efficiently.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are the two common algorithm design methods?</button>
+  <div class="faq-answer"><p>The two common methods are Flowcharts and Pseudocode.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a flowchart?</button>
+  <div class="faq-answer"><p>A flowchart is a diagram that shows the steps of a process using symbols and arrows.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Where are flowcharts used?</button>
+  <div class="faq-answer"><p>Flowcharts are used in computer science, engineering, business, and many other fields.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Why are flowcharts important?</button>
+  <div class="faq-answer"><p>Flowcharts help in understanding processes clearly, improving communication, solving problems, and keeping records.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">How do flowcharts improve clarity?</button>
+  <div class="faq-answer"><p>They present steps in a clear and organized visual format, making them easy to understand.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is pseudocode?</button>
+  <div class="faq-answer"><p>Pseudocode is a simple way of writing algorithms using English-like statements similar to programming logic.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Why is pseudocode used?</button>
+  <div class="faq-answer"><p>Pseudocode is used to plan and organize the logic of a program before writing actual code.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Is pseudocode a programming language?</button>
+  <div class="faq-answer"><p>No, pseudocode is not a programming language. It is a simple way to describe logic.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the main advantage of pseudocode?</button>
+  <div class="faq-answer"><p>It is easy to understand and focuses only on the logic without worrying about syntax.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">How does pseudocode help in communication?</button>
+  <div class="faq-answer"><p>It helps explain algorithms clearly to others, even those who do not know programming.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the difference between flowcharts and pseudocode?</button>
+  <div class="faq-answer"><p>Flowcharts use diagrams and symbols, while pseudocode uses simple English-like text.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Which method is easier to convert into code?</button>
+  <div class="faq-answer"><p>Pseudocode is easier to convert into programming code.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Which method is better for visual understanding?</button>
+  <div class="faq-answer"><p>Flowcharts are better for visual understanding of processes.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Can both flowcharts and pseudocode be used together?</button>
+  <div class="faq-answer"><p>Yes, both can be used together to design and understand algorithms more effectively.</p></div>
+</div>
+
+</section>
 </div>
 </article>
 </main>
 
-<button id="backToTop">↑</button>
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
 
 <footer class="footer">
-<p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
 </footer>
 
 <script>
-const navToggle = document.getElementById("navToggle");
-const navLinks = document.getElementById("navLinks");
-navToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const answer = btn.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
 });
 
-// Back to top
-const backToTop = document.getElementById("backToTop");
-window.onscroll = () => {
-  backToTop.style.display =
-    document.documentElement.scrollTop > 600 ? "block" : "none";
-};
-backToTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
 });
 </script>
 
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 </body>
 </html>
