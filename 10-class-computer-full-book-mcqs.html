@@ -117,6 +117,52 @@
   margin-bottom: 15px;
 }
 
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showResult {
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showResult:hover {
+  background: #005fa3;
+}
+
+#resultText {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight input or MCQ when missing */
+.highlight-unanswered {
+  border: 2px solid #dc3545 !important;
+  background-color: #ffe5e5;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}    
+
 /* Back to top button styling */
   #backToTop {
     display: none; /* Hidden by default */
@@ -2371,6 +2417,12 @@
   <div class="mcq-answer">Answer: d. 0</div>
 </div>
 
+
+<!-- </div> -->
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
 <!-- MCQs FOR TESTING. -->
 <section class="test-mcqs">
   <strong style="font-size: 25px;">Note: Dear Students, You must test yourself with the below MCQs now.</strong>
@@ -4300,8 +4352,12 @@
     <button>d. 0</button>
   </div>
 </div>
-
 </section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
 
 <h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
 <section class="faq-section">
@@ -4370,49 +4426,98 @@
 <script>
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
 
-  const faqItems = document.querySelectorAll('.faq-question');
-  faqItems.forEach(button => {
-    button.addEventListener('click', () => {
-      button.classList.toggle('active');
-      const answer = button.nextElementSibling;
-      if (answer.style.display === "block") {
-        answer.style.display = "none";
-      } else {
-        answer.style.display = "block";
-      }
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const answer = btn.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
     });
   });
 </script>
 
-<!-- JavaScript for interactive test MCQs -->
+<!-- JS FOR MCQs TESTING. -->
 <script>
-document.querySelectorAll(".test-mcqs .mcq-item").forEach(item => {
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
   const correctAnswer = item.getAttribute("data-answer");
 
   item.querySelectorAll(".mcq-options button").forEach(button => {
     button.addEventListener("click", () => {
-      if (item.classList.contains("answered")) return;
-      item.classList.add("answered");
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
 
       const selected = button.textContent.trim().charAt(0).toLowerCase();
 
+      // Store answer
+      answers[index] = selected;
+
       if (selected === correctAnswer) {
         button.classList.add("correct");
+        score++;
       } else {
         button.classList.add("wrong");
-        // highlight the correct answer too
-        item.querySelectorAll(".mcq-options button").forEach(btn => {
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
           if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
             btn.classList.add("correct");
           }
         });
       }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
     });
   });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
 });
 </script>
 
