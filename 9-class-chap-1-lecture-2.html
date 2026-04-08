@@ -26,6 +26,165 @@ html { scroll-behavior: smooth; }
 .toc a:hover { color: darkblue; }
 .toc li {list-style-type: none;}
 .post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+
+ .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .post-content p
+    {
+      margin: 0;
+    }
+
+    .post-content ul
+    {
+      margin-left: 16px;
+    }
+  .test-mcqs {
+  max-width: 700px;
+  margin: auto;
+}
+.test-mcqs .mcq-item {
+  background: #f7f7f7;
+  border-left: 4px solid #0077cc;
+  padding: 15px;
+  margin: 10px 0;
+}
+.mcq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mcq-options button {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  font-size: 16px;
+}
+.mcq-options button.correct {
+  background-color: #d4edda; 
+  border-color: #28a745;
+  color: #155724;
+}
+.mcq-options button.wrong {
+  background-color: #f8d7da; 
+  border-color: #dc3545;
+  color: #721c24;
+}
+.mcq-options button.correct::after {
+  content: " ✅";
+  float: right;
+}
+.mcq-options button.wrong::after {
+  content: " ❌";
+  float: right;
+}
+.mcq-options button:hover {
+  background-color: #e2e6ea;
+}
+
+.test-mcqs h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showResult {
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showResult:hover {
+  background: #005fa3;
+}
+
+#resultText {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight input or MCQ when missing */
+.highlight-unanswered {
+  border: 2px solid #dc3545 !important;
+  background-color: #ffe5e5;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+/* Back to top button styling */
+  #backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    font-size: 30px;
+    background-color: #002959;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #0055a5;
+  }
+
 </style>
 </head>
 <body>
@@ -54,12 +213,16 @@ html { scroll-behavior: smooth; }
 <h2>Table of Contents</h2>
 <ul>
 <li><a href="#natural-systems">Natural Systems</a></li>
-<li><a href="#artificial-systems">Artificial Systems</a></li>
+<li><a href="#physical">Physical Systems</a></li>
+<li><a href="#chemical">Chemical Systems</a></li>
+<li><a href="#biological">Biological Systems</a></li>
+<li><a href="#Psychological">Psychological Systems</a></li>
+<li><a href="#artificial">Artificial Systems</a></li>
 <li><a href="#knowledge-systems">Knowledge Systems</a></li>
 <li><a href="#engineering-systems">Engineering Systems</a></li>
 <li><a href="#social-systems">Social Systems</a></li>
-<li><a href="#extra-insights">Extra Insights</a></li>
 <li><a href="#mcqs">MCQs</a></li>
+<li><a href="#test-mcqs">MCQs For Testing</a></li>
 <li><a href="#faqs">FAQs</a></li>
 </ul>
 </nav>
@@ -67,250 +230,607 @@ html { scroll-behavior: smooth; }
 <div class="post-content">
 
 <h2 id="natural-systems">Natural Systems</h2>
-<p>Natural systems are systems that exist in nature without human creation and operate according to natural laws.</p>
-
-<h3>Physical Systems</h3>
-<p>Made of physical components and follow physical laws.</p>
+<p>
+  Natural systems are systems that exist in nature and are not made by humans. These systems work on their own and follow natural rules.
+</p>
+<strong>Examples:</strong>
 <ul>
-<li>Example: Hydrogen gas forms when electrons, protons, and neutrons combine.</li>
-<li>Example: Earth’s solar system is a physical system.</li>
+<li>Weather system</li>
+<li>Solar system</li>
+<li>Ecosystem (plants, animals, environment)</li>
+<li>Human body</li>
+</ul>
+<h3 id="physical">Physical Systems</h3>
+<p style="margin-bottom: 0;">Physical systems are systems made up of real, visible objects that you can touch and see. These systems involve physical parts working together and are controlled by the laws of physics.
+</p>
+<strong>Examples:</strong>
+<ul>
+<li>A computer (works using electricity and follows electrical laws). </li>
+<li>A car (moves based on laws of motion and force). </li>
+<li>A washing machine (rotates using mechanical and electrical laws). </li>
+<li>A fan (works due to electricity and motion laws). </li>
 </ul>
 
-<h3>Chemical Systems</h3>
-<p>Involves substances and their reactions, governed by chemistry.</p>
+<h3 id="chemical">Chemical Systems</h3>
+<p>
+  Chemical systems involve substances that change or react to form new substances.
+</p>
+<strong>Examples:</strong>
 <ul>
-<li>Example: Water (H₂O) forms from hydrogen and oxygen.</li>
-<li>Example: Rusting of iron when exposed to oxygen.</li>
+<li>Water (H₂O) forms from hydrogen and oxygen.</li>
+<li>Acid + base → salt + water. This is a chemical reaction</li>
 </ul>
 
-<h3>Biological Systems</h3>
-<p>Living systems involving organisms and their interactions.</p>
+<h3 id="biological">Biological Systems</h3>
+<p>Biological systems are systems related to living things. They include parts of living organisms that work together to keep them alive and functioning.</p>
+<strong>Examples:</strong>
 <ul>
-<li>Example: Human body with organs like heart, lungs, and brain.</li>
-<li>Example: Forest ecosystem with plants, animals, and microbes.</li>
+<li>Human body with organs like heart, lungs, and brain.</li>
+<li>Circulatory system – transports blood, oxygen, and nutrients.</li>
+<li>Nervous system – controls body activities and responses.</li>
+<li>Immune system – defends against diseases.</li>
 </ul>
 
-<h3>Psychological Systems</h3>
-<p>Deals with human mind, thoughts, emotions, and behavior.</p>
+<h3 id="Psychological">Psychological Systems</h3>
+<p>
+  Psychological systems are systems related to the mind and behavior of humans. They explain how people think, feel, learn, and react to different situations.
+</p>
+<strong>Examples:</strong>
 <ul>
-<li>Example: Stress, happiness, learning, decision-making.</li>
-<li>Example: Memory system in the brain.</li>
+<li>Thinking and decision-making.</li>
+<li>Emotions like happiness, fear, and anger.</li>
+<li>Human behavior and reactions.</li>
 </ul>
 
 <h2 id="artificial-systems">Artificial Systems</h2>
 <p>Created by humans to solve problems, perform tasks, or make life easier.</p>
+<strong>Examples:</strong>
 <ul>
-<li>Example: Cars, computers, schools, governments, engineering projects.</li>
+  <li>Computers</li>
+  <li>Mobile phones</li>
+  <li>Cars</li>
+  <li>Robots</li>
 </ul>
 
 <h2 id="knowledge-systems">Knowledge Systems</h2>
-<p>Designed to collect, store, manage, and use knowledge or information.</p>
+<p>Knowledge systems are organized ways of collecting, storing, managing, and using information so people can learn new things, solve problems, and make better decisions in daily life.</p>
+<strong>Example:</strong>
 <ul>
-<li><strong>Mathematics:</strong> Engineers use mathematics to calculate structures like bridges.</li>
-<li><strong>Logic:</strong> Computers use logic (0s and 1s) to process information.</li>
-<li><strong>Databases:</strong> MySQL, MongoDB store and manage large data efficiently.</li>
-<li><strong>Information Management Systems:</strong> Library Management Systems, Hospital Management Systems manage information systematically.</li>
+  <li>Libraries 📚 (store books and knowledge)</li>
+  <li>Schools 🏫 (teach and share knowledge)</li>
+  <li>Computers and databases 💻 (store and manage large data)</li>
+  <li>Online learning systems (like Google and AI tools)</li>
+</ul>
+<strong>Types:</strong>
+<ul>
+<li><strong>Mathematics ➗:</strong>Mathematics is a system that helps us solve problems using numbers, formulas, and calculations.</li>
+<strong>Examples: </strong>
+  <ul>
+    <li>Finding total bill in shopping</li>
+    <li>Calculating exam percentage</li>
+  </ul>
+<li><strong>Logic 🧠:</strong>Logic is a system that helps us think in a correct and step-by-step way to make good decisions. It helps in reasoning and problem solving</li>
+<strong>Examples:</strong>
+<ul>
+  <li>If it is raining → take an umbrella</li>
+  <li>If marks are above 50 → student passes</li>
+</ul>
+<li><strong>Databases 💾:</strong>Databases are systems used to store, organize, and manage large amounts of data in a structured way so it can be easily accessed and updated.</li>
+<p>
+  👉 Common database systems include: <br>
+-> MySQL <br>
+-> NoSQL <br>
+-> MongoDB
+</p>
+<strong>Examples:</strong>
+<ul>
+  <li>School student records</li>
+  <li>School student records</li>
+  <li>Online shopping data</li>
+</ul>
+<li><strong>Information Management Systems:</strong>
+An Information Management System is a system that collects, processes, stores, and distributes information in an organized way to help organizations work efficiently.</li>
+<strong>Examples:</strong>
+<ul>
+  <li>School management system (students, teachers, results)</li>
+  <li>Hospital system (patient records)</li>
+  <li>Office data management</li>
+</ul>
 </ul>
 
 <h2 id="engineering-systems">Engineering Systems</h2>
-<p>Designed and built by engineers using scientific knowledge.</p>
+<p>
+  Engineering systems are man-made systems that use science and technology to solve real-world problems.
+</p>
+<strong>Examples:</strong>
 <ul>
-<li><strong>Civil Engineering:</strong> Involves building and maintaining structures like roads, bridges, houses, and dams to make them safe and long-lasting.</li>
+  <li>Bridges and buildings</li>
+  <li>Electrical power systems</li>
+  <li>Water supply systems</li>
+  <li>Roads and traffic systems</li>
+  <li>Machines like elevators or generators</li>
+</ul>
+<ul>
+<li><strong>Civil Engineering:</strong> These systems are related to buildings and infrastructure.
+They help in designing and constructing structures for public use.</li>
+<strong>Examples:</strong>
+<ul>
+  <li>Roads</li>
+  <li>Bridges</li>
+  <li>Buildings</li>
+  <li>Dams</li>
+</ul>
 
-<li><strong>Mechanical Engineering:</strong> Focuses on designing and improving machines such as engines, turbines, and robotic arms used in industries and factories.</li>
-
-<li><strong>Chemical Engineering:</strong> Works on turning raw materials into useful products. Examples include water treatment plants, fertilizer factories, and fuel production.</li>
-
+<li><strong>Mechanical Engineering:</strong> These systems involve machines and mechanical devices that move or work using force and energy.</li>
+<strong>Examples:</strong>
+<ul>
+  <li>Cars</li>
+  <li>Engines</li>
+  <li>Fans</li>
+  <li>Machines in factories</li>
+</ul>
+<li><strong>Chemical Engineering:</strong> These systems deal with chemicals and processes that change substances into new materials.</li>
+<strong>Examples:</strong>
+<ul>
+  <li>Oil refining</li>
+  <li>Fertilizer production</li>
+  <li>Medicine manufacturing</li>
+  <li></li>
+</ul>
 <li><strong>Electrical Engineering:</strong> Deals with electricity and electronic systems, including power grids, home automation, and electric vehicles.</li>
-
-<li><strong>Software Engineering:</strong> Involves creating and maintaining computer programs like mobile apps, library systems, and banking software.</li>
-
+<strong>Examples:</strong>
+<ul>
+  <li>Food processing</li>
+  <li>Electrical circuits</li>
+  <li>Transformers</li>
+  <li>Home wiring systems</li>
+</ul>
+<li><strong>Software Engineering:</strong>These systems are related to computer programs and software development.</li>
+<strong>Examples:</strong>
+<ul>
+  <li>Mobile apps</li>
+  <li>Websites</li>
+  <li>Operating systems (Windows, Android)</li>
+  <li>Computer games</li>
+</ul>
 </ul>
 
 <h2 id="social-systems">Social Systems</h2>
-<p>Organized human structures to manage society, education, or work.</p>
+<p>Social systems are systems where people live, interact, and follow rules in a society.</p>
+<strong>Examples:</strong>
 <ul>
-<li><strong>Academic Institutions:</strong> Include schools, colleges, and universities. Example: A school system where teachers, principals, and staff work together to educate and guide students.</li>
-
-<li><strong>Governments:</strong> Can be democratic (like the USA or India), where people elect their leaders, or authoritarian (like a dictatorship), where power is held by one person or a small group.</li>
-
+  <li>Family system</li>
+  <li>School system</li>
+  <li>Government system</li>
+  <li>Friend groups</li>
+</ul>
+<ul>
+<li><strong>Academic Institutions:</strong>These are places where people go to learn and gain knowledge.
+They are social systems because students, teachers, and staff work together.</li>
+<strong>Examples:</strong>
+<ul>
+  <li>Schools</li>
+  <li>Colleges</li>
+  <li>Universities</li>
+</ul>
+<li><strong>Governments:</strong>Government is a system that makes rules, manages the country, and provides services to people.</li>
+<strong>Examples:</strong>
+<ul>
+  <li>Local government</li>
+  <li>Provincial government</li>
+  <li>Federal government</li>
+</ul>
 <li><strong>Organizations:</strong> Include businesses and non-profits. Examples: A corporation like Apple focuses on technology and profit, while an NGO like the Edhi Foundation works for social welfare and helping people in need.</li>
-
 </ul>
 
-<h2 id="extra-insights">Extra Insights / Expanded Knowledge</h2>
-<p>Additional points to deepen understanding of systems:</p>
-<ul>
-<li><strong>Interconnected Nature:</strong> Many systems are interconnected and changes in one affect others.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Understanding dependencies helps prevent cascading failures across systems.
-  </div>
-</li>
+<h2 id="mcqs">Multiple Choice Questions (MCQs)</h2>
 
-<li><strong>System Hierarchy:</strong> Systems often have subsystems and layers for better management.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Recognizing subsystems makes analysis and optimization easier.
+<div class="mcq-item">
+  <div class="mcq-question">1. Which of the following is a natural system?</div>
+  <div class="mcq-options">
+    a. Computer<br>
+    b. Solar system<br>
+    c. Car<br>
+    d. Mobile phone
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Solar system</div>
+</div>
 
-<li><strong>Adaptation and Flexibility:</strong> Systems that adapt to change remain effective longer.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> AI systems or climate-responsive designs are examples of adaptive systems.
+<div class="mcq-item">
+  <div class="mcq-question">2. Which system is made by humans?</div>
+  <div class="mcq-options">
+    a. Ecosystem<br>
+    b. Artificial system<br>
+    c. Biological system<br>
+    d. Natural system
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Artificial system</div>
+</div>
 
-<li><strong>Efficiency:</strong> Well-organized systems maximize output with minimal input.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Optimization reduces energy waste, errors, and operational costs.
+<div class="mcq-item">
+  <div class="mcq-question">3. Which of the following is a physical system?</div>
+  <div class="mcq-options">
+    a. Thoughts<br>
+    b. Computer<br>
+    c. Emotions<br>
+    d. Memory
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Computer</div>
+</div>
 
-<li><strong>Human-Centric Design:</strong> Systems involving humans must consider behavior, ethics, and usability.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Poor human design can lead to system failure even if technically sound.
+<div class="mcq-item">
+  <div class="mcq-question">4. Which system involves chemical reactions?</div>
+  <div class="mcq-options">
+    a. Mechanical system<br>
+    b. Chemical system<br>
+    c. Social system<br>
+    d. Software system
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Chemical system</div>
+</div>
 
-<li><strong>Security and Reliability:</strong> Systems must protect against failures or unauthorized access.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Redundant components, firewalls, and backups improve system reliability.
+<div class="mcq-item">
+  <div class="mcq-question">5. Which of the following is a biological system?</div>
+  <div class="mcq-options">
+    a. Car engine<br>
+    b. Human body<br>
+    c. Calculator<br>
+    d. Internet
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Human body</div>
+</div>
 
-<li><strong>Monitoring and Feedback:</strong> Feedback loops help systems self-correct and improve.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Continuous monitoring allows detection of issues and performance enhancement.
+<div class="mcq-item">
+  <div class="mcq-question">6. Which system is related to human thinking and behavior?</div>
+  <div class="mcq-options">
+    a. Physical system<br>
+    b. Psychological system<br>
+    c. Chemical system<br>
+    d. Mechanical system
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Psychological system</div>
+</div>
 
-<li><strong>Scalability:</strong> Systems should handle growth or shrinkage without losing functionality.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Cloud-based and modular systems exemplify scalable designs.
+<div class="mcq-item">
+  <div class="mcq-question">7. Which of the following is an example of a knowledge system?</div>
+  <div class="mcq-options">
+    a. Washing machine<br>
+    b. Library<br>
+    c. Car<br>
+    d. Fan
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Library</div>
+</div>
 
-<li><strong>Redundancy:</strong> Backup components prevent total system failure.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Critical in healthcare, IT, and transport systems.
+<div class="mcq-item">
+  <div class="mcq-question">8. Which system provides access to knowledge?</div>
+  <div class="mcq-options">
+    a. Physical system<br>
+    b. Knowledge-based system<br>
+    c. Mechanical system<br>
+    d. Chemical system
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Knowledge-based system</div>
+</div>
 
-<li><strong>Open vs Closed Systems:</strong> Open systems interact with the environment; closed are isolated.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Most real-world systems are open.
+<div class="mcq-item">
+  <div class="mcq-question">9. Which of the following is a social system?</div>
+  <div class="mcq-options">
+    a. School<br>
+    b. Computer<br>
+    c. Engine<br>
+    d. Robot
   </div>
-</li>
+  <div class="mcq-answer">Answer: a. School</div>
+</div>
 
-<li><strong>Decision Support:</strong> Systems provide data for informed decisions.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> ERP and BI systems are key examples.
+<div class="mcq-item">
+  <div class="mcq-question">10. Which engineering system deals with buildings and roads?</div>
+  <div class="mcq-options">
+    a. Mechanical<br>
+    b. Civil<br>
+    c. Electrical<br>
+    d. Software
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Civil</div>
+</div>
 
-<li><strong>Energy Management:</strong> Efficient systems minimize energy waste.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Important in sustainable engineering and smart grids.
+<div class="mcq-item">
+  <div class="mcq-question">11. Which system deals with machines and engines?</div>
+  <div class="mcq-options">
+    a. Chemical<br>
+    b. Mechanical<br>
+    c. Social<br>
+    d. Biological
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Mechanical</div>
+</div>
 
-<li><strong>Complexity Management:</strong> Large systems require simplified modeling to understand interactions.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Diagrams, simulations, and modular design reduce complexity.
+<div class="mcq-item">
+  <div class="mcq-question">12. Which system is related to electricity?</div>
+  <div class="mcq-options">
+    a. Electrical system<br>
+    b. Biological system<br>
+    c. Social system<br>
+    d. Natural system
   </div>
-</li>
+  <div class="mcq-answer">Answer: a. Electrical system</div>
+</div>
 
-<li><strong>Time Sensitivity:</strong> Some systems must respond quickly to changes.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Real-time systems in aviation, banking, and healthcare.
+<div class="mcq-item">
+  <div class="mcq-question">13. Which system is related to computer programs?</div>
+  <div class="mcq-options">
+    a. Mechanical system<br>
+    b. Software system<br>
+    c. Chemical system<br>
+    d. Physical system
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Software system</div>
+</div>
 
-<li><strong>Resource Allocation:</strong> Systems use resources optimally to achieve goals.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Reduces waste and improves efficiency.
+<div class="mcq-item">
+  <div class="mcq-question">14. Which of the following is part of an ecosystem?</div>
+  <div class="mcq-options">
+    a. Only animals<br>
+    b. Only plants<br>
+    c. Living and non-living things<br>
+    d. Only humans
   </div>
-</li>
+  <div class="mcq-answer">Answer: c. Living and non-living things</div>
+</div>
 
-<li><strong>Interdisciplinary Nature:</strong> Systems often combine multiple fields.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Knowledge + engineering + social components frequently overlap.
+<div class="mcq-item">
+  <div class="mcq-question">15. Which system involves people working together?</div>
+  <div class="mcq-options">
+    a. Chemical system<br>
+    b. Social system<br>
+    c. Physical system<br>
+    d. Mechanical system
   </div>
-</li>
+  <div class="mcq-answer">Answer: b. Social system</div>
+</div>
 
-<li><strong>Predictability:</strong> Deterministic systems produce the same output for the same input.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Useful for modeling and simulations.
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+<!-- MCQs FOR TESTING. -->
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs</h2>
+
+  <!-- MCQ 1 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">1. Which of the following is a natural system?</div>
+    <div class="mcq-options">
+      <button>a. Computer</button>
+      <button>b. Solar system</button>
+      <button>c. Car</button>
+      <button>d. Mobile phone</button>
+    </div>
   </div>
-</li>
 
-<li><strong>Innovation Potential:</strong> Systems can evolve with technology and creativity.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> AI, robotics, and smart cities demonstrate innovative systems.
+  <!-- MCQ 2 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">2. Which system is made by humans?</div>
+    <div class="mcq-options">
+      <button>a. Ecosystem</button>
+      <button>b. Artificial system</button>
+      <button>c. Biological system</button>
+      <button>d. Natural system</button>
+    </div>
   </div>
-</li>
 
-<li><strong>Standardization:</strong> Following norms ensures interoperability and safety.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> ISO standards in engineering systems prevent failures.
+  <!-- MCQ 3 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">3. Which of the following is a physical system?</div>
+    <div class="mcq-options">
+      <button>a. Thoughts</button>
+      <button>b. Computer</button>
+      <button>c. Emotions</button>
+      <button>d. Memory</button>
+    </div>
   </div>
-</li>
 
-<li><strong>Human-Machine Collaboration:</strong> Systems often integrate human and machine efforts.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Examples: Smart factories, autopilot vehicles.
+  <!-- MCQ 4 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">4. Which system involves chemical reactions?</div>
+    <div class="mcq-options">
+      <button>a. Mechanical system</button>
+      <button>b. Chemical system</button>
+      <button>c. Social system</button>
+      <button>d. Software system</button>
+    </div>
   </div>
-</li>
 
-<li><strong>Ethical Considerations:</strong> System design may affect society and environment.
-  <div style="background-color: #000; color: #fff; padding: 8px; margin-top:5px; border-radius:5px;">
-  <strong>Important:</strong> Ensuring fairness, privacy, and sustainability is crucial.
+  <!-- MCQ 5 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">5. Which of the following is a biological system?</div>
+    <div class="mcq-options">
+      <button>a. Car engine</button>
+      <button>b. Human body</button>
+      <button>c. Calculator</button>
+      <button>d. Internet</button>
+    </div>
   </div>
-</li>
-</ul>
 
-<h2 id="mcqs">MCQs</h2>
-<ol>
-<li>Which of the following is an example of a natural system?<br>a) Car<br>b) Forest ecosystem ✅<br>c) Library Management System<br>d) Government</li>
-<li>What type of system is a Library Management System?<br>a) Natural<br>b) Knowledge ✅<br>c) Social<br>d) Psychological</li>
-<li>Which of the following is a physical system?<br>a) Water (H₂O)<br>b) Human brain<br>c) Solar system ✅<br>d) School</li>
-<li>Which system deals with human thoughts and emotions?<br>a) Psychological ✅<br>b) Chemical<br>c) Civil Engineering<br>d) Mechanical Engineering</li>
-<li>Which system adapts and improves performance through feedback loops?<br>a) Static system<br>b) Adaptive system ✅<br>c) Closed system<br>d) Deterministic system</li>
-<li>Which of the following is a social system?<br>a) Stock market<br>b) School system ✅<br>c) Hydrogen gas<br>d) Forest ecosystem</li>
-<li>Which of these is an artificial system?<br>a) Human body<br>b) Car ✅<br>c) Ocean<br>d) Forest</li>
-<li>Databases like MySQL or MongoDB are examples of:<br>a) Engineering Systems<br>b) Knowledge Systems ✅<br>c) Biological Systems<br>d) Physical Systems</li>
-</ol>
+  <!-- MCQ 6 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">6. Which system is related to human thinking and behavior?</div>
+    <div class="mcq-options">
+      <button>a. Physical system</button>
+      <button>b. Psychological system</button>
+      <button>c. Chemical system</button>
+      <button>d. Mechanical system</button>
+    </div>
+  </div>
+
+  <!-- MCQ 7 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">7. Which of the following is a knowledge system?</div>
+    <div class="mcq-options">
+      <button>a. Washing machine</button>
+      <button>b. Library</button>
+      <button>c. Car</button>
+      <button>d. Fan</button>
+    </div>
+  </div>
+
+  <!-- MCQ 8 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">8. Which system provides access to knowledge?</div>
+    <div class="mcq-options">
+      <button>a. Physical system</button>
+      <button>b. Knowledge-based system</button>
+      <button>c. Mechanical system</button>
+      <button>d. Chemical system</button>
+    </div>
+  </div>
+
+  <!-- MCQ 9 -->
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">9. Which of the following is a social system?</div>
+    <div class="mcq-options">
+      <button>a. School</button>
+      <button>b. Computer</button>
+      <button>c. Engine</button>
+      <button>d. Robot</button>
+    </div>
+  </div>
+
+  <!-- MCQ 10 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">10. Which engineering system deals with buildings and roads?</div>
+    <div class="mcq-options">
+      <button>a. Mechanical</button>
+      <button>b. Civil</button>
+      <button>c. Electrical</button>
+      <button>d. Software</button>
+    </div>
+  </div>
+
+  <!-- MCQ 11 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">11. Which system deals with machines and engines?</div>
+    <div class="mcq-options">
+      <button>a. Chemical</button>
+      <button>b. Mechanical</button>
+      <button>c. Social</button>
+      <button>d. Biological</button>
+    </div>
+  </div>
+
+  <!-- MCQ 12 -->
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">12. Which system is related to electricity?</div>
+    <div class="mcq-options">
+      <button>a. Electrical system</button>
+      <button>b. Biological system</button>
+      <button>c. Social system</button>
+      <button>d. Natural system</button>
+    </div>
+  </div>
+
+  <!-- MCQ 13 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">13. Which system is related to computer programs?</div>
+    <div class="mcq-options">
+      <button>a. Mechanical system</button>
+      <button>b. Software system</button>
+      <button>c. Chemical system</button>
+      <button>d. Physical system</button>
+    </div>
+  </div>
+
+  <!-- MCQ 14 -->
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">14. Which of the following is part of an ecosystem?</div>
+    <div class="mcq-options">
+      <button>a. Only animals</button>
+      <button>b. Only plants</button>
+      <button>c. Living and non-living things</button>
+      <button>d. Only humans</button>
+    </div>
+  </div>
+
+  <!-- MCQ 15 -->
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">15. Which system involves people working together?</div>
+    <div class="mcq-options">
+      <button>a. Chemical system</button>
+      <button>b. Social system</button>
+      <button>c. Physical system</button>
+      <button>d. Mechanical system</button>
+    </div>
+  </div>
+</section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
 
 <h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
 <section class="faq-section">
+
 <div class="faq-item">
-<button class="faq-question">1. What are natural systems?</button>
-<div class="faq-answer"><p>Natural systems exist in nature without human creation, such as forests, oceans, planets, and the human body.</p></div>
+<button class="faq-question">1. What is a system?</button>
+<div class="faq-answer"><p>A system is an organized set of components working together to achieve a specific objective.</p></div>
 </div>
+
 <div class="faq-item">
-<button class="faq-question">2. What are artificial systems?</button>
-<div class="faq-answer"><p>Artificial systems are created by humans for specific purposes, including cars, computers, schools, and governments.</p></div>
+<button class="faq-question">2. What is a natural system?</button>
+<div class="faq-answer"><p>A natural system is a system that exists in nature and is not made by humans, such as the solar system or ecosystem.</p></div>
 </div>
+
 <div class="faq-item">
-<button class="faq-question">3. Give examples of engineering systems.</button>
-<div class="faq-answer"><p>Examples include civil (bridges, roads), mechanical (engines, turbines), chemical (fertilizer factories), electrical (power grids), and software systems (mobile apps, library software).</p></div>
+<button class="faq-question">3. What is a physical system?</button>
+<div class="faq-answer"><p>A physical system is made up of real, visible objects that work together and follow the laws of physics.</p></div>
 </div>
+
 <div class="faq-item">
-<button class="faq-question">4. What is a knowledge system?</button>
-<div class="faq-answer"><p>A knowledge system is an artificial system that collects, stores, and manages information. Examples include databases, library management systems, and hospital management systems.</p></div>
+<button class="faq-question">4. What is a biological system?</button>
+<div class="faq-answer"><p>A biological system includes living things or their parts that work together to support life, such as the human body.</p></div>
 </div>
+
 <div class="faq-item">
-<button class="faq-question">5. Why are feedback loops important in systems?</button>
-<div class="faq-answer"><p>Feedback loops allow systems to self-correct, improve performance, and adapt to environmental changes.</p></div>
+<button class="faq-question">5. What is a chemical system?</button>
+<div class="faq-answer"><p>A chemical system involves substances that react with each other and form new substances.</p></div>
 </div>
+
 <div class="faq-item">
 <button class="faq-question">6. What is a social system?</button>
-<div class="faq-answer"><p>Social systems are human-created structures that organize communities, institutions, and organizations to achieve specific goals.</p></div>
+<div class="faq-answer"><p>A social system is a system where people interact and work together in a structured way, such as schools or governments.</p></div>
 </div>
+
+<div class="faq-item">
+<button class="faq-question">7. What is a knowledge-based system?</button>
+<div class="faq-answer"><p>A knowledge-based system is a system that provides access to knowledge and helps in decision-making.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">8. What is communication in a system?</button>
+<div class="faq-answer"><p>Communication in a system is the exchange of information between its components to work together.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">9. What is an ecosystem?</button>
+<div class="faq-answer"><p>An ecosystem is a system where living and non-living things interact and depend on each other.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">10. What is an artificial system?</button>
+<div class="faq-answer"><p>An artificial system is a man-made system designed to perform specific tasks, such as computers or machines.</p></div>
+</div>
+
 </section>
 
 </div>
 </article>
 </main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+<div class="fb-comments" data-href="https://salmanblogs.com/9-class-chap-1-lecture-1" data-width="1200" data-numposts="5"></div>
 
 <footer class="footer">
   <div class="footer-links">
@@ -323,6 +843,7 @@ html { scroll-behavior: smooth; }
   </div>
   <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
 </footer>
+
 <script>
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
@@ -342,5 +863,109 @@ faqItems.forEach(button => {
   });
 });
 </script>
+
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 </body>
 </html>
+
