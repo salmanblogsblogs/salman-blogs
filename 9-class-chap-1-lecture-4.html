@@ -75,33 +75,68 @@ html { scroll-behavior: smooth; }
 <h3>Components</h3>
 <img src="images/9-CS-IMAGES/chapter-1/von-neumann-architecture.webp" alt="von-neumann-architecture" class="post-image" loading="lazy">
 <ul>
-<li><strong>Memory:</strong> Stores both data and program instructions for the CPU. <br>Example: RAM stores a program for faster execution than hard disk.</li>
+<li><strong>Memory:</strong> Stores both data and program instructions for the CPU. It allows quick access to information needed for processing.
+<br>
+<strong>Types: </strong>RAM (temporary, fast) and ROM (permanent, slower).</li>
+<strong>Example: </strong>RAM stores a program for faster execution than a hard disk.
 <li><strong>CPU:</strong> Executes instructions from memory and performs calculations. <br>Subcomponents: 
 <ul>
-<li>Arithmetic Logic Unit (ALU): Performs math and logical operations. Example: Adding 2 + 2</li>
+<li>Arithmetic Logic Unit (ALU):It handles calculations such as addition, subtraction, multiplication, and division, as well as logical comparisons like AND, OR, and greater than/less than.
+Example: Calculating 2 + 2 = 4</li>
 <li>Control Unit (CU): Manages CPU operations and directs ALU and memory. Example: CU supervises ALU steps</li>
 </ul>
 </li>
-<li><strong>Input Devices:</strong> Allow users to enter data. Examples: Keyboard, mouse, microphone</li>
-<li><strong>Output Devices:</strong> Show results. Examples: Monitor, printer</li>
+<li><strong>Input Devices:</strong> Allow users to enter data and instructions into the computer.
+</li>
+<p><strong>Examples:</strong> Keyboard, mouse, microphone, scanner </p>
+<li><strong>Output Devices:</strong> Display or produce the results of processed data.
+</li>
+<p><strong>Examples:</strong> Monitor, printer, speakers </p>
 <li>
   <strong>System Bus:</strong> The main communication pathway that connects the CPU, memory, and input/output devices, allowing them to exchange information.
   <ul>
-    <li><strong>Data Bus:</strong> Transfers actual data between components.</li>
+    <li><strong>Data Bus:</strong> Transfers actual data between CPU, memory, and devices.</li>
     <li><strong>Address Bus:</strong> Carries the memory addresses that specify where data should be read from or written to.</li>
-   <li><strong>Control Bus:</strong> Sends signals to components that tell them what to do.</li>
+   <li><strong>Control Bus:</strong> Sends control signals (like read/write commands) to coordinate all operations.</li>
   </ul>
 </li>
 </ul>
 
 <h2 id="cpu-working">CPU Working (Fetch, Decode, Execute, Store)</h2>
 <ol>
-<li><strong>Fetching:</strong> The CPU gets the next instruction from memory using the Program Counter (PC), which holds the address of the next instruction, and stores it in the Instruction Register (IR), which holds the current instruction being processed. Example: PC points to an “Add 2 + 2” instruction, and the IR holds it.</li>
-<li><strong>Decoding:</strong> Control Unit interprets the instruction. Example: CU identifies addition operation and selects required ALU operation.</li>
-<li><strong>Execution:</strong> ALU performs calculations; CU coordinates data flow. Example: ALU adds 2 + 2 → result 4.</li>
-<li><strong>Storing (Write-back):</strong> Result stored in memory or sent to output. Example: Sum (4) stored in memory and displayed on monitor.</li>
+<li><strong>Fetching:</strong> The CPU retrieves (fetches) the next instruction from memory. The Program Counter (PC) holds the address of the next instruction, and this instruction is loaded into the Instruction Register (IR) for processing.</li>
+<strong>Example:</strong>
+<ul>
+  <li>PC points to the instruction: “Add 5 + 3”</li>
+  <li>CPU fetches it and stores it in IR</li>
+</ul>
+<li><strong>Decoding:</strong> The Control Unit (CU) interprets the fetched instruction and determines what action is required. It identifies the type of operation and prepares the necessary components (like ALU).</li>
+<strong>Example:</strong>
+<ul>
+  <li>CU reads “Add 5 + 3”</li>
+  <li>It understands that this is an addition operation and selects the ALU for processing</li>
+</ul>
+<li><strong>Execution:</strong> The ALU performs the actual operation, while the CU manages the flow of data between components.</li>
+<strong> Example: </strong>
+  <ul>
+    <li>ALU performs: 5 + 3 = 8</li>
+    <li>Result is produced after calculation.</li>
+  </ul>
+<li><strong>Storing (Write-back):</strong> The result of the operation is stored back in memory or sent to an output device for display.</li>
+<strong>Example:</strong>
+<ul>
+  <li>Result (8) is stored in memory.</li>
+  <li>It can also be displayed on the monitor or used in another calculation.</li>
+</ul>
 </ol>
 
+<Strong>Quick Flow Example: Instruction: “Multiply 4 × 2”</Strong>
+<ul>
+  <li>Fetch → Instruction loaded</li>
+  <li>Decode → CU identifies multiplication</li>
+  <li>Execute → ALU calculates (4 × 2 = 8)</li>
+  <li>Store → Result saved or displayed</li>
+</ul>
 <h2 id="characteristics">Characteristics & Advantages/Disadvantages</h2>
 <ul>
 <li><strong>Single Memory Store:</strong> Both data and instructions are stored together in the same memory. Example: Game code (the program instructions) and player scores are kept in RAM.</li>
