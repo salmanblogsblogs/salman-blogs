@@ -18,6 +18,7 @@
 <meta name="twitter:title" content="Von Neumann Architecture & Computing Systems" />
 <meta name="twitter:description" content="Detailed guide on Von Neumann Architecture, CPU, computing systems, and Internet protocols." />
 <meta name="twitter:image" content="https://salmanblogs.com/images/computer-system.png" />
+
 <style>
 html { scroll-behavior: smooth; }
 .toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
@@ -26,8 +27,163 @@ html { scroll-behavior: smooth; }
 .toc a:hover { color: darkblue; }
 .toc li {list-style-type: none;}
 .post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
-.important {background-color:#000; color:#fff; padding:8px; margin-top:5px; border-radius:5px;}
+
+ .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .post-content p
+    {
+      margin: 0;
+    }
+
+
+  .test-mcqs {
+  max-width: 700px;
+  margin: auto;
+}
+.test-mcqs .mcq-item {
+  background: #f7f7f7;
+  border-left: 4px solid #0077cc;
+  padding: 15px;
+  margin: 10px 0;
+}
+.mcq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mcq-options button {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  font-size: 16px;
+}
+.mcq-options button.correct {
+  background-color: #d4edda; 
+  border-color: #28a745;
+  color: #155724;
+}
+.mcq-options button.wrong {
+  background-color: #f8d7da; 
+  border-color: #dc3545;
+  color: #721c24;
+}
+.mcq-options button.correct::after {
+  content: " ✅";
+  float: right;
+}
+.mcq-options button.wrong::after {
+  content: " ❌";
+  float: right;
+}
+.mcq-options button:hover {
+  background-color: #e2e6ea;
+}
+
+.test-mcqs h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showResult {
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showResult:hover {
+  background: #005fa3;
+}
+
+#resultText {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight input or MCQ when missing */
+.highlight-unanswered {
+  border: 2px solid #dc3545 !important;
+  background-color: #ffe5e5;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}    
+
+/* Back to top button styling */
+  #backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    font-size: 30px;
+    background-color: #002959;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #0055a5;
+  }
 </style>
+
 </head>
 <body>
 <header class="navbar">
@@ -139,114 +295,414 @@ Example: Calculating 2 + 2 = 4</li>
 </ul>
 <h2 id="characteristics">Characteristics & Advantages/Disadvantages</h2>
 <ul>
-<li><strong>Single Memory Store:</strong> Both data and instructions are stored together in the same memory. Example: Game code (the program instructions) and player scores are kept in RAM.</li>
+<li><strong>Single Memory Store:</strong> Both data and instructions are stored together in the same memory.<li>
+<p><strong>Example:</strong>In a game 🎮, the game code and player score are stored in the same RAM.</p>
 <li><strong>Sequential Execution:</strong> Instructions are executed one after another, in a fixed order.</li>
+<p><strong>Example:</strong> When a program runs, it follows steps step-by-step.</p>
 <li><strong>Stored Program Concept:</strong> Programs are stored in memory so they can be modified, updated, or replaced.</li>
-
-<li><strong>Advantages:</strong> <b>Simplified design </b>[By combining instructions and data
-   into a single memory area, architecture is simplified.], <b>Flexibility </b> [easy to modify programs]</li>
-<li><strong>Disadvantages:</strong> <b>Von Neumann bottleneck </b> [The CPU uses one memory path for both instructions and data, so it can only get one at a time, which slows down processing.], 
-  <b>security risk </b>[If data and instructions are stored together, a harmful instruction can change or mess with other instructions, making the system unsafe.]</li>
+<p><strong>Example:</strong>When you update an app 📱, new instructions replace old ones.</p>
+<li><strong>Advantages:</strong> <br><b>Simplified design: </b> By combining instructions and data
+   into a single memory area, architecture is simplified. </li>
+<li><b>Flexibility: </b> Programs can be easily changed by changing the contents of memory.</li>
+<p><strong>Example:</strong>When you update an app 📱, the new instructions replace the old ones in memory.</p>
+<li><strong>Disadvantages:</strong> <br>
+  <b>Von Neumann bottleneck: </b> The CPU uses one memory path for both instructions and data, so it can only get one at a time, which slows down processing. </li>
+  <li> 
+  <b>security risk: </b> As data and instructions are stored in same memory[Ram], one instruction can change or mess with other instructions, making the system unsafe. </li>
 </ul>
 
 <h2 id="computing-systems">Computing Systems</h2>
 <p>A computing system is a structured set of hardware and software designed to process data and perform tasks. Objectives: Solve problems, control processes, manage data, aid communication.</p>
+
+<p style="margin: 0;"><strong>Hardware:</strong> Physical parts that you can see and touch 💻. </p>
+<strong>Examples:</strong>
 <ul>
-<li>Hardware: CPU, RAM, storage, input/output devices</li>
-<li>Software: System software (OS) & Application software</li>
-<li>Types: Computers, Software Systems, Computer Networks, Internet</li>
+  <li>CPU (brain of computer)</li>
+  <li>RAM (temporary memory)</li>
+  <li>Keyboard, mouse, monitor</li>
+</ul>
+<p style="margin: 0;"><strong>Software:</strong> Software is a part of a computer that we can see but cannot touch. It consists of programs that tell the computer what to do. It is also called program or computer program. </p>
+<strong>Example:</strong>
+<p style="margin: 0;">You can see an app or program on the screen. But you cannot touch it physically like a keyboard. </p>
+<strong>Types: </strong>
+<p style="margin: 0;">There are 2 Types of software:</p>
+<ul>
+  <li>System Software: System software manages the hardware and controls the working of digital devices like computers, mobiles, laptops, iPads, and smart watches, etc.</li>
+  <strong>👉 Examples: Windows, Linux</strong>
+  <li>Application Software: Application software is used by users to perform specific tasks.</li>
+  <strong>Examples:</strong>
+  <ul>
+    <li>Microsoft Word → used to type and edit documents 📝</li>
+    <li>Web browser → used to search and browse the internet 🌐</li>
+    <li>Games → used for entertainment 🎮</li>
+  </ul>
+</ul>
 </ul>
 
 <h2 id="computer-networks">Computer Networks as Systems</h2>
-<p>A network connects computers/devices for resource sharing, communication, and data management.</p>
 <ul>
 <li>Networking Hardware: Routers, Switches, Network cables</li>
 <li>Network Software: Protocols (TCP/IP), Network OS (Windows Server)</li>
 </ul>
 
 <h2 id="internet-system">Internet as a System</h2>
-<p>The Internet is a global network for communication and data exchange.</p>
+<p style="margin: 0;">The Internet is a network of networks.</p>
+<strong>Examples:</strong>
+<ul>
+  <li>Home network</li>
+  <li>School network</li>
+  <li>Office network</li>
+  <p>All connected together = Internet 🌍</p>
+</ul>
 <h3>Internet Protocols</h3>
 <ul>
-<li><strong>TCP/IP (Transmission Control Protocol / Internet Protocol):</strong> A set of rules that ensures reliable data transfer and communication over the Internet.</li>
+<li><strong>TCP/IP (Transmission Control Protocol / Internet Protocol):</strong> TCP/IP is a set of rules where TCP handles the transfer of data between devices, and IP provides addresses to devices so they can connect and communicate with each other.</li>
 
 <li><strong>UDP (User Datagram Protocol):</strong> Sends data quickly without checking for errors, often used for live streaming and online games where speed matters more than accuracy.</li>
 
 <li><strong>FTP (File Transfer Protocol):</strong> Used to transfer files between computers over a network, such as uploading or downloading files from a web server.</li>
 
 <li><strong>POP (Post Office Protocol):</strong> Used by email clients to retrieve messages from a mail server and download them to a local device.</li>
-
 </ul>
 
-<h2 id="extra-insights">Extra Insights / Expanded Knowledge</h2>
-<ul>
-<li><strong>Von Neumann Bottleneck:</strong> Single memory for instructions and data can slow CPU.
-<div class="important">Insight: CPU caches were developed to reduce this bottleneck.</div></li>
+<h2 id="mcqs">Multiple Choice Questions (MCQs)</h2>
 
-<li><strong>CPU Optimization:</strong> Efficient ALU + CU improves processing speed.
-<div class="important">Insight: Reduces energy consumption and computation time.</div></li>
-
-<li><strong>Networking Protocols:</strong> TCP/IP, UDP, FTP, and POP manage data flow across networks.
-<div class="important">Insight: Choosing the right protocol is critical for reliability and speed.</div></li>
-
-<li><strong>Memory Management:</strong> Efficient RAM and storage usage improves system performance.
-<div class="important">Insight: Virtual memory helps run large programs smoothly.</div></li>
-
-<li><strong>Input/Output Devices:</strong> Proper device selection impacts user efficiency.
-<div class="important">Insight: Fast SSDs, high-resolution monitors, and responsive keyboards improve workflow.</div></li>
-
-<li><strong>System Bus:</strong> Acts as a highway connecting CPU, memory, and devices.
-<div class="important">Insight: Wider buses allow faster data transfer and improved overall performance.</div></li>
-
-<li><strong>Fetch-Decode-Execute Cycle:</strong> Central to CPU operation, ensures sequential instruction processing.
-<div class="important">Insight: Pipeline architectures can improve CPU throughput by handling multiple instructions simultaneously.</div></li>
-
-<li><strong>Stored Program Concept:</strong> Programs stored in memory can be modified dynamically.
-<div class="important">Insight: Enables software updates without changing hardware.</div></li>
-
-<li><strong>Internet Protocol Choice:</strong> Protocols like TCP/IP and UDP have different use cases.
-<div class="important">Insight: TCP/IP ensures reliability for file transfers, while UDP is preferred for streaming and gaming due to lower latency.</div></li>
-
-<li><strong>Output Devices Efficiency:</strong> Fast and accurate output devices enhance user experience.
-<div class="important">Insight: High refresh rate monitors and low-latency printers improve response time in critical applications.</div></li>
-</ul>
-
-<h2 id="mcqs">MCQs</h2>
-<ol>
-<li>Which component executes instructions in a Von Neumann computer?<br>a) Memory<br>b) CPU ✅<br>c) Input Device<br>d) Output Device</li>
-<li>Which unit performs arithmetic and logical operations?<br>a) Control Unit<br>b) ALU ✅<br>c) RAM<br>d) System Bus</li>
-<li>What does the Program Counter (PC) do?<br>a) Stores data permanently<br>b) Holds address of next instruction ✅<br>c) Executes operations<br>d) Controls input devices</li>
-<li>Which bus transmits control signals?<br>a) Data Bus<br>b) Address Bus<br>c) Control Bus ✅<br>d) Power Bus</li>
-<li>Which protocol is used for reliable Internet data transfer?<br>a) UDP<br>b) FTP<br>c) TCP/IP ✅<br>d) POP</li>
-</ol>
-
-<h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
-<section class="faq-section">
-<div class="faq-item">
-<button class="faq-question">1. Who proposed the Von Neumann Architecture?</button>
-<div class="faq-answer"><p>John von Neumann, a mathematician and physicist in the 1940s.</p></div>
+<div class="mcq-item">
+  <div class="mcq-question">1. Who proposed the Von Neumann architecture?</div>
+  <div class="mcq-options">
+    a. Charles Babbage<br>
+    b. John von Neumann<br>
+    c. Alan Turing<br>
+    d. Bill Gates
+  </div>
+  <div class="mcq-answer">Answer: b. John von Neumann</div>
 </div>
-<div class="faq-item">
-<button class="faq-question">2. What are the subcomponents of CPU?</button>
-<div class="faq-answer"><p>Arithmetic Logic Unit (ALU) and Control Unit (CU).</p></div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. What are the main components of the Von Neumann architecture?</div>
+  <div class="mcq-options">
+    a. CPU, RAM, ROM, GPU<br>
+    b. Memory, CPU, Input devices, Output devices<br>
+    c. Hardware, Software, Network, Internet<br>
+    d. ALU, CU, OS, BIOS
+  </div>
+  <div class="mcq-answer">Answer: b. Memory, CPU, Input devices, Output devices</div>
 </div>
-<div class="faq-item">
-<button class="faq-question">3. What is a computing system?</button>
-<div class="faq-answer"><p>A structured set of hardware and software designed to process data and perform tasks.</p></div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. Which unit performs arithmetic and logical operations in the CPU?</div>
+  <div class="mcq-options">
+    a. Control Unit<br>
+    b. Memory Unit<br>
+    c. Arithmetic Logic Unit (ALU)<br>
+    d. Input Unit
+  </div>
+  <div class="mcq-answer">Answer: c. Arithmetic Logic Unit (ALU)</div>
 </div>
-<div class="faq-item">
-<button class="faq-question">4. Name two types of Internet protocols.</button>
-<div class="faq-answer"><p>TCP/IP and UDP.</p></div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. What is the role of the Control Unit (CU)?</div>
+  <div class="mcq-options">
+    a. Stores data permanently<br>
+    b. Performs calculations<br>
+    c. Manages CPU operations and directs components<br>
+    d. Displays output
+  </div>
+  <div class="mcq-answer">Answer: c. Manages CPU operations and directs components</div>
 </div>
-<div class="faq-item">
-<button class="faq-question">5. What is the Von Neumann bottleneck?</button>
-<div class="faq-answer"><p>Single memory for instructions and data, limiting CPU speed.</p></div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. Which memory type is temporary and fast?</div>
+  <div class="mcq-options">
+    a. ROM<br>
+    b. RAM<br>
+    c. Hard Disk<br>
+    d. Flash Drive
+  </div>
+  <div class="mcq-answer">Answer: b. RAM</div>
 </div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. Which bus carries actual data between CPU and memory?</div>
+  <div class="mcq-options">
+    a. Control Bus<br>
+    b. Address Bus<br>
+    c. Data Bus<br>
+    d. System Bus
+  </div>
+  <div class="mcq-answer">Answer: c. Data Bus</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. What does the Address Bus do?</div>
+  <div class="mcq-options">
+    a. Transfers data<br>
+    b. Sends control signals<br>
+    c. Carries memory addresses<br>
+    d. Displays output
+  </div>
+  <div class="mcq-answer">Answer: c. Carries memory addresses</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. What is the first step in the CPU cycle?</div>
+  <div class="mcq-options">
+    a. Execute<br>
+    b. Decode<br>
+    c. Fetch<br>
+    d. Store
+  </div>
+  <div class="mcq-answer">Answer: c. Fetch</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. What happens during the Decode stage?</div>
+  <div class="mcq-options">
+    a. Result is stored<br>
+    b. Instruction is interpreted by CU<br>
+    c. Data is displayed<br>
+    d. Memory is cleared
+  </div>
+  <div class="mcq-answer">Answer: b. Instruction is interpreted by CU</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. What does the ALU do during execution?</div>
+  <div class="mcq-options">
+    a. Stores instructions<br>
+    b. Transfers files<br>
+    c. Performs calculations<br>
+    d. Manages input devices
+  </div>
+  <div class="mcq-answer">Answer: c. Performs calculations</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. What is the Von Neumann bottleneck?</div>
+  <div class="mcq-options">
+    a. Fast processing due to multiple CPUs<br>
+    b. Slow processing due to single memory path<br>
+    c. Error in input devices<br>
+    d. Extra memory storage
+  </div>
+  <div class="mcq-answer">Answer: b. Slow processing due to single memory path</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. Which device is an output device?</div>
+  <div class="mcq-options">
+    a. Keyboard<br>
+    b. Mouse<br>
+    c. Monitor<br>
+    d. Scanner
+  </div>
+  <div class="mcq-answer">Answer: c. Monitor</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. What is system software used for?</div>
+  <div class="mcq-options">
+    a. Playing games<br>
+    b. Managing hardware and system operations<br>
+    c. Writing documents<br>
+    d. Browsing websites only
+  </div>
+  <div class="mcq-answer">Answer: b. Managing hardware and system operations</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. Which protocol is used for secure and reliable data transfer?</div>
+  <div class="mcq-options">
+    a. UDP<br>
+    b. TCP/IP<br>
+    c. FTP<br>
+    d. POP
+  </div>
+  <div class="mcq-answer">Answer: b. TCP/IP</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. Which protocol is used for fast communication without error checking?</div>
+  <div class="mcq-options">
+    a. FTP<br>
+    b. TCP/IP<br>
+    c. UDP<br>
+    d. POP
+  </div>
+  <div class="mcq-answer">Answer: c. UDP</div>
+</div>
+
+<!-- </div> -->
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Von Neumann Architecture & Computing Systems)</h2>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">1. Who proposed the Von Neumann architecture?</div>
+    <div class="mcq-options">
+      <button>a. Charles Babbage</button>
+      <button>b. John von Neumann</button>
+      <button>c. Alan Turing</button>
+      <button>d. Bill Gates</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">2. What are the main components of the Von Neumann architecture?</div>
+    <div class="mcq-options">
+      <button>a. CPU, RAM, ROM, GPU</button>
+      <button>b. Memory, CPU, Input devices, Output devices</button>
+      <button>c. Hardware, Software, Network, Internet</button>
+      <button>d. ALU, CU, OS, BIOS</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">3. Which unit performs arithmetic and logical operations in the CPU?</div>
+    <div class="mcq-options">
+      <button>a. Control Unit</button>
+      <button>b. Memory Unit</button>
+      <button>c. Arithmetic Logic Unit (ALU)</button>
+      <button>d. Input Unit</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">4. What is the role of the Control Unit (CU)?</div>
+    <div class="mcq-options">
+      <button>a. Stores data permanently</button>
+      <button>b. Performs calculations</button>
+      <button>c. Manages CPU operations and directs components</button>
+      <button>d. Displays output</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">5. Which memory type is temporary and fast?</div>
+    <div class="mcq-options">
+      <button>a. ROM</button>
+      <button>b. RAM</button>
+      <button>c. Hard Disk</button>
+      <button>d. Flash Drive</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">6. Which bus carries actual data between CPU and memory?</div>
+    <div class="mcq-options">
+      <button>a. Control Bus</button>
+      <button>b. Address Bus</button>
+      <button>c. Data Bus</button>
+      <button>d. System Bus</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">7. What does the Address Bus do?</div>
+    <div class="mcq-options">
+      <button>a. Transfers data</button>
+      <button>b. Sends control signals</button>
+      <button>c. Carries memory addresses</button>
+      <button>d. Displays output</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">8. What is the first step in the CPU cycle?</div>
+    <div class="mcq-options">
+      <button>a. Execute</button>
+      <button>b. Decode</button>
+      <button>c. Fetch</button>
+      <button>d. Store</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">9. What happens during the Decode stage?</div>
+    <div class="mcq-options">
+      <button>a. Result is stored</button>
+      <button>b. Instruction is interpreted by CU</button>
+      <button>c. Data is displayed</button>
+      <button>d. Memory is cleared</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">10. What does the ALU do during execution?</div>
+    <div class="mcq-options">
+      <button>a. Stores instructions</button>
+      <button>b. Transfers files</button>
+      <button>c. Performs calculations</button>
+      <button>d. Manages input devices</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">11. What is the Von Neumann bottleneck?</div>
+    <div class="mcq-options">
+      <button>a. Fast processing due to multiple CPUs</button>
+      <button>b. Slow processing due to single memory path</button>
+      <button>c. Error in input devices</button>
+      <button>d. Extra memory storage</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">12. Which device is an output device?</div>
+    <div class="mcq-options">
+      <button>a. Keyboard</button>
+      <button>b. Mouse</button>
+      <button>c. Monitor</button>
+      <button>d. Scanner</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">13. What is system software used for?</div>
+    <div class="mcq-options">
+      <button>a. Playing games</button>
+      <button>b. Managing hardware and system operations</button>
+      <button>c. Writing documents</button>
+      <button>d. Browsing websites only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. Which protocol is used for reliable data transfer?</div>
+    <div class="mcq-options">
+      <button>a. UDP</button>
+      <button>b. TCP/IP</button>
+      <button>c. FTP</button>
+      <button>d. POP</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">15. Which protocol is used for fast communication without error checking?</div>
+    <div class="mcq-options">
+      <button>a. FTP</button>
+      <button>b. TCP/IP</button>
+      <button>c. UDP</button>
+      <button>d. POP</button>
+    </div>
+  </div>
+
 </section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
 
 </div>
 </article>
 </main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
 
 <footer class="footer">
   <div class="footer-links">
@@ -261,23 +717,120 @@ Example: Calculating 2 + 2 = 4</li>
 </footer>
 
 <script>
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
-const faqItems = document.querySelectorAll('.faq-question');
-faqItems.forEach(button => {
-  button.addEventListener('click', () => {
-    button.classList.toggle('active');
-    const answer = button.nextElementSibling;
-    if (answer.style.display === "block") {
-      answer.style.display = "none";
-    } else {
-      answer.style.display = "block";
-    }
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const answer = btn.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
   });
 });
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 </script>
 </body>
 </html>
