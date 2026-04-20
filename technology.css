@@ -82,10 +82,10 @@
   object-fit: fill;
 }
 
-/* .tech-posts {
+.tech-posts {
     grid-template-columns: 1fr; 
     justify-content: center;
-  } */
+  }
 .post-card
 {
   margin-left: 0;
