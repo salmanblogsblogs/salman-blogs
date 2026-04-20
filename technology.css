@@ -82,10 +82,10 @@
   object-fit: fill;
 }
 
-.tech-posts {
-    grid-template-columns: 1fr; /* single column */
+/* .tech-posts {
+    grid-template-columns: 1fr; 
     justify-content: center;
-  }
+  } */
 .post-card
 {
   margin-left: 0;
@@ -100,7 +100,8 @@
 
   .tech-posts {
     grid-template-columns: repeat(auto-fit, 280px);
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: left;
   }
   
 }
