@@ -16,11 +16,19 @@
   color: #555;
 }
 
-.tech-posts {
+/* .tech-posts {
   max-width: 1200px;
   margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+} */
+
+.tech-posts {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 380px); /* fixed card width */
   gap: 1.5rem;
   padding: 1rem;
 }
@@ -31,6 +39,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
+  margin-left: 30px;
 }
 
 .post-card:hover {
@@ -72,12 +81,26 @@
   height: 220px;
   object-fit: fill;
 }
-}
 
+.tech-posts {
+    grid-template-columns: 1fr; /* single column */
+    justify-content: center;
+  }
+.post-card
+{
+  margin-left: 0;
+}
+}
 @media (min-width: 935px) and (max-width: 1030px) {
   .post-card img {
     height: auto;          /* let image keep its ratio */
     max-height: 220px;     /* prevent it from getting too tall */
     object-fit: contain;   /* no cropping */
   }
+
+  .tech-posts {
+    grid-template-columns: repeat(auto-fit, 280px);
+    justify-content: center;
+  }
+  
 }
