@@ -27,15 +27,173 @@
   <meta name="twitter:image" content="https://salmanblogs.com/images/notes/subfields-ai.png" />
 </head>
 <body>
+
 <!-- Use of internal CSS. -->
- <style>
-  .post-content h2,
-.post-content h3 {
-  border-left: 4px solid #0077cc;
-  padding-left: 12px;
-  margin-top: 25px;
+<style>
+html { scroll-behavior: smooth; }
+.toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+.toc h2 { margin-top: 0; }
+.toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
+.toc a:hover { color: darkblue; }
+.toc li {list-style-type: none;}
+.post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+
+ .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .post-content p
+    {
+      margin: 0;
+    }
+
+
+  .test-mcqs {
+  max-width: 700px;
+  margin: auto;
 }
+.test-mcqs .mcq-item {
+  background: #f7f7f7;
+  border-left: 4px solid #0077cc;
+  padding: 15px;
+  margin: 10px 0;
+}
+.mcq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mcq-options button {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  font-size: 16px;
+}
+.mcq-options button.correct {
+  background-color: #d4edda; 
+  border-color: #28a745;
+  color: #155724;
+}
+.mcq-options button.wrong {
+  background-color: #f8d7da; 
+  border-color: #dc3545;
+  color: #721c24;
+}
+.mcq-options button.correct::after {
+  content: " ✅";
+  float: right;
+}
+.mcq-options button.wrong::after {
+  content: " ❌";
+  float: right;
+}
+.mcq-options button:hover {
+  background-color: #e2e6ea;
+}
+
+.test-mcqs h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showResult {
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showResult:hover {
+  background: #005fa3;
+}
+
+#resultText {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight input or MCQ when missing */
+.highlight-unanswered {
+  border: 2px solid #dc3545 !important;
+  background-color: #ffe5e5;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}    
+
+/* Back to top button styling */
+  #backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    font-size: 30px;
+    background-color: #002959;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #0055a5;
+  }
 </style>
+
 <header class="navbar">
   <div class="container">
     <div class="logo">
@@ -58,27 +216,24 @@
      <h1 class="post-title">Emerging Technologies Lecture 2 Notes</h1>
     <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
     <img src="images/9-CS-IMAGES/chapter-10/chapter-10-lecture2-notes.webp" alt="chapter-10-lecture2-notes" class="post-image" />
-
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
+    </p>
+    <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ul>
+    <li><a href="#et">Emerging Technology</a></li>
+    <li><a href="#ai">Artificial Intelligence</a></li>
+    <li><a href="#his">History</a></li>
+    <li><a href="#apps">Applicationss</a></li>
+    <li><a href="#mcqs">MCQs</a></li>
+    <li><a href="#test-mcqs">MCQs for testing</a></li>
+    <li><a href="#faqs">FAQs</a></li>
+    </ul>
+    </nav>
     <div class="post-content">
-      <h2>Introduction</h2>
-      <p>
-        These notes are prepared from a lecture delivered by <strong>Salman Ahmad</strong>, 
-        a <strong>teacher</strong> and <strong>web developer</strong>. In this session, we focused on the 
-        <strong>subfields of Artificial Intelligence (AI)</strong> which form the foundation of modern computing 
-        applications. These notes aim to help students build a clear understanding of AI concepts, 
-        their real-world usage, and applications in daily life.
-      </p>
-      <p>
-        Artificial Intelligence is not a single technology but a combination of several subfields. 
-        Each subfield plays an important role in making machines smarter, more efficient, and capable 
-        of solving complex problems. Here, we will study five major subfields: 
-        <strong>Machine Learning, Deep Learning, Natural Language Processing, Computer Vision,</strong> 
-        and <strong>Robotics</strong>.
-      </p>
-
-      <h2>Full Definitions — Subfields of AI</h2>
-
-      <h3>Machine Learning (ML)</h3>
+      <h2>Machine Learning (ML)</h2>
       <p>A branch of AI where computers learn from data and past experiences to improve performance over time without being explicitly programmed. Computers identify patterns and make predictions based on examples.</p>
       <p><strong>Examples:</strong></p>
       <ul>
@@ -87,7 +242,7 @@
         <li>Stock price predictions using historical data.</li>
       </ul>
 
-      <h3>Deep Learning (DL)</h3>
+      <h2>Deep Learning (DL)</h2>
       <p>A specialized part of machine learning that uses neural networks inspired by the human brain. It can process large amounts of data to recognize complex patterns and make decisions more accurately.</p>
       <p><strong>Examples:</strong></p>
       <ul>
@@ -95,7 +250,7 @@
         <li>Voice assistants like Siri and Google Assistant understanding speech.</li>
       </ul>
 
-      <h3>Natural Language Processing (NLP)</h3>
+      <h2>Natural Language Processing (NLP)</h2>
       <p>AI technology that allows computers to understand, interpret, and respond in human language.</p>
       <p><strong>Examples:</strong></p>
       <ul>
@@ -104,7 +259,7 @@
         <li>Language translation using Google Translate.</li>
       </ul>
 
-      <h3>Computer Vision</h3>
+      <h2>Computer Vision</h2>
       <p>AI technology that enables computers to analyze, interpret, and understand images and videos. It helps in tasks like object recognition, facial recognition, and visual data analysis.</p>
       <p><strong>Examples:</strong></p>
       <ul>
@@ -113,7 +268,7 @@
         <li>Image-based search engines like Google Images.</li>
       </ul>
 
-      <h3>Robotics</h3>
+      <h2>Robotics</h2>
       <p>The science and technology of designing, building, and programming robots. Robots can perform tasks autonomously or semi-autonomously, and AI can help them make decisions and adapt to new situations.</p>
       <p><strong>Examples:</strong></p>
       <ul>
@@ -122,92 +277,342 @@
         <li>Delivery drones navigating autonomously to deliver packages.</li>
       </ul>
 
-      <h2>Quick Notes — Subfields of AI</h2>
-      <ul>
-        <li><strong>Machine Learning (ML):</strong> AI system learns from data and improves over time without explicit programming.</li>
-        <p><strong>Examples:</strong></p>
-      <ul>
-        <li>Email spam detection automatically filters unwanted emails.</li>
-        <li>Movie recommendations on platforms like Netflix.</li>
-        <li>Stock price predictions using historical data.</li>
-      </ul>
-        <li><strong>Deep Learning (DL):</strong> A special type of ML using neural networks inspired by the human brain.</li>
-        <p><strong>Examples:</strong></p>
-      <ul>
-        <li>Self-driving cars recognizing roads and pedestrians.</li>
-        <li>Voice assistants like Siri and Google Assistant understanding speech.</li>
-      </ul>
+      <h2 id="mcqs">Multiple Choice Questions (MCQs) on AI Branches</h2>
 
-        <li><strong>Natural Language Processing (NLP):</strong> Helps computers understand and respond in human language.</li>
-         <p><strong>Examples:</strong></p>
-      <ul>
-        <li>Chatbots answering customer queries online.</li>
-        <li>Auto-complete suggestions in messaging apps.</li>
-        <li>Language translation using Google Translate.</li>
-      </ul>
-        <li><strong>Computer Vision:</strong> Enables computers to “see” and analyze images and videos.</li>
-        <p><strong>Examples:</strong></p>
-      <ul>
-        <li>Facial recognition for unlocking phones.</li>
-        <li>Security cameras detecting suspicious activity.</li>
-        <li>Image-based search engines like Google Images.</li>
-      </ul>
+<div class="mcq-item">
+  <div class="mcq-question">1. What is Machine Learning (ML)?</div>
+  <div class="mcq-options">
+    a. Manual programming only<br>
+    b. Computers learning from data and experience<br>
+    c. Only hardware design<br>
+    d. Typing data into computers
+  </div>
+  <div class="mcq-answer">Answer: b. Computers learning from data and experience</div>
+</div>
 
-        <li><strong>Robotics:</strong> Combines AI with machines to perform tasks automatically.</li>
-         <ul>
-        <p><strong>Examples:</strong></p>
-        <li>Cleaning robots for homes.</li>
-        <li>Industrial robots assembling cars in factories.</li>
-        <li>Delivery drones navigating autonomously to deliver packages.</li>
-      </ul>
-      </ul>
-      <h2>MCQs — Subfields of AI</h2>
-      <ol>
-        <li><strong>Which AI makes computers learn from data without being told exactly what to do?</strong><br>
-          a) Deep Learning<br>
-          b) Machine Learning ✅<br>
-          c) Computer Vision<br>
-          d) Robotics</li>
-        <li><strong>Deep Learning is inspired by:</strong><br>
-          a) Traffic lights<br>
-          b) The human brain ✅<br>
-          c) Computers only<br>
-          d) Robots</li>
-        <li><strong>Which AI helps computers understand human language?</strong><br>
-          a) Machine Learning<br>
-          b) NLP ✅<br>
-          c) Computer Vision<br>
-          d) Robotics</li>
-        <li><strong>Computer Vision helps computers:</strong><br>
-          a) Type messages<br>
-          b) Understand images and videos ✅<br>
-          c) Learn from data<br>
-          d) Drive robots</li>
-        <li><strong>Robotics with AI allows robots to:</strong><br>
-          a) Only follow orders<br>
-          b) Perform tasks and make decisions ✅<br>
-          c) Play music only<br>
-          d) Only watch videos</li>
-        <li><strong>Example of NLP in daily life:</strong><br>
-          a) Siri or Alexa<br>
-          b) Phone predictive text<br>
-          c) Both a and b ✅<br>
-          d) None</li>
-      </ol>
+<div class="mcq-item">
+  <div class="mcq-question">2. Machine Learning mainly works by:</div>
+  <div class="mcq-options">
+    a. Ignoring data<br>
+    b. Identifying patterns and making predictions<br>
+    c. Printing results only<br>
+    d. Building machines
+  </div>
+  <div class="mcq-answer">Answer: b. Identifying patterns and making predictions</div>
+</div>
 
-      <h2>Summary</h2>
-      <p>
-        To sum up, Artificial Intelligence is divided into important subfields such as 
-        Machine Learning, Deep Learning, NLP, Computer Vision, and Robotics. Each plays a 
-        unique role in shaping the digital world and making machines more intelligent. 
-        By understanding definitions, quick notes, and practicing MCQs, students will 
-        gain a strong foundation in Computer Science.
-      </p>
+<div class="mcq-item">
+  <div class="mcq-question">3. Which is an example of Machine Learning?</div>
+  <div class="mcq-options">
+    a. Writing letters<br>
+    b. Email spam detection<br>
+    c. Drawing pictures manually<br>
+    d. Reading books
+  </div>
+  <div class="mcq-answer">Answer: b. Email spam detection</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. What is Deep Learning (DL)?</div>
+  <div class="mcq-options">
+    a. Basic computer use<br>
+    b. A part of ML using neural networks<br>
+    c. Only programming languages<br>
+    d. Hardware repair
+  </div>
+  <div class="mcq-answer">Answer: b. A part of ML using neural networks</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. Deep Learning is inspired by:</div>
+  <div class="mcq-options">
+    a. Machines<br>
+    b. Human brain<br>
+    c. Books<br>
+    d. Internet cables
+  </div>
+  <div class="mcq-answer">Answer: b. Human brain</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. Which is an example of Deep Learning?</div>
+  <div class="mcq-options">
+    a. Typing documents<br>
+    b. Self-driving cars recognizing objects<br>
+    c. Printing files<br>
+    d. Saving data
+  </div>
+  <div class="mcq-answer">Answer: b. Self-driving cars recognizing objects</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. What is Natural Language Processing (NLP)?</div>
+  <div class="mcq-options">
+    a. Computer hardware<br>
+    b. AI understanding human language<br>
+    c. Writing books<br>
+    d. Playing games
+  </div>
+  <div class="mcq-answer">Answer: b. AI understanding human language</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. Which is an example of NLP?</div>
+  <div class="mcq-options">
+    a. Building robots<br>
+    b. Chatbots answering questions<br>
+    c. Driving cars<br>
+    d. Drawing images
+  </div>
+  <div class="mcq-answer">Answer: b. Chatbots answering questions</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. What does Computer Vision do?</div>
+  <div class="mcq-options">
+    a. Reads books<br>
+    b. Understands images and videos<br>
+    c. Builds houses<br>
+    d. Writes code only
+  </div>
+  <div class="mcq-answer">Answer: b. Understands images and videos</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. Which is an example of Computer Vision?</div>
+  <div class="mcq-options">
+    a. Typing messages<br>
+    b. Facial recognition<br>
+    c. Listening to music<br>
+    d. Sending emails
+  </div>
+  <div class="mcq-answer">Answer: b. Facial recognition</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. What is Robotics?</div>
+  <div class="mcq-options">
+    a. Study of books<br>
+    b. Designing and building robots<br>
+    c. Writing essays<br>
+    d. Playing games
+  </div>
+  <div class="mcq-answer">Answer: b. Designing and building robots</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. Robots can perform tasks:</div>
+  <div class="mcq-options">
+    a. Only manually<br>
+    b. Autonomously or semi-autonomously<br>
+    c. Only with humans<br>
+    d. Never independently
+  </div>
+  <div class="mcq-answer">Answer: b. Autonomously or semi-autonomously</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. Which is an example of Robotics?</div>
+  <div class="mcq-options">
+    a. Writing notes<br>
+    b. Cleaning robots<br>
+    c. Reading books<br>
+    d. Painting walls manually
+  </div>
+  <div class="mcq-answer">Answer: b. Cleaning robots</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. Which technology is used in Google Translate?</div>
+  <div class="mcq-options">
+    a. Robotics<br>
+    b. NLP<br>
+    c. Computer Vision<br>
+    d. Hardware design
+  </div>
+  <div class="mcq-answer">Answer: b. NLP</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. Stock price prediction is an example of:</div>
+  <div class="mcq-options">
+    a. Robotics<br>
+    b. Machine Learning<br>
+    c. Computer Vision<br>
+    d. Hardware systems
+  </div>
+  <div class="mcq-answer">Answer: b. Machine Learning</div>
+</div>
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (AI Branches)</h2>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">1. What is Machine Learning (ML)?</div>
+    <div class="mcq-options">
+      <button>a. Manual programming</button>
+      <button>b. Learning from data and experience</button>
+      <button>c. Only hardware design</button>
+      <button>d. Typing data</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">2. Machine Learning works by:</div>
+    <div class="mcq-options">
+      <button>a. Ignoring data</button>
+      <button>b. Identifying patterns</button>
+      <button>c. Printing results</button>
+      <button>d. Building machines</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">3. Example of Machine Learning is:</div>
+    <div class="mcq-options">
+      <button>a. Writing letters</button>
+      <button>b. Email spam detection</button>
+      <button>c. Drawing manually</button>
+      <button>d. Reading books</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">4. Deep Learning is:</div>
+    <div class="mcq-options">
+      <button>a. Basic computing</button>
+      <button>b. Part of ML using neural networks</button>
+      <button>c. Only programming</button>
+      <button>d. Hardware repair</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">5. Deep Learning is inspired by:</div>
+    <div class="mcq-options">
+      <button>a. Machines</button>
+      <button>b. Human brain</button>
+      <button>c. Books</button>
+      <button>d. Internet</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">6. Example of Deep Learning:</div>
+    <div class="mcq-options">
+      <button>a. Typing documents</button>
+      <button>b. Self-driving cars recognizing objects</button>
+      <button>c. Printing files</button>
+      <button>d. Saving data</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">7. NLP stands for:</div>
+    <div class="mcq-options">
+      <button>a. Natural Logic Program</button>
+      <button>b. Natural Language Processing</button>
+      <button>c. Neural Learning Process</button>
+      <button>d. Network Language Protocol</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">8. NLP allows computers to:</div>
+    <div class="mcq-options">
+      <button>a. Build robots</button>
+      <button>b. Understand human language</button>
+      <button>c. Drive cars</button>
+      <button>d. Create images</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">9. Example of NLP:</div>
+    <div class="mcq-options">
+      <button>a. Building machines</button>
+      <button>b. Chatbots answering questions</button>
+      <button>c. Driving vehicles</button>
+      <button>d. Farming tools</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">10. Computer Vision helps computers to:</div>
+    <div class="mcq-options">
+      <button>a. Write code</button>
+      <button>b. Understand images and videos</button>
+      <button>c. Build houses</button>
+      <button>d. Read books</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">11. Example of Computer Vision:</div>
+    <div class="mcq-options">
+      <button>a. Typing messages</button>
+      <button>b. Facial recognition</button>
+      <button>c. Listening music</button>
+      <button>d. Sending emails</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">12. Robotics is:</div>
+    <div class="mcq-options">
+      <button>a. Study of books</button>
+      <button>b. Designing and building robots</button>
+      <button>c. Writing essays</button>
+      <button>d. Playing games</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">13. Robots can work:</div>
+    <div class="mcq-options">
+      <button>a. Only manually</button>
+      <button>b. Autonomously or semi-autonomously</button>
+      <button>c. Only with humans</button>
+      <button>d. Never independently</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. Example of Robotics:</div>
+    <div class="mcq-options">
+      <button>a. Writing notes</button>
+      <button>b. Cleaning robots</button>
+      <button>c. Reading books</button>
+      <button>d. Painting walls</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">15. Google Translate uses:</div>
+    <div class="mcq-options">
+      <button>a. Robotics</button>
+      <button>b. NLP</button>
+      <button>c. Computer Vision</button>
+      <button>d. Hardware systems</button>
+    </div>
+  </div>
+
+</section>
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+
       <h2>Lectures</h2>
       <ul>
       <li><a href="9-class-chap-10-lecture-1.html">Previous</a></li>
       <li><a href="9-class-chap-10-lecture-3.html">Next</a></li>
       </ul>
+  
       <h2 id="related-posts">Related Posts</h2>
       <ul>
         <li><a href="Top-10-Programming-Languages-in-2025.html">Top 10 Programming Languages in 2025</a></li>
@@ -215,49 +620,92 @@
         <li><a href="Best-Online-Courses-for-High-Paying-Jobs.html">Best Online Courses for High-Paying Jobs in 2025</a></li>
       </ul>
 
-      <h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
+      <h2 id="faqs">FAQs</h2>
+
 <section class="faq-section">
 
-  <div class="faq-item">
-    <button class="faq-question">1. Which is the most widely used subfield of AI?</button>
-    <div class="faq-answer">
-      <p>Machine Learning, because it powers recommendation systems, fraud detection, and many daily-life apps.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">What is Machine Learning (ML)?</button>
+  <div class="faq-answer">
+    <p>Machine Learning is a branch of AI where computers learn from data and improve performance over time without being explicitly programmed.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">2. Is Deep Learning the same as Machine Learning?</button>
-    <div class="faq-answer">
-      <p>Deep Learning is a subset of Machine Learning that uses neural networks for complex tasks.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">How does Machine Learning work?</button>
+  <div class="faq-answer">
+    <p>Machine Learning works by identifying patterns in data and using those patterns to make predictions or decisions.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">3. What is the role of NLP?</button>
-    <div class="faq-answer">
-      <p>NLP helps machines understand and respond to human language, like chatbots or translators.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">What is Deep Learning?</button>
+  <div class="faq-answer">
+    <p>Deep Learning is a specialized part of Machine Learning that uses neural networks inspired by the human brain to process large amounts of data.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">4. How does Computer Vision work?</button>
-    <div class="faq-answer">
-      <p>Computer Vision processes and interprets images/videos to identify objects, people, or scenes.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">What are neural networks?</button>
+  <div class="faq-answer">
+    <p>Neural networks are systems designed like the human brain that help computers recognize patterns and make decisions.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">5. Where is Robotics used today?</button>
-    <div class="faq-answer">
-      <p>Robotics is used in homes (cleaning robots), industries (manufacturing robots), healthcare (surgery robots), and delivery systems (drones).</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">What is Natural Language Processing (NLP)?</button>
+  <div class="faq-answer">
+    <p>NLP is an AI technology that allows computers to understand, interpret, and respond to human language.</p>
   </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Where is NLP used?</button>
+  <div class="faq-answer">
+    <p>NLP is used in chatbots, language translation, and auto-complete features in messaging apps.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is Computer Vision?</button>
+  <div class="faq-answer">
+    <p>Computer Vision is an AI technology that helps computers understand and analyze images and videos.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are examples of Computer Vision?</button>
+  <div class="faq-answer">
+    <p>Examples include facial recognition, image search, and security systems detecting suspicious activity.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is Robotics?</button>
+  <div class="faq-answer">
+    <p>Robotics is the science of designing, building, and programming robots to perform tasks automatically or with minimal human control.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Where are robots used?</button>
+  <div class="faq-answer">
+    <p>Robots are used in homes for cleaning, in factories for assembling products, and in delivery systems like drones.</p>
+  </div>
+</div>
 
 </section>
 
-    </div>
-  </article>
+    <h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/9-class/chapter-7/chapter7-lecture1.pdf">
+  Download PDF
+</a>
+</div>
+</article>
 </main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
 
 <footer class="footer">
   <div class="footer-links">
@@ -272,22 +720,119 @@
 </footer>
 
 <script>
-  document.getElementById("navToggle").addEventListener("click", function () {
-    document.getElementById("navLinks").classList.toggle("show");
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const answer = btn.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
   });
 
-   // FAQ toggle
-  const faqItems = document.querySelectorAll(".faq-question");
-  faqItems.forEach(btn => {
-    btn.addEventListener("click", function () {
-      this.classList.toggle("active");
-      const answer = this.nextElementSibling;
-      if (answer.style.display === "block") {
-        answer.style.display = "none";
-      } else {
-        answer.style.display = "block";
-      }
-    });
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
 </body>

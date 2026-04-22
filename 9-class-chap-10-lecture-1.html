@@ -15,26 +15,183 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Emerging Technology — Artificial Intelligence, Applications & MCQs" />
   <meta property="og:description" content="Understand Emerging Technologies with focus on AI, its history, applications, examples, MCQs, advantages, future trends, and FAQs." />
-  <meta property="og:image" content="https://salmanblogs.com/images/technology/emerging-tech.png" />
-  <meta property="og:url" content="https://salmanblogs.com/emerging-technology.html" />
+  <meta property="og:image" content="http://localhost:52330/images/9-CS-IMAGES/chapter-10/chapter-10-lecture1-notes.webp" />
+  <meta property="og:url" content="http://localhost:52330/9-class-chap-10-lecture-1.html" />
   <meta property="og:type" content="article" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Emerging Technology — Artificial Intelligence, Applications & MCQs" />
   <meta name="twitter:description" content="Learn AI history, applications, advantages, MCQs, summary, and FAQs with examples in healthcare, transport, finance, education, agriculture, and more." />
-  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/emerging-tech.png" />
+  <meta name="twitter:image" content="http://localhost:52330/images/9-CS-IMAGES/chapter-10/chapter-10-lecture1-notes.webp" />
 </head>
 <body>
 <!-- Use of internal CSS. -->
- <style>
-  .post-content h2,
-.post-content h3 {
-  border-left: 4px solid #0077cc;
-  padding-left: 12px;
-  margin-top: 25px;
+<style>
+html { scroll-behavior: smooth; }
+.toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+.toc h2 { margin-top: 0; }
+.toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
+.toc a:hover { color: darkblue; }
+.toc li {list-style-type: none;}
+.post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+
+ .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .post-content p
+    {
+      margin: 0;
+    }
+
+
+  .test-mcqs {
+  max-width: 700px;
+  margin: auto;
 }
- </style>
+.test-mcqs .mcq-item {
+  background: #f7f7f7;
+  border-left: 4px solid #0077cc;
+  padding: 15px;
+  margin: 10px 0;
+}
+.mcq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mcq-options button {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  font-size: 16px;
+}
+.mcq-options button.correct {
+  background-color: #d4edda; 
+  border-color: #28a745;
+  color: #155724;
+}
+.mcq-options button.wrong {
+  background-color: #f8d7da; 
+  border-color: #dc3545;
+  color: #721c24;
+}
+.mcq-options button.correct::after {
+  content: " ✅";
+  float: right;
+}
+.mcq-options button.wrong::after {
+  content: " ❌";
+  float: right;
+}
+.mcq-options button:hover {
+  background-color: #e2e6ea;
+}
+
+.test-mcqs h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showResult {
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showResult:hover {
+  background: #005fa3;
+}
+
+#resultText {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight input or MCQ when missing */
+.highlight-unanswered {
+  border: 2px solid #dc3545 !important;
+  background-color: #ffe5e5;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}    
+
+/* Back to top button styling */
+  #backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    font-size: 30px;
+    background-color: #002959;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #0055a5;
+  }
+</style>
+
 <header class="navbar">
   <div class="container">
     <div class="logo">
@@ -58,29 +215,33 @@
     <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
     <img src="images/9-CS-IMAGES/chapter-10/chapter-10-lecture1-notes.webp" alt="chapter-10-lecture1-notes" class="post-image" loading="lazy">
 
-    <div class="post-content">
-      <h2>Introduction</h2>
-      <p>
-        These notes are based on a lecture delivered by <strong>Salman Ahmad</strong>, a teacher and web developer. 
-        The aim is to simplify <strong>Emerging Technologies</strong> for students and provide a clear understanding 
-        of <strong>Artificial Intelligence (AI)</strong>, its applications, examples, and key concepts.
-      </p>
-      <p>
-        In this lecture, we covered AI's history, real-world applications, multiple-choice questions (MCQs) 
-        for practice, and additional insights to help students relate technology to daily life. These notes are designed 
-        for both revision and foundational learning.
-      </p>
-
-      <h2>Definition</h2>
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#et">Emerging Technology</a></li>
+<li><a href="#ai">Artificial Intelligence</a></li>
+<li><a href="#his">History</a></li>
+<li><a href="#apps">Applicationss</a></li>
+<li><a href="#mcqs">MCQs</a></li>
+<li><a href="#test-mcqs">MCQs for testing</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+  <div class="post-content">
+  </p>
+      <h2 id="et">Definition</h2>
       <p>Emerging technology refers to new, innovative, and rapidly developing technologies that have the potential to change industries, societies, and human life.</p>
       <p><strong>Examples:</strong> Artificial Intelligence (AI), 5G Networks, Robotics.</p>
 
-      <h2>Artificial Intelligence (AI)</h2>
+      <h2 id="ai">Artificial Intelligence (AI)</h2>
 
       <h3>Introduction</h3>
       <p>Artificial Intelligence (AI) refers to the ability of machines or computer systems to think, learn, and make decisions like humans. AI is widely used today. From self-driving cars, chatbots, and medical diagnosis to gaming and e-commerce recommendations.</p>
 
-      <h3>Historical Context of AI</h3>
+      <h3 id="his">Historical Context of AI</h3>
       <ul>
         <li>1955: First AI program Logic Theorist (by Allen Newell & Herbert A. Simon).</li>
         <li>1956: Term “Artificial Intelligence” introduced by John McCarthy at the Dartmouth Conference.</li>
@@ -92,7 +253,7 @@
         <li>2023–Present: AI models like ChatGPT that understand and generate human-like text.</li>
       </ul>
 
-      <h2>Applications of AI</h2>
+      <h3 id="apps">Applications of AI</h3>
 
       <h3>Healthcare</h3>
       <p><strong>Definition:</strong> Use of AI in medical field for diagnosis, treatment, and patient care.</p>
@@ -108,20 +269,26 @@
         <li>AI chatbots answer student questions online.</li>
       </ul>
 
-      <h3>Transportation & Automobiles</h3>
-      <p><strong>Definition:</strong> AI in vehicles and traffic systems for safety and efficiency.</p>
+      <h3>Transportation</h3>
+      <p><strong>Definition:</strong> AI is used in self-driving cars and traffic systems to make roads safer and reduce traffic. It helps control traffic lights and avoid accidents.</p>
       <ul>
         <li>Tesla’s self-driving cars.</li>
-        <li>AI traffic lights that reduce congestion.</li>
         <li>GPS apps using AI to suggest fastest routes.</li>
       </ul>
+
+      <h3>Automobile</h3>
+      <p><strong>Definition:</strong> AI is improving cars by adding smart features like automatic braking, lane assist, and better performance. It also helps in vehicle maintenance and makes driving safer and more comfortable.</p>
+      <strong>Example:</strong>
+      <p>
+        Many modern cars from companies like BMW use AI for parking assistance and warning systems to avoid accidents.
+      </p>
 
       <h3>Finance</h3>
       <p><strong>Definition:</strong> AI in finance automates transactions, fraud detection, and customer service.</p>
       <ul>
         <li>Banks use AI chatbots for customer queries.</li>
         <li>AI detects credit card fraud.</li>
-        <li>Robo-advisors suggest investment plans.</li>
+        <li>AI advisors suggest investment plans.</li>
       </ul>
 
       <h3>Gaming</h3>
@@ -153,71 +320,338 @@
         <li>Chatbots helping customers.</li>
         <li>AI fraud detection in online payments.</li>
       </ul>
-      <h2>Advantages of AI</h2>
-        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <ul>
-        <li>Automates repetitive and mundane tasks.</li>
-        <li>Improves accuracy and reduces human error.</li>
-        <li>Processes large volumes of data quickly.</li>
-        <li>Enhances decision-making with predictive analytics.</li>
-        <li>Drives innovation across industries.</li>
-      </ul>
+      
+<h2 id="mcqs">Multiple Choice Questions (MCQs) on Emerging Technology & Artificial Intelligence</h2>
+<div class="mcq-item">
+  <div class="mcq-question">1. What is emerging technology?</div>
+  <div class="mcq-options">
+    a. Old and outdated technology<br>
+    b. New and rapidly developing technology<br>
+    c. Only computer hardware<br>
+    d. Technology used only in schools
+  </div>
+  <div class="mcq-answer">Answer: b. New and rapidly developing technology</div>
+</div>
 
-      <h2>Challenges & Disadvantages</h2>
-      <ul>
-        <li>High development and operational costs.</li>
-        <li>Job displacement in certain sectors.</li>
-        <li>Ethical and privacy concerns.</li>
-        <li>Dependence on data quality.</li>
-        <li>Potential bias in AI algorithms.</li>
-      </ul>
+<div class="mcq-item">
+  <div class="mcq-question">2. Which of the following is an example of emerging technology?</div>
+  <div class="mcq-options">
+    a. Typewriter<br>
+    b. Artificial Intelligence<br>
+    c. Radio<br>
+    d. Paper books
+  </div>
+  <div class="mcq-answer">Answer: b. Artificial Intelligence</div>
+</div>
 
-      <h2>Future Trends in AI</h2>
-      <ul>
-        <li>Integration of AI with IoT and smart cities.</li>
-        <li>More human-like AI assistants and robots.</li>
-        <li>Advanced natural language understanding.</li>
-        <li>AI in climate change modeling and sustainability.</li>
-        <li>Growth of AI in personalized healthcare and education.</li>
-      </ul>
+<div class="mcq-item">
+  <div class="mcq-question">3. What does Artificial Intelligence (AI) refer to?</div>
+  <div class="mcq-options">
+    a. Human intelligence only<br>
+    b. Machines that think and learn like humans<br>
+    c. Manual calculations<br>
+    d. Basic computer operations
+  </div>
+  <div class="mcq-answer">Answer: b. Machines that think and learn like humans</div>
+</div>
 
-      <h2>MCQs</h2>
-      <ol>
-        <li><strong>Who is known as the father<li><strong>Who is known as the father of AI?</strong><br>
-          a) Charles Babbage<br>
-          b) John McCarthy ✅<br>
-          c) Alan Turing<br>
-          d) Allen Newell</li>
-        <li><strong>The first AI program ‘Logic Theorist’ was created in which year?</strong><br>
-          a) 1950<br>
-          b) 1955 ✅<br>
-          c) 1965<br>
-          d) 1970</li>
-        <li><strong>Which of the following is NOT an application of AI?</strong><br>
-          a) Self-driving cars<br>
-          b) Disease diagnosis<br>
-          c) Personalized learning<br>
-          d) Manual typewriters ✅</li>
-        <li><strong>What does AI mainly try to simulate?</strong><br>
-          a) Human intelligence ✅<br>
-          b) Human muscles<br>
-          c) Human bones<br>
-          d) Human memory</li>
-        <li><strong>Which AI-based model was introduced in 2023 and became widely popular?</strong><br>
-          a) Alexa<br>
-          b) ChatGPT ✅<br>
-          c) Google Assistant<br>
-          d) Watson</li>
-      </ol>
+<div class="mcq-item">
+  <div class="mcq-question">4. Who introduced the term "Artificial Intelligence"?</div>
+  <div class="mcq-options">
+    a. Alan Turing<br>
+    b. John McCarthy<br>
+    c. Bill Gates<br>
+    d. Elon Musk
+  </div>
+  <div class="mcq-answer">Answer: b. John McCarthy</div>
+</div>
 
-      <h2>Summary</h2>
-      <p>
-        Artificial Intelligence (AI) is transforming industries worldwide by automating processes, improving efficiency, and enabling smarter decision-making. 
-        Understanding AI's history, applications, advantages, challenges, and future trends is essential for students to grasp the potential and responsibilities associated with emerging technologies. 
-        These notes serve as both a study guide and a reference for practical applications of AI in daily life.
-      </p>
+<div class="mcq-item">
+  <div class="mcq-question">5. What was the first AI program?</div>
+  <div class="mcq-options">
+    a. Siri<br>
+    b. Alexa<br>
+    c. Logic Theorist<br>
+    d. ChatGPT
+  </div>
+  <div class="mcq-answer">Answer: c. Logic Theorist</div>
+</div>
 
-      <h2>Lectures</h2>
+<div class="mcq-item">
+  <div class="mcq-question">6. In which decade did expert systems become popular?</div>
+  <div class="mcq-options">
+    a. 1950s<br>
+    b. 1960s<br>
+    c. 1970s–1980s<br>
+    d. 2000s
+  </div>
+  <div class="mcq-answer">Answer: c. 1970s–1980s</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. What is the main use of AI in healthcare?</div>
+  <div class="mcq-options">
+    a. Playing games<br>
+    b. Diagnosing diseases and assisting surgery<br>
+    c. Writing books<br>
+    d. Printing documents
+  </div>
+  <div class="mcq-answer">Answer: b. Diagnosing diseases and assisting surgery</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. How does AI help in education?</div>
+  <div class="mcq-options">
+    a. Replacing teachers completely<br>
+    b. Providing chatbots to answer questions<br>
+    c. Printing textbooks<br>
+    d. Building classrooms
+  </div>
+  <div class="mcq-answer">Answer: b. Providing chatbots to answer questions</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. What is an example of AI in transportation?</div>
+  <div class="mcq-options">
+    a. Manual driving<br>
+    b. Self-driving cars<br>
+    c. Bicycles<br>
+    d. Walking
+  </div>
+  <div class="mcq-answer">Answer: b. Self-driving cars</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. How does AI improve automobiles?</div>
+  <div class="mcq-options">
+    a. Makes cars heavier<br>
+    b. Adds smart features like automatic braking<br>
+    c. Removes engines<br>
+    d. Increases fuel usage
+  </div>
+  <div class="mcq-answer">Answer: b. Adds smart features like automatic braking</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. What is the role of AI in finance?</div>
+  <div class="mcq-options">
+    a. Building roads<br>
+    b. Detecting fraud and automating transactions<br>
+    c. Growing crops<br>
+    d. Teaching students
+  </div>
+  <div class="mcq-answer">Answer: b. Detecting fraud and automating transactions</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. How does AI improve gaming?</div>
+  <div class="mcq-options">
+    a. Makes games slower<br>
+    b. Adapts difficulty based on player skill<br>
+    c. Removes players<br>
+    d. Deletes levels
+  </div>
+  <div class="mcq-answer">Answer: b. Adapts difficulty based on player skill</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. What does AI do in social media?</div>
+  <div class="mcq-options">
+    a. Deletes all posts<br>
+    b. Recommends content and detects fake news<br>
+    c. Builds phones<br>
+    d. Prints messages
+  </div>
+  <div class="mcq-answer">Answer: b. Recommends content and detects fake news</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. How does AI help in agriculture?</div>
+  <div class="mcq-options">
+    a. Stops farming<br>
+    b. Improves crop quality and predicts planting time<br>
+    c. Builds factories<br>
+    d. Creates games
+  </div>
+  <div class="mcq-answer">Answer: b. Improves crop quality and predicts planting time</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. What is an example of AI in e-commerce?</div>
+  <div class="mcq-options">
+    a. Handwritten bills<br>
+    b. Product recommendations and chatbots<br>
+    c. Paper advertisements<br>
+    d. Manual shopping only
+  </div>
+  <div class="mcq-answer">Answer: b. Product recommendations and chatbots</div>
+</div>
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+
+  <section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Emerging Technology & AI)</h2>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">1. What is emerging technology?</div>
+    <div class="mcq-options">
+      <button>a. Old and outdated technology</button>
+      <button>b. New and rapidly developing technology</button>
+      <button>c. Only computer hardware</button>
+      <button>d. Technology used only in schools</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">2. Which of the following is an example of emerging technology?</div>
+    <div class="mcq-options">
+      <button>a. Typewriter</button>
+      <button>b. Artificial Intelligence</button>
+      <button>c. Radio</button>
+      <button>d. Paper books</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">3. Artificial Intelligence (AI) refers to:</div>
+    <div class="mcq-options">
+      <button>a. Human-only intelligence</button>
+      <button>b. Machines that think and learn like humans</button>
+      <button>c. Manual calculations</button>
+      <button>d. Printing documents</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">4. Who introduced the term "Artificial Intelligence"?</div>
+    <div class="mcq-options">
+      <button>a. Alan Turing</button>
+      <button>b. John McCarthy</button>
+      <button>c. Bill Gates</button>
+      <button>d. Elon Musk</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">5. What was the first AI program?</div>
+    <div class="mcq-options">
+      <button>a. Siri</button>
+      <button>b. Alexa</button>
+      <button>c. Logic Theorist</button>
+      <button>d. ChatGPT</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">6. In which decade did expert systems become popular?</div>
+    <div class="mcq-options">
+      <button>a. 1950s</button>
+      <button>b. 1960s</button>
+      <button>c. 1970s–1980s</button>
+      <button>d. 2000s</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">7. AI in healthcare is mainly used for:</div>
+    <div class="mcq-options">
+      <button>a. Gaming</button>
+      <button>b. Diagnosis and patient care</button>
+      <button>c. Social media posts</button>
+      <button>d. Printing books</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">8. AI in education helps by:</div>
+    <div class="mcq-options">
+      <button>a. Replacing schools</button>
+      <button>b. Providing chatbots and smart learning tools</button>
+      <button>c. Building classrooms</button>
+      <button>d. Printing notes only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">9. Which is an example of AI in transportation?</div>
+    <div class="mcq-options">
+      <button>a. Manual bikes</button>
+      <button>b. Self-driving cars</button>
+      <button>c. Walking</button>
+      <button>d. Paper maps</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">10. AI improves automobiles by:</div>
+    <div class="mcq-options">
+      <button>a. Removing engines</button>
+      <button>b. Adding smart safety features</button>
+      <button>c. Making cars slower</button>
+      <button>d. Increasing manual work</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">11. AI in finance is used for:</div>
+    <div class="mcq-options">
+      <button>a. Farming</button>
+      <button>b. Fraud detection and automation</button>
+      <button>c. Teaching</button>
+      <button>d. Drawing images only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">12. AI in gaming is used to:</div>
+    <div class="mcq-options">
+      <button>a. Delete games</button>
+      <button>b. Adjust difficulty and control characters</button>
+      <button>c. Print games</button>
+      <button>d. Stop players</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">13. AI in social media is used for:</div>
+    <div class="mcq-options">
+      <button>a. Blocking internet</button>
+      <button>b. Content recommendation and fake news detection</button>
+      <button>c. Printing posts</button>
+      <button>d. Building phones</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. AI in agriculture helps in:</div>
+    <div class="mcq-options">
+      <button>a. Stopping farming</button>
+      <button>b. Crop monitoring and prediction</button>
+      <button>c. Building roads</button>
+      <button>d. Playing games</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">15. AI in e-commerce is used for:</div>
+    <div class="mcq-options">
+      <button>a. Manual billing only</button>
+      <button>b. Product recommendations and chatbots</button>
+      <button>c. Paper shopping</button>
+      <button>d. No automation</button>
+    </div>
+  </div>
+</section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+
+<h2>Lectures</h2>
       <ul>
       <!-- <li><a href="9-class-chap-10-lecture-2.html">Previous</a></li> -->
       <li><a href="9-class-chap-10-lecture-2.html">Next</a></li>
@@ -228,96 +662,93 @@
         <li><a href="how-ai-will-replace-and-create-jobs-by-2030.html">How AI Will Replace and Create Jobs by 2030</a></li>
         <li><a href="Best-Online-Courses-for-High-Paying-Jobs.html">Best Online Courses for High-Paying Jobs in 2025</a></li>
       </ul>
-     <h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
+      
+<h2 id="faqs">FAQs</h2>
+
 <section class="faq-section">
 
-  <div class="faq-item">
-    <button class="faq-question">1. What is Artificial Intelligence?</button>
-    <div class="faq-answer">
-      <p>Artificial Intelligence (AI) is the simulation of human intelligence in machines that are programmed to think, learn, and make decisions.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">What is emerging technology?</button>
+  <div class="faq-answer">
+    <p>Emerging technology refers to new and rapidly developing technologies that can change industries and human life.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">2. What are the main types of AI?</button>
-    <div class="faq-answer">
-      <p>The main types are Narrow AI (focused on specific tasks), General AI (human-like intelligence), and Superintelligent AI (advanced theoretical intelligence).</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">What are examples of emerging technologies?</button>
+  <div class="faq-answer">
+    <p>Examples include Artificial Intelligence (AI), 5G networks, and robotics.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">3. How is AI used in daily life?</button>
-    <div class="faq-answer">
-      <p>AI is used in smartphones, chatbots, recommendation systems, autonomous vehicles, healthcare, gaming, and many other areas.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">What is Artificial Intelligence (AI)?</button>
+  <div class="faq-answer">
+    <p>AI is the ability of machines or systems to think, learn, and make decisions like humans.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">4. Why is AI important for the future?</button>
-    <div class="faq-answer">
-      <p>AI can automate tasks, improve efficiency, provide data-driven insights, enhance decision-making, and create new opportunities in almost every industry.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">Who introduced the term Artificial Intelligence?</button>
+  <div class="faq-answer">
+    <p>The term Artificial Intelligence was introduced by John McCarthy in 1956 at the Dartmouth Conference.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">5. What are some challenges of AI?</button>
-    <div class="faq-answer">
-      <p>Challenges include ethical concerns, job displacement, data privacy, algorithm bias, and the need for significant computing resources.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">What was the first AI program?</button>
+  <div class="faq-answer">
+    <p>The first AI program was Logic Theorist, developed by Allen Newell and Herbert A. Simon.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">6. What is machine learning?</button>
-    <div class="faq-answer">
-      <p>Machine learning is a subset of AI that allows systems to learn from data and improve their performance without being explicitly programmed.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">How is AI used in healthcare?</button>
+  <div class="faq-answer">
+    <p>AI is used for disease diagnosis, medical imaging, surgery assistance, and patient monitoring.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">7. What is deep learning?</button>
-    <div class="faq-answer">
-      <p>Deep learning is a type of machine learning that uses neural networks with multiple layers to analyze complex data patterns, often used in image recognition and natural language processing.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">How does AI help in education?</button>
+  <div class="faq-answer">
+    <p>AI helps in education by providing chatbots, smart learning tools, and answering student questions.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">8. Can AI make mistakes?</button>
-    <div class="faq-answer">
-      <p>Yes, AI systems can make mistakes if the data is incorrect, biased, or incomplete. Continuous monitoring and updates are necessary to minimize errors.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">What is the use of AI in transportation?</button>
+  <div class="faq-answer">
+    <p>AI is used in self-driving cars, traffic control systems, and route optimization.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">9. Is AI replacing human jobs?</button>
-    <div class="faq-answer">
-      <p>AI can automate repetitive tasks, but it also creates new roles in technology, data science, AI ethics, and other areas. Humans and AI often work together.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">How is AI used in social media?</button>
+  <div class="faq-answer">
+    <p>AI is used to recommend content, suggest videos, and detect fake news on social platforms.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">10. What is the difference between AI and robotics?</button>
-    <div class="faq-answer">
-      <p>AI refers to software that can simulate intelligence, while robotics involves machines that can perform physical tasks. AI can be embedded in robots to make them intelligent.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">How does AI help in agriculture?</button>
+  <div class="faq-answer">
+    <p>AI helps in agriculture by monitoring crops, predicting harvest time, and improving productivity.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">11. What industries benefit the most from AI?</button>
-    <div class="faq-answer">
-      <p>Healthcare, finance, transportation, education, e-commerce, agriculture, and entertainment are some industries that greatly benefit from AI technology.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question">12. How can students start learning AI?</button>
-    <div class="faq-answer">
-      <p>Students can start by learning programming languages like Python, understanding basic machine learning concepts, exploring AI platforms, and practicing with small projects and tutorials.</p>
-    </div>
-  </div>
 </section>
-    </div>
-  </article>
+      
+<h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/9-class/chapter-7/chapter7-lecture1.pdf">
+  Download PDF
+</a>
+</div>
+</article>
 </main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
 
 <footer class="footer">
   <div class="footer-links">
@@ -332,22 +763,119 @@
 </footer>
 
 <script>
-  document.getElementById("navToggle").addEventListener("click", function () {
-    document.getElementById("navLinks").classList.toggle("show");
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const answer = btn.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
   });
 
-  // FAQ toggle
-  const faqItems = document.querySelectorAll(".faq-question");
-  faqItems.forEach(btn => {
-    btn.addEventListener("click", function () {
-      this.classList.toggle("active");
-      const answer = this.nextElementSibling;
-      if (answer.style.display === "block") {
-        answer.style.display = "none";
-      } else {
-        answer.style.display = "block";
-      }
-    });
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
 </body>
