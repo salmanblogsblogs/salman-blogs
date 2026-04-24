@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lecture notes on Subfields of Artificial Intelligence (AI) by Salman Ahmad (Teacher & Web Developer). Includes definitions, quick notes, examples, MCQs, and FAQs." />
+  <meta name="keywords" content="Artificial Intelligence, Subfields of AI, Machine Learning, Deep Learning, NLP, Computer Vision, Robotics, Computer Science Class 9" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Subfields of Artificial Intelligence (AI) — Notes, Examples & MCQs | Salman Blogs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about.css">
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Subfields of Artificial Intelligence (AI) — Notes, Examples & MCQs" />
+  <meta property="og:description" content="Learn about Machine Learning, Deep Learning, NLP, Computer Vision, and Robotics with examples, quick notes, MCQs, and FAQs." />
+  <meta property="og:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-10/chapter-10-lecture2-notes.webp" />
+  <meta property="og:url" content="https://salmanblogs.com/9-class-chap-10-lecture-2" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Subfields of Artificial Intelligence (AI) — Notes, Examples & MCQs" />
+  <meta name="twitter:description" content="Clear lecture notes on AI subfields (ML, DL, NLP, Computer Vision, Robotics) with examples, quick notes, MCQs, and FAQs." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-10/chapter-10-lecture2-notes.webp" />
+</head>
+<body>
+
+<!-- Use of internal CSS. -->
+<style>
+html { scroll-behavior: smooth; }
+
+.post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+
+ .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .post-content p
+    {
+      margin: 0;
+    }
+
+
+  .test-mcqs {
+  max-width: 700px;
+  margin: auto;
+}
+.test-mcqs .mcq-item {
+  background: #f7f7f7;
+  border-left: 4px solid #0077cc;
+  padding: 15px;
+  margin: 10px 0;
+}
+.mcq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mcq-options button {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  font-size: 16px;
+}
+.mcq-options button.correct {
+  background-color: #d4edda; 
+  border-color: #28a745;
+  color: #155724;
+}
+.mcq-options button.wrong {
+  background-color: #f8d7da; 
+  border-color: #dc3545;
+  color: #721c24;
+}
+.mcq-options button.correct::after {
+  content: " ✅";
+  float: right;
+}
+.mcq-options button.wrong::after {
+  content: " ❌";
+  float: right;
+}
+.mcq-options button:hover {
+  background-color: #e2e6ea;
+}
+
+.test-mcqs h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showResult {
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showResult:hover {
+  background: #005fa3;
+}
+
+#resultText {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight input or MCQ when missing */
+.highlight-unanswered {
+  border: 2px solid #dc3545 !important;
+  background-color: #ffe5e5;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}    
+
+/* Back to top button styling */
+  #backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    font-size: 30px;
+    background-color: #002959;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #0055a5;
+  }
+</style>
+
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+     <h1 class="post-title">Data Communication and Computer Network</h1>
+    <div class="post-meta">Posted in <strong>8 Computer Science</strong></div>
+    <img src="images/daily-test.webp" alt="chapter-10-lecture2-notes" class="post-image" />
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
+    </p>
+    
+<h2 id="mcqs">Practice MCQs</h2>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What is data communication?</div>
+  <div class="mcq-options">
+    a. Storing data in a computer<br>
+    b. Exchanging data between devices<br>
+    c. Writing programs<br>
+    d. Printing documents
+  </div>
+  <div class="mcq-answer">Answer: b. Exchanging data between devices</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. Who sends the data in communication?</div>
+  <div class="mcq-options">
+    a. Receiver<br>
+    b. Sender<br>
+    c. Decoder<br>
+    d. Medium
+  </div>
+  <div class="mcq-answer">Answer: b. Sender</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. Who receives the data?</div>
+  <div class="mcq-options">
+    a. Sender<br>
+    b. Encoder<br>
+    c. Receiver<br>
+    d. Signal
+  </div>
+  <div class="mcq-answer">Answer: c. Receiver</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. What is a message in data communication?</div>
+  <div class="mcq-options">
+    a. Device<br>
+    b. Data or information being sent<br>
+    c. Cable<br>
+    d. Software
+  </div>
+  <div class="mcq-answer">Answer: b. Data or information being sent</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. What is transmission media?</div>
+  <div class="mcq-options">
+    a. A type of computer<br>
+    b. Path through which data travels<br>
+    c. A programming tool<br>
+    d. A storage device
+  </div>
+  <div class="mcq-answer">Answer: b. Path through which data travels</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. Which of the following is a transmission medium?</div>
+  <div class="mcq-options">
+    a. Keyboard<br>
+    b. Monitor<br>
+    c. Optical fiber<br>
+    d. Printer
+  </div>
+  <div class="mcq-answer">Answer: c. Optical fiber</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. What does an encoder do?</div>
+  <div class="mcq-options">
+    a. Receives data<br>
+    b. Converts data into signals<br>
+    c. Deletes data<br>
+    d. Stores data
+  </div>
+  <div class="mcq-answer">Answer: b. Converts data into signals</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. What does a decoder do?</div>
+  <div class="mcq-options">
+    a. Sends data<br>
+    b. Converts signals back into data<br>
+    c. Connects devices<br>
+    d. Stores signals
+  </div>
+  <div class="mcq-answer">Answer: b. Converts signals back into data</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. Which component is responsible for understanding the message?</div>
+  <div class="mcq-options">
+    a. Sender<br>
+    b. Receiver<br>
+    c. Encoder<br>
+    d. Medium
+  </div>
+  <div class="mcq-answer">Answer: b. Receiver</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. What is required for communication to occur?</div>
+  <div class="mcq-options">
+    a. Only sender<br>
+    b. Only receiver<br>
+    c. Sender, receiver, and medium<br>
+    d. Only data
+  </div>
+  <div class="mcq-answer">Answer: c. Sender, receiver, and medium</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. Which of the following is NOT a component of data communication?</div>
+  <div class="mcq-options">
+    a. Sender<br>
+    b. Receiver<br>
+    c. Compiler<br>
+    d. Medium
+  </div>
+  <div class="mcq-answer">Answer: c. Compiler</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. What form does data take during transmission?</div>
+  <div class="mcq-options">
+    a. Signals<br>
+    b. Files<br>
+    c. Images<br>
+    d. Documents
+  </div>
+  <div class="mcq-answer">Answer: a. Signals</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. Which device helps in converting digital data into signals?</div>
+  <div class="mcq-options">
+    a. Decoder<br>
+    b. Encoder<br>
+    c. Printer<br>
+    d. Scanner
+  </div>
+  <div class="mcq-answer">Answer: b. Encoder</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. Which medium uses air to transmit data?</div>
+  <div class="mcq-options">
+    a. Wired<br>
+    b. Wireless<br>
+    c. Optical<br>
+    d. Cable
+  </div>
+  <div class="mcq-answer">Answer: b. Wireless</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. What is the main purpose of data communication?</div>
+  <div class="mcq-options">
+    a. To store data<br>
+    b. To share information<br>
+    c. To delete files<br>
+    d. To design software
+  </div>
+  <div class="mcq-answer">Answer: b. To share information</div>
+</div>
+
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Data Communication)</h2>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">1. Which component starts the communication process?</div>
+    <div class="mcq-options">
+      <button>a. Sender</button>
+      <button>b. Receiver</button>
+      <button>c. Decoder</button>
+      <button>d. Medium</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">2. What is the role of the receiver?</div>
+    <div class="mcq-options">
+      <button>a. To send data</button>
+      <button>b. To encode signals</button>
+      <button>c. To accept data</button>
+      <button>d. To store signals</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">3. What is called the information being sent?</div>
+    <div class="mcq-options">
+      <button>a. Signal</button>
+      <button>b. Message</button>
+      <button>c. Channel</button>
+      <button>d. Network</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">4. Which one is an example of wired transmission media?</div>
+    <div class="mcq-options">
+      <button>a. Radio waves</button>
+      <button>b. Bluetooth</button>
+      <button>c. Wi-Fi</button>
+      <button>d. Copper cable</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">5. What does an encoder convert data into?</div>
+    <div class="mcq-options">
+      <button>a. Signals</button>
+      <button>b. Images</button>
+      <button>c. Text</button>
+      <button>d. Files</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">6. Which device converts signals back into original data?</div>
+    <div class="mcq-options">
+      <button>a. Sender</button>
+      <button>b. Medium</button>
+      <button>c. Decoder</button>
+      <button>d. Router</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">7. Which part carries the data from sender to receiver?</div>
+    <div class="mcq-options">
+      <button>a. Message</button>
+      <button>b. Transmission media</button>
+      <button>c. Encoder</button>
+      <button>d. Decoder</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">8. Which of the following is NOT a wireless medium?</div>
+    <div class="mcq-options">
+      <button>a. Infrared</button>
+      <button>b. Microwave</button>
+      <button>c. Radio waves</button>
+      <button>d. Fiber cable</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">9. Communication without wires is called:</div>
+    <div class="mcq-options">
+      <button>a. Wireless communication</button>
+      <button>b. Cable communication</button>
+      <button>c. Optical communication</button>
+      <button>d. Manual communication</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">10. Which process ensures data is understandable at the receiver end?</div>
+    <div class="mcq-options">
+      <button>a. Encoding</button>
+      <button>b. Transmission</button>
+      <button>c. Decoding</button>
+      <button>d. Sending</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">11. Which component is responsible for sending signals?</div>
+    <div class="mcq-options">
+      <button>a. Receiver</button>
+      <button>b. Sender</button>
+      <button>c. Decoder</button>
+      <button>d. Medium</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">12. Which of the following is an example of wireless communication?</div>
+    <div class="mcq-options">
+      <button>a. USB cable</button>
+      <button>b. Ethernet</button>
+      <button>c. Fiber optic</button>
+      <button>d. Wi-Fi</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">13. Data communication requires at least:</div>
+    <div class="mcq-options">
+      <button>a. Two devices</button>
+      <button>b. One device</button>
+      <button>c. Three devices</button>
+      <button>d. Four devices</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">14. What is the main job of transmission media?</div>
+    <div class="mcq-options">
+      <button>a. Store data</button>
+      <button>b. Process data</button>
+      <button>c. Transfer data</button>
+      <button>d. Delete data</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">15. Which component prepares data for transmission?</div>
+    <div class="mcq-options">
+      <button>a. Receiver</button>
+      <button>b. Encoder</button>
+      <button>c. Decoder</button>
+      <button>d. Medium</button>
+    </div>
+  </div>
+
+</section>
+
+
+ <div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+
+</div>
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const answer = btn.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>

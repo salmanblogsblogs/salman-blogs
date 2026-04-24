@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Get in Touch with Salman Ahmad</title>
+
   <meta name="description" content="Salman Blogs - Explore insightful blogs on Technology, Health, Travel, Food, Lifestyle, and more.">
   <meta name="keywords" content="Salman Blogs, Technology Blogs, Health Tips, Travel Guides, Food Recipes, Lifestyle Advice, Programming">
   <meta name="author" content="Salman Ahmad">
@@ -11,13 +12,12 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="contact.css" />
 
-  <!-- Favicon for all browsers -->
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <!-- High-res PNG for modern browsers & Google Search -->
   <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
-  <!-- Apple Touch Icon (optional, for iPhones/iPads) -->
   <link rel="apple-touch-icon" sizes="180x180" href="favicon-512.png">
-    <!-- Open Graph -->
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Contact Salman Ahmad - Salman Blog Zone" />
   <meta property="og:description" content="Have questions or feedback? Contact me via email, WhatsApp, or Instagram." />
   <meta property="og:image" content="https://salmanblogs.com/images/og-contact.png" />
@@ -30,14 +30,8 @@
   <meta name="twitter:description" content="Reach out for blog feedback, queries, or collaborations." />
   <meta name="twitter:image" content="https://salmanblogs.com/images/og-contact.png" />
 
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    // Initialize EmailJS with your Public Key
-    (function(){
-      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual public key
-    })();
-  </script>
 </head>
+
 <body>
 
 <header class="navbar">
@@ -60,19 +54,16 @@
 <main class="contact-container">
   <section class="contact-box">
     <h1>Contact Me</h1>
-    <p>If you have any questions, feedback,feel free to get in touch!</p>
-    <div class="contact-info">
-      
-    </div>
+    <p>If you have any questions or feedback, feel free to get in touch!</p>
 
-    <!-- EmailJS-enabled contact form -->
     <form class="contact-form" id="contact-form">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-  <button type="submit">Send Message</button>
-</form>
-<div id="form-status" class="form-status"></div>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="form-status" class="form-status"></div>
   </section>
 </main>
 
@@ -88,29 +79,38 @@
   <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
 </footer>
 
+<!-- Navbar Toggle -->
 <script>
   document.getElementById("navToggle").addEventListener("click", function () {
     document.getElementById("navLinks").classList.toggle("show");
   });
 </script>
 
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<!-- EmailJS (UPDATED VERSION) -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 <script>
   (function () {
-    emailjs.init("BylCo49k0pBx6P7pA"); // Replace with your EmailJS Public Key
+    emailjs.init("BylCo49k0pBx6P7pA"); // Your Public Key
   })();
 </script>
+
+<!-- Form Script -->
 <script>
   document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
+    const status = document.getElementById("form-status");
+    status.innerHTML = "Sending...";
+
     emailjs.sendForm("service_b7czylk", "template_1xct7wh", this)
-      .then(function () {
-        alert("Message sent successfully!");
-        document.getElementById("contact-form").reset(); // Clear the form
-      }, function (error) {
-        alert("Failed to send message. Please try again.");
-        console.log("FAILED...", error);
+      .then(() => {
+        status.innerHTML = "✅ Message sent successfully!";
+        this.reset();
+      })
+      .catch((error) => {
+        status.innerHTML = "❌ Failed to send message. Try again.";
+        console.error("EmailJS Error:", error);
       });
   });
 </script>
