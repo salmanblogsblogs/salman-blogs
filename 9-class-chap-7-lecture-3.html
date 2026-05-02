@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Algorithm Design Activities and LARP – 9 Computer Science | Salman Blogs</title>
+
+<meta name="description" content="Learn Algorithm Design Activities including Time Complexity, Space Complexity, Dry Run, Simulation, LARP, Error Identification, Debugging Techniques, 9 computer chapter 7 notes, and Types of Errors with simple explanations and examples for 9 Computer Science students.">
+
+<meta name="keywords" content="Algorithm Design Activities, Flowcharts, Pseudocode, Time Complexity, Space Complexity, Dry Run, Simulation, LARP, Debugging, Errors in Programming, 9 Computer Science, Salman Ahmad, Salman Blogs, problem solving, algorithms, computer with salman">
+
+<meta name="author" content="Salman Ahmad">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="about.css">
+
+<meta property="og:title" content="Algorithm Design Activities | 9 Computer Science by Salman Blogs">
+<meta property="og:description" content="Learn Algorithm Design Activities including Time Complexity, Space Complexity, Dry Run, Simulation, LARP, 9 computer chapter 7 notes, and Debugging with simple explanations and examples for Class 9 Computer Science.">
+<meta property="og:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-7/9-Computer-Science-Chapter-7-Lecture-2.webp">
+<meta property="og:url" content="https://salmanblogs.com/9-class-chap-7-lecture-2">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Salman Blogs">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Algorithm Design Activities | 9 Computer Science by Salman Blogs">
+<meta name="twitter:description" content="Simple notes on Time Complexity, Space Complexity, Dry Run, Simulation, LARP, 9 computer chapter 7 notes, and Debugging with examples for Class 9 Computer Science students. computer with salman, computer with salman blogs, 9 computer notes.">
+<meta name="twitter:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-7/9-Computer-Science-Chapter-7-Lecture-2.webp">
+
+<style>
+html { scroll-behavior: smooth; }
+.toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+.toc h2 { margin-top: 0; }
+.toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
+.toc a:hover { color: darkblue; }
+.toc li {list-style-type: none;}
+.post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+
+ul, ol 
+{
+  margin-left: 20px;
+}
+
+table th 
+{
+  padding: 15px;
+}
+ .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .post-content p
+    {
+      margin: 0;
+    }
+
+
+  .test-mcqs {
+  max-width: 700px;
+  margin: auto;
+}
+.test-mcqs .mcq-item {
+  background: #f7f7f7;
+  border-left: 4px solid #0077cc;
+  padding: 15px;
+  margin: 10px 0;
+}
+.mcq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mcq-options button {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  font-size: 16px;
+}
+.mcq-options button.correct {
+  background-color: #d4edda; 
+  border-color: #28a745;
+  color: #155724;
+}
+.mcq-options button.wrong {
+  background-color: #f8d7da; 
+  border-color: #dc3545;
+  color: #721c24;
+}
+.mcq-options button.correct::after {
+  content: " ✅";
+  float: right;
+}
+.mcq-options button.wrong::after {
+  content: " ❌";
+  float: right;
+}
+.mcq-options button:hover {
+  background-color: #e2e6ea;
+}
+
+.test-mcqs h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showResult {
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showResult:hover {
+  background: #005fa3;
+}
+
+#resultText {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight input or MCQ when missing */
+.highlight-unanswered {
+  border: 2px solid #dc3545 !important;
+  background-color: #ffe5e5;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}    
+
+/* Back to top button styling */
+  #backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    font-size: 30px;
+    background-color: #002959;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #0055a5;
+  }
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="container">
+<div class="logo">
+<span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
+</div>
+
+<div class="nav-toggle" id="navToggle">&#9776;</div>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="categories.html">Categories</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+<li><a href="terms.html">Terms</a></li>
+</ul>
+</div>
+</header>
+
+<main class="post-container">
+
+<article class="blog-post">
+
+<h1 class="post-title">Algorithm Design Activities and LARP</h1>
+<div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+<img src="images/9-CS-IMAGES/chapter-7/9-Computer-Science-Chapter-7-Lecture-3.webp" alt="9-Computer-Science-Chapter 7-Lecture-3" class="post-image" loading="lazy">
+<p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
+</p>
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#algo-activities">Algorithm Design Activities</a></li>
+<li><a href="#time">Time Complexity</a></li>
+<li><a href="#space">Space Complexity</a></li>
+<li><a href="#dryrun">Dry Run</a></li>
+<li><a href="#flowchart-dryrun">Dry Run of a Flowchart</a></li>
+<li><a href="#pseudocode-dryrun">Dry Run of a Pseudocode</a></li>
+<li><a href="#simulation">Simulation</a></li>
+<li><a href="#larp">LARP</a></li>
+<li><a href="#Error-and-debugging">Error and Debugging</a></li>
+<li><a href="#debugging-techniques">Debugging Techniques</a></li>
+<li><a href="#common-errors">Common Errors</a></li>
+<li><a href="#mcqs">MCQs</a></li>
+<li><a href="#test-mcqs">MCQs for testing</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+
+<div class="post-content">
+<h2 id="algo-activities">Algorithm Design Activities</h2>
+  <h3>Design and Evalulation Techniques</h3>
+<p>Design and evaluation techniques are used to create algorithms and check how well they work. They help us make step-by-step solutions to problems and then test them to see if they are fast, correct, and efficient. </p>
+<p><strong>We can check the efficiency of algorithms by two methods:</strong> </p>
+<ol>
+  <li>Time Complexity (how fast the algorithm runs)</li>
+  <li>Space Complexity (how much memory it uses)</li>
+</ol>
+
+<h2 id="time">Time Complexity</h2>
+<p>Time complexity tells us how much time an algorithm takes to solve a problem.</p>
+<ul>
+  <li>If an algorithm takes less time, it is better.</li>
+  <li>We usually measure time based on input size (like number of items).</li>
+</ul>
+<strong>If an algorithm becomes slow when input increases, it is not efficient.</strong>
+
+<h2 id="space">Space Complexity</h2>
+<p>Space complexity tells us how much memory (space) an algorithm uses to solve a problem.</p>
+<ul>
+  <li>If an algorithm uses less memory, it is better.</li>
+  <li>We usually measure space based on input size and extra storage needed.</li>
+</ul>
+<strong>If an algorithm uses too much memory when input increases, it is not efficient.</strong>
+
+<h2 id="dryrun">Dry Run</h2>
+<p>
+A dry run means manually going through an algorithm step by step to see how it works, without using any tool or digital device.
+</p>
+
+<h2 id="flowchart-dryrun">Dry Run of a Flowchart</h2>
+<p>
+A dry run of a flowchart means we manually follow each step of the flowchart using sample input to see what output it gives.
+</p>
+
+<h3>Steps in Flowchart:</h3>
+<ul>
+  <li>Start</li>
+  <li>Input Name</li>
+  <li>Display Name</li>
+  <li>Stop</li>
+</ul>
+
+<h3>Dry Run Example</h3>
+<p>Let’s assume input is: <strong>Name = "Ali"</strong></p>
+
+<table border="1" cellpadding="5" style="text-align: center;">
+  <tr>
+    <th>Step</th>
+    <th>Flowchart Action</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Start</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Input name</td>
+    <td>Name = Ali</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Display name</td>
+    <td>Ali</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Stop</td>
+    <td>-</td>
+  </tr>
+</table>
+
+<h2 id="pseudocode-dryrun">Dry Run of a Pseudocode</h2>
+
+<p>
+A dry run of pseudocode means we manually follow each step of the pseudocode using sample input to see what output it gives.
+</p>
+
+<h3>Steps in Pseudocode:</h3>
+<pre>
+START
+INPUT Name
+DISPLAY Name
+STOP
+</pre>
+
+<h3>Dry Run Example</h3>
+<p>Let’s assume input is: <strong>Name = "Ali"</strong></p>
+
+<table border="1" cellpadding="5" style="text-align: center;">
+  <tr>
+    <th>Step</th>
+    <th>Pseudocode Action</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>START</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>INPUT Name</td>
+    <td>Name = Ali</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>DISPLAY Name</td>
+    <td>Ali</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>STOP</td>
+    <td>-</td>
+  </tr>
+</table>
+
+<h2 id="simulation">Simulation</h2>
+
+<p>
+Simulation is the use of computer programs to create a model of a real-world process or system. This helps us understand how things work by testing different ideas or algorithms without needing to try them in real life.
+</p>
+
+<p>
+It is also called computer simulation. It is also used to train people using artificial models of real-world situations.
+</p>
+
+<h3>Examples of Simulators:</h3>
+<ul>
+  <li>Flight simulator used to train pilots in a virtual airplane environment</li>
+  <li>Driving simulator used to practice driving without real vehicles</li>
+  <li>Weather simulator used to predict and study weather conditions</li>
+  <li>Medical simulator used to train doctors for surgeries</li>
+</ul>
+
+<h3>Why Use Simulation?</h3>
+
+<ol>
+  <li>
+    <strong>Testing Algorithms:</strong>
+    <p>
+      We use simulation to test how an algorithm works with different data.
+      <br>
+      <strong>Example:</strong> We can test a sorting algorithm with small and large lists of numbers to see how fast it works.
+    </p>
+  </li>
+
+  <li>
+    <strong>Exploring Scenarios:</strong>
+    <p>
+      Simulation helps us try different situations without doing them in real life.
+      <br>
+      <strong>Example:</strong> We can test how plants grow with different amounts of water and sunlight.
+    </p>
+  </li>
+</ol>
+
+<h3>Benefits of Simulation</h3>
+
+<ul>
+  <li>
+    <strong>Cost-Effective:</strong>
+    <p>
+      Simulation is cheaper and faster than real experiments.
+      <br>
+      <strong>Example:</strong> Testing a new machine design on a computer is cheaper than building it in real life.
+    </p>
+  </li>
+
+  <li>
+    <strong>Safe:</strong>
+    <p>
+      We can test dangerous situations without any risk.
+      <br>
+      <strong>Example:</strong> A fire simulation can help train people without starting a real fire.
+    </p>
+  </li>
+
+  <li>
+    <strong>Repeatable:</strong>
+    <p>
+      We can run the same simulation many times with different settings.
+      <br>
+      <strong>Example:</strong> We can test weather conditions multiple times by changing temperature and rainfall.
+    </p>
+  </li>
+</ul>
+
+<h3>Examples of Simulation</h3>
+
+<ol>
+  <li>
+    <strong>Weather Forecasting:</strong>
+    <p>
+      Meteorologists use simulation to predict the weather. They enter data like temperature,
+      humidity, and wind speed into a computer model. The simulation shows how the weather may change in the next few days.
+    </p>
+  </li>
+
+  <li>
+    <strong>Traffic Flow:</strong>
+    <p>
+      City planners use simulation to study traffic. They test how cars move when they change roads or traffic lights.
+      This helps them reduce traffic jams and improve road design.
+    </p>
+  </li>
+</ol>
+
+<h2 id="larp">LARP (Logic of Algorithms for Resolution of Problems)</h2>
+
+<p>
+LARP (Logic of Algorithms for Resolution of Problems) is a learning tool used to understand how algorithms work by running them step by step and seeing the results.
+</p>
+
+<h3>Simple Idea:</h3>
+<ul>
+  <li>It is a tool for learning algorithms</li>
+  <li>It helps you test and run algorithms</li>
+  <li>It shows step-by-step working and output</li>
+</ul>
+
+<h3>Why is LARP Important?</h3>
+
+<p>LARP helps you:</p>
+
+<ul>
+  <li>
+  Understand how algorithms work. For example, it can show an algorithm that checks whether a person should pay tax based on their annual salary. If the salary is above a certain limit, tax is applied; otherwise, no tax is charged.
+</li>
+
+  <li>
+    See how different inputs change the output.
+  </li>
+
+  <li>
+    Practice writing and improving your own algorithms.
+  </li>
+</ul>
+
+<h2 id="Error-and-debugging">Error Identification and Debugging</h2>
+
+<p>
+When we write algorithms or create flowcharts in LARP, we sometimes make mistakes called errors or bugs. These mistakes can stop our algorithms from working correctly. <br>
+
+<strong>OR </strong> Error identification means finding mistakes (errors) in a flowchart, algorithm, or pseudocode.
+</p>
+
+<p>
+<strong>Debugging</strong> is the process used to find and fix the errors so that the algorithm, flowchart or pseudocode work properly.
+</p>
+
+<h3>Types of Errors</h3>
+
+<p>There are three main types of errors you might encounter:</p>
+
+<ul>
+  <li>
+    <strong>Syntax Errors:</strong>
+    <p>
+      These happen when something is written incorrectly in an algorithm or flowchart.
+      For example, missing a step or using the wrong symbol.
+    </p>
+  </li>
+
+  <li>
+    <strong>Runtime Errors:</strong>
+    <p>
+      These happen while the algorithm is running. For example, trying to divide a number by zero.
+    </p>
+  </li>
+
+  <li>
+    <strong>Logical Errors:</strong>
+    <p>
+A logical error occurs due to wrong or poor logic used by the programmer.
+</p>
+
+<p>
+For example, using the wrong condition in a decision step. So, the program runs but gives the wrong result.
+</p>
+  </li>
+</ul>
+
+<h2 id="debugging-techniques">Debugging Techniques</h2>
+
+<p>
+Debugging is the process of finding and fixing errors in an algorithm or flowchart.
+</p>
+
+<p>Here are some common debugging techniques:</p>
+
+<ul>
+  <li>
+    <strong>Trace the Steps:</strong>
+    <p>Go through each step of your algorithm or flowchart to find where it goes wrong.</p>
+  </li>
+
+  <li>
+    <strong>Use Comments:</strong>
+    <p>Write notes or comments in your algorithm to explain what each part does. This helps in finding mistakes.</p>
+  </li>
+
+  <li>
+    <strong>Check Conditions:</strong>
+    <p>Make sure all conditions in decision steps are correct.</p>
+  </li>
+
+  <li>
+    <strong>Simplify the Problem:</strong>
+    <p>Break the algorithm into small parts and test each part separately.</p>
+  </li>
+</ul>
+
+<h2 id="common-errors">Common Error Messages in LARP</h2>
+
+<p>Here are some common error messages you might see in LARP and what they mean:</p>
+
+<ul>
+  <li>
+    <strong>Missing Step:</strong>
+    <p>You probably forgot to include an important step in your algorithm.</p>
+  </li>
+
+  <li>
+    <strong>Undefined Variable:</strong>
+    <p>You are using a variable that has not been defined yet.</p>
+  </li>
+
+  <li>
+    <strong>Invalid Operation:</strong>
+    <p>You are trying to perform an operation that is not allowed, such as dividing by zero.</p>
+  </li>
+</ul>
+
+<h2 id="mcqs">Multiple Choice Questions (MCQs)</h2>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What are algorithm design methods?</div>
+  <div class="mcq-options">
+    a. Programming languages<br>
+    b. Techniques to design algorithms<br>
+    c. Computer hardware<br>
+    d. Internet tools
+  </div>
+  <div class="mcq-answer">Answer: b. Techniques to design algorithms</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. What does time complexity measure?</div>
+  <div class="mcq-options">
+    a. Memory usage<br>
+    b. Speed of algorithm<br>
+    c. Internet speed<br>
+    d. Hardware performance
+  </div>
+  <div class="mcq-answer">Answer: b. Speed of algorithm</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. What does space complexity measure?</div>
+  <div class="mcq-options">
+    a. Time taken<br>
+    b. Memory used<br>
+    c. Output result<br>
+    d. Input size only
+  </div>
+  <div class="mcq-answer">Answer: b. Memory used</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. What is a dry run?</div>
+  <div class="mcq-options">
+    a. Running a program on computer<br>
+    b. Manually checking steps of an algorithm<br>
+    c. Installing software<br>
+    d. Deleting errors automatically
+  </div>
+  <div class="mcq-answer">Answer: b. Manually checking steps of an algorithm</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. Simulation is used to:</div>
+  <div class="mcq-options">
+    a. Delete data<br>
+    b. Create real-world models on computer<br>
+    c. Break computers<br>
+    d. Store passwords
+  </div>
+  <div class="mcq-answer">Answer: b. Create real-world models on computer</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. LARP stands for:</div>
+  <div class="mcq-options">
+    a. Logic of Algorithms for Resolution of Problems<br>
+    b. Learning Algorithms for Real Programs<br>
+    c. Level of Algorithm Running Program<br>
+    d. Logic of Application Running Process
+  </div>
+  <div class="mcq-answer">Answer: a. Logic of Algorithms for Resolution of Problems</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. Which is NOT a type of error?</div>
+  <div class="mcq-options">
+    a. Syntax error<br>
+    b. Runtime error<br>
+    c. Logical error<br>
+    d. Network error
+  </div>
+  <div class="mcq-answer">Answer: d. Network error</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. Syntax errors occur when:</div>
+  <div class="mcq-options">
+    a. Logic is wrong<br>
+    b. Program is running<br>
+    c. Code is written incorrectly<br>
+    d. Computer is slow
+  </div>
+  <div class="mcq-answer">Answer: c. Code is written incorrectly</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. Runtime errors occur during:</div>
+  <div class="mcq-options">
+    a. Planning<br>
+    b. Writing code<br>
+    c. Execution<br>
+    d. Saving file
+  </div>
+  <div class="mcq-answer">Answer: c. Execution</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. Logical errors are caused by:</div>
+  <div class="mcq-options">
+    a. Wrong logic<br>
+    b. Hardware failure<br>
+    c. Internet issue<br>
+    d. Power failure
+  </div>
+  <div class="mcq-answer">Answer: a. Wrong logic</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. Debugging means:</div>
+  <div class="mcq-options">
+    a. Creating errors<br>
+    b. Finding and fixing errors<br>
+    c. Deleting program<br>
+    d. Running virus
+  </div>
+  <div class="mcq-answer">Answer: b. Finding and fixing errors</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. Which is a debugging technique?</div>
+  <div class="mcq-options">
+    a. Playing games<br>
+    b. Trace the steps<br>
+    c. Printing files<br>
+    d. Installing apps
+  </div>
+  <div class="mcq-answer">Answer: b. Trace the steps</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. Missing step error means:</div>
+  <div class="mcq-options">
+    a. Extra step added<br>
+    b. Important step forgotten<br>
+    c. Computer issue<br>
+    d. Internet error
+  </div>
+  <div class="mcq-answer">Answer: b. Important step forgotten</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. Undefined variable means:</div>
+  <div class="mcq-options">
+    a. Variable is deleted<br>
+    b. Variable not defined before use<br>
+    c. Variable is correct<br>
+    d. Variable is stored
+  </div>
+  <div class="mcq-answer">Answer: b. Variable not defined before use</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. Simulation helps us to:</div>
+  <div class="mcq-options">
+    a. Break computers<br>
+    b. Test real-life situations safely<br>
+    c. Delete programs<br>
+    d. Increase errors
+  </div>
+  <div class="mcq-answer">Answer: b. Test real-life situations safely</div>
+</div>
+
+<!-- </div> -->
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Computational Thinking)</h2>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">1. What are algorithm design methods?</div>
+    <div class="mcq-options">
+      <button>a. Programming languages</button>
+      <button>b. Techniques to design algorithms</button>
+      <button>c. Computer hardware</button>
+      <button>d. Internet tools</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">2. What does time complexity measure?</div>
+    <div class="mcq-options">
+      <button>a. Memory usage</button>
+      <button>b. Speed of algorithm</button>
+      <button>c. Input size only</button>
+      <button>d. Output format</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">3. What does space complexity measure?</div>
+    <div class="mcq-options">
+      <button>a. Time taken</button>
+      <button>b. Memory used</button>
+      <button>c. Internet speed</button>
+      <button>d. CPU temperature</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">4. What is a dry run?</div>
+    <div class="mcq-options">
+      <button>a. Running program on computer</button>
+      <button>b. Manually checking steps of algorithm</button>
+      <button>c. Installing software</button>
+      <button>d. Deleting code</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">5. Simulation is used to:</div>
+    <div class="mcq-options">
+      <button>a. Delete data</button>
+      <button>b. Model real-world systems</button>
+      <button>c. Break computers</button>
+      <button>d. Store files</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">6. LARP stands for:</div>
+    <div class="mcq-options">
+      <button>a. Logic of Algorithms for Resolution of Problems</button>
+      <button>b. Learning Algorithm Running Program</button>
+      <button>c. List of Application Rules Process</button>
+      <button>d. Logic and Arithmetic Program</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">7. Which is NOT a type of error?</div>
+    <div class="mcq-options">
+      <button>a. Syntax error</button>
+      <button>b. Runtime error</button>
+      <button>c. Logical error</button>
+      <button>d. Network error</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">8. Syntax errors occur when:</div>
+    <div class="mcq-options">
+      <button>a. Logic is wrong</button>
+      <button>b. Program is running</button>
+      <button>c. Code is written incorrectly</button>
+      <button>d. System is slow</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">9. Runtime errors occur during:</div>
+    <div class="mcq-options">
+      <button>a. Writing code</button>
+      <button>b. Planning</button>
+      <button>c. Execution</button>
+      <button>d. Saving file</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">10. Logical errors are caused by:</div>
+    <div class="mcq-options">
+      <button>a. Wrong logic</button>
+      <button>b. Hardware failure</button>
+      <button>c. Internet issue</button>
+      <button>d. Power failure</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">11. Debugging means:</div>
+    <div class="mcq-options">
+      <button>a. Creating errors</button>
+      <button>b. Finding and fixing errors</button>
+      <button>c. Running virus</button>
+      <button>d. Deleting program</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">12. Which is a debugging technique?</div>
+    <div class="mcq-options">
+      <button>a. Playing games</button>
+      <button>b. Trace the steps</button>
+      <button>c. Watching videos</button>
+      <button>d. Printing documents</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">13. Missing step error means:</div>
+    <div class="mcq-options">
+      <button>a. Extra step added</button>
+      <button>b. Important step forgotten</button>
+      <button>c. System crash</button>
+      <button>d. Internet issue</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. Undefined variable means:</div>
+    <div class="mcq-options">
+      <button>a. Variable deleted</button>
+      <button>b. Variable not defined before use</button>
+      <button>c. Variable is correct</button>
+      <button>d. Variable is stored</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">15. Simulation helps us to:</div>
+    <div class="mcq-options">
+      <button>a. Break computers</button>
+      <button>b. Test real-world situations safely</button>
+      <button>c. Delete programs</button>
+      <button>d. Increase errors</button>
+    </div>
+  </div>
+
+</section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+
+<h2 id="faqs">FAQs</h2>
+
+<section class="faq-section">
+
+<div class="faq-item">
+  <button class="faq-question">What are algorithm design methods?</button>
+  <div class="faq-answer"><p>Algorithm design methods are techniques used to create step-by-step solutions to solve problems efficiently.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is time complexity?</button>
+  <div class="faq-answer"><p>Time complexity tells us how much time an algorithm takes to complete its execution.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is space complexity?</button>
+  <div class="faq-answer"><p>Space complexity tells us how much memory an algorithm uses while solving a problem.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a dry run?</button>
+  <div class="faq-answer"><p>A dry run means manually checking each step of an algorithm to understand how it works.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is simulation in computer science?</button>
+  <div class="faq-answer"><p>Simulation is the use of computer programs to create a model of real-world systems to test ideas.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is LARP?</button>
+  <div class="faq-answer"><p>LARP is a learning tool used to understand algorithms by running them step by step.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is error identification?</button>
+  <div class="faq-answer"><p>Error identification means finding mistakes in an algorithm, flowchart, or pseudocode.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is debugging?</button>
+  <div class="faq-answer"><p>Debugging is the process of finding and fixing errors in an algorithm or program.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a syntax error?</button>
+  <div class="faq-answer"><p>A syntax error occurs when code or steps are written incorrectly.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a logical error?</button>
+  <div class="faq-answer"><p>A logical error occurs when the logic of the algorithm is wrong, giving incorrect results.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a runtime error?</button>
+  <div class="faq-answer"><p>A runtime error occurs while the algorithm or program is running.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Why do we use simulation?</button>
+  <div class="faq-answer"><p>We use simulation to test ideas safely, reduce cost, and study real-world systems.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Why is dry run important?</button>
+  <div class="faq-answer"><p>Dry run is important because it helps us find errors and understand the working of an algorithm.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a simulator?</button>
+  <div class="faq-answer"><p>A simulator is an artificial system that imitates real-life situations for training or testing.</p></div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the main purpose of debugging?</button>
+  <div class="faq-answer"><p>The main purpose of debugging is to remove errors and make the algorithm work correctly.</p></div>
+</div>
+
+</section>
+
+<h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/9-class/chapter-7/chapter7-lecture2.pdf">
+  Download PDF
+</a>
+</div>
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const answer = btn.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>
