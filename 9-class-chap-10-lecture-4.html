@@ -21,21 +21,174 @@
   <meta name="twitter:title" content="Introduction to Internet of Things (IoT) — Definition, Components, Applications, Security & MCQs" />
   <meta name="twitter:description" content="Detailed guide on IoT covering definition, components, real-world examples, applications, security measures, quick notes, and practice MCQs." />
   <meta name="twitter:image" content="https://salmanblogs.com/images/iot/iot-introduction.png" />
-  <style>
-    html { scroll-behavior: smooth; }
-    .toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
-    .toc h2 { margin-top: 0; }
-    .toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
-    .toc a:hover { color: darkblue; }
-    .toc li {list-style-type: none;}
+  <!-- Use of internal CSS. -->
+<style>
+html { scroll-behavior: smooth; }
+.toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+.toc h2 { margin-top: 0; }
+.toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
+.toc a:hover { color: darkblue; }
+.toc li {list-style-type: none;}
+.post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+ ul, ol 
+ {
+  margin-left: 20px;
+ }
+ .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
 
-    .post-content h2,
-.post-content h3 {
-  border-left: 4px solid #0077cc;
-  padding-left: 12px;
-  margin-top: 25px;
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .post-content p
+    {
+      margin: 0;
+    }
+
+
+  .test-mcqs {
+  max-width: 700px;
+  margin: auto;
 }
-  </style>
+.test-mcqs .mcq-item {
+  background: #f7f7f7;
+  border-left: 4px solid #0077cc;
+  padding: 15px;
+  margin: 10px 0;
+}
+.mcq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mcq-options button {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  font-size: 16px;
+}
+.mcq-options button.correct {
+  background-color: #d4edda; 
+  border-color: #28a745;
+  color: #155724;
+}
+.mcq-options button.wrong {
+  background-color: #f8d7da; 
+  border-color: #dc3545;
+  color: #721c24;
+}
+.mcq-options button.correct::after {
+  content: " ✅";
+  float: right;
+}
+.mcq-options button.wrong::after {
+  content: " ❌";
+  float: right;
+}
+.mcq-options button:hover {
+  background-color: #e2e6ea;
+}
+
+.test-mcqs h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showResult {
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showResult:hover {
+  background: #005fa3;
+}
+
+#resultText {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight input or MCQ when missing */
+.highlight-unanswered {
+  border: 2px solid #dc3545 !important;
+  background-color: #ffe5e5;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}    
+
+/* Back to top button styling */
+  #backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    font-size: 30px;
+    background-color: #002959;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #0055a5;
+  }
+</style>
 </head>
 <body>
 <header class="navbar">
@@ -97,15 +250,30 @@
     <div class="post-content">
 
       <h2 id="definition">Definition of IoT</h2>
-      <p>The Internet of Things (IoT) is a system where everyday devices (called “things”) are connected to the internet. These devices are equipped with sensors, software, and communication technology that allow them to collect, share, and act on data across networks.</p>
-      <p><strong>Example:</strong> A smartwatch that tracks your heart rate and sends the data to your phone in real-time.</p>
-      <p><strong>Extra Notes:</strong> IoT not only collects data but can also trigger automatic actions based on real-time analysis, making processes smarter and faster. It integrates cloud computing, AI, and edge devices for advanced decision-making.</p>
-      <h2 id="significance">Significance of IoT</h2>
-      <p>IoT bridges the physical world (our everyday objects) with the digital world (internet and applications), creating opportunities for efficiency, improved services, and automation.</p>
+      <p>IoT is a network of physical objects (“things”) that are connected to the internet. These devices have sensors and software that allow them to collect and exchange data with other devices and systems.</p>
+      
+      <p><strong>Examples of IoT:[Any 2 Examples]</strong></p>
       <ul>
-        <li><strong>Efficiency:</strong> Smart farming systems monitor soil moisture and weather, optimizing irrigation and crop yields.</li>
-        <li><strong>Better services:</strong> Remote healthcare devices monitor patient vitals and alert doctors instantly.</li>
-        <li><strong>Innovation:</strong> Enables smart cities, automated traffic management, and connected logistics.</li>
+        <li>A smartwatch that tracks your heart rate and sends data to your phone in real time</li>
+        <li>A smart fridge that tells you when food is running low</li>
+        <li>Smart lights that can be turned on or off using a mobile phone</li>
+        <li>Smart AC that adjusts temperature automatically</li>
+        <li>Security cameras that send live video to your phone</li>
+        <li>Weather apps that use data from internet-connected sensors to show real-time weather updates</li>
+      </ul>
+
+      <h2 id="significance">Significance of IoT</h2>
+      <p>IoT is important because it connects real-world devices to the internet so they can collect and share information. This helps us save time, work faster, and make better decisions.</p>
+      <p><strong>Examples:[Any 2 Examples]</strong></p>
+      <ul>
+        <li>A smartwatch that tracks your heart rate and sends data to your phone in real time</li>
+        <li>A smart fridge that tells you when food is running low</li>
+        <li>Smart lights that can be turned on or off using a mobile phone</li>
+        <li>Smart AC that adjusts temperature automatically</li>
+        <li>Security cameras that send live video to your phone</li>
+        <li>Weather apps that use data from internet-connected sensors to show real-time weather updates</li>
+        <li>Smart irrigation systems that water crops automatically based on soil moisture</li>
+        <li>Smart traffic lights that adjust timing to reduce traffic jams</li>
       </ul>
 
       <h2 id="components">Components of an IoT System</h2>
@@ -114,58 +282,60 @@
       <h3 id="sensors">1. Sensors</h3>
       <p>Sensors collect information from the environment such as temperature, humidity, motion, or light levels. They are the “eyes and ears” of IoT systems.</p>
       <p><strong>Example:</strong> A temperature sensor in an air-conditioner adjusts cooling based on room temperature.</p>
-      <p><strong>Extra Notes:</strong> Sensors can be environmental, biometric, or industrial. Examples include motion sensors for security, humidity sensors for agriculture, and heart-rate sensors in wearables. They are the backbone of IoT, enabling real-time data collection.</p>
       <h3 id="actuators">2. Actuators</h3>
       <p>Actuators take action based on received data, converting energy into motion or triggering devices.</p>
       <p><strong>Example:</strong> A motor that opens windows automatically when the room becomes too hot.</p>
-      <p><strong>Extra Notes:</strong> Actuators can control motors, lights, valves, or even robotic arms. They turn data into physical action, completing the IoT feedback loop and enabling automation in homes, factories, and healthcare systems.</p>
       <h3 id="devices">3. Devices</h3>
       <p>Devices are everyday objects connected to the internet to perform tasks based on sensor data.</p>
       <p><strong>Example:</strong> Smart refrigerators that alert users when items are running low.</p>
-      <p><strong>Extra Notes:</strong> IoT devices range from smartwatches and fitness bands to industrial machines. They can operate independently or be part of a networked ecosystem like smart homes or smart cities.</p>
       <h3 id="networks">4. Networks</h3>
-      <p>Networks connect devices and sensors to the internet, enabling data transmission and communication.</p>
-      <p><strong>Example:</strong> Wi-Fi, Bluetooth, 4G/5G, or LAN connecting smart bulbs, thermostats, and phones.</p>
-      <p><strong>Extra Notes:</strong> Networks include Wi-Fi, Bluetooth, Zigbee, LoRaWAN, 4G/5G, and Ethernet. Reliable connectivity ensures devices communicate efficiently, and advanced networks like 5G enable low-latency real-time applications.</p>
+      <p>Networks are communication pathways that connect devices and sensors to the internet, allowing them to share data. These networks can be wired or wireless.</p>
+      <p><strong>Examples of Networks:</strong></p>
+      <ul>
+        <li>Wi-Fi connecting phones, laptops, and smart home devices</li>
+        <li>Bluetooth connecting earbuds, smartwatches, and phones</li>
+        <li>4G/5G mobile networks used for internet on smartphones</li>
+      </ul>
       <h3 id="data-analysis">5. Data Analysis</h3>
       <p>Data analysis involves processing and studying collected data to make intelligent decisions.</p>
-      <p><strong>Example:</strong> A fitness app analyzing step data from a smartwatch to suggest daily goals.</p>
-      <p><strong>Extra Notes:</strong> Data analysis in IoT can involve AI, machine learning, and big data analytics. Insights can be predictive, prescriptive, or descriptive, supporting smarter decision-making across industries.</p>
-
+      <p><strong>Example:</strong> A fitness app analyzing steps data from a smartwatch to suggest daily goals.</p>
+    
       <h2 id="applications">IoT Applications</h2>
 
       <h3 id="healthcare">Healthcare</h3>
-      <p>IoT devices in healthcare monitor patient health, send alerts, and improve outcomes.</p>
+      <p>IoT devices in healthcare help monitor patient health, send alerts, and improve treatment outcomes.</p>
       <ul>
-        <li>Wearable devices track heart rate, sugar levels, and sleep patterns.</li>
-        <li>Smart pill bottles remind patients to take medication on time.</li>
-        <li>Emergency alerts are sent to healthcare providers for immediate intervention.</li>
+        <li>Wearable devices track heart rate, blood sugar levels, and sleep patterns.</li>
+        <li>Smart pill bottles remind patients to take their medicine on time.</li>
+        <li>Emergency alert systems send real-time notifications to doctors and hospitals.</li>
       </ul>
-      <p><strong>Extra Notes:</strong> Other applications include remote patient monitoring, wearable ECG monitors, automated drug dispensers, and telemedicine. IoT reduces hospital visits while improving real-time healthcare decisions.</p>
       <h3 id="transportation">Transportation</h3>
-      <p>IoT optimizes traffic flow, enhances safety, and improves logistics.</p>
+      <p>IoT improves traffic management, increases safety, and makes transportation systems more efficient.</p>
+
       <ul>
-        <li>Smart traffic lights reduce congestion by adjusting signals based on real-time traffic data.</li>
-        <li>Connected cars provide location tracking and accident alerts.</li>
-        <li>GPS trackers help track deliveries and fleet vehicles efficiently.</li>
+        <li>Smart traffic lights adjust based on traffic to reduce jams</li>
+        <li>Connected cars give alerts and show navigation on the screen</li>
+        <li>GPS tracking helps find buses, taxis, or delivery trucks in real time</li>
+        <li>Ride apps like Uber use IoT to show nearby drivers and location</li>
       </ul>
-      <p><strong>Extra Notes:</strong> Connected cars, fleet management systems, GPS tracking, and predictive maintenance of vehicles help reduce traffic, prevent accidents, and save fuel.</p>
-      <h3 id="smart-homes">Smart Homes</h3>
-      <p>IoT enables home automation for comfort, security, and energy savings.</p>
+     <h3 id="smart-homes">Smart Homes</h3>
+      <p>IoT enables home automation for comfort, safety, and energy saving.</p>
+
       <ul>
-        <li>Smart lights and thermostats adjust automatically based on occupancy and weather.</li>
-        <li>Security cameras and smart locks monitor and control access remotely.</li>
-        <li>Energy monitoring systems optimize electricity usage.</li>
+        <li>Smart lights and thermostats adjust automatically based on room usage</li>
+        <li>Security cameras and smart locks allow remote monitoring and control</li>
+        <li>Smart speakers (like Alexa) control home devices using voice commands</li>
       </ul>
-      <p><strong>Extra Notes:</strong> Smart thermostats, intelligent lighting, security cameras, voice-controlled assistants, and energy monitoring systems all contribute to comfort, security, and energy savings.</p>
-      <h3 id="agriculture">Agriculture</h3>
-      <p>IoT helps precision farming with real-time monitoring of soil, crops, and weather.</p>
+
+     <h3 id="agriculture">Agriculture</h3>
+      <p>IoT helps farming by monitoring soil, crops, and weather in real time to improve productivity.</p>
+
       <ul>
-        <li>Soil sensors measure moisture and send alerts when watering is needed.</li>
-        <li>Automated irrigation systems optimize water usage.</li>
-        <li>Drones collect crop health data for better yield prediction.</li>
+        <li>Soil sensors check moisture and send alerts when watering is needed</li>
+        <li>Automatic irrigation systems water crops based on soil conditions</li>
+        <li>Drones monitor crop health and help estimate total crop production</li>        
+        <li>Weather apps help farmers plan irrigation and harvesting</li>
       </ul>
-      <p><strong>Extra Notes:</strong> IoT in agriculture includes automated irrigation, crop health monitoring with drones, climate sensors, and livestock tracking, increasing yields and resource efficiency.</p>
       <h2 id="security">Security and Privacy in IoT</h2>
       <p>While IoT improves efficiency and convenience, it also introduces security and privacy risks:</p>
       <ul>
@@ -174,138 +344,348 @@
         <li>Privacy breaches can occur if personal data is mishandled.</li>
       </ul>
 
-      <h3 id="passwords">1. Strong Passwords</h3>
-      <p>Use strong, unique passwords for each IoT device to prevent unauthorized access.</p>
-      <p><strong>Example:</strong> Setting Wi-Fi password as “MyHome@2025” instead of “12345” makes it harder for hackers.</p>
-      <p><strong>Extra Notes:</strong> Avoid default passwords, use password managers, and enable two-factor authentication (2FA) where possible.</p>
+    <h3 id="passwords">1. Strong Passwords</h3>
+    <p>Use strong and unique passwords for each IoT device to prevent unauthorized access and improve security.</p>
+    <p><strong>How to make a strong password:</strong> Use a mix of uppercase and lowercase letters, numbers, and special characters, and avoid using common words or simple patterns.</p>
+      
       <h3 id="updates">2. Regular Updates</h3>
       <p>Keep device software and firmware updated to patch security vulnerabilities.</p>
-      <p><strong>Example:</strong> Updating your smart TV to the latest version prevents exploitation of old weaknesses.</p>
-      <p><strong>Extra Notes:</strong> Updates prevent exploitation of vulnerabilities, improve performance, and add new features.</p>
-      <h3 id="encryption">3. Encryption</h3>
-      <p>Encrypting data ensures only authorized parties can read sensitive information.</p>
-      <p><strong>Example:</strong> Heart rate data sent from a smartwatch to a doctor is encrypted to protect privacy.</p>
-      <p><strong>Extra Notes:</strong> End-to-end encryption and secure communication protocols (HTTPS, SSL/TLS, VPNs) ensure IoT data cannot be intercepted.</p>
-      <h2 id="quick-notes">Quick Notes – Internet of Things (IoT)</h2>
-<h3>Definition of IoT</h3>
-<p><strong>Definition:</strong> IoT is a network of physical objects (“things”) connected to the internet. These devices collect, share, and act on data.</p>
-<p><strong>Example:</strong> A smartwatch that tracks steps and heart rate, then sends the data to your phone.</p>
+     <p><strong>Example:</strong> Updating your smart TV to the latest software version helps fix security issues and protects it from being exploited by hackers.</p>
+      
+     <h3 id="encryption">3. Encryption</h3>
+    <p>Encryption protects data by converting it into a secure format so that only authorized users can read it.</p>
+    <p><strong>Example:</strong> Heart rate data sent from a smartwatch to a doctor is encrypted to keep the patient’s information private and secure.</p>
+    
+    <h2 id="mcqs">Multiple Choice Questions (MCQs) on Internet of Things (IoT)</h2>
 
-<h3>1. Sensors</h3>
-<p><strong>Definition:</strong> Devices that collect information from the environment (temperature, light, motion, etc.).</p>
-<p><strong>Example:</strong> A temperature sensor in an air-conditioner adjusts cooling automatically.</p>
+<div class="mcq-item">
+  <div class="mcq-question">1. What is IoT?</div>
+  <div class="mcq-options">
+    a. A type of computer game<br>
+    b. A network of connected physical devices that share data<br>
+    c. A programming language<br>
+    d. A search engine
+  </div>
+  <div class="mcq-answer">Answer: b. A network of connected physical devices that share data</div>
+</div>
 
-<h3>2. Actuators</h3>
-<p><strong>Definition:</strong> Devices that perform actions based on received data.</p>
-<p><strong>Example:</strong> A smart door lock opens when it receives a signal from your phone.</p>
+<div class="mcq-item">
+  <div class="mcq-question">2. What do IoT devices use to collect data?</div>
+  <div class="mcq-options">
+    a. Sensors<br>
+    b. Printers<br>
+    c. Speakers<br>
+    d. Keyboards
+  </div>
+  <div class="mcq-answer">Answer: a. Sensors</div>
+</div>
 
-<h3>3. Devices</h3>
-<p><strong>Definition:</strong> Everyday objects connected to the internet that perform tasks using sensor data.</p>
-<p><strong>Example:</strong> A smart refrigerator that tells you when food is running low.</p>
+<div class="mcq-item">
+  <div class="mcq-question">3. Which is an example of IoT?</div>
+  <div class="mcq-options">
+    a. Calculator<br>
+    b. Smart fridge<br>
+    c. Paper notebook<br>
+    d. Pen
+  </div>
+  <div class="mcq-answer">Answer: b. Smart fridge</div>
+</div>
 
-<h3>4. Networks</h3>
-<p><strong>Definition:</strong> Communication systems (wired or wireless) that connect IoT devices.</p>
-<p><strong>Example:</strong> A Wi-Fi network connecting your phone to a smart bulb.</p>
+<div class="mcq-item">
+  <div class="mcq-question">4. What is the main purpose of IoT?</div>
+  <div class="mcq-options">
+    a. To print documents<br>
+    b. To connect devices and share data<br>
+    c. To play music only<br>
+    d. To store files only
+  </div>
+  <div class="mcq-answer">Answer: b. To connect devices and share data</div>
+</div>
 
-<h3>5. Data Analysis</h3>
-<p><strong>Definition:</strong> Processing and studying collected data to make decisions.</p>
-<p><strong>Example:</strong> A fitness app analyzing step data from your smartwatch to suggest a daily goal.</p>
+<div class="mcq-item">
+  <div class="mcq-question">5. Which device can track health in IoT?</div>
+  <div class="mcq-options">
+    a. Smartwatch<br>
+    b. Chair<br>
+    c. Book<br>
+    d. Table
+  </div>
+  <div class="mcq-answer">Answer: a. Smartwatch</div>
+</div>
 
-<h3>IoT Applications</h3>
+<div class="mcq-item">
+  <div class="mcq-question">6. What does a smart fridge do?</div>
+  <div class="mcq-options">
+    a. Plays videos<br>
+    b. Cooks food<br>
+    c. Alerts when food is low<br>
+    d. Prints documents
+  </div>
+  <div class="mcq-answer">Answer: c. Alerts when food is low</div>
+</div>
 
-<h4>Healthcare</h4>
-<p><strong>Definition:</strong> IoT improves patient care and monitoring.</p>
-<p><strong>Example:</strong> A smart glucose monitor alerts a patient when sugar levels are high.</p>
+<div class="mcq-item">
+  <div class="mcq-question">7. What are networks in IoT?</div>
+  <div class="mcq-options">
+    a. Storage devices<br>
+    b. Communication pathways for data transfer<br>
+    c. Input devices only<br>
+    d. Software programs only
+  </div>
+  <div class="mcq-answer">Answer: b. Communication pathways for data transfer</div>
+</div>
 
-<h4>Transportation</h4>
-<p><strong>Definition:</strong> IoT makes transport systems safer and efficient.</p>
-<p><strong>Example:</strong> Smart traffic lights change signals based on traffic flow.</p>
+<div class="mcq-item">
+  <div class="mcq-question">8. Which is an example of wireless network?</div>
+  <div class="mcq-options">
+    a. LAN cable<br>
+    b. Wi-Fi<br>
+    c. USB cable<br>
+    d. Printer cable
+  </div>
+  <div class="mcq-answer">Answer: b. Wi-Fi</div>
+</div>
 
-<h4>Smart Homes</h4>
-<p><strong>Definition:</strong> Homes with connected devices for automation and security.</p>
-<p><strong>Example:</strong> Smart lights that turn off when no one is in the room.</p>
+<div class="mcq-item">
+  <div class="mcq-question">9. What do actuators do in IoT?</div>
+  <div class="mcq-options">
+    a. Collect data<br>
+    b. Store files<br>
+    c. Perform actions based on data<br>
+    d. Display images only
+  </div>
+  <div class="mcq-answer">Answer: c. Perform actions based on data</div>
+</div>
 
-<h4>Agriculture</h4>
-<p><strong>Definition:</strong> IoT helps in precision farming with better crop management.</p>
-<p><strong>Example:</strong> Soil sensors measure moisture and send alerts when watering is needed.</p>
+<div class="mcq-item">
+  <div class="mcq-question">10. Which is an example of data analysis in IoT?</div>
+  <div class="mcq-options">
+    a. Writing code<br>
+    b. Fitness app analyzing steps data<br>
+    c. Printing documents<br>
+    d. Drawing images
+  </div>
+  <div class="mcq-answer">Answer: b. Fitness app analyzing steps data</div>
+</div>
 
-<h3>IoT Security Measures</h3>
+<div class="mcq-item">
+  <div class="mcq-question">11. Which sector uses IoT for patient monitoring?</div>
+  <div class="mcq-options">
+    a. Agriculture<br>
+    b. Healthcare<br>
+    c. Education<br>
+    d. Banking
+  </div>
+  <div class="mcq-answer">Answer: b. Healthcare</div>
+</div>
 
-<h4>1. Strong Passwords</h4>
-<p><strong>Definition:</strong> Use unique and strong passwords for IoT devices.</p>
-<p><strong>Example:</strong> Setting Wi-Fi password as “MyHome@2025” instead of “12345.”</p>
+<div class="mcq-item">
+  <div class="mcq-question">12. What do smart traffic lights do?</div>
+  <div class="mcq-options">
+    a. Play music<br>
+    b. Reduce traffic jams<br>
+    c. Take photos<br>
+    d. Print tickets
+  </div>
+  <div class="mcq-answer">Answer: b. Reduce traffic jams</div>
+</div>
 
-<h4>2. Regular Updates</h4>
-<p><strong>Definition:</strong> Update IoT device software to fix security problems.</p>
-<p><strong>Example:</strong> Updating your smart TV software to the latest version.</p>
+<div class="mcq-item">
+  <div class="mcq-question">13. What is a smart home system?</div>
+  <div class="mcq-options">
+    a. A house made of computers<br>
+    b. A system where devices are automated and controlled remotely<br>
+    c. A type of game<br>
+    d. A manual home system only
+  </div>
+  <div class="mcq-answer">Answer: b. A system where devices are automated and controlled remotely</div>
+</div>
 
-<h4>3. Encryption</h4>
-<p><strong>Definition:</strong> Protect data by converting it into secret code during transmission.</p>
-<p><strong>Example:</strong> A smartwatch sending health data securely to a doctor.</p>
+<div class="mcq-item">
+  <div class="mcq-question">14. What is the main use of IoT in agriculture?</div>
+  <div class="mcq-options">
+    a. Playing games<br>
+    b. Monitoring soil, crops, and weather<br>
+    c. Watching movies<br>
+    d. Printing books
+  </div>
+  <div class="mcq-answer">Answer: b. Monitoring soil, crops, and weather</div>
+</div>
 
-      <h2 id="mcqs">MCQs – Internet of Things (IoT)</h2>
-      <ol>
-        <li>What does IoT stand for?<br>
-            a) Internet of Technology<br>
-            b) Internet of Things ✅<br>
-            c) Interconnection of Terminals<br>
-            d) International Online Transfer</li>
-        <li>Which of the following is an example of IoT?<br>
-            a) A fan controlled manually<br>
-            b) A smart bulb controlled via mobile app ✅<br>
-            c) A book on a table<br>
-            d) A simple calculator</li>
-        <li>Which IoT component collects environmental data?<br>
-            a) Sensor ✅<br>
-            b) Actuator<br>
-            c) Network<br>
-            d) Device</li>
-        <li>A smart door lock that opens automatically is an example of:<br>
-            a) Sensor<br>
-            b) Actuator ✅<br>
-            c) Network<br>
-            d) Data Analysis</li>
-        <li>Wi-Fi connecting smart devices is an example of which component?<br>
-            a) Sensor<br>
-            b) Network ✅<br>
-            c) Device<br>
-            d) Actuator</li>
-        <li>Which component analyzes collected data and makes decisions?<br>
-            a) Sensor<br>
-            b) Actuator<br>
-            c) Data Analysis ✅<br>
-            d) Device</li>
-        <li>Smart glucose monitor is an IoT application in:<br>
-            a) Healthcare ✅<br>
-            b) Transportation<br>
-            c) Agriculture<br>
-            d) Smart Homes</li>
-        <li>Smart traffic lights are IoT applications in:<br>
-            a) Agriculture<br>
-            b) Transportation ✅<br>
-            c) Healthcare<br>
-            d) Smart Homes</li>
-        <li>Soil moisture sensors are IoT applications in:<br>
-            a) Smart Homes<br>
-            b) Healthcare<br>
-            c) Agriculture ✅<br>
-            d) Social Media</li>
-        <li>Which is NOT a security measure for IoT devices?<br>
-            a) Strong passwords<br>
-            b) Regular updates<br>
-            c) Encryption<br>
-            d) Weak default settings ✅</li>
-        <li>Using “MyHome@2025” as a Wi-Fi password is an example of:<br>
-            a) Data analysis<br>
-            b) Encryption<br>
-            c) Strong password ✅<br>
-            d) Regular update</li>
-        <li>Updating your smart TV regularly helps in:<br>
-            a) Better screen display<br>
-            b) Fixing security problems ✅<br>
-            c) Reducing internet speed<br>
-            d) Saving electricity</li>
-      </ol>
+<div class="mcq-item">
+  <div class="mcq-question">15. What does encryption do in IoT?</div>
+  <div class="mcq-options">
+    a. Deletes data<br>
+    b. Converts data into secure form<br>
+    c. Speeds up internet<br>
+    d. Prints data
+  </div>
+  <div class="mcq-answer">Answer: b. Converts data into secure form</div>
+</div>
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Internet of Things - IoT)</h2>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">1. What is IoT?</div>
+    <div class="mcq-options">
+      <button>a. A type of computer game</button>
+      <button>b. A network of connected physical devices that share data</button>
+      <button>c. A programming language</button>
+      <button>d. A search engine</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">2. What do IoT devices use to collect data?</div>
+    <div class="mcq-options">
+      <button>a. Sensors</button>
+      <button>b. Printers</button>
+      <button>c. Keyboards</button>
+      <button>d. Speakers</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">3. Which is an example of IoT device?</div>
+    <div class="mcq-options">
+      <button>a. Calculator</button>
+      <button>b. Smart fridge</button>
+      <button>c. Notebook</button>
+      <button>d. Pen</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">4. What is the main purpose of IoT?</div>
+    <div class="mcq-options">
+      <button>a. To play games</button>
+      <button>b. To connect devices and share data</button>
+      <button>c. To print documents</button>
+      <button>d. To draw images</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">5. Which device is commonly used in healthcare IoT?</div>
+    <div class="mcq-options">
+      <button>a. Smartwatch</button>
+      <button>b. Chair</button>
+      <button>c. Table</button>
+      <button>d. Book</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">6. What does a smart fridge do?</div>
+    <div class="mcq-options">
+      <button>a. Plays music</button>
+      <button>b. Alerts when food is running low</button>
+      <button>c. Prints receipts</button>
+      <button>d. Cooks food</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">7. What are networks in IoT?</div>
+    <div class="mcq-options">
+      <button>a. Storage devices</button>
+      <button>b. Communication pathways for data transfer</button>
+      <button>c. Only software</button>
+      <button>d. Input devices</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">8. Which is an example of wireless network?</div>
+    <div class="mcq-options">
+      <button>a. LAN cable</button>
+      <button>b. Wi-Fi</button>
+      <button>c. USB cable</button>
+      <button>d. HDMI cable</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">9. What do actuators do in IoT?</div>
+    <div class="mcq-options">
+      <button>a. Collect data</button>
+      <button>b. Store data</button>
+      <button>c. Perform actions based on data</button>
+      <button>d. Display images</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">10. Which is an example of data analysis in IoT?</div>
+    <div class="mcq-options">
+      <button>a. Printing documents</button>
+      <button>b. Fitness app analyzing step data</button>
+      <button>c. Writing letters</button>
+      <button>d. Playing games</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">11. IoT is widely used in which field for patient monitoring?</div>
+    <div class="mcq-options">
+      <button>a. Agriculture</button>
+      <button>b. Healthcare</button>
+      <button>c. Sports</button>
+      <button>d. Banking</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">12. What is the function of smart traffic lights?</div>
+    <div class="mcq-options">
+      <button>a. Play music</button>
+      <button>b. Reduce traffic jams</button>
+      <button>c. Print tickets</button>
+      <button>d. Take photos</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">13. What is a smart home system?</div>
+    <div class="mcq-options">
+      <button>a. A house made of robots</button>
+      <button>b. A system where devices are controlled remotely</button>
+      <button>c. A manual house system</button>
+      <button>d. A game system</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. What is IoT used for in agriculture?</div>
+    <div class="mcq-options">
+      <button>a. Gaming</button>
+      <button>b. Monitoring soil, crops, and weather</button>
+      <button>c. Watching videos</button>
+      <button>d. Printing books</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">15. What does encryption do in IoT?</div>
+    <div class="mcq-options">
+      <button>a. Deletes data</button>
+      <button>b. Secures data in readable form only for authorized users</button>
+      <button>c. Speeds up internet</button>
+      <button>d. Stores files</button>
+    </div>
+  </div>
+
+</section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
 
       <h2>Lectures</h2>
       <ul>
@@ -319,45 +699,101 @@
         <li><a href="how-ai-will-replace-and-create-jobs-by-2030.html">How AI Will Replace and Create Jobs by 2030</a></li>
       </ul>
 
-      <h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
+      <h2 id="faqs">FAQs</h2>
+
 <section class="faq-section">
 
-  <div class="faq-item">
-    <button class="faq-question">1. What is IoT?</button>
-    <div class="faq-answer">
-      <p>The Internet of Things (IoT) is a network of devices connected to the internet to collect, share, and act on data.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">What is IoT?</button>
+  <div class="faq-answer">
+    <p>IoT (Internet of Things) is a system where devices are connected to the internet to collect and share data.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">2. What are the main components of IoT?</button>
-    <div class="faq-answer">
-      <p>Sensors, Actuators, Devices, Networks, and Data Analysis.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">What are examples of IoT devices?</button>
+  <div class="faq-answer">
+    <p>Examples include smartwatches, smart fridges, smart lights, and security cameras.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">3. Give an example of IoT in healthcare?</button>
-    <div class="faq-answer">
-      <p>A smart glucose monitor that alerts a patient when sugar levels are high.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">What is the main purpose of IoT?</button>
+  <div class="faq-answer">
+    <p>The main purpose of IoT is to connect devices so they can share data and improve efficiency.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">4. How does IoT improve smart homes?</button>
-    <div class="faq-answer">
-      <p>IoT enables automation of lights, thermostats, security cameras, and energy management for comfort and efficiency.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">What are sensors in IoT?</button>
+  <div class="faq-answer">
+    <p>Sensors are devices that collect information from the environment like temperature, motion, or humidity.</p>
   </div>
+</div>
 
-  <div class="faq-item">
-    <button class="faq-question">5. What are IoT security measures?</button>
-    <div class="faq-answer">
-      <p>Strong passwords, regular updates, and data encryption to protect devices and information.</p>
-    </div>
+<div class="faq-item">
+  <button class="faq-question">What are networks in IoT?</button>
+  <div class="faq-answer">
+    <p>Networks are communication systems like Wi-Fi or Bluetooth that connect IoT devices to share data.</p>
   </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Where is IoT used in daily life?</button>
+  <div class="faq-answer">
+    <p>IoT is used in smart homes, healthcare devices, transportation systems, and agriculture.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">How is IoT used in healthcare?</button>
+  <div class="faq-answer">
+    <p>IoT devices in healthcare monitor patient health and send real-time alerts to doctors.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a smart home?</button>
+  <div class="faq-answer">
+    <p>A smart home uses IoT devices to control lights, security, and appliances automatically or remotely.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">How does IoT help in agriculture?</button>
+  <div class="faq-answer">
+    <p>IoT helps farmers monitor soil, crops, and weather to improve productivity and save water.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is encryption in IoT?</button>
+  <div class="faq-answer">
+    <p>Encryption protects data by converting it into a secure form so only authorized users can read it.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Why is IoT important?</button>
+  <div class="faq-answer">
+    <p>IoT is important because it saves time, improves efficiency, and makes systems smarter.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a smart sensor?</button>
+  <div class="faq-answer">
+    <p>A smart sensor collects data from the environment and sends it to connected devices or systems.</p>
+  </div>
+</div>
 
 </section>
+<h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/9-class/chapter-10/chapter10-lecture4.pdf">
+  Download PDF
+</a>
+
+    
     </div>
   </article>
 </main>

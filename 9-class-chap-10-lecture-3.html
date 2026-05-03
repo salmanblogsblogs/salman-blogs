@@ -33,7 +33,10 @@ html { scroll-behavior: smooth; }
 .toc a:hover { color: darkblue; }
 .toc li {list-style-type: none;}
 .post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
-
+ul, ol 
+{
+  margin-left: 20px;
+}
  .mcq-item {
       background: #f7f7f7;
       border-left: 4px solid #0077cc; /* same as h2 border color */
@@ -246,140 +249,338 @@ html { scroll-behavior: smooth; }
 
       <h2 id="whitebox">1. Explainable (Whitebox) Algorithms</h2>
       <p>
-        Whitebox algorithms are simple, transparent, and allow humans to understand how decisions are made. They are widely used in education, finance, healthcare, and other fields where interpretability and trust are very important.
+        Explainable (white-box) algorithms are models whose decisions can be easily understood by humans, with clear steps showing how the output is reached.
       </p>
-
+      <strong>Example:</strong>
+      <p>A rule-based traffic fine system:
+If you exceed the speed limit by a certain amount, a fixed fine is applied. The rules are clear, and you can easily see how the decision (fine) was made.</p>
       <h3 id="decision-trees">a) Decision Trees</h3>
       <p>
-        Decision Trees work like a flowchart with a series of “yes/no” questions. Each question leads to another branch until a decision or classification is reached. 
-        They are especially useful for classification and regression tasks.
+       A decision tree is a model that works like a flowchart, where a series of yes/no questions are asked to reach a final decision or prediction.
       </p>
       <p><strong>Example:</strong> Identifying an animal:</p>
       <ul>
         <li>Does it have feathers? → Yes → It’s a bird.</li>
         <li>Does it have fur? → Yes → It’s a mammal.</li>
       </ul>
-     
+      
+      <p><strong>Example:</strong> Deciding what to wear based on weather:</p>
+      <ul>
+        <li>Is it raining? → Yes → Wear a raincoat</li>
+        <li>Is it raining? → No → Is it sunny? → Yes → Wear light clothes</li>
+        <li>Is it sunny? → No → Wear normal clothes</li>
+      </ul>
+
       <h3 id="linear-regression">b) Linear Regression</h3>
       <p>
-        Linear Regression is one of the simplest and most widely used algorithms in AI and statistics. It finds a straight-line relationship between two or more variables. The model tries to fit the best line through the data points, minimizing the error.
-      </p>
-      <p><strong>Example:</strong> Study time vs. grades. The more hours you study, the higher your expected score.</p>
-      <p>
-        Linear regression is used in predicting house prices, forecasting stock markets, and even in sports analytics to evaluate performance trends.
-      </p>
+       Linear regression is a machine learning method that uses past data to find a straight-line relationship between variables and predict numerical values.
+      
+      <p><strong>Examples of Linear Regression:</strong></p>
+      <ul>
+        <li><strong>House price prediction:</strong> Bigger house size → higher price</li>
+        <li><strong>Study vs marks:</strong> More study hours → higher score</li>
+        <li><strong>Salary prediction:</strong> More experience → higher salary</li>
+        <li><strong>Sales prediction:</strong> More advertising → more product sales</li>
+      </ul>
 
       <h3 id="rule-based">c) Rule-Based Systems</h3>
-      <p>
-        Rule-based systems are among the earliest AI methods. They rely on human-written rules in the form of "if-then" conditions to make decisions.
-      </p>
-      <p><strong>Example:</strong> In a game: If obstacle ahead → then jump.</p>
+        <p><strong>Rule-Based Systems:</strong></p>
+        <p>Rule-based systems use a set of “if-then” rules to make decisions. These rules are written by humans to guide the computer on what action to take in different situations.</p>
+      <p><strong>Example:</strong> In a game:</p>
+      <ul>
+        <li>If there is an obstacle ahead → then jump</li>
+        <li>If enemy appears → then attack</li>
+        <li>If health is low → then hide or heal</li>
+        <li>If coin is found → then collect it</li>
+      </ul>
     
       <h2 id="blackbox">2. Unexplainable (Blackbox) Algorithms</h2>
-      <p>
-        Blackbox algorithms are advanced algorithms where the decision-making process is very complex and difficult for humans to interpret. 
-        <br><strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-        While they are extremely powerful, they lack transparency. This can be problematic in fields where ethical decisions or fairness are important.
-      </p>
+      <p><strong>Unexplainable (Black-box) Algorithms:</strong></p>
+      <p>Black-box algorithms are advanced AI models whose internal decision process is hidden or too complex to understand clearly. We can see the input and output, but not how the result is produced.</p>
 
-      <h3 id="neural-networks">a) Neural Networks</h3>
-      <p>
-        Neural Networks are inspired by the human brain. They consist of interconnected layers of nodes (neurons) that process information. They are especially strong in pattern recognition.
-      </p>
-      <p><strong>Applications:</strong> Facial recognition, spam email detection, handwriting recognition.</p>
-      <p>
-        The drawback of neural networks is their complexity. While they can achieve high accuracy, it is often difficult to explain exactly why they made a certain decision.
-      </p>
-
-      <h3 id="deep-learning">b) Deep Learning</h3>
-      <p>
-        Deep Learning is a subset of machine learning that uses multiple layers of neural networks to model complex patterns in data. Each layer extracts features and passes them to the next, creating highly sophisticated models.
-      </p>
-      <p><strong>Applications:</strong> Voice assistants (Siri, Alexa), self-driving cars, advanced medical image analysis.</p>
-      <p>
-        While Deep Learning systems achieve state-of-the-art performance in many tasks, they are often referred to as "black boxes" because even experts struggle to interpret how the layers contribute to the final decision.
-      </p>
-
-      <h2 id="quick-notes">Quick Notes – AI Algorithms & Techniques</h2>
+      <p><strong>Examples:</strong></p>
       <ul>
-        <li><strong>AI Algorithms:</strong> Methods that help machines learn, analyze, and make decisions.</li>
-        <li><strong>Whitebox (Explainable):</strong> Transparent, easy to understand, humans can see how decisions are made. Examples: Decision Trees, Linear Regression, Rule-Based Systems.</li>
-        <li><strong>Blackbox (Unexplainable):</strong> Complex, humans cannot easily understand the decision process. Examples: Neural Networks, Deep Learning models.</li>
-        <li><strong>Key Difference:</strong> Whitebox = simple and interpretable; Blackbox = powerful but not easily explainable.</li>
+        <li>Face recognition in smartphones</li>
+        <li>YouTube or TikTok recommendation systems</li>
+        <li>Spam email detection</li>
+        <li>Self-driving car decision-making systems</li>
       </ul>
+    
+      <h2 id="mcqs">Multiple Choice Questions (MCQs) on Artificial Intelligence Algorithms</h2>
 
-      <h2 id="advantages-whitebox">Advantages of Whitebox Algorithms</h2>
-        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <ul>
-        <li>Easy to interpret and explain to non-technical users.</li>
-        <li>Helpful in industries where trust and accountability are critical (healthcare, finance).</li>
-        <li>Require less computing power compared to blackbox algorithms.</li>
-        <li>Better for smaller datasets where transparency is preferred.</li>
-      </ul>
+<div class="mcq-item">
+  <div class="mcq-question">1. What are AI algorithms?</div>
+  <div class="mcq-options">
+    a. Random computer games<br>
+    b. Step-by-step methods for machines to perform intelligent tasks<br>
+    c. Only hardware parts of a computer<br>
+    d. Internet browsing tools
+  </div>
+  <div class="mcq-answer">Answer: b. Step-by-step methods for machines to perform intelligent tasks</div>
+</div>
 
-      <h2 id="disadvantages-whitebox">Disadvantages of Whitebox Algorithms</h2>
-        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <ul>
-        <li>Limited accuracy when dealing with highly complex data.</li>
-        <li>Not suitable for tasks requiring deep pattern recognition like image or speech recognition.</li>
-        <li>Performance may decline with very large datasets.</li>
-      </ul>
+<div class="mcq-item">
+  <div class="mcq-question">2. Which of the following is a feature of explainable (white-box) algorithms?</div>
+  <div class="mcq-options">
+    a. Hidden decision process<br>
+    b. Difficult to understand<br>
+    c. Transparent and easy to understand<br>
+    d. No output is given
+  </div>
+  <div class="mcq-answer">Answer: c. Transparent and easy to understand</div>
+</div>
 
-      <h2 id="advantages-blackbox">Advantages of Blackbox Algorithms</h2>
-       <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <ul>
-        <li>Highly accurate in complex problem-solving.</li>
-        <li>Can process massive datasets effectively.</li>
-        <li>Great for image processing, voice recognition, and natural language processing.</li>
-      </ul>
+<div class="mcq-item">
+  <div class="mcq-question">3. What do black-box algorithms mean?</div>
+  <div class="mcq-options">
+    a. Simple and clear rules<br>
+    b. Algorithms with visible steps<br>
+    c. Complex models whose decision process is hard to understand<br>
+    d. Manual calculations only
+  </div>
+  <div class="mcq-answer">Answer: c. Complex models whose decision process is hard to understand</div>
+</div>
 
-      <h2 id="disadvantages-blackbox">Disadvantages of Blackbox Algorithms</h2>
-       <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <ul>
-        <li>Lack of transparency difficult to explain results.</li>
-        <li>Require huge computational resources.</li>
-        <li>Risk of bias hidden in data and not easily detectable.</li>
-      </ul>
+<div class="mcq-item">
+  <div class="mcq-question">4. Which algorithm works like a flowchart with yes/no questions?</div>
+  <div class="mcq-options">
+    a. Linear Regression<br>
+    b. Decision Tree<br>
+    c. Black-box Model<br>
+    d. Neural Network only
+  </div>
+  <div class="mcq-answer">Answer: b. Decision Tree</div>
+</div>
 
-      <h2 id="applications">Applications of AI Algorithms</h2>
-       <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <ul>
-        <li><strong>Healthcare:</strong> Disease diagnosis, drug discovery, medical imaging.</li>
-        <li><strong>Finance:</strong> Fraud detection, credit scoring, algorithmic trading.</li>
-        <li><strong>Education:</strong> Personalized learning systems, automated grading.</li>
-        <li><strong>Transportation:</strong> Self-driving cars, traffic management.</li>
-        <li><strong>Robotics:</strong> Industrial automation, service robots.</li>
-        <li><strong>Daily Life:</strong> Virtual assistants, recommendation systems (YouTube, Netflix).</li>
-      </ul>
+<div class="mcq-item">
+  <div class="mcq-question">5. Linear regression is mainly used to predict what type of values?</div>
+  <div class="mcq-options">
+    a. Text values<br>
+    b. Images<br>
+    c. Numerical values<br>
+    d. Random outputs
+  </div>
+  <div class="mcq-answer">Answer: c. Numerical values</div>
+</div>
 
-      <h2 id="mcqs">MCQs – AI Algorithms & Techniques</h2>
-      <ol>
-        <li><strong>Which of the following is an example of a Whitebox algorithm?</strong><br>
-          a) Decision Trees ✅<br>
-          b) Neural Networks<br>
-          c) Deep Learning<br>
-          d) None of the above</li>
-        <li><strong>Blackbox algorithms are called so because:</strong><br>
-          a) They are easy to understand<br>
-          b) Their decision-making process is hidden ✅<br>
-          c) They don’t work on data<br>
-          d) They only use rules</li>
-        <li><strong>Linear Regression is mainly used to:</strong><br>
-          a) Classify animals<br>
-          b) Find a relationship between variables ✅<br>
-          c) Control a robot<br>
-          d) Translate languages</li>
-        <li><strong>Rule-Based Systems work on the principle of:</strong><br>
-          a) Yes/No questions<br>
-          b) If-Then rules ✅<br>
-          c) Neural layers<br>
-          d) Random guesses</li>
-        <li><strong>Which of the following is a Blackbox algorithm?</strong><br>
-          a) Rule-Based Systems<br>
-          b) Decision Trees<br>
-          c) Neural Networks ✅<br>
-          d) Linear Regression</li>
-      </ol>
+<div class="mcq-item">
+  <div class="mcq-question">6. Which is an example of linear regression?</div>
+  <div class="mcq-options">
+    a. Face recognition<br>
+    b. Spam detection<br>
+    c. House price prediction<br>
+    d. Game controls
+  </div>
+  <div class="mcq-answer">Answer: c. House price prediction</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. What is a rule-based system?</div>
+  <div class="mcq-options">
+    a. A system that learns without rules<br>
+    b. A system using if-then rules written by humans<br>
+    c. A system that works randomly<br>
+    d. A system only for games
+  </div>
+  <div class="mcq-answer">Answer: b. A system using if-then rules written by humans</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. In a game, what does "If obstacle ahead → then jump" represent?</div>
+  <div class="mcq-options">
+    a. Neural network<br>
+    b. Rule-based system<br>
+    c. Linear regression<br>
+    d. Black-box model
+  </div>
+  <div class="mcq-answer">Answer: b. Rule-based system</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. Which of the following is an example of a black-box system?</div>
+  <div class="mcq-options">
+    a. Traffic fine system<br>
+    b. Decision tree<br>
+    c. YouTube recommendation system<br>
+    d. Simple calculator
+  </div>
+  <div class="mcq-answer">Answer: c. YouTube recommendation system</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. What is true about decision trees?</div>
+  <div class="mcq-options">
+    a. They are always hidden models<br>
+    b. They use random guessing<br>
+    c. They use step-by-step decisions<br>
+    d. They only work for images
+  </div>
+  <div class="mcq-answer">Answer: c. They use step-by-step decisions</div>
+</div>
+
+      <div class="user-info">
+      <input type="text" id="username" placeholder="Enter your name" />
+    </div>
+
+    <section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (AI Algorithms)</h2>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">1. What are AI algorithms?</div>
+    <div class="mcq-options">
+      <button>a. Random computer games</button>
+      <button>b. Step-by-step methods for intelligent tasks</button>
+      <button>c. Only hardware parts</button>
+      <button>d. Internet browsers</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">2. What do AI algorithms help machines do?</div>
+    <div class="mcq-options">
+      <button>a. Only store data</button>
+      <button>b. Only play games</button>
+      <button>c. Learning, decision-making, and problem-solving</button>
+      <button>d. Print documents only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">3. What do explainable (white-box) algorithms mean?</div>
+    <div class="mcq-options">
+      <button>a. Hidden decision process</button>
+      <button>b. Random outputs</button>
+      <button>c. Easy to understand decision process</button>
+      <button>d. No rules used</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">4. What do black-box algorithms mean?</div>
+    <div class="mcq-options">
+      <button>a. Simple rule-based systems</button>
+      <button>b. Easy to interpret models</button>
+      <button>c. Complex models with hidden decision process</button>
+      <button>d. Manual calculations</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">5. Which algorithm uses yes/no questions like a flowchart?</div>
+    <div class="mcq-options">
+      <button>a. Linear Regression</button>
+      <button>b. Decision Tree</button>
+      <button>c. Black-box model</button>
+      <button>d. Random system</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">6. Linear regression is used to predict:</div>
+    <div class="mcq-options">
+      <button>a. Text data</button>
+      <button>b. Images</button>
+      <button>c. Numerical values</button>
+      <button>d. Random outputs</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">7. Which is an example of linear regression?</div>
+    <div class="mcq-options">
+      <button>a. Face recognition</button>
+      <button>b. House price prediction</button>
+      <button>c. Spam detection</button>
+      <button>d. Chatbots</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">8. Rule-based systems use:</div>
+    <div class="mcq-options">
+      <button>a. Random learning</button>
+      <button>b. If-then rules</button>
+      <button>c. Deep learning only</button>
+      <button>d. Images only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">9. Which is an example of a rule-based system?</div>
+    <div class="mcq-options">
+      <button>a. YouTube recommendations</button>
+      <button>b. Netflix suggestions</button>
+      <button>c. Face recognition</button>
+      <button>d. Game rules like “if obstacle → jump”</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">10. Which is a black-box system example?</div>
+    <div class="mcq-options">
+      <button>a. Traffic fine system</button>
+      <button>b. Decision tree</button>
+      <button>c. YouTube recommendations</button>
+      <button>d. Simple calculator</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">11. Decision trees work like:</div>
+    <div class="mcq-options">
+      <button>a. Random guessing</button>
+      <button>b. Hidden layers</button>
+      <button>c. Flowchart decisions</button>
+      <button>d. Image filters</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">12. Linear regression finds:</div>
+    <div class="mcq-options">
+      <button>a. Random pattern</button>
+      <button>b. Straight-line pattern</button>
+      <button>c. No pattern</button>
+      <button>d. Only images</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">13. Which is NOT a black-box example?</div>
+    <div class="mcq-options">
+      <button>a. Face recognition</button>
+      <button>b. Spam detection</button>
+      <button>c. Rule-based traffic fine system</button>
+      <button>d. Recommendation systems</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. Which algorithm gives numeric predictions?</div>
+    <div class="mcq-options">
+      <button>a. Decision Tree</button>
+      <button>b. Linear Regression</button>
+      <button>c. Rule-based system</button>
+      <button>d. Black-box model</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">15. What is true about white-box models?</div>
+    <div class="mcq-options">
+      <button>a. They are hidden</button>
+      <button>b. They are complex</button>
+      <button>c. They are easy to understand</button>
+      <button>d. They are always random</button>
+    </div>
+  </div>
+
+</section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
 
       <h2>Lectures</h2>
       <ul>
@@ -404,72 +605,115 @@ html { scroll-behavior: smooth; }
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">2. What is the difference between Whitebox and Blackbox algorithms?</button>
+    <button class="faq-question">2. What is Artificial Intelligence (AI)?</button>
     <div class="faq-answer">
-      <p>Whitebox algorithms are transparent and interpretable, while Blackbox algorithms are complex and hard to interpret.</p>
+      <p>AI is a technology that enables machines to perform tasks that normally require human intelligence, such as learning and decision-making.</p>
     </div>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">3. Why are Blackbox algorithms powerful?</button>
+    <button class="faq-question">3. What is a white-box (explainable) algorithm?</button>
     <div class="faq-answer">
-      <p>They can process massive amounts of data and identify deep patterns, achieving high accuracy.</p>
+      <p>It is an algorithm whose decision process is clear and easy to understand.</p>
     </div>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">4. Where are Decision Trees used?</button>
+    <button class="faq-question">4. What is a black-box algorithm?</button>
     <div class="faq-answer">
-      <p>In medical diagnosis, fraud detection, and classification tasks where interpretability is important.</p>
+      <p>It is an AI model where the decision-making process is very complex and not easy to understand.</p>
     </div>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">5. What are the risks of Blackbox algorithms?</button>
+    <button class="faq-question">5. What is an example of a white-box algorithm?</button>
     <div class="faq-answer">
-      <p>They may hide bias, are difficult to explain, and require huge computing power.</p>
+      <p>Decision trees, linear regression, and rule-based systems are examples of white-box algorithms.</p>
     </div>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">6. Is Linear Regression still relevant today?</button>
+    <button class="faq-question">6. What is a decision tree?</button>
     <div class="faq-answer">
-      <p>Yes, it is widely used for predictions in economics, business, and data analysis.</p>
+      <p>A decision tree is a model that makes decisions using a series of yes/no questions like a flowchart.</p>
     </div>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">7. Why do industries prefer Whitebox algorithms in sensitive areas?</button>
+    <button class="faq-question">7. What is linear regression used for?</button>
     <div class="faq-answer">
-      <p>Because they can explain decisions, which is crucial in fields like healthcare and law.</p>
+      <p>It is used to predict numerical values based on past data, such as house prices or marks.</p>
     </div>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">8. What is a real-life example of Deep Learning?</button>
+    <button class="faq-question">8. What is a rule-based system?</button>
     <div class="faq-answer">
-      <p>Voice assistants like Siri and Alexa that understand and respond to human speech.</p>
+      <p>It is a system that uses if-then rules written by humans to make decisions.</p>
     </div>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">9. How are Rule-Based Systems different from Neural Networks?</button>
+    <button class="faq-question">9. Give an example of a black-box system.</button>
     <div class="faq-answer">
-      <p>Rule-based systems depend on human-written logic, while neural networks learn automatically from data.</p>
+      <p>YouTube recommendations, Netflix suggestions, and face recognition systems are examples of black-box systems.</p>
     </div>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">10. Which type of AI algorithm is best?</button>
+    <button class="faq-question">10. What is meant by prediction in AI?</button>
     <div class="faq-answer">
-      <p>It depends on the task: Whitebox for transparency and trust, Blackbox for power and accuracy.</p>
+      <p>Prediction means using past data to estimate future outcomes or values.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">11. Can linear regression predict categories like A, B, C grades?</button>
+    <div class="faq-answer">
+      <p>No, it predicts numerical values. Categories are created later using fixed rules.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">12. Why are black-box algorithms called unexplainable?</button>
+    <div class="faq-answer">
+      <p>Because their internal decision process is too complex or hidden to understand clearly.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">13. What is an example of linear regression?</button>
+    <div class="faq-answer">
+      <p>Predicting house prices based on house size or predicting marks based on study time.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">14. What is the main difference between white-box and black-box models?</button>
+    <div class="faq-answer">
+      <p>White-box models are easy to understand, while black-box models are complex and not easily explainable.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">15. What do AI algorithms help machines do?</button>
+    <div class="faq-answer">
+      <p>They help machines learn from data, make decisions, and solve problems intelligently.</p>
     </div>
   </div>
 
 </section>
+  <h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/9-class/chapter-10/chapter10-lecture3.pdf">
+  Download PDF
+</a>
     </div>
   </article>
 </main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
 <footer class="footer">
   <div class="footer-links">
     <a href="index.html">Home</a>
@@ -483,23 +727,120 @@ html { scroll-behavior: smooth; }
 </footer>
 
 <script>
-  document.getElementById("navToggle").addEventListener("click", function () {
-    document.getElementById("navLinks").classList.toggle("show");
- });
-    // FAQ toggle
-  const faqItems = document.querySelectorAll(".faq-question");
-  faqItems.forEach(btn => {
-    btn.addEventListener("click", function () {
-      this.classList.toggle("active");
-      const answer = this.nextElementSibling;
-      if (answer.style.display === "block") {
-        answer.style.display = "none";
-      } else {
-        answer.style.display = "block";
-      }
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const answer = btn.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
     });
   });
+</script>
 
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 </script>
 </body>
 </html>
