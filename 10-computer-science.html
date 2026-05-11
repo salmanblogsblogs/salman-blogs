@@ -87,21 +87,6 @@
       </a>
     </div>
 
-    <div class="post-card">
-      <a href="10-class-chap-5-lecture-1.html">
-        <img src="images/10-CS-IMAGES/CHAPTER 5/chapter-5-lecture1-notes.webp" alt="chapter-5-lecture1-notes" loading="lazy">
-        <h2>Chapter 5: Functions In C[LECTURE 1 NOTES]</h2>
-        <p>All About Functions in C Language.</p>
-      </a>
-    </div>
-
-    <div class="post-card">
-      <a href="10-class-chapter-5-short-computer-science.html">
-        <img src="images/10-CS-IMAGES/CHAPTER 5/functions-in-c.jpg" alt="functions?" loading="lazy">
-        <h2>Chapter 5: Short Questions. All About Functions</h2>
-        <p>All About Functions in C Language.</p>
-      </a>
-    </div>
 
     <div class="post-card">
       <a href="class-10-important-questions.html">
@@ -168,7 +153,7 @@ const searchInput = document.getElementById("searchInput");
 const posts = document.querySelectorAll(".post-card");
 const noResults = document.getElementById("noResults");
 
-// Short word replacements
+// Normalize text
 function normalizeText(text) {
   return text
     .toLowerCase()
@@ -177,13 +162,14 @@ function normalizeText(text) {
     .replace(/[^a-z0-9 ]/g, " ");
 }
 
-// Simple fuzzy match (handles small spelling mistakes)
+// Fuzzy match
 function fuzzyMatch(text, word) {
   return text.includes(word) ||
          text.includes(word.slice(0, word.length - 1));
 }
 
 searchInput.addEventListener("input", function () {
+
   const searchWords = normalizeText(searchInput.value)
     .trim()
     .split(" ")
@@ -192,42 +178,62 @@ searchInput.addEventListener("input", function () {
   let visibleCount = 0;
 
   posts.forEach(function (post) {
+
     const title = post.querySelector("h2");
     const desc = post.querySelector("p");
 
-    const originalTitle = title.textContent;
-    const originalDesc = desc.textContent;
+    const originalTitle = title ? title.textContent : "";
+    const originalDesc = desc ? desc.textContent : "";
 
-    const combinedText = normalizeText(originalTitle + " " + originalDesc);
+    const combinedText = normalizeText(
+      originalTitle + " " + originalDesc
+    );
 
     const isMatch = searchWords.every(word =>
       fuzzyMatch(combinedText, word)
     );
 
     if (isMatch || searchWords.length === 0) {
+
       post.style.display = "block";
-      post.style.opacity = "1";
       visibleCount++;
 
       let highlightedTitle = originalTitle;
       let highlightedDesc = originalDesc;
 
       searchWords.forEach(word => {
+
         const regex = new RegExp("(" + word + ")", "gi");
-        highlightedTitle = highlightedTitle.replace(regex, "<mark>$1</mark>");
-        highlightedDesc = highlightedDesc.replace(regex, "<mark>$1</mark>");
+
+        highlightedTitle = highlightedTitle.replace(
+          regex,
+          "<mark>$1</mark>"
+        );
+
+        highlightedDesc = highlightedDesc.replace(
+          regex,
+          "<mark>$1</mark>"
+        );
       });
 
-      title.innerHTML = highlightedTitle;
-      desc.innerHTML = highlightedDesc;
+      if (title) {
+        title.innerHTML = highlightedTitle;
+      }
+
+      if (desc) {
+        desc.innerHTML = highlightedDesc;
+      }
 
     } else {
+
       post.style.display = "none";
     }
   });
 
-  noResults.style.display = visibleCount === 0 ? "block" : "none";
+  noResults.style.display =
+    visibleCount === 0 ? "block" : "none";
 });
 </script>
+
 </body>
 </html>
