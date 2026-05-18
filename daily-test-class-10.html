@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lecture notes on Subfields of Artificial Intelligence (AI) by Salman Ahmad (Teacher & Web Developer). Includes definitions, quick notes, examples, MCQs, and FAQs." />
+  <meta name="keywords" content="Artificial Intelligence, Subfields of AI, Machine Learning, Deep Learning, NLP, Computer Vision, Robotics, Computer Science Class 10" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Subfields of Artificial Intelligence (AI) — Notes, Examples & MCQs | Salman Blogs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about.css">
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Subfields of Artificial Intelligence (AI) — Notes, Examples & MCQs" />
+  <meta property="og:description" content="Learn about Machine Learning, Deep Learning, NLP, Computer Vision, and Robotics with examples, quick notes, MCQs, and FAQs." />
+  <meta property="og:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-10/chapter-10-lecture2-notes.webp" />
+  <meta property="og:url" content="https://salmanblogs.com/9-class-chap-10-lecture-2" />
+  <meta property="og:type" content="article" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Subfields of Artificial Intelligence (AI) — Notes, Examples & MCQs" />
+  <meta name="twitter:description" content="Clear lecture notes on AI subfields (ML, DL, NLP, Computer Vision, Robotics) with examples, quick notes, MCQs, and FAQs." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-10/chapter-10-lecture2-notes.webp" />
+</head>
+<body>
+
+<!-- Use of internal CSS. -->
+<style>
+html { scroll-behavior: smooth; }
+
+.post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+
+ .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .post-content p
+    {
+      margin: 0;
+    }
+
+
+  .test-mcqs {
+  max-width: 700px;
+  margin: auto;
+}
+.test-mcqs .mcq-item {
+  background: #f7f7f7;
+  border-left: 4px solid #0077cc;
+  padding: 15px;
+  margin: 10px 0;
+}
+.mcq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mcq-options button {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  font-size: 16px;
+}
+.mcq-options button.correct {
+  background-color: #d4edda; 
+  border-color: #28a745;
+  color: #155724;
+}
+.mcq-options button.wrong {
+  background-color: #f8d7da; 
+  border-color: #dc3545;
+  color: #721c24;
+}
+.mcq-options button.correct::after {
+  content: " ✅";
+  float: right;
+}
+.mcq-options button.wrong::after {
+  content: " ❌";
+  float: right;
+}
+.mcq-options button:hover {
+  background-color: #e2e6ea;
+}
+
+.test-mcqs h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showResult {
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showResult:hover {
+  background: #005fa3;
+}
+
+#resultText {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight input or MCQ when missing */
+.highlight-unanswered {
+  border: 2px solid #dc3545 !important;
+  background-color: #ffe5e5;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}    
+
+/* Back to top button styling */
+  #backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    font-size: 30px;
+    background-color: #002959;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #0055a5;
+  }
+</style>
+
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+     <h1 class="post-title">Daily Based MCQs Test</h1>
+    <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>
+    <img src="images/daily-test.webp" alt="chapter-10-lecture2-notes" class="post-image" />
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
+    </p>
+
+<h2 id="mcqs">Practice MCQs</h2>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What is an Operating System (OS)?</div>
+  <div class="mcq-options">
+    a. A web browser<br>
+    b. A programming language<br>
+    c. System software that manages computer hardware and applications<br>
+    d. A computer game
+  </div>
+  <div class="mcq-answer">Answer: c. System software that manages computer hardware and applications</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. Which of the following is an example of an operating system?</div>
+  <div class="mcq-options">
+    a. Microsoft Word<br>
+    b. Linux<br>
+    c. Google Chrome<br>
+    d. Adobe Photoshop
+  </div>
+  <div class="mcq-answer">Answer: b. Linux</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. What role does the operating system play in a computer?</div>
+  <div class="mcq-options">
+    a. Traffic controller<br>
+    b. Antivirus software<br>
+    c. Internet provider<br>
+    d. Storage device
+  </div>
+  <div class="mcq-answer">Answer: a. Traffic controller</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. Which task is managed by the operating system?</div>
+  <div class="mcq-options">
+    a. Cooking food<br>
+    b. Managing memory usage<br>
+    c. Printing newspapers<br>
+    d. Designing buildings
+  </div>
+  <div class="mcq-answer">Answer: b. Managing memory usage</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. The operating system acts as a ______ between the user and hardware.</div>
+  <div class="mcq-options">
+    a. Game<br>
+    b. Translator<br>
+    c. Virus<br>
+    d. Cable
+  </div>
+  <div class="mcq-answer">Answer: b. Translator</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. What happens when a user clicks an icon or types on a keyboard?</div>
+  <div class="mcq-options">
+    a. The monitor turns off<br>
+    b. The OS converts actions into machine instructions<br>
+    c. The CPU stops working<br>
+    d. The printer starts automatically
+  </div>
+  <div class="mcq-answer">Answer: b. The OS converts actions into machine instructions</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. Which of the following is NOT an operating system?</div>
+  <div class="mcq-options">
+    a. Android<br>
+    b. macOS<br>
+    c. iOS<br>
+    d. MS Excel
+  </div>
+  <div class="mcq-answer">Answer: d. MS Excel</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. Why is an operating system important in a multi-user environment?</div>
+  <div class="mcq-options">
+    a. It creates viruses<br>
+    b. It manages users and resources fairly<br>
+    c. It damages hardware<br>
+    d. It removes files automatically
+  </div>
+  <div class="mcq-answer">Answer: b. It manages users and resources fairly</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. What does the OS protect in a multi-user environment?</div>
+  <div class="mcq-options">
+    a. User privacy<br>
+    b. Internet cables<br>
+    c. Computer desk<br>
+    d. Speakers only
+  </div>
+  <div class="mcq-answer">Answer: a. User privacy</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. Which resource can be shared fairly by the operating system?</div>
+  <div class="mcq-options">
+    a. CPU<br>
+    b. Memory<br>
+    c. Printers<br>
+    d. All of the above
+  </div>
+  <div class="mcq-answer">Answer: d. All of the above</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. What does the OS use to keep users’ work secure?</div>
+  <div class="mcq-options">
+    a. Games<br>
+    b. User accounts and passwords<br>
+    c. Wallpapers<br>
+    d. Speakers
+  </div>
+  <div class="mcq-answer">Answer: b. User accounts and passwords</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. Which of the following can be different for each user account?</div>
+  <div class="mcq-options">
+    a. Files<br>
+    b. Desktop environment<br>
+    c. Settings<br>
+    d. All of the above
+  </div>
+  <div class="mcq-answer">Answer: d. All of the above</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. In a school computer lab, students log in using their own:</div>
+  <div class="mcq-options">
+    a. Mobile phones<br>
+    b. Username and password<br>
+    c. Printers<br>
+    d. Speakers
+  </div>
+  <div class="mcq-answer">Answer: b. Username and password</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. What does the operating system prevent in a shared computer system?</div>
+  <div class="mcq-options">
+    a. Authorized access<br>
+    b. Unauthorized access<br>
+    c. Typing<br>
+    d. Saving files
+  </div>
+  <div class="mcq-answer">Answer: b. Unauthorized access</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. Which operating system is mainly used on Apple mobile devices?</div>
+  <div class="mcq-options">
+    a. Android<br>
+    b. Windows<br>
+    c. iOS<br>
+    d. Linux
+  </div>
+  <div class="mcq-answer">Answer: c. iOS</div>
+</div>
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Operating System)</h2>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">1. What is an Operating System (OS)?</div>
+    <div class="mcq-options">
+      <button>a. A web browser</button>
+      <button>b. A programming language</button>
+      <button>c. System software that manages computer hardware and applications</button>
+      <button>d. A computer game</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">2. Which of the following is an example of an operating system?</div>
+    <div class="mcq-options">
+      <button>a. MS Word</button>
+      <button>b. Linux</button>
+      <button>c. Google Chrome</button>
+      <button>d. Adobe Photoshop</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">3. The operating system works like a:</div>
+    <div class="mcq-options">
+      <button>a. Traffic controller</button>
+      <button>b. Calculator</button>
+      <button>c. Monitor</button>
+      <button>d. Speaker</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">4. Which task is managed by the operating system?</div>
+    <div class="mcq-options">
+      <button>a. Cooking food</button>
+      <button>b. Managing memory usage</button>
+      <button>c. Painting walls</button>
+      <button>d. Writing books</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">5. The operating system acts as a ______ between user and hardware.</div>
+    <div class="mcq-options">
+      <button>a. Printer</button>
+      <button>b. Translator</button>
+      <button>c. Scanner</button>
+      <button>d. Cable</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">6. What happens when a user clicks an icon?</div>
+    <div class="mcq-options">
+      <button>a. The monitor turns off</button>
+      <button>b. The OS converts actions into machine instructions</button>
+      <button>c. The CPU stops</button>
+      <button>d. The keyboard disconnects</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">7. Which of the following is NOT an operating system?</div>
+    <div class="mcq-options">
+      <button>a. Android</button>
+      <button>b. macOS</button>
+      <button>c. iOS</button>
+      <button>d. MS Excel</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">8. Why is an operating system important in a multi-user environment?</div>
+    <div class="mcq-options">
+      <button>a. It creates viruses</button>
+      <button>b. It manages users and resources fairly</button>
+      <button>c. It damages hardware</button>
+      <button>d. It removes files</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">9. What does the OS protect in a multi-user system?</div>
+    <div class="mcq-options">
+      <button>a. User privacy</button>
+      <button>b. Monitor screen</button>
+      <button>c. Internet cables</button>
+      <button>d. Mouse pad</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">10. Which resource can be shared fairly by the operating system?</div>
+    <div class="mcq-options">
+      <button>a. CPU</button>
+      <button>b. Memory</button>
+      <button>c. Printers</button>
+      <button>d. All of the above</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">11. What helps keep users’ work secure?</div>
+    <div class="mcq-options">
+      <button>a. Wallpapers</button>
+      <button>b. User accounts and passwords</button>
+      <button>c. Speakers</button>
+      <button>d. Antivirus games</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">12. Which can be different for each user account?</div>
+    <div class="mcq-options">
+      <button>a. Files</button>
+      <button>b. Settings</button>
+      <button>c. Desktop environment</button>
+      <button>d. All of the above</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">13. Students log in using their own:</div>
+    <div class="mcq-options">
+      <button>a. Mobile phones</button>
+      <button>b. Username and password</button>
+      <button>c. Printers</button>
+      <button>d. Monitors</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. What does the OS prevent in shared systems?</div>
+    <div class="mcq-options">
+      <button>a. Typing</button>
+      <button>b. Unauthorized access</button>
+      <button>c. Saving files</button>
+      <button>d. Printing documents</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">15. Which operating system is used on Apple mobile devices?</div>
+    <div class="mcq-options">
+      <button>a. Android</button>
+      <button>b. Windows</button>
+      <button>c. iOS</button>
+      <button>d. Linux</button>
+    </div>
+  </div>
+
+</section>
+
+
+ <div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+
+</div>
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const answer = btn.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>
