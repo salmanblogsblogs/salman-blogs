@@ -3,37 +3,232 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Learn the fundamentals of web development with clear definitions, quick revision notes, MCQs and expanded real-world examples, best practices and FAQs." />
-  <meta name="keywords" content="Fundamentals of Web Development, HTML, CSS, JavaScript, Digital Literacy, MCQs, Revision, Responsive Design, Hosting, Git, SEO" />
-  <meta name="author" content="Salman Ahmad" />
-  <title>Fundamentals of Web Development — Definitions, Quick Notes & MCQs | Salman Blogs</title>
+  <meta name="description" content="Class 10 Computer Science Chapter 1 Notes: Operating System (OS). Complete study material with definitions, types, kernel, shell, OS architecture, device drivers, system libraries, MCQs, short questions, FAQs, and exam preparation notes for FBISE and Punjab Board students." />
+
+<meta name="keywords" content="10th class computer science notes, class 10 computer chapter 1, operating system notes class 10, OS chapter 1 computer science, 10 class computer MCQs, short questions operating system, kernel and shell notes, OS architecture explained, device drivers notes, system libraries computer science, FBISE computer notes, Punjab board computer notes, operating system exam preparation, important questions OS chapter 1, computer science solved MCQs class 10, class 10 computer full notes" />
+
+<meta name="author" content="Salman Ahmad" />
+
+<title>Class 10 Computer Science Chapter 1: Operating System (OS) Notes | MCQs, Short Questions & FAQs | Exam Preparation</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about.css">
+  <link rel="canonical" href="https://salmanblogs.com/10-class-chap-1-lecture-1" />
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
      crossorigin="anonymous"></script>
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Fundamentals of Web Development — Definitions, Quick Notes & MCQs" />
-  <meta property="og:description" content="Understand HTML, CSS, JavaScript and other core web development concepts with definitions, quick notes and MCQs for practice." />
-  <meta property="og:image" content="https://salmanblogs.com/images/technology/fundamentals-web-development.png" />
-  <meta property="og:url" content="https://salmanblogs.com/fundamentals-of-web-development.html" />
-  <meta property="og:type" content="article" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121" crossorigin="anonymous"></script>
+  <!-- Open Graph -->
+<meta property="og:title" content="Class 10 Computer Science Chapter 1: Operating System (OS) Notes | MCQs, Short Questions & FAQs" />
 
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Fundamentals of Web Development — Definitions, Quick Notes & MCQs" />
-  <meta name="twitter:description" content="Clear definitions, quick notes and MCQs to help you learn the basics of web development." />
-  <meta name="twitter:image" content="https://salmanblogs.com/images/technology/fundamentals-web-development.png" />
-  <style>
-    .lead { font-size: 1.05rem; line-height: 1.6; }
-    .tip { background:#f7f9fc; border-left:4px solid #0077cc; padding:10px 12px; margin:12px 0; }
-    .code { background:#272e36; color:#e6edf3; padding:12px; border-radius:6px; overflow:auto; font-family:monospace; }
-    .section-title { margin-top:1.6rem; }
-    .two-col { display:flex; gap:20px; flex-wrap:wrap; }
-    .col { flex:1; min-width:260px; }
-  </style>
+<meta property="og:description" content="Complete Class 10 Computer Science Chapter 1 Notes on Operating System (OS). Includes definitions, types, kernel, shell, OS architecture, device drivers, system libraries, MCQs, short questions, FAQs, and exam preparation for FBISE and Punjab Board students." />
+
+<meta property="og:image" content="https://salmanblogs.com/images/10-CS-IMAGES/CHAPTER-1/10-class-computer-chapter1-lecture1.webp" />
+
+<meta property="og:url" content="https://salmanblogs.com/10-class-chap-1-lecture-1" />
+
+<meta property="og:type" content="article" />
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:title" content="Class 10 Computer Science Chapter 1: Operating System (OS) Notes | MCQs & FAQs" />
+
+<meta name="twitter:description" content="Study Class 10 Computer Chapter 1 Operating System (OS) with complete notes, MCQs, short questions, FAQs, and exam preparation material for FBISE and Punjab Board." />
+
+<meta name="twitter:image" content="https://salmanblogs.com/images/10-CS-IMAGES/CHAPTER-1/10-class-computer-chapter1-lecture1.webp" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Class 10 Computer Science Chapter 1 Operating System Notes",
+  "author": {
+    "@type": "Person",
+    "name": "Salman Ahmad"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Salman Blogs"
+  },
+  "description": "Complete Class 10 Computer Science Chapter 1 Operating System Notes with MCQs, short questions, FAQs and exam preparation material.",
+  "mainEntityOfPage": "https://salmanblogs.com/10-class-chap-1-lecture-1"
+}
+</script>
+
 </head>
 <body>
+<!-- Use of internal CSS. -->
+<style>
+html { scroll-behavior: smooth; }
+.toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+.toc h2 { margin-top: 0; }
+.toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
+.toc a:hover { color: darkblue; }
+.toc li {list-style-type: none;}
+.post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+
+ul, ol 
+{
+  margin-left: 20px;
+}
+ .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .post-content p
+    {
+      margin: 0;
+    }
+
+
+  .test-mcqs {
+  max-width: 700px;
+  margin: auto;
+}
+.test-mcqs .mcq-item {
+  background: #f7f7f7;
+  border-left: 4px solid #0077cc;
+  padding: 15px;
+  margin: 10px 0;
+}
+.mcq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mcq-options button {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  font-size: 16px;
+}
+.mcq-options button.correct {
+  background-color: #d4edda; 
+  border-color: #28a745;
+  color: #155724;
+}
+.mcq-options button.wrong {
+  background-color: #f8d7da; 
+  border-color: #dc3545;
+  color: #721c24;
+}
+.mcq-options button.correct::after {
+  content: " ✅";
+  float: right;
+}
+.mcq-options button.wrong::after {
+  content: " ❌";
+  float: right;
+}
+.mcq-options button:hover {
+  background-color: #e2e6ea;
+}
+
+.test-mcqs h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showResult {
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showResult:hover {
+  background: #005fa3;
+}
+
+#resultText {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight input or MCQ when missing */
+.highlight-unanswered {
+  border: 2px solid #dc3545 !important;
+  background-color: #ffe5e5;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}    
+
+/* Back to top button styling */
+  #backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    font-size: 30px;
+    background-color: #002959;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #0055a5;
+  }
+</style>
+
 <header class="navbar">
   <div class="container">
     <div class="logo">
@@ -53,440 +248,673 @@
 
 <main class="post-container">
   <article class="blog-post">
-    <h1 class="post-title">Fundamentals of Web Development[HTML CSS JAVASCRIPT] Lecture 1 Notes</h1>
-    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
-    <img src="images/9-CS-IMAGES/chapter-8/chapter-8-lecture1-notes.webp" alt="chapter-8-lecture1-notes" class="post-image" />
+    <h1 class="post-title">Operating System Structure and Services Lecture 1 Notes</h1>
+    <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>
+    <img src="images/10-CS-IMAGES/CHAPTER-1/10-class-computer-chapter1-lecture1.webp" alt="10-class-computer-chapter1-lecture1" class="post-image" loading="lazy">
 
-    <div class="post-content">
-      <h2>Introduction</h2>
-      <p class="lead">
-        Hello! I'm <strong>Salman Ahmad</strong>. Your Computer Science teacher and also a web developer. In this lesson we're going to dig into the fundamentals of web development. 
-        If you've ever asked yourself how websites are built, why some pages look pretty while others don't, or how interactive things on a page work, this guide is for you.
-      </p>
-
-      <p class="lead">
-        We'll cover the basics (HTML, CSS, JavaScript), why each one matters, how they work together, and practical tips you can use to build simple web pages. There are examples, revision notes, MCQs, and extra sections like responsive design, performance tips, security basics, hosting and deployment, and career advice so you get a full picture.
-      </p>
-
-      <div class="tip">
-        Quick practical idea: open your browser and press <strong>Ctrl+U</strong> (or right-click → View Page Source) to see HTML. Then press <strong>F12</strong> to open DevTools and poke CSS & JavaScript live. It's the fastest way to learn.
-      </div>
-
-      <h2 class="section-title">Full Definitions</h2>
-      <ol>
-        <li>
-          <strong>HTML (HyperText Markup Language)</strong>
-          <p>HTML is the language used to create the basic structure of a webpage. It tells the browser what each part of the page is, like headings, text, pictures, and links.</p>
-        </li>
-        <li>
-          <strong>CSS (Cascading Style Sheets)</strong>
-          <p>CSS is the language used to style a webpage. It controls colors, fonts, layouts, and designs to make the page look attractive.</p>
-        </li>
-        <li>
-          <strong>JavaScript</strong>
-          <p>JavaScript is the language that makes a webpage active and interactive. It allows the page to respond when users click, type, or move things.</p>
-        </li>
-        <li>
-          <strong>Web Development</strong>
-          <p>Web development is the process of creating and maintaining websites or web applications. It involves using different languages and tools to design, build, and manage web pages.</p>
-        </li>
-        <li>
-          <strong>Why Learn Web Development</strong>
-          <p>Learning web development is important because it helps you understand how websites work, opens career opportunities, improves problem-solving skills, allows creativity, and can help you start your own online business.</p>
-        </li>
-        <li>
-          <strong>Digital Literacy</strong>
-          <p>Digital literacy is understanding how digital technology works. In web development, it means knowing how HTML, CSS, and JavaScript work together to create a website and understanding how the internet functions.</p>
-        </li>
-        <li>
-          <strong>Career Opportunities</strong>
-          <p>Career opportunities are different types of jobs you can get with certain skills. Web development skills can help you work as a web developer, web designer, or other related roles in the IT industry.</p>
-        </li>
-        <li>
-          <strong>Problem-Solving</strong>
-          <p>Problem-solving is the ability to find and fix issues. In web development, this could mean figuring out why a website is slow or fixing errors so it works better.</p>
-        </li>
-        <li>
-          <strong>Creativity</strong>
-          <p>Creativity is the ability to make new and interesting things. In web development, it means designing websites with unique layouts, colors, and interactive features.</p>
-        </li>
-        <li>
-          <strong>Entrepreneurship</strong>
-          <p>Entrepreneurship is starting and running your own business. With web development skills, you can create a website to sell products, share services, or launch a new online idea.</p>
-        </li>
-      </ol>
-
-      <!-- Expanded: How HTML, CSS, JS work together -->
-      <h2 class="section-title">How HTML, CSS and JavaScript Work Together (the big picture)</h2>
-          <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <p class="lead">
-        Think of a website like a human body:
-      </p>
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 10 Computer Science.
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#os">Introduction To Operating System</a></li>
+<li><a href="#os-as-controller">Operating System as the Central Controller</a></li>
+<li><a href="#role">Role in user Hardware Interaction</a></li>
+<li><a href="#responsibilites">Responsibilities in Multi-User Environment Tasks</a></li>
+<li><a href="#user-accounts">Creating and Managing User Accounts</a></li>
+<li><a href="#os-architecture">Architecture of an Operating System</a></li>
+<li><a href="#diagram">Diagram or Structure</a></li>
+<li><a href="kernal-vs-shell">Kernal-VS-Shell</a></li>
+<li><a href="#types-of-shell">Types of Shell</a></li>
+<li><a href="#os-layers">OS Layers and Modular Design</a></li>
+<li><a href="#mcqs">MCQs</a></li>
+<li><a href="#test-mcqs">MCQs for testing</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+  <div class="post-content">
+  </p>
+      <h2 id="secure-computer-usage">Secure Computer Usage</h2>
+      <p>Computers are used daily for school, communication, and entertainment. Using computers safely means:</p>
       <ul>
-        <li><strong>HTML is the skeleton:</strong> it provides structure by using headings, paragraphs, images, tables etc.</li>
-        <li><strong>CSS is the clothing and makeup:</strong> it makes the structure look attractive by using colors, spacing, alignment.</li>
-        <li><strong>JavaScript is the muscles and nerves:</strong> it makes things move and respond.</li>
+      <li>Protecting your personal information</li>
+      <li>Making smart choices about software and devices</li>
+      <li>Behaving politely and honestly online</li>
       </ul>
-
-      <p class="lead">
-        When someone types a web address in the browser, the browser requests HTML from a server. The server responds with HTML, which the browser parses into a DOM (Document Object Model). CSS files referenced in the HTML are downloaded and applied to the DOM to style it. JavaScript runs and can change the DOM in real time, making the page interactive.
-      </p>
-
-      <div class="two-col">
-        <div class="col">
-          <h3>Simple Example: A heading with color and a click</h3>
-          <div class="code">
-&lt;!-- HTML -- &gt;
-&lt;h1 id="title"&gt;Hello World&lt;/h1&gt;
-&lt;link rel="stylesheet" href="styles.css"&gt;
-&lt;script src="script.js"&gt;&lt;/script&gt;
-
-&lt;!-- styles.css --&gt;
-#title { color: blue; font-family: Arial, sans-serif; }
-
-&lt;!-- script.js --&gt;
-document.getElementById('title').addEventListener('click', function() {
-  alert('You clicked the title!');
-});
-          </div>
-        </div>
-        <div class="col">
-          <h3>What happens</h3>
-          <p class="lead">HTML creates the &lt;h1&gt; element, CSS gives it blue color and a font, and JavaScript listens for a click and shows an alert. That simple trio demonstrates structure, style, and behavior.</p>
-        </div>
-      </div>
-
-      <!-- Expanded: Browser, Server, Client-Server model -->
-      <h2 class="section-title">Browser, Server &amp; the Client-Server Model</h2>
-        <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <p class="lead">
-        The web works on a client-server model. The browser (client) requests resources; the server responds. This request/response loop uses the HTTP protocol (or HTTPS for secure sites).
-      </p>
-
-      <h3>What is a browser?</h3>
-      <p class="lead">
-        A browser (Chrome, Firefox, Safari, Edge) renders HTML and CSS, runs JavaScript, and provides developer tools to inspect structure, style, and network requests. Browsers also implement security measures (same-origin policy, CORS).
-      </p>
-
-      <h3>What is a server?</h3>
-      <p class="lead">
-        A server is a computer that stores website files and responds to HTTP requests. When you visit example.com, your browser asks the server for index.html; the server sends files back.
-      </p>
-
-      <h3>HTTP and HTTPS (basic idea)</h3>
-      <p class="lead">
-        HTTP (HyperText Transfer Protocol) is the set of rules for requesting and delivering web content. HTTPS is HTTP over TLS/SSL. It encrypts the data between browser and server so eavesdroppers cannot read it.
-      </p>
-
-      <div class="tip">
-        Tip: always prefer HTTPS for real sites. Browsers mark non-HTTPS pages as “Not secure.”
-      </div>
-
-      <!-- Expanded: HTML basics - tags, semantics, accessibility -->
-      <h2 class="section-title">HTML Essentials: Tags, Semantics and Accessibility</h2>
-              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <p class="lead">
-        HTML uses tags like &lt;h1&gt;, &lt;p&gt;, &lt;img&gt;, &lt;a&gt;, &lt;form&gt; and more. Modern best-practice is to use <em>semantic</em> tags (like &lt;header&gt;, &lt;main&gt;, &lt;article&gt;, &lt;nav&gt;, &lt;footer&gt;) so the page is easier to read for humans, search engines and assistive technologies.
-      </p>
-
-      <h3>Accessibility (a11y) basics</h3>
+      <strong>When we use computers carefully, we avoid risks like viruses, hacking, and scams.</strong>
+      <p><strong>Example:</strong>Installing antivirus software helps protect your computer from harmful viruses.</p>
+      <h2 id="responsible-computer-usage">Responsible Computer Usage</h2>
+      <p>Responsible computer usage means using technology carefully and making good decisions.</p>
+      <p>This includes:</p>
       <ul>
-        <li>Use <code>alt</code> attributes for images: &lt;img src="photo.jpg" alt="A child reading a book"&gt;</li>
-        <li>Use proper heading order (h1 → h2 → h3) so screen readers can follow structure.</li>
-        <li>Label forms correctly with &lt;label for="name"&gt;Name&lt;/label&gt; and input IDs.</li>
-        <li>Ensure contrast between text and background for readability.</li>
+      <li>Choosing good hardware and software</li>
+      <li>Keeping data safe</li>
+      <li>Respecting others online</li>
+      <li>Choosing the Right Hardware and Software</li>
       </ul>
+      <h3 id="choosing">Why Choosing the Right Hardware and Software is Important</h3>
+      <h3>1. Safety</h3>
+      <p>Old or unsafe software can make your computer vulnerable to viruses, malware, and hackers. Regular updates and security tools help protect your data.</p>
+      <p><strong>Example:</strong>A computer without antivirus software can easily get infected.</p>
+      
+      <h3>2. Efficiency</h3>
+      <p>Good hardware and software make your computer run faster and more smoothly, improving performance and reducing delays.</p>
+      <p><strong>Example:</strong>New games may run slowly on an old computer.</p>
+      
+      <h3>3. Compatibility</h3>
+      <p>Hardware and software must work together properly for smooth operation. If they don’t match, programs may not run correctly.</p>
+      <p><strong>Example:</strong>Always check system requirements before installing a game.</p>
 
-      <div class="tip">
-        Accessibility is not optional. It helps people who use screen readers, improves SEO, and broadens your audience.
-      </div>
+      <h2>Use of Secure Digital Platforms</h2>
+    <p>Using digital platforms safely helps protect your personal information and prevents cyber threats.</p>
 
-      <!-- Expanded: CSS essentials -->
-      <h2 class="section-title">CSS Essentials: Selectors, Box Model and Responsive Layouts</h2>
-              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <p class="lead">
-        CSS controls how HTML looks. Some key concepts:
-      </p>
-      <ul>
-        <li><strong>Selectors:</strong> Choose elements to style (element, class, ID, attribute selectors).</li>
-        <li><strong>Box model:</strong> Every element has content, padding, border, margin. Learning this helps with layout and spacing.</li>
-        <li><strong>Flexbox & Grid:</strong> Modern layout systems. Flexbox is great for single-dimensional layouts, Grid is powerful for two-dimensional layouts.</li>
-        <li><strong>Responsive design:</strong> Media queries let your site adapt to mobile, tablet, and desktop screens.</li>
-      </ul>
+    <h3>Strong Passwords</h3>
+    <p>Create strong passwords using a mix of letters, numbers, and special symbols to make them harder to guess.</p>
+    <p><strong>Example:</strong> Instead of <em>password123</em>, use <em>B3tterP@ssword! or 123check@123</em></p>
 
-      <h3>Example: simple responsive rule</h3>
-      <div class="code">
-@media (max-width: 600px) {
-  .sidebar { display: none; }
-  .content { width: 100%; }
-}
-      </div>
+    <h3>Two-Factor Authentication (2FA)</h3>
+    <p>2FA adds an extra layer of security by sending a verification code to your phone after entering your password.</p>
+    <p><strong>Example:</strong> Even if someone knows your password, they cannot log in without the code sent to your phone.</p>
 
-      <!-- Expanded: JavaScript essentials -->
-      <h2 class="section-title">JavaScript Essentials: Interaction, DOM and APIs</h2>
-              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <p class="lead">
-        JavaScript runs in the browser to make pages interactive:
-      </p>
-      <ul>
-        <li><strong>DOM (Document Object Model):</strong> JavaScript can add/remove/change HTML elements in the DOM.</li>
-        <li><strong>Events:</strong> Clicks, input, scroll — JS listens for events to react.</li>
-        <li><strong>APIs:</strong> Fetch data from servers (AJAX/fetch), work with browser storage, Web APIs like Geolocation or Canvas.</li>
-      </ul>
+    <h3>Avoid Public Wi-Fi for Important Work</h3>
+    <p>Public Wi-Fi networks are often unsecured and can be easily accessed by hackers.</p>
+    <p><strong>Example:</strong> Avoid doing online banking on café or airport Wi-Fi.</p>
 
-      <h3>Small example: fetch API</h3>
-      <div class="code">
-fetch('https://api.example.com/data')
-  .then(resp =&gt; resp.json())
-  .then(data =&gt; console.log(data));
-      </div>
+    <h3>Be Careful of Scams</h3>
+    <p>Scammers may try to trick you into sharing personal information through fake emails or messages.</p>
+    <p><strong>Example:</strong> A fake email pretending to be from a bank asking for your password.</p>
 
-      <!-- Expanded: Tools & Workflow -->
-      <h2 class="section-title">Tools &amp; Workflow — DevTools, Editors, Version Control</h2>
-              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <p class="lead">
-        Real web development uses tools that speed up work and keep projects organized:
-      </p>
-      <ul>
-        <li><strong>Code editors:</strong> VS Code, Sublime, Atom (VS Code is widely used).</li>
-        <li><strong>Browser DevTools:</strong> Inspect DOM/CSS, debug JS, audit performance and accessibility.</li>
-        <li><strong>Version control (Git):</strong> Track changes and collaborate with others. Platforms: GitHub, GitLab, Bitbucket.</li>
-        <li><strong>Package managers and build tools:</strong> npm/yarn, and bundlers like Vite, Webpack for modern JS projects.</li>
-      </ul>
+    <h3>Check Account Activity</h3>
+    <p>Regularly monitor your accounts to detect any unusual or suspicious activity.</p>
+    <p><strong>Example:</strong> If you notice a login from an unknown country, change your password immediately.</p>
 
-      <div class="tip">
-        Practical workflow: write code locally → test in browser → commit to Git → push to GitHub → deploy (e.g., Netlify or GitHub Pages).
-      </div>
+    <h3>Back Up Important Data</h3>
+    <p>Always keep copies of important files to avoid data loss.</p>
+    <p><strong>Example:</strong> Save school work on Google Drive or an external hard drive.</p>
+    
+    <h2>Best Practices in Online Behavior</h2>
 
-      <!-- Expanded: Responsive Design & Mobile-first -->
-      <h2 class="section-title">Responsive Design & Mobile-First Approach</h2>
-              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <p class="lead">
-        Most web traffic is on mobile. Build mobile-first: design for small screens first, then scale up. Use flexible units (%, rem) and media queries.
-      </p>
+    <p>
+        We use social media, email, cloud storage, and apps every day for communication, learning, and sharing information. 
+        It is important to use them safely, responsibly, and wisely to protect our privacy and personal data.
+    </p>
 
-      <h3>Checklist for responsive pages</h3>
-      <ul>
-        <li>Fluid layouts that adapt to screen width</li>
-        <li>Images that scale with CSS (<code>max-width:100%</code>)</li>
-        <li>Readable font sizes (use <code>rem</code>)</li>
-        <li>Touchable targets for buttons (minimum ~44px)</li>
-      </ul>
+    <h3>Social Media</h3>
+    <p>
+        Think carefully before posting anything online because once something is shared, it can be difficult to remove completely.
+    </p>
+    <p><strong>Example:</strong> Do not share your home address publicly on Facebook or Instagram.</p>
 
-      <!-- Expanded: Performance & Optimization -->
-      <h2 class="section-title">Performance & Optimization</h2>
-              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <p class="lead">
-        Fast pages = better user experience + better SEO. A few practical optimizations:
-      </p>
-      <ul>
-        <li>Compress images and use modern formats (WebP).</li>
-        <li>Minify CSS & JavaScript files for production.</li>
-        <li>Use lazy loading for images below the fold.</li>
-        <li>Leverage browser caching and CDN (Content Delivery Network).</li>
-      </ul>
+    <h3>Email Safety</h3>
+    <p>
+        Be careful with emails from unknown people, as they may contain scams, viruses, or fake links.
+    </p>
+    <p><strong>Example:</strong> Do not open strange links or attachments from unknown senders.</p>
 
-      <!-- Expanded: Security basics -->
-      <h2 class="section-title">Basic Web Security</h2>
-              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <p class="lead">
-        Basic practices to keep sites secure:
-      </p>
-      <ul>
-        <li>Use HTTPS to encrypt data in transit.</li>
-        <li>Never store sensitive secrets in client-side code.</li>
-        <li>Validate user input on server side to prevent injection attacks.</li>
-        <li>Keep dependencies up to date (run audits with npm).</li>
-      </ul>
+    <h3>Cloud Services</h3>
+    <p>
+        Cloud services store files online and allow access from anywhere using the internet.
+    </p>
+    <p><strong>Example:</strong> Google Drive and Dropbox help save files safely.</p>
+    <p>
+        Always use strong passwords and avoid storing sensitive information carelessly.
+    </p>
 
-      <!-- Expanded: Hosting & Deployment -->
-      <h2 class="section-title">Hosting & Deployment (How your site goes live)</h2>
-              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>      
-      <p class="lead">
-        After building a website, you host it on a server so others can visit it. Options for beginners:
-      </p>
-      <ul>
-        <li><strong>GitHub Pages:</strong> Free hosting for static sites.</li>
-        <li><strong>Netlify / Vercel:</strong> Easy deploys + continuous deployment from Git.</li>
-        <li><strong>Shared hosting / VPS:</strong> For more control, choose providers like DigitalOcean, Linode.</li>
-      </ul>
+    <h3>Online Applications</h3>
+    <p>
+        Only install apps from safe and official platforms to keep your device secure and prevent malicious software. 
+        Before downloading, review ratings and permissions to ensure the app is trustworthy.
+    </p>
+    <p><strong>Example:</strong> Use Google Play Store or Apple App Store for downloading apps.</p>
 
-      <h3>Example deployment flow</h3>
-      <ol>
-        <li>Push your project to GitHub.</li>
-        <li>Connect the repo to Netlify/Vercel.</li>
-        <li>On each push, the platform builds and deploys the site automatically.</li>
-      </ol>
+      <h2>Intellectual Property Rights</h2>
 
-      <!-- Expanded: Learning path & small projects -->
-      <h2 class="section-title">Learning Path & Small Projects to Try</h2>
-              <strong>Extra[You can skip this during writing on notebooks. It is just an extra knowledge.]</strong>
-      <p class="lead">
-        How to practice and build real skills:
-      </p>
-      <ul>
-        <li><strong>Beginner:</strong> Build a static personal page with HTML & CSS (about page, photo, contact).</li>
-        <li><strong>Intermediate:</strong> Add JavaScript: form validation, image gallery, to-do app.</li>
-        <li><strong>Advanced:</strong> Learn a framework (React/Vue), connect to an API, deploy full site.</li>
-      </ul>
+    <p>
+        Intellectual property rights protect people’s ideas, inventions, and creative work from being copied or used without permission. 
+        These rights encourage creativity and innovation by giving creators control over their work.
+    </p>
 
-      <h3>Suggested mini projects</h3>
-      <ul>
-        <li>Personal portfolio site.</li>
-        <li>Simple blog with static pages.</li>
-        <li>To-do list app (local storage).</li>
-        <li>Weather app using a free API.</li>
-      </ul>
+    <h3>Copyright</h3>
+    <p>
+        Copyright protects original creative work such as books, music, movies, artwork, and software. 
+        It ensures that the creator has the right to control how their work is used, copied, or shared.
+    </p>
+    <p><strong>Example:</strong> An author controls who can copy, print, or sell their book.</p>
 
-      <!-- Quick Notes - must remain unchanged per request -->
-      <h2 class="section-title">Quick Notes – Fundamentals of Web Development</h2>
-      <ul>
-        <li><strong>HTML</strong> – Builds the structure of a webpage (headings, text, pictures, links).</li>
-        <li><strong>CSS</strong> – Adds style to a webpage (colors, fonts, layouts, designs).</li>
-        <li><strong>JavaScript</strong> – Makes a webpage active and interactive (responds to clicks, typing, moving things).</li>
-        <li><strong>Web Development</strong> – Making and maintaining websites using different languages and tools.</li>
-        <li><strong>Why Learn Web Development</strong> – Helps you understand websites, get jobs, solve problems, be creative, and start your own business.</li>
-        <li><strong>Digital Literacy</strong> – Knowing how digital tools work; in web development, it means understanding HTML, CSS, JavaScript, and how the internet works.</li>
-        <li><strong>Career Opportunities</strong> – Jobs you can get with web development skills (web developer, web designer, etc.).</li>
-        <li><strong>Problem-Solving</strong> – Finding and fixing problems in websites to make them work better.</li>
-        <li><strong>Creativity</strong> – Designing unique and attractive websites with your own ideas.</li>
-        <li><strong>Entrepreneurship</strong> – Using your skills to create your own business or sell things online.</li>
-      </ul>
+    <h3>Trademark</h3>
+    <p>
+        A trademark protects company names, logos, slogans, or symbols that identify a brand. 
+        It helps customers recognize products and prevents others from using similar marks.
+    </p>
+    <p><strong>Example:</strong> The Nike “swoosh” logo is a trademark that represents the brand.</p>
 
-      <!-- Conclusion - expanded with encouragement and next steps -->
-      <h2 class="section-title">Conclusion</h2>
-      <p class="lead">
-        The fundamentals of web development give you the building blocks to make websites and web apps. Start small: learn HTML tags and structure, layer on CSS for design, then add JavaScript for interactivity. Use browser DevTools, practice with mini projects, and deploy your work to see it live on the web.
-      </p>
+    <h3>Patent</h3>
+    <p>
+        A patent protects new inventions or unique designs for a limited time. 
+        It gives the inventor exclusive rights to make, use, or sell the invention.
+    </p>
+    <p><strong>Example:</strong> If someone invents a new smartphone design, others cannot copy or sell it without permission.</p>
 
-      <p class="lead">
-        If you're studying for exams, use the <strong>Full Definitions</strong> for deep understanding and the <strong>Quick Notes</strong> for last-minute revision. For hands-on learning, build one small project every week. Consistency beats cramming every time.
-      </p>
+   <h2>Ethical and Legal Responsibilities Regarding Intellectual Property Rights</h2>
+    <p>
+        Using someone else’s work without permission is unethical and illegal. People should respect the rights of creators and use digital content responsibly.
+    </p>
 
-      <!-- MCQs - must remain unchanged per request -->
-      <h2 class="section-title">MCQs – Fundamentals of Web Development</h2>
-      <ol>
-        <li>
-          <strong>What does HTML do in a webpage?</strong><br />
-          a) Adds style<br />
-          b) Creates structure<br />
-          c) Makes it interactive<br />
-          d) Stores data<br />
-          <p><strong>Answer:</strong> b) Creates structure</p>
-        </li>
+    <p><strong>Example:</strong> Copying a book, song, or software and using it or sharing it without the creator’s permission is illegal.</p>
 
-        <li>
-          <strong>Which language adds colors, fonts, and layouts to a webpage?</strong><br />
-          a) HTML<br />
-          b) JavaScript<br />
-          c) CSS<br />
-          d) PHP<br />
-          <p><strong>Answer:</strong> c) CSS</p>
-        </li>
+    <h2>Software Piracy</h2>
 
-        <li>
-          <strong>Which language makes a webpage respond to clicks and typing?</strong><br />
-          a) HTML<br />
-          b) CSS<br />
-          c) JavaScript<br />
-          d) Python<br />
-          <p><strong>Answer:</strong> c) JavaScript</p>
-        </li>
+    <p>
+        Software piracy means illegally copying, downloading, or sharing software without buying a proper license. It is a serious issue that affects software companies and developers.
+    </p>
+    <p><strong>Example:</strong> Sharing paid software with friends without purchasing a license is piracy.</p>
 
-        <li>
-          <strong>What is web development?</strong><br />
-          a) Creating mobile apps<br />
-          b) Making and maintaining websites<br />
-          c) Installing software<br />
-          d) Writing books<br />
-          <p><strong>Answer:</strong> b) Making and maintaining websites</p>
-        </li>
+    <p>
+        Piracy harms software companies because they lose money needed to improve their products, provide updates, and develop new features.
+    </p>
 
-        <li>
-          <strong>Which of these is NOT a reason to learn web development?</strong><br />
-          a) Career opportunities<br />
-          b) Creativity<br />
-          c) Cooking skills<br />
-          d) Entrepreneurship<br />
-          <p><strong>Answer:</strong> c) Cooking skills</p>
-        </li>
+    <h2>Social Networking Safety and Online Interactions</h2>
 
-        <li>
-          <strong>What does “Digital Literacy” mean in web development?</strong><br />
-          a) Reading books online<br />
-          b) Understanding HTML, CSS, JavaScript, and how the internet works<br />
-          c) Learning to code in Python<br />
-          d) Writing essays<br />
-          <p><strong>Answer:</strong> b) Understanding HTML, CSS, JavaScript, and how the internet works</p>
-        </li>
+    <p>
+        Social media helps people communicate, share ideas, and stay connected with others around the world. However, it is important to use social networking platforms safely and respectfully.
+    </p>
 
-        <li>
-          <strong>Which of these is a job you can get with web development skills?</strong><br />
-          a) Web designer<br />
-          b) Doctor<br />
-          c) Pilot<br />
-          d) Farmer<br />
-          <p><strong>Answer:</strong> a) Web designer</p>
-        </li>
+    <h3>Privacy Settings</h3>
+    <p>Keep your account private so only trusted people can view your posts and personal information.</p>
+    <p><strong>Example:</strong> On Instagram, set your account to “Private.”</p>
 
-        <li>
-          <strong>Which skill helps you find and fix problems in a website?</strong><br />
-          a) Creativity<br />
-          b) Problem-solving<br />
-          c) Digital literacy<br />
-          d) Entrepreneurship<br />
-          <p><strong>Answer:</strong> b) Problem-solving</p>
-        </li>
+    <h3>Good Online Etiquette</h3>
+    <p>Be polite, respectful, and responsible when interacting with others online.</p>
+    <p><strong>Example:</strong> If you disagree with someone, reply politely instead of insulting them.</p>
 
-        <li>
-          <strong>Which point is about making websites look unique and attractive?</strong><br />
-          a) Problem-solving<br />
-          b) Creativity<br />
-          c) Entrepreneurship<br />
-          d) Career opportunities<br />
-          <p><strong>Answer:</strong> b) Creativity</p>
-        </li>
+    <h2>Cyberbullying and Online Harassment</h2>
 
-        <li>
-          <strong>Which term means starting your own business using your skills?</strong><br />
-          a) Digital literacy<br />
-          b) Career opportunities<br />
-          c) Entrepreneurship<br />
-          d) Web development<br />
-          <p><strong>Answer:</strong> c) Entrepreneurship</p>
-        </li>
-      </ol>
+    <p>
+        Cyberbullying means using the internet, social media, or messages to hurt, threaten, or embarrass someone. It can negatively affect a person’s mental health and confidence.
+    </p>
+    <p><strong>Example:</strong> Sending mean messages or posting embarrassing photos without permission.</p>
 
-      <!-- FAQs expanded -->
-      <h2 class="section-title">Frequently Asked Questions (FAQ)</h2>
+    <h3>Report and Block</h3>
+    <p>If someone bullies or harasses you online, report their behavior and block them to stay safe.</p>
+    <p><strong>Example:</strong> Facebook allows users to block people from contacting them.</p>
 
-      <h3>Q1: Where should I start if I'm a complete beginner?</h3>
-      <p>Start with HTML: learn basic tags like &lt;h1&gt;, &lt;p&gt;, &lt;a&gt;, &lt;img&gt;, &lt;ul&gt;/&lt;ol&gt;. Then add CSS to style your page and finally JavaScript to add simple interactivity. Build very small projects as you go.</p>
+    <h3>Support Others</h3>
+    <p>Help and support people who are being bullied online instead of ignoring the situation.</p>
+    <p><strong>Example:</strong> Report the bullying or send supportive messages to the victim.</p>
 
-      <h3>Q2: How long does it take to build a real website?</h3>
-      <p>For a simple static website (personal page or portfolio) it can take a few days to a week if you learn as you build. Larger, dynamic websites take longer. Consistent practice shortens the learning curve.</p>
+    <h3>Practice Respectful Interactions</h3>
+    <p>Treat people kindly and respectfully online just like in real life. Think before posting or commenting.</p>
+    <p><strong>Example:</strong> If you dislike a post, ignore it instead of writing hurtful comments.</p>
 
-      <h3>Q3: Do I need to learn frameworks like React or Vue immediately?</h3>
-      <p>No. Learn the core languages (HTML, CSS, JavaScript) first. Frameworks make development faster but they assume you know the basics.</p>
+<h2 id="mcqs">Multiple Choice Questions (MCQs) on Operating System</h2>
 
-      <h3>Q4: Can I make money with web development?</h3>
-      <p>Yes. Web development skills can lead to jobs (frontend developer, UI/UX designer), freelance work, or your own online business. Start with small freelance jobs or local businesses.</p>
+<div class="mcq-item">
+  <div class="mcq-question">1. What is an Operating System (OS)?</div>
+  <div class="mcq-options">
+    a. Hardware device inside a computer<br>
+    b. System software that manages hardware and applications<br>
+    c. A type of computer virus<br>
+    d. A programming language
+  </div>
+  <div class="mcq-answer">Answer: b. System software that manages hardware and applications</div>
+</div>
 
-      <h3>Q5: What is the difference between a web designer and a web developer?</h3>
-      <p>A web designer focuses on visual appearance and user experience (UI/UX), while a web developer turns designs into functioning websites using code. Many people do both when starting out.</p>
+<div class="mcq-item">
+  <div class="mcq-question">2. Which of the following is an example of an operating system?</div>
+  <div class="mcq-options">
+    a. Microsoft Word<br>
+    b. Google Chrome<br>
+    c. Linux<br>
+    d. Photoshop
+  </div>
+  <div class="mcq-answer">Answer: c. Linux</div>
+</div>
 
-      <h3>Q6: How do I practice safely when learning?</h3>
-      <p>Use local development (your computer) or GitHub Pages / Netlify for hosting demo sites. Never publish sensitive data (passwords, API keys) in public repos.</p>
+<div class="mcq-item">
+  <div class="mcq-question">3. The operating system is called the central controller because it:</div>
+  <div class="mcq-options">
+    a. Only stores files<br>
+    b. Controls CPU, memory, and devices<br>
+    c. Prints documents<br>
+    d. Connects to the internet only
+  </div>
+  <div class="mcq-answer">Answer: b. Controls CPU, memory, and devices</div>
+</div>
 
-      <h3>Q7: Any tips for studying for exams?</h3>
-      <p>Use the Full Definitions to understand concepts deeply, then memorize Quick Notes for fast revision. Practice small code snippets and be prepared to explain what HTML/CSS/JS do in simple terms.</p>
+<div class="mcq-item">
+  <div class="mcq-question">4. The OS acts as a bridge between:</div>
+  <div class="mcq-options">
+    a. CPU and printer only<br>
+    b. User and hardware<br>
+    c. Internet and browser<br>
+    d. Keyboard and mouse only
+  </div>
+  <div class="mcq-answer">Answer: b. User and hardware</div>
+</div>
 
-      <div class="tip">
-        Final note from me: build something small today. Even a single page that says "Hello, I'm learning web dev" and a button that changes color when clicked — that's progress, and it teaches you the complete flow from idea → code → browser.
-      </div>
+<div class="mcq-item">
+  <div class="mcq-question">5. In a multi-user system, the OS ensures:</div>
+  <div class="mcq-options">
+    a. Only one user can use system<br>
+    b. Fair resource sharing and security<br>
+    c. No login system<br>
+    d. Hardware is disabled
+  </div>
+  <div class="mcq-answer">Answer: b. Fair resource sharing and security</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. What is the purpose of user accounts in OS?</div>
+  <div class="mcq-options">
+    a. To share same files for everyone<br>
+    b. To keep user data separate and secure<br>
+    c. To remove security<br>
+    d. To slow down system
+  </div>
+  <div class="mcq-answer">Answer: b. To keep user data separate and secure</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. What is the kernel in an OS?</div>
+  <div class="mcq-options">
+    a. User interface<br>
+    b. Core part that manages hardware<br>
+    c. Web browser<br>
+    d. Application software
+  </div>
+  <div class="mcq-answer">Answer: b. Core part that manages hardware</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. What is the function of a shell?</div>
+  <div class="mcq-options">
+    a. Directly controls hardware<br>
+    b. Interface between user and kernel<br>
+    c. Stores files permanently<br>
+    d. Manages printer only
+  </div>
+  <div class="mcq-answer">Answer: b. Interface between user and kernel</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. Which is a Command Line Interface (CLI)?</div>
+  <div class="mcq-options">
+    a. Windows Desktop<br>
+    b. macOS Finder<br>
+    c. Command Prompt<br>
+    d. Icons and menus
+  </div>
+  <div class="mcq-answer">Answer: c. Command Prompt</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. Which is a Graphical User Interface (GUI)?</div>
+  <div class="mcq-options">
+    a. Bash terminal<br>
+    b. Windows Desktop<br>
+    c. Linux commands only<br>
+    d. Text-based shell
+  </div>
+  <div class="mcq-answer">Answer: b. Windows Desktop</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. Which OS layer is closest to hardware?</div>
+  <div class="mcq-options">
+    a. Upper layer<br>
+    b. Middle layer<br>
+    c. Lower layer<br>
+    d. User layer
+  </div>
+  <div class="mcq-answer">Answer: c. Lower layer</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. What are system libraries used for?</div>
+  <div class="mcq-options">
+    a. Gaming purposes<br>
+    b. Reusable functions for applications<br>
+    c. Hardware destruction<br>
+    d. Internet browsing only
+  </div>
+  <div class="mcq-answer">Answer: b. Reusable functions for applications</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. What is the role of device drivers?</div>
+  <div class="mcq-options">
+    a. Manage user accounts<br>
+    b. Help OS communicate with hardware<br>
+    c. Delete system files<br>
+    d. Create software programs
+  </div>
+  <div class="mcq-answer">Answer: b. Help OS communicate with hardware</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. A benefit of layered OS design is:</div>
+  <div class="mcq-options">
+    a. Harder maintenance<br>
+    b. Easier management and updates<br>
+    c. Slower performance always<br>
+    d. No security
+  </div>
+  <div class="mcq-answer">Answer: b. Easier management and updates</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. When a user clicks an icon, the OS:</div>
+  <div class="mcq-options">
+    a. Ignores the input<br>
+    b. Converts it into machine instructions<br>
+    c. Turns off computer<br>
+    d. Deletes files
+  </div>
+  <div class="mcq-answer">Answer: b. Converts it into machine instructions</div>
+</div>
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Operating System)</h2>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">1. What is an Operating System (OS)?</div>
+    <div class="mcq-options">
+      <button>a. Hardware device inside a computer</button>
+      <button>b. System software that manages hardware and applications</button>
+      <button>c. A type of computer virus</button>
+      <button>d. A programming language</button>
     </div>
-  </article>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">2. Which of the following is an example of an operating system?</div>
+    <div class="mcq-options">
+      <button>a. Microsoft Word</button>
+      <button>b. Google Chrome</button>
+      <button>c. Linux</button>
+      <button>d. Photoshop</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">3. The operating system is called the central controller because it:</div>
+    <div class="mcq-options">
+      <button>a. Only stores files</button>
+      <button>b. Controls CPU, memory, and devices</button>
+      <button>c. Prints documents</button>
+      <button>d. Connects to the internet only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">4. The OS acts as a bridge between:</div>
+    <div class="mcq-options">
+      <button>a. CPU and printer only</button>
+      <button>b. User and hardware</button>
+      <button>c. Internet and browser</button>
+      <button>d. Keyboard and mouse only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">5. In a multi-user system, the OS ensures:</div>
+    <div class="mcq-options">
+      <button>a. Only one user can use system</button>
+      <button>b. Fair resource sharing and security</button>
+      <button>c. No login system</button>
+      <button>d. Hardware is disabled</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">6. What is the purpose of user accounts in OS?</div>
+    <div class="mcq-options">
+      <button>a. To share same files for everyone</button>
+      <button>b. To keep user data separate and secure</button>
+      <button>c. To remove security</button>
+      <button>d. To slow down system</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">7. What is the kernel in an OS?</div>
+    <div class="mcq-options">
+      <button>a. User interface</button>
+      <button>b. Core part that manages hardware</button>
+      <button>c. Web browser</button>
+      <button>d. Application software</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">8. What is the function of a shell?</div>
+    <div class="mcq-options">
+      <button>a. Directly controls hardware</button>
+      <button>b. Interface between user and kernel</button>
+      <button>c. Stores files permanently</button>
+      <button>d. Manages printer only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">9. Which is a Command Line Interface (CLI)?</div>
+    <div class="mcq-options">
+      <button>a. Windows Desktop</button>
+      <button>b. macOS Finder</button>
+      <button>c. Command Prompt</button>
+      <button>d. Icons and menus</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">10. Which is a Graphical User Interface (GUI)?</div>
+    <div class="mcq-options">
+      <button>a. Bash terminal</button>
+      <button>b. Windows Desktop</button>
+      <button>c. Linux commands only</button>
+      <button>d. Text-based shell</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">11. Which OS layer is closest to hardware?</div>
+    <div class="mcq-options">
+      <button>a. Upper layer</button>
+      <button>b. Middle layer</button>
+      <button>c. Lower layer</button>
+      <button>d. User layer</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">12. What are system libraries used for?</div>
+    <div class="mcq-options">
+      <button>a. Gaming purposes</button>
+      <button>b. Reusable functions for applications</button>
+      <button>c. Hardware destruction</button>
+      <button>d. Internet browsing only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">13. What is the role of device drivers?</div>
+    <div class="mcq-options">
+      <button>a. Manage user accounts</button>
+      <button>b. Help OS communicate with hardware</button>
+      <button>c. Delete system files</button>
+      <button>d. Create software programs</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. A benefit of layered OS design is:</div>
+    <div class="mcq-options">
+      <button>a. Harder maintenance</button>
+      <button>b. Easier management and updates</button>
+      <button>c. Slower performance always</button>
+      <button>d. No security</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">15. When a user clicks an icon, the OS:</div>
+    <div class="mcq-options">
+      <button>a. Ignores the input</button>
+      <button>b. Converts it into machine instructions</button>
+      <button>c. Turns off computer</button>
+      <button>d. Deletes files</button>
+    </div>
+  </div>
+
+</section>
+
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+
+<h2>Lectures</h2>
+      <strong>Lecture 2 coming soon.</strong>
+      <!-- <ul>
+      <li><a href="9-class-chap-10-lecture-2.html">Previous</a></li>
+      <li><a href="9-class-chap-10-lecture-2.html">Next</a></li>
+      </ul> -->
+      <!-- <h2>Related Posts</h2>
+      <ul>
+        <li><a href="Top-10-Programming-Languages-in-2025.html">Top 10 Programming Languages in 2025</a></li>
+        <li><a href="how-ai-will-replace-and-create-jobs-by-2030.html">How AI Will Replace and Create Jobs by 2030</a></li>
+        <li><a href="Best-Online-Courses-for-High-Paying-Jobs.html">Best Online Courses for High-Paying Jobs in 2025</a></li>
+      </ul> -->
+      
+<h2 id="faqs">FAQs</h2>
+
+<section class="faq-section">
+
+<div class="faq-item">
+  <button class="faq-question">What is an Operating System (OS)?</button>
+  <div class="faq-answer">
+    <p>An Operating System is system software that manages computer hardware, software applications, and provides a user interface.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are some examples of operating systems?</button>
+  <div class="faq-answer">
+    <p>Examples include Microsoft Windows, macOS, Linux, Android, and iOS.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Why is the OS called a central controller?</button>
+  <div class="faq-answer">
+    <p>Because it manages CPU, memory, files, and devices and ensures all tasks run smoothly.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">How does an OS act as a bridge between user and hardware?</button>
+  <div class="faq-answer">
+    <p>The OS converts user actions (clicks, typing) into machine instructions that hardware can understand and execute.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the role of the kernel?</button>
+  <div class="faq-answer">
+    <p>The kernel is the core part of the OS that directly manages hardware resources like CPU, memory, and devices.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a shell in an operating system?</button>
+  <div class="faq-answer">
+    <p>A shell is an interface between the user and the kernel that processes user commands.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the difference between CLI and GUI?</button>
+  <div class="faq-answer">
+    <p>CLI uses text commands (like Command Prompt), while GUI uses icons, windows, and menus (like Windows Desktop).</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is multi-user environment in OS?</button>
+  <div class="faq-answer">
+    <p>It allows multiple users to use the same system while keeping their data separate and secure.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the purpose of user accounts?</button>
+  <div class="faq-answer">
+    <p>User accounts keep personal files, settings, and passwords separate for each user.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are system libraries?</button>
+  <div class="faq-answer">
+    <p>System libraries are collections of reusable functions that help applications communicate with the operating system.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are device drivers?</button>
+  <div class="faq-answer">
+    <p>Device drivers are software programs that help the operating system communicate with hardware devices like printers and keyboards.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is OS architecture?</button>
+  <div class="faq-answer">
+    <p>OS architecture refers to how different parts of the operating system are organized and work together.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are the layers of an operating system?</button>
+  <div class="faq-answer">
+    <p>The OS has lower (hardware), middle (services), and upper (user interface and applications) layers.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Why is layered OS design useful?</button>
+  <div class="faq-answer">
+    <p>It makes the system easier to manage, upgrade, and maintain without affecting the entire OS.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What happens when you click an icon?</button>
+  <div class="faq-answer">
+    <p>The OS converts the action into machine instructions and sends it to the hardware for execution.</p>
+  </div>
+</div>
+
+</section>
+      
+<h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/10-class/chapter-1/chapter1-lecture1.pdf">
+  Download PDF
+</a>
+</div>
+</article>
 </main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
 <footer class="footer">
   <div class="footer-links">
     <a href="index.html">Home</a>
@@ -500,8 +928,119 @@ fetch('https://api.example.com/data')
 </footer>
 
 <script>
-  document.getElementById("navToggle").addEventListener("click", function () {
-    document.getElementById("navLinks").classList.toggle("show");
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const answer = btn.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
 </body>
