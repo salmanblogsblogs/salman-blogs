@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Class 10 Computer Science Chapter 1 Notes: Operating System (OS). Complete study material with definitions, types, kernel, shell, OS architecture, device drivers, system libraries, MCQs, short questions, FAQs, and exam preparation notes for FBISE and Punjab Board students." />
+
+<meta name="keywords" content="10th class computer science notes, class 10 computer chapter 1, operating system notes class 10, OS chapter 1 computer science, 10 class computer MCQs, short questions operating system, kernel and shell notes, OS architecture explained, device drivers notes, system libraries computer science, FBISE computer notes, Punjab board computer notes, operating system exam preparation, important questions OS chapter 1, computer science solved MCQs class 10, class 10 computer full notes" />
+
+<meta name="author" content="Salman Ahmad" />
+
+<title>Class 10 Computer Science Chapter 1: Operating System (OS) Notes | MCQs, Short Questions & FAQs | Exam Preparation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about.css">
+  <link rel="canonical" href="https://salmanblogs.com/10-class-chap-1-lecture-1" />
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121" crossorigin="anonymous"></script>
+  <!-- Open Graph -->
+<meta property="og:title" content="Class 10 Computer Science Chapter 1: Operating System (OS) Notes | MCQs, Short Questions & FAQs" />
+
+<meta property="og:description" content="Complete Class 10 Computer Science Chapter 1 Notes on Operating System (OS). Includes definitions, types, kernel, shell, OS architecture, device drivers, system libraries, MCQs, short questions, FAQs, and exam preparation for FBISE and Punjab Board students." />
+
+<meta property="og:image" content="https://salmanblogs.com/images/10-CS-IMAGES/CHAPTER-1/10-class-computer-chapter1-lecture1.webp" />
+
+<meta property="og:url" content="https://salmanblogs.com/10-class-chap-1-lecture-1" />
+
+<meta property="og:type" content="article" />
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:title" content="Class 10 Computer Science Chapter 1: Operating System (OS) Notes | MCQs & FAQs" />
+
+<meta name="twitter:description" content="Study Class 10 Computer Chapter 1 Operating System (OS) with complete notes, MCQs, short questions, FAQs, and exam preparation material for FBISE and Punjab Board." />
+
+<meta name="twitter:image" content="https://salmanblogs.com/images/10-CS-IMAGES/CHAPTER-1/10-class-computer-chapter1-lecture1.webp" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Class 10 Computer Science Chapter 1 Operating System Notes",
+  "author": {
+    "@type": "Person",
+    "name": "Salman Ahmad"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Salman Blogs"
+  },
+  "description": "Complete Class 10 Computer Science Chapter 1 Operating System Notes with MCQs, short questions, FAQs and exam preparation material.",
+  "mainEntityOfPage": "https://salmanblogs.com/10-class-chap-1-lecture-1"
+}
+</script>
+
+</head>
+<body>
+<!-- Use of internal CSS. -->
+<style>
+html { scroll-behavior: smooth; }
+.toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+.toc h2 { margin-top: 0; }
+.toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
+.toc a:hover { color: darkblue; }
+.toc li {list-style-type: none;}
+.post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+
+ul, ol 
+{
+  margin-left: 20px;
+}
+ .mcq-item {
+      background: #f7f7f7;
+      border-left: 4px solid #0077cc; /* same as h2 border color */
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .mcq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .mcq-options {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mcq-answer {
+      background: #dbeafe; /* soft blue similar to h2 highlight */
+      border-left: 4px solid #0077cc;
+      padding: 10px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .post-content p
+    {
+      margin: 0;
+    }
+
+
+  .test-mcqs {
+  max-width: 700px;
+  margin: auto;
+}
+.test-mcqs .mcq-item {
+  background: #f7f7f7;
+  border-left: 4px solid #0077cc;
+  padding: 15px;
+  margin: 10px 0;
+}
+.mcq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mcq-options button {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  font-size: 16px;
+}
+.mcq-options button.correct {
+  background-color: #d4edda; 
+  border-color: #28a745;
+  color: #155724;
+}
+.mcq-options button.wrong {
+  background-color: #f8d7da; 
+  border-color: #dc3545;
+  color: #721c24;
+}
+.mcq-options button.correct::after {
+  content: " ✅";
+  float: right;
+}
+.mcq-options button.wrong::after {
+  content: " ❌";
+  float: right;
+}
+.mcq-options button:hover {
+  background-color: #e2e6ea;
+}
+
+.test-mcqs h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showResult {
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#showResult:hover {
+  background: #005fa3;
+}
+
+#resultText {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight input or MCQ when missing */
+.highlight-unanswered {
+  border: 2px solid #dc3545 !important;
+  background-color: #ffe5e5;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+}    
+
+/* Back to top button styling */
+  #backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    font-size: 30px;
+    background-color: #002959;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #0055a5;
+  }
+</style>
+
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Operating System Structure and Services Lecture 2 Notes</h1>
+    <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>
+    <img src="images/10-CS-IMAGES/CHAPTER-1/10-class-computer-chapter1-lecture1.webp" alt="10-class-computer-chapter1-lecture1" class="post-image" loading="lazy">
+
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 10 Computer Science.
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#os">Introduction To Operating System</a></li>
+<li><a href="#os-as-controller">Operating System as the Central Controller</a></li>
+<li><a href="#role">Role in user Hardware Interaction</a></li>
+<li><a href="#responsibilites">Responsibilities in Multi-User Environment Tasks</a></li>
+<li><a href="#user-accounts">Creating and Managing User Accounts</a></li>
+<li><a href="#os-architecture">Architecture of an Operating System</a></li>
+<li><a href="#diagram">Diagram or Structure</a></li>
+<li><a href="kernal-vs-shell">Kernal-VS-Shell</a></li>
+<li><a href="#types-of-shell">Types of Shell</a></li>
+<li><a href="#os-layers">OS Layers and Modular Design</a></li>
+<li><a href="#mcqs">MCQs</a></li>
+<li><a href="#test-mcqs">MCQs for testing</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+  <div class="post-content">
+  </p>
+      <h2 id="process-management">Process Management in Operating System</h2>
+      <p>Process management means the OS controls these processes and gives them resources like CPU time and memory so they can run properly without disturbing each other.</p>
+     
+      <h3 id="process">Process in OS</h3>
+      <p>
+        An operating system (OS) manages all the programs running on a computer.
+        When a program is running, it is called a process.
+      </p>
+      
+      <h3 id="resource">Resource in OS</h3>
+      <p>
+       A resource is anything required by a process to execute.
+      </p>
+
+      <ul>
+      <li>CPU time</li>
+      <li>Main memory (RAM)</li>
+      <li>Cache memory</li>
+      <li>Secondary storage (HDD, SSD)</li>
+      <li>Input devices (keyboard, mouse, scanner)</li>
+      <li>Output devices (monitor, printer, speakers)</li>
+    </ul>
+
+      <h3>Process Life Cycle</h3>
+
+    <p>A process has 3 main stages:</p>
+
+    <p><strong>1. Creation</strong></p>
+    <p>
+        A process starts when you open a program.
+        The OS loads it into memory and gives it resources.
+    </p>
+    <p><strong>Example:</strong> When you open MS Word or Chrome, the process starts.</p>
+
+    <p><strong>2. Execution</strong></p>
+    <p>
+        The process is working and doing its job.
+    </p>
+    <p><strong>Example:</strong> Chrome loads websites, plays videos, and responds when you click.</p>
+
+    <p><strong>3. Termination</strong></p>
+    <p>
+        The process ends when you close the program.
+        The OS removes it from memory and frees resources.
+    </p>
+    <p><strong>Example:</strong> When you close Chrome, it stops and memory is cleared.</p>
+
+    <p><strong>Full Example (Chrome)</strong></p>
+    <ul>
+        <li><strong>Creation:</strong> Click Chrome icon → OS opens it</li>
+        <li><strong>Execution:</strong> Browse websites</li>
+        <li><strong>Termination:</strong> Close Chrome → OS stops it</li>
+    </ul>
+
+    <h3>Multitasking and Concurrency</h3>
+<p>
+    Modern computers are designed to handle multiple tasks at the same time.
+    This helps users work smoothly without waiting for one task to finish before starting another.
+</p>
+
+    <h4>Multitasking</h4>
+    <p>
+        Multitasking means using more than one program at the same time.
+    </p>
+
+    <p><strong>Examples:</strong></p>
+    <ul>
+        <li>Listening to music 🎵 while browsing the internet 🌐</li>
+        <li>Writing a document 📄 while downloading a file ⬇️</li>
+        <li>Watching a video 🎬 while chatting on WhatsApp 💬</li>
+        <li>Playing a game 🎮 while music is running in background 🎧</li>
+    </ul>
+
+    <p>All feel like they are running together.</p>
+
+    <h4>Concurrency</h4>
+    <p>
+        Concurrency means the CPU does not do everything at once. It quickly switches between tasks, so all tasks keep moving forward.
+    </p>
+
+    <p><strong>Examples:</strong></p>
+
+    <p><strong>Chef Example:</strong></p>
+    <ul>
+        <li>cooks rice for a short time</li>
+        <li>then checks curry</li>
+        <li>then prepares salad</li>
+        <li>keeps switching quickly</li>
+    </ul>
+
+    <p><strong>Computer Example:</strong></p>
+    <ul>
+        <li>CPU runs Chrome for a short time</li>
+        <li>then switches to music player</li>
+        <li>then switches to file download</li>
+        <li>keeps rotating very fast</li>
+    </ul>
+
+    <p><strong>Phone Example:</strong></p>
+    <ul>
+        <li>WhatsApp running in background 💬</li>
+        <li>Music playing 🎵</li>
+        <li>Instagram loading posts 📱</li>
+        <li>System switches between them quickly</li>
+    </ul>
+
+    <p>So it looks like all tasks are running at the same time.</p>
+
+    <h3>Process Scheduling Concepts</h3>
+
+    <p>
+        The CPU cannot run all processes at once, so the OS decides:
+    </p>
+
+    <ul>
+        <li>Which process goes first</li>
+        <li>How long each process runs</li>
+    </ul>
+
+    <p>This is called scheduling.</p>
+
+    <h4>FCFS (First Come, First Served)</h4>
+
+    <p>
+        The first process that arrives is done first. Others wait their turn.
+    </p>
+
+    <p><strong>Example:</strong></p>
+    <p>Like a line in a shop:</p>
+    <ul>
+        <li>First person in line is served first</li>
+        <li>Then second, third, and so on</li>
+    </ul>
+
+    <p><strong>Advantages:</strong></p>
+    <ul>
+        <li>Very simple</li>
+        <li>Easy to understand</li>
+        <li>No process is skipped</li>
+    </ul>
+
+   <p><strong>Disadvantages:</strong></p>
+<ul>
+    <li>Small tasks may wait too long if big tasks are ahead</li>
+    <li>This is called the convoy effect</li>
+    <li>If one process takes too long, overall system performance feels slow</li>
+</ul>
+
+    <h3>1.4 Memory</h3>
+
+    <p>
+        Memory is where the computer stores data and instructions so the CPU can work fast.
+    </p>
+
+    <h4>1.4.1 Primary Memory (RAM)</h4>
+
+    <p>
+        RAM is the main working memory of a computer. It is very fast but temporary.
+        Data is lost when power is off.
+    </p>
+
+    <p><strong>Example:</strong></p>
+    <p>
+        When you open a Word file, it is loaded into RAM so you can work on it quickly.
+    </p>
+
+    <h4>1.4.2 Virtual Memory</h4>
+
+    <p>
+        When RAM becomes full, the computer uses storage (HDD/SSD) as extra memory.
+        This is called virtual memory.
+    </p>
+
+    <p><strong>But:</strong></p>
+    <ul>
+        <li>It is slower than RAM</li>
+    </ul>
+
+    <p><strong>Simple idea:</strong></p>
+    <p>Virtual memory = backup space for RAM</p>
+
+    <p><strong>Example:</strong></p>
+    <ul>
+        <li>You open many apps at once</li>
+        <li>RAM gets full</li>
+        <li>The system moves less used apps to storage</li>
+        <li>This frees RAM for active apps</li>
+    </ul>
+
+    <p>
+        But those moved apps may become slower when you open them again.
+    </p>
+
+<h2 id="mcqs">Multiple Choice Questions (MCQs) on Operating System</h2>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What is an Operating System (OS)?</div>
+  <div class="mcq-options">
+    a. Hardware device inside a computer<br>
+    b. System software that manages hardware and applications<br>
+    c. A type of computer virus<br>
+    d. A programming language
+  </div>
+  <div class="mcq-answer">Answer: b. System software that manages hardware and applications</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. Which of the following is an example of an operating system?</div>
+  <div class="mcq-options">
+    a. Microsoft Word<br>
+    b. Google Chrome<br>
+    c. Linux<br>
+    d. Photoshop
+  </div>
+  <div class="mcq-answer">Answer: c. Linux</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. The operating system is called the central controller because it:</div>
+  <div class="mcq-options">
+    a. Only stores files<br>
+    b. Controls CPU, memory, and devices<br>
+    c. Prints documents<br>
+    d. Connects to the internet only
+  </div>
+  <div class="mcq-answer">Answer: b. Controls CPU, memory, and devices</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. The OS acts as a bridge between:</div>
+  <div class="mcq-options">
+    a. CPU and printer only<br>
+    b. User and hardware<br>
+    c. Internet and browser<br>
+    d. Keyboard and mouse only
+  </div>
+  <div class="mcq-answer">Answer: b. User and hardware</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. In a multi-user system, the OS ensures:</div>
+  <div class="mcq-options">
+    a. Only one user can use system<br>
+    b. Fair resource sharing and security<br>
+    c. No login system<br>
+    d. Hardware is disabled
+  </div>
+  <div class="mcq-answer">Answer: b. Fair resource sharing and security</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. What is the purpose of user accounts in OS?</div>
+  <div class="mcq-options">
+    a. To share same files for everyone<br>
+    b. To keep user data separate and secure<br>
+    c. To remove security<br>
+    d. To slow down system
+  </div>
+  <div class="mcq-answer">Answer: b. To keep user data separate and secure</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. What is the kernel in an OS?</div>
+  <div class="mcq-options">
+    a. User interface<br>
+    b. Core part that manages hardware<br>
+    c. Web browser<br>
+    d. Application software
+  </div>
+  <div class="mcq-answer">Answer: b. Core part that manages hardware</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. What is the function of a shell?</div>
+  <div class="mcq-options">
+    a. Directly controls hardware<br>
+    b. Interface between user and kernel<br>
+    c. Stores files permanently<br>
+    d. Manages printer only
+  </div>
+  <div class="mcq-answer">Answer: b. Interface between user and kernel</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. Which is a Command Line Interface (CLI)?</div>
+  <div class="mcq-options">
+    a. Windows Desktop<br>
+    b. macOS Finder<br>
+    c. Command Prompt<br>
+    d. Icons and menus
+  </div>
+  <div class="mcq-answer">Answer: c. Command Prompt</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. Which is a Graphical User Interface (GUI)?</div>
+  <div class="mcq-options">
+    a. Bash terminal<br>
+    b. Windows Desktop<br>
+    c. Linux commands only<br>
+    d. Text-based shell
+  </div>
+  <div class="mcq-answer">Answer: b. Windows Desktop</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. Which OS layer is closest to hardware?</div>
+  <div class="mcq-options">
+    a. Upper layer<br>
+    b. Middle layer<br>
+    c. Lower layer<br>
+    d. User layer
+  </div>
+  <div class="mcq-answer">Answer: c. Lower layer</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. What are system libraries used for?</div>
+  <div class="mcq-options">
+    a. Gaming purposes<br>
+    b. Reusable functions for applications<br>
+    c. Hardware destruction<br>
+    d. Internet browsing only
+  </div>
+  <div class="mcq-answer">Answer: b. Reusable functions for applications</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. What is the role of device drivers?</div>
+  <div class="mcq-options">
+    a. Manage user accounts<br>
+    b. Help OS communicate with hardware<br>
+    c. Delete system files<br>
+    d. Create software programs
+  </div>
+  <div class="mcq-answer">Answer: b. Help OS communicate with hardware</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. A benefit of layered OS design is:</div>
+  <div class="mcq-options">
+    a. Harder maintenance<br>
+    b. Easier management and updates<br>
+    c. Slower performance always<br>
+    d. No security
+  </div>
+  <div class="mcq-answer">Answer: b. Easier management and updates</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. When a user clicks an icon, the OS:</div>
+  <div class="mcq-options">
+    a. Ignores the input<br>
+    b. Converts it into machine instructions<br>
+    c. Turns off computer<br>
+    d. Deletes files
+  </div>
+  <div class="mcq-answer">Answer: b. Converts it into machine instructions</div>
+</div>
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Operating System)</h2>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">1. What is an Operating System (OS)?</div>
+    <div class="mcq-options">
+      <button>a. Hardware device inside a computer</button>
+      <button>b. System software that manages hardware and applications</button>
+      <button>c. A type of computer virus</button>
+      <button>d. A programming language</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">2. Which of the following is an example of an operating system?</div>
+    <div class="mcq-options">
+      <button>a. Microsoft Word</button>
+      <button>b. Google Chrome</button>
+      <button>c. Linux</button>
+      <button>d. Photoshop</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">3. The operating system is called the central controller because it:</div>
+    <div class="mcq-options">
+      <button>a. Only stores files</button>
+      <button>b. Controls CPU, memory, and devices</button>
+      <button>c. Prints documents</button>
+      <button>d. Connects to the internet only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">4. The OS acts as a bridge between:</div>
+    <div class="mcq-options">
+      <button>a. CPU and printer only</button>
+      <button>b. User and hardware</button>
+      <button>c. Internet and browser</button>
+      <button>d. Keyboard and mouse only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">5. In a multi-user system, the OS ensures:</div>
+    <div class="mcq-options">
+      <button>a. Only one user can use system</button>
+      <button>b. Fair resource sharing and security</button>
+      <button>c. No login system</button>
+      <button>d. Hardware is disabled</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">6. What is the purpose of user accounts in OS?</div>
+    <div class="mcq-options">
+      <button>a. To share same files for everyone</button>
+      <button>b. To keep user data separate and secure</button>
+      <button>c. To remove security</button>
+      <button>d. To slow down system</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">7. What is the kernel in an OS?</div>
+    <div class="mcq-options">
+      <button>a. User interface</button>
+      <button>b. Core part that manages hardware</button>
+      <button>c. Web browser</button>
+      <button>d. Application software</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">8. What is the function of a shell?</div>
+    <div class="mcq-options">
+      <button>a. Directly controls hardware</button>
+      <button>b. Interface between user and kernel</button>
+      <button>c. Stores files permanently</button>
+      <button>d. Manages printer only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">9. Which is a Command Line Interface (CLI)?</div>
+    <div class="mcq-options">
+      <button>a. Windows Desktop</button>
+      <button>b. macOS Finder</button>
+      <button>c. Command Prompt</button>
+      <button>d. Icons and menus</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">10. Which is a Graphical User Interface (GUI)?</div>
+    <div class="mcq-options">
+      <button>a. Bash terminal</button>
+      <button>b. Windows Desktop</button>
+      <button>c. Linux commands only</button>
+      <button>d. Text-based shell</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">11. Which OS layer is closest to hardware?</div>
+    <div class="mcq-options">
+      <button>a. Upper layer</button>
+      <button>b. Middle layer</button>
+      <button>c. Lower layer</button>
+      <button>d. User layer</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">12. What are system libraries used for?</div>
+    <div class="mcq-options">
+      <button>a. Gaming purposes</button>
+      <button>b. Reusable functions for applications</button>
+      <button>c. Hardware destruction</button>
+      <button>d. Internet browsing only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">13. What is the role of device drivers?</div>
+    <div class="mcq-options">
+      <button>a. Manage user accounts</button>
+      <button>b. Help OS communicate with hardware</button>
+      <button>c. Delete system files</button>
+      <button>d. Create software programs</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. A benefit of layered OS design is:</div>
+    <div class="mcq-options">
+      <button>a. Harder maintenance</button>
+      <button>b. Easier management and updates</button>
+      <button>c. Slower performance always</button>
+      <button>d. No security</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">15. When a user clicks an icon, the OS:</div>
+    <div class="mcq-options">
+      <button>a. Ignores the input</button>
+      <button>b. Converts it into machine instructions</button>
+      <button>c. Turns off computer</button>
+      <button>d. Deletes files</button>
+    </div>
+  </div>
+
+</section>
+
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+
+<h2>Lectures</h2>
+      <strong>Lecture 2 coming soon.</strong>
+      <!-- <ul>
+      <li><a href="9-class-chap-10-lecture-2.html">Previous</a></li>
+      <li><a href="9-class-chap-10-lecture-2.html">Next</a></li>
+      </ul> -->
+      <!-- <h2>Related Posts</h2>
+      <ul>
+        <li><a href="Top-10-Programming-Languages-in-2025.html">Top 10 Programming Languages in 2025</a></li>
+        <li><a href="how-ai-will-replace-and-create-jobs-by-2030.html">How AI Will Replace and Create Jobs by 2030</a></li>
+        <li><a href="Best-Online-Courses-for-High-Paying-Jobs.html">Best Online Courses for High-Paying Jobs in 2025</a></li>
+      </ul> -->
+      
+<h2 id="faqs">FAQs</h2>
+
+<section class="faq-section">
+
+<div class="faq-item">
+  <button class="faq-question">What is an Operating System (OS)?</button>
+  <div class="faq-answer">
+    <p>An Operating System is system software that manages computer hardware, software applications, and provides a user interface.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are some examples of operating systems?</button>
+  <div class="faq-answer">
+    <p>Examples include Microsoft Windows, macOS, Linux, Android, and iOS.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Why is the OS called a central controller?</button>
+  <div class="faq-answer">
+    <p>Because it manages CPU, memory, files, and devices and ensures all tasks run smoothly.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">How does an OS act as a bridge between user and hardware?</button>
+  <div class="faq-answer">
+    <p>The OS converts user actions (clicks, typing) into machine instructions that hardware can understand and execute.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the role of the kernel?</button>
+  <div class="faq-answer">
+    <p>The kernel is the core part of the OS that directly manages hardware resources like CPU, memory, and devices.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a shell in an operating system?</button>
+  <div class="faq-answer">
+    <p>A shell is an interface between the user and the kernel that processes user commands.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the difference between CLI and GUI?</button>
+  <div class="faq-answer">
+    <p>CLI uses text commands (like Command Prompt), while GUI uses icons, windows, and menus (like Windows Desktop).</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is multi-user environment in OS?</button>
+  <div class="faq-answer">
+    <p>It allows multiple users to use the same system while keeping their data separate and secure.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the purpose of user accounts?</button>
+  <div class="faq-answer">
+    <p>User accounts keep personal files, settings, and passwords separate for each user.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are system libraries?</button>
+  <div class="faq-answer">
+    <p>System libraries are collections of reusable functions that help applications communicate with the operating system.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are device drivers?</button>
+  <div class="faq-answer">
+    <p>Device drivers are software programs that help the operating system communicate with hardware devices like printers and keyboards.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is OS architecture?</button>
+  <div class="faq-answer">
+    <p>OS architecture refers to how different parts of the operating system are organized and work together.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are the layers of an operating system?</button>
+  <div class="faq-answer">
+    <p>The OS has lower (hardware), middle (services), and upper (user interface and applications) layers.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Why is layered OS design useful?</button>
+  <div class="faq-answer">
+    <p>It makes the system easier to manage, upgrade, and maintain without affecting the entire OS.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What happens when you click an icon?</button>
+  <div class="faq-answer">
+    <p>The OS converts the action into machine instructions and sends it to the hardware for execution.</p>
+  </div>
+</div>
+
+</section>
+      
+<h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/10-class/chapter-1/chapter1-lecture1.pdf">
+  Download PDF
+</a>
+</div>
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const answer = btn.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>
