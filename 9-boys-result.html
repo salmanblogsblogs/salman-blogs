@@ -8,7 +8,6 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="about.css">
-
   <style>
     html { scroll-behavior: smooth; }
 
@@ -75,7 +74,150 @@
     .password-box button:hover {
       background: #014080;
     }
-  </style>
+
+    :root {
+    --bg: #f7f5f2; --surface: #fff; --border: #e8e4df;
+    --text: #1a1714; --muted: #8c8480;
+    --accent: #c0392b; --accent-hover: #a93226;
+    --admin-bg: #eaf4ee; --admin-border: #c4e0cc;
+    --visitor-bg: #f0f4ff; --visitor-border: #c4ccee;
+    --radius: 12px; --shadow: 0 2px 16px rgba(0,0,0,0.07);
+  }
+  
+  .wrap { max-width: 660px; margin: auto; }
+
+  /* PUBLIC INPUT */
+  .input-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 18px;
+    display: flex; flex-direction: column; gap: 10px;
+    margin-bottom: 28px; box-shadow: var(--shadow);
+  }
+  .input-card input, .input-card textarea {
+    padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px;
+    font-family: 'DM Sans', sans-serif; font-size: 14px;
+    color: var(--text); background: var(--bg); resize: vertical; transition: border-color 0.2s;
+  }
+  .input-card input:focus, .input-card textarea:focus { outline: none; border-color: var(--accent); }
+  .input-card textarea { min-height: 80px; }
+
+  button {
+    width: fit-content; padding: 9px 20px;
+    background: var(--accent); color: white; border: none;
+    border-radius: 6px; font-family: 'DM Sans', sans-serif;
+    font-size: 13px; font-weight: 600; cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  button:hover { background: var(--accent-hover); }
+  button:active { transform: scale(0.97); }
+
+  /* COMMENT CARD */
+  .comment-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 16px;
+    margin-bottom: 14px; box-shadow: var(--shadow);
+    animation: fadeIn 0.2s ease;
+  }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(5px); } to { opacity:1; transform:translateY(0); } }
+
+  .comment-row { display: flex; gap: 12px; align-items: flex-start; }
+
+  .avatar {
+    width: 36px; height: 36px; min-width: 36px; border-radius: 50%;
+    background: #2c2825; color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 14px;
+  }
+  .avatar.admin-av { background: var(--accent); }
+
+  .comment-body { flex: 1; min-width: 0; }
+  .comment-header { font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .comment-time { font-size: 11px; color: var(--muted); font-weight: 400; }
+  .badge {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.5px;
+    background: var(--accent); color: white; padding: 1px 6px; border-radius: 20px;
+  }
+  .comment-text { font-size: 14px; margin-top: 4px; line-height: 1.55; }
+
+  /* ADMIN reply trigger */
+  .admin-reply-btn {
+    font-size: 11px; color: var(--muted); margin-top: 6px;
+    cursor: pointer; display: none; font-weight: 500; width: fit-content;
+  }
+  .admin-reply-btn:hover { color: var(--accent); }
+  .admin-mode .admin-reply-btn { display: inline-block; }
+
+  /* THREAD */
+  .thread {
+    margin-top: 12px;
+    display: flex; flex-direction: column; gap: 10px;
+    border-left: 3px solid var(--border); padding-left: 14px;
+  }
+
+  /* Admin reply bubble */
+  .reply-bubble {
+    display: flex; gap: 10px; align-items: flex-start;
+    background: var(--admin-bg); border: 1px solid var(--admin-border);
+    border-radius: 8px; padding: 10px 12px;
+  }
+  .reply-bubble .avatar { width: 28px; height: 28px; min-width: 28px; font-size: 11px; }
+  .reply-bubble .comment-body {}
+
+  /* Visitor reply-back bubble */
+  .visitor-reply-bubble {
+    display: flex; gap: 10px; align-items: flex-start;
+    background: var(--visitor-bg); border: 1px solid var(--visitor-border);
+    border-radius: 8px; padding: 10px 12px;
+  }
+  .visitor-reply-bubble .avatar { width: 28px; height: 28px; min-width: 28px; font-size: 11px; background: #3a5a8c; }
+
+  /* Visitor reply-back input box — shown after admin replies */
+  .visitor-reply-box {
+    display: none; flex-direction: column; gap: 8px;
+    background: #f9f8f6; border: 1px solid var(--border);
+    border-radius: 8px; padding: 12px; margin-top: 4px;
+  }
+  .visitor-reply-box textarea {
+    padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px;
+    font-family: 'DM Sans', sans-serif; font-size: 13px;
+    background: var(--surface); color: var(--text);
+    resize: none; min-height: 56px; transition: border-color 0.2s;
+  }
+  .visitor-reply-box textarea:focus { outline: none; border-color: var(--accent); }
+  .visitor-reply-box button { font-size: 12px; padding: 7px 14px; }
+
+  /* Admin reply input box */
+  .admin-reply-box {
+    display: none; flex-direction: column; gap: 8px;
+    background: #f9f8f6; border: 1px solid var(--border);
+    border-radius: 8px; padding: 12px; margin-top: 6px;
+  }
+  .admin-reply-box textarea {
+    padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px;
+    font-family: 'DM Sans', sans-serif; font-size: 13px;
+    background: var(--surface); color: var(--text);
+    resize: none; min-height: 60px; transition: border-color 0.2s;
+  }
+  .admin-reply-box textarea:focus { outline: none; border-color: var(--accent); }
+  .admin-reply-box button { font-size: 12px; padding: 7px 14px; }
+
+  /* ADMIN BAR */
+  #admin-bar {
+    position: fixed; bottom: 20px; right: 20px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 12px 16px;
+    box-shadow: var(--shadow); display: flex; gap: 8px; align-items: center;
+  }
+  #admin-bar input {
+    padding: 7px 12px; border: 1px solid var(--border); border-radius: 6px;
+    font-family: 'DM Sans', sans-serif; font-size: 13px; background: var(--bg); width: 160px;
+  }
+  #admin-bar input:focus { outline: none; border-color: var(--accent); }
+  #admin-bar button { padding: 7px 14px; font-size: 12px; }
+
+  .empty { text-align: center; color: var(--muted); font-size: 13px; padding: 30px 0; }
+
+</style>
 </head>
 
 <body>
@@ -166,9 +308,27 @@
 
     </div>
 
-  </article>
-</main>
+<div class="wrap" id="main">
+  <h2>Comments</h2>
 
+  <div class="input-card">
+    <input id="pub-name" placeholder="Your name" maxlength="60">
+    <textarea id="pub-msg" placeholder="Leave a comment…" maxlength="1000"></textarea>
+    <button onclick="postComment()">Post Comment</button>
+  </div>
+
+  <div id="comments-list"></div>
+</div>
+
+<!-- ADMIN LOGIN BAR -->
+<div id="admin-bar">
+  <span style="font-size:12px;color:var(--muted);">Admin</span>
+  <input id="admin-pass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter') adminLogin()">
+  <button onclick="adminLogin()">Login</button>
+</div>
+
+</article>
+</main>
 <footer class="footer">
   <div class="footer-links">
     <a href="index.html">Home</a>
@@ -227,5 +387,269 @@
   }
 </script>
 
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+const supabase = createClient(
+  "https://pojmeeozeuzqtgrvwgxw.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvam1lZW96ZXV6cXRncnZ3Z3h3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4ODM2MjYsImV4cCI6MjA5NTQ1OTYyNn0.c9sgwAH8ysgayh_dvk_uzNTK5XuUZ1k57Lk_cfzlhbA"
+);
+
+const POST_ID    = "blog-1";
+const ADMIN_PASS = "salman.coding";
+const ADMIN_NAME = "Salman (Admin)";
+
+let isAdmin = false;
+
+/* ── HELPERS ── */
+function esc(s) {
+  return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+function initial(n) { return (n||"?").charAt(0).toUpperCase(); }
+function timeAgo(d) {
+  const s = Math.floor((Date.now() - new Date(d)) / 1000);
+  if (s < 60)    return s + "s ago";
+  if (s < 3600)  return Math.floor(s/60) + "m ago";
+  if (s < 86400) return Math.floor(s/3600) + "h ago";
+  return Math.floor(s/86400) + "d ago";
+}
+
+/* ── ADMIN LOGIN / LOGOUT ── */
+window.adminLogin = function() {
+  if (document.getElementById("admin-pass").value === ADMIN_PASS) {
+    isAdmin = true;
+    document.getElementById("admin-bar").innerHTML =
+      `<span style="color:var(--accent);font-weight:600;font-size:13px;">✓ Admin</span>
+       <button onclick="adminLogout()" style="background:transparent;color:var(--muted);border:1px solid var(--border);font-size:12px;padding:5px 10px;">Logout</button>`;
+    document.getElementById("main").classList.add("admin-mode");
+    loadComments();
+  } else {
+    alert("Wrong password.");
+  }
+};
+
+window.adminLogout = function() {
+  isAdmin = false;
+  document.getElementById("admin-bar").innerHTML = `
+    <span style="font-size:12px;color:var(--muted);">Admin</span>
+    <input id="admin-pass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter') adminLogin()">
+    <button onclick="adminLogin()">Login</button>`;
+  document.getElementById("main").classList.remove("admin-mode");
+  loadComments();
+};
+
+/* ── POST TOP-LEVEL COMMENT (visitor) ── */
+window.postComment = async function() {
+  const name = document.getElementById("pub-name").value.trim();
+  const msg  = document.getElementById("pub-msg").value.trim();
+  if (!name || !msg) { alert("Please enter your name and message."); return; }
+  const { error } = await supabase.from("comments").insert([{
+    name, message: msg, post_id: POST_ID, parent_id: null
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  document.getElementById("pub-msg").value = "";
+  loadComments();
+};
+
+/* ── TOGGLE ADMIN REPLY BOX ── */
+window.showAdminReplyBox = function(id) {
+  if (!isAdmin) return;
+  const el = document.getElementById("arb-" + id);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── ADMIN POST REPLY ── */
+window.postAdminReply = async function(parentId) {
+  if (!isAdmin) return;
+  const ta  = document.getElementById("ari-" + parentId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: ADMIN_NAME, message: msg, post_id: POST_ID, parent_id: parentId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── SHOW VISITOR REPLY-BACK BOX ── */
+// visitorName = name of the original commenter (prefilled, locked)
+window.showVisitorReplyBox = function(adminReplyId, visitorName) {
+  const el = document.getElementById("vrb-" + adminReplyId);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── VISITOR POSTS REPLY-BACK ── */
+window.postVisitorReply = async function(adminReplyId, visitorName) {
+  const ta  = document.getElementById("vri-" + adminReplyId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: visitorName, message: msg, post_id: POST_ID, parent_id: adminReplyId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── BUILD THREAD under a top-level comment ── */
+// Structure: top comment → admin replies → visitor reply-backs (under each admin reply)
+function buildThread(all, topComment) {
+  // Direct admin replies to this top comment
+  const adminReplies = all.filter(c =>
+    c.parent_id === topComment.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    // Visitor replies back to this specific admin reply
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)}
+            <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+          ${isAdmin ? `<span class="admin-reply-btn" onclick="showAdminReplyBox(${vr.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${vr.id}" style="display:none;">
+            <textarea id="ari-${vr.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${vr.id})}"></textarea>
+            <button onclick="postAdminReply(${vr.id})">Send Reply</button>
+          </div>` : ""}
+          ${buildNestedThread(all, vr, topComment.name)}
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <!-- Visitor can reply back only to this admin reply -->
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(topComment.name)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(topComment.name)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(topComment.name)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* Deeper nesting: admin replies to visitor reply-backs */
+function buildNestedThread(all, visitorReply, originalVisitorName) {
+  const adminReplies = all.filter(c =>
+    c.parent_id === visitorReply.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)} <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble" style="margin-top:8px;">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(originalVisitorName)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(originalVisitorName)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(originalVisitorName)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* ── LOAD COMMENTS ── */
+async function loadComments() {
+  const { data, error } = await supabase
+    .from("comments").select("*")
+    .eq("post_id", POST_ID)
+    .order("created_at", { ascending: true });
+
+  const list = document.getElementById("comments-list");
+  if (error) { list.innerHTML = `<div class="empty">Could not load comments.</div>`; return; }
+
+  const all = data || [];
+  const top = all.filter(c => !c.parent_id);
+
+  if (!top.length) { list.innerHTML = `<div class="empty">No comments yet. Be the first!</div>`; return; }
+
+  list.innerHTML = top.map(c => `
+    <div class="comment-card">
+      <div class="comment-row">
+        <div class="avatar">${initial(c.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(c.name)}
+            <span class="comment-time">${timeAgo(c.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(c.message)}</div>
+          <span class="admin-reply-btn" onclick="showAdminReplyBox(${c.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${c.id}" style="display:none;">
+            <textarea id="ari-${c.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${c.id})}"></textarea>
+            <button onclick="postAdminReply(${c.id})">Send Reply</button>
+          </div>
+          ${buildThread(all, c)}
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* ── REALTIME ── */
+supabase.channel("comments-rt")
+  .on("postgres_changes", { event: "INSERT", schema: "public", table: "comments", filter: `post_id=eq.${POST_ID}` },
+    () => loadComments())
+  .subscribe();
+
+loadComments();
+</script>
 </body>
 </html>
