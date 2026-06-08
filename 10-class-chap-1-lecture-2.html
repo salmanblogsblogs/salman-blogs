@@ -229,7 +229,7 @@ ul, ol
   }
 </style>
 
-<header class="navbar">
+<!-- <header class="navbar">
   <div class="container">
     <div class="logo">
       <span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
@@ -244,13 +244,13 @@ ul, ol
       <li><a href="terms.html">Terms</a></li>
     </ul>
   </div>
-</header>
+</header> -->
 
 <main class="post-container">
   <article class="blog-post">
     <h1 class="post-title">Operating System Structure and Services Lecture 2 Notes</h1>
     <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>
-    <img src="images/10-CS-IMAGES/CHAPTER-1/10-class-computer-chapter1-lecture1.webp" alt="10-class-computer-chapter1-lecture1" class="post-image" loading="lazy">
+    <img src="images/10-CS-IMAGES/CHAPTER-1/10-class-computer-chapter1-lecture2.webp" alt="10-class-computer-chapter1-lecture1" class="post-image" loading="lazy">
 
     <p>
     These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
@@ -258,16 +258,25 @@ ul, ol
 <nav class="toc">
 <h2>Table of Contents</h2>
 <ul>
-<li><a href="#os">Introduction To Operating System</a></li>
-<li><a href="#os-as-controller">Operating System as the Central Controller</a></li>
-<li><a href="#role">Role in user Hardware Interaction</a></li>
-<li><a href="#responsibilites">Responsibilities in Multi-User Environment Tasks</a></li>
-<li><a href="#user-accounts">Creating and Managing User Accounts</a></li>
-<li><a href="#os-architecture">Architecture of an Operating System</a></li>
-<li><a href="#diagram">Diagram or Structure</a></li>
-<li><a href="kernal-vs-shell">Kernal-VS-Shell</a></li>
-<li><a href="#types-of-shell">Types of Shell</a></li>
-<li><a href="#os-layers">OS Layers and Modular Design</a></li>
+<li><a href="#process-management-in-os">Process Management in Operating System</a></li>
+<li><a href="#process">Process in OS</a></li>
+<li><a href="#resource">Resource in OS</a></li>
+<li><a href="#process-life-cycle">Process Life Cycle</a></li>
+<li><a href="#multitasking-and-concurrency">Multitasking and Concurrency</a></li>
+<li><a href="#process-scheduling-concepts">Process Scheduling Concepts</a></li>
+<li><a href="#memory">Memory</a></li>
+<li><a href="processes-vs-threads">Processes vs Threads</a></li>
+<li><a href="#thread">Thread</a></li>
+<li><a href="#multithreading">Multithreading</a></li>
+<li><a href="#benefits-of-multithreading">Benefits of Multithreading</a></li>
+<li><a href="#system-calls">System Calls</a></li>
+<li><a href="#types-of-system-calls">Types of System Calls</a></li>
+<li><a href="#file-system-structure-and-management">File System Structure and Management</a></li>
+<li><a href="#files">Files</a></li>
+<li><a href="#folders">Folders</a></li>
+<li><a href="#metadata">Metadata</a></li>
+<li><a href="#file-systems">File Systems</a></li>
+<li><a href="#types-of-operating-systems">Types of Operating Systems</a></li>
 <li><a href="#mcqs">MCQs</a></li>
 <li><a href="#test-mcqs">MCQs for testing</a></li>
 <li><a href="#faqs">FAQs</a></li>
@@ -275,7 +284,7 @@ ul, ol
 </nav>
   <div class="post-content">
   </p>
-      <h2 id="process-management">Process Management in Operating System</h2>
+      <h2 id="process-management-in-os">Process Management in Operating System</h2>
       <p>Process management means the OS controls these processes and gives them resources like CPU time and memory so they can run properly without disturbing each other.</p>
      
       <h3 id="process">Process in OS</h3>
@@ -298,7 +307,7 @@ ul, ol
       <li>Output devices (monitor, printer, speakers)</li>
     </ul>
 
-      <h3>Process Life Cycle</h3>
+      <h3 id="process-life-cycle">Process Life Cycle</h3>
 
     <p>A process has 3 main stages:</p>
 
@@ -329,7 +338,7 @@ ul, ol
         <li><strong>Termination:</strong> Close Chrome → OS stops it</li>
     </ul>
 
-    <h3>Multitasking and Concurrency</h3>
+    <h3 id="multitasking-and-concurrency">Multitasking and Concurrency</h3>
 <p>
     Modern computers are designed to handle multiple tasks at the same time.
     This helps users work smoothly without waiting for one task to finish before starting another.
@@ -383,7 +392,7 @@ ul, ol
 
     <p>So it looks like all tasks are running at the same time.</p>
 
-    <h3>Process Scheduling Concepts</h3>
+    <h3 id="process-scheduling-concepts">Process Scheduling Concepts</h3>
 
     <p>
         The CPU cannot run all processes at once, so the OS decides:
@@ -423,7 +432,7 @@ ul, ol
     <li>If one process takes too long, overall system performance feels slow</li>
 </ul>
 
-    <h3>Memory</h3>
+    <h3 id="memory">Memory</h3>
 
     <p>
         Memory is where the computer stores data and instructions so the CPU can work fast.
@@ -468,7 +477,7 @@ ul, ol
         But those moved apps may become slower when you open them again.
     </p>
 
-    <h2>Processes vs Threads</h2>
+    <h2 id="processes-vs-threads">Processes vs Threads</h2>
 
 <p>
 A process is a running program on a computer. Processes are independent, so one process crashing usually does not affect others.
@@ -522,7 +531,7 @@ All of these are separate processes.
 
 <p>So you can do many things at the same time without waiting.</p>
 
-<h2>Multithreading</h2>
+<h2 id="multithreading">Multithreading</h2>
 
 <p>Multithreading means one program uses multiple threads to do many tasks at the same time.</p>
 
@@ -532,7 +541,7 @@ All of these are separate processes.
 
 <p>One program → many small tasks running together.</p>
 
-<h2>Benefits of Multithreading</h2>
+<h3 id="benefits-of-multithreading">Benefits of Multithreading</h3>
 
 <p>1. ⚡ <strong>Enhanced Performance</strong></p>
 
@@ -578,7 +587,7 @@ In a web browser, you can scroll and use websites while a file is downloading in
 In a music app, you can play a song 🎵 and browse songs at the same time without opening two separate apps.
 </p>
 
-<h2>System Calls</h2>
+<h2 id="system-calls">System Calls</h2>
 
 <p>
 A system call is a request made by a program to the operating system to perform a task that the program cannot directly do itself.
@@ -596,7 +605,7 @@ A program asks the OS for help when it needs to use hardware.
 When you save a file, the application uses a system call to ask the OS to write data to the hard drive or SSD.
 </p>
 
-<h3>Types of System Calls</h3>
+<h3 id="types-of-system-calls">Types of System Calls</h3>
 
 <p>1. <strong>open</strong></p>
 
@@ -630,7 +639,7 @@ Used to create a new process by cloning an existing one.
 
 <p><strong>Example:</strong> When you duplicate a browser tab, the system uses a fork to instantly copy the exact state of your current tab into a new process. 🌐</p>
 
-<h2>File System Structure and Management</h2>
+<h2 id="file-system-structure-and-management">File System Structure and Management</h2>
 
 <p>
 The operating system not only runs programs but also manages how data is stored and organized on storage devices.
@@ -640,7 +649,7 @@ The operating system not only runs programs but also manages how data is stored 
 A file system provides a proper structure so that files can be stored, located, and managed easily. It ensures data remains organized even when there are thousands of files.
 </p>
 
-<h3>Files</h3>
+<h3 id="files">Files</h3>
 
 <p>
 A file is a collection of related data stored on a computer. It is the basic unit of storage.
@@ -662,7 +671,7 @@ A file is a collection of related data stored on a computer. It is the basic uni
 A PDF document, a photo, or a song are all files.
 </p>
 
-<h3>Folders</h3>
+<h3 id="folders">Folders</h3>
 
 <p>
 A folder (or directory) is used to organize files in a structured way.
@@ -678,7 +687,7 @@ It helps users group related files together so they are easier to find and manag
 A “School Work” folder may contain assignments, notes, and projects.
 </p>
 
-<h3>Metadata</h3>
+<h3 id="Metadata">Metadata</h3>
 
 <p>
 Metadata is information about a file or folder. It does not contain the actual content, but describes the file.
@@ -700,7 +709,7 @@ Metadata is information about a file or folder. It does not contain the actual c
 A photo file might show: Name: img.jpg, Size: 3 MB, Created: 1 June
 </p>
 
-<h2>File Systems</h2>
+<h2 id="file-systems">File Systems</h2>
 
 <p>
 A file system is a method used by an operating system to store, organize, and manage files on storage devices such as HDD, SSD, or USB drives.
@@ -732,7 +741,7 @@ Used in modern macOS devices for fast and efficient storage, especially on SSDs.
 Commonly used in Linux systems for its stability and performance.
 </p>
 
-<h2>Types of Operating Systems</h2>
+<h2 id="types-of-operating-systems">Types of Operating Systems</h2>
 
 <p>
 Operating systems are designed based on the type of device and its purpose. Each type is optimized for specific tasks.
@@ -801,334 +810,856 @@ A Mobile Operating System is designed for smartphones and tablets. It is optimiz
   <li>Smartwatches ⌚</li>
 </ul>
 
-
 <h2 id="mcqs">Multiple Choice Questions (MCQs) on Operating System</h2>
 
 <div class="mcq-item">
-  <div class="mcq-question">1. What is an Operating System (OS)?</div>
+  <div class="mcq-question">1. What is a process in an operating system?</div>
   <div class="mcq-options">
-    a. Hardware device inside a computer<br>
-    b. System software that manages hardware and applications<br>
-    c. A type of computer virus<br>
-    d. A programming language
+    a. A hardware device<br>
+    b. A running program<br>
+    c. A storage device<br>
+    d. A file system
   </div>
-  <div class="mcq-answer">Answer: b. System software that manages hardware and applications</div>
+  <div class="mcq-answer">Answer: b. A running program</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">2. Which of the following is an example of an operating system?</div>
+  <div class="mcq-question">2. What does process management do?</div>
   <div class="mcq-options">
-    a. Microsoft Word<br>
-    b. Google Chrome<br>
-    c. Linux<br>
-    d. Photoshop
+    a. Deletes programs automatically<br>
+    b. Controls processes and allocates resources<br>
+    c. Creates hardware devices<br>
+    d. Formats storage drives
   </div>
-  <div class="mcq-answer">Answer: c. Linux</div>
+  <div class="mcq-answer">Answer: b. Controls processes and allocates resources</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">3. The operating system is called the central controller because it:</div>
+  <div class="mcq-question">3. Which of the following is a resource in an OS?</div>
   <div class="mcq-options">
-    a. Only stores files<br>
-    b. Controls CPU, memory, and devices<br>
-    c. Prints documents<br>
-    d. Connects to the internet only
+    a. CPU time<br>
+    b. RAM<br>
+    c. Keyboard<br>
+    d. All of the above
   </div>
-  <div class="mcq-answer">Answer: b. Controls CPU, memory, and devices</div>
+  <div class="mcq-answer">Answer: d. All of the above</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">4. The OS acts as a bridge between:</div>
+  <div class="mcq-question">4. Which stage occurs when a program is first opened?</div>
   <div class="mcq-options">
-    a. CPU and printer only<br>
-    b. User and hardware<br>
-    c. Internet and browser<br>
-    d. Keyboard and mouse only
+    a. Termination<br>
+    b. Execution<br>
+    c. Creation<br>
+    d. Scheduling
   </div>
-  <div class="mcq-answer">Answer: b. User and hardware</div>
+  <div class="mcq-answer">Answer: c. Creation</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">5. In a multi-user system, the OS ensures:</div>
+  <div class="mcq-question">5. During execution, a process is:</div>
   <div class="mcq-options">
-    a. Only one user can use system<br>
-    b. Fair resource sharing and security<br>
-    c. No login system<br>
-    d. Hardware is disabled
+    a. Being deleted<br>
+    b. Waiting forever<br>
+    c. Performing its task<br>
+    d. Stored permanently
   </div>
-  <div class="mcq-answer">Answer: b. Fair resource sharing and security</div>
+  <div class="mcq-answer">Answer: c. Performing its task</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">6. What is the purpose of user accounts in OS?</div>
+  <div class="mcq-question">6. What happens during process termination?</div>
   <div class="mcq-options">
-    a. To share same files for everyone<br>
-    b. To keep user data separate and secure<br>
-    c. To remove security<br>
-    d. To slow down system
+    a. More memory is allocated<br>
+    b. Process is loaded into RAM<br>
+    c. Resources are freed<br>
+    d. CPU speed increases
   </div>
-  <div class="mcq-answer">Answer: b. To keep user data separate and secure</div>
+  <div class="mcq-answer">Answer: c. Resources are freed</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">7. What is the kernel in an OS?</div>
+  <div class="mcq-question">7. Multitasking means:</div>
   <div class="mcq-options">
-    a. User interface<br>
-    b. Core part that manages hardware<br>
-    c. Web browser<br>
-    d. Application software
+    a. Running one program only<br>
+    b. Using multiple programs at the same time<br>
+    c. Installing software<br>
+    d. Formatting disks
   </div>
-  <div class="mcq-answer">Answer: b. Core part that manages hardware</div>
+  <div class="mcq-answer">Answer: b. Using multiple programs at the same time</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">8. What is the function of a shell?</div>
+  <div class="mcq-question">8. Concurrency means:</div>
   <div class="mcq-options">
-    a. Directly controls hardware<br>
-    b. Interface between user and kernel<br>
-    c. Stores files permanently<br>
-    d. Manages printer only
+    a. CPU executes all tasks simultaneously<br>
+    b. CPU quickly switches between tasks<br>
+    c. Programs never share CPU time<br>
+    d. Only one process exists
   </div>
-  <div class="mcq-answer">Answer: b. Interface between user and kernel</div>
+  <div class="mcq-answer">Answer: b. CPU quickly switches between tasks</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">9. Which is a Command Line Interface (CLI)?</div>
+  <div class="mcq-question">9. Scheduling is used to decide:</div>
   <div class="mcq-options">
-    a. Windows Desktop<br>
-    b. macOS Finder<br>
-    c. Command Prompt<br>
-    d. Icons and menus
+    a. File names<br>
+    b. Network speed<br>
+    c. Which process gets CPU time<br>
+    d. Screen resolution
   </div>
-  <div class="mcq-answer">Answer: c. Command Prompt</div>
+  <div class="mcq-answer">Answer: c. Which process gets CPU time</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">10. Which is a Graphical User Interface (GUI)?</div>
+  <div class="mcq-question">10. FCFS stands for:</div>
   <div class="mcq-options">
-    a. Bash terminal<br>
-    b. Windows Desktop<br>
-    c. Linux commands only<br>
-    d. Text-based shell
+    a. First Come, First Served<br>
+    b. Fast CPU First System<br>
+    c. First CPU First Schedule<br>
+    d. File Control First Service
   </div>
-  <div class="mcq-answer">Answer: b. Windows Desktop</div>
+  <div class="mcq-answer">Answer: a. First Come, First Served</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">11. Which OS layer is closest to hardware?</div>
+  <div class="mcq-question">11. A major advantage of FCFS is:</div>
   <div class="mcq-options">
-    a. Upper layer<br>
-    b. Middle layer<br>
-    c. Lower layer<br>
-    d. User layer
+    a. Complex implementation<br>
+    b. Very simple scheduling<br>
+    c. Highest performance always<br>
+    d. No waiting time
   </div>
-  <div class="mcq-answer">Answer: c. Lower layer</div>
+  <div class="mcq-answer">Answer: b. Very simple scheduling</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">12. What are system libraries used for?</div>
+  <div class="mcq-question">12. What is the convoy effect?</div>
   <div class="mcq-options">
-    a. Gaming purposes<br>
-    b. Reusable functions for applications<br>
-    c. Hardware destruction<br>
-    d. Internet browsing only
+    a. Memory corruption<br>
+    b. Small processes wait behind long processes<br>
+    c. Fast process execution<br>
+    d. File deletion
   </div>
-  <div class="mcq-answer">Answer: b. Reusable functions for applications</div>
+  <div class="mcq-answer">Answer: b. Small processes wait behind long processes</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">13. What is the role of device drivers?</div>
+  <div class="mcq-question">13. RAM is:</div>
   <div class="mcq-options">
-    a. Manage user accounts<br>
-    b. Help OS communicate with hardware<br>
-    c. Delete system files<br>
-    d. Create software programs
+    a. Permanent memory<br>
+    b. Main working memory<br>
+    c. Secondary storage<br>
+    d. Output device
   </div>
-  <div class="mcq-answer">Answer: b. Help OS communicate with hardware</div>
+  <div class="mcq-answer">Answer: b. Main working memory</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">14. A benefit of layered OS design is:</div>
+  <div class="mcq-question">14. Data in RAM is lost when:</div>
   <div class="mcq-options">
-    a. Harder maintenance<br>
-    b. Easier management and updates<br>
-    c. Slower performance always<br>
-    d. No security
+    a. Browser opens<br>
+    b. Printer starts<br>
+    c. Power is turned off<br>
+    d. File is saved
   </div>
-  <div class="mcq-answer">Answer: b. Easier management and updates</div>
+  <div class="mcq-answer">Answer: c. Power is turned off</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">15. When a user clicks an icon, the OS:</div>
+  <div class="mcq-question">15. Virtual memory is:</div>
   <div class="mcq-options">
-    a. Ignores the input<br>
-    b. Converts it into machine instructions<br>
-    c. Turns off computer<br>
-    d. Deletes files
+    a. Cache memory<br>
+    b. Backup space for RAM using storage<br>
+    c. CPU memory<br>
+    d. BIOS memory
   </div>
-  <div class="mcq-answer">Answer: b. Converts it into machine instructions</div>
+  <div class="mcq-answer">Answer: b. Backup space for RAM using storage</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">16. Virtual memory is generally:</div>
+  <div class="mcq-options">
+    a. Faster than RAM<br>
+    b. Equal to RAM<br>
+    c. Slower than RAM<br>
+    d. Not used
+  </div>
+  <div class="mcq-answer">Answer: c. Slower than RAM</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">17. A process is:</div>
+  <div class="mcq-options">
+    a. A running application<br>
+    b. A folder<br>
+    c. A keyboard<br>
+    d. A file system
+  </div>
+  <div class="mcq-answer">Answer: a. A running application</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">18. A thread is:</div>
+  <div class="mcq-options">
+    a. A storage device<br>
+    b. A small unit inside a process<br>
+    c. A file type<br>
+    d. An operating system
+  </div>
+  <div class="mcq-answer">Answer: b. A small unit inside a process</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">19. Threads within the same process:</div>
+  <div class="mcq-options">
+    a. Have separate memory always<br>
+    b. Share memory<br>
+    c. Cannot communicate<br>
+    d. Use different CPUs only
+  </div>
+  <div class="mcq-answer">Answer: b. Share memory</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">20. Multithreading means:</div>
+  <div class="mcq-options">
+    a. Multiple programs running<br>
+    b. Multiple threads in one process<br>
+    c. Multiple operating systems<br>
+    d. Multiple hard drives
+  </div>
+  <div class="mcq-answer">Answer: b. Multiple threads in one process</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">21. Which is a benefit of multithreading?</div>
+  <div class="mcq-options">
+    a. Reduced performance<br>
+    b. Improved responsiveness<br>
+    c. More hardware failures<br>
+    d. Less resource sharing
+  </div>
+  <div class="mcq-answer">Answer: b. Improved responsiveness</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">22. A system call is:</div>
+  <div class="mcq-options">
+    a. A hardware component<br>
+    b. A request to the OS for services<br>
+    c. A file format<br>
+    d. A virus
+  </div>
+  <div class="mcq-answer">Answer: b. A request to the OS for services</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">23. Which system call opens a file?</div>
+  <div class="mcq-options">
+    a. read<br>
+    b. write<br>
+    c. open<br>
+    d. fork
+  </div>
+  <div class="mcq-answer">Answer: c. open</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">24. Which system call reads data?</div>
+  <div class="mcq-options">
+    a. fork<br>
+    b. open<br>
+    c. read<br>
+    d. create
+  </div>
+  <div class="mcq-answer">Answer: c. read</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">25. Which system call saves data to a file?</div>
+  <div class="mcq-options">
+    a. write<br>
+    b. read<br>
+    c. fork<br>
+    d. close
+  </div>
+  <div class="mcq-answer">Answer: a. write</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">26. The fork system call is used to:</div>
+  <div class="mcq-options">
+    a. Delete files<br>
+    b. Create a new process<br>
+    c. Read memory<br>
+    d. Shut down the system
+  </div>
+  <div class="mcq-answer">Answer: b. Create a new process</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">27. A file is:</div>
+  <div class="mcq-options">
+    a. A collection of related data<br>
+    b. A CPU component<br>
+    c. An input device<br>
+    d. A network cable
+  </div>
+  <div class="mcq-answer">Answer: a. A collection of related data</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">28. A folder is used to:</div>
+  <div class="mcq-options">
+    a. Increase CPU speed<br>
+    b. Organize files<br>
+    c. Format RAM<br>
+    d. Control hardware
+  </div>
+  <div class="mcq-answer">Answer: b. Organize files</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">29. Metadata includes:</div>
+  <div class="mcq-options">
+    a. File name and size<br>
+    b. CPU instructions<br>
+    c. Screen brightness<br>
+    d. Internet speed
+  </div>
+  <div class="mcq-answer">Answer: a. File name and size</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">30. A file system is used to:</div>
+  <div class="mcq-options">
+    a. Manage and organize files<br>
+    b. Create processors<br>
+    c. Design monitors<br>
+    d. Control power supply
+  </div>
+  <div class="mcq-answer">Answer: a. Manage and organize files</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">31. FAT32 stands for:</div>
+  <div class="mcq-options">
+    a. Fast Access Table<br>
+    b. File Allocation Table (32-bit)<br>
+    c. File Access Technology<br>
+    d. Fixed Allocation Table
+  </div>
+  <div class="mcq-answer">Answer: b. File Allocation Table (32-bit)</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">32. NTFS stands for:</div>
+  <div class="mcq-options">
+    a. New Technology File System<br>
+    b. Network Transfer File Service<br>
+    c. New Transfer Format Standard<br>
+    d. None of these
+  </div>
+  <div class="mcq-answer">Answer: a. New Technology File System</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">33. APFS is mainly used in:</div>
+  <div class="mcq-options">
+    a. Linux<br>
+    b. Windows<br>
+    c. macOS<br>
+    d. Android
+  </div>
+  <div class="mcq-answer">Answer: c. macOS</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">34. EXT4 is commonly used in:</div>
+  <div class="mcq-options">
+    a. Linux<br>
+    b. Windows<br>
+    c. iOS<br>
+    d. Printers
+  </div>
+  <div class="mcq-answer">Answer: a. Linux</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">35. An RTOS is designed for:</div>
+  <div class="mcq-options">
+    a. Gaming only<br>
+    b. Fast response within deadlines<br>
+    c. Storing files<br>
+    d. Social networking
+  </div>
+  <div class="mcq-answer">Answer: b. Fast response within deadlines</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">36. Which device commonly uses an Embedded OS?</div>
+  <div class="mcq-options">
+    a. Washing machine<br>
+    b. Server farm<br>
+    c. Supercomputer only<br>
+    d. Network switch only
+  </div>
+  <div class="mcq-answer">Answer: a. Washing machine</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">37. A Network Operating System focuses on:</div>
+  <div class="mcq-options">
+    a. Gaming graphics<br>
+    b. File and resource sharing<br>
+    c. Video editing<br>
+    d. Music playback
+  </div>
+  <div class="mcq-answer">Answer: b. File and resource sharing</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">38. A Mobile Operating System is designed for:</div>
+  <div class="mcq-options">
+    a. Mainframes only<br>
+    b. Smartphones and tablets<br>
+    c. Industrial robots only<br>
+    d. Servers only
+  </div>
+  <div class="mcq-answer">Answer: b. Smartphones and tablets</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">39. Which feature is important in a mobile OS?</div>
+  <div class="mcq-options">
+    a. Touch interface<br>
+    b. Battery management<br>
+    c. App support<br>
+    d. All of the above
+  </div>
+  <div class="mcq-answer">Answer: d. All of the above</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">40. Which operating system type is used in heart monitoring devices?</div>
+  <div class="mcq-options">
+    a. Mobile OS<br>
+    b. RTOS<br>
+    c. NOS<br>
+    d. APFS
+  </div>
+  <div class="mcq-answer">Answer: b. RTOS</div>
 </div>
 
 <div class="user-info">
   <input type="text" id="username" placeholder="Enter your name" />
 </div>
 
-
 <section class="test-mcqs" id="test-mcqs">
   <h2>Test Yourself: Interactive MCQs (Operating System)</h2>
 
   <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">1. What is an Operating System (OS)?</div>
+    <div class="mcq-question">1. What is a process in an operating system?</div>
     <div class="mcq-options">
-      <button>a. Hardware device inside a computer</button>
-      <button>b. System software that manages hardware and applications</button>
-      <button>c. A type of computer virus</button>
-      <button>d. A programming language</button>
+      <button>a. A hardware device</button>
+      <button>b. A running program</button>
+      <button>c. A storage device</button>
+      <button>d. A file system</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">2. What does process management do?</div>
+    <div class="mcq-options">
+      <button>a. Deletes programs automatically</button>
+      <button>b. Controls processes and allocates resources</button>
+      <button>c. Creates hardware devices</button>
+      <button>d. Formats storage drives</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">3. Which of the following is a resource in an OS?</div>
+    <div class="mcq-options">
+      <button>a. CPU time</button>
+      <button>b. RAM</button>
+      <button>c. Keyboard</button>
+      <button>d. All of the above</button>
     </div>
   </div>
 
   <div class="mcq-item" data-answer="c">
-    <div class="mcq-question">2. Which of the following is an example of an operating system?</div>
+    <div class="mcq-question">4. Which stage occurs when a program is first opened?</div>
     <div class="mcq-options">
-      <button>a. Microsoft Word</button>
-      <button>b. Google Chrome</button>
-      <button>c. Linux</button>
-      <button>d. Photoshop</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">3. The operating system is called the central controller because it:</div>
-    <div class="mcq-options">
-      <button>a. Only stores files</button>
-      <button>b. Controls CPU, memory, and devices</button>
-      <button>c. Prints documents</button>
-      <button>d. Connects to the internet only</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">4. The OS acts as a bridge between:</div>
-    <div class="mcq-options">
-      <button>a. CPU and printer only</button>
-      <button>b. User and hardware</button>
-      <button>c. Internet and browser</button>
-      <button>d. Keyboard and mouse only</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">5. In a multi-user system, the OS ensures:</div>
-    <div class="mcq-options">
-      <button>a. Only one user can use system</button>
-      <button>b. Fair resource sharing and security</button>
-      <button>c. No login system</button>
-      <button>d. Hardware is disabled</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">6. What is the purpose of user accounts in OS?</div>
-    <div class="mcq-options">
-      <button>a. To share same files for everyone</button>
-      <button>b. To keep user data separate and secure</button>
-      <button>c. To remove security</button>
-      <button>d. To slow down system</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">7. What is the kernel in an OS?</div>
-    <div class="mcq-options">
-      <button>a. User interface</button>
-      <button>b. Core part that manages hardware</button>
-      <button>c. Web browser</button>
-      <button>d. Application software</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">8. What is the function of a shell?</div>
-    <div class="mcq-options">
-      <button>a. Directly controls hardware</button>
-      <button>b. Interface between user and kernel</button>
-      <button>c. Stores files permanently</button>
-      <button>d. Manages printer only</button>
+      <button>a. Termination</button>
+      <button>b. Execution</button>
+      <button>c. Creation</button>
+      <button>d. Scheduling</button>
     </div>
   </div>
 
   <div class="mcq-item" data-answer="c">
-    <div class="mcq-question">9. Which is a Command Line Interface (CLI)?</div>
+    <div class="mcq-question">5. During execution, a process is:</div>
     <div class="mcq-options">
-      <button>a. Windows Desktop</button>
-      <button>b. macOS Finder</button>
-      <button>c. Command Prompt</button>
-      <button>d. Icons and menus</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">10. Which is a Graphical User Interface (GUI)?</div>
-    <div class="mcq-options">
-      <button>a. Bash terminal</button>
-      <button>b. Windows Desktop</button>
-      <button>c. Linux commands only</button>
-      <button>d. Text-based shell</button>
+      <button>a. Being deleted</button>
+      <button>b. Waiting forever</button>
+      <button>c. Performing its task</button>
+      <button>d. Stored permanently</button>
     </div>
   </div>
 
   <div class="mcq-item" data-answer="c">
-    <div class="mcq-question">11. Which OS layer is closest to hardware?</div>
+    <div class="mcq-question">6. What happens during process termination?</div>
     <div class="mcq-options">
-      <button>a. Upper layer</button>
-      <button>b. Middle layer</button>
-      <button>c. Lower layer</button>
-      <button>d. User layer</button>
+      <button>a. More memory is allocated</button>
+      <button>b. Process is loaded into RAM</button>
+      <button>c. Resources are freed</button>
+      <button>d. CPU speed increases</button>
     </div>
   </div>
 
   <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">12. What are system libraries used for?</div>
+    <div class="mcq-question">7. Multitasking means:</div>
     <div class="mcq-options">
-      <button>a. Gaming purposes</button>
-      <button>b. Reusable functions for applications</button>
-      <button>c. Hardware destruction</button>
-      <button>d. Internet browsing only</button>
+      <button>a. Running one program only</button>
+      <button>b. Using multiple programs at the same time</button>
+      <button>c. Installing software</button>
+      <button>d. Formatting disks</button>
     </div>
   </div>
 
   <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">13. What is the role of device drivers?</div>
+    <div class="mcq-question">8. Concurrency means:</div>
     <div class="mcq-options">
-      <button>a. Manage user accounts</button>
-      <button>b. Help OS communicate with hardware</button>
-      <button>c. Delete system files</button>
-      <button>d. Create software programs</button>
+      <button>a. CPU executes all tasks simultaneously</button>
+      <button>b. CPU quickly switches between tasks</button>
+      <button>c. Programs never share CPU time</button>
+      <button>d. Only one process exists</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">9. Scheduling is used to decide:</div>
+    <div class="mcq-options">
+      <button>a. File names</button>
+      <button>b. Network speed</button>
+      <button>c. Which process gets CPU time</button>
+      <button>d. Screen resolution</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">10. FCFS stands for:</div>
+    <div class="mcq-options">
+      <button>a. First Come, First Served</button>
+      <button>b. Fast CPU First System</button>
+      <button>c. First CPU First Schedule</button>
+      <button>d. File Control First Service</button>
     </div>
   </div>
 
   <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">14. A benefit of layered OS design is:</div>
+    <div class="mcq-question">11. A major advantage of FCFS is:</div>
     <div class="mcq-options">
-      <button>a. Harder maintenance</button>
-      <button>b. Easier management and updates</button>
-      <button>c. Slower performance always</button>
-      <button>d. No security</button>
+      <button>a. Complex implementation</button>
+      <button>b. Very simple scheduling</button>
+      <button>c. Highest performance always</button>
+      <button>d. No waiting time</button>
     </div>
   </div>
 
   <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">15. When a user clicks an icon, the OS:</div>
+    <div class="mcq-question">12. What is the convoy effect?</div>
     <div class="mcq-options">
-      <button>a. Ignores the input</button>
-      <button>b. Converts it into machine instructions</button>
-      <button>c. Turns off computer</button>
-      <button>d. Deletes files</button>
+      <button>a. Memory corruption</button>
+      <button>b. Small processes wait behind long processes</button>
+      <button>c. Fast process execution</button>
+      <button>d. File deletion</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">13. RAM is:</div>
+    <div class="mcq-options">
+      <button>a. Permanent memory</button>
+      <button>b. Main working memory</button>
+      <button>c. Secondary storage</button>
+      <button>d. Output device</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">14. Data in RAM is lost when:</div>
+    <div class="mcq-options">
+      <button>a. Browser opens</button>
+      <button>b. Printer starts</button>
+      <button>c. Power is turned off</button>
+      <button>d. File is saved</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">15. Virtual memory is:</div>
+    <div class="mcq-options">
+      <button>a. Cache memory</button>
+      <button>b. Backup space for RAM using storage</button>
+      <button>c. CPU memory</button>
+      <button>d. BIOS memory</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">16. Virtual memory is generally:</div>
+    <div class="mcq-options">
+      <button>a. Faster than RAM</button>
+      <button>b. Equal to RAM</button>
+      <button>c. Slower than RAM</button>
+      <button>d. Not used</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">17. A process is:</div>
+    <div class="mcq-options">
+      <button>a. A running application</button>
+      <button>b. A folder</button>
+      <button>c. A keyboard</button>
+      <button>d. A file system</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">18. A thread is:</div>
+    <div class="mcq-options">
+      <button>a. A storage device</button>
+      <button>b. A small unit inside a process</button>
+      <button>c. A file type</button>
+      <button>d. An operating system</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">19. Threads within the same process:</div>
+    <div class="mcq-options">
+      <button>a. Have separate memory always</button>
+      <button>b. Share memory</button>
+      <button>c. Cannot communicate</button>
+      <button>d. Use different CPUs only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">20. Multithreading means:</div>
+    <div class="mcq-options">
+      <button>a. Multiple programs running</button>
+      <button>b. Multiple threads in one process</button>
+      <button>c. Multiple operating systems</button>
+      <button>d. Multiple hard drives</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">21. Which is a benefit of multithreading?</div>
+    <div class="mcq-options">
+      <button>a. Reduced performance</button>
+      <button>b. Improved responsiveness</button>
+      <button>c. More hardware failures</button>
+      <button>d. Less resource sharing</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">22. A system call is:</div>
+    <div class="mcq-options">
+      <button>a. A hardware component</button>
+      <button>b. A request to the OS for services</button>
+      <button>c. A file format</button>
+      <button>d. A virus</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">23. Which system call opens a file?</div>
+    <div class="mcq-options">
+      <button>a. read</button>
+      <button>b. write</button>
+      <button>c. open</button>
+      <button>d. fork</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">24. Which system call reads data?</div>
+    <div class="mcq-options">
+      <button>a. fork</button>
+      <button>b. open</button>
+      <button>c. read</button>
+      <button>d. create</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">25. Which system call saves data to a file?</div>
+    <div class="mcq-options">
+      <button>a. write</button>
+      <button>b. read</button>
+      <button>c. fork</button>
+      <button>d. close</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">26. The fork system call is used to:</div>
+    <div class="mcq-options">
+      <button>a. Delete files</button>
+      <button>b. Create a new process</button>
+      <button>c. Read memory</button>
+      <button>d. Shut down the system</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">27. A file is:</div>
+    <div class="mcq-options">
+      <button>a. A collection of related data</button>
+      <button>b. A CPU component</button>
+      <button>c. An input device</button>
+      <button>d. A network cable</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">28. A folder is used to:</div>
+    <div class="mcq-options">
+      <button>a. Increase CPU speed</button>
+      <button>b. Organize files</button>
+      <button>c. Format RAM</button>
+      <button>d. Control hardware</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">29. Metadata includes:</div>
+    <div class="mcq-options">
+      <button>a. File name and size</button>
+      <button>b. CPU instructions</button>
+      <button>c. Screen brightness</button>
+      <button>d. Internet speed</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">30. A file system is used to:</div>
+    <div class="mcq-options">
+      <button>a. Manage and organize files</button>
+      <button>b. Create processors</button>
+      <button>c. Design monitors</button>
+      <button>d. Control power supply</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">31. FAT32 stands for:</div>
+    <div class="mcq-options">
+      <button>a. Fast Access Table</button>
+      <button>b. File Allocation Table (32-bit)</button>
+      <button>c. File Access Technology</button>
+      <button>d. Fixed Allocation Table</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">32. NTFS stands for:</div>
+    <div class="mcq-options">
+      <button>a. New Technology File System</button>
+      <button>b. Network Transfer File Service</button>
+      <button>c. New Transfer Format Standard</button>
+      <button>d. None of these</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">33. APFS is mainly used in:</div>
+    <div class="mcq-options">
+      <button>a. Linux</button>
+      <button>b. Windows</button>
+      <button>c. macOS</button>
+      <button>d. Android</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">34. EXT4 is commonly used in:</div>
+    <div class="mcq-options">
+      <button>a. Linux</button>
+      <button>b. Windows</button>
+      <button>c. iOS</button>
+      <button>d. Printers</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">35. An RTOS is designed for:</div>
+    <div class="mcq-options">
+      <button>a. Gaming only</button>
+      <button>b. Fast response within deadlines</button>
+      <button>c. Storing files</button>
+      <button>d. Social networking</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">36. Which device commonly uses an Embedded OS?</div>
+    <div class="mcq-options">
+      <button>a. Washing machine</button>
+      <button>b. Server farm</button>
+      <button>c. Supercomputer only</button>
+      <button>d. Network switch only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">37. A Network Operating System focuses on:</div>
+    <div class="mcq-options">
+      <button>a. Gaming graphics</button>
+      <button>b. File and resource sharing</button>
+      <button>c. Video editing</button>
+      <button>d. Music playback</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">38. A Mobile Operating System is designed for:</div>
+    <div class="mcq-options">
+      <button>a. Mainframes only</button>
+      <button>b. Smartphones and tablets</button>
+      <button>c. Industrial robots only</button>
+      <button>d. Servers only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">39. Which feature is important in a mobile OS?</div>
+    <div class="mcq-options">
+      <button>a. Touch interface</button>
+      <button>b. Battery management</button>
+      <button>c. App support</button>
+      <button>d. All of the above</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">40. Which operating system type is used in heart monitoring devices?</div>
+    <div class="mcq-options">
+      <button>a. Mobile OS</button>
+      <button>b. RTOS</button>
+      <button>c. NOS</button>
+      <button>d. APFS</button>
     </div>
   </div>
 
 </section>
-
 
 <div class="result-box">
   <button id="showResult">Show Result</button>
@@ -1136,11 +1667,9 @@ A Mobile Operating System is designed for smartphones and tablets. It is optimiz
 </div>
 
 <h2>Lectures</h2>
-      <strong>Lecture 2 coming soon.</strong>
-      <!-- <ul>
-      <li><a href="9-class-chap-10-lecture-2.html">Previous</a></li>
-      <li><a href="9-class-chap-10-lecture-2.html">Next</a></li>
-      </ul> -->
+      <ul>
+      <li><a href="9-class-chap-10-lecture-1.html">Previous</a></li>
+      </ul>
       <!-- <h2>Related Posts</h2>
       <ul>
         <li><a href="Top-10-Programming-Languages-in-2025.html">Top 10 Programming Languages in 2025</a></li>
@@ -1152,115 +1681,150 @@ A Mobile Operating System is designed for smartphones and tablets. It is optimiz
 
 <section class="faq-section">
 
-<div class="faq-item">
-  <button class="faq-question">What is an Operating System (OS)?</button>
-  <div class="faq-answer">
-    <p>An Operating System is system software that manages computer hardware, software applications, and provides a user interface.</p>
+  <div class="faq-item">
+    <button class="faq-question">What is an Operating System (OS)?</button>
+    <div class="faq-answer">
+      <p>An Operating System is system software that manages computer hardware, software applications, and provides a user interface.</p>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <button class="faq-question">What are some examples of operating systems?</button>
-  <div class="faq-answer">
-    <p>Examples include Microsoft Windows, macOS, Linux, Android, and iOS.</p>
+  <div class="faq-item">
+    <button class="faq-question">What is a process in OS?</button>
+    <div class="faq-answer">
+      <p>A process is a program that is currently running and using system resources like CPU and memory.</p>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <button class="faq-question">Why is the OS called a central controller?</button>
-  <div class="faq-answer">
-    <p>Because it manages CPU, memory, files, and devices and ensures all tasks run smoothly.</p>
+  <div class="faq-item">
+    <button class="faq-question">What is process management?</button>
+    <div class="faq-answer">
+      <p>Process management is the function of the OS that handles creation, scheduling, and termination of processes.</p>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <button class="faq-question">How does an OS act as a bridge between user and hardware?</button>
-  <div class="faq-answer">
-    <p>The OS converts user actions (clicks, typing) into machine instructions that hardware can understand and execute.</p>
+  <div class="faq-item">
+    <button class="faq-question">What are resources in an OS?</button>
+    <div class="faq-answer">
+      <p>Resources include CPU time, memory (RAM), storage, and input/output devices used by processes.</p>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <button class="faq-question">What is the role of the kernel?</button>
-  <div class="faq-answer">
-    <p>The kernel is the core part of the OS that directly manages hardware resources like CPU, memory, and devices.</p>
+  <div class="faq-item">
+    <button class="faq-question">What are the stages of a process life cycle?</button>
+    <div class="faq-answer">
+      <p>The stages are creation, execution, and termination.</p>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <button class="faq-question">What is a shell in an operating system?</button>
-  <div class="faq-answer">
-    <p>A shell is an interface between the user and the kernel that processes user commands.</p>
+  <div class="faq-item">
+    <button class="faq-question">What happens during process creation?</button>
+    <div class="faq-answer">
+      <p>The OS loads the program into memory and assigns required resources to it.</p>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <button class="faq-question">What is the difference between CLI and GUI?</button>
-  <div class="faq-answer">
-    <p>CLI uses text commands (like Command Prompt), while GUI uses icons, windows, and menus (like Windows Desktop).</p>
+  <div class="faq-item">
+    <button class="faq-question">What happens during process execution?</button>
+    <div class="faq-answer">
+      <p>The process performs its tasks using CPU and memory.</p>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <button class="faq-question">What is multi-user environment in OS?</button>
-  <div class="faq-answer">
-    <p>It allows multiple users to use the same system while keeping their data separate and secure.</p>
+  <div class="faq-item">
+    <button class="faq-question">What happens during process termination?</button>
+    <div class="faq-answer">
+      <p>The process ends and the OS frees all allocated resources.</p>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <button class="faq-question">What is the purpose of user accounts?</button>
-  <div class="faq-answer">
-    <p>User accounts keep personal files, settings, and passwords separate for each user.</p>
+  <div class="faq-item">
+    <button class="faq-question">What is multitasking?</button>
+    <div class="faq-answer">
+      <p>Multitasking is the ability of an OS to run multiple programs at the same time.</p>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <button class="faq-question">What are system libraries?</button>
-  <div class="faq-answer">
-    <p>System libraries are collections of reusable functions that help applications communicate with the operating system.</p>
+  <div class="faq-item">
+    <button class="faq-question">What is concurrency in OS?</button>
+    <div class="faq-answer">
+      <p>Concurrency means the CPU switches rapidly between tasks so they appear to run simultaneously.</p>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <button class="faq-question">What are device drivers?</button>
-  <div class="faq-answer">
-    <p>Device drivers are software programs that help the operating system communicate with hardware devices like printers and keyboards.</p>
+  <div class="faq-item">
+    <button class="faq-question">What is process scheduling?</button>
+    <div class="faq-answer">
+      <p>Process scheduling is the OS technique to decide which process gets CPU time and for how long.</p>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <button class="faq-question">What is OS architecture?</button>
-  <div class="faq-answer">
-    <p>OS architecture refers to how different parts of the operating system are organized and work together.</p>
+  <div class="faq-item">
+    <button class="faq-question">What is FCFS scheduling?</button>
+    <div class="faq-answer">
+      <p>FCFS (First Come, First Served) is a scheduling method where processes are executed in the order they arrive.</p>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <button class="faq-question">What are the layers of an operating system?</button>
-  <div class="faq-answer">
-    <p>The OS has lower (hardware), middle (services), and upper (user interface and applications) layers.</p>
+  <div class="faq-item">
+    <button class="faq-question">What is RAM?</button>
+    <div class="faq-answer">
+      <p>RAM is the main memory used by the computer to store data temporarily while programs are running.</p>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <button class="faq-question">Why is layered OS design useful?</button>
-  <div class="faq-answer">
-    <p>It makes the system easier to manage, upgrade, and maintain without affecting the entire OS.</p>
+  <div class="faq-item">
+    <button class="faq-question">What is virtual memory?</button>
+    <div class="faq-answer">
+      <p>Virtual memory is a part of storage used as extra RAM when the actual RAM is full.</p>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <button class="faq-question">What happens when you click an icon?</button>
-  <div class="faq-answer">
-    <p>The OS converts the action into machine instructions and sends it to the hardware for execution.</p>
+  <div class="faq-item">
+    <button class="faq-question">What is the difference between process and thread?</button>
+    <div class="faq-answer">
+      <p>A process is a running program, while a thread is a small unit of a process that performs specific tasks.</p>
+    </div>
   </div>
-</div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is multithreading?</button>
+    <div class="faq-answer">
+      <p>Multithreading is when a single process uses multiple threads to perform tasks simultaneously.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is a system call?</button>
+    <div class="faq-answer">
+      <p>A system call is a request made by a program to the operating system to perform a specific task.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is a file system?</button>
+    <div class="faq-answer">
+      <p>A file system is a method used by the OS to store, organize, and manage files on storage devices.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is metadata in a file?</button>
+    <div class="faq-answer">
+      <p>Metadata is information about a file such as name, size, type, and creation date.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is an embedded operating system?</button>
+    <div class="faq-answer">
+      <p>An embedded operating system is designed for specific devices like washing machines and ATMs with limited resources.</p>
+    </div>
+  </div>
 
 </section>
-      
+
 <h2>Download Notes</h2>
-  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/10-class/chapter-1/chapter1-lecture1.pdf">
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/10-class/chapter-1/chapter1-lecture2.pdf">
   Download PDF
 </a>
 </div>
