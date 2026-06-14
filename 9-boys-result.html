@@ -382,6 +382,7 @@ function buildThread(all, topComment) {
           <div class="admin-reply-box" id="arb-${vr.id}" style="display:none;">
             <textarea id="ari-${vr.id}" placeholder="Write your reply…" rows="2" maxlength="500"
               onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${vr.id})}"></textarea>
+            
             <button onclick="postAdminReply(${vr.id})">Send Reply</button>
           </div>` : ""}
           ${buildNestedThread(all, vr, topComment.name)}
