@@ -3,22 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Learn about Computer Networks, main components, networking devices, objectives, and data communication concepts with examples." />
-  <meta name="keywords" content="Computer Network, Networking Devices, Switch, Router, Access Point, Data Communication, Network Objectives" />
+  <meta name="description" content="Learn about Data Science, types of data, data gathering, and methods to organize and analyze data with examples and key features." />
+  <meta name="keywords" content="Data Science, Data Gathering, Types of Data, Qualitative Data, Quantitative Data, Organizing Data, Analyzing Data, Data Tables, Charts, Graphs" />
   <meta name="author" content="Salman Ahmad" />
-  <title>Computer Networks: Components, Devices, and Objectives | Salman Blogs</title>
+  <title>Data Science: Types of Data, Gathering, and Analysis — Examples and Features | Salman Blogs</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="about.css">
-  <meta property="og:title" content="Computer Networks: Components, Devices, and Objectives" />
-  <meta property="og:description" content="Explore computer networks, main components, networking devices, objectives, and fundamental data communication concepts with examples." />
-  <meta property="og:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-6/chapter-6-lecture1-notes.webp" />
-  <meta property="og:url" content="https://salmanblogs.com/9-class-chap-6-lecture-1" />
+  <meta property="og:title" content="Data Science: Types of Data, Gathering, and Analysis — Examples and Features" />
+  <meta property="og:description" content="Explore Data Science, data gathering, types of data, and how to organize and analyze data with examples and best practices." />
+  <meta property="og:image" content="https://salmanblogs.com/images/data-science.png" />
+  <meta property="og:url" content="https://salmanblogs.com/data-science.html" />
   <meta property="og:type" content="article" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Computer Networks: Components, Devices, and Objectives" />
-  <meta name="twitter:description" content="Comprehensive guide on computer networks, main components, networking devices, objectives, and fundamental data communication concepts." />
-  <meta name="twitter:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-6/chapter-6-lecture1-notes.webp" />
-
+  <meta name="twitter:title" content="Data Science: Types of Data, Gathering, and Analysis — Examples and Features" />
+  <meta name="twitter:description" content="Comprehensive guide on Data Science, types of data, data gathering, and analysis methods. Includes examples and tips for organizing data effectively." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/data-science.png" />
   <style>
     html { scroll-behavior: smooth; }
     .toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
@@ -28,36 +27,8 @@
     .toc li {list-style-type: none;}
     .post-content h2,
     .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
-    .post-content h2, 
-.post-content h3 {
-  scroll-margin-top: 0; /* No extra offset */
-}
-    .mcq-item {
-      background: #f7f7f7;
-      border-left: 4px solid #0077cc; /* same as h2 border color */
-      padding: 15px;
-      margin: 10px 0;
-    }
 
-    .mcq-question {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    .mcq-options {
-      margin-left: 20px;
-      margin-bottom: 10px;
-    }
-
-    .mcq-answer {
-      background: #dbeafe; /* soft blue similar to h2 highlight */
-      border-left: 4px solid #0077cc;
-      padding: 10px;
-      margin-left: 20px;
-      font-weight: bold;
-    }
   </style>
-
 </head>
 <body>
 <header class="navbar">
@@ -79,363 +50,161 @@
 
 <main class="post-container">
   <article class="blog-post">
-    <h1 class="post-title">Computer Networks Lecture Notes</h1>
     <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
-    <img src="images/9-CS-IMAGES/chapter-6/chapter-6-lecture1-notes.webp" alt="chapter-6/chapter-6-lecture1-notes" class="post-image" loading="lazy">
-    <p>
-    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
-        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
-    </p>
+    <img src="images/9-CS-IMAGES/chapter-9/data-science.webp" alt="data-science" class="post-image" loading="lazy">
+
     <nav class="toc">
       <h2>Table of Contents</h2>
       <ul>
-        <li><a href="#network">Introduction to Computer Network</a></li>
-        <li><a href="#components">Main Components of a Network</a></li>
-        <li><a href="#switch">Switch</a></li>
-        <li><a href="#router">Router</a></li>
-        <li><a href="#objectives">Objectives of Computer Networks</a></li>
-        <li><a href="#data-communication">Fundamental Concepts in Data Communication</a></li>
-        <li><a href="#networking-devices">Networking Devices</a></li>
-        <li><a href="#mcqs">MCQs</a></li>
+        <li><a href="#data-science">Introduction to Data Science</a></li>
+        <li><a href="#data-gathering">Data Gathering</a></li>
+        <li><a href="#data-definition">What is Data?</a></li>
+        <li><a href="#types-of-data">Types of Data</a></li>
+        <li><a href="#qualitative-data">Qualitative Data</a></li>
+        <li><a href="#quantitative-data">Quantitative Data</a></li>
+        <li><a href="#organizing-data">Organizing and Analyzing Data</a></li>
+        <li><a href="#importance-organizing">Importance of Organizing Data</a></li>
+        <li><a href="#ways-organize">Ways to Organize Data</a></li>
         <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#extra-insights">Extra-Insights</a></li>
       </ul>
     </nav>
 
     <div class="post-content">
-      <h2 id="network">Network or Computer Network</h2>
-      <p style="margin: 0;">A computer network is a system where computers and other devices are connected so they can share data and work together.</p>
-      <p style="margin: 0;"><strong>Example: School Network</strong></p>
-      <ul style="margin-left: 20px;">
-        <li>Computers in a school are connected.</li>
-        <li>Students can share files and use the same printer.</li>
-        <li>Teachers can send assignments to all computers at once.</li>
-        <li>This shows how devices work together in a network.</li>
+
+      <h2 id="data-science">Introduction to Data Science</h2>
+      <p><strong>Data Science:</strong> The study of collecting, analyzing, and understanding data to find useful information and make decisions.</p>
+
+      <h2 id="data-gathering">Data Gathering</h2>
+      <p>It’s the process of collecting information or facts from different sources for a specific purpose.</p>
+
+      <h2 id="data-definition">What is Data?</h2>
+      <p>Data is raw information we collect about things around us. We can use it to create useful information. Data can be numbers, words, measurements, observations, images, or sounds from different sources.</p>
+
+      <h2 id="types-of-data">Types of Data</h2>
+      <h3 id="qualitative-data">1. Qualitative Data</h3>
+      <p>Describes qualities or characteristics, not numbers.</p>
+      <p><strong>Examples:</strong> Names of students (Ali, Badar), colors of cars (red, blue).</p>
+
+      <h4>Types of Qualitative Data</h4>
+      <p><strong>Non-Numerical Data (Qualitative Data)</strong></p>
+      <p><strong>Definition:</strong> Data that is not in numbers. It describes qualities, characteristics, or categories.</p>
+      <h4>Key Features:</h4>
+      <ul>
+        <li><strong>Descriptive:</strong> Uses words, labels, or symbols to describe something. <br><em>Example:</em> Colors of cars (red, blue, green), student names (Ali, Sara).</li>
+        <li><strong>Categorical:</strong> Can be grouped into categories or classes. <br><em>Example:</em> Types of fruit (apple, banana), job titles (manager, engineer).</li>
       </ul>
 
-      <h2 id="components">Main Components of a Network</h2>
-      <ul style="margin-left: 20px;">
-        <li><strong>Nodes:</strong> Devices connected to the network, such as computers, smartphones, and printers.</li>
-        <li><strong>Links:</strong> The connections between devices. These can be wired (Ethernet cables) or wireless (Wi-Fi).</li>
-        <li><strong>Switches:</strong> Connects multiple devices in the same network to communicate efficiently.</li>
+      <h3 id="quantitative-data">2. Quantitative Data (Numbers and Measurements)</h3>
+      <p><strong>Definition:</strong> Data that tells “how much” or “how many” using numbers.</p>
+      <h4>Key Features:</h4>
+      <ul>
+        <li><strong>Numerical:</strong> It is always in numbers. <br><em>Example:</em> Test scores (85, 90), height (160 cm), weight (55 kg).</li>
+        <li><strong>Measurable:</strong> Can be measured using tools or instruments. <br><em>Example:</em> Use a ruler for length, a scale for weight, a thermometer for temperature.</li>
+        <li><strong>Countable:</strong> Can be counted one by one, especially whole numbers (discrete data). <br><em>Example:</em> Number of students in a class, number of cars in a parking lot.</li>
+        <li><strong>Arithmetical:</strong> Can be used in calculations like addition, subtraction, multiplication, or division. <br><em>Example:</em> Multiply the price of a fruit by its weight to get total cost, or calculate total school fees by multiplying monthly fee by number of months.</li>
       </ul>
 
-      <h3 id="switch">How a Switch Works</h3>
-      <ul style="margin-left: 20px;">
-        <li>A switch works at Layer 2 (Data Link Layer) of the OSI model.</li>
-        <li>It uses a hardware address called a MAC address.</li>
-        <li>When a packet arrives, the switch reads the MAC address.</li>
-        <li>It sends the packet only to the correct device, not to all devices.</li>
-      </ul>
-      <p style="margin: 0;"><strong>Example: Using a Switch in an Office</strong></p>
-      <p style="margin: 0;">Imagine you send a file to your colleague in another room.</p>
-      <ul style="margin-left: 20px;">
-        <li>The file is broken into small parts called packets.</li>
-        <li>Each packet has the address of your colleague’s computer (MAC address).</li>
-        <li>The packets go to the switch.</li>
-        <li>The switch checks the address and sends the packets only to your colleague’s computer.</li>
-        <li>The computer puts all packets back together to form the original file.</li>
+      <h2 id="organizing-data">Organizing and Analyzing Data</h2>
+      <p>Organizing data makes it easier to understand and reduces mistakes. <br><em>Example:</em> A messy list of student scores may cause errors, but a table keeps things clear.</p>
+
+      <h2 id="importance-organizing">Importance of Organizing Data</h2>
+      <ul>
+        <li><strong>Saves time:</strong> Easier to find and analyze.</li>
+        <li><strong>Improves clarity:</strong> Charts or graphs make it easier to understand data trends.</li>
+        <li><strong>Helps in decision-making:</strong> Organized data quickly shows patterns or comparisons.</li>
       </ul>
 
-      <p style="margin-top:15px;">
-  🚀 <a href="Top-10-Programming-Languages-in-2025.html" 
-     style="color: #003366; font-weight:bold; text-decoration:none;">
-     Must Read: Top 10 Programming Languages in 2025
-      </a>
-      </p>
-
-      <h3 id="router">Routers</h3>
-      <p style="margin: 0;">A router connects different networks and sends data from one network to another.</p>
-      <h2>How a Router Works</h2>
-      <p style="margin: 0;">Data travels in small parts called packets. Each packet contains the destination address. The router checks this address, chooses the best route, and forwards the packet to the right destination.</p>
-      <p style="margin: 0;"><strong>Example: Air Travel System</strong></p>
-      <ul style="margin-left: 20px;">
-        <li>Passengers are like data.</li>
-        <li>They may travel in groups (packets).</li>
-        <li>Each group has a ticket with the final destination (IP address).</li>
-        <li>They may travel through different airports (routers).</li>
-        <li>Finally, they reach the correct destination.</li>
+      <h2 id="ways-organize">Ways to Organize Data</h2>
+      <ul>
+        <li><strong>Tables:</strong> Show data neatly for easy comparison. <br><em>Example:</em> Students’ scores in subjects.</li>
+        <li><strong>Charts:</strong> Visuals to show trends and patterns. Types: bar chart, line chart, pie chart.</li>
+        <li><strong>Graphs:</strong> Show relationships between data points. Types: line graph, bar graph, scatter plot, histogram.</li>
       </ul>
 
-      <h2 id="objectives">Objectives of Computer Networks</h2>
-      <ol style="margin-left: 20px;">
-        <li><strong>Resource Sharing:</strong> 
-        Networks allow devices to share resources like printers and storage. <br>
-        <strong>Example: </strong> Many computers in an office can use one printer.</li>
-        <li><strong>Data Communication:</strong>Networks allow people to send emails, messages, and make video calls. <br>
-        <strong>Example: </strong>Employees can use Zoom or Microsoft Teams for meetings.</li>
-        <li><strong>Connectivity and Collaboration:</strong>Networks connect devices so people can work together from different places. <br><strong>Example:</strong> A team can work together on Google Drive at the same time.</li>
-      </ol>
-      <p><Strong>Note:</Strong>The Internet is the largest network in the world, connecting millions of networks globally.</p>
+      <h2 id="extra-insights">Extra Insights on Data Science</h2>
+<p>Data Science is not just about collecting data; it’s about <strong>transforming raw data into meaningful information</strong> that can guide decisions, improve processes, and solve real-world problems. Understanding the nuances of data, its types, and proper handling methods is crucial for accuracy and effectiveness.</p>
 
-      <p style="margin-top:15px;">
-  🚀 <a href="Top-10-AI-Tools-You-Should-Be-Using-in-2025.html" 
-     style="color: #003366; font-weight:bold; text-decoration:none;">
-     Must Read: Top AI tools you should be using in 2025
-      </a>
-      </p>
+<h3>1. Raw Data vs. Information</h3>
+<ul>
+  <li><strong>Raw Data:</strong> Unprocessed facts and figures collected from observations, surveys, sensors, or digital platforms. <br><em>Example:</em> Student scores, website clicks, temperature readings.</li>
+  <li><strong>Information:</strong> Processed, organized, or analyzed data that provides insights. <br><em>Example:</em> Average class score, website traffic trends, daily temperature patterns.</li>
+</ul>
 
-      <h2 id="data-communication">Fundamental Concepts in Data Communication</h2>
-      <p style="margin: 0;">Data communication means sending data from one device to another. <br>
-        <strong> Main components: </strong></p>
-      <ul style="margin-left: 20px;">
-        <li><strong>Sender:</strong>The device that sends data (Example: a computer sending an email).</li>
-        <li><strong>Receiver:</strong> The device that receives data (example: a smartphone receiving the email)</li>
-        <li><strong>Message:</strong> Actual data being sent (Example: sending a text message, any video 
-          or any photo).</li>
-        <li><strong>Protocol:</strong> A protocol is a set of rules that devices follow to communicate with each other on a network. (Example: HTTP is a protocol used to load websites on the Internet.)</li>
-        <li><strong>Medium:</strong> Path through which data travels is called medium or
-          communication medium or communication channel. It can be wired or wireless.</li>
-      </ul>
+<h3>2. Real-Life Applications of Data Types</h3>
+<ul>
+  <li><strong>Qualitative Data:</strong> Used to understand characteristics, opinions, or categories. <br><em>Example:</em> Customer reviews, product colors, survey responses.</li>
+  <li><strong>Quantitative Data:</strong> Used to measure, count, and analyze trends numerically. <br><em>Example:</em> Sales figures, revenue growth, student grades, population statistics.</li>
+</ul>
 
-      <h2 id="networking-devices">Networking Devices</h2>
-      <p style="margin: 0;">
-        Network devices are hardware devices that help connect computers and manage the flow of data in a network. They make sure devices can communicate with each other properly.
-      </p>
-      <ul style="margin-left: 20px;">
-        <li><strong>Switch: </strong>Definition is already written above.</li>
-        <li><strong>Router: </strong>Definition is already written above.</li>
-        <li><strong> Hub:</strong> Connects multiple devices but sends data to all devices.</li>
-        <li><strong>Access Point (AP):</strong>An Access Point connects wireless devices to a wired network.
-        It allows smartphones, laptops, and tablets to connect to the Internet wirelessly.</li>
-      </ul>
-      <p style="margin: 0;"><strong>How an Access Point Works:</strong></p>
-      <ul style="margin-left: 20px;">
-        <li>It receives data from the wired network.</li>
-        <li>Sends data wirelessly to devices like laptops, smartphones, tablets.</li>
-        <li>Receives wireless data and sends it back to the wired network.</li>
-      </ul>
+<h3>3. Data Collection Methods</h3>
+<p>Gathering accurate and relevant data is a key step in Data Science. Common methods include:</p>
+<ul>
+  <li><strong>Surveys and Questionnaires:</strong> Collect opinions, ratings, or feedback from individuals.</li>
+  <li><strong>Observations:</strong> Recording events, behaviors, or phenomena directly.</li>
+  <li><strong>Interviews:</strong> In-depth conversations to gather detailed qualitative information.</li>
+  <li><strong>Digital Sources:</strong> Website analytics, social media data, IoT sensors, transaction records.</li>
+  <li><strong>Secondary Sources:</strong> Published reports, research papers, government databases.</li>
+</ul>
 
-      <h2>Related Posts</h2>
-      <ul style="margin-left: 20px;">
-        <li><a href="Top-10-Programming-Languages-in-2025.html">Top 10 Programming Languages in 2025</a></li>
-        <li><a href="how-ai-will-replace-and-create-jobs-by-2030.html">How AI Will Replace and Create Jobs by 2030</a></li>
-        <li><a href="Best-Online-Courses-for-High-Paying-Jobs.html">Best Online Courses for High-Paying Jobs in 2025</a></li>
-      </ul>
-      <br>
-      <!-- <a href="javascript:void(0)" style="pointer-events: none; color: gray; text-decoration: underline;">
-      Next Lecture # 2 [Not Uploaded Yet] -->
-      </a>
-      <a href="9-class-chap-6-lecture-2.html">Next Lecture # 2</a>
-      <!-- MCQs Section -->
-      <h2 id="mcqs">15 Multiple Choice Questions (MCQs) on Computer Networks</h2>
-      <section class="mcq-section">
-        <div class="mcq-item">
-          <div class="mcq-question">1. What is a computer network?</div>
-          <div class="mcq-options">
-            a. A single computer<br>
-            b. A system where computers and devices are connected<br>
-            c. A type of software<br>
-            d. A printer
-          </div>
-          <div class="mcq-answer">Answer: b. A system where computers and devices are connected</div>
-        </div>
+<h3>4. Importance of Organizing and Analyzing Data</h3>
+<p>Organizing data is not optional, it is essential. Well-structured data allows:</p>
+<ul>
+  <li><strong>Faster Analysis:</strong> Quickly identify trends, patterns, and anomalies.</li>
+  <li><strong>Better Decision-Making:</strong> Make informed choices based on reliable data.</li>
+  <li><strong>Reduced Errors:</strong> Minimize mistakes caused by messy or inconsistent data.</li>
+  <li><strong>Enhanced Communication:</strong> Visualizations like charts and graphs make findings easy to understand.</li>
+</ul>
 
-        <div class="mcq-item">
-          <div class="mcq-question">2. Which of these is a networking node?</div>
-          <div class="mcq-options">
-            a. Ethernet cable<br>
-            b. Computer<br>
-            c. Router<br>
-            d. Switch
-          </div>
-          <div class="mcq-answer">Answer: b. Computer</div>
-        </div>
+<h3>5. Tools Commonly Used in Data Science</h3>
+<p>Data Science involves a mix of programming, statistical, and visualization tools. Key tools include:</p>
+<ul>
+  <li><strong>Programming Languages:</strong> Python, R, SQL</li>
+  <li><strong>Data Visualization Tools:</strong> Tableau, Power BI, Matplotlib, Seaborn</li>
+  <li><strong>Spreadsheet Software:</strong> Microsoft Excel, Google Sheets</li>
+  <li><strong>Statistical Tools:</strong> SPSS, SAS</li>
+  <li><strong>Big Data Platforms:</strong> Hadoop, Spark</li>
+  <li><strong>Data Storage & Cloud:</strong> SQL databases, Google Cloud, AWS, Azure</li>
+</ul>
 
-        <div class="mcq-item">
-          <div class="mcq-question">3. What is the function of a switch?</div>
-          <div class="mcq-options">
-            a. Connects multiple networks<br>
-            b. Connects multiple devices within a network<br>
-            c. Provides wireless connection<br>
-            d. Sends emails
-          </div>
-          <div class="mcq-answer">Answer: b. Connects multiple devices within a network</div>
-        </div>
+<h3>6. Best Practices in Handling Data</h3>
+<ul>
+  <li>Always verify the source of your data for accuracy and reliability.</li>
+  <li>Clean and preprocess data before analysis (remove duplicates, handle missing values).</li>
+  <li>Use visualizations to make complex data understandable.</li>
+  <li>Ensure privacy and security when handling sensitive information.</li>
+  <li>Document data sources, assumptions, and methods for reproducibility.</li>
+</ul>
 
-        <div class="mcq-item">
-          <div class="mcq-question">4. Which address does a switch use to send packets?</div>
-          <div class="mcq-options">
-            a. IP address<br>
-            b. MAC address<br>
-            c. URL<br>
-            d. Hostname
-          </div>
-          <div class="mcq-answer">Answer: b. MAC address</div>
-        </div>
+<h3>7. Key Takeaways</h3>
+<ul>
+  <li>Data Science transforms raw data into actionable insights.</li>
+  <li>Understanding data types is critical for correct analysis.</li>
+  <li>Organizing and visualizing data improves comprehension and decision-making.</li>
+  <li>Using proper tools and techniques ensures efficiency and accuracy.</li>
+</ul>
 
-        <div class="mcq-item">
-          <div class="mcq-question">5. What is the role of a router?</div>
-          <div class="mcq-options">
-            a. Connects different networks<br>
-            b. Prints documents<br>
-            c. Stores files<br>
-            d. Runs applications
-          </div>
-          <div class="mcq-answer">Answer: a. Connects different networks</div>
-        </div>
-
-        <div class="mcq-item">
-          <div class="mcq-question">6. Which of the following is a communication medium?</div>
-          <div class="mcq-options">
-            a. Ethernet cable<br>
-            b. MAC address<br>
-            c. Router<br>
-            d. Switch
-          </div>
-          <div class="mcq-answer">Answer: a. Ethernet cable</div>
-        </div>
-
-        <div class="mcq-item">
-          <div class="mcq-question">7. What is an Access Point used for?</div>
-          <div class="mcq-options">
-            a. Connects wired devices<br>
-            b. Connects wireless devices to a wired network<br>
-            c. Connects different networks<br>
-            d. Stores files
-          </div>
-          <div class="mcq-answer">Answer: b. Connects wireless devices to a wired network</div>
-        </div>
-
-        <div class="mcq-item">
-          <div class="mcq-question">8. Which of the following is an example of resource sharing?</div>
-          <div class="mcq-options">
-            a. Printing documents on a shared printer<br>
-            b. Using Google Docs offline<br>
-            c. Watching YouTube<br>
-            d. Installing software
-          </div>
-          <div class="mcq-answer">Answer: a. Printing documents on a shared printer</div>
-        </div>
-
-        <div class="mcq-item">
-          <div class="mcq-question">9. Which device sends data in packets across networks?</div>
-          <div class="mcq-options">
-            a. Switch<br>
-            b. Router<br>
-            c. Access Point<br>
-            d. Node
-          </div>
-          <div class="mcq-answer">Answer: b. Router</div>
-        </div>
-
-        <div class="mcq-item">
-          <div class="mcq-question">10. What is a protocol?</div>
-          <div class="mcq-options">
-            a. Device<br>
-            b. Rules for data communication<br>
-            c. Network medium<br>
-            d. Network node
-          </div>
-          <div class="mcq-answer">Answer: b. Rules for data communication</div>
-        </div>
-
-        <div class="mcq-item">
-          <div class="mcq-question">11. Which is the largest network in the world?</div>
-          <div class="mcq-options">
-            a. LAN<br>
-            b. MAN<br>
-            c. Internet<br>
-            d. PAN
-          </div>
-          <div class="mcq-answer">Answer: c. Internet</div>
-        </div>
-
-        <div class="mcq-item">
-          <div class="mcq-question">12. What does a message represent in data communication?</div>
-          <div class="mcq-options">
-            a. Sender<br>
-            b. Receiver<br>
-            c. Actual data being sent<br>
-            d. Router
-          </div>
-          <div class="mcq-answer">Answer: c. Actual data being sent</div>
-        </div>
-
-        <div class="mcq-item">
-          <div class="mcq-question">13. What is a node in a network?</div>
-          <div class="mcq-options">
-            a. A wired connection<br>
-            b. Any device connected to the network<br>
-            c. A type of router<br>
-            d. A protocol
-          </div>
-          <div class="mcq-answer">Answer: b. Any device connected to the network</div>
-        </div>
-
-        <div class="mcq-item">
-          <div class="mcq-question">14. Which of these is a wireless medium?</div>
-          <div class="mcq-options">
-            a. Ethernet cable<br>
-            b. Wi-Fi<br>
-            c. Fiber optic<br>
-            d. Coaxial cable
-          </div>
-          <div class="mcq-answer">Answer: b. Wi-Fi</div>
-        </div>
-
-        <div class="mcq-item">
-          <div class="mcq-question">15. How do networks help collaboration?</div>
-          <div class="mcq-options">
-            a. Connect devices for remote work<br>
-            b. Share software<br>
-            c. Increase storage<br>
-            d. Reduce hardware
-          </div>
-          <div class="mcq-answer">Answer: a. Connect devices for remote work</div>
-        </div>
-      </section>
-
-      <!-- FAQs Section -->
       <h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
       <section class="faq-section">
         <div class="faq-item">
-          <button class="faq-question">1. What is a computer network?</button>
-          <div class="faq-answer"><p>A computer network is a system where multiple devices are connected to share data and resources.</p></div>
+          <button class="faq-question">1. What is Data Science?</button>
+          <div class="faq-answer"><p>Data Science is the study of collecting, analyzing, and understanding data to find useful information and make decisions.</p></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-question">2. What are the main components of a network?</button>
-          <div class="faq-answer"><p>Nodes, links, switches, routers, and access points are the main components of a network.</p></div>
+          <button class="faq-question">2. What is data gathering?</button>
+          <div class="faq-answer"><p>Data gathering is the process of collecting information or facts from different sources for a specific purpose.</p></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-question">3. What is the role of a switch?</button>
-          <div class="faq-answer"><p>A switch connects multiple devices in a network and forwards data to the correct device using MAC addresses.</p></div>
+          <button class="faq-question">3. What is the difference between qualitative and quantitative data?</button>
+          <div class="faq-answer"><p>Qualitative data describes qualities or characteristics using words or categories, while quantitative data uses numbers to measure or count.</p></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-question">4. What is a router?</button>
-          <div class="faq-answer"><p>A router connects different networks and directs data packets to the appropriate destination network.</p></div>
+          <button class="faq-question">4. Why is organizing data important?</button>
+          <div class="faq-answer"><p>Organizing data saves time, improves clarity, reduces mistakes, and helps in decision-making by showing patterns and trends clearly.</p></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-question">5. What is an Access Point?</button>
-          <div class="faq-answer"><p>An Access Point connects wireless devices to a wired network and enables Wi-Fi connectivity.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">6. What is the purpose of data communication?</button>
-          <div class="faq-answer"><p>Data communication allows devices to send and receive information efficiently over a network.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">7. What is a protocol?</button>
-          <div class="faq-answer"><p>A protocol is a set of rules that govern how data is transmitted and received across a network.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">8. What is a communication medium?</button>
-          <div class="faq-answer"><p>The medium is the physical or wireless path through which data travels, such as Ethernet cables or Wi-Fi.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">9. What are the objectives of a computer network?</button>
-          <div class="faq-answer"><p>The main objectives are resource sharing, data communication, and connectivity/collaboration.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">10. What is the largest network in the world?</button>
-          <div class="faq-answer"><p>The Internet is the largest network, connecting millions of smaller networks globally.</p></div>
+          <button class="faq-question">5. What are common ways to organize data?</button>
+          <div class="faq-answer"><p>Common ways include using tables, charts (bar, line, pie), and graphs (line graph, bar graph, scatter plot, histogram).</p></div>
         </div>
       </section>
 
@@ -458,14 +227,20 @@
 <script>
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
 
-  const faqButtons = document.querySelectorAll('.faq-question');
-  faqButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('active');
-      const answer = btn.nextElementSibling;
-      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+  const faqItems = document.querySelectorAll('.faq-question');
+  faqItems.forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('active');
+      const answer = button.nextElementSibling;
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+      } else {
+        answer.style.display = "block";
+      }
     });
   });
 </script>

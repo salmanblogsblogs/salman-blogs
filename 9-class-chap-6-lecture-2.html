@@ -1,594 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Learn about Network Topologies, Transmission Modes, and the OSI Networking Model with examples, MCQs, and FAQs.">
-<meta name="keywords" content="Network Topology, Bus Topology, Star Topology, Ring Topology, Mesh Topology, Transmission Modes, OSI Model">
-<meta name="author" content="Salman Ahmad">
- <title>Network Topologies, Transmission Modes, and OSI Model | Salman Blogs</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about data collection methods and tools, types of data, data visualization, data pre-processing, analysis, cloud storage, backups, and remote access." />
+  <meta name="keywords" content="Data Collection, Surveys, Questionnaires, Interviews, Observations, Structured Data, Unstructured Data, Data Visualization, Data Pre-Processing, Cloud Storage, Data Backup" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Data Collection: Methods and Tools | Salman Blogs</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="about.css">
-  
-  <meta property="og:title" content="Network Topologies, Transmission Modes, and OSI Model | Class 9 Computer Science" />
-<meta property="og:description" content="Learn about Network Topologies (Bus, Star, Ring, Mesh), Transmission Modes (Simplex, Half-Duplex, Full-Duplex), and the OSI Model with clear explanations and examples." />
-<meta property="og:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-6/chapter-6-lecture2-notes.webp" />
-<meta property="og:url" content="https://salmanblogs.com/9-class-chap-6-lecture-2.html" />
-<meta property="og:type" content="article" />
+  <meta property="og:title" content="Data Collection: Methods and Tools" />
+  <meta property="og:description" content="Complete notes on data collection methods, data types, visualization, preprocessing, cloud storage, and backups." />
+  <meta property="og:image" content="https://salmanblogs.com/images/data-collection.png" />
+  <meta property="og:url" content="https://salmanblogs.com/data-collection-methods.html" />
+  <meta property="og:type" content="article" />
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Network Topologies, Transmission Modes, and OSI Model | Class 9 Computer Science" />
-<meta name="twitter:description" content="Complete notes on Network Topologies, Transmission Modes, and the OSI Model for Class 9 Computer Science students." />
-<meta name="twitter:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-6/chapter-6-lecture2-notes.webp" />
-
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Data Collection: Methods and Tools" />
+  <meta name="twitter:description" content="Simple and exam-ready notes on data collection, visualization, preprocessing, and cloud storage." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/data-collection.png" />
   <style>
     html { scroll-behavior: smooth; }
     .toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
-    .toc h2 { margin-top: 0; }
-    .toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
+    .toc li { list-style: none; }
+    .toc a { display: block; padding: 5px 0; color: #333; text-decoration: none; }
     .toc a:hover { color: darkblue; }
-    .toc li {list-style-type: none;}
-    .post-content h2,
-    .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
-    .post-content h2, 
-.post-content h3 {
-  scroll-margin-top: 0; /* No extra offset */
-}
-    .mcq-item {
-      background: #f7f7f7;
-      border-left: 4px solid #0077cc; /* same as h2 border color */
-      padding: 15px;
-      margin: 10px 0;
-    }
-
-    .mcq-question {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    .mcq-options {
-      margin-left: 20px;
-      margin-bottom: 10px;
-    }
-
-    .mcq-answer {
-      background: #dbeafe; /* soft blue similar to h2 highlight */
-      border-left: 4px solid #0077cc;
-      padding: 10px;
-      margin-left: 20px;
-      font-weight: bold;
-    }
+    .post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px; }
   </style>
 </head>
 
 <body>
-
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v24.0&appId=APP_ID"></script>
 <header class="navbar">
-<div class="container">
-<div class="logo">
-<span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
-</div>
-
-<div class="nav-toggle" id="navToggle">&#9776;</div>
-
-<ul class="nav-links" id="navLinks">
-<li><a href="index.html">Home</a></li>
-<li><a href="categories.html">Categories</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="privacy-policy.html">Privacy Policy</a></li>
-<li><a href="terms.html">Terms</a></li>
-</ul>
-</div>
+  <div class="container">
+    <div class="logo">
+      <span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+  </div>
 </header>
 
 <main class="post-container">
+  <article class="blog-post">
+    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+    <img src="images/9-CS-IMAGES/chapter-9/data-collection.webp" alt="data-collection" class="post-image" loading="lazy">
 
-<article class="blog-post">
-
-<h1 class="post-title">Network Topologies, Transmission Modes, and OSI Model</h1>
-
-<div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
-<img src="images/9-CS-IMAGES/chapter-6/chapter-6-lecture2-notes.webp" alt="chapter-6/chapter-6-lecture2-notes" class="post-image" loading="lazy">
- <p>
-    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
-        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
-  </p>
-
-<nav class="toc">
-
-<h2>Table of Contents</h2>
-
-<ul>
-<li><a href="#topology">Network Topologies</a></li>
-<li><a href="#bus">Bus Topology</a></li>
-<li><a href="#star">Star Topology</a></li>
-<li><a href="#ring">Ring Topology</a></li>
-<li><a href="#mesh">Mesh Topology</a></li>
-<li><a href="#transmission">Transmission Modes</a></li>
-<li><a href="#osi">OSI Networking Model</a></li>
-<li><a href="#mcqs">MCQs</a></li>
-<li><a href="#faqs">FAQs</a></li>
-</ul>
-
-</nav>
-
-<div class="post-content">
-<h2 id="topology">Network Topologies</h2>
-<p style="margin: 0;">
-Network topology means the layout or arrangement of devices in a computer network.
-Each device in a network is called a <strong>node</strong>.
-</p>
-
-<p><strong>Examples:</strong> Bus, Star, Ring, and Mesh topology.</p>
-
-<h2 id="bus">Bus Topology</h2>
-<p style="margin: 0;">In a Bus Topology, all devices are connected to one main cable called a bus or central cable.</p>
-<strong>Note: Just not to get confuse. Remember central cable also called backbone cable or main cable as well.
-  You don't need to note down this line. It is just for info. So, you may not get confuse.
-</strong>
-<strong>Examples</strong>
-<ul style="margin-left: 15px;">
-<li>Small office networks using a single backbone cable.</li>
-<li>Networks in computer labs.</li>
-<li>Simple classroom computer setups.</li>
-<strong>Diagram:</strong>
-<img src="images/9-CS-IMAGES/chapter-6/bus.PNG" alt="bus-topology" class="post-image" loading="lazy"
-style="height: 220px;">
-</ul>
-<strong>Advantages</strong>
-<ul style="margin-left: 15px;">
-<li>Low cost – requires less cable than other topologies.</li>
-<li>Good for small or temporary networks.</li>
-</ul>
-<strong>Disadvantages</strong>
-<ul style="margin-left: 15px;">
-<li>Backbone failure stops the entire network.</li>
-<li>Network performance decreases when many devices are connected.</li>
-</ul>
-
-<h2 id="star">Star Topology</h2>
-<p>In star topology all devices are connected to a central device such as a <strong>hub or switch</strong>.</p>
-<strong>Examples</strong>
-<ul style="margin-left: 15px;">
-<li>Home Wi-Fi networks connected to a router</li>
-<li>School computer labs connected through a switch</li>
-<li>Office networks using a central switch</li>
-</ul>
-<img src="images/9-CS-IMAGES/chapter-6/star.PNG" alt="star-topology" class="post-image" loading="lazy"
-style="height: 320px;">
-<strong>Advantages</strong>
-<ul style="margin-left: 15px;">
-<li>Easy to install and manage.</li>
-<li>Simple troubleshooting because each device has its own cable.</li>
-<li>Failure of one device does not affect others.</li>
-</ul>
-<strong>Disadvantages</strong>
-<ul style="margin-left: 15px;">
-<li>Central device failure stops the entire network.</li>
-<li>Requires more cable than bus topology.</li>
-<li>Higher cost because of the hub/switch.</li>
-</ul>
-
- <p style="margin-top:15px;">
-  🚀 <a href="Top-10-Programming-Languages-in-2025.html" 
-     style="color: #003366; font-weight:bold; text-decoration:none;">
-     Must Read: Top 10 Programming Languages in 2025
-      </a>
-  </p>
-
-<h2 id="ring">Ring Topology</h2>
-<p>In a Ring Topology, devices are connected in a circular path. Data travels in one direction, passing through each device until it reaches its destination.</p>
-<strong>Examples</strong>
-<ul style="margin-left: 15px;">
-<li>Token Ring networks used in early networking systems</li>
-<li>Closed loop industrial networks</li>
-</ul>
-<img src="images/9-CS-IMAGES/chapter-6/ring.PNG" alt="ring-topology" class="post-image" loading="lazy"
-style="height: 400px;">
-<strong>Advantages</strong>
-<ul style="margin-left: 15px;">
-<li>Less data collision compared to bus topology.</li>
-<li>Equal access for all devices.</li>
-</ul>
-<strong>Disadvantages</strong>
-<ul style="margin-left: 15px;">
-<li>Failure of one device or cable can break the network.</li>
-<li>Adding or removing devices disrupts the network.</li>
-</ul>
-
-<h2 id="mesh">Mesh Topology</h2>
-<p>In a Mesh Topology, each device is connected to many or all other devices in the network. This makes the network very reliable because data can travel through multiple paths.</p>
-<strong>Examples</strong>
-<ul style="margin-left: 15px;">
-<li>Wireless mesh networks in smart cities</li>
-<li>Military communication networks</li>
-<li>Internet backbone networks</li>
-</ul>
-<img src="images/9-CS-IMAGES/chapter-6/mesh.PNG" alt="mesh-topology" class="post-image" loading="lazy"
-style="height: 320px;">
-<strong>Advantages</strong>
-<ul style="margin-left: 15px;">
-<li>Very reliable and fault tolerant.</li>
-<li>Failure of one link does not affect the network.</li>
-<li>Multiple paths for data transmission.</li>
-</ul>
-<strong>Disadvantages</strong>
-<ul style="margin-left: 15px;">
-<li>Very expensive due to many cables and ports.</li>
-<li>Complex installation and maintenance.</li>
-<li>Requires a lot of hardware and space.</li>
-</ul>
-
-<h2 id="transmission">Transmission Modes</h2>
-<p style="margin: 0;">Transmission modes describe how data is transmitted between devices in a network.</p>
-<p style="margin: 0;">There are <strong>3</strong> main types:</p>
-<ol style="margin-left: 20px;">
-  <li>Simplex</li>
-  <li>Half Duplex</li>
-  <li>Full Duplex</li>
-</ol>
-<h3>Simplex</h3>
-<p style="margin: 0;">In Simplex communication, data flows in only one direction. One device sends data and the other only receives it.</p>
-<strong>Examples:</strong>
-<ul style="margin-left: 15px;">
-  <li>Keyboard sending data to a computer.</li>
-  <li>Television broadcasting signals.</li>
-  <li>Computer to monitor display signals.</li>
-</ul>
-<strong>Diagram:</strong>
-<img src="images/9-CS-IMAGES/chapter-6/simplex-mode.webp" alt="simplex-mode" class="post-image" loading="lazy"
-style="height: 320px;">
-<h3>Half-Duplex</h3>
-<p style="margin: 0;">In Half-Duplex communication, data can move in both directions, but not at the same time.</p>
-<strong>Examples:</strong>
-<ul style="margin-left: 15px;">
-  <li>Walkie-talkies.</li>
-  <li>Police communication radios.</li>
-</ul>
-<strong>Diagram:</strong>
-<img src="images/9-CS-IMAGES/chapter-6/half-duplex-mode.webp" alt="Half-Duplex-mode" class="post-image" loading="lazy"
-style="height: 320px;">
-<h3>Full-Duplex</h3>
-<p style="margin: 0;">In Full-Duplex communication, both devices can send and receive data at the same time.</p>
-<strong>Examples:</strong>
-<ul style="margin-left: 15px;">
-  <li>Telephone calls.</li>
-  <li>Video calls.</li>
-  <li>Online gaming communication.</li>
-</ul>
-<strong>Diagram:</strong>
-<img src="images/9-CS-IMAGES/chapter-6/full-duplex-mode.webp" alt="full-duplex-mode" class="post-image" loading="lazy"
-style="height: 320px;">
-
- <p style="margin-top:15px;">
-  🚀 <a href="Top-10-Programming-Languages-in-2025.html" 
-     style="color: #003366; font-weight:bold; text-decoration:none;">
-     Must Read: Top 10 Programming Languages in 2025
-      </a>
-  </p>
-
-<h2 id="osi">OSI Networking Model</h2>
-<p>
-  The OSI (Open Systems Interconnection) Model explains how data travels through a network. It divides network communication into<strong> 7 layers and each layer has a specific job.</strong>.
-</p>
-<strong>Diagram:</strong>
-<img src="images/9-CS-IMAGES/chapter-6/osi-model.jpg" alt="osi-model" class="post-image" loading="lazy">
-<h3>1. Physical Layer</h3>
-<p style="margin: 0;">
-  The Physical Layer is responsible for the actual transmission of data between devices. It sends data in the form of electrical signals, light signals, or wireless signals.
-</p>
-<strong>Examples:</strong>
-<ul style="margin-left: 20px;">
-  <li>Ethernet cables.</li>
-  <li>Fiber optic cables.</li>
-  <li>Wi-Fi signals (wireless communication).</li>
-  <li>Bluetooth signals.</li>
-  <li>Hubs and repeaters.</li>
-</ul>
-
-<h3>2. Data Link Layer</h3>
-<p style="margin: 0;">
-  The Data Link Layer manages communication between devices on the same network. It checks for errors in data and ensures data moves correctly between devices.
-</p>
-<strong>Examples:</strong>
-<ul style="margin-left: 20px;">
-  <li>Switches.</li>
-  <li>MAC(Media Access Control) addresses.</li>
-  <li>Ethernet protocol.</li>
-</ul>
-
-<h3>3. Network Layer</h3>
-<p style="margin: 0;">
-The Network Layer decides the best path for data to travel between different networks.</p>
-<strong>Examples:</strong>
-<ul style="margin-left: 20px;">
-  <li>Routers.</li>
-  <li>Internet Protocol (IP).</li>
-  <li>Packet routing.</li>
-  <li>IP addressing.</li>
-</ul>
-
-<h3>4. Transport Layer</h3>
-<p style="margin: 0;">
-  The Transport Layer ensures that data is sent completely and in the correct order. It also controls data flow and error checking.
-  </p>
-<strong>Examples:</strong>
-<ul style="margin-left: 20px;">
-  <li>UDP (User Datagram Protocol)</li>
-  <li>TCP (Transmission Control Protocol)</li>
-</ul>
-
-<h3>5. Session Layer</h3>
-<p style="margin: 0;">
-  The Session Layer manages the connection (session) between two devices or applications. It starts, maintains, and ends communication sessions.
-  </p>
-<strong>Examples:</strong>
-<ul style="margin-left: 20px;">
-  <li>Video conferencing sessions.</li>
-  <li>Online gaming sessions.</li>
-  <li>Remote desktop connections.</li>
-  <li>Login sessions.</li>
-</ul>
-
-<h3>6. Presentation Layer</h3>
-<p style="margin: 0;">
-  The Presentation Layer converts data into a format that the receiving system can understand. It can also encrypt, decrypt, or compress data.
-  </p>
-<strong>Examples:</strong>
-<ul style="margin-left: 20px;">
-  <li>Image formats: Converting images into formats like JPEG or PNG so devices can display them.</li>
-  <li>Video formats: Preparing video data in formats like MP4 so media players can play it.</li>
-</ul>
-
-<h3>7. Application Layer</h3>
-<p style="margin: 0;">
-  The Application Layer is the top layer of the OSI model and the closest to the user. It provides network services directly to applications, allowing users to access network resources such as websites, email, and file transfers.
-  </p>
-<strong>Examples:</strong>
-<ul style="margin-left: 20px;">
-  <li>Web browsers: Accessing websites using browsers like Chrome or Firefox.</li>
-  <li>Email services: Sending and receiving emails through applications like Gmail or Outlook.</li>
-  <li>File transfer services: Uploading or downloading files using FTP.</li>
-  <li>Messaging and video call apps: Apps like WhatsApp, Zoom, or Skype that use the network to communicate.</li>
-</ul>
-
-<h2>Related Posts</h2>
-      <ul style="margin-left: 20px;">
-        <li><a href="Top-10-Programming-Languages-in-2025.html">Top 10 Programming Languages in 2025</a></li>
-        <li><a href="how-ai-will-replace-and-create-jobs-by-2030.html">How AI Will Replace and Create Jobs by 2030</a></li>
-        <li><a href="Best-Online-Courses-for-High-Paying-Jobs.html">Best Online Courses for High-Paying Jobs in 2025</a></li>
+    <nav class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#methods">Methods of Data Collection</a></li>
+        <li><a href="#types">Types of Data</a></li>
+        <li><a href="#visualization">Data Visualization</a></li>
+        <li><a href="#preprocessing">Data Pre-Processing & Analysis</a></li>
+        <li><a href="#cloud">Cloud Storage & Backups</a></li>
+        <li><a href="#faqs">FAQs</a></li>
       </ul>
-      <br>
-      <!-- <a href="javascript:void(0)" style="pointer-events: none; color: gray; text-decoration: underline;">
-      Next Lecture # 2 [Not Uploaded Yet] -->
-      </a>
-  <a href="9-class-chap-6-lecture-1.html">Previous Lecture # 1</a>
+    </nav>
 
-<h2 id="mcqs">15 Multiple Choice Questions (MCQs) on Network Topologies and OSI Model</h2>
-<section class="mcq-section">
+    <div class="post-content">
 
-<div class="mcq-item">
-  <div class="mcq-question">1. What is a network topology?</div>
-  <div class="mcq-options">
-    a. Type of software<br>
-    b. Layout of devices in a network<br>
-    c. Internet speed<br>
-    d. Data packet size
-  </div>
-  <div class="mcq-answer">Answer: b. Layout of devices in a network</div>
-</div>
+      <h2 id="intro">Introduction</h2>
+      <p>Data collection means gathering information to answer questions, make decisions, or understand something better.</p>
 
-<div class="mcq-item">
-  <div class="mcq-question">2. Which topology uses a single central cable?</div>
-  <div class="mcq-options">
-    a. Star<br>
-    b. Ring<br>
-    c. Bus<br>
-    d. Mesh
-  </div>
-  <div class="mcq-answer">Answer: c. Bus</div>
-</div>
+      <h2 id="methods">Methods of Data Collection</h2>
 
-<div class="mcq-item">
-  <div class="mcq-question">3. In which topology does each device connect to a central hub?</div>
-  <div class="mcq-options">
-    a. Ring<br>
-    b. Star<br>
-    c. Bus<br>
-    d. Mesh
-  </div>
-  <div class="mcq-answer">Answer: b. Star</div>
-</div>
+      <h3>Surveys</h3>
+      <p>Surveys collect information by asking people questions.</p>
+      <p><strong>Example:</strong> Asking classmates about their favourite ice cream flavour.</p>
 
-<div class="mcq-item">
-  <div class="mcq-question">4. Which topology connects devices in a circular path?</div>
-  <div class="mcq-options">
-    a. Bus<br>
-    b. Ring<br>
-    c. Star<br>
-    d. Mesh
-  </div>
-  <div class="mcq-answer">Answer: b. Ring</div>
-</div>
+      <h4>Good Survey Practices</h4>
+      <ul>
+        <li>Ask clear and simple questions</li>
+        <li>Keep the survey short</li>
+        <li>Use multiple-choice or rating questions</li>
+        <li>Keep answers anonymous</li>
+        <li>Test the survey first</li>
+        <li>Analyze results carefully</li>
+      </ul>
 
-<div class="mcq-item">
-  <div class="mcq-question">5. Which topology is most reliable and fault-tolerant?</div>
-  <div class="mcq-options">
-    a. Bus<br>
-    b. Star<br>
-    c. Ring<br>
-    d. Mesh
-  </div>
-  <div class="mcq-answer">Answer: d. Mesh</div>
-</div>
+      <h3>Questionnaires</h3>
+      <p>Written forms with a set of questions.</p>
+      <p><strong>Example:</strong> A school questionnaire asking students about activities.</p>
 
-<div class="mcq-item">
-  <div class="mcq-question">6. Which transmission mode allows data in only one direction?</div>
-  <div class="mcq-options">
-    a. Simplex<br>
-    b. Half-Duplex<br>
-    c. Full-Duplex<br>
-    d. Multi-Duplex
-  </div>
-  <div class="mcq-answer">Answer: a. Simplex</div>
-</div>
+      <h3>Interviews</h3>
+      <p>One-on-one discussions for detailed information.</p>
+      <p><strong>Example:</strong> Interviewing a teacher about their experience.</p>
+      <h3>Observations</h3>
+      <p>Watching real situations to understand behavior.</p>
 
-<div class="mcq-item">
-  <div class="mcq-question">7. Walkie-talkies use which type of transmission?</div>
-  <div class="mcq-options">
-    a. Simplex<br>
-    b. Half-Duplex<br>
-    c. Full-Duplex<br>
-    d. Parallel
-  </div>
-  <div class="mcq-answer">Answer: b. Half-Duplex</div>
-</div>
+      <h3>Online Data Sources</h3>
+      <p>Websites, databases, and digital tools.</p>
 
-<div class="mcq-item">
-  <div class="mcq-question">8. Telephone calls are an example of which transmission mode?</div>
-  <div class="mcq-options">
-    a. Simplex<br>
-    b. Half-Duplex<br>
-    c. Full-Duplex<br>
-    d. Parallel
-  </div>
-  <div class="mcq-answer">Answer: c. Full-Duplex</div>
-</div>
+      <h3>Data Extraction</h3>
+      <p>Data extraction means selecting and saving only the important information from a large amount of data.</p>
 
-<div class="mcq-item">
-  <div class="mcq-question">9. How many layers are in the OSI model?</div>
-  <div class="mcq-options">
-    a. 5<br>
-    b. 6<br>
-    c. 7<br>
-    d. 8
-  </div>
-  <div class="mcq-answer">Answer: c. 7</div>
-</div>
+      <h2 id="types">Types of Data (Based on Storage)</h2>
 
-<div class="mcq-item">
-  <div class="mcq-question">10. Which OSI layer decides the path for data between networks?</div>
-  <div class="mcq-options">
-    a. Physical Layer<br>
-    b. Network Layer<br>
-    c. Transport Layer<br>
-    d. Data Link Layer
-  </div>
-  <div class="mcq-answer">Answer: b. Network Layer</div>
-</div>
+      <h3>Structured Data</h3>
+      <p>Structured data is well-organized and easy to search. It is stored in rows and columns, like spreadsheets or databases.</p>
+      <p><strong>Example:</strong>A table with student ID, name, class, date of birth, and fees.</p>
 
-<div class="mcq-item">
-  <div class="mcq-question">11. Which layer ensures complete and correct data delivery?</div>
-  <div class="mcq-options">
-    a. Transport Layer<br>
-    b. Session Layer<br>
-    c. Presentation Layer<br>
-    d. Application Layer
-  </div>
-  <div class="mcq-answer">Answer: a. Transport Layer</div>
-</div>
+      <h3>Unstructured Data</h3>
+      <p>Unstructured data has no fixed format. This data is harder to organize but still very useful.</p>
+      <p><strong>Example:</strong>Emails, social media posts, images, videos, and text messages.</p>
+      <h2 id="visualization">Data Visualization</h2>
+      <p>Data visualization means showing data using pictures like charts and graphs. It helps us understand data easily by showing patterns and trends.</p>
 
-<div class="mcq-item">
-  <div class="mcq-question">12. Which layer formats and encrypts data for the receiver?</div>
-  <div class="mcq-options">
-    a. Session Layer<br>
-    b. Presentation Layer<br>
-    c. Network Layer<br>
-    d. Data Link Layer
-  </div>
-  <div class="mcq-answer">Answer: b. Presentation Layer</div>
-</div>
+      <h3>Importance</h3>
+      <ul>
+        <li>Makes data easy to understand</li>
+        <li>Saves time</li>
+        <li>Helps quickly see trends and comparisons</li>
+        <li>Easier than reading long lists of numbers</li>
+      </ul>
 
-<div class="mcq-item">
-  <div class="mcq-question">13. Which layer manages user applications like email and web browsers?</div>
-  <div class="mcq-options">
-    a. Transport Layer<br>
-    b. Application Layer<br>
-    c. Data Link Layer<br>
-    d. Network Layer
-  </div>
-  <div class="mcq-answer">Answer: b. Application Layer</div>
-</div>
+      <h2 id="preprocessing">Data Pre-Processing & Analysis</h2>
 
-<div class="mcq-item">
-  <div class="mcq-question">14. Which device primarily works at the Data Link Layer?</div>
-  <div class="mcq-options">
-    a. Router<br>
-    b. Switch<br>
-    c. Hub<br>
-    d. Modem
-  </div>
-  <div class="mcq-answer">Answer: b. Switch</div>
-</div>
+      <h2>Data Pre-Processing</h2>
+      <p>Cleaning and organizing data before analysis.</p>
+      <h2>Data Pre-Processing Techniques</h2>
+      <h3>1. Checking Data Quality</h3>
+      <p>
+        Ensure data is correct, complete, and up-to-date. 
+      </p>
+      <p><strong>Example</strong>Ensuring every enrolled student has an accurate, up-to-date test score recorded.</p>
+      <h3>2. Common Problems</h3>
+      <ul>
+        <li><strong>Errors:</strong>Wrong data values i.e. Score recorded as 105 when maximum is 100</li>
+        <li><strong>Outliers:</strong> Values that are unusually high or low compared to the rest of the data.i.e. One student scoring 5 when most students scored between 50 and 80.</li>
+        <li><strong>Bias:</strong> The distortions that effect the accuracy of data.   i.e. Using survey results from one school to represent all schools in a city.</li>
+      </ul>
 
-<div class="mcq-item">
-  <div class="mcq-question">15. Which topology is easiest to troubleshoot?</div>
-  <div class="mcq-options">
-    a. Bus<br>
-    b. Star<br>
-    c. Ring<br>
-    d. Mesh
-  </div>
-  <div class="mcq-answer">Answer: b. Star</div>
-</div>
+      <h3>Validation & Cleaning</h3>
+      <p><strong>Validation: </strong>Check that data is complete and correct.</p>
+      <p><strong>Cleaning: </strong>Fix or remove wrong data, fill missing values, and handle outliers.</p>
+      <h3>Data Analysis Techniques</h3>
+      <ul>
+        <li><strong>Quantitative:</strong> Uses numbers and measurements to find patterns and trends.</li>
+        <li><strong>Qualitative:</strong>Uses non-numerical data like text, images, and sounds to understand meanings and experiences.</li>
+      </ul>
 
-<h2 id="faqs">FAQs</h2>
+      <h2 id="cloud">Cloud Storage</h2>
+      <p><strong>Cloud Storage: </strong>Cloud storage allows data to be stored on the internet. It helps in saving files, sharing data, and accessing information from any device.</p>
+      <h3>Benefits</h3>
+      <ul>
+        <li>Access from anywhere</li>
+        <li>Safe backups</li>
+        <li>Real-time sharing</li>
+      </ul>
 
-<section class="faq-section">
+      <h2 id="cloud">Remote Access</h2>
+      <p>Remote access allows you to use a computer or network from another location. You can open files or software even when you are not physically present.</p>
+      <p><strong>Example: </strong>Google drive, One Drive are examples of remote access.</p>
+      <h3>Data Backups</h3>
+      <p>Data backups are copies of important files stored separately to prevent data loss. They protect data from deletion, system failure, or viruses.</p>
+      <p><strong>Example: </strong>Saving a school project on Google Drive or a USB.</p>
+      <h2 id="cloud">Automatic Backups</h2>
+      <p>Devices can be set to automatically back up data to cloud services like OneDrive.</p>      
+      <h2 id="mcqs">MCQs</h2>
 
-<div class="faq-item">
-<button class="faq-question">What is network topology?</button>
-<div class="faq-answer"><p>It is the physical or logical layout of devices in a network.</p></div>
-</div>
+      <div class="mcq-item">
+        <p><strong>1. What is data collection?</strong></p>
+        <ul>
+          <li>A) Data deletion</li>
+          <li>B) Gathering information</li>
+          <li>C) Data storage</li>
+          <li>D) Data visualization</li>
+        </ul>
+        <p><em>Answer: B) Gathering information</em></p>
+      </div>
 
-<div class="faq-item">
-<button class="faq-question">What is Bus topology?</button>
-<div class="faq-answer"><p>All devices connect to one central cable.</p></div>
-</div>
+      <div class="mcq-item">
+        <p><strong>2. Which method involves one-on-one discussion?</strong></p>
+        <ul>
+          <li>A) Survey</li>
+          <li>B) Observation</li>
+          <li>C) Interview</li>
+          <li>D) Questionnaire</li>
+        </ul>
+        <p><em>Answer: C) Interview</em></p>
+      </div>
 
-<div class="faq-item">
-<button class="faq-question">What is Star topology?</button>
-<div class="faq-answer"><p>All devices connect to a central hub or switch.</p></div>
-</div>
+      <div class="mcq-item">
+        <p><strong>3. Data stored in rows and columns is called:</strong></p>
+        <ul>
+          <li>A) Unstructured Data</li>
+          <li>B) Raw Data</li>
+          <li>C) Structured Data</li>
+          <li>D) Visual Data</li>
+        </ul>
+        <p><em>Answer: C) Structured Data</em></p>
+      </div>
 
-<div class="faq-item">
-<button class="faq-question">What is Ring topology?</button>
-<div class="faq-answer"><p>Devices connect in a circular path.</p></div>
-</div>
+      <div class="mcq-item">
+        <p><strong>4. Which of the following is an example of unstructured data?</strong></p>
+        <ul>
+          <li>A) Spreadsheet</li>
+          <li>B) Database table</li>
+          <li>C) Image</li>
+          <li>D) CSV file</li>
+        </ul>
+        <p><em>Answer: C) Image</em></p>
+      </div>
 
-<div class="faq-item">
-<button class="faq-question">What is Mesh topology?</button>
-<div class="faq-answer"><p>Every device connects to many other devices.</p></div>
-</div>
+      <div class="mcq-item">
+        <p><strong>5. Data visualization helps to:</strong></p>
+        <ul>
+          <li>A) Hide data</li>
+          <li>B) Make data harder</li>
+          <li>C) Understand trends easily</li>
+          <li>D) Delete data</li>
+        </ul>
+        <p><em>Answer: C) Understand trends easily</em></p>
+      </div>
 
-<div class="faq-item">
-<button class="faq-question">What are transmission modes?</button>
-<div class="faq-answer"><p>They describe how data flows between devices.</p></div>
-</div>
+      <h2 id="faqs">FAQs</h2>
 
-<div class="faq-item">
-<button class="faq-question">What is Simplex communication?</button>
-<div class="faq-answer"><p>Data flows in one direction only.</p></div>
-</div>
+      <div class="faq-item">
+        <div class="faq-question">What is structured data?</div>
+        <div class="faq-answer">Data that is well organized in rows and columns.</div>
+      </div>
 
-<div class="faq-item">
-<button class="faq-question">What is Half-Duplex communication?</button>
-<div class="faq-answer"><p>Data flows both ways but not at the same time.</p></div>
-</div>
+      <div class="faq-item">
+        <div class="faq-question">Why is data pre-processing important?</div>
+        <div class="faq-answer">It improves data quality before analysis.</div>
+      </div>
 
-<div class="faq-item">
-<button class="faq-question">What is Full-Duplex communication?</button>
-<div class="faq-answer"><p>Data flows both ways simultaneously.</p></div>
-</div>
+    </div>
+      <div class="faq-item">
+        <div class="faq-question">What is data collection?</div>
+        <div class="faq-answer">It is the process of gathering information for analysis.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Why is data visualization important?</div>
+        <div class="faq-answer">It makes data easier to understand and compare.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is cloud storage?</div>
+        <div class="faq-answer">It allows storing data online for easy access.</div>
+      </div>
 
-<div class="faq-item">
-<button class="faq-question">What is the OSI model?</button>
-<div class="faq-answer"><p>A framework that explains how data travels through networks using 7 layers.</p></div>
-</div>
-</div>
-</article>
+    </div>
+  </article>
 </main>
+
+<div class="fb-comments" data-href="https://salmanblogs.com/class-10-important-questions" data-width="1200" data-numposts="5"></div>
 
 <footer class="footer">
   <div class="footer-links">
@@ -603,18 +269,17 @@ The Network Layer decides the best path for data to travel between different net
 </footer>
 
 <script>
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('active');
+  });
 
-  const faqButtons = document.querySelectorAll('.faq-question');
-  faqButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('active');
-      const answer = btn.nextElementSibling;
+  document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+      const answer = item.nextElementSibling;
       answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
     });
   });
 </script>
+
 </body>
 </html>
