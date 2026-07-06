@@ -61,13 +61,21 @@
       <h1>Technology Blogs</h1>
       <p>Latest trends, tutorials, and insights in the tech world.</p>
     </section>
-
+    <div class="search-container">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search Quality Articles" />
+  </div>
+</div>
+<p id="noResults" style="display:none; text-align:center; font-weight:bold; margin-top:10px;">
+  No results found 😔
+</p>
     <section class="tech-posts">
       <div class="post-card">
         <a href="Top-10-AI-Tools-You-Should-Be-Using-in-2026.html">
         <img src="images/technology/top-10-ai-tools-2026.webp" alt="Top-10-AI-tools-2026">
           <h2>Top 10 AI Tools You Should Be Using in 2026</h2>
-          <p>Uncover the must-have AI tools of 2025 that boost productivity, creativity, and everyday efficiency.</p>
+          <p>Uncover the must-have AI tools of 2026 that boost productivity, creativity, and everyday efficiency.</p>
           </a>
       </div>
 
@@ -88,7 +96,7 @@
       </div>
 
       <div class="post-card">
-        <a href="Top-10-Programming-Languages-in-2025.html">
+        <a href="Top-10-Programming-Languages-in-2026.html">
           <img src="images/technology/top-ten-programming-languages.webp" alt="top-ten-programming-languages" loading="lazy">
           <h2>Top 10 Programming Languages in 2025</h2>
           <p>Explore the most in-demand programming languages this year.</p>
@@ -114,6 +122,93 @@
       document.getElementById("navLinks").classList.toggle("show");
     });
   </script>
+
+  <script>
+const searchInput = document.getElementById("searchInput");
+const posts = document.querySelectorAll(".post-card");
+const noResults = document.getElementById("noResults");
+
+// Normalize text
+function normalizeText(text) {
+  return text
+    .toLowerCase()
+    .replace(/chap/g, "chapter")
+    .replace(/lec/g, "lecture")
+    .replace(/[^a-z0-9 ]/g, " ");
+}
+
+// Fuzzy match
+function fuzzyMatch(text, word) {
+  return text.includes(word) ||
+         text.includes(word.slice(0, word.length - 1));
+}
+
+searchInput.addEventListener("input", function () {
+
+  const searchWords = normalizeText(searchInput.value)
+    .trim()
+    .split(" ")
+    .filter(word => word !== "");
+
+  let visibleCount = 0;
+
+  posts.forEach(function (post) {
+
+    const title = post.querySelector("h2");
+    const desc = post.querySelector("p");
+
+    const originalTitle = title ? title.textContent : "";
+    const originalDesc = desc ? desc.textContent : "";
+
+    const combinedText = normalizeText(
+      originalTitle + " " + originalDesc
+    );
+
+    const isMatch = searchWords.every(word =>
+      fuzzyMatch(combinedText, word)
+    );
+
+    if (isMatch || searchWords.length === 0) {
+
+      post.style.display = "block";
+      visibleCount++;
+
+      let highlightedTitle = originalTitle;
+      let highlightedDesc = originalDesc;
+
+      searchWords.forEach(word => {
+
+        const regex = new RegExp("(" + word + ")", "gi");
+
+        highlightedTitle = highlightedTitle.replace(
+          regex,
+          "<mark>$1</mark>"
+        );
+
+        highlightedDesc = highlightedDesc.replace(
+          regex,
+          "<mark>$1</mark>"
+        );
+      });
+
+      if (title) {
+        title.innerHTML = highlightedTitle;
+      }
+
+      if (desc) {
+        desc.innerHTML = highlightedDesc;
+      }
+
+    } else {
+
+      post.style.display = "none";
+    }
+  });
+
+  noResults.style.display =
+    visibleCount === 0 ? "block" : "none";
+});
+</script>
 
 </body>
 </html>

@@ -60,6 +60,42 @@
   background-color: #0059b3;
 }
 
+.contact-links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-links h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 22px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.whatsapp:hover {
+    background: #1ebe5d;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+
+.instagram:hover {
+    opacity: 0.9;
+}
 
 /* Responsive */
 @media (max-width: 768px) {

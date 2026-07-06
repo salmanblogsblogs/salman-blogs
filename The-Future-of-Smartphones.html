@@ -44,7 +44,9 @@
     .toc a:hover { color: darkblue; }
     .toc li {list-style-type: none;}
     .post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
-
+    h2, h3 {
+  scroll-margin-top: 80px;
+  }
     .tool-card {
       background: #ffffff;
       padding: 25px;
@@ -186,9 +188,9 @@
           <li><a href="#final">Final Thoughts</a></li>
         </ul>
 
-  <div class="tool-card" id="ai">
+  <div class="tool-card">
 
-  <h2>1. AI-First Smartphones: Your Phone Will Think Like a Human</h2>
+  <h2 id="ai">1. AI-First Smartphones: Your Phone Will Think Like a Human</h2>
 
   <p>
     Imagine waking up in the morning and your smartphone already knows what
@@ -349,9 +351,9 @@
 </div>
 
         <!-- 2 -->
-  <div class="tool-card" id="holographic">
+  <div class="tool-card">
 
-  <h2>2. Holographic and 3D Displays: Screens Could Disappear Completely</h2>
+  <h2 id="holographic">2. Holographic and 3D Displays: Screens Could Disappear Completely</h2>
 
   <p>
     Imagine watching a movie floating in the air right in front of you without
@@ -518,9 +520,9 @@
 
 </div>
 
-        <div class="tool-card" id="foldable">
+        <div class="tool-card">
 
-  <h2>3. Foldable and Rollable Phones: One Device Could Replace Everything</h2>
+  <h2 id="foldable">3. Foldable and Rollable Phones: One Device Could Replace Everything</h2>
 
   <p>
     Smartphones are already changing rapidly, and foldable phones are only the
@@ -689,9 +691,9 @@
 
 </div>
         <!-- 4 -->
-      <div class="tool-card" id="battery">
+      <div class="tool-card">
 
-  <h2>4. Week-Long Battery Life: Charging Your Phone Could Become Rare</h2>
+  <h2 id="battery">4. Week-Long Battery Life: Charging Your Phone Could Become Rare</h2>
 
   <p>
     One of the biggest frustrations smartphone users face today is battery
@@ -860,9 +862,9 @@
 
 </div>
         <!-- 5 -->
-        <div class="tool-card" id="satellite">
+        <div class="tool-card">
 
-  <h2>5. Satellite Connectivity: Smartphones Could Work Anywhere on Earth</h2>
+  <h2 id="satellite">5. Satellite Connectivity: Smartphones Could Work Anywhere on Earth</h2>
 
   <p>
     Imagine standing on a remote mountain, traveling through a desert, or
@@ -1031,9 +1033,9 @@
 </div>
 
         <!-- 6 -->
-        <div class="tool-card" id="health">
+        <div class="tool-card">
 
-  <h2>6. Built-In Health Monitoring: Your Smartphone Could Become Your Personal Doctor</h2>
+  <h2 id="health">6. Built-In Health Monitoring: Your Smartphone Could Become Your Personal Doctor</h2>
 
   <p>
     By 2030, smartphones may do much more than calls, messaging, and social
@@ -1226,9 +1228,9 @@
 </div>
 
         <!-- 7 -->
-      <div class="tool-card" id="camera">
+      <div class="tool-card">
 
-  <h2>7. Smarter AI Cameras: Smartphones Could Become Professional Filmmakers</h2>
+  <h2 id="camera">7. Smarter AI Cameras: Smartphones Could Become Professional Filmmakers</h2>
 
   <p>
     Smartphone cameras have already improved dramatically over the last few
@@ -1438,9 +1440,9 @@
 </div>
 
         <!-- 8 -->
-        <div class="tool-card" id="ar">
+        <div class="tool-card">
 
-  <h2>8. Augmented Reality Integration: The Real and Digital Worlds Will Merge</h2>
+  <h2 id="ar">8. Augmented Reality Integration: The Real and Digital Worlds Will Merge</h2>
 
   <p>
     Augmented Reality (AR) is expected to become one of the most powerful
@@ -1603,9 +1605,9 @@
 </div>
 
         <!-- 9 -->
-       <div class="tool-card" id="brain">
+       <div class="tool-card">
 
-  <h2>9. Brain-Computer Interfaces: Controlling Smartphones With Your Thoughts</h2>
+  <h2 id="brain">9. Brain-Computer Interfaces: Controlling Smartphones With Your Thoughts</h2>
 
   <p>
     One of the most futuristic ideas in mobile technology is the
@@ -1774,9 +1776,9 @@
 </div>
 
         <!-- 10 -->
-        <div class="tool-card" id="eco">
+        <div class="tool-card">
 
-  <h2>10. Sustainable Smartphones: Technology That Protects the Planet</h2>
+  <h2 id="eco">10. Sustainable Smartphones: Technology That Protects the Planet</h2>
 
   <p>
     As technology continues to grow, one of the biggest concerns for the future
@@ -1941,9 +1943,9 @@
 </div>
 
         <!-- 11 -->
-        <div class="tool-card" id="wearables">
+        <div class="tool-card">
 
-  <h2>11. Smartphones + Wearables: A Fully Connected Personal Tech Ecosystem</h2>
+  <h2 id="wearables">11. Smartphones + Wearables: A Fully Connected Personal Tech Ecosystem</h2>
 
   <p>
     By 2030, smartphones may no longer be the only central device we depend on.
@@ -2254,6 +2256,24 @@
 
         </div>
       </div>
+        <div class="wrap" id="main">
+  <h2>Comments</h2>
+
+  <div class="input-card">
+    <input id="pub-name" placeholder="Your name" maxlength="60">
+    <textarea id="pub-msg" placeholder="Leave a comment…" maxlength="1000"></textarea>
+    <button onclick="postComment()" style="background-color: #002959; color: white;">Post Comment</button>
+  </div>
+
+  <div id="comments-list"></div>
+</div>
+
+<!-- ADMIN LOGIN BAR -->
+<div id="admin-bar">
+  <span style="font-size:12px;color:var(--muted);">Admin</span>
+  <input id="admin-pass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter') adminLogin()">
+  <button onclick="adminLogin()" style="background-color: #002959; color: white;">Login</button>
+</div>
     </article>
   </main>
 
@@ -2309,6 +2329,273 @@ faqItems.forEach(button => {
   backToTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+</script>
+
+<!-- ADDING COMMENT -->
+ <script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+const supabase = createClient(
+  "https://pojmeeozeuzqtgrvwgxw.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvam1lZW96ZXV6cXRncnZ3Z3h3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4ODM2MjYsImV4cCI6MjA5NTQ1OTYyNn0.c9sgwAH8ysgayh_dvk_uzNTK5XuUZ1k57Lk_cfzlhbA"
+);
+
+const POST_ID    = "blog-4";
+const ADMIN_PASS = "salman.coding";
+const ADMIN_NAME = "Salman (Admin)";
+
+let isAdmin = false;
+
+/* ── HELPERS ── */
+function esc(s) {
+  return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+function initial(n) { return (n||"?").charAt(0).toUpperCase(); }
+function timeAgo(d) {
+  const s = Math.floor((Date.now() - new Date(d)) / 1000);
+  if (s < 60)    return s + "s ago";
+  if (s < 3600)  return Math.floor(s/60) + "m ago";
+  if (s < 86400) return Math.floor(s/3600) + "h ago";
+  return Math.floor(s/86400) + "d ago";
+}
+
+/* ── ADMIN LOGIN / LOGOUT ── */
+window.adminLogin = function() {
+  if (document.getElementById("admin-pass").value === ADMIN_PASS) {
+    isAdmin = true;
+    document.getElementById("admin-bar").innerHTML =
+      `<span style="color:var(--accent);font-weight:600;font-size:13px;">✓ Admin</span>
+       <button onclick="adminLogout()" style="background:transparent;color:var(--muted);border:1px solid var(--border);font-size:12px;padding:5px 10px;">Logout</button>`;
+    document.getElementById("main").classList.add("admin-mode");
+    loadComments();
+  } else {
+    alert("Wrong password.");
+  }
+};
+
+window.adminLogout = function() {
+  isAdmin = false;
+  document.getElementById("admin-bar").innerHTML = `
+    <span style="font-size:12px;color:var(--muted);">Admin</span>
+    <input id="admin-pass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter') adminLogin()">
+    <button onclick="adminLogin()">Login</button>`;
+  document.getElementById("main").classList.remove("admin-mode");
+  loadComments();
+};
+
+/* ── POST TOP-LEVEL COMMENT (visitor) ── */
+window.postComment = async function() {
+  const name = document.getElementById("pub-name").value.trim();
+  const msg  = document.getElementById("pub-msg").value.trim();
+  if (!name || !msg) { alert("Please enter your name and message."); return; }
+  const { error } = await supabase.from("comments").insert([{
+    name, message: msg, post_id: POST_ID, parent_id: null
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  document.getElementById("pub-msg").value = "";
+  loadComments();
+};
+
+/* ── TOGGLE ADMIN REPLY BOX ── */
+window.showAdminReplyBox = function(id) {
+  if (!isAdmin) return;
+  const el = document.getElementById("arb-" + id);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── ADMIN POST REPLY ── */
+window.postAdminReply = async function(parentId) {
+  if (!isAdmin) return;
+  const ta  = document.getElementById("ari-" + parentId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: ADMIN_NAME, message: msg, post_id: POST_ID, parent_id: parentId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── SHOW VISITOR REPLY-BACK BOX ── */
+// visitorName = name of the original commenter (prefilled, locked)
+window.showVisitorReplyBox = function(adminReplyId, visitorName) {
+  const el = document.getElementById("vrb-" + adminReplyId);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── VISITOR POSTS REPLY-BACK ── */
+window.postVisitorReply = async function(adminReplyId, visitorName) {
+  const ta  = document.getElementById("vri-" + adminReplyId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: visitorName, message: msg, post_id: POST_ID, parent_id: adminReplyId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── BUILD THREAD under a top-level comment ── */
+// Structure: top comment → admin replies → visitor reply-backs (under each admin reply)
+function buildThread(all, topComment) {
+  // Direct admin replies to this top comment
+  const adminReplies = all.filter(c =>
+    c.parent_id === topComment.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    // Visitor replies back to this specific admin reply
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)}
+            <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+          ${isAdmin ? `<span class="admin-reply-btn" onclick="showAdminReplyBox(${vr.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${vr.id}" style="display:none;">
+            <textarea id="ari-${vr.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${vr.id})}"></textarea>
+            
+            <button onclick="postAdminReply(${vr.id})">Send Reply</button>
+          </div>` : ""}
+          ${buildNestedThread(all, vr, topComment.name)}
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <!-- Visitor can reply back only to this admin reply -->
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(topComment.name)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(topComment.name)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(topComment.name)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* Deeper nesting: admin replies to visitor reply-backs */
+function buildNestedThread(all, visitorReply, originalVisitorName) {
+  const adminReplies = all.filter(c =>
+    c.parent_id === visitorReply.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)} <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble" style="margin-top:8px;">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(originalVisitorName)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(originalVisitorName)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(originalVisitorName)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* ── LOAD COMMENTS ── */
+async function loadComments() {
+  const { data, error } = await supabase
+    .from("comments").select("*")
+    .eq("post_id", POST_ID)
+    .order("created_at", { ascending: true });
+
+  const list = document.getElementById("comments-list");
+  if (error) { list.innerHTML = `<div class="empty">Could not load comments.</div>`; return; }
+
+  const all = data || [];
+  const top = all.filter(c => !c.parent_id);
+
+  if (!top.length) { list.innerHTML = `<div class="empty">No comments yet. Be the first!</div>`; return; }
+
+  list.innerHTML = top.map(c => `
+    <div class="comment-card">
+      <div class="comment-row">
+        <div class="avatar">${initial(c.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(c.name)}
+            <span class="comment-time">${timeAgo(c.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(c.message)}</div>
+          <span class="admin-reply-btn" onclick="showAdminReplyBox(${c.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${c.id}" style="display:none;">
+            <textarea id="ari-${c.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${c.id})}"></textarea>
+            <button onclick="postAdminReply(${c.id})">Send Reply</button>
+          </div>
+          ${buildThread(all, c)}
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* ── REALTIME ── */
+supabase.channel("comments-rt")
+  .on("postgres_changes", { event: "INSERT", schema: "public", table: "comments", filter: `post_id=eq.${POST_ID}` },
+    () => loadComments())
+  .subscribe();
+
+loadComments();
 </script>
 
 </body>
