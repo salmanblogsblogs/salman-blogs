@@ -284,533 +284,618 @@ ul, ol
 </nav>
   <div class="post-content">
   </p>
-      <h2 id="process-management-in-os">Process Management in Operating System</h2>
-      <p>Process management means the OS controls these processes and gives them resources like CPU time and memory so they can run properly without disturbing each other.</p>
+      <h2 id="what-is-software">What is Software?</h2>
+<p>Software is a collection of programs, instructions, and data that tells a computer or other electronic device what to do.</p>
+
+<p>Here are some common examples of software:</p>
+
+<ul>
+  <li><strong>Microsoft Windows</strong> – Runs and manages a computer.</li>
+  <li><strong>Google Chrome</strong> – Lets you browse the internet.</li>
+  <li><strong>Microsoft Word</strong> – Used to create and edit documents.</li>
+  <li><strong>Microsoft Excel</strong> – Used for calculations and data analysis.</li>
+  <li><strong>Adobe Photoshop</strong> – Used to edit photos and create graphics.</li>
+  <li><strong>VLC Media Player</strong> – Plays videos and music.</li>
+  <li><strong>WhatsApp</strong> – Used for messaging and voice and video calls.</li>
+  <li><strong>Instagram</strong> – Used to share photos and videos.</li>
+</ul>
      
-      <h3 id="process">Process in OS</h3>
-      <p>
-        An operating system (OS) manages all the programs running on a computer.
-        When a program is running, it is called a process.
-      </p>
-      
-      <h3 id="resource">Resource in OS</h3>
-      <p>
-       A resource is anything required by a process to execute.
-      </p>
+<h2 id="software-development">Software Development</h2>
 
-      <ul>
-      <li>CPU time</li>
-      <li>Main memory (RAM)</li>
-      <li>Cache memory</li>
-      <li>Secondary storage (HDD, SSD)</li>
-      <li>Input devices (keyboard, mouse, scanner)</li>
-      <li>Output devices (monitor, printer, speakers)</li>
-    </ul>
+<p>Software development is the process of creating computer programs or applications for different tasks. It includes planning, designing, coding, testing, and updating software to make sure it works properly and meets users' needs.</p>
 
-      <h3 id="process-life-cycle">Process Life Cycle</h3>
-
-    <p>A process has 3 main stages:</p>
-
-    <p><strong>1. Creation</strong></p>
-    <p>
-        A process starts when you open a program.
-        The OS loads it into memory and gives it resources.
-    </p>
-    <p><strong>Example:</strong> When you open MS Word or Chrome, the process starts.</p>
-
-    <p><strong>2. Execution</strong></p>
-    <p>
-        The process is working and doing its job.
-    </p>
-    <p><strong>Example:</strong> Chrome loads websites, plays videos, and responds when you click.</p>
-
-    <p><strong>3. Termination</strong></p>
-    <p>
-        The process ends when you close the program.
-        The OS removes it from memory and frees resources.
-    </p>
-    <p><strong>Example:</strong> When you close Chrome, it stops and memory is cleared.</p>
-
-    <p><strong>Full Example (Chrome)</strong></p>
-    <ul>
-        <li><strong>Creation:</strong> Click Chrome icon → OS opens it</li>
-        <li><strong>Execution:</strong> Browse websites</li>
-        <li><strong>Termination:</strong> Close Chrome → OS stops it</li>
-    </ul>
-
-    <h3 id="multitasking-and-concurrency">Multitasking and Concurrency</h3>
-<p>
-    Modern computers are designed to handle multiple tasks at the same time.
-    This helps users work smoothly without waiting for one task to finish before starting another.
-</p>
-
-    <h4>Multitasking</h4>
-    <p>
-        Multitasking means using more than one program at the same time.
-    </p>
-
-    <p><strong>Examples:</strong></p>
-    <ul>
-        <li>Listening to music 🎵 while browsing the internet 🌐</li>
-        <li>Writing a document 📄 while downloading a file ⬇️</li>
-        <li>Watching a video 🎬 while chatting on WhatsApp 💬</li>
-        <li>Playing a game 🎮 while music is running in background 🎧</li>
-    </ul>
-
-    <p>All feel like they are running together.</p>
-
-    <h4>Concurrency</h4>
-    <p>
-        Concurrency means the CPU does not do everything at once. It quickly switches between tasks, so all tasks keep moving forward.
-    </p>
-
-    <p><strong>Examples:</strong></p>
-
-    <p><strong>Chef Example:</strong></p>
-    <ul>
-        <li>cooks rice for a short time</li>
-        <li>then checks curry</li>
-        <li>then prepares salad</li>
-        <li>keeps switching quickly</li>
-    </ul>
-
-    <p><strong>Computer Example:</strong></p>
-    <ul>
-        <li>CPU runs Chrome for a short time</li>
-        <li>then switches to music player</li>
-        <li>then switches to file download</li>
-        <li>keeps rotating very fast</li>
-    </ul>
-
-    <p><strong>Phone Example:</strong></p>
-    <ul>
-        <li>WhatsApp running in background 💬</li>
-        <li>Music playing 🎵</li>
-        <li>Instagram loading posts 📱</li>
-        <li>System switches between them quickly</li>
-    </ul>
-
-    <p>So it looks like all tasks are running at the same time.</p>
-
-    <h3 id="process-scheduling-concepts">Process Scheduling Concepts</h3>
-
-    <p>
-        The CPU cannot run all processes at once, so the OS decides:
-    </p>
-
-    <ul>
-        <li>Which process goes first</li>
-        <li>How long each process runs</li>
-    </ul>
-
-    <p>This is called scheduling.</p>
-
-    <h4>FCFS (First Come, First Served)</h4>
-
-    <p>
-        The first process that arrives is done first. Others wait their turn.
-    </p>
-
-    <p><strong>Example:</strong></p>
-    <p>Like a line in a shop:</p>
-    <ul>
-        <li>First person in line is served first</li>
-        <li>Then second, third, and so on</li>
-    </ul>
-
-    <p><strong>Advantages:</strong></p>
-    <ul>
-        <li>Very simple</li>
-        <li>Easy to understand</li>
-        <li>No process is skipped</li>
-    </ul>
-
-   <p><strong>Disadvantages:</strong></p>
-<ul>
-    <li>Small tasks may wait too long if big tasks are ahead</li>
-    <li>This is called the convoy effect</li>
-    <li>If one process takes too long, overall system performance feels slow</li>
-</ul>
-
-    <h3 id="memory">Memory</h3>
-
-    <p>
-        Memory is where the computer stores data and instructions so the CPU can work fast.
-    </p>
-
-    <h4>Primary Memory (RAM)</h4>
-
-    <p>
-        RAM is the main working memory of a computer. It is very fast but temporary.
-        Data is lost when power is off.
-    </p>
-
-    <p><strong>Example:</strong></p>
-    <p>
-        When you open a Word file, it is loaded into RAM so you can work on it quickly.
-    </p>
-
-    <h4>Virtual Memory</h4>
-
-    <p>
-        When RAM becomes full, the computer uses storage (HDD/SSD) as extra memory.
-        This is called virtual memory.
-    </p>
-
-    <p><strong>But:</strong></p>
-    <ul>
-        <li>It is slower than RAM</li>
-    </ul>
-
-    <p><strong>Simple idea:</strong></p>
-    <p>Virtual memory = backup space for RAM</p>
-
-    <p><strong>Example:</strong></p>
-    <ul>
-        <li>You open many apps at once</li>
-        <li>RAM gets full</li>
-        <li>The system moves less used apps to storage</li>
-        <li>This frees RAM for active apps</li>
-    </ul>
-
-    <p>
-        But those moved apps may become slower when you open them again.
-    </p>
-
-    <h2 id="processes-vs-threads">Processes vs Threads</h2>
-
-<p>
-A process is a running program on a computer. Processes are independent, so one process crashing usually does not affect others.
-</p>
-
-<p>
-Simple idea:
-</p>
-
-<p>
-A process = a separate application running on your computer.
-</p>
-
-<p>
-<strong>Example:</strong>
-</p>
+<p>Here are some common examples of software development:</p>
 
 <ul>
-  <li>Google Chrome</li>
-  <li>MS Word</li>
-  <li>A game</li>
+  <li><strong>WhatsApp</strong> – Developed for messaging and voice/video calls.</li>
+  <li><strong>Microsoft Word</strong> – Developed to create and edit documents.</li>
+  <li><strong>Google Chrome</strong> – Developed to browse the internet.</li>
+  <li><strong>Instagram</strong> – Developed to share photos, videos, and messages.</li>
+  <li><strong>Adobe Photoshop</strong> – Developed to edit photos and create graphics.</li>
 </ul>
 
-<p>
-All of these are separate processes.
-</p>
+<h2 id="software-development-life-cycle-sdlc">Software Development Life Cycle (SDLC)</h2>
 
-<h2>Thread</h2>
+<p>Software Development Life Cycle (SDLC) is a step-by-step process used to create software from start to finish. It helps developers build software in an organized and easy way.</p>
 
-<p>A thread is a small part of a process.</p>
+<h3>Diagram</h3>
+<img src="images/11-CS-IMAGES/CHAPTER-1/sdlc.webp" alt="sdlc" class="post-image" loading="lazy"
+style="width: 620px; margin-left: 70px;">
 
-<p>A process can have many threads.</p>
-
-<p>Threads share the same memory.</p>
-
-<p>Each thread does a different job.</p>
-
-<p>Simple idea:</p>
-
-<p>Thread = a small worker inside a program.</p>
-
-<p><strong>Example (Web Browser)</strong></p>
-
-<p>One browser (process) has many threads:</p>
+<h3>Purpose of SDLC</h3>
 
 <ul>
-  <li>One thread loads web pages 🌐</li>
-  <li>One thread plays videos 🎥</li>
-  <li>One thread downloads files ⬇️</li>
+  <li>Produce high-quality software.</li>
+  <li>Complete the project on time.</li>
+  <li>Stay within the budget.</li>
+  <li>Meet the customer's requirements.</li>
 </ul>
 
-<p>So you can do many things at the same time without waiting.</p>
+<p>Here are some common examples of SDLC:</p>
 
-<h2 id="multithreading">Multithreading</h2>
+<ul>
+  <li><strong>Banking App</strong> – Planned, developed, tested, and launched using SDLC.</li>
+  <li><strong>Online Shopping Website</strong> – Built step by step to make sure it works correctly.</li>
+  <li><strong>School Management System</strong> – Created using SDLC to manage students and teachers.</li>
+  <li><strong>Food Delivery App</strong> – Developed in different stages before being released to users.</li>
+</ul>
 
-<p>Multithreading means one program uses multiple threads to do many tasks at the same time.</p>
+<h2 id="framework-in-software-development">Framework in Software Development</h2>
 
-<p>Each thread works independently but shares memory.</p>
-
-<p><strong>Simple idea: </strong></p>
-
-<p>One program → many small tasks running together.</p>
-
-<h3 id="benefits-of-multithreading">Benefits of Multithreading</h3>
-
-<p>1. ⚡ <strong>Enhanced Performance</strong></p>
-
-<p>
-Multithreading improves system performance by running multiple threads at the same time, which reduces the time needed to complete tasks.
-</p>
-
-<p><strong>Example:</strong></p>
-
-<p>
-A video editing software processes audio and video at the same time, making the final output faster.
-</p>
-
-<p>2. 🎯 <strong>Improved Responsiveness</strong></p>
-
-<p><strong>Definition:</strong> It keeps applications responsive by running background tasks without stopping the main program.</p>
-
-<p><strong>Example:</strong></p>
-
-<p>
-In a web browser, you can scroll and use websites while a file is downloading in the background.
-</p>
-
-<p>3. 🔄 <strong>Support for Concurrent/Parallel Operations</strong></p>
-
-<p><strong>Definition:</strong> Multithreading allows multiple tasks to run at the same time within a program.</p>
+<p>A framework is a ready-made structure that helps developers build software faster. It provides many ready-made tools and features, so developers do not have to create everything from the beginning.</p>
 
 <p><strong>Example:</strong></p>
 
 <ul>
-  <li>Video plays 🎥</li>
-  <li>Comments load 💬</li>
-  <li>Recommendations update 🔄</li>
+  <li><strong>Without a framework:</strong> If you want to build a house, you have to make every brick, door, and window yourself.</li>
+  <li><strong>With a framework:</strong> Many parts are already available, so you only need to put them together and finish the house.</li>
 </ul>
 
-<p>4. ⚙️ <strong>Efficient Use of Resources</strong></p>
+<h2 id="stages-of-sdlc">Stages of SDLC</h2>
 
-<p><strong>Definition:</strong> Multithreading uses CPU and memory in a better way by sharing resources between threads.</p>
+<h3>1. Requirement Gathering</h3>
 
-<p><strong>Example:</strong></p>
+<p>Requirement Gathering is the first stage of SDLC. In this stage, developers collect information about what users need and what features the software should have.</p>
 
-<p>
-In a music app, you can play a song 🎵 and browse songs at the same time without opening two separate apps.
-</p>
-
-<h2 id="system-calls">System Calls</h2>
-
-<p>
-A system call is a request made by a program to the operating system to perform a task that the program cannot directly do itself.
-</p>
-
-<p><strong>Simple idea:</strong></p>
-
-<p>
-A program asks the OS for help when it needs to use hardware.
-</p>
-
-<p><strong>Example:</strong></p>
-
-<p>
-When you save a file, the application uses a system call to ask the OS to write data to the hard drive or SSD.
-</p>
-
-<h3 id="types-of-system-calls">Types of System Calls</h3>
-
-<p>1. <strong>open</strong></p>
-
-<p>
-Used to open a file for reading or writing.
-</p>
-
-<p><strong>Example:</strong> Opening a music file to play it 🎵</p>
-
-<p>2. <strong>read</strong></p>
-
-<p>
-Used to read data from a file or input device.
-</p>
-
-<p><strong>Example:</strong> Opening and reading a text document 📄</p>
-
-<p>3. <strong>write</strong></p>
-
-<p>
-Used to write or save data into a file or output device.
-</p>
-
-<p><strong>Example:</strong> Saving a photo or document on the computer 🖼️</p>
-
-<p>4. <strong>fork</strong></p>
-
-<p>
-Used to create a new process by cloning an existing one.
-</p>
-
-<p><strong>Example:</strong> When you duplicate a browser tab, the system uses a fork to instantly copy the exact state of your current tab into a new process. 🌐</p>
-
-<h2 id="file-system-structure-and-management">File System Structure and Management</h2>
-
-<p>
-The operating system not only runs programs but also manages how data is stored and organized on storage devices.
-</p>
-
-<p>
-A file system provides a proper structure so that files can be stored, located, and managed easily. It ensures data remains organized even when there are thousands of files.
-</p>
-
-<h3 id="files">Files</h3>
-
-<p>
-A file is a collection of related data stored on a computer. It is the basic unit of storage.
-</p>
-
-<p>Files can contain:</p>
+<h4>Activities</h4>
 
 <ul>
-  <li>text documents</li>
-  <li>images</li>
-  <li>audio</li>
-  <li>video</li>
-  <li>program instructions</li>
+  <li>
+    <strong>Interviews and Surveys:</strong> Asking questions and collecting feedback from potential users to understand their needs and preferences.
+    <br><strong>Example:</strong> Developers ask teachers and students what features they want in a student portal, such as viewing grades or attendance.
+  </li>
+
+  <li>
+    <strong>Observations:</strong> Watching how users interact with current systems to identify problems and opportunities for improvement.
+    <br><strong>Example:</strong> Developers watch teachers record attendance manually to understand how the student portal can make the process easier.
+  </li>
+
+  <li>
+    <strong>Document Review:</strong> Looking at existing documents, such as reports and user manuals, to gather additional information about the requirements.
+    <br><strong>Example:</strong> Developers review attendance records, report cards, and school forms before creating the student portal.
+  </li>
 </ul>
 
-<p><strong>Example:</strong></p>
+<h2 id="functional-and-non-functional-requirements">Functional and Non-Functional Requirements</h2>
 
-<p>
-A PDF document, a photo, or a song are all files.
-</p>
+<h3>Functional Requirements</h3>
 
-<h3 id="folders">Folders</h3>
+<p>Functional requirements describe what the system should do. They explain the features and functions the software must provide.</p>
 
-<p>
-A folder (or directory) is used to organize files in a structured way.
-</p>
-
-<p>
-It helps users group related files together so they are easier to find and manage.
-</p>
-
-<p><strong>Example:</strong></p>
-
-<p>
-A “School Work” folder may contain assignments, notes, and projects.
-</p>
-
-<h3 id="Metadata">Metadata</h3>
-
-<p>
-Metadata is information about a file or folder. It does not contain the actual content, but describes the file.
-</p>
-
-<p>It includes:</p>
+<p><strong>Example: Library Management System</strong></p>
 
 <ul>
-  <li>file name</li>
-  <li>file size</li>
-  <li>file type</li>
-  <li>creation date</li>
-  <li>last modified date</li>
+  <li><strong>User Registration</strong> – Students can create and log in to their accounts.</li>
+  <li><strong>Book Search</strong> – Users can search for books by title, author, or category.</li>
+  <li><strong>Book Borrowing</strong> – Users can borrow and return books.</li>
+  <li><strong>Inventory Management</strong> – Librarians can add, update, and remove books.</li>
+  <li><strong>Fine Calculation</strong> – The system automatically calculates late return fines.</li>
 </ul>
 
-<p><strong>Example:</strong></p>
+<h3>Non-Functional Requirements</h3>
 
-<p>
-A photo file might show: Name: img.jpg, Size: 3 MB, Created: 1 June
-</p>
+<p>Non-functional requirements describe how well the system should work. They focus on the system's quality, speed, security, and reliability.</p>
 
-<h2 id="file-systems">File Systems</h2>
+<p><strong>Example: Library Management System</strong></p>
 
-<p>
-A file system is a method used by an operating system to store, organize, and manage files on storage devices such as HDD, SSD, or USB drives.
-</p>
-
-<p>
-It decides where each file is stored and keeps track of its location so the file can be easily accessed when needed.
-</p>
-
-<h3>💾 Common File Systems (with full forms)</h3>
-
-<p><strong>FAT32 → File Allocation Table (32-bit)</strong></p>
-<p>
-Used in USB flash drives and memory cards due to its wide compatibility.
-</p>
-
-<p><strong>NTFS → New Technology File System</strong></p>
-<p>
-Used in Windows operating systems for better performance, security, and support for large files.
-</p>
-
-<p><strong>APFS → Apple File System</strong></p>
-<p>
-Used in modern macOS devices for fast and efficient storage, especially on SSDs.
-</p>
-
-<p><strong>EXT4 → Fourth Extended File System</strong></p>
-<p>
-Commonly used in Linux systems for its stability and performance.
-</p>
-
-<h2 id="os">Operating System</h2>
-<p>An operating system is system software that manages hardware and software resources. In simple terms, it controls and coordinates the working of a computer or device.</p>
-<h2 id="types-of-operating-systems">Types of Operating Systems</h2>
-
-<p>
-Operating systems are designed based on the type of device and its purpose. Each type is optimized for specific tasks.
-</p>
-
-<h3>Real-Time Operating System (RTOS)</h3>
-
-<p>
-A Real-Time Operating System is designed to respond immediately to inputs within a strict time limit (deadline). Even a small delay can cause serious problems in such systems.
-</p>
-
-<p><strong>Key Feature:</strong> Very fast response with no delay in processing important tasks.</p>
-
-<p><strong>Used In:</strong></p>
 <ul>
-  <li>Air traffic control systems ✈️</li>
-  <li>Heart monitoring devices ❤️</li>
-  <li>Industrial robots 🤖</li>
+  <li><strong>Performance</strong> – The system should respond quickly and support many users at the same time.</li>
+  <li><strong>Reliability</strong> – The system should work properly with very little downtime.</li>
+  <li><strong>Security</strong> – The system should protect user accounts and keep data safe.</li>
+  <li><strong>Usability</strong> – The system should be simple and easy for students and librarians to use.</li>
+  <li><strong>Availability</strong> – The system should be available whenever users need it.</li>
 </ul>
 
-<h3>Embedded Operating System (EOS)</h3>
+<h3>2. Design Phase</h3>
 
-<p>
-An Embedded OS is a small operating system designed for a specific device or function. It is not for general use but is optimized for one main task.
-</p>
+<p>In the Design Phase, developers plan how the software will work. They design the screens, create the system structure, and decide how different parts of the software will connect.</p>
 
-<p><strong>Key Feature:</strong> Uses very low memory, power, and resources.</p>
+<h4>Activities</h4>
 
-<p><strong>Used In:</strong></p>
 <ul>
-  <li>Washing machines</li>
-  <li>Microwaves</li>
-  <li>Smart TVs</li>
-  <li>Printers</li>
-  <li>ATMs</li>
+  <li>
+    <strong>Create Diagrams</strong> – Draw diagrams to show the steps or flow of the system.
+    <br><strong>Example:</strong> School Website Flow: Open Website → Log In → View Dashboard → Check Grades.
+  </li>
+
+  <li>
+    <strong>Develop Models</strong> – Design what the software screens will look like before coding.
+    <br><strong>Example:</strong> Design the Login page and Student Dashboard of the school website.
+  </li>
+
+  <li>
+    <strong>Plan Architecture</strong> – Decide how the website, server, and database will work together.
+    <br><strong>Example:</strong> A student logs in to the school website, the website sends the request to the server, and the server gets the student's data from the database.
+  </li>
+
+  <li>
+    <strong>Specify Requirements</strong> – Write a clear list of all the features the software should have.
+    <br><strong>Example:</strong> The school website should allow students to view grades, attendance, notices, and exam schedules.
+  </li>
 </ul>
 
-<h3>Network Operating System (NOS)</h3>
+<h4>Result</h4>
 
-<p>
-A Network Operating System is used to manage multiple computers connected in a network. It allows users to share resources like files, printers, and internet connections.
-</p>
-
-<p><strong>Key Feature:</strong> Focuses on communication and sharing between computers.</p>
-
-<p><strong>Example:</strong> In a school computer lab, all computers are connected, students can save files on one central server, and all can use the same printer.</p>
-
-<h3>Mobile Operating System</h3>
-
-<p>
-A Mobile Operating System is designed for smartphones and tablets. It is optimized for touch screens, mobile apps, battery saving, and wireless communication.
-</p>
-
-<p><strong>Key Features:</strong></p>
 <ul>
-  <li>Supports apps</li>
-  <li>Uses touch interface</li>
-  <li>Manages battery efficiently</li>
-  <li>Supports camera, GPS, and sensors</li>
+  <li>Organized software design</li>
+  <li>User-friendly interface</li>
+  <li>Easy to build and maintain</li>
 </ul>
 
-<p><strong>Used In:</strong></p>
+<h3>3. Coding / Development</h3>
+
+<p>In the Coding or Development phase, programmers write the code based on the design created in the previous phase. This is the stage where the software is built.</p>
+
+<h4>Activities</h4>
+
 <ul>
-  <li>Smartphones 📱</li>
-  <li>Tablets</li>
-  <li>Smartwatches ⌚</li>
+  <li>
+    <strong>Write Code</strong> – Programmers write code to create the software features.
+    <br><strong>Example:</strong> Write code for user login, registration, and grade viewing in a student portal.
+  </li>
+
+  <li>
+    <strong>Use Programming Languages</strong> – Developers use programming languages to build the software.
+    <br><strong>Example:</strong> Use Java, Python, or C# to develop the application.
+  </li>
+
+  <li>
+    <strong>Follow the Design</strong> – Developers write code according to the design and requirements.
+    <br><strong>Example:</strong> Create the login page and dashboard as planned in the Design Phase.
+  </li>
+
+  <li>
+    <strong>Fix Coding Errors</strong> – Developers find and correct mistakes while writing the code.
+    <br><strong>Example:</strong> Fix an error that prevents users from logging in.
+  </li>
 </ul>
+
+<h4>Result</h4>
+
+<ul>
+  <li>Working software</li>
+  <li>Completed program features</li>
+  <li>Software ready for testing</li>
+</ul>
+
+<h3>4. Testing</h3>
+
+<p>Testing is the process of checking whether the software works correctly. It helps find and fix errors before the software is released to users.</p>
+
+<h4>Types of Testing</h4>
+
+<ul>
+  <li>
+    <strong>Functionality Testing</strong> – Checks whether all features of the software work as expected.
+    <br><strong>Example:</strong> Does the Login button open the user's account after entering the correct username and password?
+  </li>
+
+  <li>
+    <strong>Performance Testing</strong> – Checks whether the software works quickly and can handle many users at the same time.
+    <br><strong>Example:</strong> Can the school website handle 5,000 students logging in during exam results?
+  </li>
+
+  <li>
+    <strong>Compatibility Testing</strong> – Checks whether the software works properly on different devices, browsers, and operating systems.
+    <br><strong>Example:</strong> Does the app work correctly on Android phones, iPhones, tablets, and computers?
+  </li>
+</ul>
+
+<h4>Result</h4>
+
+<ul>
+  <li>Errors are found and fixed.</li>
+  <li>Software works correctly.</li>
+  <li>Software is ready for deployment.</li>
+</ul>
+
+<h3>5. Deployment</h3>
+
+<p>Deployment is the process of releasing the software so users can start using it. In this phase, the software is installed, configured, and checked in the real working environment.</p>
+
+<h4>Activities</h4>
+
+<ul>
+  <li>
+    <strong>Installation</strong> – Install the software on the user's computer or server.
+    <br><strong>Example:</strong> Install a school management system on the school's computers.
+  </li>
+
+  <li>
+    <strong>Configuration</strong> – Set up the software so it works correctly.
+    <br><strong>Example:</strong> Connect the school management system to its database and create user accounts.
+  </li>
+
+  <li>
+    <strong>Real-World Testing</strong> – Check whether the software works properly in the actual working environment.
+    <br><strong>Example:</strong> Use the school management system in the school to make sure students, teachers, and staff can use it without problems.
+  </li>
+</ul>
+
+<h4>Result</h4>
+
+<ul>
+  <li>Software is installed.</li>
+  <li>Software is ready for users.</li>
+  <li>Software works correctly in the real environment.</li>
+</ul>
+
+<h3>6. Maintenance</h3>
+
+<p>Maintenance is the final stage of SDLC. It takes place after the software is released. In this phase, developers fix problems, improve the software, and add new features when needed.</p>
+
+<h4>Activities</h4>
+
+<ul>
+  <li>
+    <strong>Fix Bugs</strong> – Correct errors found after the software is released.
+    <br><strong>Example:</strong> Fix a login problem that prevents users from signing in.
+  </li>
+
+  <li>
+    <strong>Improve Performance</strong> – Make the software faster and more efficient.
+    <br><strong>Example:</strong> Reduce the time it takes to open the dashboard.
+  </li>
+
+  <li>
+    <strong>Add New Features</strong> – Add new functions based on user needs.
+    <br><strong>Example:</strong> Add an online fee payment feature to the school management system.
+  </li>
+</ul>
+
+<h4>Result</h4>
+<ul>
+  <li>Software errors are fixed.</li>
+  <li>Software performance is improved.</li>
+  <li>New features are added.</li>
+</ul>
+
+<h2 id="software-development-methodologies">Software Development Methodologies</h2>
+
+<p>Software Development Methodologies are different approaches used to plan, organize, and manage software development projects. They help development teams complete projects in a structured and efficient way.</p>
+
+<h3>Why are Software Development Methodologies Important?</h3>
+
+<p>Software development methodologies provide many benefits, such as:</p>
+
+<ul>
+  <li><strong>Better Planning</strong> </li>
+  <li><strong>Better Teamwork</strong></li>
+  <li><strong>Better Quality</strong></li>
+</ul>
+
+<h2 id="software-process-models">Software Process Models</h2>
+
+<p>A Software Process Model is a step-by-step framework or roadmap that guides the software development process from the beginning until the software is completed and maintained.</p>
+
+<h3>Benefits of Software Process Models</h3>
+
+<p>Software Process Models provide many benefits, such as:</p>
+
+<ul>
+  <li>1
+    <strong>Predictability:</strong> The development process becomes more organized because the team knows what to do next at every stage. So, the team manages risks more effectively.
+    <br><strong>Example:</strong> After gathering requirements, the next step is designing the software instead of randomly starting coding.
+  </li>
+
+  <li>
+    <strong>Efficiency:</strong> A proper process reduces unnecessary work, saves time, and makes better use of available resources.
+    <br><strong>Example:</strong> Finding and fixing design mistakes early is much easier than correcting them after the software is completed.
+  </li>
+
+  <li>
+  <strong>Quality:</strong> Following a process model ensures that quality is maintained throughout the SDLC.
+  <br><strong>Example:</strong> Every feature is tested before the software is released, resulting in fewer bugs.
+</li>
+</ul>
+
+<h2 id="waterfall-model">Waterfall Model</h2>
+
+<p>The Waterfall Model is one of the simplest software development models. It is a linear (step-by-step) process where each phase must be completed before moving to the next phase. Once a phase is finished, it is usually not revisited.</p>
+
+<h3>Flow of the Waterfall Model</h3>
+
+<p><strong>Requirements → Design → Coding → Testing → Deployment → Maintenance</strong></p>
+
+<ul>
+  <li><strong>Requirements:</strong> Gather and analyze customer needs, project goals, and system requirements before development begins.</li>
+
+  <li><strong>Design:</strong> Create the software architecture, database, user interface, and overall system design based on the requirements.</li>
+
+  <li><strong>Coding:</strong> Developers write the source code and build the software according to the approved design.</li>
+
+  <li><strong>Testing:</strong> Test the software to identify and fix errors, ensuring it works correctly and meets all requirements.</li>
+
+  <li><strong>Deployment:</strong> Release and install the software in the user's environment so it can be used.</li>
+
+  <li><strong>Maintenance:</strong> Fix bugs, resolve issues, and provide support after the software has been deployed.</li>
+</ul>
+
+<h3 id="waterfall-model-example">Example</h3>
+
+<p>A company wants to develop a simple payroll system where all requirements are already known and are unlikely to change. Since the project is straightforward, the Waterfall Model is a good choice.</p>
+
+<h3>Advantages of the Waterfall Model</h3>
+
+<ul>
+  <li>
+    <strong>Simple and Easy to Understand:</strong> The Waterfall Model follows a step-by-step process, making it easy for developers and managers to understand.
+  </li>
+
+  <li>
+    <strong>Easy to Plan and Manage:</strong> Each phase has a fixed schedule and deliverables, making project planning and management easier.
+  </li>
+
+  <li>
+    <strong>Suitable for Small Projects with Clear Requirements:</strong> It works best when the project requirements are fixed and are not expected to change.
+  </li>
+
+  <li>
+    <strong>Clear Phases and Documentation:</strong> Each phase has a specific goal and proper documentation, making the development process organized.
+  </li>
+</ul>
+
+<h3>Disadvantages of the Waterfall Model</h3>
+
+<ul>
+  <li>
+    <strong>Inflexibility(Difficult to Make Changes):</strong> Once a phase is completed, making changes is difficult, time-consuming, and expensive.
+  </li>
+
+  <li>
+    <strong>Not Suitable for Large or Complex Projects:</strong> It is not a good choice for projects where requirements frequently change or are not fully known.
+  </li>
+
+  <li>
+  <strong>Risk and Uncertainty:</strong> The model assumes all requirements are known from the start, which can be risky if new requirements arise later.
+</li>
+</ul>
+
+
+<h2 id="agile-methodology">Agile Methodology</h2>
+
+<p>Agile Methodology is a software development approach in which software is built in small parts called <strong>sprints or iterations</strong>. After each sprint, customers give feedback, and improvements are made before the next sprint.</p>
+
+<h3>Example</h3>
+
+<p>While developing an online shopping app:</p>
+
+<ul>
+  <li><strong>Sprint 1:</strong> Login feature</li>
+  <li><strong>Sprint 2:</strong> Product search</li>
+  <li><strong>Sprint 3:</strong> Payment system</li>
+</ul>
+
+<p>After each sprint, users test the feature and provide feedback.</p>
+
+<h3>Flow of Agile Methodology</h3>
+
+<p><strong>Requirements → Design → Development → Testing → Deployment → Review → Next Sprint</strong></p>
+
+<strong><p>In Agile, these steps are repeated in every sprint until the complete software is finished.</p> </strong>
+
+<h3>Agile Practices</h3>
+
+<ul>
+  <li>
+    <strong>Continuous Integration (CI):</strong> Developers combine and test code frequently to find and fix errors early.
+    <br><strong>Example:</strong> Team members merge their code every day to ensure everything works correctly.
+  </li>
+
+  <li>
+    <strong>Test-Driven Development (TDD):</strong> Developers write tests before writing the actual code.
+    <br><strong>Example:</strong> Before creating a login feature, tests are written to check valid and invalid login attempts.
+  </li>
+
+  <li>
+    <strong>Pair Programming:</strong> Two developers work together on the same code. One writes the code while the other reviews it and suggests improvements.
+  </li>
+</ul>
+
+<h3>Advantages of Agile Methodology</h3>
+
+<ul>
+  <li>
+    <strong>High Flexibility:</strong> Changes can be made easily during development if customer requirements change.
+  </li>
+
+  <li>
+    <strong>Improved Customer Satisfaction:</strong> Customers give feedback after each sprint, helping the team build software that meets their needs.
+  </li>
+
+  <li>
+    <strong>Early Bug Detection:</strong> Problems are found and fixed early through regular testing.
+  </li>
+
+  <li>
+    <strong>Faster Delivery:</strong> Working features are completed and delivered in small parts instead of waiting for the whole project.
+  </li>
+</ul>
+
+<h3>Disadvantages of Agile Methodology</h3>
+
+<ul>
+  <li>
+    <strong>Scaling Challenges:</strong> Managing large projects with multiple teams can be difficult because it requires effective coordination, communication, and planning.
+  </li>
+
+  <li>
+    <strong>Stakeholder Involvement:</strong> Agile requires active participation from customers and stakeholders throughout the project. If they do not provide regular feedback, development can be affected.
+  </li>
+
+  <li>
+    <strong>Less Predictable:</strong> Continuous changes based on feedback make it harder to accurately predict the project's timeline, cost, and final scope.
+  </li>
+</ul>
+
+<h2 id="project-planning-and-management">Project Planning and Management</h2>
+
+<p>Project planning is the process of organizing a project before development begins. It helps the team decide:</p>
+
+<ul>
+  <li>What work needs to be done.</li>
+  <li>Who will do each task.</li>
+  <li>When each task should be completed.</li>
+  <li>How much the project will cost.</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>Planning a wedding before the event by deciding the budget, assigning responsibilities, and creating a schedule.</p>
+
+<h3>Setting Project Timelines</h3>
+
+<p>A project timeline is a schedule that shows how long each task will take. It helps the team complete the project on time.</p>
+
+<h4>Example</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Design</td>
+      <td>1 Week</td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>4 Weeks</td>
+    </tr>
+    <tr>
+      <td>Testing</td>
+      <td>2 Weeks</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Estimating Costs</h3>
+
+<p>Cost estimation is the process of calculating the total cost of developing a software project.</p>
+
+<h3>Factors Affecting Cost</h3>
+
+<ul>
+  <li>
+    <strong>Development Team:</strong> Experienced developers usually charge higher salaries, so the project cost increases.
+  </li>
+
+  <li>
+  <strong>Technology Stack:</strong> Different technologies have different development costs.
+  <br><strong>Example:</strong> A web application built with modern frameworks like React and Node.js may cost more than a simple HTML website.
+</li>
+
+  <li>
+    <strong>Project Duration:</strong> Projects that take more time usually cost more because developers work for a longer period.
+  </li>
+
+  <li>
+    <strong>Risk Management:</strong> A small extra budget is kept to handle unexpected problems or changes during the project.
+  </li>
+
+  <li>
+    <strong>Quality Assurance:</strong> Testing and quality checks increase the project cost, but they help produce high-quality, error-free software.
+  </li>
+</ul>
+
+<h2 id="risk-assessment-and-management">Risk Assessment and Management</h2>
+
+<p>Risk is anything that could cause problems or delays in a software project.</p>
+
+<h3>Step 1: Identify Risks</h3>
+
+<p>Find possible risks that may affect the project.</p>
+
+<p><strong>Examples:</strong></p>
+
+<ul>
+  <li>A developer leaves the project.</li>
+  <li>The technology being used becomes outdated.</li>
+</ul>
+
+<h3>Step 2: Analyze Risks</h3>
+
+<p>Evaluate each risk by determining:</p>
+
+<ul>
+  <li><strong>Chance of Occurrence:</strong> How likely is the risk to happen?</li>
+  <li><strong>Impact:</strong> How much will it affect the project if it happens?</li>
+</ul>
+
+<h3>Step 3: Risk Mitigation</h3>
+
+<p>Prepare backup plans to reduce the impact of risks.</p>
+
+<h4>Example</h4>
+
+<p>Hire or train backup developers so the project can continue if a team member leaves.</p>
+
+<h3>Step 4: Monitor Risks</h3>
+
+<p>Regularly check for risks throughout the project and take action if new risks appear.</p>
+
+<h2 id="execution">Execution</h2>
+
+<p>Execution is the phase where the actual development work takes place according to the project plan.</p>
+
+<h3>Activities</h3>
+
+<ul>
+  <li>Coding</li>
+  <li>Designing</li>
+  <li>Building features</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>Developers write code and build an online shopping system.</p>
+
+<h2 id="quality-assurance-qa">Quality Assurance (QA)</h2>
+
+<p>Quality Assurance (QA) is the process of ensuring that the software is high quality, reliable, and free from major errors before it is released.</p>
+
+<h3>Methods</h3>
+
+<ul>
+  <li>
+    <strong>Testing:</strong> Check whether the software works correctly.
+  </li>
+
+  <li>
+    <strong>Code Reviews:</strong> Team members review each other's code to find mistakes and improve quality.
+  </li>
+
+  <li>
+    <strong>User Feedback:</strong> Collect feedback from users to identify issues and make improvements.
+  </li>
+</ul>
+
+<h3>Example</h3>
+
+<p>Testing every feature of an online shopping system to ensure it works correctly before releasing it to users.</p>
 
 <h2 id="mcqs">Multiple Choice Questions (MCQs) on Operating System</h2>
 

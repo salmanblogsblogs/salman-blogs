@@ -1,185 +1,1200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="style.css">
-<!-- <link rel="stylesheet" href="technology.css"> -->
-  <meta name="description" content="Salman blogs - Explore insightful blogs on Technology, Health, Travel, Food, Lifestyle, and more.">
-  <meta name="keywords" content="Salman blogs, Technology Blogs, Health Tips, Travel Guides, Food Recipes, Lifestyle Advice, Programming">
-  <meta name="author" content="Salman Ahmad">
-  <title>Salman Blogs | Explore Trending Blogs</title>
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
-     crossorigin="anonymous"></script>
-      <!-- Google site verification for console -->
-<meta name="google-site-verification" content="zPi45rKYY5rzqCxArgqxy7X8dnberJ5anLD6Ir23ttk" />
-  <link rel="icon" type="image/png" href="https://salmanblogs.com/favicon.png" sizes="48x48">
-  <!-- Favicon for all browsers -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <!-- High-res PNG for modern browsers & Google Search -->
-  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
-  <!-- Apple Touch Icon (optional, for iPhones/iPads) -->
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon-512.png">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Salman Blogs - Explore Tech, AI, Coding, and More" />
-  <meta property="og:description" content="Welcome to Salman Blogs! Discover insightful blogs on technology, AI, programming, health, travel, and more." />
-  <meta property="og:image" content="https://salmanblogs.com/images/og-home.png" />
-  <meta property="og:url" content="https://salmanblogs.com/" />
-  <meta property="og:type" content="website" />
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Salman Blogs - Explore Tech, AI, Coding, and More" />
-  <meta name="twitter:description" content="Explore quality blogs on trending topics like AI, health, travel, and programming." />
-  <meta name="twitter:image" content="https://salmanblogs.com/images/og-home.png" />
+
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Salman Blogs | Technology, AI, Programming & Education</title>
+
+    <meta name="description"
+        content="Explore Technology, Artificial Intelligence, Programming, Education, Health, Travel and Lifestyle blogs on Salman Blogs.">
+
+    <meta name="keywords"
+        content="Salman Blogs, AI Blogs, Technology, Programming, Health, Education, Computer Notes">
+
+    <meta name="author" content="Salman Ahmad">
+
+    <meta name="google-site-verification"
+        content="zPi45rKYY5rzqCxArgqxy7X8dnberJ5anLD6Ir23ttk">
+
+    <!-- Open Graph -->
+
+    <meta property="og:title" content="Salman Blogs">
+    <meta property="og:description"
+        content="Explore Technology, AI, Programming and Educational Blogs.">
+
+    <meta property="og:image"
+        content="https://salmanblogs.com/images/og-home.png">
+
+    <meta property="og:url"
+        content="https://salmanblogs.com">
+
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="Salman Blogs">
+
+    <meta name="twitter:description"
+        content="Technology, AI, Programming and Educational Blogs">
+
+    <meta name="twitter:image"
+        content="https://salmanblogs.com/images/og-home.png">
+
+    <!-- Google Adsense -->
+
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+        crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="favicon.ico">
+
 </head>
+
 <body>
 
-  <header class="navbar">
-  <div class="container">
-    <div class="logo">
-      <span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
-    </div>
-    <div class="nav-toggle" id="navToggle">&#9776;</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="categories.html">Categories</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="privacy-policy.html">Privacy Policy</a></li>
-      <li><a href="terms.html">Terms</a></li>
-    </ul>
-  </div>
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<span class="logo-first">Salman</span>
+
+<span class="logo-last">Blogs</span>
+
+</a>
+
+<nav>
+
+<div class="nav-toggle" id="navToggle">
+    &#9776;
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+<li><a href="terms.html">Terms</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
 </header>
- <main class="main-content">
-  <section class="hero">
-    <h1>Welcome to My Blog website</h1>
-    <p>
-      Explore quality articles on 
-      <span id="changing-word"></span>
-    </p>
-  </section>
-</main>
 
-  <!-- ADDING RECOMMENDED BLOGS. -->
-  <section class="recommended-section">
-    <h2 style="text-align: center;">Recommended Blogs</h2>
-  <div class="container">
-    <div class="recommended-grid">
+<!-- ================= HERO ================= -->
 
-       <!-- Blog Post 1 -->
-      <div class="recommended-card">
-        <img src="images/health/desk-job-fitness.webp" alt="desk-job-fitness" loading="lazy">
-        <h3>How to Stay Fit While Working a Desk Job (Practical Tips)</h3>
-        <p>Learn practical ways to stay active, healthy, and fit even while working long hours at a desk job.</p>
+<section class="hero">
 
-        <a href="how-to-stay-fit-while-working.html" class="read-more">Read More</a>
-      </div>
+<div class="hero-content">
 
-       <!-- Blog Post 2 -->
-      <div class="recommended-card">
-        <img src="images/health/AI-powered-fitness-with-a-virtual-trainer.webp" alt="AI-powered-fitness-with-a-virtual-trainer" loading="lazy">
-       <h3>The Future of Fitness: AI-Powered Workouts in 2025</h3>
-      <p>Discover how artificial intelligence is transforming workouts, making fitness smarter and more personalized.</p>
+<span class="hero-badge">
 
-        <a href="AI-powered-fitness-with-a-virtual-trainer-and-wearable-devices.html" class="read-more">Read More</a>
-      </div>
+🔥 Updated Every Week
 
-      <!-- Blog Post 3 -->
-      <div class="recommended-card">
-          <img src="images/technology/top-10-ai-tools-2026.webp" alt="top-10-ai-tools-2026" loading="lazy">
-          <h3>Top 10 AI Tools You Should Be Using in 2026</h3>
-          <p>Uncover the must-have AI tools of 2026 that boost productivity, creativity, and everyday efficiency.</p>
-        <a href="Top-10-AI-Tools-You-Should-Be-Using-in-2026.html" class="read-more">Read More</a>
-      </div>
-      <!-- Blog Post 4 -->
-      <div class="recommended-card">
-          <img src="images/technology/The-future-of-smartphones-in-2030.webp" alt="The-future-of-smartphones-in-2030" loading="lazy">
-          <h3>The Future of Smartphones: What to Expect by 2030</h3>
-          <p>Don’t get left behind, discover how smartphones will evolve and transform daily life by 2030.</p>
-        <a href="The-Future-of-Smartphones.html" class="read-more">Read More</a>
-      </div>
 
-      <!-- Blog Post 5 -->
-      <div class="recommended-card">
-        <img src="images/education/best-online-courses-high-paying-jobs.webp" alt="online-courses" loading="lazy">
-        <h3>Best Online Courses for High-Paying Jobs in 2025</h3>
-        <p>Explore top online courses in 2025 that can lead to high-paying career opportunities.</p>
-        <a href="Best-Online-Courses-for-High-Paying-Jobs.html" class="read-more">Read More</a>
-      </div>
+</span>
+<br>
+<marquee behavior="scroll" direction="left" scrollamount="10">
+    <strong style="display:block; padding:10px 15px; background:transparent; color:white;  text-align:center; font-size:25px;">
+        ⚠️ Note: I am currently updating my website with a new design. During this period, some features may not work properly. The update is expected to take approximately 2–3 weeks to complete. Thank you for your patience and understanding.
+    </strong>
+</marquee>
+<h1>
 
-      <!-- Blog Post 6 -->
-      <div class="recommended-card">
-        <img src="images/health/why-sleep-important.webp" alt="why-sleep-important" loading="lazy">
-        <h3>Why Sleep Is Your Superpower: Health Benefits You Didn’t Know</h3>
-        <p>Discover how quality sleep boosts your brain, body, and overall health in powerful ways.</p>
-        <a href="Why-Sleep-Is-Your-Superpower.html" class="read-more">Read More</a>
-      </div>
+Learn Something
 
-      <!-- Blog Post 7 -->
-      <div class="recommended-card">
-        <img src="images/lifestyle/morning-routine-2025.webp" alt="Morning-routine-2025" loading="lazy">
-        <h3>How to Build a Morning Routine That Actually Works in 2025</h3>
-        <p>Learn how to create a morning routine in 2025 that boosts energy, focus, and productivity all day long.</p>
-        <a href="How-to-Build-a-Morning-Routine.html" class="read-more">Read More</a>
-      </div>
-    </div>
-  </div>
+<span>New Every Day</span>
+
+</h1>
+
+<p>
+
+Explore high-quality articles about
+
+<span id="changing-word"></span>
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#recommended" class="btn-primary">
+
+Explore Blogs
+
+</a>
+
+<a href="categories.html" class="btn-secondary">
+
+Browse Categories
+
+</a>
+
+</div>
+
+</div>
+
 </section>
-  <footer class="footer">
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="categories.html">Categories</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="terms.html">Terms</a>
-  </div>
-  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+
+<!-- ========================================= -->
+<!-- WHAT WE OFFER -->
+<!-- ========================================= -->
+
+<section class="features">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>What We Offer</span>
+
+            <h2>Learn, Practice & Succeed</h2>
+
+            <p>
+                Salman Blogs provides everything students need to learn Computer Science,
+                improve their skills, and prepare for exams. All in one place.
+            </p>
+
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature-box">
+
+                <div class="feature-icon">📖</div>
+
+                <h3>Free Notes</h3>
+
+                <p>
+                    Access well-organized, easy-to-understand Computer Science notes for
+                    Class 9, 10, and 11 completely free.
+                </p>
+
+            </div>
+
+            <div class="feature-box">
+
+                <div class="feature-icon">📝</div>
+
+                <h3>Online Practice Tests</h3>
+
+                <p>
+                    Take chapter-wise quizzes and practice tests online to strengthen your
+                    understanding and prepare for exams.
+                </p>
+
+            </div>
+
+            <div class="feature-box">
+
+                <div class="feature-icon">⚡</div>
+
+                <h3>Instant Results</h3>
+
+                <p>
+                    Receive your score immediately after completing a test, helping you
+                    identify strengths and areas for improvement.
+                </p>
+
+            </div>
+
+            <div class="feature-box">
+
+                <div class="feature-icon">📥</div>
+
+                <h3>Download Notes</h3>
+
+                <p>
+                    Download high-quality PDF notes anytime and study offline whenever
+                    it is convenient for you.
+                </p>
+
+            </div>
+
+            <div class="feature-box">
+
+                <div class="feature-icon">🎯</div>
+
+                <h3>Exam Preparation</h3>
+
+                <p>
+                    Prepare confidently with chapter notes, solved examples, MCQs,
+                    practice tests, and revision resources designed for students.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FEATURED BLOG ================= -->
+
+<section class="featured-blog">
+
+    <div class="container featured-container">
+
+        <div class="featured-image">
+
+            <img src="images/technology/top-10-ai-tools-2026.webp"
+                alt="Top AI Tools 2026">
+
+        </div>
+
+        <div class="featured-content">
+
+            <span class="section-tag">
+                ⭐ Featured Article
+            </span>
+
+            <h2>
+                Top 10 AI Tools You Should Be Using in 2026
+            </h2>
+
+            <p>
+
+                Artificial Intelligence is changing the world faster than ever.
+                Discover the best AI tools that can boost productivity,
+                creativity, coding, content writing, education and business.
+
+            </p>
+
+            <a href="Top-10-AI-Tools-You-Should-Be-Using-in-2026.html"
+                class="btn-primary">
+
+                Read Full Article
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= COMPUTER NOTES ================= -->
+
+<section class="notes-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>📘 Computer Science Notes</h2>
+
+            <p>
+                Easy notes for students from Class 9 to Class 12.
+            </p>
+
+        </div>
+
+        <div class="notes-grid">
+
+            <a href="9-computer-science.html" class="note-card">
+
+                <div class="note-icon">9</div>
+
+                <h3>Class 9</h3>
+
+                <p>Computer Science Notes</p>
+
+            </a>
+
+            <a href="10-computer-science.html" class="note-card">
+
+                <div class="note-icon">10</div>
+
+                <h3>Class 10</h3>
+
+                <p>Computer Science Notes</p>
+
+            </a>
+
+            <a href="11-computer-science.html" class="note-card">
+
+                <div class="note-icon">11</div>
+
+                <h3>Class 11</h3>
+
+                <p>Computer Science Notes</p>
+
+            </a>
+
+            <a href="#" class="note-card">
+
+                <div class="note-icon">12</div>
+
+                <h3>Class 12</h3>
+
+                <p>Computer Science Notes</p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories-home">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>📂 Browse Categories</h2>
+
+            <p>
+
+                Discover blogs from different topics.
+
+            </p>
+
+        </div>
+
+        <div class="category-grid">
+
+            <a href="technology.html" class="category-box">
+
+                <i class="fas fa-laptop-code"></i>
+
+                <span>Technology</span>
+
+            </a>
+
+            
+            <a href="#" class="category-box">
+
+                <i class="fas fa-graduation-cap"></i>
+
+                <span>Education</span>
+
+            </a>
+
+            <a href="#" class="category-box">
+
+                <i class="fas fa-heartbeat"></i>
+
+                <span>Health</span>
+
+            </a>
+
+            <a href="#" class="category-box">
+
+                <i class="fas fa-plane"></i>
+
+                <span>Travel</span>
+
+            </a>
+
+            <a href="#" class="category-box">
+
+                <i class="fas fa-briefcase"></i>
+
+                <span>Business</span>
+
+            </a>
+
+            <a href="#" class="category-box">
+
+                <i class="fas fa-leaf"></i>
+
+                <span>Lifestyle</span>
+
+            </a>
+
+            <a href="#" class="category-box">
+
+            <i class="fas fa-laptop-code"></i>
+
+            <span>9 Computer Science</span>
+
+            </a>
+
+            <a href="#" class="category-box">
+
+            <i class="fas fa-laptop-code"></i>
+
+            <span>10 Computer Science</span>
+            
+            </a>
+
+            <a href="#" class="category-box">
+
+            <i class="fas fa-laptop-code"></i>
+
+            <span>11 Computer Science</span>
+            
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= TRENDING BLOGS ================= -->
+
+<section class="trending-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>🔥 Trending This Week</h2>
+
+            <p>
+
+                Most popular articles among readers.
+
+            </p>
+
+        </div>
+
+        <div class="trending-grid">
+
+            <div class="trend-card">
+
+                <img src="images/technology/top-10-ai-tools-2026.webp"
+                    alt="AI Tools">
+
+                <h3>Top 10 AI Tools You Should Be Using in 2026</h3>
+
+                <a href="Top-10-AI-Tools-You-Should-Be-Using-in-2026.html">
+
+                    Read More →
+
+                </a>
+
+            </div>
+
+            <div class="trend-card">
+
+                <img src="images/technology/The-future-of-smartphones-in-2030.webp"
+                    alt="Future Smartphones">
+
+                <h3>
+
+                    The Future of Smartphones by 2030
+
+                </h3>
+
+                <a href="The-Future-of-Smartphones.html">
+
+                    Read More →
+
+                </a>
+
+            </div>
+
+            <div class="trend-card">
+
+                <img src="images/lifestyle/morning-routine-2025.webp"
+                    alt="Morning Routine">
+
+                <h3>
+
+                    Morning Routine That Actually Works
+
+                </h3>
+
+                <a href="How-to-Build-a-Morning-Routine.html">
+
+                    Read More →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- RECOMMENDED BLOGS -->
+<!-- ========================================= -->
+
+<section class="recommended-section" id="recommended">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Recommended Articles</span>
+
+            <h2>Latest & Popular Blogs</h2>
+
+            <p>
+                Carefully selected articles to help you learn, grow and stay updated.
+            </p>
+
+        </div>
+
+        <div class="recommended-grid">
+
+            <!-- Blog 1 -->
+
+            <article class="recommended-card">
+
+                <img src="images/health/desk-job-fitness.webp"
+                    alt="Desk Job Fitness">
+
+                <div class="card-content">
+
+                    <span class="category health">
+                        Health
+                    </span>
+
+                    <h3>
+
+                        How to Stay Fit While Working a Desk Job
+
+                    </h3>
+
+                    <p>
+
+                        Practical tips to stay healthy while working long hours.
+
+                    </p>
+
+                    <a href="how-to-stay-fit-while-working.html"
+                        class="read-more">
+
+                        Read Article →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- Blog 2 -->
+
+            <article class="recommended-card">
+
+                <img src="images/health/AI-powered-fitness-with-a-virtual-trainer.webp"
+                    alt="AI Fitness">
+
+                <div class="card-content">
+
+                    <span class="category ai">
+                        AI
+                    </span>
+
+                    <h3>
+
+                        AI Powered Workouts in 2026
+
+                    </h3>
+
+                    <p>
+
+                        Discover how Artificial Intelligence is transforming fitness.
+
+                    </p>
+
+                    <a href="AI-powered-fitness-with-a-virtual-trainer-and-wearable-devices.html"
+                        class="read-more">
+
+                        Read Article →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- Blog 3 -->
+
+            <article class="recommended-card">
+
+                <img src="images/technology/top-10-ai-tools-2026.webp"
+                    alt="AI Tools">
+
+                <div class="card-content">
+
+                    <span class="category technology">
+                        Technology
+                    </span>
+
+                    <h3>
+
+                        Top 10 AI Tools You Should Be Using
+
+                    </h3>
+
+                    <p>
+
+                        Boost productivity using the latest AI tools.
+
+                    </p>
+
+                    <a href="Top-10-AI-Tools-You-Should-Be-Using-in-2026.html"
+                        class="read-more">
+
+                        Read Article →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- Blog 4 -->
+
+            <article class="recommended-card">
+
+                <img src="images/technology/The-future-of-smartphones-in-2030.webp"
+                    alt="Future Smartphones">
+
+                <div class="card-content">
+
+                    <span class="category technology">
+
+                        Technology
+
+                    </span>
+
+                    <h3>
+
+                        The Future of Smartphones by 2030
+
+                    </h3>
+
+                    <p>
+
+                        Discover upcoming innovations in smartphone technology.
+
+                    </p>
+
+                    <a href="The-Future-of-Smartphones.html"
+                        class="read-more">
+
+                        Read Article →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- Blog 5 -->
+
+            <article class="recommended-card">
+
+                <img src="images/education/best-online-courses-high-paying-jobs.webp"
+                    alt="Courses">
+
+                <div class="card-content">
+
+                    <span class="category education">
+
+                        Education
+
+                    </span>
+
+                    <h3>
+
+                        Best Online Courses for High Paying Jobs
+
+                    </h3>
+
+                    <p>
+
+                        Learn the most valuable online skills for your career.
+
+                    </p>
+
+                    <a href="Best-Online-Courses-for-High-Paying-Jobs.html"
+                        class="read-more">
+
+                        Read Article →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- Blog 6 -->
+
+            <article class="recommended-card">
+
+                <img src="images/health/why-sleep-important.webp"
+                    alt="Sleep">
+
+                <div class="card-content">
+
+                    <span class="category health">
+
+                        Health
+
+                    </span>
+
+                    <h3>
+
+                        Why Sleep Is Your Superpower
+
+                    </h3>
+
+                    <p>
+
+                        Amazing health benefits of quality sleep.
+
+                    </p>
+
+                    <a href="Why-Sleep-Is-Your-Superpower.html"
+                        class="read-more">
+
+                        Read Article →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- WHY READ SALMAN BLOGS -->
+<!-- ========================================= -->
+
+<section class="why-us">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Why Choose Us?</span>
+
+            <h2>Why Read Salman Blogs?</h2>
+
+            <p>
+                We provide high-quality articles designed to help students,
+                professionals, and technology enthusiasts learn faster and
+                stay updated.
+            </p>
+
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <div class="why-icon">📚</div>
+
+                <h3>Updated Content</h3>
+
+                <p>
+                    Regularly updated articles covering the latest technology,
+                    education, health, business, and lifestyle topics.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon">✍️</div>
+
+                <h3>Easy Language</h3>
+
+                <p>
+                    Every article is written in simple, easy-to-understand
+                    language so anyone can learn comfortably.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon">💡</div>
+
+                <h3>Practical Guides</h3>
+
+                <p>
+                    Learn through practical tips, real-life examples, and
+                    step-by-step guides that you can apply immediately.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon">🎓</div>
+
+                <h3>Student Friendly</h3>
+
+                <p>
+                    Specially designed content for school, college,
+                    university students, and beginners in programming.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon">🚀</div>
+
+                <h3>Free Learning Resources</h3>
+
+                <p>
+                    Access free tutorials, notes, coding articles, and
+                    educational resources anytime without any cost.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon">⭐</div>
+
+                <h3>Trusted Information</h3>
+
+                <p>
+                    Every article is carefully researched to provide accurate,
+                    reliable, and useful information for readers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================= -->
+<!-- CALL TO ACTION -->
+<!-- ========================================= -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <h2>
+
+            Ready to Explore More?
+
+        </h2>
+
+        <p>
+
+            Read hundreds of informative blogs on technology,
+            AI, education, programming, health and much more.
+
+        </p>
+
+        <a href="categories.html"
+            class="btn-primary">
+
+            Explore Categories
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="#">Technology</a></li>
+
+                <li><a href="#">LifeStyle</a></li>
+
+                <li><a href="#">Health</a></li>
+
+                <li><a href="#">Education</a></li>
+
+                <li><a href="#">Business</a></li>
+
+                <li><a href="#">Travel</a></li>
+
+                <li><a href="#">9 Computer Science</a></li>
+
+                <li><a href="#">10 Computer Science</a></li>
+
+                <li><a href="#">11 Computer Science</a></li>
+
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
 </footer>
-  <script>
-    document.getElementById("navToggle").addEventListener("click", function () {
-    document.getElementById("navLinks").classList.toggle("show");
-    });
-  </script>
 
-  <!-- AUTO TYPING CODE. -->
-   <script>
-const words = ["Technology", "Lifestyle", "Health", "Education", "Business", "Travel",
-  "9 Computer Science", "10 Computer Science"
+<!-- ========================================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================================= -->
+
+<script>
+
+// Mobile Menu
+
+const navToggle = document.getElementById("navToggle");
+
+const navLinks = document.getElementById("navLinks");
+
+navToggle.addEventListener("click", () => {
+
+    navLinks.classList.toggle("show");
+
+});
+
+</script>
+
+<script>
+
+// Typing Effect
+
+const words = [
+
+"Technology",
+
+"LifeStyle",
+
+"Health",
+
+"Education",
+
+"Travel",
+
+"Class 8 Computer",
+
+"Class 9 Computer",
+
+"Class 10 Computer",
+
+"Class 11 Computer"
+
 ];
+
 let wordIndex = 0;
+
 let charIndex = 0;
-let isDeleting = false;
 
-function typeEffect() {
-  const element = document.getElementById("changing-word");
-  const currentWord = words[wordIndex];
+let deleting = false;
 
-  if (!isDeleting) {
-    element.textContent = currentWord.substring(0, charIndex + 1);
-    charIndex++;
+const changingWord = document.getElementById("changing-word");
 
-    if (charIndex === currentWord.length) {
-      isDeleting = true;
-      setTimeout(typeEffect, 1200);
-      return;
-    }
-  } else {
-    element.textContent = currentWord.substring(0, charIndex - 1);
-    charIndex--;
+function typeEffect(){
 
-    if (charIndex === 0) {
-      isDeleting = false;
-      wordIndex = (wordIndex + 1) % words.length;
-    }
-  }
+const current = words[wordIndex];
 
-  setTimeout(typeEffect, isDeleting ? 60 : 100);
+if(!deleting){
+
+changingWord.textContent = current.substring(0,charIndex+1);
+
+charIndex++;
+
+if(charIndex===current.length){
+
+deleting=true;
+
+setTimeout(typeEffect,1200);
+
+return;
+
+}
+
+}else{
+
+changingWord.textContent=current.substring(0,charIndex-1);
+
+charIndex--;
+
+if(charIndex===0){
+
+deleting=false;
+
+wordIndex=(wordIndex+1)%words.length;
+
+}
+
+}
+
+setTimeout(typeEffect,deleting?60:100);
+
 }
 
 typeEffect();
+
 </script>
+
+<script>
+
+// Smooth Scroll
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.querySelector(this.getAttribute("href")).scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+});
+
+});
+
+</script>
+
 </body>
+
 </html>
