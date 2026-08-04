@@ -1,0 +1,2498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Class 10 Computer Science Chapter 1: Operating System (OS) Notes | MCQs, Short Questions & FAQs | Exam Preparation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="notes-post.css">
+
+  <meta name="description" content="Class 10 Computer Science Chapter 1 Notes: Operating System (OS). Complete study material with definitions, types, kernel, shell, OS architecture, device drivers, system libraries, MCQs, short questions, FAQs, and exam preparation notes for FBISE and Punjab Board students." />
+
+<meta name="keywords" content="10th class computer science notes, class 10 computer chapter 1, operating system notes class 10, OS chapter 1 computer science, 10 class computer MCQs, short questions operating system, kernel and shell notes, OS architecture explained, device drivers notes, system libraries computer science, FBISE computer notes, Punjab board computer notes, operating system exam preparation, important questions OS chapter 1, computer science solved MCQs class 10, class 10 computer full notes" />
+
+<meta name="author" content="Salman Ahmad" />
+
+  <link rel="canonical" href="https://salmanblogs.com/10-class-chap-1-lecture-1" />
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+  <!-- Open Graph -->
+<meta property="og:title" content="Class 10 Computer Science Chapter 1: Operating System (OS) Notes | MCQs, Short Questions & FAQs" />
+
+<meta property="og:description" content="Complete Class 10 Computer Science Chapter 1 Notes on Operating System (OS). Includes definitions, types, kernel, shell, OS architecture, device drivers, system libraries, MCQs, short questions, FAQs, and exam preparation for FBISE and Punjab Board students." />
+
+<meta property="og:image" content="https://salmanblogs.com/images/10-CS-IMAGES/CHAPTER-1/10-class-computer-chapter1-lecture1.webp" />
+
+<meta property="og:url" content="https://salmanblogs.com/10-class-chap-1-lecture-1" />
+
+<meta property="og:type" content="article" />
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:title" content="Class 10 Computer Science Chapter 1: Operating System (OS) Notes | MCQs & FAQs" />
+
+<meta name="twitter:description" content="Study Class 10 Computer Chapter 1 Operating System (OS) with complete notes, MCQs, short questions, FAQs, and exam preparation material for FBISE and Punjab Board." />
+
+<meta name="twitter:image" content="https://salmanblogs.com/images/10-CS-IMAGES/CHAPTER-1/10-class-computer-chapter1-lecture1.webp" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Class 10 Computer Science Chapter 1 Operating System Notes",
+  "author": {
+    "@type": "Person",
+    "name": "Salman Ahmad"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Salman Blogs"
+  },
+  "description": "Complete Class 10 Computer Science Chapter 1 Operating System Notes with MCQs, short questions, FAQs and exam preparation material.",
+  "mainEntityOfPage": "https://salmanblogs.com/10-class-chap-1-lecture-1"
+}
+</script>
+
+</head>
+<body>
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<span class="logo-first">Salman</span>
+
+<span class="logo-last">Blogs</span>
+
+</a>
+
+<nav>
+
+<div class="nav-toggle" id="navToggle">
+    &#9776;
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+<li><a href="terms.html">Terms</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="hero-badge">
+
+🔥  Introduction To Python Programming
+
+</span>
+<br>
+<h1>
+
+
+<span>Chapter 3 Notes</span>
+
+</h1>
+
+<p>
+
+ Complete lecture notes covering Entrepreneurship,
+            Digital Marketing, E-commerce, Business Planning,
+            Sustainable Development Goals (SDGs),
+            MCQs, FAQs and Exam Preparation.
+</p>
+
+<div class="hero-buttons">
+
+<a href="categories.html" class="btn-secondary">
+
+Browse Categories
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Introduction To Python </h1>
+    <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>
+    <img src="images/10-CS-IMAGES/CHAPTER-3/10-class-computer-chap-3-introduction-to-python-programming-notes.webp"
+                 alt="10-class-computer-chap-3-introduction-to-python-programming-notes"
+                 loading="lazy">
+
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 10 Computer Science.
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#os">Introduction To Operating System</a></li>
+<li><a href="#os-as-controller">Operating System as the Central Controller</a></li>
+<li><a href="#role">Role in user Hardware Interaction</a></li>
+<li><a href="#responsibilites">Responsibilities in Multi-User Environment Tasks</a></li>
+<li><a href="#user-accounts">Creating and Managing User Accounts</a></li>
+<li><a href="#os-architecture">Architecture of an Operating System</a></li>
+<li><a href="#diagram">Diagram or Structure</a></li>
+<li><a href="kernal-vs-shell">Kernal-VS-Shell</a></li>
+<li><a href="#types-of-shell">Types of Shell</a></li>
+<li><a href="#os-layers">OS Layers and Modular Design</a></li>
+<li><a href="#mcqs">MCQs</a></li>
+<li><a href="#test-mcqs">MCQs for testing</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+  <div class="post-content">
+  </p>
+      <h1 id="what-is-python-programming">What is Python Programming?</h1>
+
+<p>Python is a high-level, easy-to-read programming language used to create software, websites, mobile applications, games, artificial intelligence (AI), data analysis applications, and many other types of programs.</p>
+
+<h2 id="why-is-python-called-versatile">Why is Python Called Versatile?</h2>
+
+<p>Python is called <strong>versatile</strong> because it can be used for many different types of work. Instead of learning a different programming language for every task, you can use Python for a wide variety of applications.</p>
+
+<ul>
+  <li>Web Development</li>
+  <li>Artificial Intelligence (AI)</li>
+  <li>Machine Learning</li>
+  <li>Data Science</li>
+  <li>Data Analysis</li>
+  <li>Automation</li>
+  <li>Game Development</li>
+  <li>Desktop Applications</li>
+  <li>Mobile App Development</li>
+  <li>Cybersecurity</li>
+  <li>Web Scraping</li>
+  <li>Cloud Computing</li>
+  <li>Internet of Things (IoT)</li>
+  <li>Robotics</li>
+  <li>Scientific Computing</li>
+  <li>Software Development</li>
+  <li>Networking</li>
+  <li>Blockchain</li>
+  <li>Image Processing</li>
+  <li>Computer Vision</li>
+</ul>
+
+<h1 id="what-is-computer-programming">What is Computer Programming?</h1>
+
+<p>Computer programming is the process of writing instructions (called <strong>code</strong>) that tell a computer what to do and how to do it.</p>
+
+<p>A computer cannot think or make decisions on its own. It only follows the instructions given by a programmer.</p>
+
+<p>It is also called <strong>coding</strong>, <strong>programming</strong>, or <strong>software</strong> in everyday language.</p>
+
+<h2 id="setting-up-python-development-environment">Setting Up Python Development Environment</h2>
+
+<p>Setting up a Python development environment means installing and configuring the tools needed to write and run Python programs.</p>
+
+<h3>Examples of Python Development Environments</h3>
+
+<p><strong>These tools are commonly called Integrated Development Environments (IDEs).</strong></p>
+
+<ul>
+  <li>Visual Studio Code (VS Code)</li>
+  <li>PyCharm</li>
+  <li>Google Colab (Colab)</li>
+  <li>Jupyter Notebook</li>
+  <li>IDLE</li>
+  <li>Spyder</li>
+</ul>
+
+<h2 id="what-is-google-colab">What is Google Colab?</h2>
+
+<p>Google Colab is a cloud-based Python development environment. It lets you write and run Python code directly in your web browser, so you do not need to install Python on your computer.</p>
+
+<h2 id="python-comments">Python Comments</h2>
+
+<h3>What are Comments?</h3>
+
+<p>Comments are notes written inside a Python program to explain the code. They are ignored by the Python interpreter, so they are not executed.</p>
+
+<h3>Purpose of Comments</h3>
+
+<p>Comments are used to:</p>
+
+<ul>
+  <li>Explain what the code does.</li>
+  <li>Make the code easier to read and understand.</li>
+  <li>Help other programmers understand the program.</li>
+  <li>Remind yourself why you wrote a particular piece of code.</li>
+</ul>
+
+<h3>Types of Comments</h3>
+
+<p>Python mainly has two types of comments:</p>
+
+<h4>1. Single-Line Comment</h4>
+
+<p>A single-line comment starts with the <code>#</code> symbol.</p>
+
+<h5>Syntax</h5>
+
+<pre><code># This is a single-line comment
+</code></pre>
+
+<h5>Example</h5>
+
+<pre><code># Print a welcome message
+print("Welcome")
+</code></pre>
+
+<h4>2. Multi-Line Comment</h4>
+
+<p>Python does not have a special multi-line comment symbol. A common way is to use triple quotes (<code>'''</code> or <code>'''</code>) to write comments that span multiple lines.</p>
+
+<h5>Example</h5>
+
+<pre><code>"""
+This program
+prints a welcome
+message.
+"""
+
+print("Welcome")
+</code></pre>
+
+<h2 id="variables-in-python">Variables in Python</h2>
+
+<h3>What is a Variable?</h3>
+<p>A variable is a named location in memory that is used to store data. The value stored in a variable can be used or changed during the execution of a program.</p>
+
+<h3>Python Variables Example</h3>
+<pre ><code class="language-python">
+x = 55
+y = 66.6
+name = "Salman"
+age = 28
+is_student = True
+
+print(x)
+print(y)
+print(name)
+print(age)
+print(is_student)
+</code></pre>
+
+<p><strong>Output:</strong></p>
+<pre><code>
+55
+66.6
+Salman
+28
+True
+</code></pre>
+
+<h3>Rules for Naming Variables</h3>
+<p>Python has some rules for naming variables.</p>
+
+<h4>1. Variable names must start with a letter or an underscore (_).</h4>
+
+<p><strong>✅ Correct</strong></p>
+<pre><code class="language-python">
+name = "Ali"
+_age = 20
+</code></pre>
+
+<p><strong>❌ Incorrect</strong></p>
+<pre><code class="language-python">
+2name = "Ali"
+</code></pre>
+
+<h4>2. Variable names can contain letters, numbers, and underscores.</h4>
+
+<p><strong>✅ Correct</strong></p>
+<pre><code class="language-python">
+student1 = "Ahmed"
+total_marks = 450
+</code></pre>
+
+<p><strong>❌ Incorrect</strong></p>
+<pre><code class="language-python">
+student-name = "Ahmed"
+</code></pre>
+
+<p><em>(- is not allowed.)</em></p>
+
+<h4>3. Variable names cannot contain spaces.</h4>
+
+<p><strong>✅ Correct</strong></p>
+<pre><code class="language-python">
+first_name = "Ali"
+</code></pre>
+
+<p><strong>❌ Incorrect</strong></p>
+<pre><code class="language-python">
+first name = "Ali"
+</code></pre>
+
+<h4>4. Variable names are case-sensitive.</h4>
+
+<p>This means uppercase and lowercase letters are treated as different names.</p>
+
+<pre><code class="language-python">
+name = "Ali"
+Name = "Ahmed"
+
+print(name)
+print(Name)
+</code></pre>
+
+<p><strong>Output:</strong></p>
+<pre><code>
+Ali
+Ahmed
+</code></pre>
+
+<p><strong>name</strong> and <strong>Name</strong> are two different variables.</p>
+
+<h4>5. Do not use Python keywords as variable names.</h4>
+
+<p><strong>❌ Incorrect</strong></p>
+<pre><code class="language-python">
+if = 10
+class = 5
+</code></pre>
+
+<p>These words are reserved by Python.</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> Reserved words (keywords) are predefined words in Python that have a special meaning. They cannot be used as variable names, function names, or class names.
+</div>
+
+<h2 id="types-of-variables-in-python">Types of Variables in Python</h2>
+
+<p>In Python, variables are commonly classified based on the type of value they store.</p>
+
+<h3>1. Integer (int)</h3>
+
+<p>An integer stores whole numbers (without decimal points).</p>
+
+<h4>Example</h4>
+
+<pre><code>
+age = 20
+marks = 95
+</code></pre>
+
+<h4>Explanation</h4>
+
+<p><strong>20</strong> and <strong>95</strong> are integers because they are whole numbers.</p>
+
+<h3>2. Float (float)</h3>
+
+<p>A float stores decimal numbers.</p>
+
+<h4>Example</h4>
+
+<pre><code>
+height = 5.8
+price = 99.99
+</code></pre>
+
+<h4>Explanation</h4>
+
+<p><strong>5.8</strong> and <strong>99.99</strong> are floats because they contain decimal points.</p>
+
+<h3>3. String (str)</h3>
+
+<p>A string stores text. Text is written inside single (<code>' '</code>) or double (<code>" "</code>) quotes.</p>
+
+<h4>Example</h4>
+
+<pre><code>
+name = "Ali"
+city = 'Lahore'
+</code></pre>
+
+<h4>Explanation</h4>
+
+<p><strong>"Ali"</strong> and <strong>'Lahore'</strong> are strings because they contain text.</p>
+
+<h3>4. Boolean (bool)</h3>
+
+<p>A boolean stores only two values:</p>
+
+<ul>
+  <li><strong>True</strong></li>
+  <li><strong>False</strong></li>
+</ul>
+
+<h4>Example</h4>
+
+<pre><code>
+is_student = True
+is_logged_in = False
+</code></pre>
+
+<h4>Explanation</h4>
+
+<ul>
+  <li><strong>True</strong> means <strong>Yes</strong> or <strong>Correct</strong>.</li>
+  <li><strong>False</strong> means <strong>No</strong> or <strong>Incorrect</strong>.</li>
+</ul>
+
+<h3>Real-Life Example</h3>
+
+<p>Imagine a student registration form.</p>
+
+<pre><code>
+name = "Ali"
+age = 20
+height = 5.8
+is_student = True
+</code></pre>
+
+<p>Here:</p>
+
+<ul>
+  <li><strong>name</strong> → String</li>
+  <li><strong>age</strong> → Integer</li>
+  <li><strong>height</strong> → Float</li>
+  <li><strong>is_student</strong> → Boolean</li>
+</ul>
+
+<p><strong>✅ Correct</strong></p>
+<pre><code class="language-python">
+marks = 90
+student = "Ali"
+</code></pre>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> You can skip the explanation. It is just added for better understanding.
+</div>
+
+<h2 id="input-operation">1. Input Operation</h2>
+
+<p>An input operation allows the user to enter data into a program.</p>
+
+<p>In Python, the <code>input()</code> function is used to take input from the user.</p>
+
+<h3>Input an Integer (int)</h3>
+
+<p>Use <code>int(input())</code> to take a whole number as input.</p>
+
+<pre><code>
+age = int(input("Enter your age: "))
+
+print(age)
+</code></pre>
+
+<p><strong>Sample Output:</strong></p>
+
+<pre><code>
+Enter your age: 20
+20
+</code></pre>
+
+<h3>Input a Float (float)</h3>
+
+<p>Use <code>float(input())</code> to take a decimal number as input.</p>
+
+<pre><code>
+height = float(input("Enter your height: "))
+
+print(height)
+</code></pre>
+
+<p><strong>Sample Output:</strong></p>
+
+<pre><code>
+Enter your height: 5.8
+5.8
+</code></pre>
+
+<h3>Input a String (str)</h3>
+
+<p>Use <code>str(input())</code> to take text as input.</p>
+
+<pre><code>
+name = str(input("Enter your name: "))
+
+print(name)
+</code></pre>
+
+<p><strong>Sample Output:</strong></p>
+
+<pre><code>
+Enter your name: Ali
+Ali
+</code></pre>
+
+<h2 id="output-operation">2. Output Operation</h2>
+
+<p>An output operation displays information to the user.</p>
+
+<p>In Python, the <code>print()</code> function is used to display output.</p>
+
+<h3>Syntax</h3>
+
+<pre><code>
+print(value)
+</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>
+print("Hello, World!")
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+Hello, World!
+</code></pre>
+
+<h2 id="operators-and-expressions-in-python">Operators and Expressions in Python</h2>
+
+<h3>What are Operators?</h3>
+
+<p>Operators are special symbols that perform operations on values or variables.</p>
+
+<h3>Example</h3>
+
+<pre><code>
+a = 10
+b = 5
+
+print(a + b)
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+15
+</code></pre>
+
+<p>Here:</p>
+
+<ul>
+  <li><code>+</code> is the operator.</li>
+  <li>It adds the values of <code>a</code> and <code>b</code>.</li>
+</ul>
+
+<h3>Types of Operators</h3>
+
+<h4>1. Arithmetic Operators</h4>
+
+<p>Arithmetic operators are used to perform mathematical calculations.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Meaning</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>+</code></td>
+      <td>Addition</td>
+      <td>10 + 5 = 15</td>
+    </tr>
+    <tr>
+      <td><code>-</code></td>
+      <td>Subtraction</td>
+      <td>10 - 5 = 5</td>
+    </tr>
+    <tr>
+      <td><code>*</code></td>
+      <td>Multiplication</td>
+      <td>10 * 5 = 50</td>
+    </tr>
+    <tr>
+      <td><code>/</code></td>
+      <td>Division</td>
+      <td>10 / 5 = 2.0</td>
+    </tr>
+    <tr>
+      <td><code>%</code></td>
+      <td>Modulus (Remainder)</td>
+      <td>10 % 3 = 1</td>
+    </tr>
+    <tr>
+      <td><code>**</code></td>
+      <td>Exponent (Power)</td>
+      <td>2 ** 3 = 8</td>
+    </tr>
+    <tr>
+      <td><code>//</code></td>
+      <td>Floor Division</td>
+      <td>10 // 3 = 3</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Python Arithmetic Operators Example</h3>
+
+<pre><code>
+a = 10
+b = 5
+
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+print("Modulus:", a % 3)
+print("Exponent:", 2 ** 3)
+print("Floor Division:", 10 // 3)
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2.0
+Modulus: 1
+Exponent: 8
+Floor Division: 3
+</code></pre>
+
+<h4>2. Comparison (Relational) Operators</h4>
+
+<p>These operators compare two values and return <strong>True</strong> or <strong>False</strong>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Meaning</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>==</code></td>
+      <td>Equal to</td>
+      <td>5 == 5 → True</td>
+    </tr>
+    <tr>
+      <td><code>!=</code></td>
+      <td>Not equal to</td>
+      <td>5 != 3 → True</td>
+    </tr>
+    <tr>
+      <td><code>&gt;</code></td>
+      <td>Greater than</td>
+      <td>10 &gt; 5 → True</td>
+    </tr>
+    <tr>
+      <td><code>&lt;</code></td>
+      <td>Less than</td>
+      <td>5 &lt; 10 → True</td>
+    </tr>
+    <tr>
+      <td><code>&gt;=</code></td>
+      <td>Greater than or equal to</td>
+      <td>10 &gt;= 10 → True</td>
+    </tr>
+    <tr>
+      <td><code>&lt;=</code></td>
+      <td>Less than or equal to</td>
+      <td>5 &lt;= 10 → True</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Python Comparison (Relational) Operators Example</h3>
+
+<pre><code>
+a = 10
+b = 5
+
+print("Equal to:", a == b)
+print("Not equal to:", a != b)
+print("Greater than:", a > b)
+print("Less than:", a < b)
+print("Greater than or equal to:", a >= b)
+print("Less than or equal to:", a <= b)
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+Equal to: False
+Not equal to: True
+Greater than: True
+Less than: False
+Greater than or equal to: True
+Less than or equal to: False
+</code></pre>
+
+<h4>3. Assignment Operators</h4>
+
+<p>These operators assign values to variables.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Meaning</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>=</code></td>
+      <td>Assign</td>
+      <td>x = 10</td>
+    </tr>
+    <tr>
+      <td><code>+=</code></td>
+      <td>Add and assign</td>
+      <td>x += 5</td>
+    </tr>
+    <tr>
+      <td><code>-=</code></td>
+      <td>Subtract and assign</td>
+      <td>x -= 5</td>
+    </tr>
+    <tr>
+      <td><code>*=</code></td>
+      <td>Multiply and assign</td>
+      <td>x *= 2</td>
+    </tr>
+    <tr>
+      <td><code>/=</code></td>
+      <td>Divide and assign</td>
+      <td>x /= 2</td>
+    </tr>
+    <tr>
+      <td><code>%=</code></td>
+      <td>Modulus and assign</td>
+      <td>x %= 3</td>
+    </tr>
+    <tr>
+      <td><code>//=</code></td>
+      <td>Floor divide and assign</td>
+      <td>x //= 2</td>
+    </tr>
+    <tr>
+      <td><code>**=</code></td>
+      <td>Exponent and assign</td>
+      <td>x **= 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Python Assignment Operators Example</h3>
+
+<pre><code>
+x = 10
+x += 5
+print(x)
+
+x = 10
+x -= 5
+print(x)
+
+x = 10
+x *= 2
+print(x)
+
+x = 10
+x /= 2
+print(x)
+
+x = 10
+x %= 3
+print(x)
+
+x = 10
+x //= 3
+print(x)
+
+x = 5
+x **= 2
+print(x)
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+15
+5
+20
+5.0
+1
+3
+25
+</code></pre>
+
+<h4>4. Logical Operators</h4>
+
+<p>Logical operators combine two or more conditions into a single expression and return <strong>True</strong> or <strong>False</strong>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>and</code></td>
+      <td>True if both conditions are True.</td>
+    </tr>
+    <tr>
+      <td><code>or</code></td>
+      <td>True if at least one condition is True.</td>
+    </tr>
+    <tr>
+      <td><code>not</code></td>
+      <td>Reverses the result.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Python Logical Operators Example</h3>
+
+<pre><code>
+x = 10
+y = 5
+
+print(x > 5 and y < 10)
+print(x > 20 or y < 10)
+print(not(x > 5))
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+True
+True
+False
+</code></pre>
+
+<h2 id="operator-precedence-in-python">Operator Precedence in Python</h2>
+
+<h3>What is Operator Precedence?</h3>
+
+<p>Operator precedence is the order in which Python evaluates operators in an expression.</p>
+
+<p><strong>Simple Definition:</strong></p>
+
+<p>Operator precedence is the set of rules that determines which operation is performed first in an expression.</p>
+
+<h3>Operator Precedence Table</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Precedence</th>
+      <th>Operator</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 (Highest)</td>
+      <td><code>()</code></td>
+      <td>Parentheses</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><code>**</code></td>
+      <td>Exponent</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><code>*</code>, <code>/</code>, <code>//</code>, <code>%</code></td>
+      <td>Multiplication, Division, Floor Division, Modulus</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><code>+</code>, <code>-</code></td>
+      <td>Addition, Subtraction</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></td>
+      <td>Comparison Operators</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><code>not</code></td>
+      <td>Logical NOT</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><code>and</code></td>
+      <td>Logical AND</td>
+    </tr>
+    <tr>
+      <td>8 (Lowest)</td>
+      <td><code>or</code></td>
+      <td>Logical OR</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="mcqs">Multiple Choice Questions (MCQs) on Python Programming</h2>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What is Python?</div>
+  <div class="mcq-options">
+    a. A database software<br>
+    b. A high-level programming language<br>
+    c. A web browser<br>
+    d. An operating system
+  </div>
+  <div class="mcq-answer">Answer: b. A high-level programming language</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. Python is mainly used to develop:</div>
+  <div class="mcq-options">
+    a. Only games<br>
+    b. Only websites<br>
+    c. Many different types of applications<br>
+    d. Only mobile apps
+  </div>
+  <div class="mcq-answer">Answer: c. Many different types of applications</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. Why is Python called a versatile language?</div>
+  <div class="mcq-options">
+    a. It works only on Windows<br>
+    b. It can be used for many different purposes<br>
+    c. It is used only for AI<br>
+    d. It supports only one programming style
+  </div>
+  <div class="mcq-answer">Answer: b. It can be used for many different purposes</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. Which of the following is NOT a common use of Python?</div>
+  <div class="mcq-options">
+    a. Data Science<br>
+    b. Artificial Intelligence<br>
+    c. Machine Learning<br>
+    d. Manufacturing Computer Hardware
+  </div>
+  <div class="mcq-answer">Answer: d. Manufacturing Computer Hardware</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. Computer programming is the process of:</div>
+  <div class="mcq-options">
+    a. Repairing computers<br>
+    b. Writing instructions for computers<br>
+    c. Installing software only<br>
+    d. Building hardware
+  </div>
+  <div class="mcq-answer">Answer: b. Writing instructions for computers</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. A computer performs tasks by:</div>
+  <div class="mcq-options">
+    a. Thinking like humans<br>
+    b. Guessing answers<br>
+    c. Following programmed instructions<br>
+    d. Making random decisions
+  </div>
+  <div class="mcq-answer">Answer: c. Following programmed instructions</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. Setting up a Python development environment means:</div>
+  <div class="mcq-options">
+    a. Buying a new computer<br>
+    b. Installing and configuring Python tools<br>
+    c. Learning networking<br>
+    d. Formatting the hard drive
+  </div>
+  <div class="mcq-answer">Answer: b. Installing and configuring Python tools</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. Which of the following is a Python IDE?</div>
+  <div class="mcq-options">
+    a. MS Paint<br>
+    b. Visual Studio Code<br>
+    c. VLC Media Player<br>
+    d. Adobe Photoshop
+  </div>
+  <div class="mcq-answer">Answer: b. Visual Studio Code</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. Google Colab is:</div>
+  <div class="mcq-options">
+    a. A desktop operating system<br>
+    b. A cloud-based Python development environment<br>
+    c. A web browser<br>
+    d. A programming language
+  </div>
+  <div class="mcq-answer">Answer: b. A cloud-based Python development environment</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. Google Colab allows you to:</div>
+  <div class="mcq-options">
+    a. Run Python code in a web browser<br>
+    b. Install Windows<br>
+    c. Build computer hardware<br>
+    d. Design graphics
+  </div>
+  <div class="mcq-answer">Answer: a. Run Python code in a web browser</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. Comments in Python are used to:</div>
+  <div class="mcq-options">
+    a. Execute code faster<br>
+    b. Explain the code<br>
+    c. Store data<br>
+    d. Display output
+  </div>
+  <div class="mcq-answer">Answer: b. Explain the code</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. Python ignores:</div>
+  <div class="mcq-options">
+    a. Variables<br>
+    b. Functions<br>
+    c. Comments<br>
+    d. Strings
+  </div>
+  <div class="mcq-answer">Answer: c. Comments</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. Which symbol starts a single-line comment in Python?</div>
+  <div class="mcq-options">
+    a. //<br>
+    b. /*<br>
+    c. #<br>
+    d. &
+  </div>
+  <div class="mcq-answer">Answer: c. #</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. Multi-line comments are commonly written using:</div>
+  <div class="mcq-options">
+    a. Double slashes //<br>
+    b. Triple quotes<br>
+    c. Parentheses ()<br>
+    d. Square brackets []
+  </div>
+  <div class="mcq-answer">Answer: b. Triple quotes</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. A variable is:</div>
+  <div class="mcq-options">
+    a. A hardware device<br>
+    b. A named location used to store data<br>
+    c. A programming error<br>
+    d. A comment
+  </div>
+  <div class="mcq-answer">Answer: b. A named location used to store data</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">16. Which variable name is valid?</div>
+  <div class="mcq-options">
+    a. 2name<br>
+    b. first name<br>
+    c. _age<br>
+    d. student-name
+  </div>
+  <div class="mcq-answer">Answer: c. _age</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">17. Variable names in Python are:</div>
+  <div class="mcq-options">
+    a. Case-insensitive<br>
+    b. Case-sensitive<br>
+    c. Always uppercase<br>
+    d. Always lowercase
+  </div>
+  <div class="mcq-answer">Answer: b. Case-sensitive</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">18. Which of the following cannot be used as a variable name?</div>
+  <div class="mcq-options">
+    a. total_marks<br>
+    b. student1<br>
+    c. class<br>
+    d. first_name
+  </div>
+  <div class="mcq-answer">Answer: c. class</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">19. Which data type stores whole numbers?</div>
+  <div class="mcq-options">
+    a. float<br>
+    b. string<br>
+    c. int<br>
+    d. bool
+  </div>
+  <div class="mcq-answer">Answer: c. int</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">20. Which data type stores decimal numbers?</div>
+  <div class="mcq-options">
+    a. int<br>
+    b. bool<br>
+    c. float<br>
+    d. str
+  </div>
+  <div class="mcq-answer">Answer: c. float</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">21. Which data type stores text?</div>
+  <div class="mcq-options">
+    a. int<br>
+    b. str<br>
+    c. bool<br>
+    d. float
+  </div>
+  <div class="mcq-answer">Answer: b. str</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">22. Boolean values are:</div>
+  <div class="mcq-options">
+    a. Yes and No<br>
+    b. 1 and 0<br>
+    c. True and False<br>
+    d. High and Low
+  </div>
+  <div class="mcq-answer">Answer: c. True and False</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">23. Which function is used to take input from the user?</div>
+  <div class="mcq-options">
+    a. print()<br>
+    b. input()<br>
+    c. output()<br>
+    d. display()
+  </div>
+  <div class="mcq-answer">Answer: b. input()</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">24. Which function displays output on the screen?</div>
+  <div class="mcq-options">
+    a. input()<br>
+    b. show()<br>
+    c. print()<br>
+    d. echo()
+  </div>
+  <div class="mcq-answer">Answer: c. print()</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">25. Which expression takes an integer input?</div>
+  <div class="mcq-options">
+    a. float(input())<br>
+    b. str(input())<br>
+    c. int(input())<br>
+    d. print(input())
+  </div>
+  <div class="mcq-answer">Answer: c. int(input())</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">26. Operators are:</div>
+  <div class="mcq-options">
+    a. Programming errors<br>
+    b. Special symbols that perform operations<br>
+    c. Comments<br>
+    d. Variables
+  </div>
+  <div class="mcq-answer">Answer: b. Special symbols that perform operations</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">27. Which operator performs addition?</div>
+  <div class="mcq-options">
+    a. -<br>
+    b. *<br>
+    c. +<br>
+    d. %
+  </div>
+  <div class="mcq-answer">Answer: c. +</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">28. Which operator gives the remainder?</div>
+  <div class="mcq-options">
+    a. /<br>
+    b. %<br>
+    c. *<br>
+    d. //
+  </div>
+  <div class="mcq-answer">Answer: b. %</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">29. Which operator is used for exponentiation?</div>
+  <div class="mcq-options">
+    a. ^<br>
+    b. **<br>
+    c. //<br>
+    d. %
+  </div>
+  <div class="mcq-answer">Answer: b. **</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">30. Which operator performs floor division?</div>
+  <div class="mcq-options">
+    a. //<br>
+    b. /<br>
+    c. %<br>
+    d. **
+  </div>
+  <div class="mcq-answer">Answer: a. //</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">31. Which operator checks equality?</div>
+  <div class="mcq-options">
+    a. =<br>
+    b. ==<br>
+    c. !=<br>
+    d. >=
+  </div>
+  <div class="mcq-answer">Answer: b. ==</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">32. Which comparison operator means "Not Equal"?</div>
+  <div class="mcq-options">
+    a. ==<br>
+    b. ><br>
+    c. !=<br>
+    d. <=
+  </div>
+  <div class="mcq-answer">Answer: c. !=</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">33. Which operator is used to assign a value?</div>
+  <div class="mcq-options">
+    a. ==<br>
+    b. =<br>
+    c. +=<br>
+    d. !=
+  </div>
+  <div class="mcq-answer">Answer: b. =</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">34. Which assignment operator adds and assigns a value?</div>
+  <div class="mcq-options">
+    a. -=<br>
+    b. +=<br>
+    c. *=<br>
+    d. /=
+  </div>
+  <div class="mcq-answer">Answer: b. +=</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">35. Which logical operator returns True only if both conditions are True?</div>
+  <div class="mcq-options">
+    a. or<br>
+    b. and<br>
+    c. not<br>
+    d. ==
+  </div>
+  <div class="mcq-answer">Answer: b. and</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">36. Which logical operator returns True if at least one condition is True?</div>
+  <div class="mcq-options">
+    a. and<br>
+    b. or<br>
+    c. not<br>
+    d. %
+  </div>
+  <div class="mcq-answer">Answer: b. or</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">37. The <code>not</code> operator:</div>
+  <div class="mcq-options">
+    a. Adds values<br>
+    b. Multiplies values<br>
+    c. Reverses the logical result<br>
+    d. Assigns values
+  </div>
+  <div class="mcq-answer">Answer: c. Reverses the logical result</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">38. Operator precedence determines:</div>
+  <div class="mcq-options">
+    a. Variable names<br>
+    b. The order of execution of operators<br>
+    c. Output format<br>
+    d. Data types
+  </div>
+  <div class="mcq-answer">Answer: b. The order of execution of operators</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">39. Which operator has the highest precedence in Python?</div>
+  <div class="mcq-options">
+    a. +<br>
+    b. *<br>
+    c. () Parentheses<br>
+    d. and
+  </div>
+  <div class="mcq-answer">Answer: c. () Parentheses</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">40. Which logical operator has the lowest precedence?</div>
+  <div class="mcq-options">
+    a. not<br>
+    b. and<br>
+    c. or<br>
+    d. ==
+  </div>
+  <div class="mcq-answer">Answer: c. or</div>
+</div>
+
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Operating System)</h2>
+
+  <h2 id="mcqs">Multiple Choice Questions (MCQs) on Python Programming</h2>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">1. Which of the following is a feature of Python?</div>
+  <div class="mcq-options">
+    <button>a. Easy-to-read syntax</button>
+    <button>b. Hardware installation</button>
+    <button>c. Computer repair</button>
+    <button>d. Virus scanning</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">2. Python can be used for which of the following?</div>
+  <div class="mcq-options">
+    <button>a. Only web development</button>
+    <button>b. Artificial Intelligence</button>
+    <button>c. Only networking</button>
+    <button>d. Only robotics</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">3. Which field commonly uses Python?</div>
+  <div class="mcq-options">
+    <button>a. Plumbing</button>
+    <button>b. Farming</button>
+    <button>c. Data Analysis</button>
+    <button>d. Carpentry</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">4. Python is commonly used for:</div>
+  <div class="mcq-options">
+    <button>a. Washing clothes</button>
+    <button>b. Cooking food</button>
+    <button>c. Driving cars</button>
+    <button>d. Automation</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">5. Which application can be developed using Python?</div>
+  <div class="mcq-options">
+    <button>a. Desktop Applications</button>
+    <button>b. Television</button>
+    <button>c. Refrigerator</button>
+    <button>d. Keyboard</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">6. Which technology is supported by Python?</div>
+  <div class="mcq-options">
+    <button>a. Painting</button>
+    <button>b. Machine Learning</button>
+    <button>c. Gardening</button>
+    <button>d. Tailoring</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">7. Which of the following is an IDE?</div>
+  <div class="mcq-options">
+    <button>a. MS Word</button>
+    <button>b. Chrome</button>
+    <button>c. Jupyter Notebook</button>
+    <button>d. VLC</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">8. Which IDE comes with Python by default?</div>
+  <div class="mcq-options">
+    <button>a. Eclipse</button>
+    <button>b. Android Studio</button>
+    <button>c. NetBeans</button>
+    <button>d. IDLE</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">9. Google Colab requires:</div>
+  <div class="mcq-options">
+    <button>a. A web browser</button>
+    <button>b. MS Paint</button>
+    <button>c. Photoshop</button>
+    <button>d. Calculator</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">10. Comments help programmers to:</div>
+  <div class="mcq-options">
+    <button>a. Increase RAM</button>
+    <button>b. Understand code</button>
+    <button>c. Compile programs</button>
+    <button>d. Delete files</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">11. Which symbol begins a single-line comment?</div>
+  <div class="mcq-options">
+    <button>a. @</button>
+    <button>b. $</button>
+    <button>c. #</button>
+    <button>d. &</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">12. Multi-line comments are commonly written using:</div>
+  <div class="mcq-options">
+    <button>a. ()</button>
+    <button>b. []</button>
+    <button>c. //</button>
+    <button>d. Triple quotes</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">13. A variable stores:</div>
+  <div class="mcq-options">
+    <button>a. Data</button>
+    <button>b. Hardware</button>
+    <button>c. Printer</button>
+    <button>d. Monitor</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">14. Which variable name is valid?</div>
+  <div class="mcq-options">
+    <button>a. student-name</button>
+    <button>b. student_name</button>
+    <button>c. first name</button>
+    <button>d. 1student</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">15. Which statement about variables is true?</div>
+  <div class="mcq-options">
+    <button>a. They can contain spaces</button>
+    <button>b. They always begin with numbers</button>
+    <button>c. They are case-sensitive</button>
+    <button>d. Keywords can be used</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">16. Which of these is a Python keyword?</div>
+  <div class="mcq-options">
+    <button>a. marks</button>
+    <button>b. total</button>
+    <button>c. student</button>
+    <button>d. if</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">17. Which data type stores text?</div>
+  <div class="mcq-options">
+    <button>a. String</button>
+    <button>b. Integer</button>
+    <button>c. Float</button>
+    <button>d. Boolean</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">18. Which data type stores decimal values?</div>
+  <div class="mcq-options">
+    <button>a. bool</button>
+    <button>b. float</button>
+    <button>c. str</button>
+    <button>d. int</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">19. Which data type stores True or False?</div>
+  <div class="mcq-options">
+    <button>a. float</button>
+    <button>b. string</button>
+    <button>c. bool</button>
+    <button>d. int</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">20. Which data type stores whole numbers?</div>
+  <div class="mcq-options">
+    <button>a. str</button>
+    <button>b. bool</button>
+    <button>c. float</button>
+    <button>d. int</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">21. Which function is used for user input?</div>
+  <div class="mcq-options">
+    <button>a. input()</button>
+    <button>b. print()</button>
+    <button>c. show()</button>
+    <button>d. display()</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">22. Which function displays output?</div>
+  <div class="mcq-options">
+    <button>a. input()</button>
+    <button>b. print()</button>
+    <button>c. write()</button>
+    <button>d. show()</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">23. Which function converts input into an integer?</div>
+  <div class="mcq-options">
+    <button>a. float()</button>
+    <button>b. str()</button>
+    <button>c. int()</button>
+    <button>d. bool()</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">24. Which function converts input into a decimal number?</div>
+  <div class="mcq-options">
+    <button>a. str()</button>
+    <button>b. int()</button>
+    <button>c. bool()</button>
+    <button>d. float()</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">25. Which operator performs subtraction?</div>
+  <div class="mcq-options">
+    <button>a. -</button>
+    <button>b. +</button>
+    <button>c. *</button>
+    <button>d. /</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">26. Which operator performs multiplication?</div>
+  <div class="mcq-options">
+    <button>a. %</button>
+    <button>b. *</button>
+    <button>c. //</button>
+    <button>d. +</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">27. Which operator performs division?</div>
+  <div class="mcq-options">
+    <button>a. %</button>
+    <button>b. //</button>
+    <button>c. /</button>
+    <button>d. **</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">28. Which operator returns the remainder?</div>
+  <div class="mcq-options">
+    <button>a. +</button>
+    <button>b. -</button>
+    <button>c. *</button>
+    <button>d. %</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">29. Which operator means "greater than"?</div>
+  <div class="mcq-options">
+    <button>a. ></button>
+    <button>b. <</button>
+    <button>c. ==</button>
+    <button>d. !=</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">30. Which operator means "less than or equal to"?</div>
+  <div class="mcq-options">
+    <button>a. >=</button>
+    <button>b. <=</button>
+    <button>c. ></button>
+    <button>d. ==</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">31. Which assignment operator multiplies and assigns?</div>
+  <div class="mcq-options">
+    <button>a. +=</button>
+    <button>b. -=</button>
+    <button>c. *=</button>
+    <button>d. /=</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">32. Which assignment operator divides and assigns?</div>
+  <div class="mcq-options">
+    <button>a. +=</button>
+    <button>b. %=</button>
+    <button>c. *=</button>
+    <button>d. /=</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">33. Which logical operator requires both conditions to be True?</div>
+  <div class="mcq-options">
+    <button>a. and</button>
+    <button>b. or</button>
+    <button>c. not</button>
+    <button>d. ==</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">34. Which logical operator is True if one condition is True?</div>
+  <div class="mcq-options">
+    <button>a. and</button>
+    <button>b. or</button>
+    <button>c. ==</button>
+    <button>d. !=</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">35. Which logical operator reverses a Boolean value?</div>
+  <div class="mcq-options">
+    <button>a. and</button>
+    <button>b. or</button>
+    <button>c. not</button>
+    <button>d. =</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">36. Which operator has the highest precedence?</div>
+  <div class="mcq-options">
+    <button>a. +</button>
+    <button>b. *</button>
+    <button>c. **</button>
+    <button>d. ()</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">37. Which operator is evaluated before addition?</div>
+  <div class="mcq-options">
+    <button>a. *</button>
+    <button>b. or</button>
+    <button>c. ==</button>
+    <button>d. +</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">38. Which operator has lower precedence than 'and'?</div>
+  <div class="mcq-options">
+    <button>a. not</button>
+    <button>b. or</button>
+    <button>c. *</button>
+    <button>d. ==</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">39. Which of the following is NOT an arithmetic operator?</div>
+  <div class="mcq-options">
+    <button>a. +</button>
+    <button>b. %</button>
+    <button>c. and</button>
+    <button>d. *</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">40. Which of the following is NOT a comparison operator?</div>
+  <div class="mcq-options">
+    <button>a. ></button>
+    <button>b. ==</button>
+    <button>c. <=</button>
+    <button>d. +=</button>
+  </div>
+</div>
+
+</section>
+
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+
+<h2>Lectures</h2>
+      <strong>Lecture 2 coming soon.</strong>
+      <!-- <ul>
+      <li><a href="9-class-chap-10-lecture-2.html">Previous</a></li>
+      <li><a href="9-class-chap-10-lecture-2.html">Next</a></li>
+      </ul> -->
+      <!-- <h2>Related Posts</h2>
+      <ul>
+        <li><a href="Top-10-Programming-Languages-in-2025.html">Top 10 Programming Languages in 2025</a></li>
+        <li><a href="how-ai-will-replace-and-create-jobs-by-2030.html">How AI Will Replace and Create Jobs by 2030</a></li>
+        <li><a href="Best-Online-Courses-for-High-Paying-Jobs.html">Best Online Courses for High-Paying Jobs in 2025</a></li>
+      </ul> -->
+      
+<h2 id="faqs">FAQs</h2>
+
+<section class="faq-section">
+
+<h2 id="faqs">Python Programming FAQs</h2>
+
+<div class="faq-item">
+  <button class="faq-question">What is Python programming?</button>
+  <div class="faq-answer">
+    <p>Python is a high-level, easy-to-read programming language used to develop websites, software, mobile apps, games, AI applications, and many other types of programs.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Why is Python called a versatile programming language?</button>
+  <div class="faq-answer">
+    <p>Python is called versatile because it can be used for many different tasks such as web development, AI, data science, automation, game development, and more.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is computer programming?</button>
+  <div class="faq-answer">
+    <p>Computer programming is the process of writing instructions (code) that tell a computer what to do and how to perform specific tasks.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a Python development environment?</button>
+  <div class="faq-answer">
+    <p>A Python development environment is a collection of tools used to write, edit, run, and test Python programs.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are some popular Python IDEs?</button>
+  <div class="faq-answer">
+    <p>Popular Python IDEs include Visual Studio Code (VS Code), PyCharm, Google Colab, Jupyter Notebook, IDLE, and Spyder.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is Google Colab?</button>
+  <div class="faq-answer">
+    <p>Google Colab is a cloud-based Python development environment that allows you to write and run Python code directly in a web browser without installing Python.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are comments in Python?</button>
+  <div class="faq-answer">
+    <p>Comments are notes added to Python code to explain its purpose. They are ignored by the Python interpreter and are not executed.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a variable in Python?</button>
+  <div class="faq-answer">
+    <p>A variable is a named memory location used to store data that can be used or changed during program execution.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are the basic data types in Python?</button>
+  <div class="faq-answer">
+    <p>The basic Python data types are Integer (int), Float (float), String (str), and Boolean (bool).</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the input() function in Python?</button>
+  <div class="faq-answer">
+    <p>The input() function is used to receive data entered by the user during program execution.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the print() function used for?</button>
+  <div class="faq-answer">
+    <p>The print() function is used to display output or information on the screen.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are operators in Python?</button>
+  <div class="faq-answer">
+    <p>Operators are special symbols that perform operations on variables and values, such as addition, comparison, and logical operations.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are arithmetic operators?</button>
+  <div class="faq-answer">
+    <p>Arithmetic operators perform mathematical calculations. Examples include +, -, *, /, %, **, and //.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are logical operators in Python?</button>
+  <div class="faq-answer">
+    <p>Logical operators (and, or, not) are used to combine or reverse conditions and return True or False.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is operator precedence in Python?</button>
+  <div class="faq-answer">
+    <p>Operator precedence is the set of rules that determines the order in which Python evaluates operators in an expression.</p>
+  </div>
+</div>
+
+
+</section>
+      
+<h2>Download Notes</h2>
+  <strong>Link not added yet</strong>
+  <!-- <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/10-class/chapter-1/chapter1-lecture1.pdf">
+  Download PDF -->
+</a>
+</div>
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="#">Technology</a></li>
+
+                <li><a href="#">LifeStyle</a></li>
+
+                <li><a href="#">Health</a></li>
+
+                <li><a href="#">Education</a></li>
+
+                <li><a href="#">Business</a></li>
+
+                <li><a href="#">Travel</a></li>
+
+                <li><a href="#">9 Computer Science</a></li>
+
+                <li><a href="#">10 Computer Science</a></li>
+
+                <li><a href="#">11 Computer Science</a></li>
+
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                question.classList.toggle("active");
+
+                const answer = question.nextElementSibling;
+
+                if (answer.style.maxHeight) {
+
+                    answer.style.maxHeight = null;
+
+                } else {
+
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+    
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+const supabase = createClient(
+  "https://pojmeeozeuzqtgrvwgxw.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvam1lZW96ZXV6cXRncnZ3Z3h3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4ODM2MjYsImV4cCI6MjA5NTQ1OTYyNn0.c9sgwAH8ysgayh_dvk_uzNTK5XuUZ1k57Lk_cfzlhbA"
+);
+
+const POST_ID    = "blog-2";
+const ADMIN_PASS = "salman.coding";
+const ADMIN_NAME = "Salman (Admin)";
+
+let isAdmin = false;
+
+/* ── HELPERS ── */
+function esc(s) {
+  return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+function initial(n) { return (n||"?").charAt(0).toUpperCase(); }
+function timeAgo(d) {
+  const s = Math.floor((Date.now() - new Date(d)) / 1000);
+  if (s < 60)    return s + "s ago";
+  if (s < 3600)  return Math.floor(s/60) + "m ago";
+  if (s < 86400) return Math.floor(s/3600) + "h ago";
+  return Math.floor(s/86400) + "d ago";
+}
+
+/* ── ADMIN LOGIN / LOGOUT ── */
+window.adminLogin = function() {
+  if (document.getElementById("admin-pass").value === ADMIN_PASS) {
+    isAdmin = true;
+    document.getElementById("admin-bar").innerHTML =
+      `<span style="color:var(--accent);font-weight:600;font-size:13px;">✓ Admin</span>
+       <button onclick="adminLogout()" style="background:transparent;color:var(--muted);border:1px solid var(--border);font-size:12px;padding:5px 10px;">Logout</button>`;
+    document.getElementById("main").classList.add("admin-mode");
+    loadComments();
+  } else {
+    alert("Wrong password.");
+  }
+};
+
+window.adminLogout = function() {
+  isAdmin = false;
+  document.getElementById("admin-bar").innerHTML = `
+    <span style="font-size:12px;color:var(--muted);">Admin</span>
+    <input id="admin-pass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter') adminLogin()">
+    <button onclick="adminLogin()">Login</button>`;
+  document.getElementById("main").classList.remove("admin-mode");
+  loadComments();
+};
+
+/* ── POST TOP-LEVEL COMMENT (visitor) ── */
+window.postComment = async function() {
+  const name = document.getElementById("pub-name").value.trim();
+  const msg  = document.getElementById("pub-msg").value.trim();
+  if (!name || !msg) { alert("Please enter your name and message."); return; }
+  const { error } = await supabase.from("comments").insert([{
+    name, message: msg, post_id: POST_ID, parent_id: null
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  document.getElementById("pub-msg").value = "";
+  loadComments();
+};
+
+/* ── TOGGLE ADMIN REPLY BOX ── */
+window.showAdminReplyBox = function(id) {
+  if (!isAdmin) return;
+  const el = document.getElementById("arb-" + id);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── ADMIN POST REPLY ── */
+window.postAdminReply = async function(parentId) {
+  if (!isAdmin) return;
+  const ta  = document.getElementById("ari-" + parentId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: ADMIN_NAME, message: msg, post_id: POST_ID, parent_id: parentId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── SHOW VISITOR REPLY-BACK BOX ── */
+// visitorName = name of the original commenter (prefilled, locked)
+window.showVisitorReplyBox = function(adminReplyId, visitorName) {
+  const el = document.getElementById("vrb-" + adminReplyId);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── VISITOR POSTS REPLY-BACK ── */
+window.postVisitorReply = async function(adminReplyId, visitorName) {
+  const ta  = document.getElementById("vri-" + adminReplyId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: visitorName, message: msg, post_id: POST_ID, parent_id: adminReplyId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── BUILD THREAD under a top-level comment ── */
+// Structure: top comment → admin replies → visitor reply-backs (under each admin reply)
+function buildThread(all, topComment) {
+  // Direct admin replies to this top comment
+  const adminReplies = all.filter(c =>
+    c.parent_id === topComment.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    // Visitor replies back to this specific admin reply
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)}
+            <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+          ${isAdmin ? `<span class="admin-reply-btn" onclick="showAdminReplyBox(${vr.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${vr.id}" style="display:none;">
+            <textarea id="ari-${vr.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${vr.id})}"></textarea>
+            <button onclick="postAdminReply(${vr.id})">Send Reply</button>
+          </div>` : ""}
+          ${buildNestedThread(all, vr, topComment.name)}
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <!-- Visitor can reply back only to this admin reply -->
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(topComment.name)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(topComment.name)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(topComment.name)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* Deeper nesting: admin replies to visitor reply-backs */
+function buildNestedThread(all, visitorReply, originalVisitorName) {
+  const adminReplies = all.filter(c =>
+    c.parent_id === visitorReply.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)} <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble" style="margin-top:8px;">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(originalVisitorName)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(originalVisitorName)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(originalVisitorName)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* ── LOAD COMMENTS ── */
+async function loadComments() {
+  const { data, error } = await supabase
+    .from("comments").select("*")
+    .eq("post_id", POST_ID)
+    .order("created_at", { ascending: true });
+
+  const list = document.getElementById("comments-list");
+  if (error) { list.innerHTML = `<div class="empty">Could not load comments.</div>`; return; }
+
+  const all = data || [];
+  const top = all.filter(c => !c.parent_id);
+
+  if (!top.length) { list.innerHTML = `<div class="empty">No comments yet. Be the first!</div>`; return; }
+
+  list.innerHTML = top.map(c => `
+    <div class="comment-card">
+      <div class="comment-row">
+        <div class="avatar">${initial(c.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(c.name)}
+            <span class="comment-time">${timeAgo(c.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(c.message)}</div>
+          <span class="admin-reply-btn" onclick="showAdminReplyBox(${c.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${c.id}" style="display:none;">
+            <textarea id="ari-${c.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${c.id})}"></textarea>
+            <button onclick="postAdminReply(${c.id})">Send Reply</button>
+          </div>
+          ${buildThread(all, c)}
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* ── REALTIME ── */
+supabase.channel("comments-rt")
+  .on("postgres_changes", { event: "INSERT", schema: "public", table: "comments", filter: `post_id=eq.${POST_ID}` },
+    () => loadComments())
+  .subscribe();
+
+loadComments();
+</script>
+
+</body>
+</html>

@@ -9,6 +9,15 @@ html { scroll-behavior: smooth; }
 
 }
 
+.post-container ul {
+    list-style-type: disc !important;
+    padding-left: 20px !important;
+}
+
+.post-container li {
+    display: list-item !important;
+}
+
 .blog-post h1.post-title {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -409,6 +418,31 @@ ul, ol
 
     line-height:1.9;
 
+}
+
+
+/* CODING SETTING. */
+pre {
+    background: #1e1e1e;
+    color: #f8f8f2;
+    padding: 18px;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin: 20px 0;
+    border: 1px solid #333;
+}
+
+pre code {
+    display: block;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    white-space: pre;
+}
+
+/* Optional: Different color for Python code blocks */
+.language-python {
+    color: #f8f8f2;
 }
 
 /* ====================== ADDING COMMENTS =============== */

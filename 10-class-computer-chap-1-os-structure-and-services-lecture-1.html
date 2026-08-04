@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Class 10 Computer Science Chapter 1: Operating System (OS) Notes | MCQs, Short Questions & FAQs | Exam Preparation</title>
+ <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="notes-post.css">
+
   <meta name="description" content="Class 10 Computer Science Chapter 1 Notes: Operating System (OS). Complete study material with definitions, types, kernel, shell, OS architecture, device drivers, system libraries, MCQs, short questions, FAQs, and exam preparation notes for FBISE and Punjab Board students." />
 
 <meta name="keywords" content="10th class computer science notes, class 10 computer chapter 1, operating system notes class 10, OS chapter 1 computer science, 10 class computer MCQs, short questions operating system, kernel and shell notes, OS architecture explained, device drivers notes, system libraries computer science, FBISE computer notes, Punjab board computer notes, operating system exam preparation, important questions OS chapter 1, computer science solved MCQs class 10, class 10 computer full notes" />
 
 <meta name="author" content="Salman Ahmad" />
 
-<title>Class 10 Computer Science Chapter 1: Operating System (OS) Notes | MCQs, Short Questions & FAQs | Exam Preparation</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="about.css">
   <link rel="canonical" href="https://salmanblogs.com/10-class-chap-1-lecture-1" />
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
      crossorigin="anonymous"></script>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121" crossorigin="anonymous"></script>
   <!-- Open Graph -->
 <meta property="og:title" content="Class 10 Computer Science Chapter 1: Operating System (OS) Notes | MCQs, Short Questions & FAQs" />
 
@@ -59,198 +60,96 @@
 
 </head>
 <body>
-<!-- Use of internal CSS. -->
-<style>
-html { scroll-behavior: smooth; }
-.toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
-.toc h2 { margin-top: 0; }
-.toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
-.toc a:hover { color: darkblue; }
-.toc li {list-style-type: none;}
-.post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
 
-ul, ol 
-{
-  margin-left: 20px;
-}
- .mcq-item {
-      background: #f7f7f7;
-      border-left: 4px solid #0077cc; /* same as h2 border color */
-      padding: 15px;
-      margin: 10px 0;
-    }
-
-    .mcq-question {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    .mcq-options {
-      margin-left: 20px;
-      margin-bottom: 10px;
-    }
-
-    .mcq-answer {
-      background: #dbeafe; /* soft blue similar to h2 highlight */
-      border-left: 4px solid #0077cc;
-      padding: 10px;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-    .post-content p
-    {
-      margin: 0;
-    }
-
-
-  .test-mcqs {
-  max-width: 700px;
-  margin: auto;
-}
-.test-mcqs .mcq-item {
-  background: #f7f7f7;
-  border-left: 4px solid #0077cc;
-  padding: 15px;
-  margin: 10px 0;
-}
-.mcq-question {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.mcq-options button {
-  display: block;
-  text-align: left;
-  margin: 5px 0;
-  padding: 8px;
-  width: 100%;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  transition: 0.2s;
-  position: relative;
-  font-size: 16px;
-}
-.mcq-options button.correct {
-  background-color: #d4edda; 
-  border-color: #28a745;
-  color: #155724;
-}
-.mcq-options button.wrong {
-  background-color: #f8d7da; 
-  border-color: #dc3545;
-  color: #721c24;
-}
-.mcq-options button.correct::after {
-  content: " ✅";
-  float: right;
-}
-.mcq-options button.wrong::after {
-  content: " ❌";
-  float: right;
-}
-.mcq-options button:hover {
-  background-color: #e2e6ea;
-}
-
-.test-mcqs h2 {
-  border-left: 5px solid #0077cc;
-  padding-left: 10px;
-  color: #0077cc;
-  margin-bottom: 15px;
-}
-
-.user-info {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-#username {
-  padding: 10px;
-  width: 60%;
-  max-width: 300px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.result-box {
-  text-align: center;
-  margin-top: 20px;
-}
-
-#showResult {
-  padding: 10px 20px;
-  background: #0077cc;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#showResult:hover {
-  background: #005fa3;
-}
-
-#resultText {
-  margin-top: 15px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* Highlight input or MCQ when missing */
-.highlight-unanswered {
-  border: 2px solid #dc3545 !important;
-  background-color: #ffe5e5;
-  border-radius: 5px;
-  padding: 5px;
-  transition: 0.3s;
-}    
-
-/* Back to top button styling */
-  #backToTop {
-    display: none; /* Hidden by default */
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 100;
-    font-size: 30px;
-    background-color: #002959;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 5px 15px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: opacity 0.3s ease;
-  }
-
-  #backToTop:hover {
-    background-color: #0055a5;
-  }
-</style>
+<!-- ================= NAVBAR ================= -->
 
 <header class="navbar">
-  <div class="container">
-    <div class="logo">
-      <span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
-    </div>
-    <div class="nav-toggle" id="navToggle">&#9776;</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="categories.html">Categories</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="privacy-policy.html">Privacy Policy</a></li>
-      <li><a href="terms.html">Terms</a></li>
-    </ul>
-  </div>
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<span class="logo-first">Salman</span>
+
+<span class="logo-last">Blogs</span>
+
+</a>
+
+<nav>
+
+<div class="nav-toggle" id="navToggle">
+    &#9776;
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+<li><a href="terms.html">Terms</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
 </header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="hero-badge">
+
+🔥  Operating System: Structure and Services
+
+</span>
+<br>
+<h1>
+
+
+<span>Chapter 1 Notes</span>
+
+</h1>
+
+<p>
+
+ Complete lecture notes covering Entrepreneurship,
+            Digital Marketing, E-commerce, Business Planning,
+            Sustainable Development Goals (SDGs),
+            MCQs, FAQs and Exam Preparation.
+</p>
+
+<div class="hero-buttons">
+
+<a href="categories.html" class="btn-secondary">
+
+Browse Categories
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
 
 <main class="post-container">
   <article class="blog-post">
     <h1 class="post-title">Operating System Structure and Services Lecture 1 Notes</h1>
     <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>
-    <img src="images/10-CS-IMAGES/CHAPTER-1/10-class-computer-chapter1-lecture1.webp" alt="10-class-computer-chapter1-lecture1" class="post-image" loading="lazy">
+    <img src="images/10-CS-IMAGES/CHAPTER-1/10-class-computer-chapter1-os-structure-and-services-lecture1.webp" alt="10-class-computer-chapter1-os-structure-and-services-notes" class="post-image" loading="lazy">
 
     <p>
     These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
@@ -921,31 +820,167 @@ This is the user-facing layer. It includes the user interface (GUI/CLI), system 
 <!-- Back to Top Arrow -->
 <button id="backToTop" title="Go to top">&#8679;</button>
 
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
 <footer class="footer">
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="categories.html">Categories</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="terms.html">Terms</a>
-  </div>
-  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="#">Technology</a></li>
+
+                <li><a href="#">LifeStyle</a></li>
+
+                <li><a href="#">Health</a></li>
+
+                <li><a href="#">Education</a></li>
+
+                <li><a href="#">Business</a></li>
+
+                <li><a href="#">Travel</a></li>
+
+                <li><a href="#">9 Computer Science</a></li>
+
+                <li><a href="#">10 Computer Science</a></li>
+
+                <li><a href="#">11 Computer Science</a></li>
+
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
 </footer>
+
 
 <script>
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
   navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
 
-  const faqButtons = document.querySelectorAll('.faq-question');
-  faqButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('active');
-      const answer = btn.nextElementSibling;
-      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-    });
-  });
+
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                question.classList.toggle("active");
+
+                const answer = question.nextElementSibling;
+
+                if (answer.style.maxHeight) {
+
+                    answer.style.maxHeight = null;
+
+                } else {
+
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+    
 </script>
 
 <!-- JS FOR MCQs TESTING. -->
@@ -1049,5 +1084,271 @@ document.getElementById("showResult").addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
+
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+const supabase = createClient(
+  "https://pojmeeozeuzqtgrvwgxw.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvam1lZW96ZXV6cXRncnZ3Z3h3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4ODM2MjYsImV4cCI6MjA5NTQ1OTYyNn0.c9sgwAH8ysgayh_dvk_uzNTK5XuUZ1k57Lk_cfzlhbA"
+);
+
+const POST_ID    = "blog-2";
+const ADMIN_PASS = "salman.coding";
+const ADMIN_NAME = "Salman (Admin)";
+
+let isAdmin = false;
+
+/* ── HELPERS ── */
+function esc(s) {
+  return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+function initial(n) { return (n||"?").charAt(0).toUpperCase(); }
+function timeAgo(d) {
+  const s = Math.floor((Date.now() - new Date(d)) / 1000);
+  if (s < 60)    return s + "s ago";
+  if (s < 3600)  return Math.floor(s/60) + "m ago";
+  if (s < 86400) return Math.floor(s/3600) + "h ago";
+  return Math.floor(s/86400) + "d ago";
+}
+
+/* ── ADMIN LOGIN / LOGOUT ── */
+window.adminLogin = function() {
+  if (document.getElementById("admin-pass").value === ADMIN_PASS) {
+    isAdmin = true;
+    document.getElementById("admin-bar").innerHTML =
+      `<span style="color:var(--accent);font-weight:600;font-size:13px;">✓ Admin</span>
+       <button onclick="adminLogout()" style="background:transparent;color:var(--muted);border:1px solid var(--border);font-size:12px;padding:5px 10px;">Logout</button>`;
+    document.getElementById("main").classList.add("admin-mode");
+    loadComments();
+  } else {
+    alert("Wrong password.");
+  }
+};
+
+window.adminLogout = function() {
+  isAdmin = false;
+  document.getElementById("admin-bar").innerHTML = `
+    <span style="font-size:12px;color:var(--muted);">Admin</span>
+    <input id="admin-pass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter') adminLogin()">
+    <button onclick="adminLogin()">Login</button>`;
+  document.getElementById("main").classList.remove("admin-mode");
+  loadComments();
+};
+
+/* ── POST TOP-LEVEL COMMENT (visitor) ── */
+window.postComment = async function() {
+  const name = document.getElementById("pub-name").value.trim();
+  const msg  = document.getElementById("pub-msg").value.trim();
+  if (!name || !msg) { alert("Please enter your name and message."); return; }
+  const { error } = await supabase.from("comments").insert([{
+    name, message: msg, post_id: POST_ID, parent_id: null
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  document.getElementById("pub-msg").value = "";
+  loadComments();
+};
+
+/* ── TOGGLE ADMIN REPLY BOX ── */
+window.showAdminReplyBox = function(id) {
+  if (!isAdmin) return;
+  const el = document.getElementById("arb-" + id);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── ADMIN POST REPLY ── */
+window.postAdminReply = async function(parentId) {
+  if (!isAdmin) return;
+  const ta  = document.getElementById("ari-" + parentId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: ADMIN_NAME, message: msg, post_id: POST_ID, parent_id: parentId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── SHOW VISITOR REPLY-BACK BOX ── */
+// visitorName = name of the original commenter (prefilled, locked)
+window.showVisitorReplyBox = function(adminReplyId, visitorName) {
+  const el = document.getElementById("vrb-" + adminReplyId);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── VISITOR POSTS REPLY-BACK ── */
+window.postVisitorReply = async function(adminReplyId, visitorName) {
+  const ta  = document.getElementById("vri-" + adminReplyId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: visitorName, message: msg, post_id: POST_ID, parent_id: adminReplyId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── BUILD THREAD under a top-level comment ── */
+// Structure: top comment → admin replies → visitor reply-backs (under each admin reply)
+function buildThread(all, topComment) {
+  // Direct admin replies to this top comment
+  const adminReplies = all.filter(c =>
+    c.parent_id === topComment.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    // Visitor replies back to this specific admin reply
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)}
+            <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+          ${isAdmin ? `<span class="admin-reply-btn" onclick="showAdminReplyBox(${vr.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${vr.id}" style="display:none;">
+            <textarea id="ari-${vr.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${vr.id})}"></textarea>
+            <button onclick="postAdminReply(${vr.id})">Send Reply</button>
+          </div>` : ""}
+          ${buildNestedThread(all, vr, topComment.name)}
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <!-- Visitor can reply back only to this admin reply -->
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(topComment.name)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(topComment.name)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(topComment.name)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* Deeper nesting: admin replies to visitor reply-backs */
+function buildNestedThread(all, visitorReply, originalVisitorName) {
+  const adminReplies = all.filter(c =>
+    c.parent_id === visitorReply.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)} <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble" style="margin-top:8px;">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(originalVisitorName)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(originalVisitorName)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(originalVisitorName)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* ── LOAD COMMENTS ── */
+async function loadComments() {
+  const { data, error } = await supabase
+    .from("comments").select("*")
+    .eq("post_id", POST_ID)
+    .order("created_at", { ascending: true });
+
+  const list = document.getElementById("comments-list");
+  if (error) { list.innerHTML = `<div class="empty">Could not load comments.</div>`; return; }
+
+  const all = data || [];
+  const top = all.filter(c => !c.parent_id);
+
+  if (!top.length) { list.innerHTML = `<div class="empty">No comments yet. Be the first!</div>`; return; }
+
+  list.innerHTML = top.map(c => `
+    <div class="comment-card">
+      <div class="comment-row">
+        <div class="avatar">${initial(c.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(c.name)}
+            <span class="comment-time">${timeAgo(c.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(c.message)}</div>
+          <span class="admin-reply-btn" onclick="showAdminReplyBox(${c.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${c.id}" style="display:none;">
+            <textarea id="ari-${c.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${c.id})}"></textarea>
+            <button onclick="postAdminReply(${c.id})">Send Reply</button>
+          </div>
+          ${buildThread(all, c)}
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* ── REALTIME ── */
+supabase.channel("comments-rt")
+  .on("postgres_changes", { event: "INSERT", schema: "public", table: "comments", filter: `post_id=eq.${POST_ID}` },
+    () => loadComments())
+  .subscribe();
+
+loadComments();
+</script>
+
 </body>
 </html>

@@ -8,7 +8,7 @@
   <meta name="author" content="Salman Ahmad" />
   <title>Subfields of Artificial Intelligence (AI) — Notes, Examples & MCQs | Salman Blogs</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="notes-post.css">
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
      crossorigin="anonymous"></script>
@@ -28,360 +28,264 @@
 </head>
 <body>
 
-<!-- Use of internal CSS. -->
-<style>
-html { scroll-behavior: smooth; }
-
-.post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
-
- .mcq-item {
-      background: #f7f7f7;
-      border-left: 4px solid #0077cc; /* same as h2 border color */
-      padding: 15px;
-      margin: 10px 0;
-    }
-
-    .mcq-question {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    .mcq-options {
-      margin-left: 20px;
-      margin-bottom: 10px;
-    }
-
-    .mcq-answer {
-      background: #dbeafe; /* soft blue similar to h2 highlight */
-      border-left: 4px solid #0077cc;
-      padding: 10px;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-    .post-content p
-    {
-      margin: 0;
-    }
-
-
-  .test-mcqs {
-  max-width: 700px;
-  margin: auto;
-}
-.test-mcqs .mcq-item {
-  background: #f7f7f7;
-  border-left: 4px solid #0077cc;
-  padding: 15px;
-  margin: 10px 0;
-}
-.mcq-question {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.mcq-options button {
-  display: block;
-  text-align: left;
-  margin: 5px 0;
-  padding: 8px;
-  width: 100%;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  transition: 0.2s;
-  position: relative;
-  font-size: 16px;
-}
-.mcq-options button.correct {
-  background-color: #d4edda; 
-  border-color: #28a745;
-  color: #155724;
-}
-.mcq-options button.wrong {
-  background-color: #f8d7da; 
-  border-color: #dc3545;
-  color: #721c24;
-}
-.mcq-options button.correct::after {
-  content: " ✅";
-  float: right;
-}
-.mcq-options button.wrong::after {
-  content: " ❌";
-  float: right;
-}
-.mcq-options button:hover {
-  background-color: #e2e6ea;
-}
-
-.test-mcqs h2 {
-  border-left: 5px solid #0077cc;
-  padding-left: 10px;
-  color: #0077cc;
-  margin-bottom: 15px;
-}
-
-.user-info {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-#username {
-  padding: 10px;
-  width: 60%;
-  max-width: 300px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.result-box {
-  text-align: center;
-  margin-top: 20px;
-}
-
-#showResult {
-  padding: 10px 20px;
-  background: #0077cc;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#showResult:hover {
-  background: #005fa3;
-}
-
-#resultText {
-  margin-top: 15px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* Highlight input or MCQ when missing */
-.highlight-unanswered {
-  border: 2px solid #dc3545 !important;
-  background-color: #ffe5e5;
-  border-radius: 5px;
-  padding: 5px;
-  transition: 0.3s;
-}    
-
-/* Back to top button styling */
-  #backToTop {
-    display: none; /* Hidden by default */
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 100;
-    font-size: 30px;
-    background-color: #002959;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 5px 15px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: opacity 0.3s ease;
-  }
-
-  #backToTop:hover {
-    background-color: #0055a5;
-  }
-</style>
+<!-- ================= NAVBAR ================= -->
 
 <header class="navbar">
-  <div class="container">
-    <div class="logo">
-      <span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
-    </div>
-    <div class="nav-toggle" id="navToggle">&#9776;</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="categories.html">Categories</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="privacy-policy.html">Privacy Policy</a></li>
-      <li><a href="terms.html">Terms</a></li>
-    </ul>
-  </div>
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<span class="logo-first">Salman</span>
+
+<span class="logo-last">Blogs</span>
+
+</a>
+
+<nav>
+
+<div class="nav-toggle" id="navToggle">
+    &#9776;
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+<li><a href="terms.html">Terms</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
 </header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="hero-badge">
+
+🔥  Daily Test Class 9th
+
+</span>
+<br>
+<h1>
+
+
+<span>Chapter 9 Notes</span>
+
+</h1>
+
+<p>
+
+ Complete lecture notes covering Entrepreneurship,
+            Digital Marketing, E-commerce, Business Planning,
+            Sustainable Development Goals (SDGs),
+            MCQs, FAQs and Exam Preparation.
+</p>
+
+<div class="hero-buttons">
+
+<a href="categories.html" class="btn-secondary">
+
+Browse Categories
+
+</a>
+
+</div>
+
+</div>
+
+</section>
 
 <main class="post-container">
   <article class="blog-post">
-     <h1 class="post-title">Ethical Social and Legal Concern in Computer Usage</h1>
+     <h1 class="post-title">Daily Test [Class 9]</h1>
     <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
     <img src="images/daily-test.webp" alt="chapter-10-lecture2-notes" class="post-image" />
     <p>
     These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
         The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
     </p>
-
-    <h2 id="mcqs">Practice MCQs</h2>
+    
+<h2 id="mcqs">Practice MCQs</h2>
 
 <div class="mcq-item">
-  <div class="mcq-question">1. Why is it important to use a strong password?</div>
+  <div class="mcq-question">1. What should you do before posting anything on social media?</div>
   <div class="mcq-options">
-    a. To make typing easier<br>
-    b. To protect accounts from unauthorized access<br>
-    c. To increase internet speed<br>
-    d. To save battery life
+    a. Post quickly without thinking<br>
+    b. Think carefully before posting<br>
+    c. Share only random content<br>
+    d. Avoid using internet
   </div>
-  <div class="mcq-answer">Answer: b. To protect accounts from unauthorized access</div>
+  <div class="mcq-answer">Answer: b. Think carefully before posting</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">2. Which of the following is an example of a strong password?</div>
+  <div class="mcq-question">2. Why should you be careful about what you share online?</div>
   <div class="mcq-options">
-    a. 123456<br>
-    b. password<br>
-    c. Ali@2026#Safe<br>
-    d. qwerty
+    a. It can increase storage<br>
+    b. It can be difficult to remove completely<br>
+    c. It improves internet speed<br>
+    d. It deletes old messages automatically
   </div>
-  <div class="mcq-answer">Answer: c. Ali@2026#Safe</div>
+  <div class="mcq-answer">Answer: b. It can be difficult to remove completely</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">3. What does 2FA stand for?</div>
+  <div class="mcq-question">3. Which of the following should NOT be shared publicly on social media?</div>
   <div class="mcq-options">
-    a. Two-Factor Authentication<br>
-    b. Two File Access<br>
-    c. Double Function Account<br>
-    d. Two Form Application
+    a. Your favorite food<br>
+    b. Your home address<br>
+    c. Your hobby<br>
+    d. Your interests
   </div>
-  <div class="mcq-answer">Answer: a. Two-Factor Authentication</div>
+  <div class="mcq-answer">Answer: b. Your home address</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">4. Why is Two-Factor Authentication important?</div>
+  <div class="mcq-question">4. What is a possible risk of opening emails from unknown senders?</div>
   <div class="mcq-options">
-    a. It decorates the account<br>
-    b. It adds an extra layer of security<br>
-    c. It speeds up downloads<br>
-    d. It reduces storage space
+    a. Faster internet<br>
+    b. Viruses or scams<br>
+    c. Better storage<br>
+    d. Improved battery life
   </div>
-  <div class="mcq-answer">Answer: b. It adds an extra layer of security</div>
+  <div class="mcq-answer">Answer: b. Viruses or scams</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">5. Why should sensitive transactions be avoided on public Wi-Fi?</div>
+  <div class="mcq-question">5. What should you avoid in suspicious emails?</div>
   <div class="mcq-options">
-    a. Public Wi-Fi is always slow<br>
-    b. Public Wi-Fi may not be secure<br>
-    c. Public Wi-Fi uses more battery<br>
-    d. Public Wi-Fi blocks websites
+    a. Reading carefully<br>
+    b. Opening strange links or attachments<br>
+    c. Checking sender name<br>
+    d. Reporting spam
   </div>
-  <div class="mcq-answer">Answer: b. Public Wi-Fi may not be secure</div>
+  <div class="mcq-answer">Answer: b. Opening strange links or attachments</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">6. Which activity is safest on a public Wi-Fi network?</div>
+  <div class="mcq-question">6. What is the main purpose of cloud services?</div>
   <div class="mcq-options">
-    a. Online banking<br>
-    b. Shopping with credit cards<br>
-    c. Browsing public news websites<br>
-    d. Entering passwords
+    a. Playing offline games<br>
+    b. Storing files online and accessing them anywhere<br>
+    c. Blocking emails<br>
+    d. Increasing phone battery
   </div>
-  <div class="mcq-answer">Answer: c. Browsing public news websites</div>
+  <div class="mcq-answer">Answer: b. Storing files online and accessing them anywhere</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">7. What is a common sign of an online scam?</div>
+  <div class="mcq-question">7. Which of the following is an example of a cloud service?</div>
   <div class="mcq-options">
-    a. Official security updates<br>
-    b. Messages asking for personal information urgently<br>
-    c. Educational websites<br>
-    d. Password manager apps
+    a. Microsoft Paint<br>
+    b. Google Drive<br>
+    c. Calculator<br>
+    d. Notepad
   </div>
-  <div class="mcq-answer">Answer: b. Messages asking for personal information urgently</div>
+  <div class="mcq-answer">Answer: b. Google Drive</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">8. What should you do if you receive a suspicious email link?</div>
+  <div class="mcq-question">8. Why should you use strong passwords?</div>
   <div class="mcq-options">
-    a. Click it immediately<br>
-    b. Share it with friends<br>
-    c. Ignore or verify it before clicking<br>
-    d. Download all attachments
+    a. To make apps faster<br>
+    b. To protect your accounts and data<br>
+    c. To reduce internet usage<br>
+    d. To improve screen brightness
   </div>
-  <div class="mcq-answer">Answer: c. Ignore or verify it before clicking</div>
+  <div class="mcq-answer">Answer: b. To protect your accounts and data</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">9. Why is it important to regularly review account activity?</div>
+  <div class="mcq-question">9. What should you avoid storing carelessly online?</div>
   <div class="mcq-options">
-    a. To change profile colors<br>
-    b. To detect unauthorized activities<br>
-    c. To increase internet speed<br>
-    d. To update device hardware
+    a. Public posts<br>
+    b. Sensitive information<br>
+    c. Pictures of nature<br>
+    d. Music files
   </div>
-  <div class="mcq-answer">Answer: b. To detect unauthorized activities</div>
+  <div class="mcq-answer">Answer: b. Sensitive information</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">10. What should you do if you notice unusual activity in your account?</div>
+  <div class="mcq-question">10. Where should you download apps from?</div>
   <div class="mcq-options">
-    a. Ignore it<br>
-    b. Delete the account immediately<br>
-    c. Change the password and report the issue<br>
-    d. Share the account details online
+    a. Unknown websites<br>
+    b. Random links<br>
+    c. Official platforms<br>
+    d. Email attachments
   </div>
-  <div class="mcq-answer">Answer: c. Change the password and report the issue</div>
+  <div class="mcq-answer">Answer: c. Official platforms</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">11. Why is backing up important data necessary?</div>
+  <div class="mcq-question">11. Which is a safe example of an app store?</div>
   <div class="mcq-options">
-    a. To make devices heavier<br>
-    b. To recover information if data is lost<br>
-    c. To reduce internet security<br>
-    d. To delete old files automatically
+    a. Google Play Store<br>
+    b. Unknown APK site<br>
+    c. Random download page<br>
+    d. Pop-up ads
   </div>
-  <div class="mcq-answer">Answer: b. To recover information if data is lost</div>
+  <div class="mcq-answer">Answer: a. Google Play Store</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">12. Which is a good place to store data backups?</div>
+  <div class="mcq-question">12. What should you check before downloading an app?</div>
   <div class="mcq-options">
-    a. Only on one device<br>
-    b. On cloud storage or external drives<br>
-    c. In temporary files<br>
-    d. In browser history
+    a. Color of icon only<br>
+    b. Ratings and permissions<br>
+    c. Phone wallpaper<br>
+    d. Internet speed
   </div>
-  <div class="mcq-answer">Answer: b. On cloud storage or external drives</div>
+  <div class="mcq-answer">Answer: b. Ratings and permissions</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">13. Which of the following is NOT a secure digital practice?</div>
+  <div class="mcq-question">13. What is a risk of using unsafe apps?</div>
   <div class="mcq-options">
-    a. Using strong passwords<br>
-    b. Sharing OTPs with strangers<br>
-    c. Enabling 2FA<br>
-    d. Backing up data
+    a. Better performance<br>
+    b. Malicious software<br>
+    c. Faster updates<br>
+    d. More storage space
   </div>
-  <div class="mcq-answer">Answer: b. Sharing OTPs with strangers</div>
+  <div class="mcq-answer">Answer: b. Malicious software</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">14. What is the safest way to protect online accounts?</div>
+  <div class="mcq-question">14. What should you do with suspicious links in emails?</div>
   <div class="mcq-options">
-    a. Using the same password everywhere<br>
-    b. Using weak passwords<br>
-    c. Using strong passwords and 2FA<br>
-    d. Logging in on public computers only
+    a. Open immediately<br>
+    b. Ignore or avoid them<br>
+    c. Share with friends<br>
+    d. Download them
   </div>
-  <div class="mcq-answer">Answer: c. Using strong passwords and 2FA</div>
+  <div class="mcq-answer">Answer: b. Ignore or avoid them</div>
 </div>
 
 <div class="mcq-item">
-  <div class="mcq-question">15. What is the main purpose of secure digital practices?</div>
+  <div class="mcq-question">15. What is an important rule for online safety?</div>
   <div class="mcq-options">
-    a. To improve gaming performance<br>
-    b. To protect personal information and accounts<br>
-    c. To increase screen brightness<br>
-    d. To reduce file sizes
+    a. Share all information freely<br>
+    b. Use weak passwords<br>
+    c. Use internet responsibly and safely<br>
+    d. Install every available app
   </div>
-  <div class="mcq-answer">Answer: b. To protect personal information and accounts</div>
+  <div class="mcq-answer">Answer: c. Use internet responsibly and safely</div>
 </div>
 
 <div class="user-info">
@@ -389,155 +293,155 @@ html { scroll-behavior: smooth; }
 </div>
 
 <section class="test-mcqs" id="test-mcqs">
-  <h2>Test Yourself: Interactive MCQs (Use of Secure Digital Platform)</h2>
+  <h2>Practice MCQs: Online Behavior & Safety</h2>
 
   <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">1. Why should you use a strong password?</div>
+    <div class="mcq-question">1. What should you do before posting on social media?</div>
     <div class="mcq-options">
-      <button>a. To increase internet speed</button>
-      <button>b. To protect accounts from unauthorized access</button>
-      <button>c. To charge the battery faster</button>
-      <button>d. To reduce storage space</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="c">
-    <div class="mcq-question">2. Which of the following is a strong password?</div>
-    <div class="mcq-options">
-      <button>a. 123456</button>
-      <button>b. password</button>
-      <button>c. Safe@2026#User</button>
-      <button>d. abc123</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="a">
-    <div class="mcq-question">3. What does 2FA stand for?</div>
-    <div class="mcq-options">
-      <button>a. Two-Factor Authentication</button>
-      <button>b. Two File Access</button>
-      <button>c. Two Function Application</button>
-      <button>d. Two Fast Accounts</button>
+      <button>a. Post quickly without thinking</button>
+      <button>b. Think carefully before posting</button>
+      <button>c. Share everything publicly</button>
+      <button>d. Avoid using internet</button>
     </div>
   </div>
 
   <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">4. What is the purpose of Two-Factor Authentication?</div>
+    <div class="mcq-question">2. Why should you think before posting online?</div>
     <div class="mcq-options">
-      <button>a. To decorate user profiles</button>
-      <button>b. To add extra security to accounts</button>
-      <button>c. To make devices faster</button>
-      <button>d. To reduce internet costs</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="c">
-    <div class="mcq-question">5. Why should sensitive transactions be avoided on public Wi-Fi?</div>
-    <div class="mcq-options">
-      <button>a. Public Wi-Fi is expensive</button>
-      <button>b. Public Wi-Fi blocks websites</button>
-      <button>c. Public Wi-Fi may not be secure</button>
-      <button>d. Public Wi-Fi damages devices</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="a">
-    <div class="mcq-question">6. Which activity is safer on public Wi-Fi?</div>
-    <div class="mcq-options">
-      <button>a. Reading online news</button>
-      <button>b. Online banking</button>
-      <button>c. Entering passwords</button>
-      <button>d. Shopping with credit cards</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="d">
-    <div class="mcq-question">7. Which of the following may indicate an online scam?</div>
-    <div class="mcq-options">
-      <button>a. Educational content</button>
-      <button>b. Official software updates</button>
-      <button>c. Trusted websites</button>
-      <button>d. Urgent requests for personal information</button>
+      <button>a. It increases storage</button>
+      <button>b. Shared content is hard to remove</button>
+      <button>c. It speeds up internet</button>
+      <button>d. It deletes old posts automatically</button>
     </div>
   </div>
 
   <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">8. What should you do before clicking a suspicious link?</div>
+    <div class="mcq-question">3. What should NOT be shared publicly on social media?</div>
     <div class="mcq-options">
-      <button>a. Share it with others</button>
-      <button>b. Verify the source first</button>
-      <button>c. Download attachments immediately</button>
-      <button>d. Ignore all emails forever</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="c">
-    <div class="mcq-question">9. Why should you regularly review account activity?</div>
-    <div class="mcq-options">
-      <button>a. To increase device speed</button>
-      <button>b. To change wallpapers</button>
-      <button>c. To detect unauthorized access</button>
-      <button>d. To improve battery timing</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="a">
-    <div class="mcq-question">10. What should you do if you notice unusual account activity?</div>
-    <div class="mcq-options">
-      <button>a. Change your password immediately</button>
-      <button>b. Ignore the activity</button>
-      <button>c. Share your account details</button>
-      <button>d. Turn off your device forever</button>
-    </div>
-  </div>
-
-  <div class="mcq-item" data-answer="d">
-    <div class="mcq-question">11. Why is backing up important data useful?</div>
-    <div class="mcq-options">
-      <button>a. To increase screen brightness</button>
-      <button>b. To slow down devices</button>
-      <button>c. To delete files automatically</button>
-      <button>d. To recover lost information</button>
+      <button>a. Favorite food</button>
+      <button>b. Home address</button>
+      <button>c. Hobbies</button>
+      <button>d. Interests</button>
     </div>
   </div>
 
   <div class="mcq-item" data-answer="b">
-    <div class="mcq-question">12. Which is a good option for storing backups?</div>
+    <div class="mcq-question">4. What is a risk of unknown emails?</div>
     <div class="mcq-options">
-      <button>a. Temporary browser files</button>
-      <button>b. Cloud storage or external drives</button>
-      <button>c. Recycle bin only</button>
-      <button>d. Social media accounts</button>
+      <button>a. Faster internet</button>
+      <button>b. Viruses or scams</button>
+      <button>c. Extra storage</button>
+      <button>d. Better performance</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">5. What should you avoid in suspicious emails?</div>
+    <div class="mcq-options">
+      <button>a. Reading carefully</button>
+      <button>b. Opening unknown links or attachments</button>
+      <button>c. Checking sender</button>
+      <button>d. Reporting spam</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">6. What is the main purpose of cloud services?</div>
+    <div class="mcq-options">
+      <button>a. Playing offline games</button>
+      <button>b. Storing files online and accessing anywhere</button>
+      <button>c. Blocking internet</button>
+      <button>d. Increasing battery life</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">7. Which is an example of cloud service?</div>
+    <div class="mcq-options">
+      <button>a. Calculator</button>
+      <button>b. Google Drive</button>
+      <button>c. Paint software</button>
+      <button>d. Notepad</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">8. Why should you use strong passwords?</div>
+    <div class="mcq-options">
+      <button>a. To make apps faster</button>
+      <button>b. To protect accounts and data</button>
+      <button>c. To reduce internet usage</button>
+      <button>d. To improve brightness</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">9. What should be avoided storing carelessly online?</div>
+    <div class="mcq-options">
+      <button>a. Photos</button>
+      <button>b. Sensitive information</button>
+      <button>c. Music</button>
+      <button>d. Videos</button>
     </div>
   </div>
 
   <div class="mcq-item" data-answer="c">
-    <div class="mcq-question">13. Which practice is NOT secure?</div>
+    <div class="mcq-question">10. Where should apps be downloaded from?</div>
     <div class="mcq-options">
-      <button>a. Using 2FA</button>
-      <button>b. Backing up data</button>
-      <button>c. Sharing OTPs with strangers</button>
-      <button>d. Using strong passwords</button>
+      <button>a. Random websites</button>
+      <button>b. Unknown links</button>
+      <button>c. Official app stores</button>
+      <button>d. Email attachments</button>
     </div>
   </div>
 
   <div class="mcq-item" data-answer="a">
-    <div class="mcq-question">14. What is the safest way to secure online accounts?</div>
+    <div class="mcq-question">11. Which is a safe app store?</div>
     <div class="mcq-options">
-      <button>a. Using strong passwords and 2FA</button>
-      <button>b. Using the same password everywhere</button>
-      <button>c. Avoiding password changes</button>
-      <button>d. Logging in on public computers</button>
+      <button>a. Google Play Store</button>
+      <button>b. Unknown APK site</button>
+      <button>c. Pop-up ads</button>
+      <button>d. Random downloads</button>
     </div>
   </div>
 
-  <div class="mcq-item" data-answer="d">
-    <div class="mcq-question">15. What is the main goal of secure digital practices?</div>
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">12. What should you check before installing an app?</div>
     <div class="mcq-options">
-      <button>a. To improve gaming</button>
-      <button>b. To increase storage space</button>
-      <button>c. To reduce internet speed</button>
-      <button>d. To protect personal information and accounts</button>
+      <button>a. Wallpaper</button>
+      <button>b. Ratings and permissions</button>
+      <button>c. Internet speed</button>
+      <button>d. Battery level</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">13. What is a risk of unsafe apps?</div>
+    <div class="mcq-options">
+      <button>a. Better performance</button>
+      <button>b. Malware or viruses</button>
+      <button>c. Faster updates</button>
+      <button>d. More storage</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. What should you do with suspicious links?</div>
+    <div class="mcq-options">
+      <button>a. Open immediately</button>
+      <button>b. Avoid them</button>
+      <button>c. Share with friends</button>
+      <button>d. Download them</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">15. What is good online behavior?</div>
+    <div class="mcq-options">
+      <button>a. Share everything</button>
+      <button>b. Use weak passwords</button>
+      <button>c. Use internet safely and responsibly</button>
+      <button>d. Install all apps</button>
     </div>
   </div>
 
@@ -555,17 +459,135 @@ html { scroll-behavior: smooth; }
 <!-- Back to Top Arrow -->
 <button id="backToTop" title="Go to top">&#8679;</button>
 
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
 <footer class="footer">
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="categories.html">Categories</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="terms.html">Terms</a>
-  </div>
-  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="#">Technology</a></li>
+
+                <li><a href="#">LifeStyle</a></li>
+
+                <li><a href="#">Health</a></li>
+
+                <li><a href="#">Education</a></li>
+
+                <li><a href="#">Business</a></li>
+
+                <li><a href="#">Travel</a></li>
+
+                <li><a href="#">9 Computer Science</a></li>
+
+                <li><a href="#">10 Computer Science</a></li>
+
+                <li><a href="#">11 Computer Science</a></li>
+
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
 </footer>
+
 
 <script>
   const navToggle = document.getElementById('navToggle');
