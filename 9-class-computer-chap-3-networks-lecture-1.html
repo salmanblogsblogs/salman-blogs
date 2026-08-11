@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about Computer Networks, main components, networking devices, objectives, and data communication concepts with examples." />
+  <meta name="keywords" content="Computer Network, Networking Devices, Switch, Router, Access Point, Data Communication, Network Objectives" />
+  <meta name="author" content="Salman Ahmad" />
+  <title>Computer Networks: Components, Devices, and Objectives | Salman Blogs</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <meta property="og:title" content="Computer Networks: Components, Devices, and Objectives" />
+  <meta property="og:description" content="Explore computer networks, main components, networking devices, objectives, and fundamental data communication concepts with examples." />
+  <meta property="og:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-3/chapter-3-lecture1-notes.webp" />
+  <meta property="og:url" content="https://salmanblogs.com/9-class-chap-3-lecture-1" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Computer Networks: Components, Devices, and Objectives" />
+  <meta name="twitter:description" content="Comprehensive guide on computer networks, main components, networking devices, objectives, and fundamental data communication concepts." />
+  <meta name="twitter:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-3/chapter-3-lecture1-notes.webp" />
+
+  <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="favicon.ico">
+
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<span class="logo-first">Salman</span>
+
+<span class="logo-last">Blogs</span>
+
+</a>
+
+<nav>
+
+<div class="nav-toggle" id="navToggle">
+    &#9776;
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+<li><a href="terms.html">Terms</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="hero-badge">
+
+🔥  Entrepreneurship in the Digital Age
+
+</span>
+<br>
+<h1>
+
+
+<span>Chapter 9 Notes</span>
+
+</h1>
+
+<p>
+
+ Complete lecture notes covering Entrepreneurship,
+            Digital Marketing, E-commerce, Business Planning,
+            Sustainable Development Goals (SDGs),
+            MCQs, FAQs and Exam Preparation.
+</p>
+
+<div class="hero-buttons">
+
+<a href="categories.html" class="btn-secondary">
+
+Browse Categories
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Computer Networks Lecture Notes</h1>
+    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+    <img src="images/9-CS-IMAGES/chapter-3/9-computer-chapter-3-networks-lecture1-notes.webp" alt="9-computer-chapter-3-networks-notes" class="post-image" loading="lazy">
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
+    </p>
+    <nav class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#network">Introduction to Computer Network</a></li>
+        <li><a href="#components">Main Components of a Network</a></li>
+        <li><a href="#switch">Switch</a></li>
+        <li><a href="#router">Router</a></li>
+        <li><a href="#objectives">Objectives of Computer Networks</a></li>
+        <li><a href="#data-communication">Fundamental Concepts in Data Communication</a></li>
+        <li><a href="#networking-devices">Networking Devices</a></li>
+        <li><a href="#mcqs">MCQs</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+      </ul>
+    </nav>
+
+    <div class="post-content">
+      <h2 id="network">Network or Computer Network</h2>
+      <p style="margin: 0;">A computer network is a system where computers and other devices are connected so they can share data and work together.</p>
+      <p style="margin: 0;"><strong>Example: School Network</strong></p>
+      <ul style="margin-left: 20px;">
+        <li>Computers in a school are connected.</li>
+        <li>Students can share files and use the same printer.</li>
+        <li>Teachers can send assignments to all computers at once.</li>
+        <li>This shows how devices work together in a network.</li>
+      </ul>
+
+      <h2 id="components">Main Components of a Network</h2>
+      <ul style="margin-left: 20px;">
+        <li><strong>Nodes:</strong> Devices connected to the network, such as computers, smartphones, and printers.</li>
+        <li><strong>Links:</strong> The connections between devices. These can be wired (Ethernet cables) or wireless (Wi-Fi).</li>
+        <li><strong>Switches:</strong> Connects multiple devices in the same network to communicate efficiently.</li>
+      </ul>
+
+      <h3 id="switch">How a Switch Works</h3>
+      <ul style="margin-left: 20px;">
+        <li>A switch works at Layer 2 (Data Link Layer) of the OSI model.</li>
+        <li>It uses a hardware address called a MAC address.</li>
+        <li>When a packet arrives, the switch reads the MAC address.</li>
+        <li>It sends the packet only to the correct device, not to all devices.</li>
+      </ul>
+      <p style="margin: 0;"><strong>Example: Using a Switch in an Office</strong></p>
+      <p style="margin: 0;">Imagine you send a file to your colleague in another room.</p>
+      <ul style="margin-left: 20px;">
+        <li>The file is broken into small parts called packets.</li>
+        <li>Each packet has the address of your colleague’s computer (MAC address).</li>
+        <li>The packets go to the switch.</li>
+        <li>The switch checks the address and sends the packets only to your colleague’s computer.</li>
+        <li>The computer puts all packets back together to form the original file.</li>
+      </ul>
+
+      <p style="margin-top:15px;">
+  🚀 <a href="Top-10-Programming-Languages-in-2025.html" 
+     style="color: #003366; font-weight:bold; text-decoration:none;">
+     Must Read: Top 10 Programming Languages in 2025
+      </a>
+      </p>
+
+      <h3 id="router">Routers</h3>
+      <p style="margin: 0;">A router connects different networks and sends data from one network to another.</p>
+      <h2>How a Router Works</h2>
+      <p style="margin: 0;">Data travels in small parts called packets. Each packet contains the destination address. The router checks this address, chooses the best route, and forwards the packet to the right destination.</p>
+      <p style="margin: 0;"><strong>Example: Air Travel System</strong></p>
+      <ul style="margin-left: 20px;">
+        <li>Passengers are like data.</li>
+        <li>They may travel in groups (packets).</li>
+        <li>Each group has a ticket with the final destination (IP address).</li>
+        <li>They may travel through different airports (routers).</li>
+        <li>Finally, they reach the correct destination.</li>
+      </ul>
+
+      <h2 id="objectives">Objectives of Computer Networks</h2>
+      <ol style="margin-left: 20px;">
+        <li><strong>Resource Sharing:</strong> 
+        Networks allow devices to share resources like printers and storage. <br>
+        <strong>Example: </strong> Many computers in an office can use one printer.</li>
+        <li><strong>Data Communication:</strong>Networks allow people to send emails, messages, and make video calls. <br>
+        <strong>Example: </strong>Employees can use Zoom or Microsoft Teams for meetings.</li>
+        <li><strong>Connectivity and Collaboration:</strong>Networks connect devices so people can work together from different places. <br><strong>Example:</strong> A team can work together on Google Drive at the same time.</li>
+      </ol>
+      <p><Strong>Note:</Strong>The Internet is the largest network in the world, connecting millions of networks globally.</p>
+
+      <p style="margin-top:15px;">
+  🚀 <a href="Top-10-AI-Tools-You-Should-Be-Using-in-2025.html" 
+     style="color: #003366; font-weight:bold; text-decoration:none;">
+     Must Read: Top AI tools you should be using in 2025
+      </a>
+      </p>
+
+      <h2 id="data-communication">Fundamental Concepts in Data Communication</h2>
+      <p style="margin: 0;">Data communication means sending data from one device to another. <br>
+        <strong> Main components: </strong></p>
+      <ul style="margin-left: 20px;">
+        <li><strong>Sender:</strong>The device that sends data (Example: a computer sending an email).</li>
+        <li><strong>Receiver:</strong> The device that receives data (example: a smartphone receiving the email)</li>
+        <li><strong>Message:</strong> Actual data being sent (Example: sending a text message, any video 
+          or any photo).</li>
+        <li><strong>Protocol:</strong> A protocol is a set of rules that devices follow to communicate with each other on a network. (Example: HTTP is a protocol used to load websites on the Internet.)</li>
+        <li><strong>Medium:</strong> Path through which data travels is called medium or
+          communication medium or communication channel. It can be wired or wireless.</li>
+      </ul>
+
+      <h2 id="networking-devices">Networking Devices</h2>
+      <p style="margin: 0;">
+        Network devices are hardware devices that help connect computers and manage the flow of data in a network. They make sure devices can communicate with each other properly.
+      </p>
+      <ul style="margin-left: 20px;">
+        <li><strong>Switch: </strong>Definition is already written above.</li>
+        <li><strong>Router: </strong>Definition is already written above.</li>
+        <li><strong> Hub:</strong> Connects multiple devices but sends data to all devices.</li>
+        <li><strong>Access Point (AP):</strong>An Access Point connects wireless devices to a wired network.
+        It allows smartphones, laptops, and tablets to connect to the Internet wirelessly.</li>
+      </ul>
+      <p style="margin: 0;"><strong>How an Access Point Works:</strong></p>
+      <ul style="margin-left: 20px;">
+        <li>It receives data from the wired network.</li>
+        <li>Sends data wirelessly to devices like laptops, smartphones, tablets.</li>
+        <li>Receives wireless data and sends it back to the wired network.</li>
+      </ul>
+
+      <h2>Related Posts</h2>
+      <ul style="margin-left: 20px;">
+        <li><a href="Top-10-Programming-Languages-in-2025.html">Top 10 Programming Languages in 2025</a></li>
+        <li><a href="how-ai-will-replace-and-create-jobs-by-2030.html">How AI Will Replace and Create Jobs by 2030</a></li>
+        <li><a href="Best-Online-Courses-for-High-Paying-Jobs.html">Best Online Courses for High-Paying Jobs in 2025</a></li>
+      </ul>
+      <br>
+      <!-- <a href="javascript:void(0)" style="pointer-events: none; color: gray; text-decoration: underline;">
+      Next Lecture # 2 [Not Uploaded Yet] -->
+      </a>
+      <a href="9-class-chap-6-lecture-2.html">Next Lecture # 2</a>
+      <!-- MCQs Section -->
+      <h2 id="mcqs">15 Multiple Choice Questions (MCQs) on Computer Networks</h2>
+      <section class="mcq-section">
+        <div class="mcq-item">
+          <div class="mcq-question">1. What is a computer network?</div>
+          <div class="mcq-options">
+            a. A single computer<br>
+            b. A system where computers and devices are connected<br>
+            c. A type of software<br>
+            d. A printer
+          </div>
+          <div class="mcq-answer">Answer: b. A system where computers and devices are connected</div>
+        </div>
+
+        <div class="mcq-item">
+          <div class="mcq-question">2. Which of these is a networking node?</div>
+          <div class="mcq-options">
+            a. Ethernet cable<br>
+            b. Computer<br>
+            c. Router<br>
+            d. Switch
+          </div>
+          <div class="mcq-answer">Answer: b. Computer</div>
+        </div>
+
+        <div class="mcq-item">
+          <div class="mcq-question">3. What is the function of a switch?</div>
+          <div class="mcq-options">
+            a. Connects multiple networks<br>
+            b. Connects multiple devices within a network<br>
+            c. Provides wireless connection<br>
+            d. Sends emails
+          </div>
+          <div class="mcq-answer">Answer: b. Connects multiple devices within a network</div>
+        </div>
+
+        <div class="mcq-item">
+          <div class="mcq-question">4. Which address does a switch use to send packets?</div>
+          <div class="mcq-options">
+            a. IP address<br>
+            b. MAC address<br>
+            c. URL<br>
+            d. Hostname
+          </div>
+          <div class="mcq-answer">Answer: b. MAC address</div>
+        </div>
+
+        <div class="mcq-item">
+          <div class="mcq-question">5. What is the role of a router?</div>
+          <div class="mcq-options">
+            a. Connects different networks<br>
+            b. Prints documents<br>
+            c. Stores files<br>
+            d. Runs applications
+          </div>
+          <div class="mcq-answer">Answer: a. Connects different networks</div>
+        </div>
+
+        <div class="mcq-item">
+          <div class="mcq-question">6. Which of the following is a communication medium?</div>
+          <div class="mcq-options">
+            a. Ethernet cable<br>
+            b. MAC address<br>
+            c. Router<br>
+            d. Switch
+          </div>
+          <div class="mcq-answer">Answer: a. Ethernet cable</div>
+        </div>
+
+        <div class="mcq-item">
+          <div class="mcq-question">7. What is an Access Point used for?</div>
+          <div class="mcq-options">
+            a. Connects wired devices<br>
+            b. Connects wireless devices to a wired network<br>
+            c. Connects different networks<br>
+            d. Stores files
+          </div>
+          <div class="mcq-answer">Answer: b. Connects wireless devices to a wired network</div>
+        </div>
+
+        <div class="mcq-item">
+          <div class="mcq-question">8. Which of the following is an example of resource sharing?</div>
+          <div class="mcq-options">
+            a. Printing documents on a shared printer<br>
+            b. Using Google Docs offline<br>
+            c. Watching YouTube<br>
+            d. Installing software
+          </div>
+          <div class="mcq-answer">Answer: a. Printing documents on a shared printer</div>
+        </div>
+
+        <div class="mcq-item">
+          <div class="mcq-question">9. Which device sends data in packets across networks?</div>
+          <div class="mcq-options">
+            a. Switch<br>
+            b. Router<br>
+            c. Access Point<br>
+            d. Node
+          </div>
+          <div class="mcq-answer">Answer: b. Router</div>
+        </div>
+
+        <div class="mcq-item">
+          <div class="mcq-question">10. What is a protocol?</div>
+          <div class="mcq-options">
+            a. Device<br>
+            b. Rules for data communication<br>
+            c. Network medium<br>
+            d. Network node
+          </div>
+          <div class="mcq-answer">Answer: b. Rules for data communication</div>
+        </div>
+
+        <div class="mcq-item">
+          <div class="mcq-question">11. Which is the largest network in the world?</div>
+          <div class="mcq-options">
+            a. LAN<br>
+            b. MAN<br>
+            c. Internet<br>
+            d. PAN
+          </div>
+          <div class="mcq-answer">Answer: c. Internet</div>
+        </div>
+
+        <div class="mcq-item">
+          <div class="mcq-question">12. What does a message represent in data communication?</div>
+          <div class="mcq-options">
+            a. Sender<br>
+            b. Receiver<br>
+            c. Actual data being sent<br>
+            d. Router
+          </div>
+          <div class="mcq-answer">Answer: c. Actual data being sent</div>
+        </div>
+
+        <div class="mcq-item">
+          <div class="mcq-question">13. What is a node in a network?</div>
+          <div class="mcq-options">
+            a. A wired connection<br>
+            b. Any device connected to the network<br>
+            c. A type of router<br>
+            d. A protocol
+          </div>
+          <div class="mcq-answer">Answer: b. Any device connected to the network</div>
+        </div>
+
+        <div class="mcq-item">
+          <div class="mcq-question">14. Which of these is a wireless medium?</div>
+          <div class="mcq-options">
+            a. Ethernet cable<br>
+            b. Wi-Fi<br>
+            c. Fiber optic<br>
+            d. Coaxial cable
+          </div>
+          <div class="mcq-answer">Answer: b. Wi-Fi</div>
+        </div>
+
+        <div class="mcq-item">
+          <div class="mcq-question">15. How do networks help collaboration?</div>
+          <div class="mcq-options">
+            a. Connect devices for remote work<br>
+            b. Share software<br>
+            c. Increase storage<br>
+            d. Reduce hardware
+          </div>
+          <div class="mcq-answer">Answer: a. Connect devices for remote work</div>
+        </div>
+      </section>
+
+      <!-- FAQs Section -->
+      <h2 id="faqs">Frequently Asked Questions (FAQs)</h2>
+      <section class="faq-section">
+        <div class="faq-item">
+          <button class="faq-question">1. What is a computer network?</button>
+          <div class="faq-answer"><p>A computer network is a system where multiple devices are connected to share data and resources.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">2. What are the main components of a network?</button>
+          <div class="faq-answer"><p>Nodes, links, switches, routers, and access points are the main components of a network.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">3. What is the role of a switch?</button>
+          <div class="faq-answer"><p>A switch connects multiple devices in a network and forwards data to the correct device using MAC addresses.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">4. What is a router?</button>
+          <div class="faq-answer"><p>A router connects different networks and directs data packets to the appropriate destination network.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">5. What is an Access Point?</button>
+          <div class="faq-answer"><p>An Access Point connects wireless devices to a wired network and enables Wi-Fi connectivity.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">6. What is the purpose of data communication?</button>
+          <div class="faq-answer"><p>Data communication allows devices to send and receive information efficiently over a network.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">7. What is a protocol?</button>
+          <div class="faq-answer"><p>A protocol is a set of rules that govern how data is transmitted and received across a network.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">8. What is a communication medium?</button>
+          <div class="faq-answer"><p>The medium is the physical or wireless path through which data travels, such as Ethernet cables or Wi-Fi.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">9. What are the objectives of a computer network?</button>
+          <div class="faq-answer"><p>The main objectives are resource sharing, data communication, and connectivity/collaboration.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">10. What is the largest network in the world?</button>
+          <div class="faq-answer"><p>The Internet is the largest network, connecting millions of smaller networks globally.</p></div>
+        </div>
+      </section>
+
+  <h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/9-class/chapter-3/chapter-3-lecture1-notes.pdf">
+  Download PDF
+</a>
+
+    </div>
+  </article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="#">Technology</a></li>
+
+                <li><a href="#">LifeStyle</a></li>
+
+                <li><a href="#">Health</a></li>
+
+                <li><a href="#">Education</a></li>
+
+                <li><a href="#">Business</a></li>
+
+                <li><a href="#">Travel</a></li>
+
+                <li><a href="#">9 Computer Science</a></li>
+
+                <li><a href="#">10 Computer Science</a></li>
+
+                <li><a href="#">11 Computer Science</a></li>
+
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                question.classList.toggle("active");
+
+                const answer = question.nextElementSibling;
+
+                if (answer.style.maxHeight) {
+
+                    answer.style.maxHeight = null;
+
+                } else {
+
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+    
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+const supabase = createClient(
+  "https://pojmeeozeuzqtgrvwgxw.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvam1lZW96ZXV6cXRncnZ3Z3h3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4ODM2MjYsImV4cCI6MjA5NTQ1OTYyNn0.c9sgwAH8ysgayh_dvk_uzNTK5XuUZ1k57Lk_cfzlhbA"
+);
+
+const POST_ID    = "blog-2";
+const ADMIN_PASS = "salman.coding";
+const ADMIN_NAME = "Salman (Admin)";
+
+let isAdmin = false;
+
+/* ── HELPERS ── */
+function esc(s) {
+  return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+function initial(n) { return (n||"?").charAt(0).toUpperCase(); }
+function timeAgo(d) {
+  const s = Math.floor((Date.now() - new Date(d)) / 1000);
+  if (s < 60)    return s + "s ago";
+  if (s < 3600)  return Math.floor(s/60) + "m ago";
+  if (s < 86400) return Math.floor(s/3600) + "h ago";
+  return Math.floor(s/86400) + "d ago";
+}
+
+/* ── ADMIN LOGIN / LOGOUT ── */
+window.adminLogin = function() {
+  if (document.getElementById("admin-pass").value === ADMIN_PASS) {
+    isAdmin = true;
+    document.getElementById("admin-bar").innerHTML =
+      `<span style="color:var(--accent);font-weight:600;font-size:13px;">✓ Admin</span>
+       <button onclick="adminLogout()" style="background:transparent;color:var(--muted);border:1px solid var(--border);font-size:12px;padding:5px 10px;">Logout</button>`;
+    document.getElementById("main").classList.add("admin-mode");
+    loadComments();
+  } else {
+    alert("Wrong password.");
+  }
+};
+
+window.adminLogout = function() {
+  isAdmin = false;
+  document.getElementById("admin-bar").innerHTML = `
+    <span style="font-size:12px;color:var(--muted);">Admin</span>
+    <input id="admin-pass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter') adminLogin()">
+    <button onclick="adminLogin()">Login</button>`;
+  document.getElementById("main").classList.remove("admin-mode");
+  loadComments();
+};
+
+/* ── POST TOP-LEVEL COMMENT (visitor) ── */
+window.postComment = async function() {
+  const name = document.getElementById("pub-name").value.trim();
+  const msg  = document.getElementById("pub-msg").value.trim();
+  if (!name || !msg) { alert("Please enter your name and message."); return; }
+  const { error } = await supabase.from("comments").insert([{
+    name, message: msg, post_id: POST_ID, parent_id: null
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  document.getElementById("pub-msg").value = "";
+  loadComments();
+};
+
+/* ── TOGGLE ADMIN REPLY BOX ── */
+window.showAdminReplyBox = function(id) {
+  if (!isAdmin) return;
+  const el = document.getElementById("arb-" + id);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── ADMIN POST REPLY ── */
+window.postAdminReply = async function(parentId) {
+  if (!isAdmin) return;
+  const ta  = document.getElementById("ari-" + parentId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: ADMIN_NAME, message: msg, post_id: POST_ID, parent_id: parentId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── SHOW VISITOR REPLY-BACK BOX ── */
+// visitorName = name of the original commenter (prefilled, locked)
+window.showVisitorReplyBox = function(adminReplyId, visitorName) {
+  const el = document.getElementById("vrb-" + adminReplyId);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── VISITOR POSTS REPLY-BACK ── */
+window.postVisitorReply = async function(adminReplyId, visitorName) {
+  const ta  = document.getElementById("vri-" + adminReplyId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: visitorName, message: msg, post_id: POST_ID, parent_id: adminReplyId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── BUILD THREAD under a top-level comment ── */
+// Structure: top comment → admin replies → visitor reply-backs (under each admin reply)
+function buildThread(all, topComment) {
+  // Direct admin replies to this top comment
+  const adminReplies = all.filter(c =>
+    c.parent_id === topComment.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    // Visitor replies back to this specific admin reply
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)}
+            <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+          ${isAdmin ? `<span class="admin-reply-btn" onclick="showAdminReplyBox(${vr.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${vr.id}" style="display:none;">
+            <textarea id="ari-${vr.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${vr.id})}"></textarea>
+            <button onclick="postAdminReply(${vr.id})">Send Reply</button>
+          </div>` : ""}
+          ${buildNestedThread(all, vr, topComment.name)}
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <!-- Visitor can reply back only to this admin reply -->
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(topComment.name)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(topComment.name)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(topComment.name)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* Deeper nesting: admin replies to visitor reply-backs */
+function buildNestedThread(all, visitorReply, originalVisitorName) {
+  const adminReplies = all.filter(c =>
+    c.parent_id === visitorReply.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)} <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble" style="margin-top:8px;">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(originalVisitorName)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(originalVisitorName)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(originalVisitorName)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* ── LOAD COMMENTS ── */
+async function loadComments() {
+  const { data, error } = await supabase
+    .from("comments").select("*")
+    .eq("post_id", POST_ID)
+    .order("created_at", { ascending: true });
+
+  const list = document.getElementById("comments-list");
+  if (error) { list.innerHTML = `<div class="empty">Could not load comments.</div>`; return; }
+
+  const all = data || [];
+  const top = all.filter(c => !c.parent_id);
+
+  if (!top.length) { list.innerHTML = `<div class="empty">No comments yet. Be the first!</div>`; return; }
+
+  list.innerHTML = top.map(c => `
+    <div class="comment-card">
+      <div class="comment-row">
+        <div class="avatar">${initial(c.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(c.name)}
+            <span class="comment-time">${timeAgo(c.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(c.message)}</div>
+          <span class="admin-reply-btn" onclick="showAdminReplyBox(${c.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${c.id}" style="display:none;">
+            <textarea id="ari-${c.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${c.id})}"></textarea>
+            <button onclick="postAdminReply(${c.id})">Send Reply</button>
+          </div>
+          ${buildThread(all, c)}
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* ── REALTIME ── */
+supabase.channel("comments-rt")
+  .on("postgres_changes", { event: "INSERT", schema: "public", table: "comments", filter: `post_id=eq.${POST_ID}` },
+    () => loadComments())
+  .subscribe();
+
+loadComments();
+</script>
+
+</body>
+</html>

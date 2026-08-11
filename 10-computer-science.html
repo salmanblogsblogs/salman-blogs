@@ -144,11 +144,7 @@ for Punjab Board students.
 
 <div class="stat-box">
 
-<h3>
-
-5+
-
-</h3>
+<h3 id="post-count">0</h3>
 
 <span>
 
@@ -996,6 +992,11 @@ navLinks.classList.toggle("show");
 
     });
 
+</script>
+
+<script>
+    const postCount = document.querySelectorAll('.post-card').length;
+    document.getElementById('post-count').textContent = postCount + '+';
 </script>
 
 </body>

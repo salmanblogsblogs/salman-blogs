@@ -578,7 +578,7 @@
 
 }
 
-.posts-grid{
+/* .posts-grid{
 
     display:grid;
 
@@ -588,6 +588,17 @@
 
     align-items:stretch;
 
+} */
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px;
+    align-items: stretch;
+}
+
+.post-card {
+    width: 100%;
 }
 
 /* =========================================
