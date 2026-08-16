@@ -6,14 +6,15 @@
 
 <title>Computational Thinking – 9 Computer Science | Salman Blogs</title>
 
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="notes-post.css">
+
 <meta name="description" content="Learn Computational Thinking concepts like Decomposition, Pattern Recognition, Abstraction, Algorithm, and Principles with examples. Complete notes for 9 Computer Science by Salman Ahmad at Salman Blogs.">
 
 <meta name="keywords" content="Computational Thinking, Decomposition, Pattern Recognition, Abstraction, Algorithm, 9 Computer Science, Salman Ahmad, Salman Blogs, problem solving, step by step, examples">
 
 <meta name="author" content="Salman Ahmad">
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="about.css">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Computational Thinking | 9 Computer Science by Salman Blogs">
@@ -29,199 +30,117 @@
 <meta name="twitter:description" content="Learn Computational Thinking concepts like Decomposition, Pattern Recognition, Abstraction, Algorithm, and Principles with examples for 9 Computer Science students.">
 <meta name="twitter:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-7/9-Computer-Science-Chapter%207-Lecture%201.webp">
 
-<style>
-html { scroll-behavior: smooth; }
-.toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
-.toc h2 { margin-top: 0; }
-.toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
-.toc a:hover { color: darkblue; }
-.toc li {list-style-type: none;}
-.post-content h2, .post-content h3 { border-left: 4px solid #0077cc; padding-left: 12px; margin-top: 25px;}
+<!-- Fonts -->
 
- .mcq-item {
-      background: #f7f7f7;
-      border-left: 4px solid #0077cc; /* same as h2 border color */
-      padding: 15px;
-      margin: 10px 0;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    .mcq-question {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    .mcq-options {
-      margin-left: 20px;
-      margin-bottom: 10px;
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    .mcq-answer {
-      background: #dbeafe; /* soft blue similar to h2 highlight */
-      border-left: 4px solid #0077cc;
-      padding: 10px;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-    .post-content p
-    {
-      margin: 0;
-    }
+    <!-- Icons -->
 
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-  .test-mcqs {
-  max-width: 700px;
-  margin: auto;
-}
-.test-mcqs .mcq-item {
-  background: #f7f7f7;
-  border-left: 4px solid #0077cc;
-  padding: 15px;
-  margin: 10px 0;
-}
-.mcq-question {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.mcq-options button {
-  display: block;
-  text-align: left;
-  margin: 5px 0;
-  padding: 8px;
-  width: 100%;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  transition: 0.2s;
-  position: relative;
-  font-size: 16px;
-}
-.mcq-options button.correct {
-  background-color: #d4edda; 
-  border-color: #28a745;
-  color: #155724;
-}
-.mcq-options button.wrong {
-  background-color: #f8d7da; 
-  border-color: #dc3545;
-  color: #721c24;
-}
-.mcq-options button.correct::after {
-  content: " ✅";
-  float: right;
-}
-.mcq-options button.wrong::after {
-  content: " ❌";
-  float: right;
-}
-.mcq-options button:hover {
-  background-color: #e2e6ea;
-}
+    <!-- Favicon -->
 
-.test-mcqs h2 {
-  border-left: 5px solid #0077cc;
-  padding-left: 10px;
-  color: #0077cc;
-  margin-bottom: 15px;
-}
+    <link rel="icon" href="favicon.ico">
 
-.user-info {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-#username {
-  padding: 10px;
-  width: 60%;
-  max-width: 300px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.result-box {
-  text-align: center;
-  margin-top: 20px;
-}
-
-#showResult {
-  padding: 10px 20px;
-  background: #0077cc;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#showResult:hover {
-  background: #005fa3;
-}
-
-#resultText {
-  margin-top: 15px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* Highlight input or MCQ when missing */
-.highlight-unanswered {
-  border: 2px solid #dc3545 !important;
-  background-color: #ffe5e5;
-  border-radius: 5px;
-  padding: 5px;
-  transition: 0.3s;
-}    
-
-/* Back to top button styling */
-  #backToTop {
-    display: none; /* Hidden by default */
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 100;
-    font-size: 30px;
-    background-color: #002959;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 5px 15px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: opacity 0.3s ease;
-  }
-
-  #backToTop:hover {
-    background-color: #0055a5;
-  }
-</style>
 </head>
 
 <body>
 
-<header class="navbar">
-<div class="container">
-<div class="logo">
-<span class="logo-first">Salman</span><span class="logo-last">Blogs</span>
-</div>
+<!-- ================= NAVBAR ================= -->
 
-<div class="nav-toggle" id="navToggle">&#9776;</div>
+<header class="navbar">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<span class="logo-first">Salman</span>
+
+<span class="logo-last">Blogs</span>
+
+</a>
+
+<nav>
+
+<div class="nav-toggle" id="navToggle">
+    &#9776;
+</div>
 
 <ul class="nav-links" id="navLinks">
+
 <li><a href="index.html">Home</a></li>
+
 <li><a href="categories.html">Categories</a></li>
+
 <li><a href="about.html">About</a></li>
+
 <li><a href="contact.html">Contact</a></li>
+
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
 <li><a href="terms.html">Terms</a></li>
+
 </ul>
+
+</nav>
+
 </div>
+
 </header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="hero-badge">
+
+🔥  Computational Thinking
+
+</span>
+<br>
+<h1>
+
+
+<span>Chapter 4 Notes</span>
+
+</h1>
+
+<p>
+
+ Complete lecture notes covering Entrepreneurship,
+            Digital Marketing, E-commerce, Business Planning,
+            Sustainable Development Goals (SDGs),
+            MCQs, FAQs and Exam Preparation.
+</p>
+
+<div class="hero-buttons">
+
+<a href="categories.html" class="btn-secondary">
+
+Browse Categories
+
+</a>
+
+</div>
+
+</div>
+
+</section>
 
 <main class="post-container">
 
 <article class="blog-post">
 <h1 class="post-title">Computational Thinking: Concepts, Examples & Principles</h1>
 <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
-<img src="images/9-CS-IMAGES/chapter-7/9-Computer-Science-Chapter-7-Lecture-1.webp" alt="9-Computer-Science-Chapter 7-Lecture-1" class="post-image" loading="lazy">
+<img src="images/9-CS-IMAGES/chapter-4/class-9-computer-chapter-4-computational-thinking-lecture-1.webp" alt="class-9-computer-chapter-4-computational-thinking" class="post-image" loading="lazy">
 <p>
     These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
         The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
@@ -802,117 +721,266 @@ html { scroll-behavior: smooth; }
 <!-- Back to Top Arrow -->
 <button id="backToTop" title="Go to top">&#8679;</button>
 
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
 <footer class="footer">
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="categories.html">Categories</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="terms.html">Terms</a>
-  </div>
-  <p>&copy; 2026 Salman Blogs. All Rights Reserved.</p>
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+    <h3>Categories</h3>
+
+    <ul>
+
+        <li><a href="technology.html">Technology</a></li>
+
+        <li><a href="computer-science.html">Computer Science</a></li>
+
+        <li><a href="how-to-guides.html">How-To Guides</a></li>
+
+        <li><a href="education.html">Education</a></li>
+
+        <li><a href="ai-tools.html">AI Tools</a></li>
+
+        <li><a href="roadmaps.html">Career Roadmaps</a></li>
+
+        <li><a href="8-computer-science.html">Class 8 Computer</a></li>
+
+        <li><a href="9-computer-science.html">Class 9 Computer</a></li>
+
+        <li><a href="10-computer-science.html">Class 10 Computer</a></li>
+
+        <li><a href="11-computer-science.html">Class 11 Computer</a></li>
+
+        <li><a href="12-computer-science.html">Class 12 Computer</a></li>
+
+    </ul>
+
+</div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
 </footer>
 
+<!-- ========================================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================================= -->
+
 <script>
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
 
-  const faqButtons = document.querySelectorAll('.faq-question');
-  faqButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('active');
-      const answer = btn.nextElementSibling;
-      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-    });
-  });
-</script>
+// Mobile Menu
 
-<!-- JS FOR MCQs TESTING. -->
-<script>
-let score = 0;
+const navToggle = document.getElementById("navToggle");
 
-// Select only interactive MCQs (those with data-answer)
-const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
-const totalQuestions = mcqs.length;
+const navLinks = document.getElementById("navLinks");
 
-// Object to track answers
-const answers = {};
+navToggle.addEventListener("click", () => {
 
-// Add click listeners to each MCQ
-mcqs.forEach((item, index) => {
-  const correctAnswer = item.getAttribute("data-answer");
+    navLinks.classList.toggle("show");
 
-  item.querySelectorAll(".mcq-options button").forEach(button => {
-    button.addEventListener("click", () => {
-
-      // Prevent multiple clicks
-      if (answers[index] !== undefined) return;
-
-      const selected = button.textContent.trim().charAt(0).toLowerCase();
-
-      // Store answer
-      answers[index] = selected;
-
-      if (selected === correctAnswer) {
-        button.classList.add("correct");
-        score++;
-      } else {
-        button.classList.add("wrong");
-
-        // Highlight correct option
-        item.querySelectorAll("button").forEach(btn => {
-          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
-            btn.classList.add("correct");
-          }
-        });
-      }
-
-      // Remove highlight if MCQ was previously highlighted
-      item.classList.remove("highlight-unanswered");
-    });
-  });
 });
 
-// Show result button
-document.getElementById("showResult").addEventListener("click", () => {
-  const nameBox = document.getElementById("username");
-  const name = nameBox.value.trim();
-  let hasUnanswered = false;
-
-  // Highlight empty name box
-  if (name === "") {
-    nameBox.classList.add("highlight-unanswered");
-    nameBox.focus();
-    return;
-  } else {
-    nameBox.classList.remove("highlight-unanswered");
-  }
-
-  // Highlight unanswered MCQs
-  mcqs.forEach((item, index) => {
-    if (answers[index] === undefined) {
-      item.classList.add("highlight-unanswered");
-      hasUnanswered = true;
-    } else {
-      item.classList.remove("highlight-unanswered");
-    }
-  });
-
-  if (hasUnanswered) {
-    // Scroll to first unanswered MCQ
-    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
-    return;
-  }
-
-  // Show result
-  document.getElementById("resultText").innerHTML =
-    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
-});
 </script>
 
 <script>
+
+// Typing Effect
+
+const words = [
+
+"Technology",
+
+"Computer Science",
+
+"How To Guides",
+
+"Education",
+
+"AI Tools",
+
+"Career Roadmaps",
+
+"Class 8 Computer",
+
+"Class 9 Computer",
+
+"Class 10 Computer",
+
+"Class 11 Computer",
+
+"Class 12 Computer"
+
+];
+
+let wordIndex = 0;
+
+let charIndex = 0;
+
+let deleting = false;
+
+const changingWord = document.getElementById("changing-word");
+
+function typeEffect(){
+
+const current = words[wordIndex];
+
+if(!deleting){
+
+changingWord.textContent = current.substring(0,charIndex+1);
+
+charIndex++;
+
+if(charIndex===current.length){
+
+deleting=true;
+
+setTimeout(typeEffect,1200);
+
+return;
+
+}
+
+}else{
+
+changingWord.textContent=current.substring(0,charIndex-1);
+
+charIndex--;
+
+if(charIndex===0){
+
+deleting=false;
+
+wordIndex=(wordIndex+1)%words.length;
+
+}
+
+}
+
+setTimeout(typeEffect,deleting?60:100);
+
+}
+
+typeEffect();
+
+</script>
+
+<script>
+
+// Smooth Scroll
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.querySelector(this.getAttribute("href")).scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+});
+
+});
+
+</script>
+
+</body>
+
+<!-- BACK TO TOP SCRIPT. -->
+ <script>
   // Get the button
   const backToTop = document.getElementById("backToTop");
 
@@ -930,5 +998,4 @@ document.getElementById("showResult").addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
-</body>
 </html>
