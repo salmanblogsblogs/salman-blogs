@@ -1,0 +1,2629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ <title>Class 10 Computer Science Chapter 2: System Maintenance &amp; Recovery | MCQs, Short &amp; Long Questions, FAQs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="notes-post.css">
+
+  <meta name="description" content="Class 10 Computer Science Chapter 2 Notes: System Maintenance and Recovery. Complete study material covering system recovery, advanced maintenance, post-troubleshooting, continuous maintenance, poor maintenance, system health monitoring, Task Manager, Resource Monitor, Event Viewer, Safe Mode, System Restore, bootable recovery media, MBR and GPT, BIOS/UEFI, POST, boot order, boot repair, data recovery techniques, Recycle Bin, File History, Previous Versions, third-party recovery tools, preventive maintenance, Disk Cleanup, patch management, Microsoft Defender, maintenance calendar, system documentation and logs, MCQs, short questions, long questions, FAQs, and exam preparation for FBISE and Punjab Board students." />
+
+<meta name="keywords" content="class 10 computer science chapter 2, 10th class computer science chapter 2, chapter 2 computer notes, system maintenance class 10, system recovery class 10, advanced maintenance, post troubleshooting, continuous maintenance, poor maintenance, system health monitoring, Task Manager Windows, Resource Monitor Windows, Event Viewer Windows, Safe Mode Windows, Safe Mode with Networking, System Restore, restore points, bootable recovery media, bootable USB, MBR and GPT, partition style, BIOS and UEFI, POST power on self test, boot process, boot order, boot repair, data recovery class 10, Recycle Bin, File History, Previous Versions, data recovery tools, Tenorshare 4DDiG, Recuva, EaseUS Data Recovery, Disk Drill, Stellar Data Recovery, preventive maintenance, Disk Cleanup, patch management, Windows Updates, Microsoft Defender Antivirus, maintenance calendar, system documentation and logs, computer troubleshooting, computer recovery, computer maintenance notes, class 10 computer MCQs, chapter 2 computer MCQs, short questions computer science, long questions computer science, computer science FAQs, FBISE computer notes, Punjab board computer notes, class 10 computer exam preparation, chapter 2 computer science solved questions" />
+
+<meta name="author" content="Salman Ahmad" />
+
+  <link rel="canonical" href="https://salmanblogs.com/10-class-computer-chap-4-control-structures-in-python" />
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+ <!-- Open Graph -->
+<meta property="og:title" content="Class 10 Computer Science Chapter 2: System Maintenance & Recovery | MCQs, Short Questions, Long Questions & FAQs" />
+
+<meta property="og:description" content="Complete Class 10 Computer Science Chapter 2 Notes on System Maintenance and Recovery. Covers system recovery, advanced maintenance, post-troubleshooting, continuous maintenance, system health monitoring, Task Manager, Resource Monitor, Event Viewer, Safe Mode, System Restore, bootable recovery media, MBR and GPT, BIOS/UEFI, POST, boot order, boot repair, data recovery, preventive maintenance, Disk Cleanup, patch management, Microsoft Defender, system documentation, MCQs, short questions, long questions, FAQs, and exam preparation for FBISE and Punjab Board students." />
+
+<meta property="og:image" content="https://salmanblogs.com/images/10-CS-IMAGES/chapter-4/class-10-computer-chapter-4-control-structures-in-python.webp" />
+
+<meta property="og:url" content="https://salmanblogs.com/10-class-computer-chap-4-control-structures-in-python" />
+
+<meta property="og:type" content="article" />
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:title" content="Class 10 Computer Science Chapter 2: System Maintenance & Recovery | MCQs, Short Questions, Long Questions & FAQs" />
+
+<meta name="twitter:description" content="Study Class 10 Computer Science Chapter 2: System Maintenance and Recovery with complete notes on system recovery, advanced maintenance, post-troubleshooting, continuous maintenance, system health monitoring, Task Manager, Resource Monitor, Event Viewer, Safe Mode, System Restore, bootable recovery media, MBR and GPT, BIOS/UEFI, POST, boot order, boot repair, data recovery, preventive maintenance, Disk Cleanup, patch management, Microsoft Defender, system documentation and logs, MCQs, short questions, long questions, FAQs, and exam preparation for FBISE and Punjab Board." />
+
+<meta name="twitter:image" content="https://salmanblogs.com/images/10-CS-IMAGES/chapter-4/class-10-computer-chapter-4-control-structures-in-python.webp" />
+
+ <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="favicon.ico">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Class 10 Computer Science Chapter 2: System Maintenance & Recovery",
+  "author": {
+    "@type": "Person",
+    "name": "Salman Ahmad"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Salman Blogs"
+  },
+  "description": "Complete Class 10 Computer Science Chapter 2 Notes on System Maintenance and Recovery covering system recovery, advanced maintenance, post-troubleshooting, continuous maintenance, poor maintenance, system health monitoring, Task Manager, Resource Monitor, Event Viewer, Safe Mode, System Restore, bootable recovery media, MBR and GPT, BIOS/UEFI, POST, boot order, boot repair, data recovery techniques, preventive maintenance, Disk Cleanup, patch management, Microsoft Defender, maintenance calendars, system documentation and logs, MCQs, short questions, long questions, FAQs, and exam preparation material.",
+  "mainEntityOfPage": "https://salmanblogs.com/10-class-computer-chap-2-system-maintenance-and-recovery"
+}
+</script>
+</head>
+<body>
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<span class="logo-first">Salman</span>
+
+<span class="logo-last">Blogs</span>
+
+</a>
+
+<nav>
+
+<div class="nav-toggle" id="navToggle">
+    &#9776;
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+<li><a href="terms.html">Terms</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="hero-badge">
+
+🔥  System Recovery and Advanced Maintenance
+
+</span>
+<br>
+<h1>
+
+
+<span>Chapter 2 Notes</span>
+
+</h1>
+
+<p>
+    Complete lecture notes covering System Recovery, Advanced Maintenance, Post-Troubleshooting, Continuous Maintenance, Poor Maintenance, System Health Monitoring, Task Manager, Resource Monitor, Event Viewer, Safe Mode, System Restore, Bootable Recovery Media, MBR and GPT, BIOS/UEFI, POST, Boot Order, Boot Repair, Data Recovery Techniques, Preventive Maintenance, Disk Cleanup, Patch Management, Microsoft Defender, Maintenance Calendar, System Documentation and Logs, MCQs, Short Questions, Long Questions, FAQs, and Exam Preparation for FBISE and Punjab Board students.
+</p>
+
+<div class="hero-buttons">
+
+<a href="categories.html" class="btn-secondary">
+
+Browse Categories
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Control Structures in Python </h1>
+    <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>
+    <img src="images/10-CS-IMAGES/CHAPTER-2/10-class-computer-chap-2-system-recovery-and-advanced-maintenance-notes.webp"
+                 alt="class-10-computer-chapter-2-system-recovery-and-advanced-maintenance"
+                 loading="lazy">
+
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 10 Computer Science.
+
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#system-recovery">System Recovery</a></li>
+<li><a href="#advanced-maintenance">Advanced Maintenance</a></li>
+<li><a href="#post-troubleshooting">Post-Troubleshooting</a></li>
+<li><a href="#importance-of-continuous-maintenance">Importance of Continuous Maintenance</a></li>
+<li><a href="#poor-maintenance">Poor Maintenance</a></li>
+<li><a href="#system-health-monitoring">System Health Monitoring</a></li>
+<li><a href="#built-in-diagnostic-tools">Built-in Diagnostic Tools</a></li>
+<li><a href="#system-recovery-options">System-Recovery-Options</a></li>
+<li><a href="#safe-mode">Safe Mode</a></li>
+<li><a href="#system-restore3">System Restore</a></li>
+<li><a href="#bootable-recovery-media">Bootable Recovery Media</a></li>
+<li><a href="#partition-style">How to Check the Partition Style: MBR or GPT</a></li>
+<li><a href="#bios-uefi-boot-process">BIOS/UEFI and Boot Process Awareness</a></li>
+<li><a href="#post-power-on-self-test">POST (Power-On Self-Test)</a></li>
+<li><a href="#boot-order">Boot Order</a></li>
+<li><a href="#boot-repair">Boot Repair</a></li>
+<li><a href="#data-recovery-techniques">Data Recovery Techniques</a></li>
+<li><a href="#third-party-recovery-tools">Third-Party Data Recovery Tools</a></li>
+<li><a href="#recovery-limitations-best-practices">Limitations of Recovery and Best Practices</a></li>
+<li><a href="#best-practices-preventive-maintenance">Best Practices for Preventive Maintenance</a></li>
+<li><a href="#disk-cleanup">Disk Cleanup</a></li>
+<li><a href="#patch-management">Patch Management and System Updates</a></li>
+<li><a href="#maintenance-calendar">Keeping a Maintenance Calendar</a></li>
+<li><a href="#system-documentation-logs">System Documentation and Logs</a></li>
+<li><a href="#mcqs">MCQs</a></li>
+<li><a href="#test-mcqs">MCQs for Testing</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+
+
+<div class="post-content">
+  
+<h2 id="system-recovery">System Recovery</h2>
+
+<p><strong>System recovery</strong> means <strong>bringing a computer or other system back to a working condition after something goes wrong</strong>.</p>
+
+<h3>Example: Windows Not Starting</h3>
+
+<p>Windows suddenly stops starting properly. The user uses <strong>System Restore</strong> or <strong>Startup Repair</strong> to make the computer work again.</p>
+
+<h2 id="advanced-maintenance">Advanced Maintenance</h2>
+
+<p><strong>Advanced maintenance</strong> means doing <strong>detailed and technical work to fix difficult problems in a computer or system</strong>.</p>
+
+<p>It is needed when <strong>normal or basic maintenance cannot solve the problem</strong>.</p>
+
+<p><strong>Example:</strong> If a computer keeps crashing, a technician may check the hardware, repair system files, update drivers, or replace a damaged part.</p>
+
+<h2 id="post-troubleshooting">Post-Troubleshooting</h2>
+
+<p><strong>Post-troubleshooting</strong> means the <strong>steps taken after fixing a problem</strong> to make sure the system is working properly and the same problem does not happen again.</p>
+
+<h3>Post-Troubleshooting — Examples</h3>
+
+<ol>
+  <li><strong>Internet problem:</strong> Check the internet after fixing the connection.</li>
+  <li><strong>Computer crash:</strong> Restart the computer to make sure it works properly.</li>
+  <li><strong>Printer problem:</strong> Print a test page after repairing the printer.</li>
+  <li><strong>Software error:</strong> Open the software to confirm the error is gone.</li>
+  <li><strong>Virus problem:</strong> Scan the computer again after removing the virus.</li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> Dear Students, you can write <strong>1 to 2 examples</strong> in the exam paper. The extra examples are provided only for <strong>better understanding and extra learning</strong>.
+</div>
+
+<h2 id="importance-of-continuous-maintenance">Importance of Continuous Maintenance</h2>
+
+<p><strong>Continuous maintenance</strong> means <strong>regularly checking, updating, and taking care of a system to keep it working properly</strong>.</p>
+
+<h3>Importance</h3>
+
+<ol>
+  <li><strong>Prevents problems:</strong> Finds issues before they become serious.</li>
+  <li><strong>Improves performance:</strong> Keeps the system running smoothly and quickly.</li>
+  <li><strong>Increases security:</strong> Helps protect the system from viruses and attacks.</li>
+  <li><strong>Saves money:</strong> Prevents expensive repairs and replacements.</li>
+  <li><strong>Increases system life:</strong> Helps hardware and software last longer.</li>
+  <li><strong>Reduces downtime:</strong> Keeps the system available and working.</li>
+  <li><strong>Keeps data safe:</strong> Regular backups help prevent data loss.</li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> Dear Students, you can mention <strong>only the name</strong> in the exam paper of Importance. The detailed explanation is provided only for <strong>better understanding and extra learning</strong>.
+</div>
+
+<h2 id="poor-maintenance">Poor Maintenance</h2>
+
+<p><strong>Poor maintenance</strong> means <strong>not properly checking, updating, or taking care of a system</strong>.</p>
+
+<h3>Its Impacts</h3>
+
+<ol>
+  <li><strong>Slow Performance:</strong> The system becomes slow and takes more time to perform tasks.</li>
+  <li><strong>System Failure:</strong> The system may stop working or crash unexpectedly.</li>
+  <li><strong>Security Risks:</strong> Viruses, malware, and hackers can easily attack an unmaintained system.</li>
+  <li><strong>Data Loss:</strong> Important files and information may be lost or damaged.</li>
+  <li><strong>Hardware Damage:</strong> Poor maintenance can cause hardware parts to overheat, wear out, or become damaged.</li>
+</ol>
+
+<h2 id="system-health-monitoring">Introduction to System Health Monitoring</h2>
+
+<p><strong>System health monitoring</strong> means regularly checking a computer to make sure that all its hardware and software are working properly.</p>
+
+<p>It helps us <strong>find problems early</strong>, keep the computer running smoothly, and prevent serious damage or data loss.</p>
+
+<ol>
+  <li><strong>Check Memory and Processing Usage:</strong> See how much <strong>RAM and CPU power</strong> the computer is using.</li>
+  <li><strong>Monitor Background Applications and Services:</strong> Check which programs and services are running in the background.</li>
+  <li><strong>View Warnings and Error Messages:</strong> Find warnings and errors that may indicate a problem with the system.</li>
+  <li><strong>Identify Slow Programs:</strong> Find programs that are using too many system resources and may be making the computer slow.</li>
+</ol>
+
+<h3>Importance of System Health Monitoring</h3>
+
+<p>System health monitoring is like a <strong>regular check-up of a computer</strong>. It helps us know whether the computer is working properly and allows us to solve problems before they become bigger.</p>
+
+<h2 id="built-in-diagnostic-tools">Built-in Diagnostic Tools</h2>
+
+<p>Operating systems like Windows provide several built-in tools that help users check the computer's performance and find problems.</p>
+
+<h3>1. Task Manager</h3>
+
+<p><strong>Shortcut Key:</strong> <kbd>Ctrl + Shift + Esc</kbd></p>
+
+<p><strong>Other Way:</strong> Type <strong>Task Manager</strong> in the Windows Search box or search for it from the <strong>Start button</strong>.</p>
+
+<p><strong>Task Manager</strong> shows the programs and processes currently running on the computer. It also shows how much <strong>CPU, RAM, Disk, and Network</strong> each program is using.</p>
+
+<p>It can be used to:</p>
+
+<ul>
+  <li>Check which programs are running.</li>
+  <li>Find programs using too many resources.</li>
+  <li>Close a program that has stopped responding.</li>
+  <li>Check overall system performance.</li>
+</ul>
+
+<p><strong>Example:</strong> If a program is using too much RAM and making the computer slow, Task Manager can help identify it.</p>
+
+<h3>2. Resource Monitor</h3>
+
+<p><strong>Shortcut:</strong> Press <kbd>Windows + R</kbd>, type <code>resmon</code>, and press <kbd>Enter</kbd>.</p>
+
+<p><strong>Other Way:</strong> Type <strong>Resource Monitor</strong> in the Windows Search box or search for it from the <strong>Start button</strong>.</p>
+
+<p><strong>Resource Monitor</strong> provides more detailed information about how computer resources are being used. It gives information about <strong>CPU, memory, disk, and network activity</strong>.</p>
+
+<p>It helps users:</p>
+
+<ul>
+  <li>Find which programs are using system resources.</li>
+  <li>Check detailed CPU and memory usage.</li>
+  <li>See which programs are accessing the disk.</li>
+  <li>Monitor network activity.</li>
+</ul>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> Resource Monitor gives a <strong>more detailed view</strong> of the computer's resource usage.
+</div>
+
+<h3>3. Event Viewer</h3>
+
+<p><strong>Shortcut:</strong> Press <kbd>Windows + R</kbd>, type <code>eventvwr</code>, and press <kbd>Enter</kbd>.</p>
+
+<p><strong>Other Way:</strong> Type <strong>Event Viewer</strong> in the Windows Search box or search for it from the <strong>Start button</strong>.</p>
+
+<p><strong>Event Viewer</strong> records important events that happen in Windows, such as <strong>errors, warnings, and system activities</strong>.</p>
+
+<p>It helps users:</p>
+
+<ul>
+  <li>Find the cause of system problems.</li>
+  <li>Check error and warning messages.</li>
+  <li>View information about system and application problems.</li>
+  <li>Troubleshoot repeated errors.</li>
+</ul>
+
+<p><strong>Example:</strong> If a program keeps crashing, Event Viewer may contain an error record that helps identify what went wrong.</p>
+
+<h1 id="system-recovery-options">System Recovery Options</h1>
+
+<p><strong>System recovery options</strong> are tools provided by the operating system to <strong>repair, restore, or recover a computer when it is not working properly</strong>. They are especially useful when Windows has startup problems, crashes, or becomes unstable.</p>
+
+<h2>Common System Recovery Options</h2>
+
+<ol>
+  <li>
+    <strong>Safe Mode</strong> – Starts Windows with only <strong>basic drivers and essential services</strong> to help identify and fix problems.
+  </li>
+  <li>
+    <strong>System Restore</strong> – Returns system settings and files to an <strong>earlier working state</strong> using a restore point.
+  </li>
+  <li>
+    <strong>Bootable Recovery Media</strong> – A USB or other device that can <strong>start the computer and provide tools to repair or recover Windows</strong>.
+  </li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> System recovery options help us <strong>bring a computer back to a working condition</strong> when normal methods cannot solve the problem.
+</div>
+
+<h2 id="safe-mode">Safe Mode</h2>
+
+<p><strong>Safe Mode</strong> is a special way of starting Windows with only the <strong>basic drivers, services, and essential programs</strong> needed to run the computer.</p>
+
+<p>It is mainly used for <strong>troubleshooting problems</strong>. When Windows works normally but starts causing problems such as crashes, freezing, or errors, Safe Mode can help us find out whether a recently installed program, driver, or setting is causing the problem.</p>
+
+<h3>When to Use Safe Mode</h3>
+
+<p>Safe Mode can be useful when:</p>
+
+<ul>
+  <li>Windows is <strong>freezing or crashing frequently</strong>.</li>
+  <li>A newly installed <strong>program or driver</strong> is causing problems.</li>
+  <li>The computer becomes very slow or unstable.</li>
+  <li>Windows cannot work properly in normal mode.</li>
+  <li>We need to <strong>remove a problematic program or driver</strong>.</li>
+  <li>We want to check whether a problem is caused by third-party software.</li>
+</ul>
+
+<h3>How to Open Safe Mode</h3>
+
+<p>The method can be different depending on the version of Windows.</p>
+
+<h4>On Most Modern Windows Systems</h4>
+
+<p>In Windows 10 and Windows 11:</p>
+
+<ol>
+  <li>Open <strong>Settings</strong>.</li>
+  <li>Go to <strong>System → Recovery</strong>.</li>
+  <li>Under <strong>Advanced startup</strong>, select <strong>Restart now</strong>.</li>
+  <li>After the computer restarts, select <strong>Troubleshoot</strong>.</li>
+  <li>Select <strong>Advanced options → Startup Settings</strong>.</li>
+  <li>Click <strong>Restart</strong>.</li>
+  <li>When the options appear, press <strong>4</strong> or <strong>F4</strong> to start <strong>Safe Mode</strong>.</li>
+</ol>
+
+<p>You can also press <strong>5</strong> or <strong>F5</strong> to start <strong>Safe Mode with Networking</strong>.</p>
+
+<h4>On Some Older Systems</h4>
+
+<p>On some older versions of Windows, pressing the <strong>F8 key repeatedly while the computer is starting</strong> can open the <strong>Advanced Boot Options</strong> menu.</p>
+
+<p>From this menu, you can select <strong>Safe Mode</strong>.</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> The <strong>F8</strong> method is mainly associated with older Windows versions. On many modern systems, Windows starts too quickly for F8 to open the Safe Mode menu.
+</div>
+
+<h3>Safe Mode with Networking</h3>
+
+<p><strong>Safe Mode with Networking</strong> is similar to normal Safe Mode, but it also loads the basic <strong>network drivers and services</strong> needed for an internet or network connection.</p>
+
+<p>It can be useful when you need to:</p>
+
+<ul>
+  <li>Access the internet to find troubleshooting information.</li>
+  <li>Download a required driver or tool.</li>
+  <li>Connect to another computer on the network.</li>
+  <li>Troubleshoot a problem related to networking.</li>
+</ul>
+
+<h2 id="system-restore3">System Restore</h2>
+
+<p><strong>System Restore</strong> is a Windows feature that allows us to return the computer's system settings to an <strong>earlier working state</strong>. It is useful when a problem occurs after installing a program, driver, or update.</p>
+
+<p>System Restore mainly changes <strong>system files, drivers, settings, and installed programs</strong>. It normally does not affect personal files such as documents, pictures, and videos.</p>
+
+<h3>What Are System Restore Points?</h3>
+
+<p>A <strong>restore point</strong> is a saved record of important system settings and files at a particular time.</p>
+
+<p>Windows may create restore points automatically before certain major changes, such as installing software or drivers. Users can also <strong>create a restore point manually</strong>.</p>
+
+<p>For example, if the computer is working properly today and we create a restore point, we can use that point later to return the system to today's settings if a problem occurs.</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> A restore point is like a <strong>saved checkpoint for the computer's system</strong>.
+</div>
+
+<h3>Steps to Create a Restore Point</h3>
+
+<ol>
+  <li>Open the <strong>Start menu</strong>.</li>
+  <li>Search for <strong>Create a restore point</strong> and open it.</li>
+  <li>In the <strong>System Properties</strong> window, select the <strong>System Protection</strong> tab.</li>
+  <li>Select the drive where Windows is installed, usually <strong>C:</strong>.</li>
+  <li>Click <strong>Create</strong>.</li>
+  <li>Enter a name for the restore point, such as <strong>Before Installing New Software</strong>.</li>
+  <li>Click <strong>Create</strong>.</li>
+  <li>Wait until Windows finishes creating the restore point.</li>
+  <li>Click <strong>Close</strong> when it is completed.</li>
+</ol>
+
+<h3>Steps to Use a Restore Point</h3>
+
+<ol>
+  <li>Open the <strong>Start menu</strong>.</li>
+  <li>Search for <strong>Create a restore point</strong> and open it.</li>
+  <li>Go to the <strong>System Protection</strong> tab.</li>
+  <li>Click <strong>System Restore</strong>.</li>
+  <li>Click <strong>Next</strong>.</li>
+  <li>Select the restore point you want to use.</li>
+  <li>Check the affected programs if the option is available.</li>
+  <li>Click <strong>Next</strong> and then <strong>Finish</strong>.</li>
+  <li>Confirm the action when Windows asks.</li>
+  <li>Windows will restart the computer and restore the system to the selected point.</li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> Before using System Restore, carefully select the correct restore point. System Restore is mainly designed to restore <strong>system settings and software-related changes</strong>, not to recover deleted personal files.
+</div>
+
+<h2 id="bootable-recovery-media">Bootable Recovery Media</h2>
+
+<p><strong>Bootable recovery media</strong> is a USB drive, DVD, or another storage device that contains the necessary files to <strong>start a computer and repair or recover the operating system</strong>.</p>
+
+<p>It is especially useful when Windows cannot start normally or when the system has serious problems.</p>
+
+<h3>Understanding Bootable Media and Its Uses</h3>
+
+<p><strong>Bootable media</strong> is a storage device that a computer can use to <strong>start the operating system or recovery environment</strong>.</p>
+
+<p>A bootable USB can be used to:</p>
+
+<ul>
+  <li>Install or reinstall Windows.</li>
+  <li>Repair Windows startup problems.</li>
+  <li>Access recovery and troubleshooting tools.</li>
+  <li>Recover or back up important data when Windows cannot start.</li>
+  <li>Troubleshoot serious system problems.</li>
+  <li>Perform a clean installation of the operating system.</li>
+</ul>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> A bootable USB works like an <strong>emergency tool</strong> that allows us to start and repair a computer when the normal Windows system cannot start.
+</div>
+
+<h3>When Do We Use Bootable Media?</h3>
+
+<p>Bootable media is useful when:</p>
+
+<ul>
+  <li>Windows <strong>does not start</strong>.</li>
+  <li>The computer repeatedly shows <strong>startup errors</strong>.</li>
+  <li>Important system files are damaged or missing.</li>
+  <li>The operating system needs to be <strong>reinstalled</strong>.</li>
+  <li>Normal recovery methods are not working.</li>
+  <li>We need to access files or recovery tools without starting Windows normally.</li>
+</ul>
+
+<h3>How to Create and Use a Bootable USB</h3>
+
+<p>To create a bootable USB, we need a <strong>USB flash drive</strong> and the installation or recovery files for the operating system.</p>
+
+<h4>Steps to Create a Bootable USB</h4>
+
+<ol>
+  <li>Get a suitable <strong>USB flash drive</strong>. A USB of at least <strong>8 GB</strong> is commonly used for Windows installation media.</li>
+
+  <li>
+    Download the <strong>ISO image</strong> of the operating system you want to install or use. It can be a <strong>Windows ISO, Linux ISO, macOS ISO</strong>, or an ISO of another operating system.
+    
+    <p><strong>ISO</strong> stands for <strong>International Organization for Standardization</strong>. An ISO file is a <strong>complete image of a CD, DVD, or operating system installation media</strong> stored as a single file.</p>
+  </li>
+
+  <li>Use a suitable tool to write the ISO image to the USB drive.</li>
+  <li>Select the correct <strong>USB drive</strong> in the tool.</li>
+  <li>Select the appropriate settings, such as the <strong>partition style (MBR or GPT)</strong>, if required.</li>
+  <li>Start the process and wait for it to complete.</li>
+  <li>Once the process is finished, the USB drive will be ready to use as <strong>bootable media</strong>.</li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> Use a bootable USB creation tool, such as <strong>Rufus, balenaEtcher, Ventoy, or UNetbootin</strong>, to write the ISO image to the USB drive.
+</div>
+
+<h4>Steps to Use a Bootable USB</h4>
+
+<ol>
+  <li>Insert the bootable USB into the computer.</li>
+  <li>Restart the computer.</li>
+  <li>Open the <strong>Boot Menu</strong> by pressing the appropriate key during startup. The key varies by computer manufacturer and may be <strong>F12, F9, Esc, or another key</strong>.</li>
+  <li>Select the USB drive from the boot options.</li>
+  <li>The computer will start from the USB instead of the internal drive.</li>
+  <li>Choose the required option, such as <strong>installing Windows, repairing the system, or accessing recovery tools</strong>.</li>
+</ol>
+
+<h2 id="partition-style">How to Check the Partition Style: MBR or GPT</h2>
+
+<p><strong>MBR (Master Boot Record)</strong> and <strong>GPT (GUID Partition Table)</strong> are two different partition styles used to organize data on a storage drive.</p>
+
+<p>Knowing the partition style can be important when creating bootable media because the boot mode and partition style should be compatible.</p>
+
+<h3>Method 1: Using Disk Management</h3>
+
+<ol>
+  <li>Right-click the <strong>Start</strong> button.</li>
+  <li>Select <strong>Disk Management</strong>.</li>
+  <li>Find the disk you want to check, such as <strong>Disk 0</strong>.</li>
+  <li>Right-click the <strong>Disk</strong> section on the left side, not one of its partitions.</li>
+  <li>Select <strong>Properties</strong>.</li>
+  <li>Open the <strong>Volumes</strong> tab.</li>
+  <li>Look at <strong>Partition style</strong>.</li>
+  <li>It will show either:
+    <ul>
+      <li><strong>Master Boot Record (MBR)</strong></li>
+      <li><strong>GUID Partition Table (GPT)</strong></li>
+    </ul>
+  </li>
+</ol>
+
+<h3>Method 2: Using Command Prompt</h3>
+
+<ol>
+  <li>Open <strong>Command Prompt</strong> as administrator.</li>
+  <li>Type <code>diskpart</code> and press <strong>Enter</strong>.</li>
+  <li>Type <code>list disk</code> and press <strong>Enter</strong>.</li>
+  <li>Look at the <strong>GPT</strong> column:
+    <ul>
+      <li>A <strong>star (*)</strong> under GPT means the disk uses <strong>GPT</strong>.</li>
+      <li>No star means the disk uses <strong>MBR</strong>.</li>
+    </ul>
+  </li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong>
+    <strong>MBR</strong> is an older partition style commonly used with <strong>Legacy BIOS</strong>, while <strong>GPT</strong> is a newer partition style commonly used with <strong>UEFI</strong> and modern computers.
+</div>
+
+<h2 id="bios-uefi-boot-process">BIOS/UEFI and Boot Process Awareness</h2>
+
+<p>When a computer is turned on, it goes through a <strong>startup process</strong> before the operating system, such as Windows, begins to load. <strong>BIOS and UEFI</strong> are firmware interfaces that help the computer perform this startup process.</p>
+
+<h3>Firmware</h3>
+
+<p><strong>Firmware</strong> is a type of software stored on a computer's hardware. It provides basic instructions that help the hardware work and allows the computer to start before the operating system loads.</p>
+
+<h3>BIOS</h3>
+
+<p><strong>BIOS</strong> stands for <strong>Basic Input/Output System</strong>. It is an older type of firmware used to start the computer.</p>
+
+<p>When the computer is turned on, BIOS:</p>
+
+<ul>
+  <li>Checks the basic hardware components.</li>
+  <li>Performs the <strong>Power-On Self-Test (POST)</strong>.</li>
+  <li>Identifies available boot devices.</li>
+  <li>Finds a bootable device and starts the operating system.</li>
+</ul>
+
+<p>BIOS commonly works with the <strong>MBR (Master Boot Record)</strong> partition style.</p>
+
+<h3>UEFI</h3>
+
+<p><strong>UEFI</strong> stands for <strong>Unified Extensible Firmware Interface</strong>. It is the modern replacement for traditional BIOS and is found on most modern computers.</p>
+
+<p>UEFI:</p>
+
+<ul>
+  <li>Checks and initializes hardware during startup.</li>
+  <li>Performs startup checks.</li>
+  <li>Identifies available boot devices.</li>
+  <li>Finds and loads the operating system's boot manager.</li>
+  <li>Supports modern features such as <strong>GPT (GUID Partition Table)</strong> and Secure Boot.</li>
+  <li>Generally provides a faster and more flexible boot process than traditional BIOS.</li>
+</ul>
+
+<h3>Role of BIOS/UEFI in Computer Startup</h3>
+
+<p>When a computer is turned on, <strong>BIOS or UEFI</strong> controls the initial startup process. It prepares the hardware and finds the device from which the operating system should start.</p>
+
+<h4>1. Power On</h4>
+
+<p>The computer is switched on.</p>
+
+<p><strong>↓</strong></p>
+
+<h4>2. BIOS/UEFI Starts</h4>
+
+<p>The firmware starts and initializes the basic hardware components.</p>
+
+<p><strong>↓</strong></p>
+
+<h4>3. Hardware Check (POST)</h4>
+
+<p>BIOS/UEFI checks important hardware such as the <strong>RAM, keyboard, processor, and storage devices</strong> to make sure they are working properly.</p>
+
+<p><strong>↓</strong></p>
+
+<h4>4. Boot Device is Selected</h4>
+
+<p>BIOS/UEFI checks the available devices, such as the <strong>SSD, hard drive, or bootable USB</strong>, and selects the appropriate boot device.</p>
+
+<p><strong>↓</strong></p>
+
+<h4>5. Bootloader Starts</h4>
+
+<p>BIOS/UEFI loads the <strong>bootloader</strong>, which is a small program responsible for starting the operating system.</p>
+
+<p><strong>↓</strong></p>
+
+<h4>6. Operating System Loads</h4>
+
+<p>The bootloader starts loading the operating system, such as <strong>Windows or Linux</strong>.</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> BIOS/UEFI <strong>checks the computer's hardware, finds the bootable device, and starts the operating system</strong>.
+</div>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> BIOS or UEFI acts as a <strong>bridge between the computer's hardware and the operating system during startup</strong>. It prepares the computer and tells it where to find the operating system so that it can start.
+</div>
+
+<h2 id="post-power-on-self-test">POST (Power-On Self-Test)</h2>
+
+<p><strong>POST</strong> stands for <strong>Power-On Self-Test</strong>. It is a test performed by the computer's <strong>BIOS or UEFI</strong> when the computer is turned on.</p>
+
+<p>The purpose of POST is to check whether the <strong>basic hardware components</strong> are working properly before the operating system starts.</p>
+
+<h3>What Does POST Check?</h3>
+
+<p>POST may check components such as:</p>
+
+<ul>
+  <li><strong>RAM (Memory)</strong></li>
+  <li><strong>Processor (CPU)</strong></li>
+  <li><strong>Keyboard</strong></li>
+  <li><strong>Storage devices</strong></li>
+  <li><strong>Display/Graphics hardware</strong></li>
+  <li>Other essential hardware components</li>
+</ul>
+
+<h3>Example of POST</h3>
+
+<p>Suppose you turn on your computer and the <strong>RAM is not properly installed</strong>. During POST, the computer may detect the problem and:</p>
+
+<ul>
+  <li>Display an <strong>error message</strong> on the screen.</li>
+  <li>Produce <strong>beep sounds</strong>.</li>
+  <li>Stop the startup process until the problem is fixed.</li>
+</ul>
+
+<p>Another example is when the computer starts normally and displays the manufacturer's logo. This usually means that the initial hardware checks have completed successfully and the computer can continue with the boot process.</p>
+
+<h3>Shortcut Keys to Access BIOS/UEFI Settings</h3>
+
+<p>During startup, a specific key can be pressed to open the <strong>BIOS/UEFI setup</strong>. The key depends on the computer manufacturer.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Common Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>F2</strong></td>
+      <td>BIOS/UEFI Setup</td>
+    </tr>
+    <tr>
+      <td><strong>Delete (Del)</strong></td>
+      <td>BIOS/UEFI Setup</td>
+    </tr>
+    <tr>
+      <td><strong>F10</strong></td>
+      <td>BIOS/UEFI Setup on some HP computers</td>
+    </tr>
+    <tr>
+      <td><strong>Esc</strong></td>
+      <td>Startup Menu on some computers</td>
+    </tr>
+    <tr>
+      <td><strong>F12</strong></td>
+      <td>Boot Menu on many computers</td>
+    </tr>
+    <tr>
+      <td><strong>F9</strong></td>
+      <td>Boot Menu on some HP computers</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> The exact key varies by <strong>manufacturer and computer model</strong>. The correct key is usually shown briefly on the screen when the computer starts.
+</div>
+
+<h2 id="boot-order">Boot Order</h2>
+
+<p><strong>Boot order</strong> is the sequence in which <strong>BIOS/UEFI checks different devices to find a bootable operating system</strong>.</p>
+
+<p>For example, a computer may have the following boot order:</p>
+
+<p><strong>1. USB Drive → 2. SSD → 3. Network</strong></p>
+
+<p>This means the computer first checks the USB drive for a bootable system. If no bootable USB is found, it checks the SSD. If necessary, it then checks the network.</p>
+
+<h3>Why Change the Boot Order?</h3>
+
+<p>We may need to change the boot order when we want to:</p>
+
+<ul>
+  <li>Start the computer from a <strong>bootable USB</strong>.</li>
+  <li>Install or reinstall an operating system.</li>
+  <li>Use <strong>recovery or repair media</strong>.</li>
+  <li>Troubleshoot startup problems.</li>
+</ul>
+
+<p><strong>Example:</strong> If Windows is not starting and you have a Windows recovery USB, you can set the USB as the first boot device so the computer starts from the recovery USB.</p>
+
+<h3>Steps to Change the Boot Order</h3>
+
+<ol>
+  <li><strong>Turn on or restart the computer.</strong></li>
+  <li>As soon as the computer starts, repeatedly press the <strong>BIOS/UEFI setup key</strong>. Common keys include <strong>F2, Delete, F10, or Esc</strong>, depending on the computer manufacturer.</li>
+  <li>Once the BIOS/UEFI screen opens, find the <strong>Boot</strong>, <strong>Boot Order</strong>, or <strong>Boot Priority</strong> section.</li>
+  <li>
+    You will see a list of available boot devices, such as:
+    <ul>
+      <li>SSD/HDD</li>
+      <li>USB drive</li>
+      <li>CD/DVD</li>
+      <li>Network</li>
+    </ul>
+  </li>
+  <li>Select the device you want to boot from.</li>
+  <li>Move it to the <strong>top of the boot order</strong> using the keys shown on the screen, such as <strong>F5/F6, +/−, or arrow keys</strong>.</li>
+  <li>Save the changes using <strong>Save &amp; Exit</strong>. On many systems, <strong>F10</strong> is used to save and exit.</li>
+  <li>The computer will restart and check the selected device first.</li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> The BIOS/UEFI menu and shortcut keys can be different depending on the <strong>computer manufacturer and model</strong>.
+</div>
+
+<h2 id="boot-repair">Boot Repair</h2>
+
+<p><strong>Boot repair</strong> means fixing problems that prevent the operating system from <strong>starting normally</strong>.</p>
+
+<p>A computer may fail to boot because of:</p>
+
+<ul>
+  <li>Damaged or missing boot files.</li>
+  <li>Problems with the boot configuration.</li>
+  <li>A failed system update.</li>
+  <li>A damaged operating system.</li>
+  <li>Problems with the storage drive.</li>
+</ul>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> Boot repair is mainly used when the computer <strong>cannot start the operating system normally</strong>.
+</div>
+
+<h1 id="data-recovery-techniques">Data Recovery Techniques</h1>
+
+<p><strong>Data recovery</strong> means recovering files that have been <strong>accidentally deleted, lost, or become inaccessible</strong> because of problems with the computer or storage device.</p>
+
+<p>There are two common approaches to data recovery:</p>
+
+<h2>1. Built-in Data Recovery Tools</h2>
+
+<p>Windows provides several built-in features that can help recover lost or deleted files.</p>
+
+<h3>Recycle Bin</h3>
+
+<p>The <strong>Recycle Bin</strong> temporarily stores files that are deleted from the computer.</p>
+
+<p>If a file was deleted accidentally:</p>
+
+<ol>
+  <li>Open <strong>Recycle Bin</strong>.</li>
+  <li>Find the deleted file.</li>
+  <li>Right-click the file.</li>
+  <li>Select <strong>Restore</strong>.</li>
+  <li>The file will be returned to its original location.</li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> Files permanently deleted using <strong>Shift + Delete</strong>, or files removed from an emptied Recycle Bin, cannot normally be recovered through the Recycle Bin.
+</div>
+
+<h3>File History</h3>
+
+<p><strong>File History</strong> is a Windows backup feature that regularly saves copies of files from selected folders.</p>
+
+<p>If a file is lost or an older version is needed, File History can be used to restore it from a previous backup.</p>
+
+<h3>How to Enable File History</h3>
+
+<ol>
+  <li>Connect an <strong>external USB drive</strong> to the computer.</li>
+  <li>Open <strong>Control Panel</strong>.</li>
+  <li>Select <strong>System and Security</strong>.</li>
+  <li>Select <strong>File History</strong>.</li>
+  <li>Click <strong>Turn on</strong>.</li>
+  <li>Windows will start saving copies of your files to the selected drive.</li>
+</ol>
+
+<h4>Previous Versions</h4>
+
+<p><strong>Previous Versions</strong> is a Windows feature that allows users to view and restore an <strong>older version of a file or folder</strong>. It works when Windows has a suitable restore point, File History backup, or another supported backup available.</p>
+
+<h3>How to Check Previous Versions</h3>
+
+<ol>
+  <li>Find the <strong>file or folder</strong> you want to restore.</li>
+  <li>Right-click on it.</li>
+  <li>Select <strong>Properties</strong>.</li>
+  <li>Open the <strong>Previous Versions</strong> tab.</li>
+  <li>If previous versions are available, they will be displayed in the list.</li>
+  <li>Select the version you want to check.</li>
+  <li>Click <strong>Open</strong> to view it before restoring.</li>
+  <li>If it is the required version, click <strong>Restore</strong> to restore it.</li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> The <strong>Previous Versions</strong> tab may be empty if Windows has not created or saved any previous versions for that file or folder.
+</div>
+
+<h2 id="third-party-recovery-tools">2. Third-Party Data Recovery Tools</h2>
+
+<p>If built-in Windows tools cannot recover a file, <strong>third-party data recovery software</strong> may sometimes help.</p>
+
+<p>Some commonly used data recovery tools include:</p>
+
+<ul>
+  <li><strong>Tenorshare 4DDiG</strong></li>
+  <li><strong>Recuva</strong></li>
+  <li><strong>EaseUS Data Recovery Wizard</strong></li>
+  <li><strong>Disk Drill</strong></li>
+  <li><strong>Stellar Data Recovery</strong></li>
+</ul>
+
+<p>These programs scan storage devices for data that is no longer visible through the normal file system.</p>
+
+<h3>How to Use Tenorshare 4DDiG</h3>
+
+<p><strong>Tenorshare 4DDiG</strong> is a third-party data recovery program that can scan storage devices and attempt to recover deleted or lost files.</p>
+
+<p>Basic steps are:</p>
+
+<ol>
+  <li><strong>Install Tenorshare 4DDiG</strong> on the computer.</li>
+  <li>Open the program.</li>
+  <li>Select the <strong>drive or location</strong> where the file was lost.</li>
+  <li>Start the <strong>Scan</strong>.</li>
+  <li>Allow the program to search for recoverable files.</li>
+  <li>Use the available filters or search options to find the required file.</li>
+  <li><strong>Preview the file</strong> when possible to check whether it is recoverable.</li>
+  <li>Select the required files and click <strong>Recover</strong>.</li>
+  <li>Save the recovered files to a <strong>different drive or storage device</strong>.</li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Important:</strong> If files have been accidentally deleted, avoid saving new files to the <strong>same drive</strong>. New data may overwrite the deleted data and make recovery more difficult.
+</div>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> First, check Windows' <strong>built-in recovery options</strong> such as Recycle Bin and File History. If they cannot recover the required data, a <strong>third-party recovery tool</strong> such as Tenorshare 4DDiG may be used to scan the storage device for recoverable files.
+</div>
+
+<h2 id="recovery-limitations-best-practices">Limitations of Recovery and Best Practices</h2>
+
+<p>While <strong>data recovery tools</strong> can be helpful, they have some limitations.</p>
+
+<h3>Limitations of Data Recovery</h3>
+
+<ol>
+  <li><strong>Deleted for a Long Time</strong> – If a file was <strong>deleted a long time ago</strong>, it may no longer be possible to recover it.</li>
+  <li><strong>Damaged or Formatted Drive</strong> – Recovery may not be possible if the <strong>hard drive is damaged or has been formatted</strong>.</li>
+  <li><strong>No Backup</strong> – Files may be <strong>permanently lost</strong> if the Recycle Bin has been emptied and <strong>no backup was created</strong>.</li>
+</ol>
+
+<h3>Best Practices</h3>
+
+<ol>
+  <li><strong>Do Not Install Recovery Software on the Same Drive</strong> – Never install recovery software on the same drive where the lost file was stored. This may overwrite the deleted data and reduce the chance of successful recovery.</li>
+  <li><strong>Check the Recycle Bin First</strong> – Always check the <strong>Recycle Bin</strong> before using advanced recovery tools. It is the easiest and safest way to restore deleted files.</li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> If you accidentally delete an important file, avoid saving new data to the same drive and check the Recycle Bin first. This can improve the chances of successful recovery.
+</div>
+
+<h1 id="best-practices-preventive-maintenance">Best Practices for Preventive Maintenance</h1>
+
+<p><strong>Preventive maintenance</strong> means regularly taking care of a computer to <strong>prevent problems before they happen</strong>. It helps keep the system secure, reliable, and running smoothly.</p>
+
+<h2 id="disk-cleanup">1. Disk Cleanup</h2>
+
+<p><strong>Disk Cleanup</strong> is a built-in Windows tool that removes <strong>unnecessary files</strong> from the computer. It can free up storage space and help keep the system organized.</p>
+
+<h3>Steps to Perform Disk Cleanup</h3>
+
+<ol>
+  <li>Open the <strong>Start menu</strong>.</li>
+  <li>Search for <strong>Disk Cleanup</strong> and open it.</li>
+  <li>Select the drive you want to clean, usually <strong>C:</strong>.</li>
+  <li>Windows will calculate how much space can be freed.</li>
+  <li>Select the types of unnecessary files you want to remove.</li>
+  <li>Click <strong>OK</strong>.</li>
+  <li>Click <strong>Delete Files</strong> to confirm.</li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> Check the selected file categories carefully before deleting them, especially if you are not sure what they contain.
+</div>
+
+<h2 id="patch-management">2. Patch Management and System Updates</h2>
+
+<p><strong>Patch management</strong> means regularly installing <strong>updates and security fixes</strong> provided by the operating system or software developers.</p>
+
+<p>Updates can:</p>
+
+<ul>
+  <li>Fix security weaknesses.</li>
+  <li>Repair software problems.</li>
+  <li>Improve system performance.</li>
+  <li>Add new features.</li>
+  <li>Protect the computer from newly discovered threats.</li>
+</ul>
+
+<p>Users should regularly check for and install <strong>Windows Updates</strong> and keep important software up to date.</p>
+
+<p><strong>In simple words:</strong> Keeping the system updated helps <strong>fix problems and protect the computer from security threats</strong>.</p>
+
+<h2>3. Staying Protected with Windows Defender</h2>
+
+<p><strong>Windows Defender</strong>, now known as <strong>Microsoft Defender Antivirus</strong>, is a built-in security feature in Windows that helps protect the computer from <strong>viruses, malware, spyware, and other threats</strong>.</p>
+
+<p>For better protection:</p>
+
+<ul>
+  <li>Keep Microsoft Defender <strong>enabled</strong>.</li>
+  <li>Keep its <strong>security intelligence updates</strong> up to date.</li>
+  <li>Run regular <strong>virus scans</strong>.</li>
+  <li>Pay attention to security warnings and take appropriate action.</li>
+</ul>
+
+<p><strong>In simple words:</strong> Microsoft Defender helps <strong>detect and protect the computer from harmful software</strong>.</p>
+
+<h2 id="maintenance-calendar">4. Keeping a Maintenance Calendar</h2>
+
+<p>A <strong>maintenance calendar</strong> helps users remember when important computer maintenance tasks need to be performed.</p>
+
+<p>For example:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Suggested Schedule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Check for Windows Updates</td>
+      <td>Regularly</td>
+    </tr>
+    <tr>
+      <td>Run a security scan</td>
+      <td>Regularly</td>
+    </tr>
+    <tr>
+      <td>Check storage space</td>
+      <td>Monthly</td>
+    </tr>
+    <tr>
+      <td>Perform Disk Cleanup</td>
+      <td>Monthly or when needed</td>
+    </tr>
+    <tr>
+      <td>Check backups</td>
+      <td>Regularly</td>
+    </tr>
+    <tr>
+      <td>Review installed programs</td>
+      <td>Every few months</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Keeping a maintenance calendar ensures that important tasks are <strong>not forgotten</strong>.</p>
+
+<h2 id="system-documentation-logs">System Documentation and Logs</h2>
+
+<p><strong>System documentation and logs</strong> are important for <strong>understanding, maintaining, monitoring, and troubleshooting a computer system</strong>.</p>
+
+<p>They help users and system administrators keep a <strong>clear and organized record</strong> of system settings, changes, errors, warnings, and other important activities.</p>
+
+<p>This information can be useful when <strong>checking system performance, finding problems, and maintaining the computer over time</strong>.</p>
+
+
+<h1 id="exercise-short-questions-answers">Exercise Short Questions – Answers</h1>
+
+<h2>1. Write one key function of the Resource Monitor.</h2>
+
+<p>Resource Monitor provides <strong>detailed information about the use of CPU, memory, disk, and network resources</strong>.</p>
+
+<h2>2. Define the use of Safe Mode in system recovery.</h2>
+
+<p>Safe Mode starts Windows with only <strong>basic drivers and essential services</strong>. It is used to <strong>find and fix problems</strong> caused by programs, drivers, or settings.</p>
+
+<h2>3. List the steps to create a bootable USB using Rufus.</h2>
+
+<ol>
+  <li>Connect a USB drive to the computer.</li>
+  <li>Open <strong>Rufus</strong>.</li>
+  <li>Select the USB drive.</li>
+  <li>Select the required <strong>ISO image</strong>.</li>
+  <li>Choose the appropriate settings, such as <strong>MBR or GPT</strong>.</li>
+  <li>Click <strong>Start</strong> and wait for the process to complete.</li>
+</ol>
+
+<h2>4. What happens during the Power-On Self-Test (POST)?</h2>
+
+<p>POST checks the computer's <strong>basic hardware components</strong>, such as RAM, processor, keyboard, and storage devices, to make sure they are working properly before the operating system starts.</p>
+
+<h2>5. Why is the boot order setting important when using recovery tools from a USB drive?</h2>
+
+<p>Boot order is important because it tells the computer <strong>which device to check first for a bootable system</strong>. Setting the USB first allows the computer to start from the <strong>recovery USB</strong> instead of the internal drive.</p>
+
+<h2>6. List the two benefits of running regular disk cleanup.</h2>
+
+<ul>
+  <li>It <strong>removes unnecessary files</strong>.</li>
+  <li>It <strong>frees up storage space</strong>.</li>
+</ul>
+
+<h2>7. How does Windows Defender help in maintaining system health?</h2>
+
+<p>Windows Defender helps maintain system health by <strong>detecting, blocking, and removing harmful software such as viruses and malware</strong>. It also provides <strong>real-time protection</strong> to help keep the computer safe from security threats.</p>
+
+<h2 id="mcqs">Multiple Choice Questions (MCQs) on System Recovery and Advanced Maintenance</h2>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What is system recovery?</div>
+  <div class="mcq-options">
+    a. Installing a new printer<br>
+    b. Bringing a computer or system back to a working condition<br>
+    c. Deleting all personal files<br>
+    d. Changing the desktop wallpaper
+  </div>
+  <div class="mcq-answer">Answer: b. Bringing a computer or system back to a working condition</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. Which Windows feature can help return a computer to an earlier working state?</div>
+  <div class="mcq-options">
+    a. Disk Cleanup<br>
+    b. Task Manager<br>
+    c. System Restore<br>
+    d. Resource Monitor
+  </div>
+  <div class="mcq-answer">Answer: c. System Restore</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. What does advanced maintenance involve?</div>
+  <div class="mcq-options">
+    a. Simple file organization<br>
+    b. Changing the desktop theme<br>
+    c. Printing documents<br>
+    d. Detailed and technical work to fix difficult problems
+  </div>
+  <div class="mcq-answer">Answer: d. Detailed and technical work to fix difficult problems</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. What is post-troubleshooting?</div>
+  <div class="mcq-options">
+    a. Steps taken after fixing a problem to make sure the system works properly<br>
+    b. Installing Windows for the first time<br>
+    c. Removing all computer programs<br>
+    d. Creating a new user account
+  </div>
+  <div class="mcq-answer">Answer: a. Steps taken after fixing a problem to make sure the system works properly</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. Which is an important benefit of continuous maintenance?</div>
+  <div class="mcq-options">
+    a. Increases the number of viruses<br>
+    b. Prevents problems before they become serious<br>
+    c. Deletes all backups<br>
+    d. Slows down the computer
+  </div>
+  <div class="mcq-answer">Answer: b. Prevents problems before they become serious</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. What can poor maintenance cause?</div>
+  <div class="mcq-options">
+    a. Better security<br>
+    b. Faster performance<br>
+    c. System failure<br>
+    d. Longer hardware life
+  </div>
+  <div class="mcq-answer">Answer: c. System failure</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. What is system health monitoring?</div>
+  <div class="mcq-options">
+    a. Regularly checking whether hardware and software are working properly<br>
+    b. Installing games on a computer<br>
+    c. Deleting temporary files only<br>
+    d. Changing the computer's password
+  </div>
+  <div class="mcq-answer">Answer: a. Regularly checking whether hardware and software are working properly</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. Which resources can be monitored to check system usage?</div>
+  <div class="mcq-options">
+    a. Keyboard and mouse only<br>
+    b. Printer and scanner only<br>
+    c. CPU and RAM only<br>
+    d. CPU, RAM, Disk, and Network
+  </div>
+  <div class="mcq-answer">Answer: d. CPU, RAM, Disk, and Network</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. What is the shortcut key for Task Manager?</div>
+  <div class="mcq-options">
+    a. Ctrl + Shift + Esc<br>
+    b. Ctrl + Alt + F4<br>
+    c. Windows + R<br>
+    d. Alt + Tab
+  </div>
+  <div class="mcq-answer">Answer: a. Ctrl + Shift + Esc</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. Which tool provides detailed information about CPU, memory, disk, and network activity?</div>
+  <div class="mcq-options">
+    a. Event Viewer<br>
+    b. Resource Monitor<br>
+    c. Recycle Bin<br>
+    d. Disk Cleanup
+  </div>
+  <div class="mcq-answer">Answer: b. Resource Monitor</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. What command opens Resource Monitor using the Run dialog box?</div>
+  <div class="mcq-options">
+    a. taskmgr<br>
+    b. eventvwr<br>
+    c. resmon<br>
+    d. diskpart
+  </div>
+  <div class="mcq-answer">Answer: c. resmon</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. What does Event Viewer record?</div>
+  <div class="mcq-options">
+    a. Only deleted files<br>
+    b. Only internet speed<br>
+    c. Only installed games<br>
+    d. Errors, warnings, and system activities
+  </div>
+  <div class="mcq-answer">Answer: d. Errors, warnings, and system activities</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. What is Safe Mode?</div>
+  <div class="mcq-options">
+    a. A special startup mode with basic drivers, services, and essential programs<br>
+    b. A mode used only for playing games<br>
+    c. A tool for deleting all files<br>
+    d. A method of increasing internet speed
+  </div>
+  <div class="mcq-answer">Answer: a. A special startup mode with basic drivers, services, and essential programs</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. When can Safe Mode be useful?</div>
+  <div class="mcq-options">
+    a. When creating a presentation<br>
+    b. When Windows is freezing or crashing frequently<br>
+    c. When printing a normal document<br>
+    d. When changing the desktop background
+  </div>
+  <div class="mcq-answer">Answer: b. When Windows is freezing or crashing frequently</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. Which option starts Safe Mode with Networking?</div>
+  <div class="mcq-options">
+    a. F2<br>
+    b. F4<br>
+    c. F5<br>
+    d. F10
+  </div>
+  <div class="mcq-answer">Answer: c. F5</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">16. What is a restore point?</div>
+  <div class="mcq-options">
+    a. A backup of personal pictures only<br>
+    b. A backup of the entire hard drive<br>
+    c. A list of installed printers<br>
+    d. A saved record of important system settings and files at a particular time
+  </div>
+  <div class="mcq-answer">Answer: d. A saved record of important system settings and files at a particular time</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">17. Which tab is used to create a restore point?</div>
+  <div class="mcq-options">
+    a. System Protection<br>
+    b. Boot<br>
+    c. Processes<br>
+    d. Previous Versions
+  </div>
+  <div class="mcq-answer">Answer: a. System Protection</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">18. What does bootable recovery media allow a computer to do?</div>
+  <div class="mcq-options">
+    a. Increase screen brightness<br>
+    b. Start and repair or recover the operating system<br>
+    c. Automatically upgrade the monitor<br>
+    d. Replace the keyboard
+  </div>
+  <div class="mcq-answer">Answer: b. Start and repair or recover the operating system</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">19. Which device can be used as bootable recovery media?</div>
+  <div class="mcq-options">
+    a. Keyboard<br>
+    b. Mouse<br>
+    c. USB flash drive<br>
+    d. Monitor
+  </div>
+  <div class="mcq-answer">Answer: c. USB flash drive</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">20. What is an ISO file?</div>
+  <div class="mcq-options">
+    a. A type of computer virus<br>
+    b. A Windows password<br>
+    c. A network configuration file<br>
+    d. A complete image of a CD, DVD, or operating system installation media
+  </div>
+  <div class="mcq-answer">Answer: d. A complete image of a CD, DVD, or operating system installation media</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">21. Which of the following is a bootable USB creation tool?</div>
+  <div class="mcq-options">
+    a. Rufus<br>
+    b. Task Manager<br>
+    c. Event Viewer<br>
+    d. File History
+  </div>
+  <div class="mcq-answer">Answer: a. Rufus</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">22. What does MBR stand for?</div>
+  <div class="mcq-options">
+    a. Main Boot Resource<br>
+    b. Master Boot Record<br>
+    c. Memory Boot Register<br>
+    d. Microsoft Boot Recovery
+  </div>
+  <div class="mcq-answer">Answer: b. Master Boot Record</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">23. What does GPT stand for?</div>
+  <div class="mcq-options">
+    a. General Partition Tool<br>
+    b. Global Processing Table<br>
+    c. GUID Partition Table<br>
+    d. Graphics Partition Technology
+  </div>
+  <div class="mcq-answer">Answer: c. GUID Partition Table</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">24. Which command can be used to check whether a disk uses GPT?</div>
+  <div class="mcq-options">
+    a. format<br>
+    b. clean<br>
+    c. select disk<br>
+    d. list disk
+  </div>
+  <div class="mcq-answer">Answer: d. list disk</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">25. What does BIOS stand for?</div>
+  <div class="mcq-options">
+    a. Basic Input/Output System<br>
+    b. Binary Input Operating System<br>
+    c. Basic Internet Operating Service<br>
+    d. Boot Input Output Software
+  </div>
+  <div class="mcq-answer">Answer: a. Basic Input/Output System</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">26. What does UEFI stand for?</div>
+  <div class="mcq-options">
+    a. Universal External Firmware Interface<br>
+    b. Unified Extensible Firmware Interface<br>
+    c. Universal Embedded File Interface<br>
+    d. Unified External File Installation
+  </div>
+  <div class="mcq-answer">Answer: b. Unified Extensible Firmware Interface</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">27. What is the main purpose of BIOS/UEFI during startup?</div>
+  <div class="mcq-options">
+    a. Edit documents<br>
+    b. Browse the internet<br>
+    c. Initialize hardware and find a bootable device<br>
+    d. Delete unnecessary files
+  </div>
+  <div class="mcq-answer">Answer: c. Initialize hardware and find a bootable device</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">28. What does POST stand for?</div>
+  <div class="mcq-options">
+    a. Primary Operating System Test<br>
+    b. Program Operating Startup Tool<br>
+    c. Power Operating System Transfer<br>
+    d. Power-On Self-Test
+  </div>
+  <div class="mcq-answer">Answer: d. Power-On Self-Test</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">29. What does POST check?</div>
+  <div class="mcq-options">
+    a. Basic hardware components<br>
+    b. Only internet connection<br>
+    c. Only installed software<br>
+    d. Only user accounts
+  </div>
+  <div class="mcq-answer">Answer: a. Basic hardware components</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">30. What is boot order?</div>
+  <div class="mcq-options">
+    a. The order in which files are deleted<br>
+    b. The sequence in which BIOS/UEFI checks devices for a bootable operating system<br>
+    c. The order in which programs are installed<br>
+    d. The sequence of Windows updates
+  </div>
+  <div class="mcq-answer">Answer: b. The sequence in which BIOS/UEFI checks devices for a bootable operating system</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">31. Why might a user change the boot order?</div>
+  <div class="mcq-options">
+    a. To change the screen resolution<br>
+    b. To increase RAM<br>
+    c. To start the computer from a bootable USB<br>
+    d. To remove a printer
+  </div>
+  <div class="mcq-answer">Answer: c. To start the computer from a bootable USB</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">32. What is boot repair?</div>
+  <div class="mcq-options">
+    a. Repairing a keyboard<br>
+    b. Cleaning a monitor<br>
+    c. Updating a web browser<br>
+    d. Fixing problems that prevent the operating system from starting normally
+  </div>
+  <div class="mcq-answer">Answer: d. Fixing problems that prevent the operating system from starting normally</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">33. What does the Recycle Bin temporarily store?</div>
+  <div class="mcq-options">
+    a. Deleted files<br>
+    b. Windows updates<br>
+    c. System drivers<br>
+    d. BIOS settings
+  </div>
+  <div class="mcq-answer">Answer: a. Deleted files</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">34. Which Windows feature saves copies of files from selected folders?</div>
+  <div class="mcq-options">
+    a. Disk Cleanup<br>
+    b. File History<br>
+    c. Task Manager<br>
+    d. Event Viewer
+  </div>
+  <div class="mcq-answer">Answer: b. File History</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">35. What can Previous Versions help users do?</div>
+  <div class="mcq-options">
+    a. Change the boot order<br>
+    b. Check CPU temperature<br>
+    c. Restore an older version of a file or folder<br>
+    d. Install a new operating system
+  </div>
+  <div class="mcq-answer">Answer: c. Restore an older version of a file or folder</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">36. Which of the following is a third-party data recovery tool?</div>
+  <div class="mcq-options">
+    a. Event Viewer<br>
+    b. File History<br>
+    c. Disk Cleanup<br>
+    d. Recuva
+  </div>
+  <div class="mcq-answer">Answer: d. Recuva</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">37. What should you avoid after accidentally deleting an important file?</div>
+  <div class="mcq-options">
+    a. Saving new data to the same drive<br>
+    b. Checking the Recycle Bin<br>
+    c. Using a backup<br>
+    d. Previewing a recoverable file
+  </div>
+  <div class="mcq-answer">Answer: a. Saving new data to the same drive</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">38. What is Disk Cleanup used for?</div>
+  <div class="mcq-options">
+    a. Repairing the BIOS<br>
+    b. Removing unnecessary files and freeing storage space<br>
+    c. Recovering permanently deleted files<br>
+    d. Changing the boot device
+  </div>
+  <div class="mcq-answer">Answer: b. Removing unnecessary files and freeing storage space</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">39. What is patch management?</div>
+  <div class="mcq-options">
+    a. Creating restore points<br>
+    b. Replacing computer hardware<br>
+    c. Regularly installing updates and security fixes<br>
+    d. Removing all software
+  </div>
+  <div class="mcq-answer">Answer: c. Regularly installing updates and security fixes</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">40. What is the purpose of system documentation and logs?</div>
+  <div class="mcq-options">
+    a. To increase monitor brightness<br>
+    b. To install games<br>
+    c. To delete system settings<br>
+    d. To maintain records useful for monitoring, troubleshooting, and maintaining the system
+  </div>
+  <div class="mcq-answer">Answer: d. To maintain records useful for monitoring, troubleshooting, and maintaining the system</div>
+</div>
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (System Maintenance, Recovery &amp; Data Recovery)</h2>
+
+  <h2 id="mcqs">Multiple Choice Questions (MCQs)</h2>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">1. Which process is used to return a computer to a working condition after a serious problem?</div>
+    <div class="mcq-options">
+      <button>a. Disk Cleanup</button>
+      <button>b. System Monitoring</button>
+      <button>c. System Recovery</button>
+      <button>d. Patch Management</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">2. Which Windows feature can restore system settings to an earlier state?</div>
+    <div class="mcq-options">
+      <button>a. System Restore</button>
+      <button>b. Task Manager</button>
+      <button>c. Event Viewer</button>
+      <button>d. Disk Management</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">3. When is advanced maintenance generally required?</div>
+    <div class="mcq-options">
+      <button>a. When changing the desktop wallpaper</button>
+      <button>b. When opening a document</button>
+      <button>c. When creating a folder</button>
+      <button>d. When basic maintenance cannot solve a difficult problem</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">4. What should be done after repairing an internet connection?</div>
+    <div class="mcq-options">
+      <button>a. Delete the network adapter</button>
+      <button>b. Check the internet connection again</button>
+      <button>c. Format the computer</button>
+      <button>d. Remove the browser</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">5. Which maintenance practice helps reduce the chance of serious computer problems?</div>
+    <div class="mcq-options">
+      <button>a. Ignoring error messages</button>
+      <button>b. Avoiding backups</button>
+      <button>c. Regular continuous maintenance</button>
+      <button>d. Disabling security software</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">6. What is one possible result of poor computer maintenance?</div>
+    <div class="mcq-options">
+      <button>a. Slow performance</button>
+      <button>b. Better security</button>
+      <button>c. Longer hardware life</button>
+      <button>d. Faster startup in every case</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">7. Which activity is part of system health monitoring?</div>
+    <div class="mcq-options">
+      <button>a. Changing the desktop theme</button>
+      <button>b. Creating a new email account</button>
+      <button>c. Installing a game</button>
+      <button>d. Checking CPU and RAM usage</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">8. Which Windows tool is useful for identifying a program that is consuming too many resources?</div>
+    <div class="mcq-options">
+      <button>a. Recycle Bin</button>
+      <button>b. Task Manager</button>
+      <button>c. File History</button>
+      <button>d. System Restore</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">9. Which keyboard combination directly opens Task Manager?</div>
+    <div class="mcq-options">
+      <button>a. Windows + R</button>
+      <button>b. Alt + F4</button>
+      <button>c. Ctrl + Shift + Esc</button>
+      <button>d. Ctrl + C</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">10. Which utility gives a more detailed view of resource usage than Task Manager?</div>
+    <div class="mcq-options">
+      <button>a. Resource Monitor</button>
+      <button>b. Recycle Bin</button>
+      <button>c. Disk Cleanup</button>
+      <button>d. System Restore</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">11. What should be typed in the Run dialog to open Resource Monitor?</div>
+    <div class="mcq-options">
+      <button>a. eventvwr</button>
+      <button>b. diskpart</button>
+      <button>c. taskmgr</button>
+      <button>d. resmon</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">12. Which Windows tool keeps records of errors and warnings?</div>
+    <div class="mcq-options">
+      <button>a. Task Manager</button>
+      <button>b. Event Viewer</button>
+      <button>c. File History</button>
+      <button>d. Disk Cleanup</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">13. Which startup mode loads only essential drivers and services?</div>
+    <div class="mcq-options">
+      <button>a. Normal Mode</button>
+      <button>b. Recovery Mode</button>
+      <button>c. Safe Mode</button>
+      <button>d. Boot Menu</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">14. Why might a technician start Windows in Safe Mode?</div>
+    <div class="mcq-options">
+      <button>a. To identify problems caused by software or drivers</button>
+      <button>b. To increase the size of the hard drive</button>
+      <button>c. To permanently delete Windows</button>
+      <button>d. To install a new monitor</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">15. Which key is commonly pressed to start Safe Mode after reaching Startup Settings?</div>
+    <div class="mcq-options">
+      <button>a. F1</button>
+      <button>b. F2</button>
+      <button>c. F3</button>
+      <button>d. F4</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">16. What additional feature is provided by Safe Mode with Networking?</div>
+    <div class="mcq-options">
+      <button>a. Full gaming support</button>
+      <button>b. Basic network drivers and services</button>
+      <button>c. Automatic hardware replacement</button>
+      <button>d. Complete system formatting</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">17. What is the main purpose of a Windows restore point?</div>
+    <div class="mcq-options">
+      <button>a. To store deleted personal files</button>
+      <button>b. To increase RAM capacity</button>
+      <button>c. To save important system settings at a particular time</button>
+      <button>d. To replace the operating system</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">18. Which location is used to create a restore point?</div>
+    <div class="mcq-options">
+      <button>a. System Properties → System Protection</button>
+      <button>b. Task Manager → Processes</button>
+      <button>c. Event Viewer → Logs</button>
+      <button>d. File Explorer → Downloads</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">19. What type of device can contain recovery files and start a computer when Windows cannot load?</div>
+    <div class="mcq-options">
+      <button>a. Wireless mouse</button>
+      <button>b. Keyboard</button>
+      <button>c. Monitor</button>
+      <button>d. Bootable USB drive</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">20. Which of the following can be performed using bootable recovery media?</div>
+    <div class="mcq-options">
+      <button>a. Change the monitor size</button>
+      <button>b. Repair Windows startup problems</button>
+      <button>c. Increase physical RAM</button>
+      <button>d. Repair a broken keyboard</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">21. What is the commonly recommended minimum USB capacity for Windows installation media?</div>
+    <div class="mcq-options">
+      <button>a. 1 GB</button>
+      <button>b. 4 GB</button>
+      <button>c. 8 GB</button>
+      <button>d. 64 MB</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">22. Which file format can contain a complete image of operating system installation media?</div>
+    <div class="mcq-options">
+      <button>a. ISO</button>
+      <button>b. TXT</button>
+      <button>c. DOCX</button>
+      <button>d. JPG</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">23. Which program can be used to write an ISO image to a USB drive?</div>
+    <div class="mcq-options">
+      <button>a. Event Viewer</button>
+      <button>b. Task Manager</button>
+      <button>c. Calculator</button>
+      <button>d. Rufus</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">24. Which two partition styles are discussed for storage drives?</div>
+    <div class="mcq-options">
+      <button>a. FAT and NTFS</button>
+      <button>b. MBR and GPT</button>
+      <button>c. USB and SATA</button>
+      <button>d. BIOS and UEFI</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">25. In Disk Management, where can the partition style be viewed?</div>
+    <div class="mcq-options">
+      <button>a. Security tab</button>
+      <button>b. Network tab</button>
+      <button>c. Volumes tab in disk Properties</button>
+      <button>d. Processes tab</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">26. In the diskpart list, what does a star (*) in the GPT column indicate?</div>
+    <div class="mcq-options">
+      <button>a. The disk uses GPT</button>
+      <button>b. The disk uses MBR</button>
+      <button>c. The disk is empty</button>
+      <button>d. The disk is damaged</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">27. Which firmware interface is the modern replacement for traditional BIOS?</div>
+    <div class="mcq-options">
+      <button>a. POST</button>
+      <button>b. MBR</button>
+      <button>c. GPT</button>
+      <button>d. UEFI</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">28. Which firmware feature is commonly associated with modern computers and GPT?</div>
+    <div class="mcq-options">
+      <button>a. Legacy BIOS only</button>
+      <button>b. UEFI</button>
+      <button>c. Recycle Bin</button>
+      <button>d. File History</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">29. During startup, which component checks basic hardware before the operating system loads?</div>
+    <div class="mcq-options">
+      <button>a. File Explorer</button>
+      <button>b. Disk Cleanup</button>
+      <button>c. POST</button>
+      <button>d. File History</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">30. Which problem might cause POST to produce beep sounds or an error message?</div>
+    <div class="mcq-options">
+      <button>a. RAM not being properly installed</button>
+      <button>b. A deleted desktop shortcut</button>
+      <button>c. A full Recycle Bin</button>
+      <button>d. An old document</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">31. Which key is commonly used to access a boot menu on many computers?</div>
+    <div class="mcq-options">
+      <button>a. F1</button>
+      <button>b. F3</button>
+      <button>c. F6</button>
+      <button>d. F12</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">32. What does boot order determine?</div>
+    <div class="mcq-options">
+      <button>a. The order of installed applications</button>
+      <button>b. Which device BIOS/UEFI checks first for a bootable system</button>
+      <button>c. The order of user accounts</button>
+      <button>d. The order of Windows updates</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">33. Which situation is an example of a boot repair problem?</div>
+    <div class="mcq-options">
+      <button>a. A document has the wrong font</button>
+      <button>b. The mouse pointer is too large</button>
+      <button>c. Damaged boot files prevent Windows from starting</button>
+      <button>d. The desktop wallpaper is missing</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">34. Where do deleted files normally go before being permanently removed in Windows?</div>
+    <div class="mcq-options">
+      <button>a. Recycle Bin</button>
+      <button>b. BIOS</button>
+      <button>c. Resource Monitor</button>
+      <button>d. Event Viewer</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">35. Which feature can restore older copies of files when backups are available?</div>
+    <div class="mcq-options">
+      <button>a. Task Manager</button>
+      <button>b. Disk Cleanup</button>
+      <button>c. Boot Order</button>
+      <button>d. Previous Versions</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">36. Which Windows feature regularly saves copies of files from selected folders?</div>
+    <div class="mcq-options">
+      <button>a. System Restore</button>
+      <button>b. File History</button>
+      <button>c. Event Viewer</button>
+      <button>d. Resource Monitor</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">37. Which action can reduce the possibility of recovering a recently deleted file?</div>
+    <div class="mcq-options">
+      <button>a. Checking the Recycle Bin</button>
+      <button>b. Stopping unnecessary computer activity</button>
+      <button>c. Saving new data on the same drive</button>
+      <button>d. Using an existing backup</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">38. Which of the following is an example of third-party recovery software?</div>
+    <div class="mcq-options">
+      <button>a. Tenorshare 4DDiG</button>
+      <button>b. Task Manager</button>
+      <button>c. Event Viewer</button>
+      <button>d. Disk Cleanup</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">39. What is the primary purpose of Disk Cleanup?</div>
+    <div class="mcq-options">
+      <button>a. Repairing damaged RAM</button>
+      <button>b. Changing BIOS settings</button>
+      <button>c. Recovering permanently deleted files</button>
+      <button>d. Removing unnecessary files and freeing storage space</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">40. Why should system documentation and logs be maintained?</div>
+    <div class="mcq-options">
+      <button>a. To increase screen size</button>
+      <button>b. To help monitor, troubleshoot, and maintain the computer system</button>
+      <button>c. To replace the operating system automatically</button>
+      <button>d. To increase the physical storage capacity</button>
+    </div>
+  </div>
+
+</section>
+
+
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+      
+<h2 id="faqs">FAQs</h2>
+
+<section class="faq-section">
+
+  <h2 id="faqs">System Maintenance, Recovery &amp; Data Recovery FAQs</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">What is system recovery?</button>
+    <div class="faq-answer">
+      <p>System recovery means bringing a computer or other system back to a working condition after something goes wrong.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is advanced maintenance?</button>
+    <div class="faq-answer">
+      <p>Advanced maintenance means performing detailed and technical work to fix difficult computer or system problems when basic maintenance cannot solve them.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is post-troubleshooting?</button>
+    <div class="faq-answer">
+      <p>Post-troubleshooting means the steps taken after fixing a problem to make sure the system is working properly and the same problem does not happen again.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Why is continuous maintenance important?</button>
+    <div class="faq-answer">
+      <p>Continuous maintenance helps prevent problems, improve performance, increase security, save money, extend system life, reduce downtime, and keep data safe.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What are the effects of poor maintenance?</button>
+    <div class="faq-answer">
+      <p>Poor maintenance can cause slow performance, system failure, security risks, data loss, and hardware damage.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is system health monitoring?</button>
+    <div class="faq-answer">
+      <p>System health monitoring means regularly checking a computer's hardware and software to make sure they are working properly and to find problems early.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is the purpose of Task Manager?</button>
+    <div class="faq-answer">
+      <p>Task Manager shows running programs and processes and displays CPU, RAM, Disk, and Network usage. It can also be used to close programs that have stopped responding.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is Resource Monitor?</button>
+    <div class="faq-answer">
+      <p>Resource Monitor is a Windows diagnostic tool that provides detailed information about CPU, memory, disk, and network activity.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is Safe Mode?</button>
+    <div class="faq-answer">
+      <p>Safe Mode is a special way of starting Windows with only basic drivers, services, and essential programs. It is mainly used for troubleshooting problems.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is System Restore?</button>
+    <div class="faq-answer">
+      <p>System Restore is a Windows feature that returns system settings, drivers, and software-related changes to an earlier working state.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is a bootable recovery media?</button>
+    <div class="faq-answer">
+      <p>Bootable recovery media is a USB drive, DVD, or other storage device containing files that can start a computer and provide operating system repair or recovery tools.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What are MBR and GPT?</button>
+    <div class="faq-answer">
+      <p>MBR (Master Boot Record) and GPT (GUID Partition Table) are two partition styles used to organize data on storage drives. MBR is older, while GPT is commonly used with modern UEFI systems.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is the role of BIOS/UEFI during startup?</button>
+    <div class="faq-answer">
+      <p>BIOS or UEFI initializes hardware, performs startup checks, identifies a bootable device, and starts the bootloader that loads the operating system.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What is data recovery?</button>
+    <div class="faq-answer">
+      <p>Data recovery means recovering files that have been accidentally deleted, lost, or become inaccessible because of computer or storage-device problems.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What should you do after accidentally deleting an important file?</button>
+    <div class="faq-answer">
+      <p>First, check the Recycle Bin. Avoid saving new data to the same drive because new data may overwrite the deleted file and make recovery more difficult.</p>
+    </div>
+  </div>
+
+</section>
+      
+<h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/10-class/chapter-4/class-10-computer-chapter-4-control-structures-in-python.pdf">
+  Download PDF
+</a>
+</div>
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="#">Technology</a></li>
+
+                <li><a href="#">LifeStyle</a></li>
+
+                <li><a href="#">Health</a></li>
+
+                <li><a href="#">Education</a></li>
+
+                <li><a href="#">Business</a></li>
+
+                <li><a href="#">Travel</a></li>
+
+                <li><a href="#">9 Computer Science</a></li>
+
+                <li><a href="#">10 Computer Science</a></li>
+
+                <li><a href="#">11 Computer Science</a></li>
+
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                question.classList.toggle("active");
+
+                const answer = question.nextElementSibling;
+
+                if (answer.style.maxHeight) {
+
+                    answer.style.maxHeight = null;
+
+                } else {
+
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+    
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+const supabase = createClient(
+  "https://pojmeeozeuzqtgrvwgxw.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvam1lZW96ZXV6cXRncnZ3Z3h3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4ODM2MjYsImV4cCI6MjA5NTQ1OTYyNn0.c9sgwAH8ysgayh_dvk_uzNTK5XuUZ1k57Lk_cfzlhbA"
+);
+
+const POST_ID    = "blog-2";
+const ADMIN_PASS = "salman.coding";
+const ADMIN_NAME = "Salman (Admin)";
+
+let isAdmin = false;
+
+/* ── HELPERS ── */
+function esc(s) {
+  return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+function initial(n) { return (n||"?").charAt(0).toUpperCase(); }
+function timeAgo(d) {
+  const s = Math.floor((Date.now() - new Date(d)) / 1000);
+  if (s < 60)    return s + "s ago";
+  if (s < 3600)  return Math.floor(s/60) + "m ago";
+  if (s < 86400) return Math.floor(s/3600) + "h ago";
+  return Math.floor(s/86400) + "d ago";
+}
+
+/* ── ADMIN LOGIN / LOGOUT ── */
+window.adminLogin = function() {
+  if (document.getElementById("admin-pass").value === ADMIN_PASS) {
+    isAdmin = true;
+    document.getElementById("admin-bar").innerHTML =
+      `<span style="color:var(--accent);font-weight:600;font-size:13px;">✓ Admin</span>
+       <button onclick="adminLogout()" style="background:transparent;color:var(--muted);border:1px solid var(--border);font-size:12px;padding:5px 10px;">Logout</button>`;
+    document.getElementById("main").classList.add("admin-mode");
+    loadComments();
+  } else {
+    alert("Wrong password.");
+  }
+};
+
+window.adminLogout = function() {
+  isAdmin = false;
+  document.getElementById("admin-bar").innerHTML = `
+    <span style="font-size:12px;color:var(--muted);">Admin</span>
+    <input id="admin-pass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter') adminLogin()">
+    <button onclick="adminLogin()">Login</button>`;
+  document.getElementById("main").classList.remove("admin-mode");
+  loadComments();
+};
+
+/* ── POST TOP-LEVEL COMMENT (visitor) ── */
+window.postComment = async function() {
+  const name = document.getElementById("pub-name").value.trim();
+  const msg  = document.getElementById("pub-msg").value.trim();
+  if (!name || !msg) { alert("Please enter your name and message."); return; }
+  const { error } = await supabase.from("comments").insert([{
+    name, message: msg, post_id: POST_ID, parent_id: null
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  document.getElementById("pub-msg").value = "";
+  loadComments();
+};
+
+/* ── TOGGLE ADMIN REPLY BOX ── */
+window.showAdminReplyBox = function(id) {
+  if (!isAdmin) return;
+  const el = document.getElementById("arb-" + id);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── ADMIN POST REPLY ── */
+window.postAdminReply = async function(parentId) {
+  if (!isAdmin) return;
+  const ta  = document.getElementById("ari-" + parentId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: ADMIN_NAME, message: msg, post_id: POST_ID, parent_id: parentId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── SHOW VISITOR REPLY-BACK BOX ── */
+// visitorName = name of the original commenter (prefilled, locked)
+window.showVisitorReplyBox = function(adminReplyId, visitorName) {
+  const el = document.getElementById("vrb-" + adminReplyId);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── VISITOR POSTS REPLY-BACK ── */
+window.postVisitorReply = async function(adminReplyId, visitorName) {
+  const ta  = document.getElementById("vri-" + adminReplyId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: visitorName, message: msg, post_id: POST_ID, parent_id: adminReplyId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── BUILD THREAD under a top-level comment ── */
+// Structure: top comment → admin replies → visitor reply-backs (under each admin reply)
+function buildThread(all, topComment) {
+  // Direct admin replies to this top comment
+  const adminReplies = all.filter(c =>
+    c.parent_id === topComment.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    // Visitor replies back to this specific admin reply
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)}
+            <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+          ${isAdmin ? `<span class="admin-reply-btn" onclick="showAdminReplyBox(${vr.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${vr.id}" style="display:none;">
+            <textarea id="ari-${vr.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${vr.id})}"></textarea>
+            <button onclick="postAdminReply(${vr.id})">Send Reply</button>
+          </div>` : ""}
+          ${buildNestedThread(all, vr, topComment.name)}
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <!-- Visitor can reply back only to this admin reply -->
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(topComment.name)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(topComment.name)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(topComment.name)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* Deeper nesting: admin replies to visitor reply-backs */
+function buildNestedThread(all, visitorReply, originalVisitorName) {
+  const adminReplies = all.filter(c =>
+    c.parent_id === visitorReply.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)} <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble" style="margin-top:8px;">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(originalVisitorName)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(originalVisitorName)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(originalVisitorName)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* ── LOAD COMMENTS ── */
+async function loadComments() {
+  const { data, error } = await supabase
+    .from("comments").select("*")
+    .eq("post_id", POST_ID)
+    .order("created_at", { ascending: true });
+
+  const list = document.getElementById("comments-list");
+  if (error) { list.innerHTML = `<div class="empty">Could not load comments.</div>`; return; }
+
+  const all = data || [];
+  const top = all.filter(c => !c.parent_id);
+
+  if (!top.length) { list.innerHTML = `<div class="empty">No comments yet. Be the first!</div>`; return; }
+
+  list.innerHTML = top.map(c => `
+    <div class="comment-card">
+      <div class="comment-row">
+        <div class="avatar">${initial(c.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(c.name)}
+            <span class="comment-time">${timeAgo(c.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(c.message)}</div>
+          <span class="admin-reply-btn" onclick="showAdminReplyBox(${c.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${c.id}" style="display:none;">
+            <textarea id="ari-${c.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${c.id})}"></textarea>
+            <button onclick="postAdminReply(${c.id})">Send Reply</button>
+          </div>
+          ${buildThread(all, c)}
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* ── REALTIME ── */
+supabase.channel("comments-rt")
+  .on("postgres_changes", { event: "INSERT", schema: "public", table: "comments", filter: `post_id=eq.${POST_ID}` },
+    () => loadComments())
+  .subscribe();
+
+loadComments();
+</script>
+
+</body>
+</html>
