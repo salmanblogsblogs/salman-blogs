@@ -1,0 +1,4267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Class 9 Computer Science Chapter 1 Notes: Complete study material covering systems, information systems, objectives and components of systems, system environment and communication, software, system software, application software, von Neumann architecture, CPU, ALU, control unit, memory, input and output devices, system bus, fetch-decode-execute-store cycle, number systems, decimal, binary, octal and hexadecimal conversions, data representation, whole numbers, integers, 1's complement, 2's complement, binary arithmetic, text encoding schemes, ASCII, Extended ASCII, Unicode, UTF-8, UTF-16, UTF-32, and computer storage with examples, practice questions, MCQs, short questions, and exam preparation notes for FBISE and Punjab Board students." />
+  
+
+<meta name="keywords" content="9th class computer science chapter 1 notes, class 9 computer science chapter 1 notes, computer science class 9 notes, system definition class 9 computer science, information system class 9, objective of a system class 9, components of a system class 9, system environment class 9, system communication class 9, software class 9 computer science, system software class 9, application software class 9, system software vs application software, operating system class 9, device drivers class 9, utility programs class 9, von Neumann architecture class 9, von Neumann computer architecture notes, CPU ALU control unit class 9, memory input output devices class 9, system bus class 9, data bus address bus control bus, fetch decode execute store cycle class 9, number system class 9 computer science, decimal number system class 9, binary number system class 9, octal number system class 9, hexadecimal number system class 9, decimal to binary conversion class 9, binary to decimal conversion class 9, octal to binary conversion class 9, binary to octal conversion class 9, hexadecimal to binary conversion class 9, binary to hexadecimal conversion class 9, decimal to octal conversion class 9, octal to decimal conversion class 9, data representation class 9 computer science, whole numbers class 9, integers class 9, signed integers class 9, MSB LSB class 9, 1s complement class 9, 2s complement class 9, binary arithmetic class 9, binary addition class 9, binary subtraction class 9, binary multiplication class 9, binary division class 9, binary subtraction using 2s complement, text encoding schemes class 9, ASCII class 9, Extended ASCII class 9, Unicode class 9, UTF-8 class 9, UTF-16 class 9, UTF-32 class 9, computer storage class 9, FBISE class 9 computer science chapter 1, Punjab Board class 9 computer science chapter 1, computer science MCQs class 9, computer science short questions class 9" />
+
+<meta name="author" content="Salman Ahmad" />
+
+<title>Class 9 Computer Science Chapter 1: Introduction to Computational Systems Notes | MCQs, Short Questions & FAQs | Exam Preparation</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="notes-post.css">
+  <link rel="canonical" href="https://salmanblogs.com/9-class-chap-9-lecture-1" />
+  <!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+  <!-- Open Graph -->
+<meta property="og:title" content="Class 9 Computer Science Chapter 1: Introduction to Computational Systems Notes | MCQs, Short Questions, Long Questions & FAQs" />
+
+<meta property="og:description" content="Complete Class 9 Computer Science Chapter 1 Notes on Introduction to Computational Systems. Covers systems, information systems, objectives and components of systems, system environment and communication, software, system software, application software, von Neumann architecture, CPU, ALU, control unit, memory, input and output devices, system bus, fetch-decode-execute-store cycle, number systems, decimal, binary, octal and hexadecimal conversions, data representation, whole numbers, integers, 1's complement, 2's complement, binary arithmetic, text encoding schemes, ASCII, Extended ASCII, Unicode, UTF-8, UTF-16, UTF-32, and computer storage with examples, MCQs, short questions, long questions, FAQs, and exam preparation for FBISE and Punjab Board students." />
+
+<meta property="og:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-9/chapter-9-notes.webp" />
+
+<meta property="og:url" content="https://salmanblogs.com/9-class-chap-9-lecture-1" />
+
+<meta property="og:type" content="article" />
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:title" content="Class 9 Computer Science Chapter 1: Introduction to Computational Systems Notes | MCQs & FAQs" />
+
+<meta name="twitter:description" content="Study Class 9 Computer Science Chapter 1 Introduction to Computational Systems with complete notes, including computational systems, hardware, software, data, users, computational processes, types of computational systems, examples, MCQs, short questions, long questions, FAQs, and exam preparation for FBISE and Punjab Board." />
+
+<meta name="twitter:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-9/chapter-9-notes.webp" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Class 9 Computer Science Chapter 1 Introduction to Computational Systems Notes",
+  "author": {
+    "@type": "Person",
+    "name": "Salman Ahmad"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Salman Blogs"
+  },
+  "description": "Complete Class 9 Computer Science Chapter 1 Introduction to Computational Systems Notes with computational systems, hardware, software, data, users, computational processes, types of computational systems, examples, MCQs, short questions, long questions, FAQs and exam preparation material for FBISE and Punjab Board students.",
+  "mainEntityOfPage": "https://salmanblogs.com/9-class-chap-1-introduction-to-computational-systems"
+}
+</script>
+
+</head>
+<body>
+
+<main class="post-container">
+  <article class="blog-post">
+<h1 class="post-title">Class 9 Computer Science Chapter 1: Introduction to Computational Systems Notes</h1>
+    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+    <img src="images/9-CS-IMAGES/chapter-1/class-9-computer-chapter-1-introduction-to-computational-systems.webp" alt="class-9-computer-chapter-1-introduction-to-computational-systems" class="post-image" loading="lazy">
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#what-is-a-system">What is a System?</a></li>
+<li><a href="#objective-of-a-system">Objective of a System</a></li>
+<li><a href="#components-of-a-system">Components of a System</a></li>
+<li><a href="#system-environment">System Environment</a></li>
+<li><a href="#communication">Communication / System Communication</a></li>
+<li><a href="#software">Software</a></li>
+<li><a href="#system-software">System Software</a></li>
+<li><a href="#application-software">Application Software</a></li>
+<li><a href="#system-vs-application-software">System Software vs Application Software</a></li>
+<li><a href="#von-neumann-architecture">The Architecture of von Neumann Computers</a></li>
+<li><a href="#working-von-neumann">Working of von Neumann Architecture</a></li>
+<li><a href="#number-system">Number System</a></li>
+<li><a href="#decimal-binary-conversion">Decimal to Binary Conversion and Vice Versa</a></li>
+<li><a href="#decimal-to-binary-practice">Decimal to Binary Conversion Practice Questions</a></li>
+<li><a href="#octal-binary">Octal to Binary and Binary to Octal</a></li>
+<li><a href="#octal-binary-practice">Practice Questions: Octal ↔ Binary</a></li>
+<li><a href="#hexadecimal-binary">Hexadecimal to Binary and Binary to Hexadecimal</a></li>
+<li><a href="#hexadecimal-binary-practice">Practice Questions: Hexadecimal ↔ Binary</a></li>
+<li><a href="#decimal-octal-conversion">Decimal to Octal Conversion and Vice Versa</a></li>
+<li><a href="#decimal-octal-practice">Practice Questions: Decimal ↔ Octal</a></li>
+<li><a href="#data-representation">Data Representation in Computing Systems</a></li>
+<li><a href="#first-complement">1's Complement</a></li>
+<li><a href="#second-complement">2's Complement</a></li>
+<li><a href="#binary-addition">Binary Addition</a></li>
+<li><a href="#binary-subtraction">Binary Subtraction</a></li>
+<li><a href="#binary-multiplication">Binary Multiplication</a></li>
+<li><a href="#binary-division">Binary Division</a></li>
+<li><a href="#text-encoding-schemes">Common Text Encoding Schemes</a></li>
+<li><a href="#computer-storages">How Computers Store Files</a></li>
+<li><a href="#mcqs">MCQs</a></li>
+<li><a href="#test-mcqs">MCQs for testing</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+  <div class="post-content">
+  
+<h1 id="what-is-a-system">What is a System?</h1>
+
+<p>A <strong>system</strong> is a group of <strong>connected parts that work together to perform a specific task or achieve a specific purpose</strong>.</p>
+
+<p><strong>Example:</strong> A laptop is a computer system. Its <strong>processor, RAM, storage, operating system, applications, and other components</strong> work together to allow us to perform different tasks.</p>
+
+<h2>Information system</h2> It is a <strong>combination of people, technology, data, and procedures that work together to collect and turn data into useful information</strong>.</p>
+
+<h2>Example</h2>
+
+<p>A <strong>school information system</strong> can collect student information such as names, marks, attendance, and fees. It processes this data and provides useful information such as <strong>result cards, attendance reports, and student records</strong>.</p>
+
+<h2 id="objective-of-a-system">Objective of a System</h2>
+
+<p>The <strong>objective of a system</strong> is the <strong>main purpose or goal that the system is designed to achieve</strong>. A system is created to perform specific tasks and produce useful results.</p>
+
+<h2>Examples of System Objectives</h2>
+
+<p>Different systems are designed for different purposes. For example:</p>
+
+<ul>
+  <li><strong>School Information System</strong> → To manage student records, marks, attendance, and fees.</li>
+  <li><strong>Banking System</strong> → To manage customer accounts, deposits, withdrawals, and transactions.</li>
+  <li><strong>Hospital Management System</strong> → To manage patient records, appointments, treatments, and billing.</li>
+  <li><strong>Library Management System</strong> → To manage books, members, borrowing, and returning of books.</li>
+  <li><strong>Online Shopping System</strong> → To allow customers to search, order, and pay for products online.</li>
+</ul>
+
+<h2 id="components-of-a-system">Components of a System</h2>
+
+<p>The <strong>components of a system</strong> are the different parts that work together to achieve the system's objective. A system normally has the following main components:</p>
+
+<ol>
+  <li>
+    <strong>Input</strong> → The data or resources entered into the system.
+    <ul>
+      <li><strong>Example:</strong> Student names and marks entered into a school system.</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Processing</strong> → The activities performed on the input to produce a useful result.
+    <ul>
+      <li><strong>Example:</strong> Calculating a student's total and percentage.</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Output</strong> → The useful information or result produced by the system.
+    <ul>
+      <li><strong>Example:</strong> A student's result card.</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Feedback</strong> → Information about the output that helps improve or control the system.
+    <ul>
+      <li><strong>Example:</strong> A teacher checks the result and corrects an incorrect mark.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="system-environment">System Environment</h2>
+
+<p>The <strong>system environment</strong> includes everything <strong>outside the system that interacts with or affects it</strong>. These external factors can influence <strong>how the system works and operates</strong>.</p>
+
+<h2>Simple Example: Online Shopping System</h2>
+
+<p>An <strong>online shopping system</strong> interacts with:</p>
+
+<ul>
+  <li><strong>Customers</strong> – Buy products.</li>
+  <li><strong>Delivery services</strong> – Deliver orders.</li>
+  <li><strong>Banks</strong> – Process payments.</li>
+  <li><strong>Internet</strong> – Allows users to access the system.</li>
+</ul>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> These things are <strong>outside the system but interact with it</strong>, so they are part of its <strong>environment</strong>.
+</div>
+
+<h2 id="communication">Communication also called System Communication</h2>
+
+<p><strong>Communication between the different parts of a system is important for the system to work properly.</strong> It allows the components to <strong>share information and work together smoothly</strong> to achieve the system's goal.</p>
+
+<h2>Examples</h2>
+
+<ul>
+  <li>
+    <strong>Computing System:</strong> The <strong>CPU communicates with memory</strong> to get and store data.
+  </li>
+  <li>
+    <strong>Biological System:</strong> The <strong>brain sends signals to muscles</strong> to make the body move.
+  </li>
+</ul>
+
+<h1 id="software">Software</h1>
+
+<p><strong>Software</strong> is a set of <strong>programs and instructions</strong> that tells a computer <strong>what to do and how to perform different tasks</strong>. Unlike hardware, software cannot be physically touched.</p>
+
+<h2>Types of Software</h2>
+
+<p>There are two main types of software:</p>
+
+<h2 id="system-software">1. System Software</h2>
+
+<p><strong>System software</strong> controls and manages the computer's hardware and provides a platform for other software to run.</p>
+
+<h3>Examples of System Software</h3>
+
+<ul>
+  <li>
+    <strong>Operating System (OS)</strong> – Manages the computer's hardware and provides an interface for users and applications.
+    <br>
+    <strong>Examples:</strong> Windows, Linux, macOS.
+  </li>
+
+  <li>
+    <strong>Device Drivers (DD)</strong> – Help the operating system communicate with and control hardware devices.
+    <br>
+    <strong>Examples:</strong> Printer driver, graphics driver, keyboard driver.
+  </li>
+
+  <li>
+    <strong>Utility Programs (UP)</strong> – Help maintain, protect, and manage the computer.
+    <br>
+    <strong>Examples:</strong> Disk Cleanup, antivirus software, backup tools.
+  </li>
+</ul>
+
+<h2 id="application-software">2. Application Software</h2>
+
+<p><strong>Application software</strong> is designed to help users <strong>perform specific tasks</strong>.</p>
+
+<h3>Examples of Application Software</h3>
+
+<ul>
+  <li><strong>Microsoft Word</strong> → Writing documents</li>
+  <li><strong>Microsoft Excel</strong> → Working with data and calculations</li>
+  <li><strong>Web Browsers</strong> → Browsing the internet</li>
+  <li><strong>Media Players</strong> → Playing audio and video</li>
+  <li><strong>Graphic Design Software</strong> → Creating and editing images</li>
+</ul>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> <strong>System software</strong> manages the computer and its hardware, while <strong>application software</strong> helps users perform specific tasks.
+</div>
+
+<h2 id="system-vs-application-software">System Software vs Application Software</h2>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>System Software</th>
+      <th>Application Software</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>It manages and controls the <strong>computer's hardware</strong>.</td>
+      <td>It helps users <strong>perform specific tasks</strong>.</td>
+    </tr>
+
+    <tr>
+      <td>It provides a platform for application software to run.</td>
+      <td>It runs on the system software.</td>
+    </tr>
+
+    <tr>
+      <td>It usually works in the <strong>background</strong>.</td>
+      <td>Users directly interact with it.</td>
+    </tr>
+
+    <tr>
+      <td>It is generally <strong>pre-installed</strong> with the computer or installed as part of the operating system.</td>
+      <td>It usually needs to be <strong>installed by the user</strong> according to their needs.</td>
+    </tr>
+
+    <tr>
+      <td>It is necessary for the basic operation of a computer.</td>
+      <td>It is used for specific user tasks.</td>
+    </tr>
+
+    <tr>
+      <td><strong>Examples:</strong> Operating System, Device Drivers, Utility Programs.</td>
+      <td><strong>Examples:</strong> MS Word, Excel, Web Browsers, Media Players.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="von-neumann-architecture">The Architecture of von Neumann Computers</h1>
+
+<h2>Introduction</h2>
+
+<p>
+  The <strong>von Neumann architecture</strong> is a basic design or model of a computer.
+  It explains how the main parts of a computer <strong>work together to process data and instructions</strong>.
+</p>
+
+<p>
+  This model was developed in the <strong>1940s</strong> and is named after
+  <strong>John von Neumann</strong>, a mathematician and physicist who contributed to its development.
+</p>
+
+<h2>Diagram or Struture</h2>
+<img src="images/9-CS-IMAGES/chapter-1/von-neumann-architecture.webp" alt="von-neumann-architecture" class="post-image" loading="lazy">
+<h2>Main Components</h2>
+
+<p>A von Neumann computer mainly consists of:</p>
+
+<ul>
+  <li><strong>Memory</strong></li>
+  <li><strong>Central Processing Unit (CPU)</strong></li>
+  <li><strong>Input Devices</strong></li>
+  <li><strong>Output Devices</strong></li>
+  <li><strong>System Bus</strong></li>
+</ul>
+
+<h3>1. Memory</h3>
+
+<p><strong>Memory</strong> stores the <strong>data and instructions</strong> that the CPU needs to perform tasks.</p>
+
+<p>For example, when you open a program on your computer, it is loaded from the storage device into <strong>RAM (Random Access Memory)</strong>. The CPU can access the program and its data from RAM quickly, allowing the program to run efficiently.</p>
+
+<h3>2. Central Processing Unit (CPU)</h3>
+
+<p>The <strong>CPU</strong> is the main processing part of the computer. It <strong>processes data and executes instructions</strong> stored in memory.</p>
+
+<p>The CPU has two important components:</p>
+
+<h3>Arithmetic Logic Unit (ALU)</h3>
+
+<p>The <strong>ALU</strong> performs:</p>
+
+<ul>
+  <li>Mathematical calculations, such as <strong>addition and subtraction</strong>.</li>
+  <li>Logical operations, such as <strong>comparing values</strong>.</li>
+</ul>
+
+<p><strong>Example:</strong> When you calculate <strong>2 + 2</strong> in a calculator application, the ALU performs the calculation.</p>
+
+<h3>Control Unit (CU)</h3>
+
+<p>The <strong>Control Unit</strong> controls and coordinates the activities of the computer. It tells other components <strong>what to do and when to do it</strong> according to the instructions of the program.</p>
+
+<p><strong>Example:</strong> When calculating <strong>2 + 2</strong>, the CU controls the process and makes sure the required data is obtained from memory and the ALU performs the calculation.</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong>
+  <strong>ALU</strong> → Performs calculations and logical operations.<br>
+  <strong>CU</strong> → Controls and coordinates the activities of the CPU.
+</div>
+
+<h3>3. Input Devices</h3>
+
+<p><strong>Input devices</strong> allow users to <strong>enter data and instructions into the computer</strong>.</p>
+
+<p>Examples include:</p>
+
+<ul>
+  <li><strong>Keyboard</strong></li>
+  <li><strong>Mouse</strong></li>
+  <li><strong>Microphone</strong></li>
+  <li><strong>Scanner</strong></li>
+</ul>
+
+<p><strong>Example:</strong> When you type your name using a keyboard, the keyboard sends the input to the computer for processing.</p>
+
+<h3>4. Output Devices</h3>
+
+<p><strong>Output devices</strong> show or provide the <strong>results produced by the computer</strong>.</p>
+
+<p>Examples include:</p>
+
+<ul>
+  <li><strong>Monitor</strong></li>
+  <li><strong>Printer</strong></li>
+  <li><strong>Speakers</strong></li>
+</ul>
+
+<p><strong>Example:</strong> When the computer finishes processing some information, the result can be displayed on the monitor.</p>
+
+<h3>5. System Bus</h3>
+
+<p>A <strong>system bus</strong> is a communication pathway that allows the different components of a computer to <strong>exchange data, addresses, and control signals</strong>.</p>
+
+<p>The system bus has three main parts:</p>
+
+<h3>Data Bus</h3>
+
+<p>The <strong>Data Bus</strong> carries the <strong>actual data</strong> between the CPU, memory, and other components.</p>
+
+<h3>Address Bus</h3>
+
+<p>The <strong>Address Bus</strong> carries information about <strong>where the data should be sent or where it should be retrieved from</strong>.</p>
+
+<h3>Control Bus</h3>
+
+<p>The <strong>Control Bus</strong> carries <strong>control signals</strong> that tell different components what actions to perform.</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> The <strong>system bus</strong> acts like a <strong>communication pathway</strong> that allows different parts of the computer to communicate with each other.
+</div>
+
+<!-- WORKING OF VON. -->
+
+<h1 id="working-von-neumann">Working of von Neumann Architecture</h1>
+
+<p>
+  The <strong>von Neumann architecture</strong> executes instructions using a
+  step-by-step process called the <strong>Fetch–Decode–Execute–Store cycle</strong>.
+</p>
+
+<p>The CPU mainly performs <strong>four stages</strong>:</p>
+
+<ol>
+  <li><strong>Fetching</strong> → Gets the instruction from memory.</li>
+  <li><strong>Decoding</strong> → Understands what the instruction means.</li>
+  <li><strong>Execution</strong> → Performs the required operation.</li>
+  <li><strong>Storing</strong> → Stores or displays the result.</li>
+</ol>
+
+<h2>Example: Adding Two Numbers</h2>
+
+<p>
+  Suppose we use a calculator to calculate <strong>2 + 2</strong>.
+  The computer follows the four stages to produce the answer.
+</p>
+
+<h2>1. Fetching</h2>
+
+<p>
+  <strong>Fetching</strong> means getting the next instruction from
+  <strong>memory</strong>.
+</p>
+
+<p>
+  The <strong>Program Counter (PC)</strong> contains the address of the next
+  instruction. The CPU uses this address to get the instruction from memory
+  and places it in the <strong>Instruction Register (IR)</strong>.
+</p>
+
+<h2>2. Decoding</h2>
+
+<p>
+  <strong>Decoding</strong> means <strong>understanding the instruction</strong>
+  that was fetched.
+</p>
+
+<p>
+  The <strong>Control Unit (CU)</strong> examines the instruction and determines
+  what operation needs to be performed.
+</p>
+
+<p>
+  For example, the CPU understands that an <strong>addition</strong> operation
+  is required.
+</p>
+
+<h2>3. Execution</h2>
+
+<p>
+  <strong>Execution</strong> means <strong>performing the required operation</strong>.
+</p>
+
+<p>
+  The <strong>Arithmetic Logic Unit (ALU)</strong> performs mathematical and
+  logical operations.
+</p>
+
+<p>
+  For example:
+</p>
+
+<p><strong>2 + 2 = 4</strong></p>
+
+<p>
+  The ALU performs the addition and produces the result <strong>4</strong>.
+</p>
+
+<h2>4. Storing</h2>
+
+<p>
+  After execution, the result is <strong>stored in memory or sent to an output
+  device</strong>.
+</p>
+
+<p>
+  For example, the result <strong>4</strong> can be displayed on the calculator
+  screen.
+</p>
+
+<h2>Complete Process</h2>
+
+<p>
+  <strong>Fetch → Decode → Execute → Store</strong>
+</p>
+
+<table class="summary-table">
+  <thead>
+    <tr>
+      <th>Stage</th>
+      <th>What Happens?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Fetch</strong></td>
+      <td>Get the instruction from memory</td>
+    </tr>
+    <tr>
+      <td><strong>Decode</strong></td>
+      <td>Understand the instruction</td>
+    </tr>
+    <tr>
+      <td><strong>Execute</strong></td>
+      <td>Perform the required operation</td>
+    </tr>
+    <tr>
+      <td><strong>Store</strong></td>
+      <td>Store or display the result</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Example: <code>2 + 2</code></h2>
+
+<p>
+  <strong>Fetch:</strong> Get the addition instruction
+</p>
+
+<p>↓</p>
+
+<p>
+  <strong>Decode:</strong> Understand that addition is required
+</p>
+
+<p>↓</p>
+
+<p>
+  <strong>Execute:</strong> ALU calculates <strong>2 + 2 = 4</strong>
+</p>
+
+<p>↓</p>
+
+<p>
+  <strong>Store:</strong> Result <strong>4</strong> is stored or displayed
+</p>
+
+<h1 id="number-system">Number System</h1>
+
+<p>
+  A <strong>number system</strong> is a method of
+  <strong>representing numbers using a specific set of digits or symbols</strong>.
+  Different number systems use different numbers of digits, called the
+  <strong>base</strong> or <strong>radix</strong>.
+</p>
+
+<p>
+  In computer science, the following four number systems are commonly used:
+</p>
+
+<h2>1. Decimal Number System</h2>
+
+<p>
+  The <strong>Decimal Number System</strong> has a <strong>base of 10</strong>.
+  It uses <strong>10 digits from 0 to 9</strong>.
+</p>
+
+<p>
+  This is the number system that we normally use in our daily life.
+</p>
+
+<p><strong>Example:</strong> 25, 100, 458</p>
+
+<h2>2. Binary Number System</h2>
+
+<p>
+  The <strong>Binary Number System</strong> has a <strong>base of 2</strong>.
+  It uses only <strong>two digits: 0 and 1</strong>.
+</p>
+
+<p>
+  Computers use binary because electronic circuits can represent two basic
+  states, such as <strong>ON and OFF</strong>.
+  <strong>0 means OFF</strong> and <strong>1 means ON</strong>.
+</p>
+
+<p><strong>Example:</strong> 1010, 1101, 10001</p>
+
+<h2>3. Octal Number System</h2>
+
+<p>
+  The <strong>Octal Number System</strong> has a <strong>base of 8</strong>.
+  It uses <strong>eight digits from 0 to 7</strong>.
+</p>
+
+<p><strong>Example:</strong> 25, 147, 706</p>
+
+<h2>4. Hexadecimal Number System</h2>
+
+<p>
+  The <strong>Hexadecimal Number System</strong> has a
+  <strong>base of 16</strong>. It uses <strong>16 symbols: 0–9 and A–F</strong>.
+</p>
+
+<p>
+  Here:
+</p>
+
+<ul>
+  <li><strong>A = 10</strong></li>
+  <li><strong>B = 11</strong></li>
+  <li><strong>C = 12</strong></li>
+  <li><strong>D = 13</strong></li>
+  <li><strong>E = 14</strong></li>
+  <li><strong>F = 15</strong></li>
+</ul>
+
+<p>
+  Hexadecimal is used in areas such as
+  <strong>memory addresses, color codes, MAC addresses, and IPv6 addresses</strong>.
+</p>
+
+<p><strong>Example:</strong> 2A, FF, 1B</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> <strong>1 octal digit is equal to 3 binary bits</strong>, while
+  <strong>1 hexadecimal digit is equal to 4 binary bits</strong>.
+  
+  <p>For example:</p>
+
+  <ul>
+    <li>
+      <strong>Octal:</strong>
+      0 = <strong>000</strong>,
+      1 = <strong>001</strong>,
+      2 = <strong>010</strong>,
+      3 = <strong>011</strong>
+    </li>
+    <li>
+      <strong>Hexadecimal:</strong>
+      0 = <strong>0000</strong>,
+      1 = <strong>0001</strong>,
+      2 = <strong>0010</strong>,
+      3 = <strong>0011</strong>
+    </li>
+  </ul>
+
+  <p>
+    This makes it easier to convert binary numbers into
+    <strong>octal and hexadecimal</strong> forms.
+  </p>
+</div>
+
+<h1 id="decimal-binary-conversion">Decimal to Binary Conversion and Vice Versa</h1>
+
+<p>
+  To convert a decimal number into binary, we repeatedly
+  <strong>divide the number by 2</strong> and record the remainders.
+  The binary answer is obtained by reading the remainders
+  <strong>from bottom to top</strong>.
+</p>
+
+<h2>Example: Convert 8<sub>10</sub> to Binary</h2>
+
+<p>
+  Divide <strong>8 by 2</strong> repeatedly and write the remainders on the right:
+</p>
+
+<pre><code>
+2  |  8
+2  |  4 - 0
+2  |  2 - 0
+2  |  1 - 0
+</code></pre>
+
+<p>
+  Now read the remainders from <strong>bottom to top</strong>:
+</p>
+
+
+<p>
+  Therefore:
+  <strong>8<sub>10</sub> = 1000<sub>2</sub></strong>
+</p>
+
+
+<h2>Binary to Decimal</h2>
+
+<p>
+  Now convert <strong>1000<sub>2</sub></strong> back to decimal:
+</p>
+
+<pre><code>
+1000₂
+
+= (1 × 2³) + (0 × 2²) + (0 × 2¹) + (0 × 2⁰)
+
+= 8 + 0 + 0 + 0
+
+= 8₁₀
+</code></pre>
+
+<p>
+  Therefore:
+</p>
+
+<p>
+  <strong>1000<sub>2</sub> = 8<sub>10</sub></strong> ✅
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> When converting <strong>decimal to binary</strong>,
+  divide by <strong>2</strong> repeatedly and read the remainders
+  <strong>from bottom to top</strong>.
+</div>
+
+<h2 id="decimal-to-binary-practice">Decimal to Binary Conversion Practice Questions</h2>
+
+<h2>Basic Questions</h2>
+
+<ol>
+  <li><strong>5<sub>10</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>8<sub>10</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>10<sub>10</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>15<sub>10</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>20<sub>10</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>25<sub>10</sub> = ?<sub>2</sub></strong></li>
+</ol>
+
+<h2>4-Digit Decimal Numbers</h2>
+
+<ol start="7">
+  <li><strong>1024<sub>10</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>1200<sub>10</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>1260<sub>10</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>1500<sub>10</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>2000<sub>10</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>4095<sub>10</sub> = ?<sub>2</sub></strong></li>
+</ol>
+
+<h2>Challenge Questions</h2>
+
+<ol start="13">
+  <li><strong>345<sub>10</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>512<sub>10</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>999<sub>10</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>2048<sub>10</sub> = ?<sub>2</sub></strong></li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> You can do <strong>1 to 2 examples</strong> from each section. The extra examples are added only for <strong>better understanding and extra practice</strong>.
+</div>
+
+<h1 id="octal-binary">Octal to Binary and Binary to Octal</h1>
+
+<p>
+  The <strong>Octal Number System</strong> has a base of <strong>8</strong>
+  and uses the digits <strong>0 to 7</strong>.
+</p>
+
+<p>
+  The <strong>Binary Number System</strong> has a base of <strong>2</strong>
+  and uses only <strong>0 and 1</strong>.
+</p>
+
+<p>
+  The conversion between octal and binary is easy because:
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> <strong>1 octal digit = 3 binary bits</strong>.
+</div>
+
+<p>
+  To convert an octal number into binary, <strong>replace each octal digit
+  with its 3-bit binary equivalent</strong>.
+</p>
+
+<table class="conversion-table">
+  <thead>
+    <tr>
+      <th>Octal</th>
+      <th>Binary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>000</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>001</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>010</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>011</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>110</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>111</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Example: Convert 5<sub>8</sub> to Binary</h2>
+
+<p>
+  From the table:
+</p>
+
+<p>
+  <strong>5<sub>8</sub> = 101<sub>2</sub></strong>
+</p>
+
+<pre><code>
+2  |  5
+2  |  2 - 1
+   |  1 - 0
+</code></pre>
+
+<h2>Example: Convert 25<sub>8</sub> to Binary</h2>
+
+<p>
+  Convert each octal digit separately:
+</p>
+
+<pre><code>
+2 → 010
+5 → 101
+</code></pre>
+
+<p>
+  Therefore:
+</p>
+
+<p>
+  <strong>25<sub>8</sub> = 010101<sub>2</sub></strong>
+</p>
+
+<p>
+  Leading zeros can be removed:
+</p>
+
+<p>
+  <strong>25<sub>8</sub> = 10101<sub>2</sub></strong>
+</p>
+
+<pre><code>
+2  |  2
+2  |  1 - 0
+</code></pre>
+
+<p>
+  But because <strong>1 octal digit = 3 binary bits</strong>, we add a
+  <strong>leading zero</strong>:
+</p>
+
+<p>
+  <strong>2<sub>8</sub> = 010<sub>2</sub></strong>
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> The extra zero is added <strong>only to make the binary representation 3 bits</strong>, because each octal digit corresponds to exactly <strong>3 binary bits</strong>.
+</div>
+
+<pre><code>
+2  |  5
+2  |  2 - 1
+   |  1 - 0
+</code></pre>
+
+<h2>Convert 010101<sub>2</sub> to Octal</h2>
+
+<pre><code>
+010₂
+
+= (0 × 2²) + (1 × 2¹) + (0 × 2⁰)
+
+= (0 × 4) + (1 × 2) + (0 × 1)
+
+= 0 + 2 + 0
+
+= 2₈
+</code></pre>
+
+<p>
+  So:
+</p>
+
+<p>
+  <strong>010<sub>2</sub> = 2<sub>10</sub></strong>
+</p>
+
+<p>
+  Since <strong>2</strong> is already an octal digit:
+</p>
+
+<p>
+  <strong>010<sub>2</sub> = 2<sub>8</sub></strong> ✅
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> For binary-to-octal conversion, remember that
+  <strong>1 octal digit = 3 binary bits</strong>. Therefore,
+  <strong>010<sub>2</sub></strong> represents the single octal digit
+  <strong>2<sub>8</sub></strong>.
+</div>
+
+<pre><code>
+101₂
+
+= (1 × 2²) + (0 × 2¹) + (1 × 2⁰)
+
+= (1 × 4) + (0 × 2) + (1 × 1)
+
+= 4 + 0 + 1
+
+= 5₈
+</code></pre>
+
+<p>
+  Since <strong>5</strong> is already an octal digit:
+</p>
+
+<strong>101<sub>2</sub> = 5<sub>8</sub> ✅</strong>
+
+<p>
+  Therefore:
+  <strong>010101<sub>2</sub> = 25<sub>8</sub></strong> ✅
+</p>
+
+<h1 id="octal-binary-practice">Practice Questions: Octal ↔ Binary</h1>
+
+<h2>A. Convert Octal to Binary</h2>
+
+<p>Convert the following <strong>octal numbers into binary</strong>:</p>
+
+<ol>
+  <li><strong>3<sub>8</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>5<sub>8</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>7<sub>8</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>12<sub>8</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>25<sub>8</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>34<sub>8</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>47<sub>8</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>105<sub>8</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>246<sub>8</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>725<sub>8</sub> = ?<sub>2</sub></strong></li>
+</ol>
+
+<h2>B. Convert Binary to Octal</h2>
+
+<p>Convert the following <strong>binary numbers into octal</strong>:</p>
+
+<ol>
+  <li><strong>011<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>101<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>110<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>010101<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>011100<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>100111<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>101010<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>001101011<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>010100110<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>111101101<sub>2</sub> = ?<sub>8</sub></strong></li>
+</ol>
+
+<h2>More Practice</h2>
+
+<ol start="11">
+  <li><strong>11<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>1001<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>10110<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>110101<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>1000111<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>10100110<sub>2</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>111010011<sub>2</sub> = ?<sub>8</sub></strong></li>
+</ol>
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> Always start grouping the binary digits
+    <strong>from the right</strong>. If the first group has only
+    <strong>1 or 2 bits</strong>, add leading zeros to make a group of
+    <strong>3 bits</strong>.
+</div>
+
+<h2>Examples</h2>
+
+<p>
+  <strong>1101<sub>2</sub></strong> →
+  1 | 101 →
+  001 | 101
+</p>
+
+<p>
+  <strong>10101<sub>2</sub></strong> →
+  10 | 101 →
+  010 | 101
+</p>
+
+<h1 id="hexadecimal-binary">Hexadecimal to Binary and Binary to Hexadecimal</h1>
+
+<p>
+  The <strong>Hexadecimal Number System</strong> has a base of
+  <strong>16</strong> and uses the digits <strong>0–9</strong> and the
+  letters <strong>A–F</strong>.
+</p>
+
+<p>
+  The <strong>Binary Number System</strong> has a base of <strong>2</strong>
+  and uses only <strong>0 and 1</strong>.
+</p>
+
+<p>
+  The conversion between hexadecimal and binary is easy because:
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> <strong>1 hexadecimal digit = 4 binary bits</strong>.
+  Therefore, each hexadecimal digit can be directly replaced by its
+  <strong>4-bit binary equivalent</strong>.
+</div>
+
+<h2>Hexadecimal to Binary</h2>
+
+<p>
+  To convert a hexadecimal number into binary, <strong>replace each
+  hexadecimal digit with its 4-bit binary equivalent</strong>.
+</p>
+
+<table class="conversion-table">
+  <thead>
+    <tr>
+      <th>Hexadecimal</th>
+      <th>Binary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0000</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0001</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0010</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0011</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0100</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>0101</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>0110</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>0111</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>1001</td>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td>1010</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>1011</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>1100</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>1101</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>1110</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>1111</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Example: Convert 5<sub>16</sub> to Binary</h2>
+
+<p>
+  From the conversion table:
+</p>
+
+<p>
+  <strong>5<sub>16</sub> = 0101<sub>2</sub></strong>
+</p>
+
+<p>
+  We can also verify this by converting 5 into decimal and then binary:
+</p>
+
+<pre><code>
+2  |  5
+2  |  2 - 1
+   |  1 - 0
+</code></pre>
+
+<p>
+  Reading the remainders from bottom to top:
+</p>
+
+<p>
+  <strong>5<sub>16</sub> = 101<sub>2</sub></strong>
+</p>
+
+<p>
+  But because <strong>1 hexadecimal digit = 4 binary bits</strong>, we add
+  a leading zero:
+</p>
+
+<p>
+  <strong>5<sub>16</sub> = 0101<sub>2</sub></strong>
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> The extra leading zero is added
+  <strong>only to make the binary representation 4 bits</strong>,
+  because each hexadecimal digit corresponds to exactly
+  <strong>4 binary bits</strong>.
+</div>
+
+<h2>Example: Convert 2A<sub>16</sub> to Binary</h2>
+
+<p>
+  Convert each hexadecimal digit separately:
+</p>
+
+<pre><code>
+2 → 0010
+A → 1010
+</code></pre>
+
+<p>
+  Therefore:
+</p>
+
+<p>
+  <strong>2A<sub>16</sub> = 00101010<sub>2</sub></strong>
+</p>
+
+<p>
+  Leading zeros can be removed when they are not required:
+</p>
+
+<p>
+  <strong>2A<sub>16</sub> = 101010<sub>2</sub></strong>
+</p>
+
+<h2>Binary to Hexadecimal</h2>
+
+<p>
+  To convert a binary number into hexadecimal, <strong>group the binary
+  digits into groups of 4 bits from the right</strong>. Then replace each
+  4-bit group with its hexadecimal equivalent.
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> Always start grouping the binary digits
+  <strong>from the right</strong>. If the first group has only
+  <strong>1, 2, or 3 bits</strong>, add leading zeros to make a group of
+  <strong>4 bits</strong>.
+</div>
+
+<h2>Convert 1010<sub>2</sub> to Hexadecimal</h2>
+
+<pre><code>
+1010₂
+
+= (1 × 2³) + (0 × 2²) + (1 × 2¹) + (0 × 2⁰)
+
+= (1 × 8) + (0 × 4) + (1 × 2) + (0 × 1)
+
+= 8 + 0 + 2 + 0
+
+= 10₁₆
+</code></pre>
+
+<p>
+  Since <strong>10 in hexadecimal is represented by A</strong>:
+</p>
+
+<p>
+  <strong>1010<sub>2</sub> = A<sub>16</sub></strong> ✅
+</p>
+
+<h2>Convert 0010<sub>2</sub> to Hexadecimal</h2>
+
+<pre><code>
+0010₂
+
+= (0 × 2³) + (0 × 2²) + (1 × 2¹) + (0 × 2⁰)
+
+= (0 × 8) + (0 × 4) + (1 × 2) + (0 × 1)
+
+= 0 + 0 + 2 + 0
+
+= 2₁₆
+</code></pre>
+
+<p>
+  <strong>0010<sub>2</sub> = 2<sub>16</sub></strong> ✅
+</p>
+
+<h2>Convert 00101010<sub>2</sub> to Hexadecimal</h2>
+
+<p>
+  First, group the binary digits into groups of 4 from the right:
+</p>
+
+<pre><code>
+00101010₂
+
+0010 | 1010
+</code></pre>
+
+<p>
+  Now convert each group:
+</p>
+
+<pre><code>
+0010 → 2
+1010 → A
+</code></pre>
+
+<p>
+  Therefore:
+</p>
+
+<p>
+  <strong>00101010<sub>2</sub> = 2A<sub>16</sub></strong> ✅
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> For binary-to-hexadecimal conversion,
+  <strong>1 hexadecimal digit = 4 binary bits</strong>. Therefore,
+  every group of 4 binary bits represents exactly one hexadecimal digit.
+</div>
+
+<h2>More Grouping Examples</h2>
+
+<p>
+  <strong>1101<sub>2</sub></strong> →
+  1101 → D
+</p>
+
+<p>
+  Therefore:
+  <strong>1101<sub>2</sub> = D<sub>16</sub></strong>
+</p>
+
+<p>
+  <strong>10101<sub>2</sub></strong> →
+  1 | 0101 → 0001 | 0101
+</p>
+
+<p>
+  Therefore:
+  <strong>10101<sub>2</sub> = 15<sub>16</sub></strong>
+</p>
+
+<p>
+  <strong>110101<sub>2</sub></strong> →
+  1101 | 0101
+</p>
+
+<p>
+  Therefore:
+  <strong>110101<sub>2</sub> = D5<sub>16</sub></strong>
+</p>
+
+<h1 id="hexadecimal-binary-practice">Practice Questions: Hexadecimal ↔ Binary</h1>
+
+<h2>A. Convert Hexadecimal to Binary</h2>
+
+<p>Convert the following <strong>hexadecimal numbers into binary</strong>:</p>
+
+<ol>
+  <li><strong>3<sub>16</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>5<sub>16</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>A<sub>16</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>F<sub>16</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>12<sub>16</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>2A<sub>16</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>3F<sub>16</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>4B<sub>16</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>7C<sub>16</sub> = ?<sub>2</sub></strong></li>
+  <li><strong>AF<sub>16</sub> = ?<sub>2</sub></strong></li>
+</ol>
+
+<h2>B. Convert Binary to Hexadecimal</h2>
+
+<p>Convert the following <strong>binary numbers into hexadecimal</strong>:</p>
+
+<ol>
+  <li><strong>0011<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>0101<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>1010<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>1111<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>00101010<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>00111111<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>01001011<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>01111100<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>10101111<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>11011010<sub>2</sub> = ?<sub>16</sub></strong></li>
+</ol>
+
+<h2>More Practice</h2>
+
+<ol start="11">
+  <li><strong>1101<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>10101<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>110101<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>1000111<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>10100110<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>111010011<sub>2</sub> = ?<sub>16</sub></strong></li>
+  <li><strong>1011010110<sub>2</sub> = ?<sub>16</sub></strong></li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> Always start grouping the binary digits
+  <strong>from the right</strong>. If the first group has only
+  <strong>1, 2, or 3 bits</strong>, add leading zeros to make a group of
+  <strong>4 bits</strong>.
+</div>
+
+<h2>Examples of Binary Grouping</h2>
+
+<p>
+  <strong>1101<sub>2</sub></strong> →
+  1101 → D
+</p>
+
+<p>
+  <strong>10101<sub>2</sub></strong> →
+  1 | 0101 →
+  0001 | 0101
+</p>
+
+<p>
+  <strong>110101<sub>2</sub></strong> →
+  1101 | 0101
+</p>
+
+<p>
+  <strong>1000111<sub>2</sub></strong> →
+  1 | 0001 | 11 →
+  0001 | 0001 | 11
+</p>
+
+<h1 id="decimal-octal-conversion">Decimal to Octal Conversion and Vice versa</h1>
+
+<p>
+  To convert a <strong>decimal number into octal</strong>, divide the
+  decimal number repeatedly by <strong>8</strong>. Write the remainders
+  and read them <strong>from bottom to top</strong>.
+</p>
+
+<h2>Example: Convert 25<sub>10</sub> to Octal</h2>
+
+<pre><code>
+8  |  25
+8  |  3 - 1
+   |  0 - 3
+</code></pre>
+
+<p>
+  Now read the remainders <strong>from bottom to top</strong>:
+</p>
+
+<p>
+  <strong>3 1</strong>
+</p>
+
+<p>
+  Therefore:
+</p>
+
+<p>
+  <strong>25<sub>10</sub> = 31<sub>8</sub></strong> ✅
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> Do not add a leading zero unless it is specifically
+  needed to show a fixed number of digits. Therefore,
+  <strong>25<sub>10</sub> = 31<sub>8</sub></strong>, not
+  <strong>031<sub>8</sub></strong>.
+</div>
+
+<h2>Convert 31<sub>8</sub> to Decimal</h2>
+
+<p>
+  Multiply each octal digit by its corresponding power of
+  <strong>8</strong>, starting from the right with <strong>8<sup>0</sup></strong>:
+</p>
+
+<pre><code>
+31₈
+
+= (3 × 8¹) + (1 × 8⁰)
+
+= (3 × 8) + (1 × 1)
+
+= 24 + 1
+
+= 25₁₀
+</code></pre>
+
+<p>
+  Therefore:
+</p>
+
+<strong>31<sub>8</sub> = 25<sub>10</sub></strong> ✅
+
+<h1 id="decimal-octal-practice">Practice Questions: Decimal ↔ Octal</h1>
+
+<h2>A. Convert Decimal to Octal</h2>
+
+<p>
+  Convert the following <strong>decimal numbers into octal</strong>:
+</p>
+
+<ol>
+  <li><strong>8<sub>10</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>15<sub>10</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>25<sub>10</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>40<sub>10</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>64<sub>10</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>100<sub>10</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>125<sub>10</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>250<sub>10</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>500<sub>10</sub> = ?<sub>8</sub></strong></li>
+  <li><strong>1000<sub>10</sub> = ?<sub>8</sub></strong></li>
+</ol>
+
+<h2>B. Convert Octal to Decimal</h2>
+
+<p>
+  Convert the following <strong>octal numbers into decimal</strong> using
+  the <strong>multiplication method</strong>:
+</p>
+
+<ol>
+  <li><strong>7<sub>8</sub> = ?<sub>10</sub></strong></li>
+  <li><strong>12<sub>8</sub> = ?<sub>10</sub></strong></li>
+  <li><strong>25<sub>8</sub> = ?<sub>10</sub></strong></li>
+  <li><strong>31<sub>8</sub> = ?<sub>10</sub></strong></li>
+  <li><strong>45<sub>8</sub> = ?<sub>10</sub></strong></li>
+  <li><strong>100<sub>8</sub> = ?<sub>10</sub></strong></li>
+  <li><strong>125<sub>8</sub> = ?<sub>10</sub></strong></li>
+  <li><strong>250<sub>8</sub> = ?<sub>10</sub></strong></li>
+  <li><strong>345<sub>8</sub> = ?<sub>10</sub></strong></li>
+  <li><strong>1000<sub>8</sub> = ?<sub>10</sub></strong></li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> For decimal-to-octal conversion, repeatedly
+  <strong>divide by 8</strong> and read the remainders
+  <strong>from bottom to top</strong>. For octal-to-decimal conversion,
+  multiply each digit by its corresponding power of
+  <strong>8</strong>, starting from the right with
+  <strong>8<sup>0</sup></strong>.
+</div>
+
+<h1>Trick to Solve Bigger Questions</h1>
+
+<h2>Example: Convert 4455<sub>10</sub> to Octal</h2>
+
+<p>
+  First divide <strong>4455</strong> by <strong>8</strong>:
+</p>
+
+<p>
+  <strong>4455 ÷ 8 = 556.875</strong>
+</p>
+
+<p>
+  The whole-number quotient is <strong>556</strong> and the decimal part is
+  <strong>0.875</strong>.
+</p>
+
+<p>
+  Now find the remainder:
+</p>
+
+<p>
+  <strong>0.875 × 8 = 7</strong>
+</p>
+
+<p>
+  So the remainder is <strong>7</strong>.
+</p>
+
+<p>
+  Then continue with <strong>556</strong>:
+</p>
+
+<p>
+  <strong>556 ÷ 8 = 69.5</strong>
+</p>
+
+<p>
+  <strong>0.5 × 8 = 4</strong>
+</p>
+
+<p>
+  So the remainder is <strong>4</strong>.
+</p>
+
+<p>
+  Continue:
+</p>
+
+<p>
+  <strong>69 ÷ 8 = 8.625</strong>
+</p>
+
+<p>
+  <strong>0.625 × 8 = 5</strong>
+</p>
+
+<p>
+  Remainder = <strong>5</strong>
+</p>
+
+<p>
+  Continue:
+</p>
+
+<p>
+  <strong>8 ÷ 8 = 1</strong>
+</p>
+
+<p>
+  Remainder = <strong>0</strong>
+</p>
+
+<p>
+  Finally:
+</p>
+
+<p>
+  <strong>1 ÷ 8 = 0.125</strong>
+</p>
+
+<p>
+  <strong>0.125 × 8 = 1</strong>
+</p>
+
+<p>
+  Remainder = <strong>1</strong>
+</p>
+
+<p>
+  Now read the remainders <strong>from bottom to top</strong>:
+</p>
+
+<p>
+  <strong>1 → 0 → 5 → 4 → 7</strong>
+</p>
+
+<p>
+  Therefore:
+</p>
+
+  <strong>4455<sub>10</sub> = 10547<sub>8</sub></strong> ✅
+
+<h1 id="data-representation">Data Representation in Computing Systems</h1>
+
+<p>
+  Computers can <strong>store and process different types of information</strong>.
+  To store this information, computers represent data using
+  <strong>binary digits (0 and 1)</strong>.
+</p>
+
+<p>
+  One important type of data is <strong>numeric data</strong>, which includes
+  whole numbers and integers.
+</p>
+
+<h2>1. Whole Numbers (W)</h2>
+
+<p>
+  <strong>Whole numbers</strong> are numbers that include <strong>zero and all
+  positive numbers</strong>. They do not include negative numbers or fractions.
+</p>
+
+<p>
+  Mathematically:
+</p>
+
+<p>
+  <strong>W = {0, 1, 2, 3, 4, ...}</strong>
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+  <li>Number of students = <strong>50</strong></li>
+  <li>Age = <strong>18</strong></li>
+  <li>Number of books = <strong>25</strong></li>
+</ul>
+
+<p>
+  These values cannot normally be negative.
+</p>
+
+<h3>Whole Number Storage</h3>
+
+<p>
+  A <strong>byte</strong> consists of <strong>8 bits</strong>. The more bytes
+  used, the more values a computer can store.
+</p>
+
+<p>
+  For <strong>n bits</strong>, the maximum whole number is:
+</p>
+
+<p>
+  <strong>Maximum value = 2<sup>n</sup> − 1</strong>
+</p>
+
+<table class="conversion-table">
+  <thead>
+    <tr>
+      <th>Storage</th>
+      <th>Bits</th>
+      <th>Maximum Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 Byte</td>
+      <td>8 bits</td>
+      <td>2<sup>8</sup> − 1 = <strong>255</strong></td>
+    </tr>
+    <tr>
+      <td>2 Bytes</td>
+      <td>16 bits</td>
+      <td>2<sup>16</sup> − 1 = <strong>65,535</strong></td>
+    </tr>
+    <tr>
+      <td>4 Bytes</td>
+      <td>32 bits</td>
+      <td>2<sup>32</sup> − 1 = <strong>4,294,967,295</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  For example, an 8-bit whole number can represent values from:
+</p>
+
+<p>
+  <strong>00000000<sub>2</sub> = 0<sub>10</sub></strong>
+</p>
+
+<p>
+  to
+</p>
+
+<p>
+  <strong>11111111<sub>2</sub> = 255<sub>10</sub></strong>
+</p>
+
+<h2>2. Integers (Z)</h2>
+
+<p>
+  <strong>Integers</strong> include <strong>positive numbers, negative
+  numbers, and zero</strong>.
+</p>
+
+<p>
+  Mathematically:
+</p>
+
+<p>
+  <strong>Z = {..., −3, −2, −1, 0, 1, 2, 3, ...}</strong>
+</p>
+
+<p>
+  In computing, these are called <strong>signed integers</strong> because they
+  can represent both positive and negative values.
+</p>
+
+<h3>Sign Bit</h3>
+
+<p>
+  To represent positive and negative numbers, one bit is used as the
+  <strong>sign bit</strong>. It is usually the <strong>most significant bit
+  (MSB)</strong>.
+</p>
+
+<ul>
+  <li><strong>0</strong> → Positive</li>
+  <li><strong>1</strong> → Negative</li>
+</ul>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong>
+  <strong>MSB (Most Significant Bit)</strong> is the leftmost bit in a binary
+  number and usually has the highest place value.
+  <strong>LSB (Least Significant Bit)</strong> is the rightmost bit and has
+  the lowest place value.
+</div>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>
+Binary Number:  1 0 1 1 0 1 0 1
+                ↑             ↑
+               MSB           LSB
+             (leftmost)    (rightmost)
+</code></pre>
+
+<p>
+  In <strong>10110101<sub>2</sub></strong>:
+</p>
+
+<ul>
+  <li><strong>MSB = 1</strong> → the leftmost bit.</li>
+  <li><strong>LSB = 1</strong> → the rightmost bit.</li>
+</ul>
+
+<p>
+  For an <strong>8-bit signed integer</strong>, one bit is used for the sign,
+  leaving <strong>7 bits</strong> for the value.
+</p>
+
+<p>
+  The maximum positive value is:
+</p>
+
+<p>
+  <strong>2<sup>7</sup> − 1 = 127</strong>
+</p>
+
+<p>
+  So, the maximum positive value is:
+</p>
+
+<p>
+  <strong>01111111<sub>2</sub> = 127<sub>10</sub></strong>
+</p>
+
+<p>
+  Negative values are commonly stored using <strong>2's complement</strong>.
+</p>
+
+<h2 id="first-complement">1's Complement</h2>
+
+<p>
+  <strong>1's complement</strong> is a method of representing signed binary
+  numbers.
+</p>
+
+<p>
+  To find the <strong>1's complement</strong>, simply
+  <strong>invert every bit</strong>:
+</p>
+
+<ul>
+  <li><strong>0 → 1</strong></li>
+  <li><strong>1 → 0</strong></li>
+</ul>
+
+<h3>Example</h3>
+
+<pre><code>
+Original:        00000101
+1's complement:  11111010
+</code></pre>
+
+<p>
+  So, the 1's complement of <strong>00000101<sub>2</sub></strong> is
+  <strong>11111010<sub>2</sub></strong>.
+</p>
+
+<h2 id="second-complement">2's Complement</h2>
+
+<p>
+  <strong>2's complement</strong> is the common method used by computers to
+  represent <strong>negative integers</strong>.
+</p>
+
+<p>
+  To find the 2's complement:
+</p>
+
+<ol>
+  <li><strong>Invert all the bits</strong> to get the 1's complement.</li>
+  <li><strong>Add 1</strong> to the result.</li>
+</ol>
+
+<h3>Example: Represent −5 in 8 Bits</h3>
+
+<p>
+  First, write <strong>+5</strong> in binary:
+</p>
+
+<pre><code>
+00000101
+</code></pre>
+
+<p>
+  <strong>Step 1: Invert all bits</strong>
+</p>
+
+<pre><code>
+11111010
+</code></pre>
+
+<p>
+  <strong>Step 2: Add 1</strong>
+</p>
+
+<pre><code>
+  11111010
++ 00000001
+-----------
+  11111011
+</code></pre>
+
+<p>
+  Therefore:
+</p>
+
+<p>
+  <strong>−5<sub>10</sub> = 11111011<sub>2</sub></strong>
+  in 8-bit 2's complement.
+</p>
+
+<h2>5. Minimum Integer Value</h2>
+
+<p>
+  For an <strong>n-bit signed integer</strong>, the minimum value is:
+</p>
+
+<p>
+  <strong>Minimum value = −2<sup>n−1</sup></strong>
+</p>
+
+<p>
+  For an <strong>8-bit integer</strong>:
+</p>
+
+<p>
+  <strong>−2<sup>7</sup> = −128</strong>
+</p>
+
+<p>
+  Therefore, an 8-bit signed integer can represent values from:
+</p>
+
+<p>
+  <strong>−128 to +127</strong>
+</p>
+
+<h3>Examples</h3>
+
+<table class="conversion-table">
+  <thead>
+    <tr>
+      <th>Storage</th>
+      <th>Bits</th>
+      <th>Minimum Value</th>
+      <th>Maximum Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 Byte</td>
+      <td>8</td>
+      <td><strong>−128</strong></td>
+      <td><strong>127</strong></td>
+    </tr>
+    <tr>
+      <td>2 Bytes</td>
+      <td>16</td>
+      <td><strong>−32,768</strong></td>
+      <td><strong>32,767</strong></td>
+    </tr>
+    <tr>
+      <td>4 Bytes</td>
+      <td>32</td>
+      <td><strong>−2,147,483,648</strong></td>
+      <td><strong>2,147,483,647</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> Whole numbers can represent <strong>0 and positive
+  values</strong>, while integers can represent <strong>negative, zero, and
+  positive values</strong>. Computers commonly use <strong>2's
+  complement</strong> to store negative integers.
+</div>
+
+<h1 id="binary-addition">Binary Arithmetic</h1>
+
+<p>
+  <strong>Binary arithmetic</strong> is the process of performing
+  <strong>addition, subtraction, multiplication, and division</strong>
+  using only <strong>0 and 1</strong>.
+</p>
+
+<h2>1. Binary Addition</h2>
+
+<h3>Rules</h3>
+
+<table class="conversion-table">
+  <thead>
+    <tr>
+      <th>Operation</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0 + 0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0 + 1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1 + 0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1 + 1</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>1 + 1 + 1</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Example 1</h3>
+
+<pre><code>
+   101
+ + 011
+ -----
+  1000
+</code></pre>
+
+<p><strong>101<sub>2</sub> + 011<sub>2</sub> = 1000<sub>2</sub></strong></p>
+
+<h3>Example 2</h3>
+
+<pre><code>
+   1101
+ + 0011
+ ------
+  10000
+</code></pre>
+
+<p><strong>1101<sub>2</sub> + 0011<sub>2</sub> = 10000<sub>2</sub></strong></p>
+
+<h3>Example 3</h3>
+
+<pre><code>
+   10110
+ + 01101
+ -------
+  100011
+</code></pre>
+
+<p><strong>10110<sub>2</sub> + 01101<sub>2</sub> = 100011<sub>2</sub></strong></p>
+
+
+<h2 id="binary-subtraction">2. Binary Subtraction</h2>
+
+<h3>Rules</h3>
+
+<table class="conversion-table">
+  <thead>
+    <tr>
+      <th>Operation</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0 − 0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1 − 0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1 − 1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>10 − 1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  When <strong>0 − 1</strong> occurs, we borrow from the next position.
+</p>
+
+<h3>Example 1</h3>
+
+<pre><code>
+   1010
+ - 0011
+ ------
+   0111
+</code></pre>
+
+<p><strong>1010<sub>2</sub> − 0011<sub>2</sub> = 0111<sub>2</sub></strong></p>
+
+<h3>Example 2</h3>
+
+<pre><code>
+   1101
+ - 0101
+ ------
+   1000
+</code></pre>
+
+<p><strong>1101<sub>2</sub> − 0101<sub>2</sub> = 1000<sub>2</sub></strong></p>
+
+<h3>Example 3</h3>
+
+<pre><code>
+   10000
+ - 00111
+ -------
+   01001
+</code></pre>
+
+<p><strong>10000<sub>2</sub> − 00111<sub>2</sub> = 01001<sub>2</sub></strong></p>
+
+
+<h2 id="binary-multiplication">3. Binary Multiplication</h2>
+
+<h3>Rules</h3>
+
+<table class="conversion-table">
+  <thead>
+    <tr>
+      <th>Operation</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0 × 0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0 × 1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1 × 0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1 × 1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Example 1</h3>
+
+<pre><code>
+     101
+   ×  10
+   -----
+     000
+ +  1010
+   -----
+    1010
+</code></pre>
+
+<p><strong>101<sub>2</sub> × 10<sub>2</sub> = 1010<sub>2</sub></strong></p>
+
+<h3>Example 2</h3>
+
+<pre><code>
+     101
+   ×  11
+   -----
+     101
+ +  1010
+   -----
+    1111
+</code></pre>
+
+<p><strong>101<sub>2</sub> × 11<sub>2</sub> = 1111<sub>2</sub></strong></p>
+
+<h3>Example 3</h3>
+
+<pre><code>
+     110
+   × 101
+   -----
+     110
+    000
+ + 11000
+   -----
+   11110
+</code></pre>
+
+<p><strong>110<sub>2</sub> × 101<sub>2</sub> = 11110<sub>2</sub></strong></p>
+
+
+<h1 id="binary-division">4. Binary Division</h1>
+
+<p>
+  Binary division follows the same basic process as
+  <strong>decimal long division</strong>.
+</p>
+
+<h3>Example 1</h3>
+
+<pre><code>
+       10
+     ______
+10  )  100
+       10
+       --
+        00
+         0
+        --
+         0
+</code></pre>
+
+<p><strong>100<sub>2</sub> ÷ 10<sub>2</sub> = 10<sub>2</sub></strong></p>
+
+<h3>Example 2</h3>
+
+<pre><code>
+        11
+      ______
+10  )  110
+       10
+       --
+        10
+        10
+        --
+         0
+</code></pre>
+
+<p><strong>110<sub>2</sub> ÷ 10<sub>2</sub> = 11<sub>2</sub></strong></p>
+
+<h3>Example 3</h3>
+
+<pre><code>
+        101
+      _______
+10  )  1010
+       10
+       --
+        01
+         0
+        --
+         10
+         10
+         --
+          0
+</code></pre>
+
+<p><strong>1010<sub>2</sub> ÷ 10<sub>2</sub> = 101<sub>2</sub></strong></p>
+
+
+<h1>Binary Subtraction Using 2's Complement</h1>
+
+<p>
+  In binary arithmetic, <strong>subtraction can also be performed by
+  adding the 2's complement of the subtrahend to the minuend</strong>.
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong>
+  <strong>Minuend</strong> is the number from which another number is
+  subtracted. <strong>Subtrahend</strong> is the number that is
+  subtracted from the minuend.
+  <br><br>
+  <strong>Example:</strong> In <strong>9 − 6</strong>,
+  <strong>9</strong> is the <strong>minuend</strong> and
+  <strong>6</strong> is the <strong>subtrahend</strong>.
+</div>
+
+<h2>Example: Subtract 6 from 9</h2>
+
+<p>
+  <strong>Minuend = 9<sub>10</sub> = 1001<sub>2</sub></strong>
+</p>
+
+<p>
+  <strong>Subtrahend = 6<sub>10</sub> = 0110<sub>2</sub></strong>
+</p>
+
+<h2>Step 1: Find the 2's Complement of the Subtrahend</h2>
+
+<p>Subtrahend:</p>
+
+<pre><code>
+0110
+</code></pre>
+
+<p><strong>Invert all the bits:</strong></p>
+
+<pre><code>
+1001
+</code></pre>
+
+<p><strong>Add 1:</strong></p>
+
+<pre><code>
+  1001
++ 0001
+------
+  1010
+</code></pre>
+
+<p>
+  Therefore, the <strong>2's complement of 0110<sub>2</sub> is
+  1010<sub>2</sub></strong>.
+</p>
+
+<h2>Step 2: Add the Minuend and 2's Complement</h2>
+
+<pre><code>
+  1001
++ 1010
+------
+ 10011
+</code></pre>
+
+<h2>Step 3: Discard the Carry Bit</h2>
+
+<p>The result is:</p>
+
+<pre><code>
+10011
+ ↑
+Carry
+</code></pre>
+
+<p>Discard the leftmost carry:</p>
+
+<pre><code>
+0011
+</code></pre>
+
+<p>
+  <strong>0011<sub>2</sub> = 3<sub>10</sub></strong>
+</p>
+
+<p>Therefore:</p>
+
+<strong>9<sub>10</sub> − 6<sub>10</sub> = 3<sub>10</sub> ✅</strong>
+
+<p>or</p>
+
+<strong>1001<sub>2</sub> − 0110<sub>2</sub> = 0011<sub>2</sub> ✅</strong>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong>
+  In 2's complement subtraction, first find the
+  <strong>2's complement of the subtrahend</strong>, add it to the
+  <strong>minuend</strong>, and <strong>discard the final carry</strong>
+  if one is produced.
+</div>
+
+<h1 id="text-encoding-schemes">Common Text Encoding Schemes</h1>
+
+<p>
+  Computers store text as <strong>binary data (0s and 1s)</strong>.
+  Text encoding schemes convert <strong>letters, numbers, and symbols</strong>
+  into a form that computers can understand and store.
+</p>
+
+<h2>1. ASCII</h2>
+
+<p>
+  <strong>ASCII</strong> stands for
+  <strong>American Standard Code for Information Interchange</strong>.
+</p>
+
+<p>
+  It uses <strong>7 bits</strong> and represents
+  <strong>128 characters</strong>.
+</p>
+
+<h3>Example</h3>
+
+<p>
+  When you type <strong>A</strong>, ASCII represents it as
+  <strong>65</strong>.
+</p>
+
+<p>
+  <strong>A → 65</strong>
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> ASCII uses <strong>7 bits</strong>, so it can
+  represent <strong>2<sup>7</sup> = 128 characters</strong>.
+</div>
+
+<h2>2. Extended ASCII</h2>
+
+<p>
+  <strong>Extended ASCII</strong> uses <strong>8 bits</strong> and can
+  represent up to <strong>256 characters</strong>.
+</p>
+
+<p>
+  It includes additional symbols and <strong>special characters</strong>
+  that are not included in standard ASCII.
+</p>
+
+<h3>Example</h3>
+
+<p>
+  Some extended ASCII character sets can represent additional characters
+  such as <strong>β (Greek beta)</strong> and other special symbols.
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> Extended ASCII is not one single universal
+  character set. Different systems may use different 8-bit character
+  sets for the additional 128 characters.
+</div>
+
+<h2>3. Unicode</h2>
+
+<p>
+  <strong>Unicode</strong> is a character standard used to represent
+  characters from <strong>different languages and writing systems</strong>.
+</p>
+
+<h3>Example</h3>
+
+<p>
+  Unicode can represent English <strong>A</strong>, Urdu
+  <strong>ب</strong>, Arabic <strong>ع</strong>, Chinese
+  <strong>中</strong>, and many other characters.
+</p>
+
+<p>Common Unicode encoding formats are:</p>
+
+<ul>
+  <li><strong>UTF-8</strong></li>
+  <li><strong>UTF-16</strong></li>
+  <li><strong>UTF-32</strong></li>
+</ul>
+
+<p>
+  <strong>UTF</strong> stands for
+  <strong>Unicode Transformation Format</strong>.
+</p>
+
+
+<h2>4. UTF-8</h2>
+
+<p>
+  <strong>UTF-8</strong> is a variable-length encoding that uses
+  <strong>1 to 4 bytes</strong> for a character.
+</p>
+
+<p>
+  It is <strong>backward compatible with ASCII</strong>. This means that
+  standard ASCII characters use the same byte values in UTF-8.
+</p>
+
+<h3>Examples</h3>
+
+<p>
+  <strong>A → 01000001 → 1 byte</strong>
+</p>
+
+<p>
+  An Urdu character such as <strong>ب</strong> requires
+  <strong>2 bytes</strong> in UTF-8.
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> UTF-8 uses fewer bytes for many common characters,
+  especially English characters, which makes it efficient for storing and
+  transmitting text.
+</div>
+
+
+<h2>5. UTF-16</h2>
+
+<p>
+  <strong>UTF-16</strong> is a variable-length encoding that uses
+  <strong>2 or 4 bytes</strong> for a character.
+</p>
+
+<h3>Example</h3>
+
+<p>
+  <strong>A → 00000000 01000001 → 2 bytes</strong>
+</p>
+
+<p>
+  Most commonly used characters require <strong>2 bytes</strong>, while
+  some characters require <strong>4 bytes</strong>.
+</p>
+
+
+<h2>6. UTF-32</h2>
+
+<p>
+  <strong>UTF-32</strong> is a fixed-length encoding that uses exactly
+  <strong>4 bytes</strong> for every character.
+</p>
+
+<h3>Example</h3>
+
+<p>
+  <strong>A → 00000000 00000000 00000000 01000001</strong>
+</p>
+
+<p>
+  Therefore, the character <strong>A</strong> takes
+  <strong>4 bytes</strong> in UTF-32.
+</p>
+
+
+<h2>Comparison of Text Encoding Schemes</h2>
+
+<table class="conversion-table">
+  <thead>
+    <tr>
+      <th>Encoding</th>
+      <th>Size</th>
+      <th>Characters / Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>ASCII</strong></td>
+      <td>7 bits</td>
+      <td>128 characters</td>
+    </tr>
+    <tr>
+      <td><strong>Extended ASCII</strong></td>
+      <td>8 bits</td>
+      <td>Up to 256 characters</td>
+    </tr>
+    <tr>
+      <td><strong>Unicode</strong></td>
+      <td>Character standard</td>
+      <td>Characters from many languages</td>
+    </tr>
+    <tr>
+      <td><strong>UTF-8</strong></td>
+      <td>1–4 bytes</td>
+      <td>Variable-length Unicode encoding</td>
+    </tr>
+    <tr>
+      <td><strong>UTF-16</strong></td>
+      <td>2–4 bytes</td>
+      <td>Variable-length Unicode encoding</td>
+    </tr>
+    <tr>
+      <td><strong>UTF-32</strong></td>
+      <td>4 bytes</td>
+      <td>Fixed-length Unicode encoding</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="computer-storages">How Computers Store Files</h1>
+
+<p>
+  Computers store <strong>all types of files</strong>, such as
+  <strong>images, audio, videos, and documents</strong>, as
+  <strong>binary data (0s and 1s)</strong>.
+</p>
+
+<h2>Storage Devices</h2>
+
+<h3>1. Hard Disk Drive (HDD)</h3>
+
+<p>
+  A <strong>Hard Disk Drive (HDD)</strong> uses
+  <strong>spinning disks</strong> to read and write data. It usually
+  provides a <strong>large storage capacity</strong>.
+</p>
+
+<h3>2. Solid State Drive (SSD)</h3>
+
+<p>
+  A <strong>Solid State Drive (SSD)</strong> uses
+  <strong>flash memory</strong> to store data. It provides
+  <strong>faster access and better performance</strong> than an HDD.
+</p>
+
+<h3>Example</h3>
+
+<p>
+  When you save a photo on your laptop, the photo is converted into
+  <strong>binary data</strong> and stored on the computer's
+  <strong>HDD or SSD</strong>.
+</p>
+
+<h3>3. Cloud Storage</h3>
+
+<p>
+  <strong>Cloud storage</strong> stores files on
+  <strong>remote servers</strong> that can be accessed through the
+  <strong>internet</strong>.
+</p>
+
+<p>
+  It is useful for <strong>backup</strong> and for accessing files from
+  <strong>different devices</strong>.
+</p>
+
+<h3>Examples of Cloud Storage</h3>
+
+<ul>
+  <li><strong>Google Drive</strong></li>
+  <li><strong>OneDrive</strong></li>
+  <li><strong>Dropbox</strong></li>
+  <li><strong>iCloud</strong></li>
+  <li><strong>Google Photos</strong></li>
+</ul>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> Regardless of the type of file, computers ultimately
+  store and process digital data in the form of <strong>0s and 1s</strong>.
+  Different file types use different formats to organize this binary data.
+</div>
+
+
+<h2 id="mcqs">Multiple Choice Questions (MCQs) on Introduction To Computational Systems</h2>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What is a computational system?</div>
+  <div class="mcq-options">
+    a. A system used only for entertainment<br>
+    b. A system that processes data to produce useful information<br>
+    c. A system used only for communication<br>
+    d. A system that only stores files
+  </div>
+  <div class="mcq-answer">Answer: b. A system that processes data to produce useful information</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. What is the main purpose of a computational system?</div>
+  <div class="mcq-options">
+    a. To process data<br>
+    b. To play games<br>
+    c. To display pictures only<br>
+    d. To print documents only
+  </div>
+  <div class="mcq-answer">Answer: a. To process data</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. Which of the following is a component of a computational system?</div>
+  <div class="mcq-options">
+    a. Furniture<br>
+    b. Electricity bill<br>
+    c. Hardware<br>
+    d. Office building
+  </div>
+  <div class="mcq-answer">Answer: c. Hardware</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. What is hardware?</div>
+  <div class="mcq-options">
+    a. Computer programs<br>
+    b. Information stored online<br>
+    c. Instructions written by a user<br>
+    d. Physical parts of a computer system
+  </div>
+  <div class="mcq-answer">Answer: d. Physical parts of a computer system</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. Which of the following is an example of hardware?</div>
+  <div class="mcq-options">
+    a. Keyboard<br>
+    b. Operating system<br>
+    c. Web browser<br>
+    d. Calculator app
+  </div>
+  <div class="mcq-answer">Answer: a. Keyboard</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. What is software?</div>
+  <div class="mcq-options">
+    a. A computer cable<br>
+    b. An input device<br>
+    c. A set of programs and instructions<br>
+    d. A physical component
+  </div>
+  <div class="mcq-answer">Answer: c. A set of programs and instructions</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. Which of the following is an example of software?</div>
+  <div class="mcq-options">
+    a. Monitor<br>
+    b. Operating system<br>
+    c. Keyboard<br>
+    d. Mouse
+  </div>
+  <div class="mcq-answer">Answer: b. Operating system</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. Which component is responsible for processing instructions?</div>
+  <div class="mcq-options">
+    a. Monitor<br>
+    b. Keyboard<br>
+    c. Printer<br>
+    d. CPU
+  </div>
+  <div class="mcq-answer">Answer: d. CPU</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. What does CPU stand for?</div>
+  <div class="mcq-options">
+    a. Central Processing Unit<br>
+    b. Computer Processing Utility<br>
+    c. Central Program User<br>
+    d. Computer Program Unit
+  </div>
+  <div class="mcq-answer">Answer: a. Central Processing Unit</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. Which part of a computer is often called its "brain"?</div>
+  <div class="mcq-options">
+    a. Monitor<br>
+    b. Keyboard<br>
+    c. CPU<br>
+    d. Hard disk
+  </div>
+  <div class="mcq-answer">Answer: c. CPU</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. What is data?</div>
+  <div class="mcq-options">
+    a. Processed information<br>
+    b. Computer hardware<br>
+    c. A type of software<br>
+    d. Raw facts and figures
+  </div>
+  <div class="mcq-answer">Answer: d. Raw facts and figures</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. What is information?</div>
+  <div class="mcq-options">
+    a. Raw data without meaning<br>
+    b. Processed data that has meaning<br>
+    c. A physical component<br>
+    d. A computer virus
+  </div>
+  <div class="mcq-answer">Answer: b. Processed data that has meaning</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. Which process converts raw data into useful information?</div>
+  <div class="mcq-options">
+    a. Data processing<br>
+    b. Data deletion<br>
+    c. Data copying<br>
+    d. Data storage
+  </div>
+  <div class="mcq-answer">Answer: a. Data processing</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. Which device is primarily used to enter data into a computer?</div>
+  <div class="mcq-options">
+    a. Monitor<br>
+    b. Speaker<br>
+    c. Keyboard<br>
+    d. Projector
+  </div>
+  <div class="mcq-answer">Answer: c. Keyboard</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. Which of the following is an input device?</div>
+  <div class="mcq-options">
+    a. Printer<br>
+    b. Monitor<br>
+    c. Speaker<br>
+    d. Mouse
+  </div>
+  <div class="mcq-answer">Answer: d. Mouse</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">16. Which of the following is an output device?</div>
+  <div class="mcq-options">
+    a. Monitor<br>
+    b. Mouse<br>
+    c. Scanner<br>
+    d. Keyboard
+  </div>
+  <div class="mcq-answer">Answer: a. Monitor</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">17. What is the function of an input device?</div>
+  <div class="mcq-options">
+    a. To display results<br>
+    b. To print documents<br>
+    c. To enter data and instructions into a system<br>
+    d. To store electricity
+  </div>
+  <div class="mcq-answer">Answer: c. To enter data and instructions into a system</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">18. What is the function of an output device?</div>
+  <div class="mcq-options">
+    a. To enter data<br>
+    b. To present processed information to the user<br>
+    c. To process instructions<br>
+    d. To write programs
+  </div>
+  <div class="mcq-answer">Answer: b. To present processed information to the user</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">19. Which device is used to produce a printed copy?</div>
+  <div class="mcq-options">
+    a. Scanner<br>
+    b. Keyboard<br>
+    c. Microphone<br>
+    d. Printer
+  </div>
+  <div class="mcq-answer">Answer: d. Printer</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">20. Which device is commonly used to display visual output?</div>
+  <div class="mcq-options">
+    a. Monitor<br>
+    b. Keyboard<br>
+    c. Mouse<br>
+    d. Scanner
+  </div>
+  <div class="mcq-answer">Answer: a. Monitor</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">21. What is storage used for in a computational system?</div>
+  <div class="mcq-options">
+    a. To display images<br>
+    b. To store data and programs<br>
+    c. To type text only<br>
+    d. To produce sound
+  </div>
+  <div class="mcq-answer">Answer: b. To store data and programs</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">22. Which of the following is a storage device?</div>
+  <div class="mcq-options">
+    a. Keyboard<br>
+    b. Monitor<br>
+    c. Speaker<br>
+    d. Hard disk
+  </div>
+  <div class="mcq-answer">Answer: d. Hard disk</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">23. Which type of software manages computer hardware?</div>
+  <div class="mcq-options">
+    a. System software<br>
+    b. Game software<br>
+    c. Drawing software<br>
+    d. Media software
+  </div>
+  <div class="mcq-answer">Answer: a. System software</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">24. Which of the following is an operating system?</div>
+  <div class="mcq-options">
+    a. Keyboard<br>
+    b. Printer<br>
+    c. Windows<br>
+    d. Scanner
+  </div>
+  <div class="mcq-answer">Answer: c. Windows</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">25. What is application software?</div>
+  <div class="mcq-options">
+    a. A physical part of a computer<br>
+    b. Software designed to perform specific tasks for users<br>
+    c. An input device<br>
+    d. A network cable
+  </div>
+  <div class="mcq-answer">Answer: b. Software designed to perform specific tasks for users</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">26. Which of the following is an example of application software?</div>
+  <div class="mcq-options">
+    a. CPU<br>
+    b. RAM<br>
+    c. Motherboard<br>
+    d. Word processor
+  </div>
+  <div class="mcq-answer">Answer: d. Word processor</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">27. What is a user in a computational system?</div>
+  <div class="mcq-options">
+    a. A storage device<br>
+    b. A software program<br>
+    c. A person who interacts with and uses the system<br>
+    d. A computer cable
+  </div>
+  <div class="mcq-answer">Answer: c. A person who interacts with and uses the system</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">28. Which sequence represents the basic data processing cycle?</div>
+  <div class="mcq-options">
+    a. Input → Processing → Output<br>
+    b. Output → Input → Processing<br>
+    c. Processing → Output → Input<br>
+    d. Storage → Output → Input
+  </div>
+  <div class="mcq-answer">Answer: a. Input → Processing → Output</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">29. In the input-process-output cycle, what comes first?</div>
+  <div class="mcq-options">
+    a. Output<br>
+    b. Processing<br>
+    c. Storage<br>
+    d. Input
+  </div>
+  <div class="mcq-answer">Answer: d. Input</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">30. What is the result produced after processing data?</div>
+  <div class="mcq-options">
+    a. Output<br>
+    b. Input<br>
+    c. Hardware<br>
+    d. Program
+  </div>
+  <div class="mcq-answer">Answer: a. Output</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">31. Which component provides instructions to a computational system?</div>
+  <div class="mcq-options">
+    a. Monitor<br>
+    b. Software<br>
+    c. Printer<br>
+    d. Speaker
+  </div>
+  <div class="mcq-answer">Answer: b. Software</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">32. Which component performs arithmetic and logical operations?</div>
+  <div class="mcq-options">
+    a. Monitor<br>
+    b. Keyboard<br>
+    c. Printer<br>
+    d. ALU
+  </div>
+  <div class="mcq-answer">Answer: d. ALU</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">33. What does ALU stand for?</div>
+  <div class="mcq-options">
+    a. Advanced Learning Unit<br>
+    b. Application Logic Utility<br>
+    c. Arithmetic Logic Unit<br>
+    d. Automatic Language Unit
+  </div>
+  <div class="mcq-answer">Answer: c. Arithmetic Logic Unit</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">34. Which component temporarily stores data and instructions being used?</div>
+  <div class="mcq-options">
+    a. Printer<br>
+    b. RAM<br>
+    c. Monitor<br>
+    d. Keyboard
+  </div>
+  <div class="mcq-answer">Answer: b. RAM</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">35. What does RAM stand for?</div>
+  <div class="mcq-options">
+    a. Read Access Memory<br>
+    b. Rapid Application Machine<br>
+    c. Random Application Module<br>
+    d. Random Access Memory
+  </div>
+  <div class="mcq-answer">Answer: d. Random Access Memory</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">36. Which of the following is an example of a computational system?</div>
+  <div class="mcq-options">
+    a. Smartphone<br>
+    b. Chair<br>
+    c. Table<br>
+    d. Notebook
+  </div>
+  <div class="mcq-answer">Answer: a. Smartphone</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">37. Which system is designed to perform a specific dedicated function?</div>
+  <div class="mcq-options">
+    a. General-purpose computer<br>
+    b. Embedded system<br>
+    c. Paper file<br>
+    d. Manual notebook
+  </div>
+  <div class="mcq-answer">Answer: b. Embedded system</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">38. Which of the following is an example of an embedded computational system?</div>
+  <div class="mcq-options">
+    a. Paper book<br>
+    b. Wooden chair<br>
+    c. Computer-controlled washing machine<br>
+    d. Pencil
+  </div>
+  <div class="mcq-answer">Answer: c. Computer-controlled washing machine</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">39. Why are computational systems important?</div>
+  <div class="mcq-options">
+    a. They help process information efficiently<br>
+    b. They are used only for games<br>
+    c. They are used only for printing<br>
+    d. They replace all human activities
+  </div>
+  <div class="mcq-answer">Answer: a. They help process information efficiently</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">40. Which statement best describes a computational system?</div>
+  <div class="mcq-options">
+    a. It only stores data<br>
+    b. It only displays information<br>
+    c. It only connects computers to the internet<br>
+    d. It accepts input, processes data, and produces output
+  </div>
+  <div class="mcq-answer">Answer: d. It accepts input, processes data, and produces output</div>
+</div>
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+<section class="test-mcqs" id="test-mcqs">
+<h2>Test Yourself: Interactive MCQs (Introduction to Computational Systems)</h2>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">1. What is a computational system?</div>
+  <div class="mcq-options">
+    <button>a. A system that processes data using computational methods</button>
+    <button>b. A system used only for entertainment</button>
+    <button>c. A system that only stores books</button>
+    <button>d. A system used only for communication</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">2. What is the main purpose of a computer?</div>
+  <div class="mcq-options">
+    <button>a. To produce electricity</button>
+    <button>b. To process data and produce useful information</button>
+    <button>c. To replace all human activities</button>
+    <button>d. To store only images</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">3. Which of the following is a basic component of a computational system?</div>
+  <div class="mcq-options">
+    <button>a. Furniture</button>
+    <button>b. Electricity pole</button>
+    <button>c. Hardware</button>
+    <button>d. Building</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">4. Which component of a computer consists of physical parts?</div>
+  <div class="mcq-options">
+    <button>a. Software</button>
+    <button>b. Data</button>
+    <button>c. Algorithm</button>
+    <button>d. Hardware</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">5. Which of the following is an example of hardware?</div>
+  <div class="mcq-options">
+    <button>a. Keyboard</button>
+    <button>b. Operating system</button>
+    <button>c. Web browser</button>
+    <button>d. Application</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">6. What is software?</div>
+  <div class="mcq-options">
+    <button>a. A physical part of a computer</button>
+    <button>b. A set of instructions that tells a computer what to do</button>
+    <button>c. An electrical wire</button>
+    <button>d. A storage device only</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">7. Which of the following is system software?</div>
+  <div class="mcq-options">
+    <button>a. Calculator</button>
+    <button>b. Paint application</button>
+    <button>c. Operating system</button>
+    <button>d. Video player</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">8. Which of the following is application software?</div>
+  <div class="mcq-options">
+    <button>a. BIOS</button>
+    <button>b. Device driver</button>
+    <button>c. Operating system</button>
+    <button>d. Word processor</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">9. What is data?</div>
+  <div class="mcq-options">
+    <button>a. Raw facts and figures</button>
+    <button>b. Processed results only</button>
+    <button>c. Computer hardware</button>
+    <button>d. A type of software</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">10. What is information?</div>
+  <div class="mcq-options">
+    <button>a. Unprocessed data</button>
+    <button>b. Processed and meaningful data</button>
+    <button>c. A computer component</button>
+    <button>d. A programming language</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">11. Which device is mainly used to enter data into a computer?</div>
+  <div class="mcq-options">
+    <button>a. Monitor</button>
+    <button>b. Printer</button>
+    <button>c. Keyboard</button>
+    <button>d. Speaker</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">12. Which device displays the output of a computer?</div>
+  <div class="mcq-options">
+    <button>a. Keyboard</button>
+    <button>b. Mouse</button>
+    <button>c. Scanner</button>
+    <button>d. Monitor</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">13. Which unit performs arithmetic and logical operations?</div>
+  <div class="mcq-options">
+    <button>a. ALU</button>
+    <button>b. Keyboard</button>
+    <button>c. Monitor</button>
+    <button>d. Printer</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">14. What does CPU stand for?</div>
+  <div class="mcq-options">
+    <button>a. Computer Processing Utility</button>
+    <button>b. Central Processing Unit</button>
+    <button>c. Central Program Utility</button>
+    <button>d. Computer Program Unit</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">15. Which part of the CPU controls the activities of the computer?</div>
+  <div class="mcq-options">
+    <button>a. ALU</button>
+    <button>b. Memory</button>
+    <button>c. Control Unit</button>
+    <button>d. Input Unit</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">16. Which memory is generally used for temporary storage while programs are running?</div>
+  <div class="mcq-options">
+    <button>a. ROM</button>
+    <button>b. Hard disk</button>
+    <button>c. Optical disk</button>
+    <button>d. RAM</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">17. Which memory is non-volatile?</div>
+  <div class="mcq-options">
+    <button>a. ROM</button>
+    <button>b. RAM</button>
+    <button>c. Cache only</button>
+    <button>d. Register only</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">18. What is an algorithm?</div>
+  <div class="mcq-options">
+    <button>a. A physical computer device</button>
+    <button>b. A step-by-step procedure for solving a problem</button>
+    <button>c. A type of computer memory</button>
+    <button>d. A storage device</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">19. Which characteristic should a good algorithm have?</div>
+  <div class="mcq-options">
+    <button>a. It should be confusing</button>
+    <button>b. It should never end</button>
+    <button>c. It should have clear and unambiguous steps</button>
+    <button>d. It should contain random instructions</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">20. What is a flowchart?</div>
+  <div class="mcq-options">
+    <button>a. A computer virus</button>
+    <button>b. A programming language</button>
+    <button>c. A storage device</button>
+    <button>d. A graphical representation of an algorithm</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">21. Which symbol is commonly used for Start/End in a flowchart?</div>
+  <div class="mcq-options">
+    <button>a. Oval</button>
+    <button>b. Rectangle</button>
+    <button>c. Diamond</button>
+    <button>d. Parallelogram</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">22. Which flowchart symbol represents a decision?</div>
+  <div class="mcq-options">
+    <button>a. Rectangle</button>
+    <button>b. Diamond</button>
+    <button>c. Oval</button>
+    <button>d. Circle</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">23. Which flowchart symbol is generally used for processing?</div>
+  <div class="mcq-options">
+    <button>a. Diamond</button>
+    <button>b. Oval</button>
+    <button>c. Rectangle</button>
+    <button>d. Arrow</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">24. What does an arrow in a flowchart indicate?</div>
+  <div class="mcq-options">
+    <button>a. A decision</button>
+    <button>b. Data storage</button>
+    <button>c. Input only</button>
+    <button>d. Flow or direction of control</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">25. What is computational thinking?</div>
+  <div class="mcq-options">
+    <button>a. A problem-solving approach using computational concepts</button>
+    <button>b. Learning to type quickly</button>
+    <button>c. Using a computer only for games</button>
+    <button>d. Repairing computer hardware</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">26. Which computational thinking technique involves breaking a complex problem into smaller parts?</div>
+  <div class="mcq-options">
+    <button>a. Abstraction</button>
+    <button>b. Decomposition</button>
+    <button>c. Encryption</button>
+    <button>d. Compilation</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">27. What is pattern recognition?</div>
+  <div class="mcq-options">
+    <button>a. Deleting all data</button>
+    <button>b. Writing computer programs only</button>
+    <button>c. Identifying similarities or repeated patterns</button>
+    <button>d. Installing software</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">28. What does abstraction mean in computational thinking?</div>
+  <div class="mcq-options">
+    <button>a. Adding unnecessary details</button>
+    <button>b. Deleting a computer program</button>
+    <button>c. Increasing the size of data</button>
+    <button>d. Focusing on important details while ignoring unnecessary ones</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">29. What is a programming language?</div>
+  <div class="mcq-options">
+    <button>a. A language used to write instructions for a computer</button>
+    <button>b. A type of computer monitor</button>
+    <button>c. A storage device</button>
+    <button>d. A computer network</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">30. Which of the following is a programming language?</div>
+  <div class="mcq-options">
+    <button>a. HDMI</button>
+    <button>b. Python</button>
+    <button>c. Keyboard</button>
+    <button>d. Printer</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">31. What is a computer network?</div>
+  <div class="mcq-options">
+    <button>a. A single computer without connections</button>
+    <button>b. A computer game</button>
+    <button>c. A group of connected computers and devices</button>
+    <button>d. A type of processor</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">32. Which network covers a small geographical area such as a school or office?</div>
+  <div class="mcq-options">
+    <button>a. WAN</button>
+    <button>b. MAN</button>
+    <button>c. Internet</button>
+    <button>d. LAN</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">33. What is the Internet?</div>
+  <div class="mcq-options">
+    <button>a. A global network of interconnected computer networks</button>
+    <button>b. A single computer</button>
+    <button>c. A type of keyboard</button>
+    <button>d. A computer operating system</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">34. Which technology is commonly used to connect devices wirelessly?</div>
+  <div class="mcq-options">
+    <button>a. VGA</button>
+    <button>b. Wi-Fi</button>
+    <button>c. USB cable only</button>
+    <button>d. HDMI</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">35. What is cybersecurity mainly concerned with?</div>
+  <div class="mcq-options">
+    <button>a. Increasing screen brightness</button>
+    <button>b. Designing computer games</button>
+    <button>c. Protecting systems, networks, and data from threats</button>
+    <button>d. Printing documents</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">36. Which of the following is a good cybersecurity practice?</div>
+  <div class="mcq-options">
+    <button>a. Sharing passwords with everyone</button>
+    <button>b. Clicking every unknown link</button>
+    <button>c. Using the same weak password everywhere</button>
+    <button>d. Using strong and unique passwords</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">37. What is artificial intelligence (AI)?</div>
+  <div class="mcq-options">
+    <button>a. Technology that enables computers to perform tasks associated with human intelligence</button>
+    <button>b. A type of keyboard</button>
+    <button>c. A computer cable</button>
+    <button>d. A storage device</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">38. Which technology allows computers to learn patterns from data?</div>
+  <div class="mcq-options">
+    <button>a. Word processing</button>
+    <button>b. Machine learning</button>
+    <button>c. Printing</button>
+    <button>d. File compression</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">39. Why are computational systems important in modern life?</div>
+  <div class="mcq-options">
+    <button>a. They are used only for entertainment</button>
+    <button>b. They eliminate the need for electricity</button>
+    <button>c. They help solve problems, process information, and automate tasks</button>
+    <button>d. They can only be used in schools</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">40. Which sequence best represents the basic information processing cycle?</div>
+  <div class="mcq-options">
+    <button>a. Output → Input → Processing → Storage</button>
+    <button>b. Storage → Output → Input → Processing</button>
+    <button>c. Processing → Storage → Input → Output</button>
+    <button>d. Input → Processing → Output → Storage</button>
+  </div>
+</div>
+</section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>      
+
+<h2 id="faqs">FAQs</h2>
+
+<section class="notes-post-faq" id="faq">
+
+    <div class="section-title">
+
+        <span>
+    Frequently Asked Questions
+</span>
+
+<h2>
+    Introduction to Computational Systems FAQs
+</h2>
+
+<p>
+    Here are answers to some common questions about computational systems, 
+    computer hardware and software, data and information, computational thinking, 
+    algorithms, flowcharts, networks, cybersecurity, and modern computing.
+</p>
+
+    </div>
+
+    <div class="faq-container">
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is a computational system?
+        </button>
+        <div class="faq-answer">
+            <p>
+                A computational system is a system that uses hardware, software, data, and processes to perform computational tasks and solve problems.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What are the main components of a computational system?
+        </button>
+        <div class="faq-answer">
+            <p>
+                The main components include hardware, software, data, users, and procedures that work together to perform tasks.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is computer hardware?
+        </button>
+        <div class="faq-answer">
+            <p>
+                Hardware refers to the physical parts of a computer system that can be seen and touched, such as the keyboard, monitor, processor, and storage devices.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is computer software?
+        </button>
+        <div class="faq-answer">
+            <p>
+                Software is a collection of programs and instructions that tells a computer how to perform specific tasks.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is the difference between hardware and software?
+        </button>
+        <div class="faq-answer">
+            <p>
+                Hardware consists of the physical components of a computer, while software consists of the programs and instructions that operate the hardware.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is data?
+        </button>
+        <div class="faq-answer">
+            <p>
+                Data is a collection of raw facts and figures that can be processed by a computer to produce meaningful information.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is information?
+        </button>
+        <div class="faq-answer">
+            <p>
+                Information is processed and organized data that has meaning and can be used for decision-making.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is the CPU?
+        </button>
+        <div class="faq-answer">
+            <p>
+                The CPU, or Central Processing Unit, is the main processing component of a computer. It executes instructions and performs calculations.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is an algorithm?
+        </button>
+        <div class="faq-answer">
+            <p>
+                An algorithm is a clear, step-by-step set of instructions used to solve a problem or perform a specific task.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is computational thinking?
+        </button>
+        <div class="faq-answer">
+            <p>
+                Computational thinking is a problem-solving approach that uses techniques such as decomposition, pattern recognition, abstraction, and algorithms.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is decomposition in computational thinking?
+        </button>
+        <div class="faq-answer">
+            <p>
+                Decomposition is the process of breaking a complex problem into smaller and more manageable parts.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is pattern recognition?
+        </button>
+        <div class="faq-answer">
+            <p>
+                Pattern recognition is the process of identifying similarities, differences, or repeated patterns in problems or data.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is abstraction?
+        </button>
+        <div class="faq-answer">
+            <p>
+                Abstraction means focusing on the important features of a problem while ignoring unnecessary details.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is a flowchart?
+        </button>
+        <div class="faq-answer">
+            <p>
+                A flowchart is a graphical representation of an algorithm or process using standard symbols and arrows.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is the purpose of a flowchart?
+        </button>
+        <div class="faq-answer">
+            <p>
+                A flowchart helps visualize the steps of a process or algorithm, making it easier to understand, analyze, and communicate.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is a programming language?
+        </button>
+        <div class="faq-answer">
+            <p>
+                A programming language is a formal language used by programmers to write instructions that computers can execute.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is a computer network?
+        </button>
+        <div class="faq-answer">
+            <p>
+                A computer network is a group of computers and other devices connected together to communicate and share data and resources.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is cybersecurity?
+        </button>
+        <div class="faq-answer">
+            <p>
+                Cybersecurity is the practice of protecting computers, networks, systems, and data from unauthorized access, attacks, and other digital threats.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            Why are computational systems important?
+        </button>
+        <div class="faq-answer">
+            <p>
+                Computational systems are important because they help people process information, solve problems, automate tasks, communicate, and perform complex operations efficiently.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is the difference between input and output?
+        </button>
+        <div class="faq-answer">
+            <p>
+                Input is the data or instructions provided to a computer, while output is the information or result produced after processing the input.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+
+<h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/9-class/chapter-1/class-9-computer-chapter-1-introduction-to-computational-systems-notes.pdf">
+  Download PDF
+</a>
+
+<div class="wrap" id="main" style="margin-top: 40px;">
+  <h2>Comments</h2>
+
+  <div class="input-card">
+    <input id="pub-name" placeholder="Your name" maxlength="60">
+    <textarea id="pub-msg" placeholder="Leave a comment…" maxlength="1000"></textarea>
+    <button onclick="postComment()" style="background-color: #002959; color: white;">Post Comment</button>
+  </div>
+
+  <div id="comments-list"></div>
+</div>
+
+<!-- ADMIN LOGIN BAR -->
+<div id="admin-bar">
+  <span style="font-size:12px;color:var(--muted);">Admin</span>
+  <input id="admin-pass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter') adminLogin()">
+  <button onclick="adminLogin()" style="background-color: #002959; color: white;">Login</button>
+</div>
+
+</div>
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="#">Technology</a></li>
+
+                <li><a href="#">LifeStyle</a></li>
+
+                <li><a href="#">Health</a></li>
+
+                <li><a href="#">Education</a></li>
+
+                <li><a href="#">Business</a></li>
+
+                <li><a href="#">Travel</a></li>
+
+                <li><a href="#">9 Computer Science</a></li>
+
+                <li><a href="#">10 Computer Science</a></li>
+
+                <li><a href="#">11 Computer Science</a></li>
+
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                question.classList.toggle("active");
+
+                const answer = question.nextElementSibling;
+
+                if (answer.style.maxHeight) {
+
+                    answer.style.maxHeight = null;
+
+                } else {
+
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+    
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+const supabase = createClient(
+  "https://pojmeeozeuzqtgrvwgxw.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvam1lZW96ZXV6cXRncnZ3Z3h3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4ODM2MjYsImV4cCI6MjA5NTQ1OTYyNn0.c9sgwAH8ysgayh_dvk_uzNTK5XuUZ1k57Lk_cfzlhbA"
+);
+
+const POST_ID    = "blog-2";
+const ADMIN_PASS = "salman.coding";
+const ADMIN_NAME = "Salman (Admin)";
+
+let isAdmin = false;
+
+/* ── HELPERS ── */
+function esc(s) {
+  return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+function initial(n) { return (n||"?").charAt(0).toUpperCase(); }
+function timeAgo(d) {
+  const s = Math.floor((Date.now() - new Date(d)) / 1000);
+  if (s < 60)    return s + "s ago";
+  if (s < 3600)  return Math.floor(s/60) + "m ago";
+  if (s < 86400) return Math.floor(s/3600) + "h ago";
+  return Math.floor(s/86400) + "d ago";
+}
+
+/* ── ADMIN LOGIN / LOGOUT ── */
+window.adminLogin = function() {
+  if (document.getElementById("admin-pass").value === ADMIN_PASS) {
+    isAdmin = true;
+    document.getElementById("admin-bar").innerHTML =
+      `<span style="color:var(--accent);font-weight:600;font-size:13px;">✓ Admin</span>
+       <button onclick="adminLogout()" style="background:transparent;color:var(--muted);border:1px solid var(--border);font-size:12px;padding:5px 10px;">Logout</button>`;
+    document.getElementById("main").classList.add("admin-mode");
+    loadComments();
+  } else {
+    alert("Wrong password.");
+  }
+};
+
+window.adminLogout = function() {
+  isAdmin = false;
+  document.getElementById("admin-bar").innerHTML = `
+    <span style="font-size:12px;color:var(--muted);">Admin</span>
+    <input id="admin-pass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter') adminLogin()">
+    <button onclick="adminLogin()">Login</button>`;
+  document.getElementById("main").classList.remove("admin-mode");
+  loadComments();
+};
+
+/* ── POST TOP-LEVEL COMMENT (visitor) ── */
+window.postComment = async function() {
+  const name = document.getElementById("pub-name").value.trim();
+  const msg  = document.getElementById("pub-msg").value.trim();
+  if (!name || !msg) { alert("Please enter your name and message."); return; }
+  const { error } = await supabase.from("comments").insert([{
+    name, message: msg, post_id: POST_ID, parent_id: null
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  document.getElementById("pub-msg").value = "";
+  loadComments();
+};
+
+/* ── TOGGLE ADMIN REPLY BOX ── */
+window.showAdminReplyBox = function(id) {
+  if (!isAdmin) return;
+  const el = document.getElementById("arb-" + id);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── ADMIN POST REPLY ── */
+window.postAdminReply = async function(parentId) {
+  if (!isAdmin) return;
+  const ta  = document.getElementById("ari-" + parentId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: ADMIN_NAME, message: msg, post_id: POST_ID, parent_id: parentId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── SHOW VISITOR REPLY-BACK BOX ── */
+// visitorName = name of the original commenter (prefilled, locked)
+window.showVisitorReplyBox = function(adminReplyId, visitorName) {
+  const el = document.getElementById("vrb-" + adminReplyId);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── VISITOR POSTS REPLY-BACK ── */
+window.postVisitorReply = async function(adminReplyId, visitorName) {
+  const ta  = document.getElementById("vri-" + adminReplyId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: visitorName, message: msg, post_id: POST_ID, parent_id: adminReplyId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── BUILD THREAD under a top-level comment ── */
+// Structure: top comment → admin replies → visitor reply-backs (under each admin reply)
+function buildThread(all, topComment) {
+  // Direct admin replies to this top comment
+  const adminReplies = all.filter(c =>
+    c.parent_id === topComment.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    // Visitor replies back to this specific admin reply
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)}
+            <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+          ${isAdmin ? `<span class="admin-reply-btn" onclick="showAdminReplyBox(${vr.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${vr.id}" style="display:none;">
+            <textarea id="ari-${vr.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${vr.id})}"></textarea>
+            <button onclick="postAdminReply(${vr.id})">Send Reply</button>
+          </div>` : ""}
+          ${buildNestedThread(all, vr, topComment.name)}
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <!-- Visitor can reply back only to this admin reply -->
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(topComment.name)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(topComment.name)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(topComment.name)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* Deeper nesting: admin replies to visitor reply-backs */
+function buildNestedThread(all, visitorReply, originalVisitorName) {
+  const adminReplies = all.filter(c =>
+    c.parent_id === visitorReply.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)} <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble" style="margin-top:8px;">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(originalVisitorName)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(originalVisitorName)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(originalVisitorName)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* ── LOAD COMMENTS ── */
+async function loadComments() {
+  const { data, error } = await supabase
+    .from("comments").select("*")
+    .eq("post_id", POST_ID)
+    .order("created_at", { ascending: true });
+
+  const list = document.getElementById("comments-list");
+  if (error) { list.innerHTML = `<div class="empty">Could not load comments.</div>`; return; }
+
+  const all = data || [];
+  const top = all.filter(c => !c.parent_id);
+
+  if (!top.length) { list.innerHTML = `<div class="empty">No comments yet. Be the first!</div>`; return; }
+
+  list.innerHTML = top.map(c => `
+    <div class="comment-card">
+      <div class="comment-row">
+        <div class="avatar">${initial(c.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(c.name)}
+            <span class="comment-time">${timeAgo(c.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(c.message)}</div>
+          <span class="admin-reply-btn" onclick="showAdminReplyBox(${c.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${c.id}" style="display:none;">
+            <textarea id="ari-${c.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${c.id})}"></textarea>
+            <button onclick="postAdminReply(${c.id})">Send Reply</button>
+          </div>
+          ${buildThread(all, c)}
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* ── REALTIME ── */
+supabase.channel("comments-rt")
+  .on("postgres_changes", { event: "INSERT", schema: "public", table: "comments", filter: `post_id=eq.${POST_ID}` },
+    () => loadComments())
+  .subscribe();
+
+loadComments();
+</script>
+
+</body>
+</html>
