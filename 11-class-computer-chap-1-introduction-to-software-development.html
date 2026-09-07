@@ -1,0 +1,3767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ <title>Class 11 Computer Science Chapter 1: Software Development | MCQs, Short & Long Questions, FAQs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="notes-post.css">
+
+  <meta name="description" content="Class 11 Computer Science Chapter 1 Notes: Software Development. Complete study material covering SDLC, software development methodologies, Waterfall and Agile models, project planning and management, risk assessment, UML diagrams, Use Case, Class, Sequence and Activity Diagrams, Design Patterns, debugging, software testing, and software development tools." />
+
+<meta name="keywords" content="class 11 computer science notes, class 11 computer chapter 1, software development class 11, software development notes, software development life cycle, SDLC notes, SDLC phases, requirement gathering, functional requirements, non functional requirements, design phase software development, coding and development, software testing, software deployment, software maintenance, software development methodologies, software process models, Waterfall model, Agile methodology, Agile software development, project planning and management, risk assessment and management, quality assurance, UML diagrams, Unified Modeling Language, Use Case Diagram, Class Diagram, Sequence Diagram, Activity Diagram, design patterns, Singleton pattern, Factory pattern, Observer pattern, Strategy pattern, software debugging, software testing, debugging tools, software development tools, compilers, interpreters, debuggers, IDEs, Visual Studio, PyCharm, Google Colab, GitHub, source code repositories, class 11 computer MCQs, computer science short questions, computer science long questions, FBISE computer notes, Punjab board computer notes, chapter 1 computer science notes, software development exam preparation, class 11 computer solved MCQs, class 11 computer full notes" />
+
+<meta name="author" content="Salman Ahmad" />
+
+  <link rel="canonical" href="https://salmanblogs.com/10-class-computer-chap-4-control-structures-in-python" />
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+ <!-- Open Graph -->
+<meta property="og:title" content="Class 11 Computer Science Chapter 1: Software Development | SDLC, UML, Design Patterns, Testing & Tools" />
+
+<meta property="og:description" content="Complete Class 11 Computer Science Chapter 1 Notes on Software Development. Covers SDLC, requirements, design, coding, testing, deployment, maintenance, Waterfall and Agile models, project planning, risk management, QA, UML diagrams, Use Case, Class, Sequence and Activity Diagrams, Design Patterns, debugging, testing, and software development tools." />
+
+<meta property="og:image" content="https://salmanblogs.com/images/10-CS-IMAGES/chapter-4/class-10-computer-chapter-4-control-structures-in-python.webp" />
+
+<meta property="og:url" content="https://salmanblogs.com/10-class-computer-chap-4-control-structures-in-python" />
+
+<meta property="og:type" content="article" />
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:title" content="Class 11 Computer Science Chapter 1: Software Development | SDLC, UML, Design Patterns, Testing & Tools" />
+
+<meta name="twitter:description" content="Study Class 11 Computer Science Chapter 1: Software Development with complete notes on SDLC, requirements, design, coding, testing, deployment, maintenance, Waterfall and Agile models, project planning, risk management, UML diagrams, Design Patterns, debugging, testing, and software development tools." />
+
+<meta name="twitter:image" content="https://salmanblogs.com/images/10-CS-IMAGES/chapter-4/class-10-computer-chapter-4-control-structures-in-python.webp" />
+
+ <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="favicon.ico">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Class 11 Computer Science Chapter 1: Software Development",
+  "author": {
+    "@type": "Person",
+    "name": "Salman Ahmad"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Salman Blogs"
+  },
+  "description": "Complete Class 11 Computer Science Chapter 1 Notes on Software Development covering SDLC, requirements, design, coding, testing, deployment, maintenance, Waterfall and Agile models, project planning, risk management, quality assurance, UML diagrams, Use Case, Class, Sequence and Activity Diagrams, Design Patterns, debugging, software testing, and software development tools.",
+  "mainEntityOfPage": "https://salmanblogs.com/11-class-computer-chap-1-software-development"
+}
+</script>
+</head>
+<body>
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<span class="logo-first">Salman</span>
+
+<span class="logo-last">Blogs</span>
+
+</a>
+
+<nav>
+
+<div class="nav-toggle" id="navToggle">
+    &#9776;
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+<li><a href="terms.html">Terms</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="hero-badge">
+
+🔥 Introduction To Software Development
+
+</span>
+<br>
+<h1>
+
+
+<span>Chapter 1 Notes</span>
+
+</h1>
+
+<p>
+    Complete lecture notes covering Software Development, SDLC, Requirements, Design, Coding, Testing, Deployment, Maintenance, Waterfall and Agile Models, Project Planning, Risk Management, Quality Assurance, UML Diagrams, Use Case, Class, Sequence and Activity Diagrams, Design Patterns, Debugging, Software Testing, and Software Development Tools for FBISE and Punjab Board students.
+</p>
+<div class="hero-buttons">
+
+<a href="categories.html" class="btn-secondary">
+
+Browse Categories
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Introduction To Software Development</h1>
+    <div class="post-meta">Posted in <strong>11 Computer Science</strong></div>
+    <img src="images/11-CS-IMAGES/CHAPTER-1/class-11-computer-chapter-1-introduction-to-software-development.webp"
+                 alt="class-11-computer-chapter-1-introduction-to-software-development"
+                 loading="lazy">
+
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 10 Computer Science.
+
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+  <li><a href="#what-is-software">What is Software?</a></li>
+  <li><a href="#software-development">Software Development</a></li>
+  <li><a href="#software-development-life-cycle-sdlc">Software Development Life Cycle (SDLC)</a></li>
+  <li><a href="#framework-in-software-development">Framework in Software Development</a></li>
+  <li><a href="#stages-of-sdlc">Stages of SDLC</a></li>
+  <li><a href="#functional-and-non-functional-requirements">Functional and Non-Functional Requirements</a></li>
+  <li><a href="#software-development-methodologies">Software Development Methodologies</a></li>
+  <li><a href="#software-process-models">Software Process Models</a></li>
+  <li><a href="#waterfall-model">Waterfall Model</a></li>
+  <li><a href="#agile-methodology">Agile Methodology</a></li>
+  <li><a href="#project-planning-and-management">Project Planning and Management</a></li>
+  <li><a href="#risk-assessment-and-management">Risk Assessment and Management</a></li>
+  <li><a href="#uml-diagrams">Introduction to UML Diagrams</a></li>
+  <li><a href="#use-case">Use Case Diagram</a></li>
+  <li><a href="#class-diagram">Class Diagram</a></li>
+  <li><a href="#sequence-diagram">Sequence Diagram</a></li>
+  <li><a href="#activity-diagram">Activity Diagram</a></li>
+  <li><a href="#software-design-patterns">Introduction to Design Patterns</a></li>
+  <li><a href="#debugging-and-testing">Software Debugging and Testing</a></li>
+  <li><a href="#software-development-tools">Software Development Tools</a></li>
+
+  <li><a href="#mcqs">MCQs</a></li>
+  <li><a href="#test-mcqs">MCQs for Testing</a></li>
+  <li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+
+
+<div class="post-content">
+
+  <h2 id="what-is-software">What is Software?</h2>
+<p>Software is a collection of programs, instructions, and data that tells a computer or other electronic device what to do.</p>
+
+<p>Here are some common examples of software:</p>
+
+<ul>
+  <li><strong>Microsoft Windows</strong> – Runs and manages a computer.</li>
+  <li><strong>Google Chrome</strong> – Lets you browse the internet.</li>
+  <li><strong>Microsoft Word</strong> – Used to create and edit documents.</li>
+  <li><strong>Microsoft Excel</strong> – Used for calculations and data analysis.</li>
+  <li><strong>Adobe Photoshop</strong> – Used to edit photos and create graphics.</li>
+  <li><strong>VLC Media Player</strong> – Plays videos and music.</li>
+  <li><strong>WhatsApp</strong> – Used for messaging and voice and video calls.</li>
+  <li><strong>Instagram</strong> – Used to share photos and videos.</li>
+</ul>
+     
+<h2 id="software-development">Software Development</h2>
+
+<p>Software development is the process of creating computer programs or applications for different tasks. It includes planning, designing, coding, testing, and updating software to make sure it works properly and meets users' needs.</p>
+
+<p>Here are some common examples of software development:</p>
+
+<ul>
+  <li><strong>WhatsApp</strong> – Developed for messaging and voice/video calls.</li>
+  <li><strong>Microsoft Word</strong> – Developed to create and edit documents.</li>
+  <li><strong>Google Chrome</strong> – Developed to browse the internet.</li>
+  <li><strong>Instagram</strong> – Developed to share photos, videos, and messages.</li>
+  <li><strong>Adobe Photoshop</strong> – Developed to edit photos and create graphics.</li>
+</ul>
+
+<h2 id="software-development-life-cycle-sdlc">Software Development Life Cycle (SDLC)</h2>
+
+<p>Software Development Life Cycle (SDLC) is a step-by-step process used to create software from start to finish. It helps developers build software in an organized and easy way.</p>
+
+<h3>Diagram</h3>
+<img src="images/11-CS-IMAGES/CHAPTER-1/sdlc.webp" alt="sdlc" class="post-image" loading="lazy"
+style="width: 620px; margin-left: 70px;">
+
+<h3>Purpose of SDLC</h3>
+
+<ul>
+  <li>Produce high-quality software.</li>
+  <li>Complete the project on time.</li>
+  <li>Stay within the budget.</li>
+  <li>Meet the customer's requirements.</li>
+</ul>
+
+<p>Here are some common examples of SDLC:</p>
+
+<ul>
+  <li><strong>Banking App</strong> – Planned, developed, tested, and launched using SDLC.</li>
+  <li><strong>Online Shopping Website</strong> – Built step by step to make sure it works correctly.</li>
+  <li><strong>School Management System</strong> – Created using SDLC to manage students and teachers.</li>
+  <li><strong>Food Delivery App</strong> – Developed in different stages before being released to users.</li>
+</ul>
+
+<h2 id="framework-in-software-development">Framework in Software Development</h2>
+
+<p>A framework is a ready-made structure that helps developers build software faster. It provides many ready-made tools and features, so developers do not have to create everything from the beginning.</p>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+  <li><strong>Without a framework:</strong> If you want to build a house, you have to make every brick, door, and window yourself.</li>
+  <li><strong>With a framework:</strong> Many parts are already available, so you only need to put them together and finish the house.</li>
+</ul>
+
+<h2 id="stages-of-sdlc">Stages of SDLC</h2>
+
+<h3>1. Requirement Gathering</h3>
+
+<p>Requirement Gathering is the first stage of SDLC. In this stage, developers collect information about what users need and what features the software should have.</p>
+
+<h4>Activities</h4>
+
+<ul>
+  <li>
+    <strong>Interviews and Surveys:</strong> Asking questions and collecting feedback from potential users to understand their needs and preferences.
+    <br><strong>Example:</strong> Developers ask teachers and students what features they want in a student portal, such as viewing grades or attendance.
+  </li>
+
+  <li>
+    <strong>Observations:</strong> Watching how users interact with current systems to identify problems and opportunities for improvement.
+    <br><strong>Example:</strong> Developers watch teachers record attendance manually to understand how the student portal can make the process easier.
+  </li>
+
+  <li>
+    <strong>Document Review:</strong> Looking at existing documents, such as reports and user manuals, to gather additional information about the requirements.
+    <br><strong>Example:</strong> Developers review attendance records, report cards, and school forms before creating the student portal.
+  </li>
+</ul>
+
+<h2 id="functional-and-non-functional-requirements">Functional and Non-Functional Requirements</h2>
+
+<h3>Functional Requirements</h3>
+
+<p>Functional requirements describe what the system should do. They explain the features and functions the software must provide.</p>
+
+<p><strong>Example: Library Management System</strong></p>
+
+<ul>
+  <li><strong>User Registration</strong> – Students can create and log in to their accounts.</li>
+  <li><strong>Book Search</strong> – Users can search for books by title, author, or category.</li>
+  <li><strong>Book Borrowing</strong> – Users can borrow and return books.</li>
+  <li><strong>Inventory Management</strong> – Librarians can add, update, and remove books.</li>
+  <li><strong>Fine Calculation</strong> – The system automatically calculates late return fines.</li>
+</ul>
+
+<h3>Non-Functional Requirements</h3>
+
+<p>Non-functional requirements describe how well the system should work. They focus on the system's quality, speed, security, and reliability.</p>
+
+<p><strong>Example: Library Management System</strong></p>
+
+<ul>
+  <li><strong>Performance</strong> – The system should respond quickly and support many users at the same time.</li>
+  <li><strong>Reliability</strong> – The system should work properly with very little downtime.</li>
+  <li><strong>Security</strong> – The system should protect user accounts and keep data safe.</li>
+  <li><strong>Usability</strong> – The system should be simple and easy for students and librarians to use.</li>
+  <li><strong>Availability</strong> – The system should be available whenever users need it.</li>
+</ul>
+
+<h3>2. Design Phase</h3>
+
+<p>In the Design Phase, developers plan how the software will work. They design the screens, create the system structure, and decide how different parts of the software will connect.</p>
+
+<h4>Activities</h4>
+
+<ul>
+  <li>
+    <strong>Create Diagrams</strong> – Draw diagrams to show the steps or flow of the system.
+    <br><strong>Example:</strong> School Website Flow: Open Website → Log In → View Dashboard → Check Grades.
+  </li>
+
+  <li>
+    <strong>Develop Models</strong> – Design what the software screens will look like before coding.
+    <br><strong>Example:</strong> Design the Login page and Student Dashboard of the school website.
+  </li>
+
+  <li>
+    <strong>Plan Architecture</strong> – Decide how the website, server, and database will work together.
+    <br><strong>Example:</strong> A student logs in to the school website, the website sends the request to the server, and the server gets the student's data from the database.
+  </li>
+
+  <li>
+    <strong>Specify Requirements</strong> – Write a clear list of all the features the software should have.
+    <br><strong>Example:</strong> The school website should allow students to view grades, attendance, notices, and exam schedules.
+  </li>
+</ul>
+
+<h4>Result</h4>
+
+<ul>
+  <li>Organized software design</li>
+  <li>User-friendly interface</li>
+  <li>Easy to build and maintain</li>
+</ul>
+
+<h3>3. Coding / Development</h3>
+
+<p>In the Coding or Development phase, programmers write the code based on the design created in the previous phase. This is the stage where the software is built.</p>
+
+<h4>Activities</h4>
+
+<ul>
+  <li>
+    <strong>Write Code</strong> – Programmers write code to create the software features.
+    <br><strong>Example:</strong> Write code for user login, registration, and grade viewing in a student portal.
+  </li>
+
+  <li>
+    <strong>Use Programming Languages</strong> – Developers use programming languages to build the software.
+    <br><strong>Example:</strong> Use Java, Python, or C# to develop the application.
+  </li>
+
+  <li>
+    <strong>Follow the Design</strong> – Developers write code according to the design and requirements.
+    <br><strong>Example:</strong> Create the login page and dashboard as planned in the Design Phase.
+  </li>
+
+  <li>
+    <strong>Fix Coding Errors</strong> – Developers find and correct mistakes while writing the code.
+    <br><strong>Example:</strong> Fix an error that prevents users from logging in.
+  </li>
+</ul>
+
+<h4>Result</h4>
+
+<ul>
+  <li>Working software</li>
+  <li>Completed program features</li>
+  <li>Software ready for testing</li>
+</ul>
+
+<h3>4. Testing</h3>
+
+<p>Testing is the process of checking whether the software works correctly. It helps find and fix errors before the software is released to users.</p>
+
+<h4>Types of Testing</h4>
+
+<ul>
+  <li>
+    <strong>Functionality Testing</strong> – Checks whether all features of the software work as expected.
+    <br><strong>Example:</strong> Does the Login button open the user's account after entering the correct username and password?
+  </li>
+
+  <li>
+    <strong>Performance Testing</strong> – Checks whether the software works quickly and can handle many users at the same time.
+    <br><strong>Example:</strong> Can the school website handle 5,000 students logging in during exam results?
+  </li>
+
+  <li>
+    <strong>Compatibility Testing</strong> – Checks whether the software works properly on different devices, browsers, and operating systems.
+    <br><strong>Example:</strong> Does the app work correctly on Android phones, iPhones, tablets, and computers?
+  </li>
+</ul>
+
+<h4>Result</h4>
+
+<ul>
+  <li>Errors are found and fixed.</li>
+  <li>Software works correctly.</li>
+  <li>Software is ready for deployment.</li>
+</ul>
+
+<h3>5. Deployment</h3>
+
+<p>Deployment is the process of releasing the software so users can start using it. In this phase, the software is installed, configured, and checked in the real working environment.</p>
+
+<h4>Activities</h4>
+
+<ul>
+  <li>
+    <strong>Installation</strong> – Install the software on the user's computer or server.
+    <br><strong>Example:</strong> Install a school management system on the school's computers.
+  </li>
+
+  <li>
+    <strong>Configuration</strong> – Set up the software so it works correctly.
+    <br><strong>Example:</strong> Connect the school management system to its database and create user accounts.
+  </li>
+
+  <li>
+    <strong>Real-World Testing</strong> – Check whether the software works properly in the actual working environment.
+    <br><strong>Example:</strong> Use the school management system in the school to make sure students, teachers, and staff can use it without problems.
+  </li>
+</ul>
+
+<h4>Result</h4>
+
+<ul>
+  <li>Software is installed.</li>
+  <li>Software is ready for users.</li>
+  <li>Software works correctly in the real environment.</li>
+</ul>
+
+<h3>6. Maintenance</h3>
+
+<p>Maintenance is the final stage of SDLC. It takes place after the software is released. In this phase, developers fix problems, improve the software, and add new features when needed.</p>
+
+<h4>Activities</h4>
+
+<ul>
+  <li>
+    <strong>Fix Bugs</strong> – Correct errors found after the software is released.
+    <br><strong>Example:</strong> Fix a login problem that prevents users from signing in.
+  </li>
+
+  <li>
+    <strong>Improve Performance</strong> – Make the software faster and more efficient.
+    <br><strong>Example:</strong> Reduce the time it takes to open the dashboard.
+  </li>
+
+  <li>
+    <strong>Add New Features</strong> – Add new functions based on user needs.
+    <br><strong>Example:</strong> Add an online fee payment feature to the school management system.
+  </li>
+</ul>
+
+<h4>Result</h4>
+<ul>
+  <li>Software errors are fixed.</li>
+  <li>Software performance is improved.</li>
+  <li>New features are added.</li>
+</ul>
+
+<h2 id="software-development-methodologies">Software Development Methodologies</h2>
+
+<p>Software Development Methodologies are different approaches used to plan, organize, and manage software development projects. They help development teams complete projects in a structured and efficient way.</p>
+
+<h3>Why are Software Development Methodologies Important?</h3>
+
+<p>Software development methodologies provide many benefits, such as:</p>
+
+<ul>
+  <li><strong>Better Planning</strong> </li>
+  <li><strong>Better Teamwork</strong></li>
+  <li><strong>Better Quality</strong></li>
+</ul>
+
+<h2 id="software-process-models">Software Process Models</h2>
+
+<p>A Software Process Model is a step-by-step framework or roadmap that guides the software development process from the beginning until the software is completed and maintained.</p>
+
+<h3>Benefits of Software Process Models</h3>
+
+<p>Software Process Models provide many benefits, such as:</p>
+
+<ul>
+  <li>1
+    <strong>Predictability:</strong> The development process becomes more organized because the team knows what to do next at every stage. So, the team manages risks more effectively.
+    <br><strong>Example:</strong> After gathering requirements, the next step is designing the software instead of randomly starting coding.
+  </li>
+
+  <li>
+    <strong>Efficiency:</strong> A proper process reduces unnecessary work, saves time, and makes better use of available resources.
+    <br><strong>Example:</strong> Finding and fixing design mistakes early is much easier than correcting them after the software is completed.
+  </li>
+
+  <li>
+  <strong>Quality:</strong> Following a process model ensures that quality is maintained throughout the SDLC.
+  <br><strong>Example:</strong> Every feature is tested before the software is released, resulting in fewer bugs.
+</li>
+</ul>
+
+<h2 id="waterfall-model">Waterfall Model</h2>
+
+<p>The Waterfall Model is one of the simplest software development models. It is a linear (step-by-step) process where each phase must be completed before moving to the next phase. Once a phase is finished, it is usually not revisited.</p>
+
+<h3>Flow of the Waterfall Model</h3>
+
+<p><strong>Requirements → Design → Coding → Testing → Deployment → Maintenance</strong></p>
+
+<ul>
+  <li><strong>Requirements:</strong> Gather and analyze customer needs, project goals, and system requirements before development begins.</li>
+
+  <li><strong>Design:</strong> Create the software architecture, database, user interface, and overall system design based on the requirements.</li>
+
+  <li><strong>Coding:</strong> Developers write the source code and build the software according to the approved design.</li>
+
+  <li><strong>Testing:</strong> Test the software to identify and fix errors, ensuring it works correctly and meets all requirements.</li>
+
+  <li><strong>Deployment:</strong> Release and install the software in the user's environment so it can be used.</li>
+
+  <li><strong>Maintenance:</strong> Fix bugs, resolve issues, and provide support after the software has been deployed.</li>
+</ul>
+
+<h3 id="waterfall-model-example">Example</h3>
+
+<p>A company wants to develop a simple payroll system where all requirements are already known and are unlikely to change. Since the project is straightforward, the Waterfall Model is a good choice.</p>
+
+<h3>Advantages of the Waterfall Model</h3>
+
+<ul>
+  <li>
+    <strong>Simple and Easy to Understand:</strong> The Waterfall Model follows a step-by-step process, making it easy for developers and managers to understand.
+  </li>
+
+  <li>
+    <strong>Easy to Plan and Manage:</strong> Each phase has a fixed schedule and deliverables, making project planning and management easier.
+  </li>
+
+  <li>
+    <strong>Suitable for Small Projects with Clear Requirements:</strong> It works best when the project requirements are fixed and are not expected to change.
+  </li>
+
+  <li>
+    <strong>Clear Phases and Documentation:</strong> Each phase has a specific goal and proper documentation, making the development process organized.
+  </li>
+</ul>
+
+<h3>Disadvantages of the Waterfall Model</h3>
+
+<ul>
+  <li>
+    <strong>Inflexibility(Difficult to Make Changes):</strong> Once a phase is completed, making changes is difficult, time-consuming, and expensive.
+  </li>
+
+  <li>
+    <strong>Not Suitable for Large or Complex Projects:</strong> It is not a good choice for projects where requirements frequently change or are not fully known.
+  </li>
+
+  <li>
+  <strong>Risk and Uncertainty:</strong> The model assumes all requirements are known from the start, which can be risky if new requirements arise later.
+</li>
+</ul>
+
+
+<h2 id="agile-methodology">Agile Methodology</h2>
+
+<p>Agile Methodology is a software development approach in which software is built in small parts called <strong>sprints or iterations</strong>. After each sprint, customers give feedback, and improvements are made before the next sprint.</p>
+
+<h3>Example</h3>
+
+<p>While developing an online shopping app:</p>
+
+<ul>
+  <li><strong>Sprint 1:</strong> Login feature</li>
+  <li><strong>Sprint 2:</strong> Product search</li>
+  <li><strong>Sprint 3:</strong> Payment system</li>
+</ul>
+
+<p>After each sprint, users test the feature and provide feedback.</p>
+
+<h3>Flow of Agile Methodology</h3>
+
+<p><strong>Requirements → Design → Development → Testing → Deployment → Review → Next Sprint</strong></p>
+
+<strong><p>In Agile, these steps are repeated in every sprint until the complete software is finished.</p> </strong>
+
+<h3>Agile Practices</h3>
+
+<ul>
+  <li>
+    <strong>Continuous Integration (CI):</strong> Developers combine and test code frequently to find and fix errors early.
+    <br><strong>Example:</strong> Team members merge their code every day to ensure everything works correctly.
+  </li>
+
+  <li>
+    <strong>Test-Driven Development (TDD):</strong> Developers write tests before writing the actual code.
+    <br><strong>Example:</strong> Before creating a login feature, tests are written to check valid and invalid login attempts.
+  </li>
+
+  <li>
+    <strong>Pair Programming:</strong> Two developers work together on the same code. One writes the code while the other reviews it and suggests improvements.
+  </li>
+</ul>
+
+<h3>Advantages of Agile Methodology</h3>
+
+<ul>
+  <li>
+    <strong>High Flexibility:</strong> Changes can be made easily during development if customer requirements change.
+  </li>
+
+  <li>
+    <strong>Improved Customer Satisfaction:</strong> Customers give feedback after each sprint, helping the team build software that meets their needs.
+  </li>
+
+  <li>
+    <strong>Early Bug Detection:</strong> Problems are found and fixed early through regular testing.
+  </li>
+
+  <li>
+    <strong>Faster Delivery:</strong> Working features are completed and delivered in small parts instead of waiting for the whole project.
+  </li>
+</ul>
+
+<h3>Disadvantages of Agile Methodology</h3>
+
+<ul>
+  <li>
+    <strong>Scaling Challenges:</strong> Managing large projects with multiple teams can be difficult because it requires effective coordination, communication, and planning.
+  </li>
+
+  <li>
+    <strong>Stakeholder Involvement:</strong> Agile requires active participation from customers and stakeholders throughout the project. If they do not provide regular feedback, development can be affected.
+  </li>
+
+  <li>
+    <strong>Less Predictable:</strong> Continuous changes based on feedback make it harder to accurately predict the project's timeline, cost, and final scope.
+  </li>
+</ul>
+
+<h2 id="project-planning-and-management">Project Planning and Management</h2>
+
+<p>Project planning is the process of organizing a project before development begins. It helps the team decide:</p>
+
+<ul>
+  <li>What work needs to be done.</li>
+  <li>Who will do each task.</li>
+  <li>When each task should be completed.</li>
+  <li>How much the project will cost.</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>Planning a wedding before the event by deciding the budget, assigning responsibilities, and creating a schedule.</p>
+
+<h3>Setting Project Timelines</h3>
+
+<p>A project timeline is a schedule that shows how long each task will take. It helps the team complete the project on time.</p>
+
+<h4>Example</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Design</td>
+      <td>1 Week</td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>4 Weeks</td>
+    </tr>
+    <tr>
+      <td>Testing</td>
+      <td>2 Weeks</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Estimating Costs</h3>
+
+<p>Cost estimation is the process of calculating the total cost of developing a software project.</p>
+
+<h3>Factors Affecting Cost</h3>
+
+<ul>
+  <li>
+    <strong>Development Team:</strong> Experienced developers usually charge higher salaries, so the project cost increases.
+  </li>
+
+  <li>
+  <strong>Technology Stack:</strong> Different technologies have different development costs.
+  <br><strong>Example:</strong> A web application built with modern frameworks like React and Node.js may cost more than a simple HTML website.
+</li>
+
+  <li>
+    <strong>Project Duration:</strong> Projects that take more time usually cost more because developers work for a longer period.
+  </li>
+
+  <li>
+    <strong>Risk Management:</strong> A small extra budget is kept to handle unexpected problems or changes during the project.
+  </li>
+
+  <li>
+    <strong>Quality Assurance:</strong> Testing and quality checks increase the project cost, but they help produce high-quality, error-free software.
+  </li>
+</ul>
+
+<h2 id="risk-assessment-and-management">Risk Assessment and Management</h2>
+
+<p>Risk is anything that could cause problems or delays in a software project.</p>
+
+<h3>Step 1: Identify Risks</h3>
+
+<p>Find possible risks that may affect the project.</p>
+
+<p><strong>Examples:</strong></p>
+
+<ul>
+  <li>A developer leaves the project.</li>
+  <li>The technology being used becomes outdated.</li>
+</ul>
+
+<h3>Step 2: Analyze Risks</h3>
+
+<p>Evaluate each risk by determining:</p>
+
+<ul>
+  <li><strong>Chance of Occurrence:</strong> How likely is the risk to happen?</li>
+  <li><strong>Impact:</strong> How much will it affect the project if it happens?</li>
+</ul>
+
+<h3>Step 3: Risk Mitigation</h3>
+
+<p>Prepare backup plans to reduce the impact of risks.</p>
+
+<h4>Example</h4>
+
+<p>Hire or train backup developers so the project can continue if a team member leaves.</p>
+
+<h3>Step 4: Monitor Risks</h3>
+
+<p>Regularly check for risks throughout the project and take action if new risks appear.</p>
+
+<h2>Execution</h2>
+
+<p>Execution is the phase where the actual development work takes place according to the project plan.</p>
+
+<h3>Activities</h3>
+
+<ul>
+  <li>Coding</li>
+  <li>Designing</li>
+  <li>Building features</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>Developers write code and build an online shopping system.</p>
+
+<h2>Quality Assurance (QA)</h2>
+
+<p>Quality Assurance (QA) is the process of ensuring that the software is high quality, reliable, and free from major errors before it is released.</p>
+
+<h3>Methods</h3>
+
+<ul>
+  <li>
+    <strong>Testing:</strong> Check whether the software works correctly.
+  </li>
+
+  <li>
+    <strong>Code Reviews:</strong> Team members review each other's code to find mistakes and improve quality.
+  </li>
+
+  <li>
+    <strong>User Feedback:</strong> Collect feedback from users to identify issues and make improvements.
+  </li>
+</ul>
+
+<h3>Example</h3>
+
+<p>Testing every feature of an online shopping system to ensure it works correctly before releasing it to users.</p>
+
+<h1>Graphical Representation of a Software System</h1>
+
+<h2 id="uml-diagrams">Introduction to UML Diagrams</h2>
+
+<p>
+  <strong>UML</strong> stands for <strong>Unified Modeling Language</strong>.
+</p>
+
+<p>
+  UML is a <strong>standard visual language used to represent and design
+  software systems using diagrams</strong>. Instead of explaining a software
+  system only through long written descriptions or code, UML allows developers
+  to <strong>show the structure, behavior, and interactions of a system
+  graphically</strong>.
+</p>
+
+<h3>Why is UML Useful?</h3>
+
+<p>
+  UML helps software developers, designers, testers, and customers to have a
+  <strong>common visual understanding of the software system</strong>.
+</p>
+
+
+<h2>Types of UML Diagrams</h2>
+
+<p>
+  UML provides different types of diagrams to represent different aspects of
+  a software system.
+</p>
+
+<p>
+  The diagrams are generally divided into two major categories:
+</p>
+
+<h2>1. Structural Diagrams</h2>
+
+<p>
+  <strong>Structural diagrams</strong> show the
+  <strong>static structure</strong> of a software system.
+</p>
+
+<p>They describe things such as:</p>
+
+<ul>
+  <li><strong>Classes</strong></li>
+  <li><strong>Objects</strong></li>
+  <li><strong>Components</strong></li>
+  <li><strong>Relationships between different parts of a system</strong></li>
+</ul>
+
+<h3>Examples</h3>
+
+<ul>
+  <li><strong>Class Diagram</strong></li>
+  <li><strong>Object Diagram</strong></li>
+  <li><strong>Component Diagram</strong></li>
+  <li><strong>Deployment Diagram</strong></li>
+</ul>
+
+
+<h2>2. Behavioral Diagrams</h2>
+
+<p>
+  <strong>Behavioral diagrams</strong> show
+  <strong>how a software system behaves and how users or different parts of
+  the system interact with it</strong>.
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+  <li><strong>Use Case Diagram</strong></li>
+  <li><strong>Activity Diagram</strong></li>
+  <li><strong>Sequence Diagram</strong></li>
+  <li><strong>State Machine Diagram</strong></li>
+</ul>
+
+
+<h1 id="use-case">Use Case Diagram</h1>
+
+<h2>Definition</h2>
+
+<p>
+  A <strong>Use Case Diagram</strong> is a UML diagram that shows
+  <strong>how users or external systems interact with a software
+  system</strong>.
+</p>
+
+<p>It focuses on two main questions:</p>
+
+<ul>
+  <li><strong>Who</strong> uses the system?</li>
+  <li><strong>What</strong> can they do with the system?</li>
+</ul>
+
+
+<h3>Simple Example</h3>
+
+<p>
+  Consider an <strong>Online Banking System</strong>.
+</p>
+
+<p>A customer may:</p>
+
+<ul>
+  <li><strong>Log in</strong></li>
+  <li><strong>Check account balance</strong></li>
+  <li><strong>Transfer money</strong></li>
+  <li><strong>Withdraw money</strong></li>
+  <li><strong>View transaction history</strong></li>
+</ul>
+
+<p>
+  A Use Case Diagram can visually show the
+  <strong>Customer</strong> and the functions they can perform.
+</p>
+
+
+<h1>Main Elements of a Use Case Diagram</h1>
+
+<p>
+  A Use Case Diagram mainly contains the following elements:
+</p>
+
+<h2>1. Actor</h2>
+
+<p>
+  An <strong>actor</strong> is a person, organization, device, or another
+  system that <strong>interacts with the software</strong>.
+</p>
+
+<p>
+  An actor is usually represented by a <strong>stick figure</strong>.
+</p>
+
+<h3>Example</h3>
+
+<p>For an online shopping system:</p>
+
+<ul>
+  <li><strong>Customer</strong></li>
+  <li><strong>Administrator</strong></li>
+  <li><strong>Payment System</strong></li>
+</ul>
+
+<p>can be actors.</p>
+
+
+<h2>2. Use Case</h2>
+
+<p>
+  A <strong>use case</strong> represents a
+  <strong>function or service provided by the system</strong>.
+</p>
+
+<p>
+  It is usually represented by an <strong>oval</strong>.
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+  <li><strong>Login</strong></li>
+  <li><strong>Search Product</strong></li>
+  <li><strong>Add to Cart</strong></li>
+  <li><strong>Place Order</strong></li>
+  <li><strong>Make Payment</strong></li>
+</ul>
+
+
+<h2>3. System Boundary</h2>
+
+<p>
+  The <strong>system boundary</strong> is a rectangle that represents the
+  <strong>software system</strong>.
+</p>
+
+<p>
+  The use cases are placed <strong>inside</strong> the rectangle, while
+  actors are usually placed <strong>outside</strong> it.
+</p>
+
+
+<h2>4. Relationship</h2>
+
+<p>
+  Lines are used to show the <strong>interaction or relationship</strong>
+  between an actor and a use case.
+</p>
+
+<h3>Example</h3>
+
+<p>
+  <strong>Customer → Place Order</strong>
+</p>
+
+<p>
+  This means that the customer can use the
+  <strong>Place Order</strong> function.
+</p>
+
+
+<h1>Purpose of Use Case Diagrams</h1>
+
+<p>
+  Use Case Diagrams are mainly used for the following purposes:
+</p>
+
+<h2>1. Capturing Functional Requirements</h2>
+
+<p>
+  A Use Case Diagram helps identify and document the
+  <strong>functional requirements</strong> of a software system.
+</p>
+
+<p>
+  Functional requirements describe <strong>what the system should do</strong>.
+</p>
+
+<h3>Example</h3>
+
+<p>
+  For an <strong>online shopping system</strong>, functional requirements
+  may include:
+</p>
+
+<ul>
+  <li><strong>Customer can register.</strong></li>
+  <li><strong>Customer can log in.</strong></li>
+  <li><strong>Customer can search for products.</strong></li>
+  <li><strong>Customer can add products to the cart.</strong></li>
+  <li><strong>Customer can place an order.</strong></li>
+</ul>
+
+<p>
+  These functions can be represented as <strong>use cases</strong>.
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>In simple words:</strong> A Use Case Diagram helps us identify
+  <strong>what functions the software must provide</strong>.
+</div>
+
+
+<h2>2. Understanding User Interactions</h2>
+
+<p>
+  Use Case Diagrams help us understand
+  <strong>how different users interact with the system</strong>.
+</p>
+
+<h3>Example</h3>
+
+<p>In a <strong>School Management System</strong>:</p>
+
+<p><strong>Teacher</strong> may:</p>
+
+<ul>
+  <li><strong>Enter marks</strong></li>
+  <li><strong>View student records</strong></li>
+  <li><strong>Generate results</strong></li>
+</ul>
+
+<p><strong>Student</strong> may:</p>
+
+<ul>
+  <li><strong>View marks</strong></li>
+  <li><strong>View attendance</strong></li>
+  <li><strong>Download results</strong></li>
+</ul>
+
+<p>
+  The diagram clearly shows
+  <strong>which user can perform which function</strong>.
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>In simple words:</strong> It tells us
+  <strong>who interacts with the system and what they can do</strong>.
+</div>
+
+
+<h2>3. Planning and Testing</h2>
+
+<p>
+  Use Case Diagrams are also useful during
+  <strong>software planning and testing</strong>.
+</p>
+
+<p>
+  Before developing the software, developers can use the diagram to identify
+  the required features.
+</p>
+
+<p>
+  Later, testers can use the same use cases to create
+  <strong>test cases</strong>.
+</p>
+
+<h3>Example</h3>
+
+<p>
+  Suppose the system has a use case:
+  <strong>Login</strong>
+</p>
+
+<p>A tester can create tests such as:</p>
+
+<ul>
+  <li><strong>Test login with correct username and password.</strong></li>
+  <li><strong>Test login with an incorrect password.</strong></li>
+  <li><strong>Test login with an empty username.</strong></li>
+  <li><strong>Test login with an empty password.</strong></li>
+</ul>
+
+<p>
+  Therefore, Use Case Diagrams help ensure that the required functions of the
+  system are properly <strong>planned and tested</strong>.
+</p>
+
+
+<h1>Example 1: School Management System</h1>
+    <img src="images/11-CS-IMAGES/CHAPTER-1/school-management-system-use-case-diagram.png"
+     alt="school-management-system-use-case-diagram"
+     loading="lazy"
+     style="height: 400px; display: block; margin: 0 auto;">
+
+<p>
+  There are <strong>two actors</strong>:
+</p>
+
+<h2>1. Student</h2>
+
+<p>The student can:</p>
+
+<ul>
+  <li><strong>View Result</strong></li>
+  <li><strong>View Attendance</strong></li>
+  <li><strong>View Timetable</strong></li>
+</ul>
+
+<h2>2. Teacher</h2>
+
+<p>The teacher can:</p>
+
+<ul>
+  <li><strong>Enter Marks</strong></li>
+  <li><strong>Mark Attendance</strong></li>
+  <li><strong>View Student Records</strong></li>
+</ul>
+
+
+<h1>Example 2: Library Management System</h1>
+
+    <img src="images/11-CS-IMAGES/CHAPTER-1/library-management-system-use-case-diagram.png"
+     alt="library-management-system-use-case-diagram"
+     loading="lazy"
+     style="height: 400px; display: block; margin: 0 auto;">
+
+<p>
+  There are <strong>two actors</strong>:
+</p>
+
+<h2>1. Student</h2>
+
+<p>The student can:</p>
+
+<ul>
+  <li><strong>Search Book</strong></li>
+  <li><strong>Borrow Book</strong></li>
+  <li><strong>Return Book</strong></li>
+</ul>
+
+<h2>2. Librarian</h2>
+
+<p>The librarian can:</p>
+
+<ul>
+  <li><strong>Search Book</strong></li>
+  <li><strong>Add Book</strong></li>
+  <li><strong>Remove Book</strong></li>
+</ul>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>In simple words:</strong> A Use Case Diagram shows
+  <strong>who uses the system</strong> and
+  <strong>what functions they can perform</strong>. Actors are outside the
+  system boundary, while use cases are inside it.
+</div>
+
+<h1>Identifying Use Cases</h1>
+
+<p>
+  <strong>Use cases</strong> describe the different functions or tasks that
+  users can perform using a <strong>software system</strong>.
+</p>
+
+<p>
+  Before creating a <strong>Use Case Diagram</strong>, we can follow these
+  <strong>four steps</strong>:
+</p>
+
+<ol>
+  <li><strong>Identify Actors</strong></li>
+  <li><strong>Define Goals</strong></li>
+  <li><strong>Outline Interactions</strong></li>
+  <li><strong>Validate Use Cases</strong></li>
+</ol>
+
+<h2>Four Steps for Identifying Use Cases</h2>
+
+<table class="conversion-table">
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th>What We Do</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><strong>1. Identify Actors</strong></td>
+      <td>
+        Find who interacts with the system. Actors can be
+        <strong>users, devices, or other systems</strong> that interact with
+        the software.
+      </td>
+      <td>
+        <strong>Student, Librarian</strong>
+      </td>
+    </tr>
+
+    <tr>
+      <td><strong>2. Define Goals</strong></td>
+      <td>
+        Find what each actor wants to <strong>achieve</strong> by using the
+        system. These goals help us identify the main use cases.
+      </td>
+      <td>
+        <strong>Borrow Book, Add Book</strong>
+      </td>
+    </tr>
+
+    <tr>
+      <td><strong>3. Outline Interactions</strong></td>
+      <td>
+        Determine how actors <strong>interact with the system</strong> to
+        achieve their goals. Identify the main actions performed by the actor.
+      </td>
+      <td>
+        <strong>Student → Borrow Book → System</strong>
+      </td>
+    </tr>
+
+    <tr>
+      <td><strong>4. Validate Use Cases</strong></td>
+      <td>
+        Check that use cases are <strong>correct, clear, and complete</strong>.
+        Make sure all important actors and functions have been included.
+      </td>
+      <td>
+        Make sure all important functions are included.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Example: Library Management System</h2>
+
+<p>
+  Let's identify the use cases of a <strong>Library Management System</strong>
+  using the four steps.
+</p>
+
+<h3>Step 1: Identify Actors</h3>
+
+<p>
+  First, identify the people or systems that interact with the library
+  management system.
+</p>
+
+<ul>
+  <li><strong>Student</strong></li>
+  <li><strong>Librarian</strong></li>
+</ul>
+
+<h3>Step 2: Define Goals</h3>
+
+<p>
+  Next, identify what each actor wants to achieve.
+</p>
+
+<ul>
+  <li>
+    <strong>Student:</strong> Search Book, Borrow Book, Return Book
+  </li>
+  <li>
+    <strong>Librarian:</strong> Add Book, Remove Book, Search Book
+  </li>
+</ul>
+
+<h3>Step 3: Outline Interactions</h3>
+
+<p>
+  Now determine how each actor interacts with the system.
+</p>
+
+<ul>
+  <li>
+    <strong>Student → Search Book → System</strong>
+  </li>
+  <li>
+    <strong>Student → Borrow Book → System</strong>
+  </li>
+  <li>
+    <strong>Student → Return Book → System</strong>
+  </li>
+  <li>
+    <strong>Librarian → Add Book → System</strong>
+  </li>
+  <li>
+    <strong>Librarian → Remove Book → System</strong>
+  </li>
+  <li>
+    <strong>Librarian → Search Book → System</strong>
+  </li>
+</ul>
+
+<h3>Step 4: Validate Use Cases</h3>
+
+<p>
+  Finally, check whether all important actors and functions have been
+  included.
+</p>
+
+<p>
+  For example, we should make sure that the system includes important
+  functions such as <strong>borrowing, returning, adding, and removing
+  books</strong>.
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> Identifying use cases helps us understand
+  <strong>who uses the system, what they want to achieve, and how they
+  interact with the system</strong> before creating the Use Case Diagram.
+</div>
+
+
+<h1 id="class-diagram">Class Diagram</h1>
+
+<h2>Introduction</h2>
+
+<p>
+  A <strong>Class Diagram</strong> is a type of <strong>UML diagram</strong>
+  used to show the <strong>structure of a software system</strong>.
+</p>
+
+<p>It represents the different <strong>classes</strong> in a system and shows their:</p>
+
+<ul>
+  <li><strong>Attributes</strong> (data or properties)</li>
+  <li><strong>Methods</strong> (functions or actions)</li>
+  <li><strong>Relationships</strong> with other classes</li>
+</ul>
+
+<h2>Basic Structure of a Class Diagram</h2>
+
+<p>
+  A class is usually represented by a <strong>rectangle divided into three
+  sections</strong>:
+</p>
+
+<pre><code>
+┌──────────────────────┐
+│        Book          │
+├──────────────────────┤
+│ - bookID             │
+│ - bookName           │
+│ - author             │
+├──────────────────────┤
+│ + issueBook()        │
+│ + returnBook()       │
+└──────────────────────┘
+</code></pre>
+
+<h2>1. Class Name</h2>
+
+<p>
+  The <strong>top section</strong> contains the name of the class.
+</p>
+
+<p>
+  Example:
+</p>
+
+<p>
+  <strong>Book</strong>
+</p>
+
+<h2>2. Attributes</h2>
+
+<p>
+  The <strong>middle section</strong> contains the attributes of the class.
+</p>
+
+<p>
+  Attributes describe the <strong>data or properties</strong> of an object.
+</p>
+
+<p>Example:</p>
+
+<ul>
+  <li><code>bookID</code></li>
+  <li><code>bookName</code></li>
+  <li><code>author</code></li>
+</ul>
+
+<h2>3. Methods</h2>
+
+<p>
+  The <strong>bottom section</strong> contains the methods.
+</p>
+
+<p>
+  Methods describe the <strong>actions or functions</strong> that an object
+  can perform.
+</p>
+
+<p>Example:</p>
+
+<ul>
+  <li><code>issueBook()</code></li>
+  <li><code>returnBook()</code></li>
+</ul>
+
+<img src="images/11-CS-IMAGES/CHAPTER-1/library-management-system-class-diagram.webp"
+        style="width: 100%; max-width: 600px; height: auto;"
+        alt="library-management-system-class-diagram" class="post-image" loading="lazy"/>
+
+<h1>Class Diagram – Library Management System</h1>
+
+<p>
+  Let's use a <strong>Library Management System</strong> with
+  <strong>4 classes</strong>. This makes it easier to understand how
+  different classes are connected.
+</p>
+
+<h2>1. Student</h2>
+
+<p>
+  The <strong>Student</strong> class represents students who use the library.
+</p>
+
+<h3>Attributes</h3>
+
+<ul>
+  <li><code>studentID</code></li>
+  <li><code>studentName</code></li>
+  <li><code>email</code></li>
+</ul>
+
+<h3>Methods</h3>
+
+<ul>
+  <li><code>searchBook()</code></li>
+  <li><code>borrowBook()</code></li>
+  <li><code>returnBook()</code></li>
+</ul>
+
+
+<h2>2. Librarian</h2>
+
+<p>
+  The <strong>Librarian</strong> class represents the person who manages the library.
+</p>
+
+<h3>Attributes</h3>
+
+<ul>
+  <li><code>librarianID</code></li>
+  <li><code>librarianName</code></li>
+  <li><code>email</code></li>
+</ul>
+
+<h3>Methods</h3>
+
+<ul>
+  <li><code>searchBook()</code></li>
+  <li><code>addBook()</code></li>
+  <li><code>removeBook()</code></li>
+</ul>
+
+
+<h2>3. Book</h2>
+
+<p>
+  The <strong>Book</strong> class represents the books available in the library.
+</p>
+
+<h3>Attributes</h3>
+
+<ul>
+  <li><code>bookID</code></li>
+  <li><code>bookName</code></li>
+  <li><code>author</code></li>
+  <li><code>status</code></li>
+</ul>
+
+<h3>Methods</h3>
+
+<ul>
+  <li><code>getDetails()</code></li>
+  <li><code>checkAvailability()</code></li>
+</ul>
+
+
+<h2>4. Library</h2>
+
+<p>
+  The <strong>Library</strong> class represents the library that contains and manages the books.
+</p>
+
+<h3>Attributes</h3>
+
+<ul>
+  <li><code>libraryID</code></li>
+  <li><code>libraryName</code></li>
+  <li><code>address</code></li>
+</ul>
+
+<h3>Methods</h3>
+
+<ul>
+  <li><code>addBook()</code></li>
+  <li><code>removeBook()</code></li>
+  <li><code>findBook()</code></li>
+</ul>
+
+<h1 id="sequence-diagram">Sequence Diagram</h1>
+
+<h2>Introduction</h2>
+
+<p>
+  A <strong>Sequence Diagram</strong> is a type of <strong>UML diagram</strong>
+  that shows how different <strong>actors, objects, or systems interact with
+  each other in a particular sequence</strong>.
+</p>
+
+<p>
+  It focuses on <strong>what happens first, what happens next, and what happens
+  after that</strong>.
+</p>
+
+<h3>Simple Definition</h3>
+
+<blockquote>
+  <strong>A Sequence Diagram shows the sequence of interactions between
+  different participants over time.</strong>
+</blockquote>
+
+
+<h2>Simple Example</h2>
+
+<p>
+  Let's use the <strong>Library Management System</strong>.
+</p>
+
+<p>
+  Suppose a <strong>Student wants to borrow a book</strong>.
+</p>
+
+<p>The interaction may happen like this:</p>
+
+<ol>
+  <li>Student searches for a book.</li>
+  <li>System checks the book.</li>
+  <li>System shows the book's availability.</li>
+  <li>Student requests to borrow the book.</li>
+  <li>System records the borrowing.</li>
+  <li>System confirms the borrowing to the student.</li>
+</ol>
+
+<p>So the sequence is:</p>
+
+<p>
+  <strong>Student → Library System → Book → Library System → Student</strong>
+</p>
+
+
+<h2>Main Elements of a Sequence Diagram</h2>
+
+<h3>1. Actor</h3>
+
+<p>
+  An <strong>actor</strong> is the person or external system that interacts with
+  the system.
+</p>
+
+<p>
+  <strong>Example:</strong> Student
+</p>
+
+
+<h3>2. Object/System</h3>
+
+<p>
+  An <strong>object</strong> represents a part of the software that participates
+  in the interaction.
+</p>
+
+<p>
+  <strong>Example:</strong> Library System
+</p>
+
+
+<h3>3. Lifeline</h3>
+
+<p>
+  A <strong>lifeline</strong> shows the existence of an actor or object during
+  the interaction.
+</p>
+
+<p>
+  It is usually represented by a <strong>vertical dashed line</strong>.
+</p>
+
+
+<h3>4. Message</h3>
+
+<p>
+  A <strong>message</strong> represents an interaction or request sent from one
+  participant to another.
+</p>
+
+<p>
+  <strong>Example:</strong> Student → Search Book
+</p>
+
+
+<h3>5. Sequence</h3>
+
+<p>
+  The messages are arranged from <strong>top to bottom</strong>, showing the
+  order in which events occur.
+</p>
+
+
+<h1>Example: Borrowing a Book</h1>
+
+<pre><code>
+Student             Library System             Book
+   │                       │                    │
+   │── Search Book ───────>│                    │
+   │                       │── Check Book ─────>│
+   │                       │<── Availability ───│
+   │<── Show Availability ─│                    │
+   │                       │                    │
+   │── Borrow Book ───────>│                    │
+   │                       │── Update Status ──>│
+   │                       │<── Updated ────────│
+   │<── Borrow Confirmed ──│                    │
+   │                       │                    │
+</code></pre>
+
+
+<h2>How to Understand the Diagram</h2>
+
+<p>
+  The diagram is read <strong>from top to bottom</strong>.
+</p>
+
+<ol>
+  <li>
+    <strong>First:</strong> Student searches for a book.
+  </li>
+  <li>
+    <strong>Second:</strong> Library System checks the book.
+  </li>
+  <li>
+    <strong>Third:</strong> Book provides its availability.
+  </li>
+  <li>
+    <strong>Fourth:</strong> Student requests to borrow the book.
+  </li>
+  <li>
+    <strong>Fifth:</strong> Library System updates the book status.
+  </li>
+  <li>
+    <strong>Finally:</strong> The system confirms that the book has been
+    borrowed.
+  </li>
+</ol>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> A Sequence Diagram mainly focuses on the
+  <strong>order and timing of interactions</strong> between participants.
+  Always read the messages from <strong>top to bottom</strong> to understand
+  the sequence of events.
+</div>
+
+<h1 id="activity-diagram">Activity Diagram</h1>
+
+<h2>Introduction</h2>
+
+<p>
+  An <strong>Activity Diagram</strong> is a type of <strong>UML diagram</strong>
+  used to show the <strong>flow of activities or steps in a process</strong>.
+</p>
+
+<p>
+  It shows <strong>what happens first, what happens next, and where decisions
+  are made</strong> during a process.
+</p>
+
+<h3>Simple Definition</h3>
+
+<blockquote>
+  <strong>An Activity Diagram is a graphical representation of the workflow of
+  a system or process.</strong>
+</blockquote>
+
+
+<h2>Example: Borrowing a Book</h2>
+
+<p>
+  Let's use the <strong>Library Management System</strong>.
+</p>
+
+<p>
+  Suppose a student wants to borrow a book. The process can be:
+</p>
+
+<img src="images/11-CS-IMAGES/CHAPTER-1/library-management-system-activity-diagram.png"
+     alt="library-management-system-activity-diagram"
+     style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"
+     class="post-image"
+     loading="lazy" />
+
+<ol>
+  <li>Student searches for a book.</li>
+  <li>System checks whether the book is available.</li>
+  <li>If the book is available, the student borrows it.</li>
+  <li>System updates the book status.</li>
+  <li>If the book is not available, the system shows a message.</li>
+  <li>The process ends.</li>
+</ol>
+
+<h1>Main Elements of an Activity Diagram</h1>
+
+<h3>1. Initial Node</h3>
+
+<p>
+  It shows <strong>where the process starts</strong>.
+</p>
+
+<p>
+  It is usually represented by a <strong>filled black circle</strong>.
+</p>
+
+<p>
+  <strong>Example:</strong>
+</p>
+
+<p>
+  <strong>● Start</strong>
+</p>
+
+
+<h3>2. Activity</h3>
+
+<p>
+  An activity represents a <strong>task or action</strong> performed during
+  the process.
+</p>
+
+<p><strong>Examples:</strong></p>
+
+<ul>
+  <li>Search Book</li>
+  <li>Check Availability</li>
+  <li>Borrow Book</li>
+  <li>Update Book Status</li>
+</ul>
+
+<p>
+  Activities are usually represented by <strong>rounded rectangles</strong>.
+</p>
+
+
+<h3>3. Decision</h3>
+
+<p>
+  A decision is used when the system needs to
+  <strong>choose between different paths</strong> based on a condition.
+</p>
+
+<p>
+  It is usually represented by a <strong>diamond shape</strong>.
+</p>
+
+<h3>Example</h3>
+
+<p>
+  <strong>Is Book Available?</strong>
+</p>
+
+<ul>
+  <li><strong>Yes →</strong> Borrow Book</li>
+  <li><strong>No →</strong> Show "Not Available"</li>
+</ul>
+
+
+<h3>4. Arrow</h3>
+
+<p>
+  An arrow shows the <strong>flow from one activity to the next</strong>.
+</p>
+
+<p>
+  <strong>Example:</strong>
+</p>
+
+<p>
+  <strong>Search Book → Check Availability</strong>
+</p>
+
+<p>
+  It tells us that <strong>Check Availability happens after Search Book</strong>.
+</p>
+
+
+<h3>5. Final Node</h3>
+
+<p>
+  It shows <strong>where the process ends</strong>.
+</p>
+
+<p>
+  It is usually represented by a <strong>circle with another circle around it</strong>.
+</p>
+
+<p>
+  <strong>Example:</strong>
+</p>
+
+<p>
+  <strong>◉ End</strong>
+</p>
+
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> The main elements of an Activity Diagram are
+  <strong>Initial Node, Activity, Decision, Arrow, and Final Node</strong>.
+  Together, these elements show the complete workflow of a process.
+</div>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> An Activity Diagram focuses on the
+  <strong>flow of activities</strong> in a process. It is useful for
+  understanding the steps, decisions, and overall workflow of a system.
+</div>
+
+<h1 id="software-design-patterns">Introduction To Design Patterns</h1>
+<h2>What is a Design Pattern?</h2>
+
+<p>
+  A <strong>Design Pattern</strong> is a
+  <strong>general and reusable approach for solving a common problem in
+  software design</strong>.
+</p>
+
+<p>
+  It provides developers with a <strong>proven way to organize and design
+  software</strong> without giving them a complete program or specific code.
+  Developers can adapt the pattern according to the requirements of their
+  application.
+</p>
+
+<table class="conversion-table">
+  <thead>
+    <tr>
+      <th>Pattern</th>
+      <th>Meaning</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><strong>Singleton</strong></td>
+      <td>Creates only <strong>one instance</strong> of an object and reuses it.</td>
+      <td>
+        One shared <strong>database connection manager</strong> used by
+        different parts of an application.
+      </td>
+    </tr>
+
+    <tr>
+      <td><strong>Factory</strong></td>
+      <td>
+        Creates the <strong>required object</strong> without exposing its
+        creation details.
+      </td>
+      <td>
+        A <strong>Vehicle Factory</strong> can create different vehicle
+        objects such as <code>Car</code>, <code>Bike</code>, or
+        <code>Bus</code> according to the program's requirement.
+      </td>
+    </tr>
+
+    <tr>
+      <td><strong>Observer</strong></td>
+      <td>
+        Automatically <strong>notifies other objects</strong> when something
+        changes.
+      </td>
+      <td>
+        A <strong>YouTube channel</strong> can notify its subscribers when a
+        new video is uploaded.
+      </td>
+    </tr>
+
+    <tr>
+      <td><strong>Strategy</strong></td>
+      <td>
+        Allows choosing between <strong>different algorithms or methods</strong>
+        for the same task.
+      </td>
+      <td>
+        An e-commerce system selects <code>CreditCard</code>,
+        <code>PayPal</code>, or <code>BankTransfer</code> payment strategy.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Applications of Design Patterns</h2>
+
+<ul>
+  <li>
+    <strong>Make code easier to understand</strong> by giving it a clear
+    structure.
+  </li>
+
+  <li>
+    <strong>Reuse code</strong> instead of writing the same solution again.
+  </li>
+
+  <li>
+    <strong>Make it easier for developers to communicate</strong> with each
+    other.
+  </li>
+
+  <li>
+    Help make software <strong>strong, reliable, and easy to maintain</strong>.
+  </li>
+</ul>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong> Design patterns provide
+  <strong>proven and reusable solutions</strong> to common software design
+  problems, making software easier to understand, develop, and maintain.
+</div>
+
+<h1 id="debugging-and-testing">Software Debugging and Testing</h1>
+
+<h2>1. Debugging</h2>
+
+<p>
+  <strong>Debugging</strong> is the process of
+  <strong>finding and fixing errors (bugs) in a program</strong>.
+</p>
+
+<h3>Tools and Best Practices</h3>
+
+<h3>1. Debuggers</h3>
+
+<p>
+  A <strong>debugger</strong> is a tool that helps programmers find errors by
+  running a program <strong>step by step</strong> and checking the values of
+  variables.
+</p>
+
+<p><strong>Example:</strong></p>
+
+<p>
+  A programmer can pause a Python program at a specific line and check why a
+  variable has the wrong value.
+</p>
+
+
+<h3>2. Print Statement</h3>
+
+<p>
+  A <strong>print statement</strong> displays values or messages while the
+  program is running. It helps programmers understand what is happening inside
+  the program.
+</p>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>age = 15
+print(age)</code></pre>
+
+
+<h3>3. Code Review</h3>
+
+<p>
+  <strong>Code review</strong> means checking another programmer's code to
+  <strong>find errors and improve its quality</strong>.
+</p>
+
+<p><strong>Example:</strong></p>
+
+<p>
+  A developer reviews a colleague's code and finds that a condition is
+  incorrect.
+</p>
+
+
+<h2>2. Testing</h2>
+
+<p>
+  <strong>Software testing</strong> is the process of
+  <strong>checking software to find errors and make sure it works as
+  expected</strong>.
+</p>
+
+<h3>Types of Testing</h3>
+
+<h3>1. Unit Testing</h3>
+
+<p>
+  Tests <strong>individual parts or units</strong> of a program separately.
+</p>
+
+<p><strong>Example:</strong></p>
+
+<p>
+  Testing a Python function that calculates the total price.
+</p>
+
+
+<h3>2. Integration Testing</h3>
+
+<p>
+  Tests whether <strong>different parts of a program work correctly
+  together</strong>.
+</p>
+
+<p><strong>Example:</strong></p>
+
+<p>
+  Checking whether the login system correctly works with the database.
+</p>
+
+
+<h3>3. System Testing</h3>
+
+<p>
+  Tests the <strong>complete software system</strong> to make sure all parts
+  work together correctly.
+</p>
+
+<p><strong>Example:</strong></p>
+
+<p>
+  Testing an entire online shopping website, including login, product search,
+  cart, and payment.
+</p>
+
+
+<h3>4. Acceptance Testing</h3>
+
+<p>
+  Checks whether the software <strong>meets the user's or customer's
+  requirements</strong>.
+</p>
+
+<p><strong>Example:</strong></p>
+
+<p>
+  A school checks whether a newly developed student-management software meets
+  all the requirements they requested.
+</p>
+
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong>
+  A <strong>bug</strong> is an error or mistake in a computer program that
+  causes it to produce <strong>incorrect results, unexpected behavior, or
+  fail to work properly</strong>.
+  <br><br>
+  <strong>Debugging</strong> focuses on <strong>finding and fixing bugs</strong>,
+  while <strong>testing</strong> focuses on <strong>checking whether the
+  software works correctly and meets its requirements</strong>.
+</div>
+
+<h1 id="software-development-tools">Software Development Tools</h1>
+
+<p>
+  <strong>Software development tools</strong> are programs that help developers
+  <strong>write, translate, test, debug, and manage software</strong>.
+</p>
+
+
+<h2>1. Language Editors</h2>
+
+<p>
+  Language editors are tools used to <strong>write and edit source code</strong>.
+</p>
+
+<ul>
+  <li>
+    <strong>Notepad++</strong> – A lightweight text and code editor.
+  </li>
+  <li>
+    <strong>VS Code</strong> – A powerful code editor that supports many
+    programming languages and provides features such as extensions, debugging,
+    and code completion.
+  </li>
+</ul>
+
+
+<h2>2. Translators</h2>
+
+<p>
+  <strong>Translators</strong> are software tools that convert
+  <strong>source code</strong> written in a programming language into
+  <strong>machine code or instructions</strong> that the computer can
+  understand and execute. Common types of translators include
+  <strong>Assemblers, Compilers</strong> and <strong>Interpreters</strong>.
+</p>
+<h3>Compiler</h3>
+
+<p>
+  A <strong>compiler</strong> translates the <strong>whole program</strong>
+  into machine code before execution.
+</p>
+
+<p>
+  <strong>Example:</strong> C and C++ commonly use compilers.
+</p>
+
+<h3>Interpreter</h3>
+
+<p>
+  An <strong>interpreter</strong> translates and executes the program
+  <strong>line by line</strong>.
+</p>
+
+<p>
+  <strong>Example:</strong> Python commonly uses an interpreter.
+</p>
+
+
+<h2>3. Debuggers</h2>
+
+<p>
+  A <strong>debugger</strong> is a tool used to
+  <strong>find and fix errors (bugs)</strong> in a program.
+</p>
+
+<p>
+  <strong>Example:</strong> A debugger can pause a program at a specific line
+  and allow the programmer to check variable values.
+</p>
+
+
+<h2>4. IDEs</h2>
+
+<p>
+  <strong>IDE (Integrated Development Environment)</strong> is a software
+  application that provides several development tools in
+  <strong>one place</strong>, such as a code editor, debugger, and
+  compiler/interpreter support.
+</p>
+
+<p>
+  <strong>Examples:</strong> Visual Studio, PyCharm, and Eclipse.
+</p>
+
+
+<h3>Online and Offline Computing Platforms</h3>
+
+<ul>
+  <li>
+    <strong>Online platforms</strong> – Allow developers to write and run code
+    through the internet without installing the complete development
+    environment.
+    <ul>
+      <li><strong>Example:</strong> Google Colab</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Offline platforms</strong> – Software installed on a computer that
+    can be used without an internet connection for most development tasks.
+    <ul>
+      <li><strong>Example:</strong> PyCharm</li>
+    </ul>
+  </li>
+</ul>
+
+
+<h2>5. Source Code Repositories</h2>
+
+<p>
+  A <strong>source code repository</strong> is a place where developers
+  <strong>store, manage, and track changes to source code</strong>.
+</p>
+
+
+<h3>GitHub</h3>
+
+<p>
+  <strong>GitHub</strong> is an online platform used to
+  <strong>store and manage software projects and their source code</strong>.
+  It also supports collaboration between developers.
+</p>
+
+
+<h3>Bitbucket</h3>
+
+<p>
+  <strong>Bitbucket</strong> is an online platform used to
+  <strong>host and manage source code repositories</strong>, particularly for
+  projects using Git.
+</p>
+
+
+<h2 id="mcqs">Multiple Choice Questions (MCQs) on Python Programming</h2>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What is software?</div>
+  <div class="mcq-options">
+    a. A physical component of a computer<br>
+    b. A set of programs and instructions that tells a computer what to do<br>
+    c. A type of computer network<br>
+    d. A storage device
+  </div>
+  <div class="mcq-answer">Answer: b. A set of programs and instructions that tells a computer what to do</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. What is software development?</div>
+  <div class="mcq-options">
+    a. The process of designing, creating, testing, and maintaining software<br>
+    b. The process of repairing computer hardware<br>
+    c. The process of installing an operating system<br>
+    d. The process of connecting computers
+  </div>
+  <div class="mcq-answer">Answer: a. The process of designing, creating, testing, and maintaining software</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. What does SDLC stand for?</div>
+  <div class="mcq-options">
+    a. Software Design Language Code<br>
+    b. Software Development Life Cycle<br>
+    c. System Development Language Cycle<br>
+    d. Software Data Learning Cycle
+  </div>
+  <div class="mcq-answer">Answer: b. Software Development Life Cycle</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. What is the main purpose of SDLC?</div>
+  <div class="mcq-options">
+    a. To replace computer hardware<br>
+    b. To provide a structured process for developing software<br>
+    c. To increase internet speed<br>
+    d. To store files
+  </div>
+  <div class="mcq-answer">Answer: b. To provide a structured process for developing software</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. Which is the first stage of SDLC?</div>
+  <div class="mcq-options">
+    a. Testing<br>
+    b. Deployment<br>
+    c. Requirement Gathering<br>
+    d. Maintenance
+  </div>
+  <div class="mcq-answer">Answer: c. Requirement Gathering</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. What happens during Requirement Gathering?</div>
+  <div class="mcq-options">
+    a. Software is deployed<br>
+    b. User and system requirements are identified<br>
+    c. Code is deleted<br>
+    d. Hardware is assembled
+  </div>
+  <div class="mcq-answer">Answer: b. User and system requirements are identified</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. Which of the following is a functional requirement?</div>
+  <div class="mcq-options">
+    a. The system should be secure<br>
+    b. The system should be easy to use<br>
+    c. The library system should allow users to borrow books<br>
+    d. The system should be highly reliable
+  </div>
+  <div class="mcq-answer">Answer: c. The library system should allow users to borrow books</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. Which of the following is a non-functional requirement?</div>
+  <div class="mcq-options">
+    a. Users can search for books<br>
+    b. Users can borrow books<br>
+    c. The system should respond quickly<br>
+    d. Users can register
+  </div>
+  <div class="mcq-answer">Answer: c. The system should respond quickly</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. Which SDLC stage focuses on creating the structure and design of software?</div>
+  <div class="mcq-options">
+    a. Design Phase<br>
+    b. Testing Phase<br>
+    c. Maintenance Phase<br>
+    d. Deployment Phase
+  </div>
+  <div class="mcq-answer">Answer: a. Design Phase</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. What happens during the Coding/Development stage?</div>
+  <div class="mcq-options">
+    a. Requirements are collected<br>
+    b. Software is designed on paper only<br>
+    c. Developers write the actual program code<br>
+    d. Software is permanently removed
+  </div>
+  <div class="mcq-answer">Answer: c. Developers write the actual program code</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. What is the main purpose of software testing?</div>
+  <div class="mcq-options">
+    a. To identify and fix errors<br>
+    b. To increase the size of software<br>
+    c. To remove all documentation<br>
+    d. To design computer hardware
+  </div>
+  <div class="mcq-answer">Answer: a. To identify and fix errors</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. What is deployment?</div>
+  <div class="mcq-options">
+    a. Writing program code<br>
+    b. Installing and making software available for real-world use<br>
+    c. Gathering requirements<br>
+    d. Drawing UML diagrams
+  </div>
+  <div class="mcq-answer">Answer: b. Installing and making software available for real-world use</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. What is the purpose of the maintenance stage?</div>
+  <div class="mcq-options">
+    a. To collect initial requirements<br>
+    b. To fix bugs and improve existing software<br>
+    c. To create the first design<br>
+    d. To stop software development
+  </div>
+  <div class="mcq-answer">Answer: b. To fix bugs and improve existing software</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. What is a software development methodology?</div>
+  <div class="mcq-options">
+    a. A programming language<br>
+    b. A structured approach used to develop software<br>
+    c. A computer device<br>
+    d. A database
+  </div>
+  <div class="mcq-answer">Answer: b. A structured approach used to develop software</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. Which software process model follows a linear sequence of stages?</div>
+  <div class="mcq-options">
+    a. Agile Model<br>
+    b. Waterfall Model<br>
+    c. Spiral Model<br>
+    d. Prototype Model
+  </div>
+  <div class="mcq-answer">Answer: b. Waterfall Model</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">16. Which is a major disadvantage of the Waterfall Model?</div>
+  <div class="mcq-options">
+    a. It is highly flexible<br>
+    b. It allows continuous changes easily<br>
+    c. It is difficult to accommodate changing requirements<br>
+    d. It has no documentation
+  </div>
+  <div class="mcq-answer">Answer: c. It is difficult to accommodate changing requirements</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">17. What is a key feature of Agile methodology?</div>
+  <div class="mcq-options">
+    a. Development is completed in a single step<br>
+    b. Development is performed through short iterations or sprints<br>
+    c. Testing is never performed<br>
+    d. Requirements cannot change
+  </div>
+  <div class="mcq-answer">Answer: b. Development is performed through short iterations or sprints</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">18. Which methodology is generally more flexible toward changing requirements?</div>
+  <div class="mcq-options">
+    a. Waterfall<br>
+    b. Agile<br>
+    c. Linear<br>
+    d. Sequential
+  </div>
+  <div class="mcq-answer">Answer: b. Agile</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">19. What is project planning and management concerned with?</div>
+  <div class="mcq-options">
+    a. What, who, when, and cost of a project<br>
+    b. Only writing code<br>
+    c. Only software testing<br>
+    d. Only designing user interfaces
+  </div>
+  <div class="mcq-answer">Answer: a. What, who, when, and cost of a project</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">20. What is risk assessment?</div>
+  <div class="mcq-options">
+    a. Identifying and analyzing possible problems<br>
+    b. Writing source code<br>
+    c. Installing software<br>
+    d. Creating user accounts
+  </div>
+  <div class="mcq-answer">Answer: a. Identifying and analyzing possible problems</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">21. Which of the following is a step in risk management?</div>
+  <div class="mcq-options">
+    a. Identify risks<br>
+    b. Ignore risks<br>
+    c. Delete requirements<br>
+    d. Avoid testing
+  </div>
+  <div class="mcq-answer">Answer: a. Identify risks</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">22. What is Quality Assurance (QA)?</div>
+  <div class="mcq-options">
+    a. A process of ensuring software quality<br>
+    b. A programming language<br>
+    c. A type of database<br>
+    d. A hardware component
+  </div>
+  <div class="mcq-answer">Answer: a. A process of ensuring software quality</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">23. What does UML stand for?</div>
+  <div class="mcq-options">
+    a. Universal Modeling Language<br>
+    b. Unified Modeling Language<br>
+    c. Unified Machine Language<br>
+    d. User Modeling Logic
+  </div>
+  <div class="mcq-answer">Answer: b. Unified Modeling Language</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">24. What is UML mainly used for?</div>
+  <div class="mcq-options">
+    a. Modeling and visualizing software systems<br>
+    b. Writing machine code<br>
+    c. Managing computer hardware<br>
+    d. Increasing storage capacity
+  </div>
+  <div class="mcq-answer">Answer: a. Modeling and visualizing software systems</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">25. Which UML diagram shows interactions between users and a system?</div>
+  <div class="mcq-options">
+    a. Class Diagram<br>
+    b. Use Case Diagram<br>
+    c. Activity Diagram<br>
+    d. Sequence Diagram
+  </div>
+  <div class="mcq-answer">Answer: b. Use Case Diagram</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">26. What represents a user or external system in a Use Case Diagram?</div>
+  <div class="mcq-options">
+    a. Actor<br>
+    b. Class<br>
+    c. Method<br>
+    d. Lifeline
+  </div>
+  <div class="mcq-answer">Answer: a. Actor</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">27. What does a Class Diagram mainly represent?</div>
+  <div class="mcq-options">
+    a. The structure of a software system<br>
+    b. The sequence of messages only<br>
+    c. The physical location of computers<br>
+    d. The software installation process
+  </div>
+  <div class="mcq-answer">Answer: a. The structure of a software system</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">28. Which of the following can be represented inside a class?</div>
+  <div class="mcq-options">
+    a. Attributes and methods<br>
+    b. Only actors<br>
+    c. Only messages<br>
+    d. Only arrows
+  </div>
+  <div class="mcq-answer">Answer: a. Attributes and methods</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">29. What does a Sequence Diagram show?</div>
+  <div class="mcq-options">
+    a. The structure of classes<br>
+    b. The sequence of interactions between objects or systems<br>
+    c. Only software requirements<br>
+    d. Hardware components
+  </div>
+  <div class="mcq-answer">Answer: b. The sequence of interactions between objects or systems</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">30. In a Sequence Diagram, what does a lifeline represent?</div>
+  <div class="mcq-options">
+    a. The existence of an actor or object over time<br>
+    b. A programming language<br>
+    c. A database table<br>
+    d. A software bug
+  </div>
+  <div class="mcq-answer">Answer: a. The existence of an actor or object over time</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">31. What does an Activity Diagram represent?</div>
+  <div class="mcq-options">
+    a. The workflow or sequence of activities in a process<br>
+    b. Only software classes<br>
+    c. Only database structures<br>
+    d. Computer hardware
+  </div>
+  <div class="mcq-answer">Answer: a. The workflow or sequence of activities in a process</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">32. Which symbol represents a decision in an Activity Diagram?</div>
+  <div class="mcq-options">
+    a. Rectangle<br>
+    b. Diamond<br>
+    c. Circle<br>
+    d. Triangle
+  </div>
+  <div class="mcq-answer">Answer: b. Diamond</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">33. What is a Design Pattern?</div>
+  <div class="mcq-options">
+    a. A ready-made software application<br>
+    b. A general and reusable solution to a common software design problem<br>
+    c. A programming language<br>
+    d. A testing tool
+  </div>
+  <div class="mcq-answer">Answer: b. A general and reusable solution to a common software design problem</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">34. Which Design Pattern ensures that a class has only one instance?</div>
+  <div class="mcq-options">
+    a. Factory Pattern<br>
+    b. Observer Pattern<br>
+    c. Singleton Pattern<br>
+    d. Strategy Pattern
+  </div>
+  <div class="mcq-answer">Answer: c. Singleton Pattern</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">35. What is debugging?</div>
+  <div class="mcq-options">
+    a. The process of finding and fixing errors in software<br>
+    b. The process of designing a database<br>
+    c. The process of deploying software<br>
+    d. The process of collecting requirements
+  </div>
+  <div class="mcq-answer">Answer: a. The process of finding and fixing errors in software</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">36. Which testing level tests individual components or units of a program?</div>
+  <div class="mcq-options">
+    a. System Testing<br>
+    b. Acceptance Testing<br>
+    c. Unit Testing<br>
+    d. Integration Testing
+  </div>
+  <div class="mcq-answer">Answer: c. Unit Testing</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">37. What does IDE stand for?</div>
+  <div class="mcq-options">
+    a. Integrated Development Environment<br>
+    b. Internal Design Editor<br>
+    c. Integrated Data Engine<br>
+    d. Internet Development Environment
+  </div>
+  <div class="mcq-answer">Answer: a. Integrated Development Environment</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">38. Which of the following is an example of an IDE?</div>
+  <div class="mcq-options">
+    a. PyCharm<br>
+    b. GitHub<br>
+    c. WhatsApp<br>
+    d. VLC
+  </div>
+  <div class="mcq-answer">Answer: a. PyCharm</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">39. What is the main function of a compiler?</div>
+  <div class="mcq-options">
+    a. To execute code line by line only<br>
+    b. To translate the entire program into machine code or another target form<br>
+    c. To draw UML diagrams<br>
+    d. To manage project risks
+  </div>
+  <div class="mcq-answer">Answer: b. To translate the entire program into machine code or another target form</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">40. Which of the following is a source code repository?</div>
+  <div class="mcq-options">
+    a. GitHub<br>
+    b. PyCharm<br>
+    c. Notepad++<br>
+    d. Google Colab
+  </div>
+  <div class="mcq-answer">Answer: a. GitHub</div>
+</div>
+
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Introduction To Software Development)</h2>
+
+  <h2 id="mcqs">Multiple Choice Questions (MCQs) on Software Development</h2>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">1. What is software?</div>
+    <div class="mcq-options">
+      <button>a. A physical component of a computer</button>
+      <button>b. A set of programs and instructions that tells a computer what to do</button>
+      <button>c. A type of computer network</button>
+      <button>d. A storage device</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">2. What is software development?</div>
+    <div class="mcq-options">
+      <button>a. The process of designing, creating, testing, and maintaining software</button>
+      <button>b. The process of repairing computer hardware</button>
+      <button>c. The process of installing an operating system</button>
+      <button>d. The process of connecting computers</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">3. What does SDLC stand for?</div>
+    <div class="mcq-options">
+      <button>a. Software Design Language Code</button>
+      <button>b. Software Development Life Cycle</button>
+      <button>c. System Development Language Cycle</button>
+      <button>d. Software Data Learning Cycle</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">4. What is the main purpose of SDLC?</div>
+    <div class="mcq-options">
+      <button>a. To replace computer hardware</button>
+      <button>b. To provide a structured process for developing software</button>
+      <button>c. To increase internet speed</button>
+      <button>d. To store files</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">5. Which is the first stage of SDLC?</div>
+    <div class="mcq-options">
+      <button>a. Testing</button>
+      <button>b. Deployment</button>
+      <button>c. Requirement Gathering</button>
+      <button>d. Maintenance</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">6. What happens during Requirement Gathering?</div>
+    <div class="mcq-options">
+      <button>a. Software is deployed</button>
+      <button>b. User and system requirements are identified</button>
+      <button>c. Code is deleted</button>
+      <button>d. Hardware is assembled</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">7. Which of the following is a functional requirement?</div>
+    <div class="mcq-options">
+      <button>a. The system should be secure</button>
+      <button>b. The system should be easy to use</button>
+      <button>c. The library system should allow users to borrow books</button>
+      <button>d. The system should be highly reliable</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">8. Which of the following is a non-functional requirement?</div>
+    <div class="mcq-options">
+      <button>a. Users can search for books</button>
+      <button>b. Users can borrow books</button>
+      <button>c. The system should respond quickly</button>
+      <button>d. Users can register</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">9. Which SDLC stage focuses on creating the structure and design of software?</div>
+    <div class="mcq-options">
+      <button>a. Design Phase</button>
+      <button>b. Testing Phase</button>
+      <button>c. Maintenance Phase</button>
+      <button>d. Deployment Phase</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">10. What happens during the Coding/Development stage?</div>
+    <div class="mcq-options">
+      <button>a. Requirements are collected</button>
+      <button>b. Software is designed on paper only</button>
+      <button>c. Developers write the actual program code</button>
+      <button>d. Software is permanently removed</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">11. What is the main purpose of software testing?</div>
+    <div class="mcq-options">
+      <button>a. To identify and fix errors</button>
+      <button>b. To increase the size of software</button>
+      <button>c. To remove all documentation</button>
+      <button>d. To design computer hardware</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">12. What is deployment?</div>
+    <div class="mcq-options">
+      <button>a. Writing program code</button>
+      <button>b. Installing and making software available for real-world use</button>
+      <button>c. Gathering requirements</button>
+      <button>d. Drawing UML diagrams</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">13. What is the purpose of the maintenance stage?</div>
+    <div class="mcq-options">
+      <button>a. To collect initial requirements</button>
+      <button>b. To fix bugs and improve existing software</button>
+      <button>c. To create the first design</button>
+      <button>d. To stop software development</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. What is a software development methodology?</div>
+    <div class="mcq-options">
+      <button>a. A programming language</button>
+      <button>b. A structured approach used to develop software</button>
+      <button>c. A computer device</button>
+      <button>d. A database</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">15. Which software process model follows a linear sequence of stages?</div>
+    <div class="mcq-options">
+      <button>a. Agile Model</button>
+      <button>b. Waterfall Model</button>
+      <button>c. Spiral Model</button>
+      <button>d. Prototype Model</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">16. Which is a major disadvantage of the Waterfall Model?</div>
+    <div class="mcq-options">
+      <button>a. It is highly flexible</button>
+      <button>b. It allows continuous changes easily</button>
+      <button>c. It is difficult to accommodate changing requirements</button>
+      <button>d. It has no documentation</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">17. What is a key feature of Agile methodology?</div>
+    <div class="mcq-options">
+      <button>a. Development is completed in a single step</button>
+      <button>b. Development is performed through short iterations or sprints</button>
+      <button>c. Testing is never performed</button>
+      <button>d. Requirements cannot change</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">18. Which methodology is generally more flexible toward changing requirements?</div>
+    <div class="mcq-options">
+      <button>a. Waterfall</button>
+      <button>b. Agile</button>
+      <button>c. Linear</button>
+      <button>d. Sequential</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">19. What is project planning and management concerned with?</div>
+    <div class="mcq-options">
+      <button>a. What, who, when, and cost of a project</button>
+      <button>b. Only writing code</button>
+      <button>c. Only software testing</button>
+      <button>d. Only designing user interfaces</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">20. What is risk assessment?</div>
+    <div class="mcq-options">
+      <button>a. Identifying and analyzing possible problems</button>
+      <button>b. Writing source code</button>
+      <button>c. Installing software</button>
+      <button>d. Creating user accounts</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">21. Which of the following is a step in risk management?</div>
+    <div class="mcq-options">
+      <button>a. Identify risks</button>
+      <button>b. Ignore risks</button>
+      <button>c. Delete requirements</button>
+      <button>d. Avoid testing</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">22. What is Quality Assurance (QA)?</div>
+    <div class="mcq-options">
+      <button>a. A process of ensuring software quality</button>
+      <button>b. A programming language</button>
+      <button>c. A type of database</button>
+      <button>d. A hardware component</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">23. What does UML stand for?</div>
+    <div class="mcq-options">
+      <button>a. Universal Modeling Language</button>
+      <button>b. Unified Modeling Language</button>
+      <button>c. Unified Machine Language</button>
+      <button>d. User Modeling Logic</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">24. What is UML mainly used for?</div>
+    <div class="mcq-options">
+      <button>a. Modeling and visualizing software systems</button>
+      <button>b. Writing machine code</button>
+      <button>c. Managing computer hardware</button>
+      <button>d. Increasing storage capacity</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">25. Which UML diagram shows interactions between users and a system?</div>
+    <div class="mcq-options">
+      <button>a. Class Diagram</button>
+      <button>b. Use Case Diagram</button>
+      <button>c. Activity Diagram</button>
+      <button>d. Sequence Diagram</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">26. What represents a user or external system in a Use Case Diagram?</div>
+    <div class="mcq-options">
+      <button>a. Actor</button>
+      <button>b. Class</button>
+      <button>c. Method</button>
+      <button>d. Lifeline</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">27. What does a Class Diagram mainly represent?</div>
+    <div class="mcq-options">
+      <button>a. The structure of a software system</button>
+      <button>b. The sequence of messages only</button>
+      <button>c. The physical location of computers</button>
+      <button>d. The software installation process</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">28. Which of the following can be represented inside a class?</div>
+    <div class="mcq-options">
+      <button>a. Attributes and methods</button>
+      <button>b. Only actors</button>
+      <button>c. Only messages</button>
+      <button>d. Only arrows</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">29. What does a Sequence Diagram show?</div>
+    <div class="mcq-options">
+      <button>a. The structure of classes</button>
+      <button>b. The sequence of interactions between objects or systems</button>
+      <button>c. Only software requirements</button>
+      <button>d. Hardware components</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">30. In a Sequence Diagram, what does a lifeline represent?</div>
+    <div class="mcq-options">
+      <button>a. The existence of an actor or object over time</button>
+      <button>b. A programming language</button>
+      <button>c. A database table</button>
+      <button>d. A software bug</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">31. What does an Activity Diagram represent?</div>
+    <div class="mcq-options">
+      <button>a. The workflow or sequence of activities in a process</button>
+      <button>b. Only software classes</button>
+      <button>c. Only database structures</button>
+      <button>d. Computer hardware</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">32. Which symbol represents a decision in an Activity Diagram?</div>
+    <div class="mcq-options">
+      <button>a. Rectangle</button>
+      <button>b. Diamond</button>
+      <button>c. Circle</button>
+      <button>d. Triangle</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">33. What is a Design Pattern?</div>
+    <div class="mcq-options">
+      <button>a. A ready-made software application</button>
+      <button>b. A general and reusable solution to a common software design problem</button>
+      <button>c. A programming language</button>
+      <button>d. A testing tool</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">34. Which Design Pattern ensures that a class has only one instance?</div>
+    <div class="mcq-options">
+      <button>a. Factory Pattern</button>
+      <button>b. Observer Pattern</button>
+      <button>c. Singleton Pattern</button>
+      <button>d. Strategy Pattern</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">35. What is debugging?</div>
+    <div class="mcq-options">
+      <button>a. The process of finding and fixing errors in software</button>
+      <button>b. The process of designing a database</button>
+      <button>c. The process of deploying software</button>
+      <button>d. The process of collecting requirements</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">36. Which testing level tests individual components of a program?</div>
+    <div class="mcq-options">
+      <button>a. System Testing</button>
+      <button>b. Acceptance Testing</button>
+      <button>c. Unit Testing</button>
+      <button>d. Integration Testing</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">37. What does IDE stand for?</div>
+    <div class="mcq-options">
+      <button>a. Integrated Development Environment</button>
+      <button>b. Internal Design Editor</button>
+      <button>c. Integrated Data Engine</button>
+      <button>d. Internet Development Environment</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">38. Which of the following is an example of an IDE?</div>
+    <div class="mcq-options">
+      <button>a. PyCharm</button>
+      <button>b. GitHub</button>
+      <button>c. WhatsApp</button>
+      <button>d. VLC</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">39. What is the main function of a compiler?</div>
+    <div class="mcq-options">
+      <button>a. To execute code line by line only</button>
+      <button>b. To translate the entire program into machine code or another target form</button>
+      <button>c. To draw UML diagrams</button>
+      <button>d. To manage project risks</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">40. Which of the following is a source code repository?</div>
+    <div class="mcq-options">
+      <button>a. GitHub</button>
+      <button>b. PyCharm</button>
+      <button>c. Notepad++</button>
+      <button>d. Google Colab</button>
+    </div>
+  </div>
+
+</section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+      
+<h2 id="faqs">FAQs</h2>
+
+<section class="faq-section">
+
+<h2 id="faqs">Software Development FAQs</h2>
+
+<div class="faq-item">
+  <button class="faq-question">What is software?</button>
+  <div class="faq-answer">
+    <p>Software is a set of programs and instructions that tells a computer what to do.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is software development?</button>
+  <div class="faq-answer">
+    <p>Software development is the process of designing, creating, testing, deploying, and maintaining software.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is SDLC?</button>
+  <div class="faq-answer">
+    <p>SDLC stands for Software Development Life Cycle. It is a structured process used to develop and maintain software.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are the main stages of SDLC?</button>
+  <div class="faq-answer">
+    <p>The main stages are Requirement Gathering, Design, Coding, Testing, Deployment, and Maintenance.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is Requirement Gathering?</button>
+  <div class="faq-answer">
+    <p>Requirement Gathering is the process of identifying and collecting the needs and expectations of users and the system.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the difference between functional and non-functional requirements?</button>
+  <div class="faq-answer">
+    <p>Functional requirements describe what a system should do, while non-functional requirements describe how well the system should perform.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the Waterfall Model?</button>
+  <div class="faq-answer">
+    <p>The Waterfall Model is a software development model in which development progresses through a fixed sequence of stages.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is Agile methodology?</button>
+  <div class="faq-answer">
+    <p>Agile is a flexible software development methodology in which software is developed through short iterations or sprints.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is risk assessment and management?</button>
+  <div class="faq-answer">
+    <p>Risk assessment and management involves identifying, analyzing, mitigating, and monitoring possible risks in a software project.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is Quality Assurance (QA)?</button>
+  <div class="faq-answer">
+    <p>Quality Assurance is the process of ensuring that software meets the required quality standards through activities such as testing and code reviews.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is UML?</button>
+  <div class="faq-answer">
+    <p>UML stands for Unified Modeling Language. It is used to visually model and represent the structure and behavior of software systems.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a Use Case Diagram?</button>
+  <div class="faq-answer">
+    <p>A Use Case Diagram shows the interactions between users or external systems and a software system.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a Class Diagram?</button>
+  <div class="faq-answer">
+    <p>A Class Diagram represents the structure of a software system by showing classes, their attributes, methods, and relationships.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a Sequence Diagram?</button>
+  <div class="faq-answer">
+    <p>A Sequence Diagram shows how objects or systems interact with each other in a particular sequence over time.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is debugging?</button>
+  <div class="faq-answer">
+    <p>Debugging is the process of finding and fixing errors or bugs in software.</p>
+  </div>
+</div>
+
+</div>
+
+</section>
+      
+<h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/10-class/chapter-4/class-10-computer-chapter-4-control-structures-in-python.pdf">
+  Download PDF
+</a>
+</div>
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="#">Technology</a></li>
+
+                <li><a href="#">LifeStyle</a></li>
+
+                <li><a href="#">Health</a></li>
+
+                <li><a href="#">Education</a></li>
+
+                <li><a href="#">Business</a></li>
+
+                <li><a href="#">Travel</a></li>
+
+                <li><a href="#">9 Computer Science</a></li>
+
+                <li><a href="#">10 Computer Science</a></li>
+
+                <li><a href="#">11 Computer Science</a></li>
+
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                question.classList.toggle("active");
+
+                const answer = question.nextElementSibling;
+
+                if (answer.style.maxHeight) {
+
+                    answer.style.maxHeight = null;
+
+                } else {
+
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+    
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+const supabase = createClient(
+  "https://pojmeeozeuzqtgrvwgxw.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvam1lZW96ZXV6cXRncnZ3Z3h3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4ODM2MjYsImV4cCI6MjA5NTQ1OTYyNn0.c9sgwAH8ysgayh_dvk_uzNTK5XuUZ1k57Lk_cfzlhbA"
+);
+
+const POST_ID    = "blog-2";
+const ADMIN_PASS = "salman.coding";
+const ADMIN_NAME = "Salman (Admin)";
+
+let isAdmin = false;
+
+/* ── HELPERS ── */
+function esc(s) {
+  return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+function initial(n) { return (n||"?").charAt(0).toUpperCase(); }
+function timeAgo(d) {
+  const s = Math.floor((Date.now() - new Date(d)) / 1000);
+  if (s < 60)    return s + "s ago";
+  if (s < 3600)  return Math.floor(s/60) + "m ago";
+  if (s < 86400) return Math.floor(s/3600) + "h ago";
+  return Math.floor(s/86400) + "d ago";
+}
+
+/* ── ADMIN LOGIN / LOGOUT ── */
+window.adminLogin = function() {
+  if (document.getElementById("admin-pass").value === ADMIN_PASS) {
+    isAdmin = true;
+    document.getElementById("admin-bar").innerHTML =
+      `<span style="color:var(--accent);font-weight:600;font-size:13px;">✓ Admin</span>
+       <button onclick="adminLogout()" style="background:transparent;color:var(--muted);border:1px solid var(--border);font-size:12px;padding:5px 10px;">Logout</button>`;
+    document.getElementById("main").classList.add("admin-mode");
+    loadComments();
+  } else {
+    alert("Wrong password.");
+  }
+};
+
+window.adminLogout = function() {
+  isAdmin = false;
+  document.getElementById("admin-bar").innerHTML = `
+    <span style="font-size:12px;color:var(--muted);">Admin</span>
+    <input id="admin-pass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter') adminLogin()">
+    <button onclick="adminLogin()">Login</button>`;
+  document.getElementById("main").classList.remove("admin-mode");
+  loadComments();
+};
+
+/* ── POST TOP-LEVEL COMMENT (visitor) ── */
+window.postComment = async function() {
+  const name = document.getElementById("pub-name").value.trim();
+  const msg  = document.getElementById("pub-msg").value.trim();
+  if (!name || !msg) { alert("Please enter your name and message."); return; }
+  const { error } = await supabase.from("comments").insert([{
+    name, message: msg, post_id: POST_ID, parent_id: null
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  document.getElementById("pub-msg").value = "";
+  loadComments();
+};
+
+/* ── TOGGLE ADMIN REPLY BOX ── */
+window.showAdminReplyBox = function(id) {
+  if (!isAdmin) return;
+  const el = document.getElementById("arb-" + id);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── ADMIN POST REPLY ── */
+window.postAdminReply = async function(parentId) {
+  if (!isAdmin) return;
+  const ta  = document.getElementById("ari-" + parentId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: ADMIN_NAME, message: msg, post_id: POST_ID, parent_id: parentId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── SHOW VISITOR REPLY-BACK BOX ── */
+// visitorName = name of the original commenter (prefilled, locked)
+window.showVisitorReplyBox = function(adminReplyId, visitorName) {
+  const el = document.getElementById("vrb-" + adminReplyId);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── VISITOR POSTS REPLY-BACK ── */
+window.postVisitorReply = async function(adminReplyId, visitorName) {
+  const ta  = document.getElementById("vri-" + adminReplyId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: visitorName, message: msg, post_id: POST_ID, parent_id: adminReplyId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── BUILD THREAD under a top-level comment ── */
+// Structure: top comment → admin replies → visitor reply-backs (under each admin reply)
+function buildThread(all, topComment) {
+  // Direct admin replies to this top comment
+  const adminReplies = all.filter(c =>
+    c.parent_id === topComment.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    // Visitor replies back to this specific admin reply
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)}
+            <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+          ${isAdmin ? `<span class="admin-reply-btn" onclick="showAdminReplyBox(${vr.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${vr.id}" style="display:none;">
+            <textarea id="ari-${vr.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${vr.id})}"></textarea>
+            <button onclick="postAdminReply(${vr.id})">Send Reply</button>
+          </div>` : ""}
+          ${buildNestedThread(all, vr, topComment.name)}
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <!-- Visitor can reply back only to this admin reply -->
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(topComment.name)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(topComment.name)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(topComment.name)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* Deeper nesting: admin replies to visitor reply-backs */
+function buildNestedThread(all, visitorReply, originalVisitorName) {
+  const adminReplies = all.filter(c =>
+    c.parent_id === visitorReply.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)} <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble" style="margin-top:8px;">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(originalVisitorName)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(originalVisitorName)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(originalVisitorName)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* ── LOAD COMMENTS ── */
+async function loadComments() {
+  const { data, error } = await supabase
+    .from("comments").select("*")
+    .eq("post_id", POST_ID)
+    .order("created_at", { ascending: true });
+
+  const list = document.getElementById("comments-list");
+  if (error) { list.innerHTML = `<div class="empty">Could not load comments.</div>`; return; }
+
+  const all = data || [];
+  const top = all.filter(c => !c.parent_id);
+
+  if (!top.length) { list.innerHTML = `<div class="empty">No comments yet. Be the first!</div>`; return; }
+
+  list.innerHTML = top.map(c => `
+    <div class="comment-card">
+      <div class="comment-row">
+        <div class="avatar">${initial(c.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(c.name)}
+            <span class="comment-time">${timeAgo(c.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(c.message)}</div>
+          <span class="admin-reply-btn" onclick="showAdminReplyBox(${c.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${c.id}" style="display:none;">
+            <textarea id="ari-${c.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${c.id})}"></textarea>
+            <button onclick="postAdminReply(${c.id})">Send Reply</button>
+          </div>
+          ${buildThread(all, c)}
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* ── REALTIME ── */
+supabase.channel("comments-rt")
+  .on("postgres_changes", { event: "INSERT", schema: "public", table: "comments", filter: `post_id=eq.${POST_ID}` },
+    () => loadComments())
+  .subscribe();
+
+loadComments();
+</script>
+
+</body>
+</html>

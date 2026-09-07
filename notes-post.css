@@ -99,7 +99,7 @@ table td strong {
     }
 }
 
-.toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue; }
+.toc { background: #f7f7f7; padding: 15px; margin-bottom: 20px; border-left: 4px solid darkblue;}
 .toc h2 { margin-top: 0; }
 .toc a { display: block; color: #333; text-decoration: none; padding: 5px 0; }
 .toc a:hover { color: darkblue; }
