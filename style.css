@@ -1293,6 +1293,12 @@ color:#ff9800;
 
 @media (max-width:768px){
 
+#backToTop {
+    padding: 5px 25px;
+    border-radius: 50%;
+  }
+
+
 .features{
 
 padding:70px 20px;
