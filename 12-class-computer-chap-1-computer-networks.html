@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ <title>Class 11 Computer Science Chapter 1: Software Development | MCQs, Short & Long Questions, FAQs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="notes-post.css">
+
+  <meta name="description" content="Class 11 Computer Science Chapter 1 Notes: Software Development. Complete study material covering SDLC, software development methodologies, Waterfall and Agile models, project planning and management, risk assessment, UML diagrams, Use Case, Class, Sequence and Activity Diagrams, Design Patterns, debugging, software testing, and software development tools." />
+
+<meta name="keywords" content="class 11 computer science notes, class 11 computer chapter 1, software development class 11, software development notes, software development life cycle, SDLC notes, SDLC phases, requirement gathering, functional requirements, non functional requirements, design phase software development, coding and development, software testing, software deployment, software maintenance, software development methodologies, software process models, Waterfall model, Agile methodology, Agile software development, project planning and management, risk assessment and management, quality assurance, UML diagrams, Unified Modeling Language, Use Case Diagram, Class Diagram, Sequence Diagram, Activity Diagram, design patterns, Singleton pattern, Factory pattern, Observer pattern, Strategy pattern, software debugging, software testing, debugging tools, software development tools, compilers, interpreters, debuggers, IDEs, Visual Studio, PyCharm, Google Colab, GitHub, source code repositories, class 11 computer MCQs, computer science short questions, computer science long questions, FBISE computer notes, Punjab board computer notes, chapter 1 computer science notes, software development exam preparation, class 11 computer solved MCQs, class 11 computer full notes" />
+
+<meta name="author" content="Salman Ahmad" />
+
+  <link rel="canonical" href="https://salmanblogs.com/11-class-computer-chap-1-introduction-to-software-development" />
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+ <!-- Open Graph -->
+<meta property="og:title" content="Class 11 Computer Science Chapter 1: Software Development | SDLC, UML, Design Patterns, Testing & Tools" />
+
+<meta property="og:description" content="Complete Class 11 Computer Science Chapter 1 Notes on Software Development. Covers SDLC, requirements, design, coding, testing, deployment, maintenance, Waterfall and Agile models, project planning, risk management, QA, UML diagrams, Use Case, Class, Sequence and Activity Diagrams, Design Patterns, debugging, testing, and software development tools." />
+
+<meta property="og:image" content="https://salmanblogs.com/images/11-CS-IMAGES/CHAPTER-1/class-11-computer-chapter-1-introduction-to-software-development.webp" />
+
+<meta property="og:url" content="https://salmanblogs.com/11-class-computer-chap-1-introduction-to-software-development" />
+
+<meta property="og:type" content="article" />
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:title" content="Class 11 Computer Science Chapter 1: Software Development | SDLC, UML, Design Patterns, Testing & Tools" />
+
+<meta name="twitter:description" content="Study Class 11 Computer Science Chapter 1: Software Development with complete notes on SDLC, requirements, design, coding, testing, deployment, maintenance, Waterfall and Agile models, project planning, risk management, UML diagrams, Design Patterns, debugging, testing, and software development tools." />
+
+<meta name="twitter:image" content="https://salmanblogs.com/images/11-CS-IMAGES/CHAPTER-1/class-11-computer-chapter-1-introduction-to-software-development.webp" />
+
+ <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="favicon.ico">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Class 11 Computer Science Chapter 1: Software Development",
+  "author": {
+    "@type": "Person",
+    "name": "Salman Ahmad"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Salman Blogs"
+  },
+  "description": "Complete Class 11 Computer Science Chapter 1 Notes on Software Development covering SDLC, requirements, design, coding, testing, deployment, maintenance, Waterfall and Agile models, project planning, risk management, quality assurance, UML diagrams, Use Case, Class, Sequence and Activity Diagrams, Design Patterns, debugging, software testing, and software development tools.",
+  "mainEntityOfPage": "https://salmanblogs.com/11-class-computer-chap-1-software-development"
+}
+</script>
+</head>
+<body>
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<span class="logo-first">Salman</span>
+
+<span class="logo-last">Blogs</span>
+
+</a>
+
+<nav>
+
+<div class="nav-toggle" id="navToggle">
+    &#9776;
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+<li><a href="terms.html">Terms</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="hero-badge">
+
+🔥 Introduction To Software Development
+
+</span>
+<br>
+<h1>
+
+
+<span>Chapter 1 Notes</span>
+
+</h1>
+
+<p>
+    Complete lecture notes covering Software Development, SDLC, Requirements, Design, Coding, Testing, Deployment, Maintenance, Waterfall and Agile Models, Project Planning, Risk Management, Quality Assurance, UML Diagrams, Use Case, Class, Sequence and Activity Diagrams, Design Patterns, Debugging, Software Testing, and Software Development Tools for FBISE and Punjab Board students.
+</p>
+<div class="hero-buttons">
+
+<a href="categories.html" class="btn-secondary">
+
+Browse Categories
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Introduction To Software Development</h1>
+    <div class="post-meta">Posted in <strong>11 Computer Science</strong></div>
+    <img src="images/11-CS-IMAGES/CHAPTER-1/class-11-computer-chapter-1-introduction-to-software-development.webp"
+                 alt="class-11-computer-chapter-1-introduction-to-software-development"
+                 loading="lazy">
+
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 10 Computer Science.
+
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+  <li><a href="#what-is-software">What is Software?</a></li>
+  <li><a href="#software-development">Software Development</a></li>
+  <li><a href="#software-development-life-cycle-sdlc">Software Development Life Cycle (SDLC)</a></li>
+  <li><a href="#framework-in-software-development">Framework in Software Development</a></li>
+  <li><a href="#stages-of-sdlc">Stages of SDLC</a></li>
+  <li><a href="#functional-and-non-functional-requirements">Functional and Non-Functional Requirements</a></li>
+  <li><a href="#software-development-methodologies">Software Development Methodologies</a></li>
+  <li><a href="#software-process-models">Software Process Models</a></li>
+  <li><a href="#waterfall-model">Waterfall Model</a></li>
+  <li><a href="#agile-methodology">Agile Methodology</a></li>
+  <li><a href="#project-planning-and-management">Project Planning and Management</a></li>
+  <li><a href="#risk-assessment-and-management">Risk Assessment and Management</a></li>
+  <li><a href="#uml-diagrams">Introduction to UML Diagrams</a></li>
+  <li><a href="#use-case">Use Case Diagram</a></li>
+  <li><a href="#class-diagram">Class Diagram</a></li>
+  <li><a href="#sequence-diagram">Sequence Diagram</a></li>
+  <li><a href="#activity-diagram">Activity Diagram</a></li>
+  <li><a href="#software-design-patterns">Introduction to Design Patterns</a></li>
+  <li><a href="#debugging-and-testing">Software Debugging and Testing</a></li>
+  <li><a href="#software-development-tools">Software Development Tools</a></li>
+
+  <li><a href="#mcqs">MCQs</a></li>
+  <li><a href="#test-mcqs">MCQs for Testing</a></li>
+  <li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+
+
+<div class="post-content">
+<h1 id="computer-network">Computer Network</h1>
+
+<p>
+  A <strong>computer network</strong> is a group of
+  <strong>computers and other devices connected to each other</strong>
+  so they can <strong>communicate and share resources</strong>.
+</p>
+
+<p>
+  <strong>Shared resources mean:</strong> Data, files, printers,
+  storage, and internet connections.
+</p>
+
+<h2>Examples of Computer Networks</h2>
+
+<ul>
+  <li>
+    <strong>School Computer Lab:</strong>
+    Computers are connected to share files, printers, and other resources.
+  </li>
+
+  <li>
+    <strong>Office Network:</strong>
+    Employees' computers are connected to share data, printers, and other
+    resources.
+  </li>
+
+  <li>
+    <strong>Home Network:</strong>
+    A laptop, smartphone, smart TV, and printer can be connected through a
+    Wi-Fi router.
+  </li>
+
+  <li>
+    <strong>Bank Network:</strong>
+    Computers and ATMs are connected to exchange banking information and
+    provide banking services.
+  </li>
+
+  <li>
+    <strong>University Network:</strong>
+    Computers in different departments are connected to share resources and
+    access university services.
+  </li>
+
+  <li>
+    <strong>Hospital Network:</strong>
+    Computers are connected to share patient, medical, and administrative
+    information.
+  </li>
+
+  <li>
+    <strong>Internet:</strong>
+    Millions of computers, smartphones, servers, and other devices are
+    connected to communicate and exchange data.
+  </li>
+</ul>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Note:</strong>
+  In the test, you can write <strong>any 1 or 2 examples</strong> of computer
+  networks. The extra examples are provided only for
+  <strong>better learning and understanding</strong>.
+</div>
+
+<h1 id="uses-of-computer-network">Uses of Computer Network</h1>
+
+<ul>
+  <li>
+    <strong>Internet Browsing:</strong>
+    Networks allow users to access websites and online information.
+  </li>
+
+  <li>
+    <strong>Mobile Phones:</strong>
+    Networks are used for calls, messages, and mobile applications.
+  </li>
+
+  <li>
+    <strong>Education:</strong>
+    Schools use networks for online classes and learning systems.
+  </li>
+
+  <li>
+    <strong>Banking:</strong>
+    Banks use networks for online transactions and ATM services.
+  </li>
+
+  <li>
+    <strong>Social Media:</strong>
+    Social media platforms use networks to connect users and share content.
+  </li>
+
+  <li>
+    <strong>Smart Homes:</strong>
+    Networks allow users to connect and control smart devices such as lights,
+    cameras, and appliances.
+  </li>
+</ul>
+
+<h1 id="network-architecture">Network Architecture</h1>
+
+<p>
+  <strong>Network architecture</strong> is the
+  <strong>design and structure of a computer network</strong>. It includes the
+  <strong>hardware, software, and communication rules (protocols)</strong>
+  that allow devices to connect and communicate with each other.
+</p>
+
+<h2>Basic Components</h2>
+
+<ul>
+  <li>
+    <strong>Hardware:</strong>
+    Computers, servers, routers, switches, cables, and other physical network
+    devices.
+  </li>
+
+  <li>
+    <strong>Software:</strong>
+    Network operating systems, applications, and network services that help
+    manage and use the network.
+  </li>
+
+  <li>
+    <strong>Communication Rules:</strong>
+    Protocols that define how devices communicate and exchange data with each
+    other.
+  </li>
+</ul>
+
+<h2>Example</h2>
+
+<p>
+  A <strong>school network</strong> uses computers and switches as
+  <strong>hardware</strong>, network software and services as
+  <strong>software</strong>, and protocols such as
+  <strong>TCP/IP</strong> as <strong>communication rules</strong>.
+</p>
+
+<h1 id="types-of-computer-network">Types of Computer Network</h1>
+
+<p>
+  Computer networks can be classified according to their
+  <strong>coverage area and use</strong>.
+</p>
+
+<h2>1. LAN (Local Area Network)</h2>
+
+<p>
+  A <strong>LAN</strong> connects computers and devices within a
+  <strong>small geographical area</strong>, such as a home, school, office,
+  or computer lab.
+</p>
+
+<p>
+  <strong>Example:</strong> Computers connected within a school computer lab.
+</p>
+
+
+<h2>2. WAN (Wide Area Network)</h2>
+
+<p>
+  A <strong>WAN</strong> connects networks over a
+  <strong>large geographical area</strong>, such as different cities,
+  countries, or continents.
+</p>
+
+<p>
+  A WAN used by a specific organization is also called a
+  <strong>Private WAN</strong>.
+</p>
+
+<p>
+  <strong>Example:</strong> A company's network connecting its offices in
+  Lahore, Karachi, and Islamabad is a <strong>Private WAN</strong>.
+</p>
+
+
+<h2>3. Public WAN</h2>
+
+<p>
+  A <strong>Public WAN</strong> is a wide-area network that is
+  <strong>available to the general public</strong> and is usually provided by
+  telecommunication or internet service providers.
+</p>
+
+<p>
+  <strong>Example:</strong> The <strong>Internet</strong> is the largest
+  example of a Public WAN.
+</p>
+
+
+<h2>Easy to Remember</h2>
+
+<ul>
+  <li>
+    <strong>LAN → Small area</strong>
+  </li>
+
+  <li>
+    <strong>WAN / Private WAN → Large area + Specific organization</strong>
+  </li>
+
+  <li>
+    <strong>Public WAN → Large area + Public access</strong>
+  </li>
+</ul>
+
+<h1 id="networking-devices">
+  Networking Devices
+  <span style="font-size:16px; color:#dc3545;">(80% Important – Long Question)</span>
+</h1>
+
+<p>
+  <strong>Networking devices</strong> are hardware devices used to
+  <strong>connect computers and other devices</strong> and help them
+  <strong>communicate and share data over a network</strong>.
+</p>
+
+<p>
+  The following are important networking devices:
+</p>
+
+
+<h2>1. NIC (Network Interface Card)</h2>
+
+<p>
+  A <strong>NIC</strong> is a hardware component that allows a computer or
+  other device to <strong>connect to a network</strong>.
+</p>
+
+<p>
+  It provides the device with a way to <strong>send and receive data</strong>
+  over a network. A NIC can provide a <strong>wired connection</strong>
+  through Ethernet or a <strong>wireless connection</strong> through Wi-Fi.
+</p>
+
+<p>
+  <strong>Example:</strong>
+</p>
+
+<p>
+  A desktop computer uses an Ethernet NIC to connect to a network using a
+  network cable.
+</p>
+
+<p>
+  <strong>Main function:</strong>
+</p>
+
+<p>
+  <strong>Connects a device to a network.</strong>
+</p>
+
+
+<h2>2. Switch</h2>
+
+<p>
+  A <strong>switch</strong> is a networking device that connects
+  <strong>multiple devices within the same network</strong>.
+</p>
+
+<p>
+  It receives data from one device and forwards it to the
+  <strong>correct destination device</strong>.
+</p>
+
+<p>
+  <strong>Example:</strong>
+</p>
+
+<p>
+  In a school computer lab, several computers can be connected to a switch
+  so they can communicate and share network resources.
+</p>
+
+<p>
+  <strong>Main function:</strong>
+</p>
+
+<p>
+  <strong>Connects devices within a LAN and forwards data to the correct
+  device.</strong>
+</p>
+
+
+<h2>3. Router</h2>
+
+<p>
+  A <strong>router</strong> connects <strong>different networks</strong> and
+  forwards data between them.
+</p>
+
+<p>
+  It determines where data should go and sends it toward the
+  <strong>appropriate network</strong>.
+</p>
+
+<p>
+  <strong>Example:</strong>
+</p>
+
+<p>
+  A home router connects the devices in your home network to the
+  <strong>Internet</strong>.
+</p>
+
+<p>
+  <strong>Main function:</strong>
+</p>
+
+<p>
+  <strong>Connects different networks and directs data between them.</strong>
+</p>
+
+
+<h2>4. Modem</h2>
+
+<p>
+  A <strong>modem</strong> is a device that provides a connection between a
+  local network and an <strong>Internet Service Provider (ISP)</strong> by
+  converting signals used for communication over the service provider's
+  connection.
+</p>
+
+<p>
+  <strong>Example:</strong>
+</p>
+
+<p>
+  A home internet connection may use a modem to connect the home network to
+  the ISP's network.
+</p>
+
+<p>
+  <strong>Main function:</strong>
+</p>
+
+<p>
+  <strong>Provides communication between the user's network and the
+  ISP.</strong>
+</p>
+
+
+<h2>5. Wireless Access Point (WAP)</h2>
+
+<p>
+  A <strong>Wireless Access Point (WAP)</strong> allows wireless devices to
+  <strong>connect to a network using Wi-Fi</strong>.
+</p>
+
+<p>
+  It provides a wireless connection between devices such as laptops,
+  smartphones, and tablets and the network.
+</p>
+
+<p>
+  <strong>Example:</strong>
+</p>
+
+<p>
+  A school can install a wireless access point so students can connect their
+  laptops and phones to the school network through Wi-Fi.
+</p>
+
+<p>
+  <strong>Main function:</strong>
+</p>
+
+<p>
+  <strong>Provides wireless network access to devices.</strong>
+</p>
+
+<h2 id="mcqs">Multiple Choice Questions (MCQs) on Python Programming</h2>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What is software?</div>
+  <div class="mcq-options">
+    a. A physical component of a computer<br>
+    b. A set of programs and instructions that tells a computer what to do<br>
+    c. A type of computer network<br>
+    d. A storage device
+  </div>
+  <div class="mcq-answer">Answer: b. A set of programs and instructions that tells a computer what to do</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. What is software development?</div>
+  <div class="mcq-options">
+    a. The process of designing, creating, testing, and maintaining software<br>
+    b. The process of repairing computer hardware<br>
+    c. The process of installing an operating system<br>
+    d. The process of connecting computers
+  </div>
+  <div class="mcq-answer">Answer: a. The process of designing, creating, testing, and maintaining software</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. What does SDLC stand for?</div>
+  <div class="mcq-options">
+    a. Software Design Language Code<br>
+    b. Software Development Life Cycle<br>
+    c. System Development Language Cycle<br>
+    d. Software Data Learning Cycle
+  </div>
+  <div class="mcq-answer">Answer: b. Software Development Life Cycle</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. What is the main purpose of SDLC?</div>
+  <div class="mcq-options">
+    a. To replace computer hardware<br>
+    b. To provide a structured process for developing software<br>
+    c. To increase internet speed<br>
+    d. To store files
+  </div>
+  <div class="mcq-answer">Answer: b. To provide a structured process for developing software</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. Which is the first stage of SDLC?</div>
+  <div class="mcq-options">
+    a. Testing<br>
+    b. Deployment<br>
+    c. Requirement Gathering<br>
+    d. Maintenance
+  </div>
+  <div class="mcq-answer">Answer: c. Requirement Gathering</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. What happens during Requirement Gathering?</div>
+  <div class="mcq-options">
+    a. Software is deployed<br>
+    b. User and system requirements are identified<br>
+    c. Code is deleted<br>
+    d. Hardware is assembled
+  </div>
+  <div class="mcq-answer">Answer: b. User and system requirements are identified</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. Which of the following is a functional requirement?</div>
+  <div class="mcq-options">
+    a. The system should be secure<br>
+    b. The system should be easy to use<br>
+    c. The library system should allow users to borrow books<br>
+    d. The system should be highly reliable
+  </div>
+  <div class="mcq-answer">Answer: c. The library system should allow users to borrow books</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. Which of the following is a non-functional requirement?</div>
+  <div class="mcq-options">
+    a. Users can search for books<br>
+    b. Users can borrow books<br>
+    c. The system should respond quickly<br>
+    d. Users can register
+  </div>
+  <div class="mcq-answer">Answer: c. The system should respond quickly</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. Which SDLC stage focuses on creating the structure and design of software?</div>
+  <div class="mcq-options">
+    a. Design Phase<br>
+    b. Testing Phase<br>
+    c. Maintenance Phase<br>
+    d. Deployment Phase
+  </div>
+  <div class="mcq-answer">Answer: a. Design Phase</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. What happens during the Coding/Development stage?</div>
+  <div class="mcq-options">
+    a. Requirements are collected<br>
+    b. Software is designed on paper only<br>
+    c. Developers write the actual program code<br>
+    d. Software is permanently removed
+  </div>
+  <div class="mcq-answer">Answer: c. Developers write the actual program code</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. What is the main purpose of software testing?</div>
+  <div class="mcq-options">
+    a. To identify and fix errors<br>
+    b. To increase the size of software<br>
+    c. To remove all documentation<br>
+    d. To design computer hardware
+  </div>
+  <div class="mcq-answer">Answer: a. To identify and fix errors</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. What is deployment?</div>
+  <div class="mcq-options">
+    a. Writing program code<br>
+    b. Installing and making software available for real-world use<br>
+    c. Gathering requirements<br>
+    d. Drawing UML diagrams
+  </div>
+  <div class="mcq-answer">Answer: b. Installing and making software available for real-world use</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. What is the purpose of the maintenance stage?</div>
+  <div class="mcq-options">
+    a. To collect initial requirements<br>
+    b. To fix bugs and improve existing software<br>
+    c. To create the first design<br>
+    d. To stop software development
+  </div>
+  <div class="mcq-answer">Answer: b. To fix bugs and improve existing software</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. What is a software development methodology?</div>
+  <div class="mcq-options">
+    a. A programming language<br>
+    b. A structured approach used to develop software<br>
+    c. A computer device<br>
+    d. A database
+  </div>
+  <div class="mcq-answer">Answer: b. A structured approach used to develop software</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. Which software process model follows a linear sequence of stages?</div>
+  <div class="mcq-options">
+    a. Agile Model<br>
+    b. Waterfall Model<br>
+    c. Spiral Model<br>
+    d. Prototype Model
+  </div>
+  <div class="mcq-answer">Answer: b. Waterfall Model</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">16. Which is a major disadvantage of the Waterfall Model?</div>
+  <div class="mcq-options">
+    a. It is highly flexible<br>
+    b. It allows continuous changes easily<br>
+    c. It is difficult to accommodate changing requirements<br>
+    d. It has no documentation
+  </div>
+  <div class="mcq-answer">Answer: c. It is difficult to accommodate changing requirements</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">17. What is a key feature of Agile methodology?</div>
+  <div class="mcq-options">
+    a. Development is completed in a single step<br>
+    b. Development is performed through short iterations or sprints<br>
+    c. Testing is never performed<br>
+    d. Requirements cannot change
+  </div>
+  <div class="mcq-answer">Answer: b. Development is performed through short iterations or sprints</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">18. Which methodology is generally more flexible toward changing requirements?</div>
+  <div class="mcq-options">
+    a. Waterfall<br>
+    b. Agile<br>
+    c. Linear<br>
+    d. Sequential
+  </div>
+  <div class="mcq-answer">Answer: b. Agile</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">19. What is project planning and management concerned with?</div>
+  <div class="mcq-options">
+    a. What, who, when, and cost of a project<br>
+    b. Only writing code<br>
+    c. Only software testing<br>
+    d. Only designing user interfaces
+  </div>
+  <div class="mcq-answer">Answer: a. What, who, when, and cost of a project</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">20. What is risk assessment?</div>
+  <div class="mcq-options">
+    a. Identifying and analyzing possible problems<br>
+    b. Writing source code<br>
+    c. Installing software<br>
+    d. Creating user accounts
+  </div>
+  <div class="mcq-answer">Answer: a. Identifying and analyzing possible problems</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">21. Which of the following is a step in risk management?</div>
+  <div class="mcq-options">
+    a. Identify risks<br>
+    b. Ignore risks<br>
+    c. Delete requirements<br>
+    d. Avoid testing
+  </div>
+  <div class="mcq-answer">Answer: a. Identify risks</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">22. What is Quality Assurance (QA)?</div>
+  <div class="mcq-options">
+    a. A process of ensuring software quality<br>
+    b. A programming language<br>
+    c. A type of database<br>
+    d. A hardware component
+  </div>
+  <div class="mcq-answer">Answer: a. A process of ensuring software quality</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">23. What does UML stand for?</div>
+  <div class="mcq-options">
+    a. Universal Modeling Language<br>
+    b. Unified Modeling Language<br>
+    c. Unified Machine Language<br>
+    d. User Modeling Logic
+  </div>
+  <div class="mcq-answer">Answer: b. Unified Modeling Language</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">24. What is UML mainly used for?</div>
+  <div class="mcq-options">
+    a. Modeling and visualizing software systems<br>
+    b. Writing machine code<br>
+    c. Managing computer hardware<br>
+    d. Increasing storage capacity
+  </div>
+  <div class="mcq-answer">Answer: a. Modeling and visualizing software systems</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">25. Which UML diagram shows interactions between users and a system?</div>
+  <div class="mcq-options">
+    a. Class Diagram<br>
+    b. Use Case Diagram<br>
+    c. Activity Diagram<br>
+    d. Sequence Diagram
+  </div>
+  <div class="mcq-answer">Answer: b. Use Case Diagram</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">26. What represents a user or external system in a Use Case Diagram?</div>
+  <div class="mcq-options">
+    a. Actor<br>
+    b. Class<br>
+    c. Method<br>
+    d. Lifeline
+  </div>
+  <div class="mcq-answer">Answer: a. Actor</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">27. What does a Class Diagram mainly represent?</div>
+  <div class="mcq-options">
+    a. The structure of a software system<br>
+    b. The sequence of messages only<br>
+    c. The physical location of computers<br>
+    d. The software installation process
+  </div>
+  <div class="mcq-answer">Answer: a. The structure of a software system</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">28. Which of the following can be represented inside a class?</div>
+  <div class="mcq-options">
+    a. Attributes and methods<br>
+    b. Only actors<br>
+    c. Only messages<br>
+    d. Only arrows
+  </div>
+  <div class="mcq-answer">Answer: a. Attributes and methods</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">29. What does a Sequence Diagram show?</div>
+  <div class="mcq-options">
+    a. The structure of classes<br>
+    b. The sequence of interactions between objects or systems<br>
+    c. Only software requirements<br>
+    d. Hardware components
+  </div>
+  <div class="mcq-answer">Answer: b. The sequence of interactions between objects or systems</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">30. In a Sequence Diagram, what does a lifeline represent?</div>
+  <div class="mcq-options">
+    a. The existence of an actor or object over time<br>
+    b. A programming language<br>
+    c. A database table<br>
+    d. A software bug
+  </div>
+  <div class="mcq-answer">Answer: a. The existence of an actor or object over time</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">31. What does an Activity Diagram represent?</div>
+  <div class="mcq-options">
+    a. The workflow or sequence of activities in a process<br>
+    b. Only software classes<br>
+    c. Only database structures<br>
+    d. Computer hardware
+  </div>
+  <div class="mcq-answer">Answer: a. The workflow or sequence of activities in a process</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">32. Which symbol represents a decision in an Activity Diagram?</div>
+  <div class="mcq-options">
+    a. Rectangle<br>
+    b. Diamond<br>
+    c. Circle<br>
+    d. Triangle
+  </div>
+  <div class="mcq-answer">Answer: b. Diamond</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">33. What is a Design Pattern?</div>
+  <div class="mcq-options">
+    a. A ready-made software application<br>
+    b. A general and reusable solution to a common software design problem<br>
+    c. A programming language<br>
+    d. A testing tool
+  </div>
+  <div class="mcq-answer">Answer: b. A general and reusable solution to a common software design problem</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">34. Which Design Pattern ensures that a class has only one instance?</div>
+  <div class="mcq-options">
+    a. Factory Pattern<br>
+    b. Observer Pattern<br>
+    c. Singleton Pattern<br>
+    d. Strategy Pattern
+  </div>
+  <div class="mcq-answer">Answer: c. Singleton Pattern</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">35. What is debugging?</div>
+  <div class="mcq-options">
+    a. The process of finding and fixing errors in software<br>
+    b. The process of designing a database<br>
+    c. The process of deploying software<br>
+    d. The process of collecting requirements
+  </div>
+  <div class="mcq-answer">Answer: a. The process of finding and fixing errors in software</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">36. Which testing level tests individual components or units of a program?</div>
+  <div class="mcq-options">
+    a. System Testing<br>
+    b. Acceptance Testing<br>
+    c. Unit Testing<br>
+    d. Integration Testing
+  </div>
+  <div class="mcq-answer">Answer: c. Unit Testing</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">37. What does IDE stand for?</div>
+  <div class="mcq-options">
+    a. Integrated Development Environment<br>
+    b. Internal Design Editor<br>
+    c. Integrated Data Engine<br>
+    d. Internet Development Environment
+  </div>
+  <div class="mcq-answer">Answer: a. Integrated Development Environment</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">38. Which of the following is an example of an IDE?</div>
+  <div class="mcq-options">
+    a. PyCharm<br>
+    b. GitHub<br>
+    c. WhatsApp<br>
+    d. VLC
+  </div>
+  <div class="mcq-answer">Answer: a. PyCharm</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">39. What is the main function of a compiler?</div>
+  <div class="mcq-options">
+    a. To execute code line by line only<br>
+    b. To translate the entire program into machine code or another target form<br>
+    c. To draw UML diagrams<br>
+    d. To manage project risks
+  </div>
+  <div class="mcq-answer">Answer: b. To translate the entire program into machine code or another target form</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">40. Which of the following is a source code repository?</div>
+  <div class="mcq-options">
+    a. GitHub<br>
+    b. PyCharm<br>
+    c. Notepad++<br>
+    d. Google Colab
+  </div>
+  <div class="mcq-answer">Answer: a. GitHub</div>
+</div>
+
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Introduction To Software Development)</h2>
+
+  <h2 id="mcqs">Multiple Choice Questions (MCQs) on Software Development</h2>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">1. What is software?</div>
+    <div class="mcq-options">
+      <button>a. A physical component of a computer</button>
+      <button>b. A set of programs and instructions that tells a computer what to do</button>
+      <button>c. A type of computer network</button>
+      <button>d. A storage device</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">2. What is software development?</div>
+    <div class="mcq-options">
+      <button>a. The process of designing, creating, testing, and maintaining software</button>
+      <button>b. The process of repairing computer hardware</button>
+      <button>c. The process of installing an operating system</button>
+      <button>d. The process of connecting computers</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">3. What does SDLC stand for?</div>
+    <div class="mcq-options">
+      <button>a. Software Design Language Code</button>
+      <button>b. Software Development Life Cycle</button>
+      <button>c. System Development Language Cycle</button>
+      <button>d. Software Data Learning Cycle</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">4. What is the main purpose of SDLC?</div>
+    <div class="mcq-options">
+      <button>a. To replace computer hardware</button>
+      <button>b. To provide a structured process for developing software</button>
+      <button>c. To increase internet speed</button>
+      <button>d. To store files</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">5. Which is the first stage of SDLC?</div>
+    <div class="mcq-options">
+      <button>a. Testing</button>
+      <button>b. Deployment</button>
+      <button>c. Requirement Gathering</button>
+      <button>d. Maintenance</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">6. What happens during Requirement Gathering?</div>
+    <div class="mcq-options">
+      <button>a. Software is deployed</button>
+      <button>b. User and system requirements are identified</button>
+      <button>c. Code is deleted</button>
+      <button>d. Hardware is assembled</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">7. Which of the following is a functional requirement?</div>
+    <div class="mcq-options">
+      <button>a. The system should be secure</button>
+      <button>b. The system should be easy to use</button>
+      <button>c. The library system should allow users to borrow books</button>
+      <button>d. The system should be highly reliable</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">8. Which of the following is a non-functional requirement?</div>
+    <div class="mcq-options">
+      <button>a. Users can search for books</button>
+      <button>b. Users can borrow books</button>
+      <button>c. The system should respond quickly</button>
+      <button>d. Users can register</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">9. Which SDLC stage focuses on creating the structure and design of software?</div>
+    <div class="mcq-options">
+      <button>a. Design Phase</button>
+      <button>b. Testing Phase</button>
+      <button>c. Maintenance Phase</button>
+      <button>d. Deployment Phase</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">10. What happens during the Coding/Development stage?</div>
+    <div class="mcq-options">
+      <button>a. Requirements are collected</button>
+      <button>b. Software is designed on paper only</button>
+      <button>c. Developers write the actual program code</button>
+      <button>d. Software is permanently removed</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">11. What is the main purpose of software testing?</div>
+    <div class="mcq-options">
+      <button>a. To identify and fix errors</button>
+      <button>b. To increase the size of software</button>
+      <button>c. To remove all documentation</button>
+      <button>d. To design computer hardware</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">12. What is deployment?</div>
+    <div class="mcq-options">
+      <button>a. Writing program code</button>
+      <button>b. Installing and making software available for real-world use</button>
+      <button>c. Gathering requirements</button>
+      <button>d. Drawing UML diagrams</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">13. What is the purpose of the maintenance stage?</div>
+    <div class="mcq-options">
+      <button>a. To collect initial requirements</button>
+      <button>b. To fix bugs and improve existing software</button>
+      <button>c. To create the first design</button>
+      <button>d. To stop software development</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. What is a software development methodology?</div>
+    <div class="mcq-options">
+      <button>a. A programming language</button>
+      <button>b. A structured approach used to develop software</button>
+      <button>c. A computer device</button>
+      <button>d. A database</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">15. Which software process model follows a linear sequence of stages?</div>
+    <div class="mcq-options">
+      <button>a. Agile Model</button>
+      <button>b. Waterfall Model</button>
+      <button>c. Spiral Model</button>
+      <button>d. Prototype Model</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">16. Which is a major disadvantage of the Waterfall Model?</div>
+    <div class="mcq-options">
+      <button>a. It is highly flexible</button>
+      <button>b. It allows continuous changes easily</button>
+      <button>c. It is difficult to accommodate changing requirements</button>
+      <button>d. It has no documentation</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">17. What is a key feature of Agile methodology?</div>
+    <div class="mcq-options">
+      <button>a. Development is completed in a single step</button>
+      <button>b. Development is performed through short iterations or sprints</button>
+      <button>c. Testing is never performed</button>
+      <button>d. Requirements cannot change</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">18. Which methodology is generally more flexible toward changing requirements?</div>
+    <div class="mcq-options">
+      <button>a. Waterfall</button>
+      <button>b. Agile</button>
+      <button>c. Linear</button>
+      <button>d. Sequential</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">19. What is project planning and management concerned with?</div>
+    <div class="mcq-options">
+      <button>a. What, who, when, and cost of a project</button>
+      <button>b. Only writing code</button>
+      <button>c. Only software testing</button>
+      <button>d. Only designing user interfaces</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">20. What is risk assessment?</div>
+    <div class="mcq-options">
+      <button>a. Identifying and analyzing possible problems</button>
+      <button>b. Writing source code</button>
+      <button>c. Installing software</button>
+      <button>d. Creating user accounts</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">21. Which of the following is a step in risk management?</div>
+    <div class="mcq-options">
+      <button>a. Identify risks</button>
+      <button>b. Ignore risks</button>
+      <button>c. Delete requirements</button>
+      <button>d. Avoid testing</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">22. What is Quality Assurance (QA)?</div>
+    <div class="mcq-options">
+      <button>a. A process of ensuring software quality</button>
+      <button>b. A programming language</button>
+      <button>c. A type of database</button>
+      <button>d. A hardware component</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">23. What does UML stand for?</div>
+    <div class="mcq-options">
+      <button>a. Universal Modeling Language</button>
+      <button>b. Unified Modeling Language</button>
+      <button>c. Unified Machine Language</button>
+      <button>d. User Modeling Logic</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">24. What is UML mainly used for?</div>
+    <div class="mcq-options">
+      <button>a. Modeling and visualizing software systems</button>
+      <button>b. Writing machine code</button>
+      <button>c. Managing computer hardware</button>
+      <button>d. Increasing storage capacity</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">25. Which UML diagram shows interactions between users and a system?</div>
+    <div class="mcq-options">
+      <button>a. Class Diagram</button>
+      <button>b. Use Case Diagram</button>
+      <button>c. Activity Diagram</button>
+      <button>d. Sequence Diagram</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">26. What represents a user or external system in a Use Case Diagram?</div>
+    <div class="mcq-options">
+      <button>a. Actor</button>
+      <button>b. Class</button>
+      <button>c. Method</button>
+      <button>d. Lifeline</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">27. What does a Class Diagram mainly represent?</div>
+    <div class="mcq-options">
+      <button>a. The structure of a software system</button>
+      <button>b. The sequence of messages only</button>
+      <button>c. The physical location of computers</button>
+      <button>d. The software installation process</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">28. Which of the following can be represented inside a class?</div>
+    <div class="mcq-options">
+      <button>a. Attributes and methods</button>
+      <button>b. Only actors</button>
+      <button>c. Only messages</button>
+      <button>d. Only arrows</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">29. What does a Sequence Diagram show?</div>
+    <div class="mcq-options">
+      <button>a. The structure of classes</button>
+      <button>b. The sequence of interactions between objects or systems</button>
+      <button>c. Only software requirements</button>
+      <button>d. Hardware components</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">30. In a Sequence Diagram, what does a lifeline represent?</div>
+    <div class="mcq-options">
+      <button>a. The existence of an actor or object over time</button>
+      <button>b. A programming language</button>
+      <button>c. A database table</button>
+      <button>d. A software bug</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">31. What does an Activity Diagram represent?</div>
+    <div class="mcq-options">
+      <button>a. The workflow or sequence of activities in a process</button>
+      <button>b. Only software classes</button>
+      <button>c. Only database structures</button>
+      <button>d. Computer hardware</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">32. Which symbol represents a decision in an Activity Diagram?</div>
+    <div class="mcq-options">
+      <button>a. Rectangle</button>
+      <button>b. Diamond</button>
+      <button>c. Circle</button>
+      <button>d. Triangle</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">33. What is a Design Pattern?</div>
+    <div class="mcq-options">
+      <button>a. A ready-made software application</button>
+      <button>b. A general and reusable solution to a common software design problem</button>
+      <button>c. A programming language</button>
+      <button>d. A testing tool</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">34. Which Design Pattern ensures that a class has only one instance?</div>
+    <div class="mcq-options">
+      <button>a. Factory Pattern</button>
+      <button>b. Observer Pattern</button>
+      <button>c. Singleton Pattern</button>
+      <button>d. Strategy Pattern</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">35. What is debugging?</div>
+    <div class="mcq-options">
+      <button>a. The process of finding and fixing errors in software</button>
+      <button>b. The process of designing a database</button>
+      <button>c. The process of deploying software</button>
+      <button>d. The process of collecting requirements</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">36. Which testing level tests individual components of a program?</div>
+    <div class="mcq-options">
+      <button>a. System Testing</button>
+      <button>b. Acceptance Testing</button>
+      <button>c. Unit Testing</button>
+      <button>d. Integration Testing</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">37. What does IDE stand for?</div>
+    <div class="mcq-options">
+      <button>a. Integrated Development Environment</button>
+      <button>b. Internal Design Editor</button>
+      <button>c. Integrated Data Engine</button>
+      <button>d. Internet Development Environment</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">38. Which of the following is an example of an IDE?</div>
+    <div class="mcq-options">
+      <button>a. PyCharm</button>
+      <button>b. GitHub</button>
+      <button>c. WhatsApp</button>
+      <button>d. VLC</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">39. What is the main function of a compiler?</div>
+    <div class="mcq-options">
+      <button>a. To execute code line by line only</button>
+      <button>b. To translate the entire program into machine code or another target form</button>
+      <button>c. To draw UML diagrams</button>
+      <button>d. To manage project risks</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">40. Which of the following is a source code repository?</div>
+    <div class="mcq-options">
+      <button>a. GitHub</button>
+      <button>b. PyCharm</button>
+      <button>c. Notepad++</button>
+      <button>d. Google Colab</button>
+    </div>
+  </div>
+
+</section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+      
+<h2 id="faqs">FAQs</h2>
+
+<section class="faq-section">
+
+<h2 id="faqs">Software Development FAQs</h2>
+
+<div class="faq-item">
+  <button class="faq-question">What is software?</button>
+  <div class="faq-answer">
+    <p>Software is a set of programs and instructions that tells a computer what to do.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is software development?</button>
+  <div class="faq-answer">
+    <p>Software development is the process of designing, creating, testing, deploying, and maintaining software.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is SDLC?</button>
+  <div class="faq-answer">
+    <p>SDLC stands for Software Development Life Cycle. It is a structured process used to develop and maintain software.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What are the main stages of SDLC?</button>
+  <div class="faq-answer">
+    <p>The main stages are Requirement Gathering, Design, Coding, Testing, Deployment, and Maintenance.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is Requirement Gathering?</button>
+  <div class="faq-answer">
+    <p>Requirement Gathering is the process of identifying and collecting the needs and expectations of users and the system.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the difference between functional and non-functional requirements?</button>
+  <div class="faq-answer">
+    <p>Functional requirements describe what a system should do, while non-functional requirements describe how well the system should perform.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the Waterfall Model?</button>
+  <div class="faq-answer">
+    <p>The Waterfall Model is a software development model in which development progresses through a fixed sequence of stages.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is Agile methodology?</button>
+  <div class="faq-answer">
+    <p>Agile is a flexible software development methodology in which software is developed through short iterations or sprints.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is risk assessment and management?</button>
+  <div class="faq-answer">
+    <p>Risk assessment and management involves identifying, analyzing, mitigating, and monitoring possible risks in a software project.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is Quality Assurance (QA)?</button>
+  <div class="faq-answer">
+    <p>Quality Assurance is the process of ensuring that software meets the required quality standards through activities such as testing and code reviews.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is UML?</button>
+  <div class="faq-answer">
+    <p>UML stands for Unified Modeling Language. It is used to visually model and represent the structure and behavior of software systems.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a Use Case Diagram?</button>
+  <div class="faq-answer">
+    <p>A Use Case Diagram shows the interactions between users or external systems and a software system.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a Class Diagram?</button>
+  <div class="faq-answer">
+    <p>A Class Diagram represents the structure of a software system by showing classes, their attributes, methods, and relationships.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a Sequence Diagram?</button>
+  <div class="faq-answer">
+    <p>A Sequence Diagram shows how objects or systems interact with each other in a particular sequence over time.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is debugging?</button>
+  <div class="faq-answer">
+    <p>Debugging is the process of finding and fixing errors or bugs in software.</p>
+  </div>
+</div>
+
+</div>
+
+</section>
+      
+<h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/11-class/chapter-1/class-11-computer-chapter-1-introduction-to-software-development.pdf">
+  Download PDF
+</a>
+</div>
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="#">Technology</a></li>
+
+                <li><a href="#">LifeStyle</a></li>
+
+                <li><a href="#">Health</a></li>
+
+                <li><a href="#">Education</a></li>
+
+                <li><a href="#">Business</a></li>
+
+                <li><a href="#">Travel</a></li>
+
+                <li><a href="#">9 Computer Science</a></li>
+
+                <li><a href="#">10 Computer Science</a></li>
+
+                <li><a href="#">11 Computer Science</a></li>
+
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                question.classList.toggle("active");
+
+                const answer = question.nextElementSibling;
+
+                if (answer.style.maxHeight) {
+
+                    answer.style.maxHeight = null;
+
+                } else {
+
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+    
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+const supabase = createClient(
+  "https://pojmeeozeuzqtgrvwgxw.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvam1lZW96ZXV6cXRncnZ3Z3h3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4ODM2MjYsImV4cCI6MjA5NTQ1OTYyNn0.c9sgwAH8ysgayh_dvk_uzNTK5XuUZ1k57Lk_cfzlhbA"
+);
+
+const POST_ID    = "blog-2";
+const ADMIN_PASS = "salman.coding";
+const ADMIN_NAME = "Salman (Admin)";
+
+let isAdmin = false;
+
+/* ── HELPERS ── */
+function esc(s) {
+  return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+function initial(n) { return (n||"?").charAt(0).toUpperCase(); }
+function timeAgo(d) {
+  const s = Math.floor((Date.now() - new Date(d)) / 1000);
+  if (s < 60)    return s + "s ago";
+  if (s < 3600)  return Math.floor(s/60) + "m ago";
+  if (s < 86400) return Math.floor(s/3600) + "h ago";
+  return Math.floor(s/86400) + "d ago";
+}
+
+/* ── ADMIN LOGIN / LOGOUT ── */
+window.adminLogin = function() {
+  if (document.getElementById("admin-pass").value === ADMIN_PASS) {
+    isAdmin = true;
+    document.getElementById("admin-bar").innerHTML =
+      `<span style="color:var(--accent);font-weight:600;font-size:13px;">✓ Admin</span>
+       <button onclick="adminLogout()" style="background:transparent;color:var(--muted);border:1px solid var(--border);font-size:12px;padding:5px 10px;">Logout</button>`;
+    document.getElementById("main").classList.add("admin-mode");
+    loadComments();
+  } else {
+    alert("Wrong password.");
+  }
+};
+
+window.adminLogout = function() {
+  isAdmin = false;
+  document.getElementById("admin-bar").innerHTML = `
+    <span style="font-size:12px;color:var(--muted);">Admin</span>
+    <input id="admin-pass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter') adminLogin()">
+    <button onclick="adminLogin()">Login</button>`;
+  document.getElementById("main").classList.remove("admin-mode");
+  loadComments();
+};
+
+/* ── POST TOP-LEVEL COMMENT (visitor) ── */
+window.postComment = async function() {
+  const name = document.getElementById("pub-name").value.trim();
+  const msg  = document.getElementById("pub-msg").value.trim();
+  if (!name || !msg) { alert("Please enter your name and message."); return; }
+  const { error } = await supabase.from("comments").insert([{
+    name, message: msg, post_id: POST_ID, parent_id: null
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  document.getElementById("pub-msg").value = "";
+  loadComments();
+};
+
+/* ── TOGGLE ADMIN REPLY BOX ── */
+window.showAdminReplyBox = function(id) {
+  if (!isAdmin) return;
+  const el = document.getElementById("arb-" + id);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── ADMIN POST REPLY ── */
+window.postAdminReply = async function(parentId) {
+  if (!isAdmin) return;
+  const ta  = document.getElementById("ari-" + parentId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: ADMIN_NAME, message: msg, post_id: POST_ID, parent_id: parentId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── SHOW VISITOR REPLY-BACK BOX ── */
+// visitorName = name of the original commenter (prefilled, locked)
+window.showVisitorReplyBox = function(adminReplyId, visitorName) {
+  const el = document.getElementById("vrb-" + adminReplyId);
+  if (!el) return;
+  el.style.display = el.style.display === "flex" ? "none" : "flex";
+  el.querySelector("textarea")?.focus();
+};
+
+/* ── VISITOR POSTS REPLY-BACK ── */
+window.postVisitorReply = async function(adminReplyId, visitorName) {
+  const ta  = document.getElementById("vri-" + adminReplyId);
+  const msg = ta?.value.trim();
+  if (!msg) return;
+  ta.value = "";
+  const { error } = await supabase.from("comments").insert([{
+    name: visitorName, message: msg, post_id: POST_ID, parent_id: adminReplyId
+  }]);
+  if (error) { alert("Error: " + error.message); return; }
+  loadComments();
+};
+
+/* ── BUILD THREAD under a top-level comment ── */
+// Structure: top comment → admin replies → visitor reply-backs (under each admin reply)
+function buildThread(all, topComment) {
+  // Direct admin replies to this top comment
+  const adminReplies = all.filter(c =>
+    c.parent_id === topComment.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    // Visitor replies back to this specific admin reply
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)}
+            <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+          ${isAdmin ? `<span class="admin-reply-btn" onclick="showAdminReplyBox(${vr.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${vr.id}" style="display:none;">
+            <textarea id="ari-${vr.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${vr.id})}"></textarea>
+            <button onclick="postAdminReply(${vr.id})">Send Reply</button>
+          </div>` : ""}
+          ${buildNestedThread(all, vr, topComment.name)}
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <!-- Visitor can reply back only to this admin reply -->
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(topComment.name)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(topComment.name)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(topComment.name)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* Deeper nesting: admin replies to visitor reply-backs */
+function buildNestedThread(all, visitorReply, originalVisitorName) {
+  const adminReplies = all.filter(c =>
+    c.parent_id === visitorReply.id && c.name === ADMIN_NAME
+  );
+  if (!adminReplies.length) return "";
+
+  const html = adminReplies.map(ar => {
+    const visitorReplies = all.filter(c =>
+      c.parent_id === ar.id && c.name !== ADMIN_NAME
+    );
+    const visitorRepliesHTML = visitorReplies.map(vr => `
+      <div class="visitor-reply-bubble">
+        <div class="avatar">${initial(vr.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(vr.name)} <span class="comment-time">${timeAgo(vr.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(vr.message)}</div>
+        </div>
+      </div>
+    `).join("");
+
+    return `
+      <div class="reply-bubble" style="margin-top:8px;">
+        <div class="avatar admin-av">${initial(ar.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(ar.name)} <span class="badge">ADMIN</span>
+            <span class="comment-time">${timeAgo(ar.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(ar.message)}</div>
+          <div class="visitor-reply-box" id="vrb-${ar.id}" style="display:none;">
+            <textarea id="vri-${ar.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postVisitorReply(${ar.id},'${esc(originalVisitorName)}')}"></textarea>
+            <button onclick="postVisitorReply(${ar.id},'${esc(originalVisitorName)}')">Send Reply</button>
+          </div>
+          <span style="font-size:11px;color:var(--muted);cursor:pointer;font-weight:500;margin-top:5px;display:inline-block;"
+            onclick="showVisitorReplyBox(${ar.id},'${esc(originalVisitorName)}')">↩ Reply</span>
+          ${visitorRepliesHTML}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="thread">${html}</div>`;
+}
+
+/* ── LOAD COMMENTS ── */
+async function loadComments() {
+  const { data, error } = await supabase
+    .from("comments").select("*")
+    .eq("post_id", POST_ID)
+    .order("created_at", { ascending: true });
+
+  const list = document.getElementById("comments-list");
+  if (error) { list.innerHTML = `<div class="empty">Could not load comments.</div>`; return; }
+
+  const all = data || [];
+  const top = all.filter(c => !c.parent_id);
+
+  if (!top.length) { list.innerHTML = `<div class="empty">No comments yet. Be the first!</div>`; return; }
+
+  list.innerHTML = top.map(c => `
+    <div class="comment-card">
+      <div class="comment-row">
+        <div class="avatar">${initial(c.name)}</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            ${esc(c.name)}
+            <span class="comment-time">${timeAgo(c.created_at)}</span>
+          </div>
+          <div class="comment-text">${esc(c.message)}</div>
+          <span class="admin-reply-btn" onclick="showAdminReplyBox(${c.id})">↩ Reply as Admin</span>
+          <div class="admin-reply-box" id="arb-${c.id}" style="display:none;">
+            <textarea id="ari-${c.id}" placeholder="Write your reply…" rows="2" maxlength="500"
+              onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();postAdminReply(${c.id})}"></textarea>
+            <button onclick="postAdminReply(${c.id})">Send Reply</button>
+          </div>
+          ${buildThread(all, c)}
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* ── REALTIME ── */
+supabase.channel("comments-rt")
+  .on("postgres_changes", { event: "INSERT", schema: "public", table: "comments", filter: `post_id=eq.${POST_ID}` },
+    () => loadComments())
+  .subscribe();
+
+loadComments();
+</script>
+
+</body>
+</html>
