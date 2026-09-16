@@ -86,6 +86,23 @@ table td strong {
     color: #212529;
 }
 
+/* Prevent long text/numbers from breaking responsive layouts */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+td,
+th,
+div,
+span {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 /* Mobile Responsive Table */
 @media (max-width: 800px) {
     table {
