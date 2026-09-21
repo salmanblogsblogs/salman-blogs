@@ -9,14 +9,13 @@
 content="width=device-width, initial-scale=1.0">
 
 <title>
-
 Categories | Salman Blogs
-
 </title>
 
 <!-- CSS -->
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="categories.css">
 
 <meta name="description"
 content="Browse all categories on Salman Blogs including Technology, AI, Programming, Education, Health, Business, Travel and Computer Science Notes.">
@@ -53,10 +52,6 @@ rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-
-
-<!-- <link rel="stylesheet" href="technology.css"> -->
 
 <!-- Favicon -->
 
@@ -110,6 +105,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 </header>
 
+
 <!-- ======================================== -->
 <!-- HERO -->
 <!-- ======================================== -->
@@ -162,13 +158,32 @@ and Computer Science Notes.
 
 <div class="category-search">
 
-<input type="text" id="categorySearch" placeholder="Search category...">
+<input
+type="text"
+id="categorySearch"
+placeholder="Search category..."
+autocomplete="off"
+aria-label="Search categories"
+>
 
 </div>
+
+<!-- Search Result Message -->
+
+<p
+id="categorySearchMessage"
+style="
+display:none;
+margin-top:15px;
+font-weight:600;
+"
+aria-live="polite">
+</p>
 
 </div>
 
 </section>
+
 
 <!-- ======================================== -->
 <!-- CATEGORY SECTION STARTS HERE -->
@@ -181,177 +196,194 @@ and Computer Science Notes.
 <div class="section-title">
 
 <span>
-
 Explore
-
 </span>
 
 <h2>
-
 Browse Categories
-
 </h2>
 
 <p>
-
 Choose your favorite category.
-
 </p>
 
 </div>
 
-<div class="category-grid">
+
+<div class="category-grid" id="categoryGrid">
+
 
 <!-- Technology -->
 
 <a href="technology.html" class="category-box">
 
-    <i class="fas fa-microchip"></i>
+<i class="fas fa-microchip"></i>
 
-    <h3>Technology</h3>
+<h3>Technology</h3>
 
-    <p>
-        AI, Gadgets, Future Tech and Digital Trends
-    </p>
+<p>
+AI, Gadgets, Future Tech and Digital Trends
+</p>
 
 </a>
+
 
 <!-- Computer Science -->
 
 <a href="computer-science.html" class="category-box">
+
 <i class="fas fa-brain"></i>
 
 <h3>Computer Science</h3>
 
 <p>
-    Algorithms, Data Structures, Databases and CS Fundamentals
+Algorithms, Data Structures, Databases and CS Fundamentals
 </p>
+
 </a>
+
+
 <!-- How To Guides -->
 
 <a href="how-to-guides.html" class="category-box">
+
 <i class="fas fa-circle-question"></i>
 
 <h3>How-To Guides</h3>
 
 <p>
-    Step-by-Step Tutorials, Tips, Fixes and Practical Solutions
+Step-by-Step Tutorials, Tips, Fixes and Practical Solutions
 </p>
 
 </a>
+
 
 <!-- Education -->
 
 <a href="education.html" class="category-box">
 
-    <i class="fas fa-graduation-cap"></i>
+<i class="fas fa-graduation-cap"></i>
 
-    <h3>Education</h3>
+<h3>Education</h3>
 
-    <p>
-        Online Learning, Study Tips and Career Guides
-    </p>
+<p>
+Online Learning, Study Tips and Career Guides
+</p>
 
 </a>
+
 
 <!-- AI TOOLS -->
 
 <a href="ai-tools.html" class="category-box">
+
 <i class="fas fa-robot"></i>
 
 <h3>AI Tools</h3>
 
 <p>
-    AI Tools, Chatbots, Automation, Productivity and Latest AI Trends
+AI Tools, Chatbots, Automation, Productivity and Latest AI Trends
 </p>
+
 </a>
 
 
+<!-- Career Roadmaps -->
+
 <a href="roadmaps.html" class="category-box">
+
 <i class="fas fa-route"></i>
 
 <h3>Career Roadmaps</h3>
 
 <p>
-    Step-by-Step Roadmaps for Programming, IT, AI and Tech Careers
+Step-by-Step Roadmaps for Programming, IT, AI and Tech Careers
 </p>
+
 </a>
+
 
 <!-- Class 8 -->
 
 <a href="8-computer-science.html" class="category-box">
 
-    <i class="fas fa-book"></i>
+<i class="fas fa-book"></i>
 
-    <h3>Class 8 Computer</h3>
+<h3>Class 8 Computer</h3>
 
-    <p>
-        Notes, MCQs, Exercises and Lecture Material
-    </p>
+<p>
+Notes, MCQs, Exercises and Lecture Material
+</p>
 
 </a>
+
 
 <!-- Class 9 -->
 
 <a href="9-computer-science.html" class="category-box">
 
-    <i class="fas fa-laptop-code"></i>
+<i class="fas fa-laptop-code"></i>
 
-    <h3>Class 9 Computer</h3>
+<h3>Class 9 Computer</h3>
 
-    <p>
-        Complete Notes, MCQs, Long and Short Questions
-    </p>
+<p>
+Complete Notes, MCQs, Long and Short Questions
+</p>
 
 </a>
+
 
 <!-- Class 10 -->
 
 <a href="10-computer-science.html" class="category-box">
 
-    <i class="fas fa-desktop"></i>
+<i class="fas fa-desktop"></i>
 
-    <h3>Class 10 Computer</h3>
+<h3>Class 10 Computer</h3>
 
-    <p>
-         Complete Notes, MCQs, Long and Short Questions
-    </p>
+<p>
+Complete Notes, MCQs, Long and Short Questions
+</p>
 
 </a>
+
 
 <!-- Class 11 -->
 
 <a href="11-computer-science.html" class="category-box">
 
-    <i class="fas fa-code"></i>
+<i class="fas fa-code"></i>
 
-    <h3>Class 11 Computer</h3>
+<h3>Class 11 Computer</h3>
 
-    <p>
-         Complete Notes, MCQs, Long and Short Questions
-    </p>
+<p>
+Complete Notes, MCQs, Long and Short Questions
+</p>
 
 </a>
+
 
 <!-- Class 12 -->
 
 <a href="12-computer-science.html" class="category-box">
 
-    <i class="fas fa-code"></i>
+<i class="fas fa-code"></i>
 
-    <h3>Class 12 Computer</h3>
+<h3>Class 12 Computer</h3>
 
-    <p>
-         Complete Notes, MCQs, Long and Short Questions
-    </p>
+<p>
+Complete Notes, MCQs, Long and Short Questions
+</p>
 
 </a>
+
 
 </div>
 
 </div>
 
 </section>
+
 
 <!-- ========================================= -->
 <!-- WHAT WE OFFER -->
@@ -359,235 +391,317 @@ Choose your favorite category.
 
 <section class="features">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-title">
 
-            <span>What We Offer</span>
+<span>
+What We Offer
+</span>
 
-            <h2>Learn, Practice & Succeed</h2>
+<h2>
+Learn, Practice & Succeed
+</h2>
 
-            <p>
-                Salman Blogs provides everything students need to learn Computer Science,
-                improve their skills, and prepare for exams. All in one place.
-            </p>
+<p>
+Salman Blogs provides everything students need to learn Computer Science,
+improve their skills, and prepare for exams. All in one place.
+</p>
 
-        </div>
+</div>
 
-        <div class="features-grid">
 
-            <div class="feature-box">
+<div class="features-grid">
 
-                <div class="feature-icon">📖</div>
 
-                <h3>Free Notes</h3>
+<div class="feature-box">
 
-                <p>
-                    Access well-organized, easy-to-understand Computer Science notes for
-                    Class 9, 10, and 11 completely free.
-                </p>
+<div class="feature-icon">
+📖
+</div>
 
-            </div>
+<h3>
+Free Notes
+</h3>
 
-            <div class="feature-box">
+<p>
+Access well-organized, easy-to-understand Computer Science notes for
+Class 9, 10, and 11 completely free.
+</p>
 
-                <div class="feature-icon">📝</div>
+</div>
 
-                <h3>Online Practice Tests</h3>
 
-                <p>
-                    Take chapter-wise quizzes and practice tests online to strengthen your
-                    understanding and prepare for exams.
-                </p>
+<div class="feature-box">
 
-            </div>
+<div class="feature-icon">
+📝
+</div>
 
-            <div class="feature-box">
+<h3>
+Online Practice Tests
+</h3>
 
-                <div class="feature-icon">⚡</div>
+<p>
+Take chapter-wise quizzes and practice tests online to strengthen your
+understanding and prepare for exams.
+</p>
 
-                <h3>Instant Results</h3>
+</div>
 
-                <p>
-                    Receive your score immediately after completing a test, helping you
-                    identify strengths and areas for improvement.
-                </p>
 
-            </div>
+<div class="feature-box">
 
-            <div class="feature-box">
+<div class="feature-icon">
+⚡
+</div>
 
-                <div class="feature-icon">📥</div>
+<h3>
+Instant Results
+</h3>
 
-                <h3>Download Notes</h3>
+<p>
+Receive your score immediately after completing a test, helping you
+identify strengths and areas for improvement.
+</p>
 
-                <p>
-                    Download high-quality PDF notes anytime and study offline whenever
-                    it is convenient for you.
-                </p>
+</div>
 
-            </div>
 
-            <div class="feature-box">
+<div class="feature-box">
 
-                <div class="feature-icon">🎯</div>
+<div class="feature-icon">
+📥
+</div>
 
-                <h3>Exam Preparation</h3>
+<h3>
+Download Notes
+</h3>
 
-                <p>
-                    Prepare confidently with chapter notes, solved examples, MCQs,
-                    practice tests, and revision resources designed for students.
-                </p>
+<p>
+Download high-quality PDF notes anytime and study offline whenever
+it is convenient for you.
+</p>
 
-            </div>
+</div>
 
-        </div>
 
-    </div>
+<div class="feature-box">
+
+<div class="feature-icon">
+🎯
+</div>
+
+<h3>
+Exam Preparation
+</h3>
+
+<p>
+Prepare confidently with chapter notes, solved examples, MCQs,
+practice tests, and revision resources designed for students.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
+
 
 <!-- ========================================= -->
 <!-- FOOTER -->
 <!-- ========================================= -->
 
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
 <footer class="footer">
 
-    <div class="container footer-container">
+<div class="container footer-container">
 
-        <!-- Logo -->
+
+<!-- Logo -->
+
+<div class="footer-column">
+
+<h2 class="footer-logo">
+
+Salman<span>Blogs</span>
+
+</h2>
+
+<p>
+
+Salman Blogs is your destination for Technology,
+Artificial Intelligence, Programming,
+Education, Health, Business and Lifestyle content.
+
+</p>
+
+
+<div class="social-icons">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=100009953895352" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/@ComputerWithSalman" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-youtube"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/salmannicksallu" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/923089051710" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</div>
+
+
+</div>
+
+
+<!-- Quick Links -->
+
+<div class="footer-column">
+
+<h3>
+Quick Links
+</h3>
+
+<ul>
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="categories.html">
+Categories
+</a>
+</li>
+
+<li>
+<a href="about.html">
+About
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
+
+<li>
+<a href="privacy-policy.html">
+Privacy Policy
+</a>
+</li>
+
+<li>
+<a href="terms.html">
+Terms & Conditions
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- Categories -->
 
         <div class="footer-column">
 
-            <h2 class="footer-logo">
+    <h3>Categories</h3>
 
-                Salman<span>Blogs</span>
+    <ul>
 
-            </h2>
+        <li><a href="technology.html">Technology</a></li>
 
-            <p>
+        <li><a href="computer-science.html">Computer Science</a></li>
 
-                Salman Blogs is your destination for Technology,
-                Artificial Intelligence, Programming,
-                Education, Health, Business and Lifestyle content.
+        <li><a href="how-to-guides.html">How-To Guides</a></li>
 
-            </p>
+        <li><a href="education.html">Education</a></li>
 
-            <div class="social-icons">
+        <li><a href="ai-tools.html">AI Tools</a></li>
 
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <li><a href="roadmaps.html">Career Roadmaps</a></li>
 
-                <a href="#"><i class="fab fa-youtube"></i></a>
+        <li><a href="8-computer-science.html">Class 8 Computer</a></li>
 
-                <a href="#"><i class="fab fa-instagram"></i></a>
+        <li><a href="9-computer-science.html">Class 9 Computer</a></li>
 
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <li><a href="10-computer-science.html">Class 10 Computer</a></li>
 
-            </div>
+        <li><a href="11-computer-science.html">Class 11 Computer</a></li>
 
-        </div>
+        <li><a href="12-computer-science.html">Class 12 Computer</a></li>
 
-        <!-- Quick Links -->
+    </ul>
 
-        <div class="footer-column">
-
-            <h3>Quick Links</h3>
-
-            <ul>
-
-                <li><a href="index.html">Home</a></li>
-
-                <li><a href="categories.html">Categories</a></li>
-
-                <li><a href="about.html">About</a></li>
-
-                <li><a href="contact.html">Contact</a></li>
-
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-
-                <li><a href="terms.html">Terms & Conditions</a></li>
-
-            </ul>
-
-        </div>
-
-        <!-- Categories -->
-
-        <div class="footer-column">
-
-            <h3>Categories</h3>
-
-            <ul>
-
-                <li><a href="#">Technology</a></li>
-
-                <li><a href="#">LifeStyle</a></li>
-
-                <li><a href="#">Health</a></li>
-
-                <li><a href="#">Education</a></li>
-
-                <li><a href="#">Business</a></li>
-
-                <li><a href="#">Travel</a></li>
-
-                <li><a href="#">9 Computer Science</a></li>
-
-                <li><a href="#">10 Computer Science</a></li>
-
-                <li><a href="#">11 Computer Science</a></li>
+</div>
 
 
-            </ul>
+<!-- Contact -->
 
-        </div>
+<div class="footer-column">
 
-        <!-- Contact -->
+<h3>
+Contact
+</h3>
 
-        <div class="footer-column">
+<p>
+Have questions or suggestions?
+</p>
 
-            <h3>Contact</h3>
+<a href="contact.html" class="footer-btn">
+Contact Us
+</a>
 
-            <p>
+</div>
 
-                Have questions or suggestions?
+</div>
 
-            </p>
 
-            <a href="contact.html" class="footer-btn">
+<div class="footer-bottom">
 
-                Contact Us
+<p>
+© 2026 Salman Blogs. All Rights Reserved.
+</p>
 
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-        <p>
-
-            © 2026 Salman Blogs. All Rights Reserved.
-
-        </p>
-
-    </div>
+</div>
 
 </footer>
 
 
-<!-- ===========================
-        JAVASCRIPT
-=========================== -->
+<!-- =========================== -->
+<!-- JAVASCRIPT -->
+<!-- =========================== -->
+
+
+<!-- Mobile Navigation -->
 
 <script>
 
-const navToggle=document.getElementById("navToggle");
+const navToggle = document.getElementById("navToggle");
 
-const navLinks=document.getElementById("navLinks");
+const navLinks = document.getElementById("navLinks");
 
-navToggle.addEventListener("click",()=>{
+navToggle.addEventListener("click", () => {
 
 navLinks.classList.toggle("show");
 
@@ -595,26 +709,422 @@ navLinks.classList.toggle("show");
 
 </script>
 
+
+<!-- ================================= -->
+<!-- ADVANCED CATEGORY SEARCH -->
+<!-- ================================= -->
+
 <script>
 
-const search=document.getElementById("categorySearch");
+const categorySearch =
+document.getElementById("categorySearch");
 
-const cards=document.querySelectorAll(".category-box");
+const categoryCards =
+Array.from(document.querySelectorAll(".category-box"));
 
-search.addEventListener("keyup",()=>{
+const categoryMessage =
+document.getElementById("categorySearchMessage");
 
-const value=search.value.toLowerCase();
 
-cards.forEach(card=>{
+/* -----------------------------------
+   Store Original Card Content
+----------------------------------- */
 
-const text=card.innerText.toLowerCase();
+categoryCards.forEach(card => {
 
-card.style.display=text.includes(value) ? "block" : "none";
+    card.dataset.originalHTML = card.innerHTML;
 
 });
 
-});
 
+/* -----------------------------------
+   Normalize Search Text
+----------------------------------- */
+
+function normalizeCategoryText(text) {
+
+    return text
+        .toLowerCase()
+        .replace(/&/g, " and ")
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+
+}
+
+
+/* -----------------------------------
+   Highlight Matching Words
+----------------------------------- */
+
+function highlightCategoryText(element, searchWords) {
+
+    const walker = document.createTreeWalker(
+        element,
+        NodeFilter.SHOW_TEXT
+    );
+
+    const textNodes = [];
+
+    while (walker.nextNode()) {
+
+        textNodes.push(walker.currentNode);
+
+    }
+
+
+    textNodes.forEach(node => {
+
+        const parent = node.parentNode;
+
+        if (
+            parent &&
+            (
+                parent.tagName === "SCRIPT" ||
+                parent.tagName === "STYLE" ||
+                parent.tagName === "MARK"
+            )
+        ) {
+            return;
+        }
+
+
+        let text = node.nodeValue;
+
+        let escapedWords = searchWords
+            .filter(word => word.length > 0)
+            .map(word =>
+                word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+            );
+
+
+        if (!escapedWords.length) {
+            return;
+        }
+
+
+        const regex =
+            new RegExp(
+                "(" + escapedWords.join("|") + ")",
+                "gi"
+            );
+
+
+        if (!regex.test(text)) {
+            return;
+        }
+
+
+        regex.lastIndex = 0;
+
+
+        const fragment =
+            document.createDocumentFragment();
+
+
+        let lastIndex = 0;
+
+        let match;
+
+
+        while ((match = regex.exec(text)) !== null) {
+
+            const before =
+                text.substring(
+                    lastIndex,
+                    match.index
+                );
+
+
+            if (before) {
+
+                fragment.appendChild(
+                    document.createTextNode(before)
+                );
+
+            }
+
+
+            const mark =
+                document.createElement("mark");
+
+            mark.textContent = match[0];
+
+            fragment.appendChild(mark);
+
+
+            lastIndex =
+                match.index + match[0].length;
+
+        }
+
+
+        const after =
+            text.substring(lastIndex);
+
+
+        if (after) {
+
+            fragment.appendChild(
+                document.createTextNode(after)
+            );
+
+        }
+
+
+        parent.replaceChild(
+            fragment,
+            node
+        );
+
+    });
+
+}
+
+
+/* -----------------------------------
+   Small Typing Error Tolerance
+----------------------------------- */
+
+function fuzzyWordMatch(queryWord, targetText) {
+
+    if (!queryWord) {
+        return false;
+    }
+
+
+    /* Exact match */
+
+    if (targetText.includes(queryWord)) {
+        return true;
+    }
+
+
+    /*
+       Allow a small typing mistake
+       by checking the word without
+       its last character.
+    */
+
+    if (queryWord.length > 2) {
+
+        const shortened =
+            queryWord.slice(0, -1);
+
+        if (
+            shortened.length > 2 &&
+            targetText.includes(shortened)
+        ) {
+
+            return true;
+
+        }
+
+    }
+
+
+    return false;
+
+}
+
+
+/* -----------------------------------
+   Search Categories
+----------------------------------- */
+
+function searchCategories() {
+
+    const rawValue =
+        categorySearch.value.trim();
+
+
+    /* --------------------------------
+       Restore Everything When Empty
+    -------------------------------- */
+
+    if (!rawValue) {
+
+        categoryCards.forEach(card => {
+
+            card.style.display = "";
+
+            card.innerHTML =
+                card.dataset.originalHTML;
+
+        });
+
+
+        categoryMessage.style.display =
+            "none";
+
+        categoryMessage.textContent = "";
+
+        return;
+
+    }
+
+
+    const normalizedQuery =
+        normalizeCategoryText(rawValue);
+
+
+    const searchWords =
+        normalizedQuery
+            .split(" ")
+            .filter(word => word.length > 0);
+
+
+    let visibleCount = 0;
+
+
+    /* --------------------------------
+       Search Every Category Card
+    -------------------------------- */
+
+    categoryCards.forEach(card => {
+
+        /*
+           Restore original HTML before
+           searching/highlighting.
+        */
+
+        card.innerHTML =
+            card.dataset.originalHTML;
+
+
+        const categoryTitle =
+            card.querySelector("h3")?.textContent || "";
+
+
+        const categoryDescription =
+            card.querySelector("p")?.textContent || "";
+
+
+        const searchableText =
+            normalizeCategoryText(
+                categoryTitle + " " +
+                categoryDescription
+            );
+
+
+        /*
+           Every search word must match.
+        */
+
+        const isMatch =
+            searchWords.every(word =>
+                fuzzyWordMatch(
+                    word,
+                    searchableText
+                )
+            );
+
+
+        if (isMatch) {
+
+            card.style.display = "";
+
+            visibleCount++;
+
+
+            /*
+               Highlight the actual
+               matching words.
+            */
+
+            highlightCategoryText(
+                card,
+                searchWords
+            );
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    /* --------------------------------
+       Search Result Message
+    -------------------------------- */
+
+    categoryMessage.style.display =
+        "block";
+
+
+    if (visibleCount === 0) {
+
+        categoryMessage.textContent =
+            `No categories found for "${rawValue}".`;
+
+    } else if (visibleCount === 1) {
+
+        categoryMessage.textContent =
+            `1 category found for "${rawValue}".`;
+
+    } else {
+
+        categoryMessage.textContent =
+            `${visibleCount} categories found for "${rawValue}".`;
+
+    }
+
+}
+
+
+/* -----------------------------------
+   Search While Typing
+----------------------------------- */
+
+categorySearch.addEventListener(
+    "input",
+    searchCategories
+);
+
+
+/* -----------------------------------
+   Escape Key Clears Search
+----------------------------------- */
+
+categorySearch.addEventListener(
+    "keydown",
+    event => {
+
+        if (event.key === "Escape") {
+
+            categorySearch.value = "";
+
+            searchCategories();
+
+            categorySearch.focus();
+
+        }
+
+    }
+);
+
+</script>
+
+<!-- BACK TO TOP SCRIPT. -->
+ <script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 </script>
 
 </body>

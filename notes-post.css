@@ -103,6 +103,14 @@ span {
     word-break: break-word;
 }
 
+.no-heading-style h1,
+.no-heading-style h2,
+.no-heading-style h3,
+.no-heading-style h4,
+.no-heading-style h5,
+.no-heading-style h6 {
+  all: revert;
+}
 /* Mobile Responsive Table */
 @media (max-width: 800px) {
     table {
