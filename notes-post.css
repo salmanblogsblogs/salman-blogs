@@ -399,21 +399,18 @@ ul, ol
 .faq-question{
 
     width:100%;
+    box-sizing:border-box;
 
     background:#fff;
-
     border:none;
 
-    padding:22px 28px;
+    padding:22px 75px 22px 28px;
 
     text-align:left;
-
     cursor:pointer;
 
     font-size:17px;
-
     font-weight:600;
-
     color:#0f172a;
 
     position:relative;
@@ -435,29 +432,23 @@ ul, ol
     position:absolute;
 
     right:28px;
-
     top:50%;
 
     transform:translateY(-50%);
 
     width:34px;
-
     height:34px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     border-radius:50%;
 
     background:#eff6ff;
-
     color:#2563eb;
 
     font-size:22px;
-
     font-weight:700;
 
     transition:.3s;
@@ -475,8 +466,34 @@ ul, ol
     content:"−";
 
     background:#2563eb;
-
     color:#fff;
+
+}
+
+
+
+@media (max-width:768px){
+
+    .faq-question{
+
+        padding:18px 62px 18px 18px;
+
+        font-size:16px;
+
+        line-height:1.6;
+
+    }
+
+    .faq-question::after{
+
+        right:16px;
+
+        width:30px;
+        height:30px;
+
+        font-size:20px;
+
+    }
 
 }
 
