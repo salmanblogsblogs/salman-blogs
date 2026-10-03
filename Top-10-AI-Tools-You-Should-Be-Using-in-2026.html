@@ -4086,8 +4086,8 @@ Browse Categories
         <span>X</span>
       </a>
 
-      <a id="telegramShare" class="share-option telegram" href="#" target="_blank" rel="noopener noreferrer">
-        <span>Telegram</span>
+     <a id="instagramShare" class="share-option instagram" href="#" target="_blank" rel="noopener noreferrer">
+      <span>Instagram</span>
       </a>
 
       <a id="emailShare" class="share-option email" href="#">
@@ -4335,7 +4335,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const whatsappShare = document.getElementById("whatsappShare");
   const facebookShare = document.getElementById("facebookShare");
   const twitterShare = document.getElementById("twitterShare");
-  const telegramShare = document.getElementById("telegramShare");
+  const instagramShare = document.getElementById("instagramShare");
   const emailShare = document.getElementById("emailShare");
   const copyLink = document.getElementById("copyLink");
   const copyMessage = document.getElementById("copyMessage");
@@ -4447,22 +4447,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* =========================
-     TELEGRAM
-  ========================= */
+   INSTAGRAM
+========================= */
 
-  telegramShare.addEventListener("click", function (event) {
+instagramShare.addEventListener("click", function (event) {
 
-    event.preventDefault();
+  event.preventDefault();
 
-    const url =
-      "https://t.me/share/url?url=" +
-      encodeURIComponent(pageURL) +
-      "&text=" +
-      encodeURIComponent(pageTitle);
+  window.open(
+    "https://www.instagram.com/",
+    "_blank"
+  );
 
-    openShareWindow(url);
-
-  });
+});
 
 
   /* =========================
