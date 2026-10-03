@@ -4344,14 +4344,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const pageURL = window.location.href;
 
 
-  /* Open Share Popup */
+  /* =========================
+     OPEN SHARE POPUP
+  ========================= */
 
   shareButton.addEventListener("click", function () {
     sharePopup.classList.add("active");
   });
 
 
-  /* Close Popup */
+  /* =========================
+     CLOSE SHARE POPUP
+  ========================= */
 
   closeShare.addEventListener("click", function () {
     sharePopup.classList.remove("active");
@@ -4369,55 +4373,129 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  /* WhatsApp */
+  /* =========================
+     OPEN SHARE WINDOW
+  ========================= */
 
-  whatsappShare.href =
-    "https://wa.me/?text=" +
-    encodeURIComponent(
-      pageTitle + "\n\n" + pageURL
+  function openShareWindow(url) {
+
+    window.open(
+      url,
+      "_blank",
+      "width=650,height=600,noopener,noreferrer"
     );
 
-
-  /* Facebook */
-
-  facebookShare.href =
-    "https://www.facebook.com/sharer/sharer.php?u=" +
-    encodeURIComponent(pageURL);
+  }
 
 
-  /* X */
+  /* =========================
+     WHATSAPP
+  ========================= */
 
-  twitterShare.href =
-    "https://twitter.com/intent/tweet?text=" +
-    encodeURIComponent(pageTitle) +
-    "&url=" +
-    encodeURIComponent(pageURL);
+  whatsappShare.addEventListener("click", function (event) {
 
+    event.preventDefault();
 
-  /* Telegram */
-
-  telegramShare.href =
-    "https://t.me/share/url?url=" +
-    encodeURIComponent(pageURL) +
-    "&text=" +
-    encodeURIComponent(pageTitle);
-
-
-  /* Email */
-
-  emailShare.href =
-    "mailto:?subject=" +
-    encodeURIComponent(pageTitle) +
-    "&body=" +
-    encodeURIComponent(
-      "Check out this article from Salman Blogs:\n\n" +
+    const message =
       pageTitle +
       "\n\n" +
-      pageURL
-    );
+      pageURL;
+
+    const url =
+      "https://api.whatsapp.com/send?text=" +
+      encodeURIComponent(message);
+
+    openShareWindow(url);
+
+  });
 
 
-  /* Copy Link */
+  /* =========================
+     FACEBOOK
+  ========================= */
+
+  facebookShare.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+    const url =
+      "https://www.facebook.com/sharer/sharer.php?u=" +
+      encodeURIComponent(pageURL);
+
+    openShareWindow(url);
+
+  });
+
+
+  /* =========================
+     X / TWITTER
+  ========================= */
+
+  twitterShare.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+    const url =
+      "https://twitter.com/intent/tweet?text=" +
+      encodeURIComponent(pageTitle) +
+      "&url=" +
+      encodeURIComponent(pageURL);
+
+    openShareWindow(url);
+
+  });
+
+
+  /* =========================
+     TELEGRAM
+  ========================= */
+
+  telegramShare.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+    const url =
+      "https://t.me/share/url?url=" +
+      encodeURIComponent(pageURL) +
+      "&text=" +
+      encodeURIComponent(pageTitle);
+
+    openShareWindow(url);
+
+  });
+
+
+  /* =========================
+     EMAIL
+  ========================= */
+
+  emailShare.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+    const subject =
+      encodeURIComponent(pageTitle);
+
+    const body =
+      encodeURIComponent(
+        "Check out this article from Salman Blogs:\n\n" +
+        pageTitle +
+        "\n\n" +
+        pageURL
+      );
+
+    window.location.href =
+      "mailto:?subject=" +
+      subject +
+      "&body=" +
+      body;
+
+  });
+
+
+  /* =========================
+     COPY LINK
+  ========================= */
 
   copyLink.addEventListener("click", async function () {
 
@@ -4425,7 +4503,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       await navigator.clipboard.writeText(pageURL);
 
-      copyMessage.textContent = "✓ Article link copied!";
+      copyMessage.textContent =
+        "✓ Article link copied!";
 
       setTimeout(function () {
         copyMessage.textContent = "";
@@ -4433,9 +4512,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     } catch (error) {
 
-      /* Fallback */
-
-      const textArea = document.createElement("textarea");
+      const textArea =
+        document.createElement("textarea");
 
       textArea.value = pageURL;
 
@@ -4447,7 +4525,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       textArea.remove();
 
-      copyMessage.textContent = "✓ Article link copied!";
+      copyMessage.textContent =
+        "✓ Article link copied!";
 
       setTimeout(function () {
         copyMessage.textContent = "";
