@@ -1437,6 +1437,41 @@ color:#ff9800;
    MAIN CONTENT SPACING
    ========================================================= */
 
+/* ChatGPT Visit Button */
+.ai-tool-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  margin: 20px 0;
+  background: linear-gradient(135deg, #111827, #2563eb);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect */
+.ai-tool-link:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.4);
+}
+
+/* Arrow Animation */
+.ai-tool-link .arrow {
+  transition: transform 0.3s ease;
+}
+
+.ai-tool-link:hover .arrow {
+  transform: translateX(5px);
+}
+
 .tool-card > * {
     position: relative;
 }
@@ -1967,6 +2002,191 @@ color:#ff9800;
     color: #475569;
 }
 
+.article-share {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+#shareArticleBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #111827, #2563eb);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 7px 20px rgba(37, 99, 235, 0.25);
+  transition: all 0.3s ease;
+}
+
+#shareArticleBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
+}
+
+#shareArticleBtn span {
+  font-size: 21px;
+  transition: transform 0.3s ease;
+}
+
+#shareArticleBtn:hover span {
+  transform: translate(4px, -4px);
+}
+
+
+/* Share Popup */
+
+.share-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.share-popup.active {
+  display: flex;
+}
+
+.share-box {
+  width: 100%;
+  max-width: 450px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: sharePopupIn 0.3s ease;
+}
+
+@keyframes sharePopupIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.share-box h3 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  color: #111827;
+}
+
+.share-box > p {
+  margin: 0 0 22px;
+  color: #6b7280;
+}
+
+.close-share {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.close-share:hover {
+  color: #111827;
+}
+
+
+/* Share Options */
+
+.share-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.share-option {
+  min-height: 48px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.share-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+.whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+
+.facebook {
+  background: #1877F2;
+  color: #fff;
+}
+
+.twitter {
+  background: #111;
+  color: #fff;
+}
+
+.telegram {
+  background: #229ED9;
+  color: #fff;
+}
+
+.email {
+  background: #6b7280;
+  color: #fff;
+}
+
+.copy-link {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.copy-message {
+  text-align: center;
+  margin-top: 15px !important;
+  color: #16a34a !important;
+  font-weight: 600;
+  min-height: 20px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+  .share-box {
+    padding: 25px 20px;
+  }
+
+  .share-options {
+    grid-template-columns: 1fr;
+  }
+
+}
 
 /* =========================================================
    TABLET
