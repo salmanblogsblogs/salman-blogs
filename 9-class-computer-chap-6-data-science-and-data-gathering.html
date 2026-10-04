@@ -1,0 +1,2764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 9 Computer Science Chapter 6: Data Science Notes | MCQs, Short Questions, Long Questions & FAQs | Exam Preparation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="notes-post.css">
+  <link rel="canonical" href="https://salmanblogs.com/9-class-chap-9-lecture-1" />
+  <!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+  <meta name="description" content="Class 9 Computer Science Chapter 6 Notes: 
+  Data Science and Data Gathering, Data Science study material covering data gathering, types of data, qualitative and quantitative data, organising and analysing data, tables, charts, graphs, data collection methods, structured and unstructured data, data visualization, data preprocessing, data validation and cleaning, cloud storage, collaborative tools, and data science tools including Excel, Python, R, and SQL with simple examples and exam preparation notes." />
+
+<meta name="keywords" content="9th class computer science chapter 6 notes, class 9 data science notes, data science class 9, data gathering class 9, data collection class 9 computer science, types of data class 9, qualitative data class 9, quantitative data class 9, numerical data class 9, measurable data class 9, countable data class 9, arithmetical data class 9, organising data class 9, analysing data class 9, data tables class 9, charts and graphs class 9, data collection methods class 9, surveys questionnaires interviews observations class 9, online data sources class 9, structured and unstructured data class 9, data visualization class 9, Excel data visualization class 9, data preprocessing class 9, data validation and data cleaning class 9, missing data and outliers class 9, quantitative and qualitative data analysis class 9, cloud storage class 9, collaborative tools class 9, Excel Python R SQL data science class 9, FBISE class 9 computer science chapter 6, Punjab board class 9 computer science chapter 6, data science MCQs class 9, data science short questions class 9" />
+
+<meta name="author" content="Salman Ahmad" />
+
+
+  <!-- Open Graph -->
+<meta property="og:title" content="Class 9 Computer Science Chapter 6: Data Science Notes | MCQs, Short Questions, Long Questions & FAQs" />
+
+<meta property="og:description" content="Complete Class 9 Computer Science Chapter 6 Notes on Data Science. Covers data science, data gathering, types of data, qualitative and quantitative data, organising and analysing data, data tables, charts and graphs, data collection methods, structured and unstructured data, data visualization, data preprocessing, data validation and cleaning, missing data and outliers, quantitative and qualitative data analysis, cloud storage, collaborative tools, and data science tools including Excel, Python, R, and SQL with simple examples, MCQs, short questions, FAQs, and exam preparation for FBISE and Punjab Board students." />
+
+<meta property="og:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-9/chapter-9-notes.webp" />
+
+<meta property="og:url" content="https://salmanblogs.com/9-class-chap-9-lecture-1" />
+
+<meta property="og:type" content="article" />
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:title" content="Class 9 Computer Science Chapter 6: Data Science Notes | MCQs & FAQs" />
+
+<meta name="twitter:description" content="Study Class 9 Computer Science Chapter 6 Data Science with complete notes, including data gathering, types of data, qualitative and quantitative data, organising and analysing data, data tables, charts and graphs, data collection methods, structured and unstructured data, data visualization, data preprocessing, data validation and cleaning, missing data, outliers, quantitative and qualitative data analysis, cloud storage, collaborative tools, Excel, Python, R, SQL, MCQs, short questions, FAQs, and exam preparation for FBISE and Punjab Board." />
+
+<meta name="twitter:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-9/chapter-9-notes.webp" />
+
+<!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="favicon.ico">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Class 9 Computer Science Chapter 6 Data Science Notes",
+  "author": {
+    "@type": "Person",
+    "name": "Salman Ahmad"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Salman Blogs"
+  },
+  "description": "Complete Class 9 Computer Science Chapter 6 Data Science Notes covering data gathering, types of data, qualitative and quantitative data, organising and analysing data, data tables, charts and graphs, data collection methods, structured and unstructured data, data visualization, data preprocessing, data validation and cleaning, missing data, outliers, quantitative and qualitative data analysis, cloud storage, collaborative tools, and data science tools including Excel, Python, R, and SQL, along with MCQs, short questions, FAQs and exam preparation material.",
+  "mainEntityOfPage": "https://salmanblogs.com/9-class-chap-6-data-science"
+}
+</script>
+
+</head>
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<span class="logo-first">Salman</span>
+
+<span class="logo-last">Blogs</span>
+
+</a>
+
+<nav>
+
+<div class="nav-toggle" id="navToggle">
+    &#9776;
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+<li><a href="terms.html">Terms</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="hero-badge">
+
+🔥 Data Science and Data Gathering
+
+</span>
+<br>
+<h1>
+
+<span>Chapter 6 Notes</span>
+
+</h1>
+
+<p>
+
+Complete lecture notes covering Data Gathering, Types of Data,
+Organising and Analysing Data, Data Collection, Data Visualization,
+Data Preprocessing, Data Cleaning, Cloud Storage, Excel, Python,
+R, SQL, MCQs, FAQs and Exam Preparation.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="categories.html" class="btn-secondary">
+
+Browse Categories
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Data Science and Data Gathering <br>Notes [Chapter # 6]</h1>
+
+    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+    <img src="images/9-CS-IMAGES/chapter-6/9-class-computer-chapter-6-data-science-and-data-gathering.webp" alt="9-class-computer-chapter-6-data-science-and-data-gathering-notes" class="post-image" loading="lazy">
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#what-is-data-science">What is Data Science?</a></li>
+<li><a href="#what-is-data-gathering">What is Data Gathering?</a></li>
+<li><a href="#what-is-data">What is Data?</a></li>
+<li><a href="#organising-and-analysing-data">Organising and Analysing Data</a></li>
+<li><a href="#importance-of-organising-data">Importance of Organising Data</a></li>
+<li><a href="#data-tables">Data Tables</a></li>
+<li><a href="#charts">Charts</a></li>
+<li><a href="#graphs">Graphs</a></li>
+<li><a href="#methods-and-tools-of-data-collection">Methods and Tools of Data Collection</a></li>
+<li><a href="#types-of-data-structured-and-unstructured">Data Types: Structured and Unstructured Data</a></li>
+<li><a href="#cleaning-and-validating-data">Cleaning and Validating Data</a></li>
+<li><a href="#data-cleaning">Data Cleaning</a></li>
+<li><a href="#data-visualization">Data Visualization</a></li>
+<li><a href="#data-visualization-tools">Data Visualization Tools</a></li>
+<li><a href="#data-preprocessing-and-analysis">Data Preprocessing and Analysis</a></li>
+<li><a href="#data-pre-processing">Data Pre-processing</a></li>
+<li><a href="#data-pre-processing-techniques">Data Pre-processing Techniques</a></li>
+<li><a href="#implementing-data-validation-and-cleaning-processes">Implementing Data Validation and Cleaning Processes</a></li>
+<li><a href="#data-analysis-techniques">Data Analysis Techniques</a></li>
+<li><a href="#cloud-storage">Cloud Storage</a></li>
+<li><a href="#benefits-of-cloud-storage">Benefits of Cloud Storage</a></li>
+<li><a href="#benefits-of-collaborative-tools">Benefits of Collaborative Tools</a></li>
+<li><a href="#tools-in-data-science">Tools in Data Science</a></li>
+<li><a href="#exercise-questions">Exercise Questions</a></li>
+<li><a href="#mcqs">MCQs</a></li>
+<li><a href="#test-mcqs">MCQs for testing</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+  <div class="post-content">
+
+    <h2 id="what-is-data-science">What is Data Science?</h2>
+
+<p>
+  <strong>Data Science</strong> is the process of collecting, organizing,
+  studying, and using data to find useful information and make better
+  decisions.
+</p>
+
+<h3>Simple Example</h3>
+
+<p>
+  A school collects students' marks and feedback to find difficult subjects.
+</p>
+
+<ul>
+  <li><strong>60%</strong> struggle with Mathematics.</li>
+  <li><strong>30%</strong> struggle with Science.</li>
+  <li><strong>10%</strong> struggle with English.</li>
+</ul>
+
+<p>
+  The school can use this data to provide extra help in Mathematics.
+</p>
+
+
+<h2 id="what-is-data-gathering">What is Data Gathering?</h2>
+
+<p>
+  <strong>Data Gathering</strong> is the process of collecting information
+  from different sources for a specific purpose.
+</p>
+
+<p>
+  It is also called <strong>data collection</strong>.
+</p>
+
+<h3>Simple Example</h3>
+
+<p>
+  Suppose a teacher wants to know how students travel to school.
+</p>
+
+<p>
+  The teacher can ask students:
+</p>
+
+<blockquote>
+  "How do you come to school?"
+</blockquote>
+
+<p>Students may give answers such as:</p>
+
+<ul>
+  <li><strong>Bus</strong></li>
+  <li><strong>Car</strong></li>
+  <li><strong>Bicycle</strong></li>
+  <li><strong>Walking</strong></li>
+  <li><strong>Motorcycle</strong></li>
+</ul>
+
+<p>
+  The teacher collects all these answers. This process is called
+  <strong>data gathering</strong>.
+</p>
+
+
+<h2 id="what-is-data">What is Data?</h2>
+
+<p>
+  <strong>Data</strong> is a collection of facts, information, or details
+  that can be collected, stored, and used for different purposes.
+</p>
+
+<p>
+  Data can be in the form of <strong>numbers, words, images, sounds, videos,
+  or symbols</strong>.
+</p>
+
+<h3>Simple Examples</h3>
+
+<ul>
+  <li>A student's <strong>name</strong> is data.</li>
+  <li>A student's <strong>age</strong> is data.</li>
+  <li>A student's <strong>marks</strong> are data.</li>
+  <li>The <strong>temperature</strong> of a city is data.</li>
+  <li>The number of <strong>students in a class</strong> is data.</li>
+  <li>A <strong>photo</strong> stored on a computer is data.</li>
+  <li>A <strong>video</strong> uploaded to YouTube is data.</li>
+</ul>
+
+<h3>Example of Student Data</h3>
+
+<p>
+  Suppose a teacher collects the following information:
+</p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>Student</th>
+    <th>Age</th>
+    <th>Marks</th>
+  </tr>
+
+  <tr>
+    <td>Ali</td>
+    <td>15</td>
+    <td>85</td>
+  </tr>
+
+  <tr>
+    <td>Ahmed</td>
+    <td>16</td>
+    <td>72</td>
+  </tr>
+
+  <tr>
+    <td>Sara</td>
+    <td>15</td>
+    <td>91</td>
+  </tr>
+</table>
+
+<p>
+  The names, ages, and marks in this table are <strong>data</strong>.
+</p>
+
+<h2 id="types-of-data">Types of Data</h2>
+
+<p>
+  Data is mainly divided into two types:
+</p>
+
+<ol>
+  <li><strong>Qualitative Data</strong></li>
+  <li><strong>Quantitative Data</strong></li>
+</ol>
+
+
+<h2 id="qualitative-data">1. Qualitative Data</h2>
+
+<p>
+  <strong>Qualitative data</strong> describes the
+  <strong>qualities, characteristics, or categories</strong> of something.
+</p>
+
+<p>
+  It is generally <strong>non-numeric</strong> and is often
+  <strong>categorical</strong>.
+</p>
+
+<h3> A. Non-Numeric Data</h3>
+
+<p>
+  <strong>Non-numeric data</strong> is information that is
+  <strong>not represented by numbers</strong>. It usually consists of words,
+  descriptions, or names.
+</p>
+
+<p><strong>Examples:</strong></p>
+
+<ul>
+  <li>Color: <strong>Red</strong></li>
+  <li>Name: <strong>Ali</strong></li>
+  <li>Food: <strong>Biryani</strong></li>
+  <li>Weather: <strong>Sunny</strong></li>
+  <li>Subject: <strong>Computer Science</strong></li>
+</ul>
+
+<p>
+  <strong>Example:</strong> "The car is <strong>black</strong>."
+</p>
+
+<p>
+  Here, <strong>black</strong> is non-numeric data because it is a word,
+  not a number.
+</p>
+
+<h3>B. Categorical Data</h3>
+
+<p>
+  <strong>Categorical data</strong> puts information into
+  <strong>different groups or categories</strong>.
+</p>
+
+<p><strong>Examples:</strong></p>
+
+<ul>
+  <li>Blood group: <strong>A, B, AB, O</strong></li>
+  <li>Gender: <strong>Male, Female</strong></li>
+  <li>Transport: <strong>Bus, Car, Bicycle, Walking</strong></li>
+  <li>Grade: <strong>A, B, C, D</strong></li>
+  <li>Fruit type: <strong>Apple, Banana, Mango</strong></li>
+</ul>
+
+<p>
+  <strong>Example:</strong> If we ask students how they travel to school:
+</p>
+
+<ul>
+  <li>Ali → Bus</li>
+  <li>Ahmed → Bicycle</li>
+  <li>Sara → Car</li>
+</ul>
+
+<p>
+  Here, <strong>Bus, Bicycle, and Car</strong> are categories, so this is
+  <strong>categorical data</strong>.
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Easy to remember:</strong>
+  <br><br>
+  <strong>Qualitative Data</strong> → Non-Numeric + Categorical
+  <br><br>
+  <strong>Non-Numeric:</strong> Information that is not written as numbers.
+  <br>
+  <strong>Categorical:</strong> Information divided into different groups or categories.
+</div>
+
+
+<h2 id="quantitative-data">2. Quantitative Data</h2>
+
+<p>
+  <strong>Quantitative data</strong> is data that is represented by
+  <strong>numbers</strong>. It can be measured, counted, compared, and used
+  in mathematical calculations.
+</p>
+
+<p>
+  Quantitative data can be understood through these characteristics:
+</p>
+
+<h3>1. Numerical</h3>
+
+<p>
+  <strong>Numerical data</strong> is information represented using
+  <strong>numbers</strong>.
+</p>
+
+<p><strong>Examples:</strong></p>
+
+<ul>
+  <li>Age = <strong>15 years</strong></li>
+  <li>Marks = <strong>85</strong></li>
+  <li>Number of students = <strong>40</strong></li>
+  <li>Temperature = <strong>30°C</strong></li>
+</ul>
+
+<p>
+  Here, <strong>15, 85, 40, and 30</strong> are numerical data because they
+  are numbers.
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Easy to remember:</strong>
+  <br><br>
+  <strong>Numerical</strong> = Data represented by numbers
+</div>
+
+
+<h3>2. Measurable</h3>
+
+<p>
+  <strong>Measurable data</strong> is data that can be found by
+  <strong>measuring something</strong>.
+</p>
+
+<p>
+  We use units such as meters, kilograms, centimeters, seconds, and degrees.
+</p>
+
+<p>
+  <strong>Example:</strong> A student's height is <strong>165.5 cm</strong>.
+</p>
+
+<p>
+  Here, height is measurable because we can use a measuring instrument to
+  find its value.
+</p>
+
+<p><strong>Other examples:</strong></p>
+
+<ul>
+  <li>Weight = <strong>55 kg</strong></li>
+  <li>Distance = <strong>10 km</strong></li>
+  <li>Temperature = <strong>35°C</strong></li>
+  <li>Time = <strong>2.5 hours</strong></li>
+</ul>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Easy to remember:</strong>
+  <br><br>
+  <strong>Measurable</strong> = Data that can be measured
+</div>
+
+
+<h3>3. Countable</h3>
+
+<p>
+  <strong>Countable data</strong> is data that can be found by
+  <strong>counting things</strong>.
+</p>
+
+<p>
+  <strong>Example:</strong> There are <strong>40 students</strong> in a
+  classroom.
+</p>
+
+<p>
+  We can count the students and get the value <strong>40</strong>.
+</p>
+
+<p><strong>Other examples:</strong></p>
+
+<ul>
+  <li><strong>25</strong> computers in a lab</li>
+  <li><strong>100</strong> books in a library</li>
+  <li><strong>15</strong> cars in a parking area</li>
+  <li><strong>8</strong> teachers in a department</li>
+</ul>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Easy to remember:</strong>
+  <br><br>
+  <strong>Countable</strong> = Data that can be counted
+</div>
+
+
+<h3>4. Arithmetical</h3>
+
+<p>
+  <strong>Arithmetical data</strong> is numerical data that can be used in
+  <strong>mathematical calculations</strong> such as addition, subtraction,
+  multiplication, and division.
+</p>
+
+<p><strong>Example:</strong></p>
+
+<ul>
+  <li>Mathematics = <strong>80</strong></li>
+  <li>English = <strong>70</strong></li>
+  <li>Computer Science = <strong>90</strong></li>
+</ul>
+
+<p>
+  We can calculate the total:
+</p>
+
+<p>
+  <strong>80 + 70 + 90 = 240</strong>
+</p>
+
+<p>
+  We can also calculate the average:
+</p>
+
+<p>
+  <strong>240 ÷ 3 = 80</strong>
+</p>
+
+<p>
+  Therefore, the marks are <strong>arithmetical data</strong> because they can
+  be used in mathematical calculations.
+</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+  <strong>Easy to remember:</strong>
+  <br><br>
+  <strong>Arithmetical</strong> = Data that can be used in mathematical calculations
+</div>
+
+<h2 id="organising-and-analysing-data">Organising and Analysing Data</h2>
+
+<p>
+  After collecting data, the next steps are to <strong>organise and analyse</strong>
+  it.
+</p>
+
+<h3>What is Organising Data?</h3>
+
+<p>
+  <strong>Organising data</strong> means arranging collected data in a clear
+  and meaningful way so that it is easy to understand and use.
+</p>
+
+<p>
+  <strong>Example:</strong> Suppose a teacher collects the marks of five
+  students:
+</p>
+
+<p>
+  <strong>85, 70, 92, 65, 78</strong>
+</p>
+
+<p>
+  Instead of keeping these numbers randomly, the teacher can arrange them in a
+  <strong>data table</strong>.
+</p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>Student</th>
+    <th>Marks</th>
+  </tr>
+
+  <tr>
+    <td>Ali</td>
+    <td>85</td>
+  </tr>
+
+  <tr>
+    <td>Ahmed</td>
+    <td>70</td>
+  </tr>
+
+  <tr>
+    <td>Sara</td>
+    <td>92</td>
+  </tr>
+
+  <tr>
+    <td>Hamza</td>
+    <td>65</td>
+  </tr>
+
+  <tr>
+    <td>Ayesha</td>
+    <td>78</td>
+  </tr>
+</table>
+
+<p>
+  Now the data is easier to <strong>read and understand</strong>.
+</p>
+
+
+<h2 id="what-is-analysing-data">What is Analysing Data?</h2>
+
+<p>
+  <strong>Analysing data</strong> means studying organised data to find
+  <strong>patterns, relationships, differences, trends, or useful information</strong>.
+</p>
+
+<p>
+  <strong>Example:</strong> By analysing the marks above, we can find:
+</p>
+
+<ul>
+  <li><strong>Sara</strong> got the highest marks.</li>
+  <li><strong>Hamza</strong> got the lowest marks.</li>
+  <li>Most students scored above <strong>70</strong>.</li>
+  <li>The <strong>average marks</strong> can be calculated.</li>
+</ul>
+
+<p>
+  So, <strong>data analysis</strong> helps us turn raw data into
+  <strong>useful information</strong>.
+</p>
+
+
+<h2 id="importance-of-organising-data">Importance of Organising Data</h2>
+
+<p>
+  The importance of organising data can be understood from the following
+  important points:
+</p>
+
+<ol>
+  <li><strong>Makes data easy to understand</strong></li>
+  <li><strong>Makes data easy to read</strong></li>
+  <li><strong>Makes data easy to compare</strong></li>
+  <li><strong>Helps identify patterns and trends</strong></li>
+  <li><strong>Saves time when finding information</strong></li>
+  <li><strong>Helps in making better decisions</strong></li>
+  <li><strong>Makes data analysis easier</strong></li>
+  <li><strong>Reduces confusion and errors</strong></li>
+  <li><strong>Makes data easier to store and manage</strong></li>
+  <li><strong>Helps present information clearly</strong></li>
+  <li><strong>Makes important information easier to find</strong></li>
+  <li><strong>Helps in preparing reports and charts</strong></li>
+</ol>
+
+
+<h2 id="data-tables">Data Tables</h2>
+
+<p>
+  A <strong>data table</strong> is a way of organising data in
+  <strong>rows and columns</strong> so that information can be presented
+  clearly and easily understood.
+</p>
+
+<h3>Example of a Data Table</h3>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>Student</th>
+    <th>Age</th>
+    <th>Marks</th>
+  </tr>
+
+  <tr>
+    <td>Ali</td>
+    <td>15</td>
+    <td>85</td>
+  </tr>
+
+  <tr>
+    <td>Ahmed</td>
+    <td>16</td>
+    <td>72</td>
+  </tr>
+
+  <tr>
+    <td>Sara</td>
+    <td>15</td>
+    <td>91</td>
+  </tr>
+
+  <tr>
+    <td>Hamza</td>
+    <td>16</td>
+    <td>78</td>
+  </tr>
+</table>
+
+
+<h2 id="charts">Charts</h2>
+
+<p>
+  A <strong>chart</strong> is a visual way of presenting data using
+  <strong>bars, lines, slices, or other graphical elements</strong>.
+  Charts make data easier to <strong>understand, compare, and analyse</strong>.
+</p>
+
+<h3>Common Types of Charts</h3>
+
+<ol>
+  <li>
+    <strong>Bar Chart</strong> – Used to compare values between different
+    categories.
+  </li>
+
+  <li>
+    <strong>Line Chart</strong> – Used to show changes or trends over time.
+  </li>
+
+  <li>
+    <strong>Pie Chart</strong> – Used to show parts or percentages of a whole.
+  </li>
+</ol>
+
+
+<h2 id="graphs">Graphs</h2>
+
+<p>
+  A <strong>graph</strong> is a visual representation of data that helps us
+  understand <strong>relationships, patterns, comparisons, and changes</strong>
+  in the data.
+</p>
+
+<p>
+  Graphs usually use <strong>axes</strong> to display data:
+</p>
+
+<ul>
+  <li>
+    <strong>X-axis:</strong> Usually represents categories, time, or another
+    variable.
+  </li>
+
+  <li>
+    <strong>Y-axis:</strong> Usually represents the value being measured.
+  </li>
+</ul>
+
+<img src="images/9-CS-IMAGES/chapter-6/table-chart-graph.webp" alt="table-chart-graph" class="post-image" loading="lazy" width="1672" height="940">
+
+<h2 id="methods-and-tools-of-data-collection">Methods and Tools of Data Collection</h2>
+
+<h2 id="data-collection">Data Collection</h2>
+
+<p>
+  <strong>Data collection</strong> is the process of gathering information
+  from different sources for a specific purpose. The collected data can then
+  be organised, analysed, and used to make better decisions.
+</p>
+
+<p>
+  <strong>Example:</strong> A school may collect data about students' marks,
+  attendance, study habits, and feedback to understand their performance.
+</p>
+
+
+<h2 id="methods-of-data-collection">Methods of Data Collection</h2>
+
+<p>
+  There are several methods used to collect data:
+</p>
+
+<h3>1. Surveys</h3>
+
+<p>
+  A <strong>survey</strong> is a method of collecting information by asking
+  questions from a group of people. Surveys can be conducted using paper
+  forms, online forms, or other tools.
+</p>
+
+<p>
+  <strong>Example:</strong> A school can conduct a survey to find out which
+  subjects students like the most.
+</p>
+
+<h3>Best Practices in Online Survey Design and Administration</h3>
+
+<ul>
+  <li>Clear and Specific Questions</li>
+<li>Use Multiple-Choice and Rating Scales</li>
+<li>Keep the Survey Short and Simple</li>
+<li>Ensure Anonymity</li>
+<li>Test the Survey Before Sharing</li>
+<li>Analyse the Survey Results</li>
+</ul>
+
+
+<h3>2. Questionnaires</h3>
+
+<p>
+  A <strong>questionnaire</strong> is a set of written questions used to
+  collect information from people. It may contain multiple-choice, yes/no,
+  or open-ended questions.
+</p>
+
+<p>
+  <strong>Example:</strong> A teacher can give students a questionnaire to
+  collect their feedback about online learning.
+</p>
+
+
+<h3>3. Interviews</h3>
+
+<p>
+  An <strong>interview</strong> is a method of collecting data by asking
+  questions directly to a person or a group of people. Interviews can be
+  conducted face-to-face, by phone, or online.
+</p>
+
+<p>
+  <strong>Example:</strong> A company may interview customers to understand
+  their opinions about a new product.
+</p>
+
+
+<h3>4. Observations</h3>
+
+<p>
+  <strong>Observation</strong> is a method of collecting data by carefully
+  watching and recording people, events, activities, or situations.
+</p>
+
+<p>
+  <strong>Example:</strong> A teacher may observe students in the classroom
+  to study their participation and behaviour.
+</p>
+
+
+<h3>5. Online Data Sources</h3>
+
+<p>
+  <strong>Online data sources</strong> are websites, online databases,
+  digital records, social media platforms, and other internet-based sources
+  from which data can be collected.
+</p>
+
+<p>
+  <strong>Example:</strong> A researcher may collect information about
+  weather, population, or technology trends from reliable websites and
+  online databases.
+</p>
+
+<h2 id="types-of-data-structured-and-unstructured">Data Types: Structured and Unstructured Data</h2>
+
+<p>
+  Data can also be classified based on <strong>how it is organised and stored</strong>.
+  Two common types are:
+</p>
+
+<ol>
+  <li><strong>Structured Data</strong></li>
+  <li><strong>Unstructured Data</strong></li>
+</ol>
+
+
+<h2 id="structured-data">1. Structured Data</h2>
+
+<p>
+  <strong>Structured data</strong> is data that is
+  <strong>organised in a fixed and well-defined format</strong>, usually in
+  <strong>rows and columns</strong>.
+</p>
+
+<p>
+  It is easy to <strong>store, search, sort, and analyse</strong> using
+  databases and spreadsheets.
+</p>
+
+<h3>Example</h3>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>Student</th>
+    <th>Age</th>
+    <th>Marks</th>
+  </tr>
+
+  <tr>
+    <td>Ali</td>
+    <td>15</td>
+    <td>85</td>
+  </tr>
+
+  <tr>
+    <td>Ahmed</td>
+    <td>16</td>
+    <td>72</td>
+  </tr>
+
+  <tr>
+    <td>Sara</td>
+    <td>15</td>
+    <td>91</td>
+  </tr>
+</table>
+
+<p>
+  Here, each piece of information has a <strong>specific place</strong> in
+  the table.
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+  <li>Student records</li>
+  <li>Employee records</li>
+  <li>Bank transactions</li>
+  <li>Product lists</li>
+  <li>Sales records</li>
+  <li>Customer information</li>
+</ul>
+
+<h2 id="unstructured-data">2. Unstructured Data</h2>
+
+<p>
+  <strong>Unstructured data</strong> is data that
+  <strong>does not follow a fixed or organised format</strong>. It can contain
+  different types of information and is not usually stored in rows and columns.
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+  <li>Images and photographs</li>
+  <li>Videos</li>
+  <li>Audio recordings</li>
+  <li>Social media posts</li>
+  <li>Emails</li>
+  <li>Text documents</li>
+  <li>Presentations</li>
+</ul>
+
+<h2 id="data-visualization">Data Visualization</h2>
+
+<p>
+  <strong>Data visualization</strong> is the process of presenting data in a
+  <strong>visual form</strong>, such as charts, graphs, and diagrams. It makes
+  complex data easier to <strong>understand, compare, and analyse</strong>.
+</p>
+
+<p>
+  <strong>Example:</strong> Instead of looking at a long list of monthly sales
+  numbers, we can use a <strong>bar chart or line chart</strong> to quickly see
+  which month had the highest sales.
+</p>
+
+
+<h2 id="data-visualization-tools">Data Visualization Tools</h2>
+
+<p>
+  Several tools can be used to create charts, graphs, and other visual
+  representations of data.
+</p>
+
+<h3>1. MS Excel</h3>
+
+<p>
+  <strong>Microsoft Excel</strong> is a spreadsheet program used to
+  <strong>organise, calculate, analyse, and visualize data</strong>. It can
+  create different types of charts and graphs.
+</p>
+
+
+<h3>2. Google Sheets</h3>
+
+<p>
+  <strong>Google Sheets</strong> is an online spreadsheet tool that allows users
+  to <strong>store, organise, analyse, and visualize data</strong>. It also
+  allows multiple people to work on the same spreadsheet online.
+</p>
+
+
+<h3>3. Tableau</h3>
+
+<p>
+  <strong>Tableau</strong> is a data visualization tool used to create
+  <strong>interactive charts, graphs, dashboards, and reports</strong>. It is
+  useful for analysing large amounts of data and presenting it clearly.
+</p>
+
+
+<h3>4. Microsoft Power BI</h3>
+
+<p>
+  <strong>Microsoft Power BI</strong> is a data analysis and visualization tool
+  used to <strong>analyse data and create interactive charts, graphs, reports,
+  dashboards, and maps</strong>. It helps users understand data and make
+  better decisions.
+</p>
+
+<h2 id="data-preprocessing-and-analysis">Data Preprocessing and Analysis</h2>
+
+<h2 id="data-pre-processing">Data Pre-processing</h2>
+
+<p>
+  <strong>Data pre-processing</strong> is the process of
+  <strong>checking, cleaning, and preparing raw data</strong> before analysing
+  it. It helps make the data <strong>accurate, complete, and suitable for
+  analysis</strong>.
+</p>
+
+<p>
+  <strong>Example:</strong> If a student marks table contains missing marks,
+  incorrect values, or duplicate records, these problems should be fixed
+  before analysing the data.
+</p>
+
+
+<h2 id="data-pre-processing-techniques">Data Pre-processing Techniques</h2>
+
+<h3>1. Evaluating Data Quality</h3>
+
+<p>
+  <strong>Data quality</strong> means checking whether the collected data is
+  <strong>accurate, complete, consistent, and useful</strong> for analysis.
+</p>
+
+
+<h3>2. Identifying Errors, Outliers, and Biases</h3>
+
+<p>
+  <strong>Errors:</strong> Incorrect or wrongly entered data, such as recording
+  a student's <strong>marks as 105 when the total is 100</strong>.
+</p>
+
+<p>
+  <strong>Outliers:</strong> Values that are very different from most other
+  values, such as a student scoring <strong>5 marks</strong> when most students
+  score between <strong>60 and 90</strong>.
+</p>
+
+<p>
+  <strong>Biases:</strong> Unfair or unbalanced data that may lead to incorrect
+  results, such as <strong>surveying only high-performing students to judge
+  the overall quality of a school</strong>.
+</p>
+
+
+<h2 id="implementing-data-validation-and-cleaning-processes">
+  Implementing Data Validation and Cleaning Processes
+</h2>
+
+<p>
+  Data validation and cleaning help ensure that the data is
+  <strong>correct, complete, and ready for analysis</strong>.
+</p>
+
+
+<h3>Data Validation</h3>
+
+<p>
+  <strong>Data validation</strong> is the process of checking whether the data
+  follows the required rules and is entered correctly.
+</p>
+
+<p>
+  <strong>Example:</strong> A student's marks should be entered as a number,
+  such as <strong>85</strong>, not as text such as
+  <strong>"eighty-five"</strong>.
+</p>
+
+
+<h3>Validating Data Completeness</h3>
+
+<p>
+  This means checking that <strong>all required information is available</strong>
+  and important values are not missing.
+</p>
+
+<p>
+  <strong>Example:</strong> If a student record requires name, age, and marks,
+  all three fields should be filled.
+</p>
+
+
+<h3>Validating Data Accuracy</h3>
+
+<p>
+  This means checking whether the data is
+  <strong>correct and represents the actual information</strong>.
+</p>
+
+<p>
+  <strong>Example:</strong> If a student's actual marks are
+  <strong>85</strong> but the record shows <strong>58</strong>, the data needs
+  to be corrected.
+</p>
+
+
+<h2 id="data-cleaning">Data Cleaning</h2>
+
+<p>
+  <strong>Data cleaning</strong> is the process of
+  <strong>finding and correcting or removing incorrect, incomplete, duplicate,
+  or unnecessary data</strong> from a dataset. It improves the
+  <strong>quality, accuracy, and reliability</strong> of data before analysis.
+</p>
+
+
+<h3>Handling Missing Data</h3>
+
+<p>
+  <strong>Missing data</strong> occurs when some required information is not
+  available.
+</p>
+
+<p>It can be handled by:</p>
+
+<ul>
+  <li>Entering the correct value if it is known.</li>
+
+  <li>
+    <strong>Using the average or most common value</strong> when the exact value
+    is unknown.
+  </li>
+
+  <li>
+    Removing the record if the missing information is not important.
+  </li>
+</ul>
+
+
+<h3>Dealing with Outliers</h3>
+
+<p>
+  <strong>Outliers</strong> are values that are unusually high or low compared
+  with the other values.
+</p>
+
+<p>
+  They should be checked to determine whether they are
+  <strong>correct values or errors</strong>. If an outlier is an error, it should
+  be corrected or removed.
+</p>
+
+<h2 id="data-analysis-techniques">Data Analysis Techniques</h2>
+
+<p>
+  Data analysis techniques are methods used to
+  <strong>examine, understand, and interpret data</strong> to find useful
+  information and patterns.
+</p>
+
+<p>There are two common types of data analysis:</p>
+
+
+<h3>1. Quantitative Data Analysis</h3>
+
+<p>
+  <strong>Quantitative data analysis</strong> is used to analyse
+  <strong>numerical data</strong>. It involves mathematical calculations and
+  statistical methods to find patterns, differences, and relationships.
+</p>
+
+<p>
+  <strong>Example:</strong> A teacher analyses students' marks to calculate the
+  <strong>total, average, highest, and lowest marks</strong>.
+</p>
+
+
+<h3>2. Qualitative Data Analysis</h3>
+
+<p>
+  <strong>Qualitative data analysis</strong> is used to analyse
+  <strong>non-numerical data</strong>, such as words, opinions, descriptions,
+  and feedback. It helps identify <strong>ideas, themes, opinions, and
+  patterns</strong>.
+</p>
+
+<p>
+  <strong>Example:</strong> A school collects students' feedback about online
+  classes and groups their responses into themes such as
+  <strong>easy, difficult, interesting, and boring</strong>.
+</p>
+
+
+<h2 id="cloud-storage">Cloud Storage</h2>
+
+<p>
+  <strong>Cloud storage</strong> is a service that allows users to
+  <strong>store data and files on remote servers accessed through the
+  internet</strong> instead of storing everything only on a local computer or
+  device.
+</p>
+
+<p>
+  <strong>Example:</strong> Files can be stored in
+  <strong>Google Drive, OneDrive, or Dropbox</strong> and accessed whenever
+  needed.
+</p>
+
+
+<h2 id="benefits-of-cloud-storage">Benefits of Cloud Storage</h2>
+
+<h3>1. Data Backups</h3>
+
+<p>
+  Cloud storage can be used to <strong>create backups of important files and
+  data</strong>. If a computer is damaged or files are accidentally deleted,
+  the backup can help recover the data.
+</p>
+
+
+<h3>2. Remote Access</h3>
+
+<p>
+  Cloud storage allows users to <strong>access their files from different
+  devices and locations</strong> as long as they have an internet connection.
+</p>
+
+
+<h2 id="benefits-of-collaborative-tools">Benefits of Collaborative Tools</h2>
+
+<p>
+  Collaborative tools allow multiple users to
+  <strong>work together on files, documents, and projects</strong>.
+</p>
+
+
+<h3>1. Enhanced Productivity</h3>
+
+<p>
+  They help team members <strong>work together, share information, and complete
+  tasks more efficiently</strong>.
+</p>
+
+
+<h3>2. Version Control</h3>
+
+<p>
+  Version control helps users <strong>keep track of changes made to files and
+  access previous versions when needed</strong>.
+</p>
+
+
+<h2 id="tools-in-data-science">Tools in Data Science</h2>
+
+<p>
+  Several tools are commonly used in data science to
+  <strong>collect, process, analyse, and manage data</strong>.
+</p>
+
+
+<h3>1. Microsoft Excel</h3>
+
+<p>
+  <strong>Microsoft Excel</strong> is a spreadsheet tool used to
+  <strong>organise, calculate, analyse, and visualize data</strong> using
+  tables, formulas, charts, and graphs.
+</p>
+
+
+<h3>2. Python</h3>
+
+<p>
+  <strong>Python</strong> is a programming language widely used in data science
+  for <strong>data analysis, data processing, visualization, and machine
+  learning</strong>.
+</p>
+
+
+<h3>3. R</h3>
+
+<p>
+  <strong>R</strong> is a programming language and software environment mainly
+  used for <strong>statistical analysis, data visualization, and working with
+  data</strong>.
+</p>
+
+
+<h3>4. SQL</h3>
+
+<p>
+  <strong>SQL (Structured Query Language)</strong> is used to
+  <strong>store, retrieve, manage, and analyse data in databases</strong>.
+</p>
+
+<h2 id="exercise-questions">Exercise Questions</h2>
+
+<h3>1. Write two differences between qualitative and quantitative data.</h3>
+
+<p><strong>Answer:</strong></p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>Quantitative Data</th>
+    <th>Qualitative Data</th>
+  </tr>
+  <tr>
+    <td>It is numerical data.</td>
+    <td>It is non-numerical data.</td>
+  </tr>
+  <tr>
+    <td>It can be analysed using mathematical calculations.</td>
+    <td>It is used to identify opinions, ideas, themes, and patterns.</td>
+  </tr>
+</table>
+
+
+<h3>2. Which method would you use to collect opinions from a large group of people about a new school policy?</h3>
+
+<p>
+  <strong>Answer:</strong> I would use a <strong>survey</strong> to collect
+  opinions from a large group of people. A survey can be conducted using
+  <strong>paper forms or online forms</strong> and allows information to be
+  collected from many people quickly.
+</p>
+
+
+<h3>3. What type of data is the number of students in your class?</h3>
+
+<p>
+  <strong>Answer:</strong> The number of students in a class is
+  <strong>quantitative data</strong> because it is numerical data.
+</p>
+
+
+<h3>4. Why is it important to organise data into tables or charts before analyzing it?</h3>
+
+<p>
+  <strong>Answer:</strong> Organising data into tables or charts makes it
+  <strong>easy to understand, read, compare, and analyse</strong>. It also helps
+  identify <strong>patterns, trends, and differences</strong> in the data.
+</p>
+
+
+<h3>5. Explain why data visualization is important.</h3>
+
+<p>
+  <strong>Answer:</strong> Data visualization is important because it presents
+  data in a <strong>visual form</strong>, such as charts, graphs, and diagrams.
+  It makes complex data easier to <strong>understand, compare, and analyse</strong>
+  and helps identify patterns and trends quickly.
+</p>
+
+
+<h3>6. For which purpose do we use line graph?</h3>
+
+<p>
+  <strong>Answer:</strong> A <strong>line graph</strong> is used to show
+  <strong>changes or trends over time</strong>. For example, it can be used to
+  show changes in monthly sales or students' performance over several months.
+</p>
+
+
+<h3>7. How does Microsoft Power BI help in data visualization?</h3>
+
+<p>
+  <strong>Answer:</strong> Microsoft Power BI helps in data visualization by
+  allowing users to create <strong>interactive charts, graphs, reports,
+  dashboards, and maps</strong>. It helps users understand data and make better
+  decisions.
+</p>
+
+
+<h3>8. How can we use Python in Data Science?</h3>
+
+<p>
+  <strong>Answer:</strong> Python is widely used in Data Science for
+  <strong>data analysis, data processing, visualization, and machine
+  learning</strong>. It helps users work with data and find useful information
+  and patterns.
+</p>
+
+
+<h3>9. What is SQL?</h3>
+
+<p>
+  <strong>Answer:</strong> <strong>SQL (Structured Query Language)</strong> is
+  a language used to <strong>store, retrieve, manage, and analyse data in
+  databases</strong>.
+</p>
+
+<h2 id="mcqs">Multiple Choice Questions (MCQs) on Data Science and Data Gathering</h2>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What is Data Science?</div>
+  <div class="mcq-options">
+    a. The process of collecting, organising, studying, and using data<br>
+    b. The process of designing computer hardware<br>
+    c. The process of creating websites only<br>
+    d. The process of repairing computers
+  </div>
+  <div class="mcq-answer">Answer: a. The process of collecting, organising, studying, and using data</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. What is data gathering?</div>
+  <div class="mcq-options">
+    a. Deleting unnecessary files<br>
+    b. Collecting information from different sources for a specific purpose<br>
+    c. Drawing charts only<br>
+    d. Storing files on a computer
+  </div>
+  <div class="mcq-answer">Answer: b. Collecting information from different sources for a specific purpose</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. Which of the following is an example of data?</div>
+  <div class="mcq-options">
+    a. A computer keyboard only<br>
+    b. A computer mouse only<br>
+    c. A student's marks<br>
+    d. A classroom wall
+  </div>
+  <div class="mcq-answer">Answer: c. A student's marks</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. Data can be in the form of:</div>
+  <div class="mcq-options">
+    a. Numbers only<br>
+    b. Words only<br>
+    c. Images only<br>
+    d. Numbers, words, images, sounds, and videos
+  </div>
+  <div class="mcq-answer">Answer: d. Numbers, words, images, sounds, and videos</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. Which type of data describes qualities or characteristics?</div>
+  <div class="mcq-options">
+    a. Qualitative data<br>
+    b. Quantitative data<br>
+    c. Numerical data<br>
+    d. Measurable data
+  </div>
+  <div class="mcq-answer">Answer: a. Qualitative data</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. Which type of data is represented by numbers?</div>
+  <div class="mcq-options">
+    a. Qualitative data<br>
+    b. Quantitative data<br>
+    c. Categorical data<br>
+    d. Non-numeric data
+  </div>
+  <div class="mcq-answer">Answer: b. Quantitative data</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. Which of the following is non-numeric data?</div>
+  <div class="mcq-options">
+    a. 25<br>
+    b. 50 kg<br>
+    c. Red<br>
+    d. 100
+  </div>
+  <div class="mcq-answer">Answer: c. Red</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. Which of the following is categorical data?</div>
+  <div class="mcq-options">
+    a. 25 students<br>
+    b. 60 marks<br>
+    c. 35°C<br>
+    d. Bus, Car, Bicycle
+  </div>
+  <div class="mcq-answer">Answer: d. Bus, Car, Bicycle</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. Which of the following is numerical data?</div>
+  <div class="mcq-options">
+    a. Age = 15 years<br>
+    b. Colour = Blue<br>
+    c. Food = Biryani<br>
+    d. Weather = Sunny
+  </div>
+  <div class="mcq-answer">Answer: a. Age = 15 years</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. What does measurable data mean?</div>
+  <div class="mcq-options">
+    a. Data that is written in words<br>
+    b. Data that can be found by measuring something<br>
+    c. Data that cannot be changed<br>
+    d. Data that is stored online
+  </div>
+  <div class="mcq-answer">Answer: b. Data that can be found by measuring something</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. Which of the following is an example of measurable data?</div>
+  <div class="mcq-options">
+    a. Student's name<br>
+    b. Blood group<br>
+    c. Height = 165.5 cm<br>
+    d. Favourite food
+  </div>
+  <div class="mcq-answer">Answer: c. Height = 165.5 cm</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. Countable data is data that can be:</div>
+  <div class="mcq-options">
+    a. Described<br>
+    b. Measured only<br>
+    c. Stored online<br>
+    d. Counted
+  </div>
+  <div class="mcq-answer">Answer: d. Counted</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. Which of the following is countable data?</div>
+  <div class="mcq-options">
+    a. 40 students in a classroom<br>
+    b. 35°C temperature<br>
+    c. Blue colour<br>
+    d. Biryani
+  </div>
+  <div class="mcq-answer">Answer: a. 40 students in a classroom</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. Arithmetical data can be used for:</div>
+  <div class="mcq-options">
+    a. Drawing pictures only<br>
+    b. Mathematical calculations<br>
+    c. Recording sounds only<br>
+    d. Writing names only
+  </div>
+  <div class="mcq-answer">Answer: b. Mathematical calculations</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. What is organising data?</div>
+  <div class="mcq-options">
+    a. Deleting all data<br>
+    b. Collecting data only<br>
+    c. Arranging data in a clear and meaningful way<br>
+    d. Hiding data
+  </div>
+  <div class="mcq-answer">Answer: c. Arranging data in a clear and meaningful way</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">16. What is analysing data?</div>
+  <div class="mcq-options">
+    a. Storing data on a computer<br>
+    b. Collecting data from people<br>
+    c. Printing data<br>
+    d. Studying data to find useful information and patterns
+  </div>
+  <div class="mcq-answer">Answer: d. Studying data to find useful information and patterns</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">17. Which of the following helps organise data clearly?</div>
+  <div class="mcq-options">
+    a. Data table<br>
+    b. Keyboard<br>
+    c. Mouse<br>
+    d. Speaker
+  </div>
+  <div class="mcq-answer">Answer: a. Data table</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">18. A data table usually contains:</div>
+  <div class="mcq-options">
+    a. Images and sounds only<br>
+    b. Rows and columns<br>
+    c. Videos only<br>
+    d. Paragraphs only
+  </div>
+  <div class="mcq-answer">Answer: b. Rows and columns</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">19. Which chart is commonly used to compare values between categories?</div>
+  <div class="mcq-options">
+    a. Line chart<br>
+    b. Pie chart<br>
+    c. Bar chart<br>
+    d. Flowchart
+  </div>
+  <div class="mcq-answer">Answer: c. Bar chart</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">20. Which chart is commonly used to show changes or trends over time?</div>
+  <div class="mcq-options">
+    a. Bar chart<br>
+    b. Pie chart<br>
+    c. Data table<br>
+    d. Line chart
+  </div>
+  <div class="mcq-answer">Answer: d. Line chart</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">21. Which chart is useful for showing parts or percentages of a whole?</div>
+  <div class="mcq-options">
+    a. Pie chart<br>
+    b. Line chart<br>
+    c. Bar chart<br>
+    d. Data table
+  </div>
+  <div class="mcq-answer">Answer: a. Pie chart</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">22. Which axis usually represents the value being measured?</div>
+  <div class="mcq-options">
+    a. X-axis<br>
+    b. Y-axis<br>
+    c. Z-axis<br>
+    d. Side axis
+  </div>
+  <div class="mcq-answer">Answer: b. Y-axis</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">23. Which method collects information by asking questions from a group of people?</div>
+  <div class="mcq-options">
+    a. Observation<br>
+    b. Interview<br>
+    c. Survey<br>
+    d. Data cleaning
+  </div>
+  <div class="mcq-answer">Answer: c. Survey</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">24. What is a questionnaire?</div>
+  <div class="mcq-options">
+    a. A type of chart<br>
+    b. A computer program<br>
+    c. A data table<br>
+    d. A set of written questions used to collect information
+  </div>
+  <div class="mcq-answer">Answer: d. A set of written questions used to collect information</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">25. Which data collection method involves asking questions directly to a person?</div>
+  <div class="mcq-options">
+    a. Interview<br>
+    b. Observation<br>
+    c. Data visualization<br>
+    d. Data cleaning
+  </div>
+  <div class="mcq-answer">Answer: a. Interview</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">26. Observation involves:</div>
+  <div class="mcq-options">
+    a. Creating a database<br>
+    b. Watching and recording people, events, or activities<br>
+    c. Calculating averages<br>
+    d. Creating charts
+  </div>
+  <div class="mcq-answer">Answer: b. Watching and recording people, events, or activities</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">27. Which of the following is an online data source?</div>
+  <div class="mcq-options">
+    a. Classroom desk<br>
+    b. Notebook<br>
+    c. Online database<br>
+    d. Whiteboard
+  </div>
+  <div class="mcq-answer">Answer: c. Online database</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">28. Structured data is usually organised in:</div>
+  <div class="mcq-options">
+    a. Videos and audio<br>
+    b. Images only<br>
+    c. Paragraphs only<br>
+    d. Rows and columns
+  </div>
+  <div class="mcq-answer">Answer: d. Rows and columns</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">29. Which of the following is an example of structured data?</div>
+  <div class="mcq-options">
+    a. Student records in a table<br>
+    b. A video<br>
+    c. A photograph<br>
+    d. An audio recording
+  </div>
+  <div class="mcq-answer">Answer: a. Student records in a table</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">30. Which of the following is an example of unstructured data?</div>
+  <div class="mcq-options">
+    a. Bank transaction table<br>
+    b. Photograph<br>
+    c. Student marks table<br>
+    d. Product list
+  </div>
+  <div class="mcq-answer">Answer: b. Photograph</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">31. What is data visualization?</div>
+  <div class="mcq-options">
+    a. Deleting data<br>
+    b. Collecting data<br>
+    c. Presenting data in a visual form<br>
+    d. Storing data
+  </div>
+  <div class="mcq-answer">Answer: c. Presenting data in a visual form</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">32. Which tool is used to create spreadsheets, charts, and graphs?</div>
+  <div class="mcq-options">
+    a. Python<br>
+    b. SQL<br>
+    c. R<br>
+    d. Microsoft Excel
+  </div>
+  <div class="mcq-answer">Answer: d. Microsoft Excel</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">33. What is data preprocessing?</div>
+  <div class="mcq-options">
+    a. Checking, cleaning, and preparing raw data before analysis<br>
+    b. Creating a website<br>
+    c. Storing videos online<br>
+    d. Designing computer hardware
+  </div>
+  <div class="mcq-answer">Answer: a. Checking, cleaning, and preparing raw data before analysis</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">34. Which of the following is an example of a data error?</div>
+  <div class="mcq-options">
+    a. Recording a student's marks as 85<br>
+    b. Recording marks as 105 when the total is 100<br>
+    c. Recording the correct age<br>
+    d. Recording the correct name
+  </div>
+  <div class="mcq-answer">Answer: b. Recording marks as 105 when the total is 100</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">35. What is an outlier?</div>
+  <div class="mcq-options">
+    a. A missing value<br>
+    b. A duplicate record<br>
+    c. A value that is very different from most other values<br>
+    d. A category of data
+  </div>
+  <div class="mcq-answer">Answer: c. A value that is very different from most other values</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">36. What is data cleaning?</div>
+  <div class="mcq-options">
+    a. Creating a new database<br>
+    b. Collecting survey responses<br>
+    c. Making charts<br>
+    d. Finding and correcting or removing incorrect or unnecessary data
+  </div>
+  <div class="mcq-answer">Answer: d. Finding and correcting or removing incorrect or unnecessary data</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">37. Which tool is widely used for programming and data analysis in data science?</div>
+  <div class="mcq-options">
+    a. Python<br>
+    b. Paint<br>
+    c. Calculator<br>
+    d. Notepad
+  </div>
+  <div class="mcq-answer">Answer: a. Python</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">38. Which programming language is mainly used for statistical analysis and data visualization?</div>
+  <div class="mcq-options">
+    a. HTML<br>
+    b. R<br>
+    c. CSS<br>
+    d. JavaScript
+  </div>
+  <div class="mcq-answer">Answer: b. R</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">39. What is SQL mainly used for?</div>
+  <div class="mcq-options">
+    a. Editing photographs<br>
+    b. Creating presentations<br>
+    c. Managing and retrieving data in databases<br>
+    d. Recording audio
+  </div>
+  <div class="mcq-answer">Answer: c. Managing and retrieving data in databases</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">40. Which of the following is a benefit of cloud storage?</div>
+  <div class="mcq-options">
+    a. It removes the need for all data<br>
+    b. It only works on one computer<br>
+    c. It prevents all data collection<br>
+    d. It allows files to be accessed from different devices through the internet
+  </div>
+  <div class="mcq-answer">Answer: d. It allows files to be accessed from different devices through the internet</div>
+</div>
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Data Science and Data Gathering)</h2>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">1. What is Data Science?</div>
+    <div class="mcq-options">
+      <button>a. Collecting, organising, studying, and using data</button>
+      <button>b. Designing computer hardware</button>
+      <button>c. Creating websites only</button>
+      <button>d. Repairing computers</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">2. What is data gathering?</div>
+    <div class="mcq-options">
+      <button>a. Deleting unnecessary files</button>
+      <button>b. Collecting information from different sources for a specific purpose</button>
+      <button>c. Drawing charts only</button>
+      <button>d. Storing files on a computer</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">3. Which of the following is an example of data?</div>
+    <div class="mcq-options">
+      <button>a. A computer keyboard</button>
+      <button>b. A classroom wall</button>
+      <button>c. A student's marks</button>
+      <button>d. A computer desk</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">4. Data can be in the form of:</div>
+    <div class="mcq-options">
+      <button>a. Numbers only</button>
+      <button>b. Words only</button>
+      <button>c. Images only</button>
+      <button>d. Numbers, words, images, sounds, and videos</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">5. Which type of data describes qualities or characteristics?</div>
+    <div class="mcq-options">
+      <button>a. Qualitative data</button>
+      <button>b. Quantitative data</button>
+      <button>c. Numerical data</button>
+      <button>d. Measurable data</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">6. Which type of data is represented by numbers?</div>
+    <div class="mcq-options">
+      <button>a. Qualitative data</button>
+      <button>b. Quantitative data</button>
+      <button>c. Categorical data</button>
+      <button>d. Non-numeric data</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">7. Which of the following is non-numeric data?</div>
+    <div class="mcq-options">
+      <button>a. 25</button>
+      <button>b. 50 kg</button>
+      <button>c. Red</button>
+      <button>d. 100</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">8. Which of the following is categorical data?</div>
+    <div class="mcq-options">
+      <button>a. 25 students</button>
+      <button>b. 60 marks</button>
+      <button>c. 35°C</button>
+      <button>d. Bus, Car, Bicycle</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">9. Which of the following is numerical data?</div>
+    <div class="mcq-options">
+      <button>a. Age = 15 years</button>
+      <button>b. Colour = Blue</button>
+      <button>c. Food = Biryani</button>
+      <button>d. Weather = Sunny</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">10. What does measurable data mean?</div>
+    <div class="mcq-options">
+      <button>a. Data written in words</button>
+      <button>b. Data that can be found by measuring something</button>
+      <button>c. Data that cannot be changed</button>
+      <button>d. Data stored online</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">11. Which of the following is measurable data?</div>
+    <div class="mcq-options">
+      <button>a. Student's name</button>
+      <button>b. Blood group</button>
+      <button>c. Height = 165.5 cm</button>
+      <button>d. Favourite food</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">12. Countable data is data that can be:</div>
+    <div class="mcq-options">
+      <button>a. Described</button>
+      <button>b. Measured only</button>
+      <button>c. Stored online</button>
+      <button>d. Counted</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">13. Which of the following is countable data?</div>
+    <div class="mcq-options">
+      <button>a. 40 students in a classroom</button>
+      <button>b. 35°C temperature</button>
+      <button>c. Blue colour</button>
+      <button>d. Biryani</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. Arithmetical data can be used for:</div>
+    <div class="mcq-options">
+      <button>a. Drawing pictures only</button>
+      <button>b. Mathematical calculations</button>
+      <button>c. Recording sounds only</button>
+      <button>d. Writing names only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">15. What is organising data?</div>
+    <div class="mcq-options">
+      <button>a. Deleting all data</button>
+      <button>b. Collecting data only</button>
+      <button>c. Arranging data in a clear and meaningful way</button>
+      <button>d. Hiding data</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">16. What is analysing data?</div>
+    <div class="mcq-options">
+      <button>a. Storing data on a computer</button>
+      <button>b. Collecting data from people</button>
+      <button>c. Printing data</button>
+      <button>d. Studying data to find useful information and patterns</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">17. Which of the following helps organise data clearly?</div>
+    <div class="mcq-options">
+      <button>a. Data table</button>
+      <button>b. Keyboard</button>
+      <button>c. Mouse</button>
+      <button>d. Speaker</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">18. A data table usually contains:</div>
+    <div class="mcq-options">
+      <button>a. Images and sounds only</button>
+      <button>b. Rows and columns</button>
+      <button>c. Videos only</button>
+      <button>d. Paragraphs only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">19. Which chart is commonly used to compare values between categories?</div>
+    <div class="mcq-options">
+      <button>a. Line chart</button>
+      <button>b. Pie chart</button>
+      <button>c. Bar chart</button>
+      <button>d. Flowchart</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">20. Which chart is commonly used to show changes or trends over time?</div>
+    <div class="mcq-options">
+      <button>a. Bar chart</button>
+      <button>b. Pie chart</button>
+      <button>c. Data table</button>
+      <button>d. Line chart</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">21. Which chart is useful for showing parts or percentages of a whole?</div>
+    <div class="mcq-options">
+      <button>a. Pie chart</button>
+      <button>b. Line chart</button>
+      <button>c. Bar chart</button>
+      <button>d. Data table</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">22. Which axis usually represents the value being measured?</div>
+    <div class="mcq-options">
+      <button>a. X-axis</button>
+      <button>b. Y-axis</button>
+      <button>c. Z-axis</button>
+      <button>d. Side axis</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">23. Which method collects information by asking questions from a group of people?</div>
+    <div class="mcq-options">
+      <button>a. Observation</button>
+      <button>b. Interview</button>
+      <button>c. Survey</button>
+      <button>d. Data cleaning</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">24. What is a questionnaire?</div>
+    <div class="mcq-options">
+      <button>a. A type of chart</button>
+      <button>b. A computer program</button>
+      <button>c. A data table</button>
+      <button>d. A set of written questions used to collect information</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">25. Which data collection method involves asking questions directly to a person?</div>
+    <div class="mcq-options">
+      <button>a. Interview</button>
+      <button>b. Observation</button>
+      <button>c. Data visualization</button>
+      <button>d. Data cleaning</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">26. Observation involves:</div>
+    <div class="mcq-options">
+      <button>a. Creating a database</button>
+      <button>b. Watching and recording people, events, or activities</button>
+      <button>c. Calculating averages</button>
+      <button>d. Creating charts</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">27. Which of the following is an online data source?</div>
+    <div class="mcq-options">
+      <button>a. Classroom desk</button>
+      <button>b. Notebook</button>
+      <button>c. Online database</button>
+      <button>d. Whiteboard</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">28. Structured data is usually organised in:</div>
+    <div class="mcq-options">
+      <button>a. Videos and audio</button>
+      <button>b. Images only</button>
+      <button>c. Paragraphs only</button>
+      <button>d. Rows and columns</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">29. Which of the following is an example of structured data?</div>
+    <div class="mcq-options">
+      <button>a. Student records in a table</button>
+      <button>b. A video</button>
+      <button>c. A photograph</button>
+      <button>d. An audio recording</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">30. Which of the following is an example of unstructured data?</div>
+    <div class="mcq-options">
+      <button>a. Bank transaction table</button>
+      <button>b. Photograph</button>
+      <button>c. Student marks table</button>
+      <button>d. Product list</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">31. What is data visualization?</div>
+    <div class="mcq-options">
+      <button>a. Deleting data</button>
+      <button>b. Collecting data</button>
+      <button>c. Presenting data in a visual form</button>
+      <button>d. Storing data</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">32. Which tool is used to create spreadsheets, charts, and graphs?</div>
+    <div class="mcq-options">
+      <button>a. Python</button>
+      <button>b. SQL</button>
+      <button>c. R</button>
+      <button>d. Microsoft Excel</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">33. What is data preprocessing?</div>
+    <div class="mcq-options">
+      <button>a. Checking, cleaning, and preparing raw data before analysis</button>
+      <button>b. Creating a website</button>
+      <button>c. Storing videos online</button>
+      <button>d. Designing computer hardware</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">34. Which of the following is an example of a data error?</div>
+    <div class="mcq-options">
+      <button>a. Recording a student's marks as 85</button>
+      <button>b. Recording marks as 105 when the total is 100</button>
+      <button>c. Recording the correct age</button>
+      <button>d. Recording the correct name</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">35. What is an outlier?</div>
+    <div class="mcq-options">
+      <button>a. A missing value</button>
+      <button>b. A duplicate record</button>
+      <button>c. A value that is very different from most other values</button>
+      <button>d. A category of data</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">36. What is data cleaning?</div>
+    <div class="mcq-options">
+      <button>a. Creating a new database</button>
+      <button>b. Collecting survey responses</button>
+      <button>c. Making charts</button>
+      <button>d. Finding and correcting or removing incorrect or unnecessary data</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">37. Which tool is widely used for programming and data analysis in data science?</div>
+    <div class="mcq-options">
+      <button>a. Python</button>
+      <button>b. Paint</button>
+      <button>c. Calculator</button>
+      <button>d. Notepad</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">38. Which programming language is mainly used for statistical analysis and data visualization?</div>
+    <div class="mcq-options">
+      <button>a. HTML</button>
+      <button>b. R</button>
+      <button>c. CSS</button>
+      <button>d. JavaScript</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">39. What is SQL mainly used for?</div>
+    <div class="mcq-options">
+      <button>a. Editing photographs</button>
+      <button>b. Creating presentations</button>
+      <button>c. Managing and retrieving data in databases</button>
+      <button>d. Recording audio</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">40. Which of the following is a benefit of cloud storage?</div>
+    <div class="mcq-options">
+      <button>a. It removes the need for all data</button>
+      <button>b. It only works on one computer</button>
+      <button>c. It prevents all data collection</button>
+      <button>d. It allows files to be accessed from different devices through the internet</button>
+    </div>
+  </div>
+
+</section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+
+
+<h2 id="faqs">FAQs</h2>
+
+<section class="notes-post-faq" id="faq">
+
+    <div class="section-title">
+
+        <span>
+            Frequently Asked Questions
+        </span>
+
+        <h2>
+            Data Science and Data Gathering FAQs
+        </h2>
+
+        <p>
+            Here are answers to some common questions about data science, data gathering, types of data, data analysis, visualization, preprocessing, and data science tools.
+        </p>
+
+    </div>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is Data Science?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Data Science is the process of collecting, organising, analysing, and using data to find useful information and make better decisions.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is data gathering?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Data gathering is the process of collecting information from different sources for a specific purpose.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is data?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Data is a collection of facts, figures, words, images, sounds, or other information that can be used for analysis and decision-making.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What are the main types of data?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    The two main types of data are qualitative data and quantitative data. Qualitative data describes qualities or categories, while quantitative data is represented by numbers.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is qualitative data?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Qualitative data describes qualities, characteristics, or categories. Examples include colour, gender, favourite food, and blood group.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is quantitative data?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Quantitative data is numerical data that can be counted, measured, or used in mathematical calculations. Examples include age, height, weight, and marks.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Why is organising data important?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Organising data makes it easier to read, understand, compare, analyse, and identify useful patterns or trends.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is a data table?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    A data table is a structured way of presenting information in rows and columns. It helps organise and understand data clearly.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What are common methods of data collection?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Common methods of data collection include surveys, questionnaires, interviews, observations, and online data sources.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is structured data?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Structured data is information organised in a fixed format, usually in rows and columns, such as a student marks table.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is unstructured data?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Unstructured data does not follow a fixed table-like format. Examples include photographs, videos, audio recordings, and text documents.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is data visualization?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Data visualization is the process of presenting data in visual forms such as charts, graphs, and other visual representations to make information easier to understand.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is data preprocessing?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Data preprocessing is the process of checking, cleaning, and preparing raw data before it is analysed.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is data cleaning?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Data cleaning is the process of finding and correcting or removing incorrect, incomplete, duplicate, or unnecessary data.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Which tools are commonly used in Data Science?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Common tools used in Data Science include Microsoft Excel, Python, R, and SQL. These tools help collect, organise, analyse, visualise, and manage data.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/9-class/chapter-6/9-class-computer-chapter-6-data-science-and-data-gathering.pdf">
+  Download PDF
+</a>
+</div>
+
+</div>
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+<div class="social-icons">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=100009953895352" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/@ComputerWithSalman" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-youtube"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/salmannicksallu" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/923089051710" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</div>
+
+
+</div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+    <h3>Categories</h3>
+
+    <ul>
+
+        <li><a href="technology.html">Technology</a></li>
+
+        <li><a href="computer-science.html">Computer Science</a></li>
+
+        <li><a href="how-to-guides.html">How-To Guides</a></li>
+
+        <li><a href="education.html">Education</a></li>
+
+        <li><a href="ai-tools.html">AI Tools</a></li>
+
+        <li><a href="roadmaps.html">Career Roadmaps</a></li>
+
+        <li><a href="8-computer-science.html">Class 8 Computer</a></li>
+
+        <li><a href="9-computer-science.html">Class 9 Computer</a></li>
+
+        <li><a href="10-computer-science.html">Class 10 Computer</a></li>
+
+        <li><a href="11-computer-science.html">Class 11 Computer</a></li>
+
+        <li><a href="12-computer-science.html">Class 12 Computer</a></li>
+
+    </ul>
+
+</div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                question.classList.toggle("active");
+
+                const answer = question.nextElementSibling;
+
+                if (answer.style.maxHeight) {
+
+                    answer.style.maxHeight = null;
+
+                } else {
+
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+    
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
