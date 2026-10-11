@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Salman Ahmad" />
+
+<title>Class 9 Computer Science Chapter 2 Notes: System Design & Troubleshooting | MCQs, Short Questions, FAQs</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="notes-post.css">
+
+<meta name="description" content="Class 9 Computer Science Chapter 2 Notes: System Design and Troubleshooting. Learn digital systems, analog and digital signals, ADC and DAC, Boolean algebra, Boolean functions, logic gates, truth tables, system troubleshooting steps, hardware diagnosis, RAM and hard drive failures, component replacement and upgrades, software maintenance, and computer security. Includes solved MCQs, short questions, long questions, FAQs, examples, and exam preparation notes for FBISE and Punjab Board students." />
+
+  
+
+<meta name="keywords" content="Class 9 Computer Science Chapter 2 notes, 9th class computer science chapter 2, system design and troubleshooting class 9, system design class 9 computer science, troubleshooting class 9, digital systems class 9, analog and digital signals, analog-to-digital converter ADC, digital-to-analog converter DAC, Boolean algebra class 9, Boolean functions class 9, Boolean expressions, binary variables, logic gates class 9, AND OR NOT NAND XOR gates, logic gate truth tables, truth table class 9, Boolean algebra examples, uses of Boolean functions in computers, systematic troubleshooting steps, importance of troubleshooting, hardware troubleshooting class 9, hardware diagnosis and maintenance, RAM failure symptoms, hard drive failure symptoms, Windows Memory Diagnostic, MemTest86, CrystalDiskInfo, computer hardware maintenance, RAM replacement and upgrading, hard drive replacement, SSD upgrade, software maintenance class 9, software updates and patches, resolving software conflicts, computer security and maintenance, system performance, Class 9 Computer Science MCQs, Class 9 Computer Science short questions, Class 9 Computer Science long questions, solved questions and answers, Class 9 Computer Science FAQs, FBISE Class 9 Computer Science Chapter 2, Punjab Board Class 9 Computer Science Chapter 2, 9th class computer science exam preparation" />
+
+
+  <link rel="canonical" href="https://salmanblogs.com/9-class-chap-9-lecture-1" />
+  <!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+  <!-- Open Graph -->
+<meta property="og:title" content="Class 9 Computer Science Chapter 2: System Design and Troubleshooting Notes | MCQs, Short Questions, Long Questions & FAQs" />
+
+<meta property="og:description" content="Complete Class 9 Computer Science Chapter 2 Notes on System Design and Troubleshooting. Covers digital systems, analog and digital signals, analog-to-digital converter (ADC), digital-to-analog converter (DAC), Boolean algebra, Boolean functions and expressions, binary variables, logic gates including AND, OR, NOT, NAND and XOR, logic gate symbols and truth tables, uses of Boolean functions in computers, systematic troubleshooting steps, importance of troubleshooting, common hardware problems and solutions, hardware diagnosis and maintenance, RAM and hard drive failure symptoms, Windows Memory Diagnostic, MemTest86, CrystalDiskInfo, component replacement and upgrades, SSD upgrades, software updates and patches, software conflicts, and computer maintenance. Includes solved MCQs, short questions, long questions, FAQs, examples, and exam preparation notes for FBISE and Punjab Board students." />
+<meta property="og:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-9/chapter-9-notes.webp" />
+
+<meta property="og:url" content="https://salmanblogs.com/9-class-chap-9-lecture-1" />
+
+<meta property="og:type" content="article" />
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:title" content="Class 9 Computer Science Chapter 2: System Design and Troubleshooting Notes | MCQs & FAQs" />
+
+<meta name="twitter:description" content="Study Class 9 Computer Science Chapter 2: System Design and Troubleshooting with complete notes on digital systems, analog and digital signals, ADC and DAC, Boolean algebra, Boolean functions and expressions, logic gates, truth tables, systematic troubleshooting steps, hardware diagnosis and maintenance, RAM and hard drive failures, component replacement and upgrades, SSDs, software updates, patches, and software conflicts. Includes MCQs, short questions, long questions, FAQs, examples, and exam preparation for FBISE and Punjab Board students." />
+
+<meta name="twitter:image" content="https://salmanblogs.com/images/9-CS-IMAGES/chapter-9/chapter-9-notes.webp" />
+
+<!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="favicon.ico">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Class 9 Computer Science Chapter 2 System Design and Troubleshooting Notes",
+  "author": {
+    "@type": "Person",
+    "name": "Salman Ahmad"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Salman Blogs"
+  },
+  "description": "Study Class 9 Computer Science Chapter 2: System Design and Troubleshooting with complete notes on digital systems, analog and digital signals, ADC and DAC, Boolean algebra, Boolean functions and expressions, logic gates, truth tables, systematic troubleshooting steps, hardware diagnosis and maintenance, RAM and hard drive failures, component replacement and upgrades, SSDs, software updates, patches, and software conflicts. Includes MCQs, short questions, long questions, FAQs, examples, and exam preparation for FBISE and Punjab Board students.",
+  "mainEntityOfPage": "https://salmanblogs.com/9-class-chap-2-system-design-and-troubleshooting"
+}
+</script>
+
+</script>
+
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<span class="logo-first">Salman</span>
+
+<span class="logo-last">Blogs</span>
+
+</a>
+
+<nav>
+
+<div class="nav-toggle" id="navToggle">
+    &#9776;
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+<li><a href="terms.html">Terms</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="hero-badge">
+  🔥 System Design and Troubleshooting
+</span>
+<br>
+<h1>
+  <span>Chapter 2 Notes</span>
+</h1>
+
+<p>
+  Complete lecture notes covering digital systems, analog and digital signals,
+  ADC and DAC, Boolean algebra, Boolean functions and expressions, logic gates,
+  truth tables, systematic troubleshooting, hardware diagnosis and maintenance,
+  RAM and hard drive failures, component replacement and upgrades, SSDs,
+  software updates, patches, software conflicts, MCQs, short questions,
+  long questions, FAQs and exam preparation for FBISE and Punjab Board students.
+</p>
+<div class="hero-buttons">
+
+<a href="categories.html" class="btn-secondary">
+
+Browse Categories
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<main class="post-container">
+  <article class="blog-post">
+<h1 class="post-title">Class 9 Computer Science Chapter 2: System Design and Troubleshooting Notes</h1>
+    <div class="post-meta">Posted in <strong>9 Computer Science</strong></div>
+    <img src="images/9-CS-IMAGES/chapter-2/9-computer-chapter-2-system-design-and-troubleshooting.webp" alt="9-computer-chapter-2-system-design-and-troubleshooting" class="post-image" loading="lazy">
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 9 Computer Science.
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#system-design-and-troubleshooting">System Design and Troubleshooting</a></li>
+<li><a href="#system-design">1. System Design</a></li>
+<li><a href="#troubleshooting">2. Troubleshooting</a></li>
+<li><a href="#digital-systems">Digital Systems</a></li>
+<li><a href="#analog-signal">1. Analog Signal</a></li>
+<li><a href="#digital-signal">2. Digital Signal</a></li>
+<li><a href="#difference-between-analog-and-digital-signals">Difference Between Analog and Digital Signals</a></li>
+<li><a href="#analog-to-digital-converter-adc">1. Analog-to-Digital Converter (ADC)</a></li>
+<li><a href="#digital-to-analog-converter-dac">2. Digital-to-Analog Converter (DAC)</a></li>
+<li><a href="#why-use-adc-and-dac-conversion">Why Do We Use ADC and DAC Conversion?</a></li>
+<li><a href="#boolean-algebra">Boolean Algebra</a></li>
+<li><a href="#logic-gates">Logic Gates</a></li>
+<li><a href="#boolean-functions">Boolean Functions</a></li>
+<li><a href="#boolean-expression">Boolean Expression</a></li>
+<li><a href="#binary-variables">Binary Variables</a></li>
+<li><a href="#logic-operations">Logic Operations</a></li>
+<li><a href="#and-operation">1. AND Operation</a></li>
+<li><a href="#or-operation">2. OR Operation</a></li>
+<li><a href="#not-operation">3. NOT Operation</a></li>
+<li><a href="#truth-table">Truth Table</a></li>
+<li><a href="#boolean-function-example">Given Boolean Function</a></li>
+<li><a href="#uses-of-boolean-functions-in-computers">Uses of Boolean Functions in Computers</a></li>
+<li><a href="#logic-gates-and-their-functions">Logic Gates and Their Functions</a></li>
+<li><a href="#system-troubleshooting">System Troubleshooting</a></li>
+<li><a href="#importance-of-troubleshooting-in-computing-systems">Importance of Troubleshooting in Computing Systems</a></li>
+<li><a href="#basic-hardware-related-issues">Basic Hardware-Related Issues</a></li>
+<li><a href="#common-hardware-issues-and-their-solutions">Common Hardware Issues and Their Solutions</a></li>
+<li><a href="#hardware-diagnosis-and-maintenance">Hardware Diagnosis and Maintenance</a></li>
+<li><a href="#recognizing-hardware-failures">1. Recognizing Hardware Failures</a></li>
+<li><a href="#replacement-and-upgrading-of-components">2. Replacement and Upgrading of Components</a></li>
+<li><a href="#security-and-maintenance">3. Security and Maintenance</a></li>
+<li><a href="#exercise-short-questions-and-answers">Exercise Short Questions and Answers</a></li>  
+<li><a href="#mcqs">MCQs</a></li>
+<li><a href="#test-mcqs">MCQs for testing</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+  <div class="post-content">
+
+<h2 id="system-design-and-troubleshooting">System Design and Troubleshooting</h2>
+
+<h2 id="system-design">1. System Design</h2>
+
+<p>
+  <strong>System design</strong> is the process of planning and creating a
+  system by deciding how its different components will work together to achieve
+  a specific goal.
+</p>
+
+<p>
+  <strong>Example:</strong> Designing a school management system that stores
+  students' records, manages attendance, and calculates marks.
+</p>
+
+
+<h2 id="troubleshooting">2. Troubleshooting</h2>
+
+<p>
+  <strong>Troubleshooting</strong> is the process of identifying, diagnosing,
+  and fixing problems in a computer system, software, hardware, or network.
+</p>
+
+<p>
+  It helps restore the system to its normal working condition.
+</p>
+
+<p>
+  <strong>Example:</strong> If a computer cannot connect to the internet,
+  troubleshooting may involve checking the Wi-Fi connection, restarting the
+  router, and checking network settings.
+</p>
+
+
+<h2 id="digital-systems">Digital Systems</h2>
+
+<p>
+  A <strong>digital system</strong> is a system that uses digital technology to
+  receive, process, store, and share data. It works with digital signals,
+  usually represented by binary digits <strong>0 and 1</strong>.
+</p>
+
+<p>
+  Digital systems are used in computers, smartphones, ATMs, digital cameras,
+  and many other devices.
+</p>
+
+
+<h2 id="analog-signal">1. Analog Signal</h2>
+
+<p>
+  An <strong>analog signal</strong> is a signal that changes continuously over
+  time and can have many different values within a range.
+</p>
+
+<h3>Examples of Analog Signals</h3>
+
+<ul>
+  <li>Human voice</li>
+  <li>Microphone signals</li>
+  <li>Radio signals</li>
+  <li>Analog clock</li>
+  <li>Analog speedometer</li>
+  <li>Analog voltmeter</li>
+  <li>Heartbeat signals</li>
+</ul>
+
+
+<h2 id="digital-signal">2. Digital Signal</h2>
+
+<p>
+  A <strong>digital signal</strong> is a signal that represents information
+  using separate, distinct values. In computers, digital signals are commonly
+  represented using binary digits <strong>0 and 1</strong>.
+</p>
+
+<h3>Examples of Digital Signals</h3>
+
+<ul>
+  <li>Computer data</li>
+  <li>Digital clock displays</li>
+  <li>Data stored on USB drives</li>
+  <li>Digital communication signals</li>
+  <li>Smartphone data</li>
+  <li>Laptop data</li>
+  <li>Digital thermometer readings</li>
+  <li>Calculator displays</li>
+</ul>
+
+
+<h2 id="difference-between-analog-and-digital-signals">
+  Difference Between Analog and Digital Signals
+</h2>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>Analog Signal</th>
+    <th>Digital Signal</th>
+  </tr>
+  <tr>
+    <td>It is continuous.</td>
+    <td>It is discrete.</td>
+  </tr>
+  <tr>
+    <td>It can have infinitely many possible values within a range.</td>
+    <td>It uses a finite set of values, usually 0 and 1 in computers.</td>
+  </tr>
+  <tr>
+    <td>Example: Sound waves.</td>
+    <td>Example: Binary data in computers.</td>
+  </tr>
+</table>
+
+<h2 id="analog-to-digital-converter-adc">1. Analog-to-Digital Converter (ADC)</h2>
+
+<p>
+  An <strong>Analog-to-Digital Converter (ADC)</strong> is a device or electronic
+  circuit that converts an analog signal into digital data that a computer or
+  digital system can process.
+</p>
+
+<p>
+  <strong>Example:</strong> A microphone receives sound waves and converts them
+  into an electrical analog signal. An ADC then converts that signal into digital
+  data so a computer can record and process the sound.
+</p>
+
+
+<h2 id="digital-to-analog-converter-dac">2. Digital-to-Analog Converter (DAC)</h2>
+
+<p>
+  A <strong>Digital-to-Analog Converter (DAC)</strong> is a device or electronic
+  circuit that converts digital data into an analog signal that can be used by
+  analog devices.
+</p>
+
+<p>
+  <strong>Example:</strong> A computer stores music as digital data. A DAC converts
+  this data into an analog electrical signal that is sent to speakers or
+  headphones to produce sound.
+</p>
+
+
+<h2 id="why-use-adc-and-dac-conversion">Why Do We Use ADC and DAC Conversion?</h2>
+<p>
+  We use <strong>ADC and DAC</strong> to convert signals between analog and
+  digital forms.
+</p>
+
+<p>
+  <strong>Example:</strong> When you record your voice on a computer, an
+  <strong>ADC</strong> converts your voice into digital data so the computer can
+  process and store it. When you play the recording, a <strong>DAC</strong>
+  converts the digital data back into an analog signal so you can hear the sound
+  through speakers or headphones.
+</p>
+
+<h2 id="boolean-algebra">Boolean Algebra</h2>
+
+<p>
+  <strong>Boolean algebra</strong> is a type of mathematics that uses only two
+  values: <strong>0 (False)</strong> and <strong>1 (True)</strong>. It is used
+  in digital systems and computer circuits to perform logical operations and
+  make decisions.
+</p>
+
+<p>
+  <strong>Example:</strong> In a computer, 1 can represent ON or True, while 0
+  can represent OFF or False.
+</p>
+
+
+<h2 id="logic-gates">Logic Gates</h2>
+
+<p>
+  <strong>Logic gates</strong> are electronic circuits that perform logical
+  operations using binary inputs (0 and 1) and produce a binary output (0 or 1).
+</p>
+
+<h3>Main Types of Logic Gates</h3>
+
+<ol>
+  <li>
+    <strong>AND Gate:</strong> The output is 1 only when all inputs are 1.
+  </li>
+  <li>
+    <strong>OR Gate:</strong> The output is 1 when at least one input is 1.
+  </li>
+  <li>
+    <strong>NOT Gate:</strong> Reverses the input; 1 becomes 0, and 0 becomes 1.
+  </li>
+  <li>
+    <strong>NAND Gate:</strong> The opposite of the AND gate; the output is 0
+    only when all inputs are 1.
+  </li>
+  <li>
+    <strong>XOR Gate:</strong> The output is 1 when the inputs are different.
+  </li>
+</ol>
+
+<h2 id="boolean-functions">Boolean Functions</h2>
+
+<p>
+  A <strong>Boolean function</strong> is a mathematical expression that uses
+  Boolean variables, which can have values of 0 or 1, and logical operations
+  such as AND, OR, and NOT to produce an output of 0 or 1.
+</p>
+
+<p><strong>Example:</strong> F = A AND B</p>
+
+<h2 id="boolean-expression">Boolean Expression</h2>
+
+<p>
+  A <strong>Boolean expression</strong> is a mathematical expression that uses
+  Boolean variables, which can have values of 0 or 1, and logical operators
+  such as AND, OR, and NOT to represent a logical operation.
+</p>
+
+<p><strong>Example:</strong> A AND B</p>
+<p>
+  The output is 1 only when both A and B are 1. Boolean expressions are
+  used to design and simplify logic circuits in digital systems.
+</p>
+
+<h2 id="binary-variables">Binary Variables</h2>
+
+<p>
+  <strong>Binary variables</strong> are variables that can have only two
+  possible values: 0 or 1. In digital systems, 0 usually represents False or
+  OFF, while 1 represents True or ON.
+</p>
+
+
+<h2 id="logic-operations">Logic Operations</h2>
+
+<p>
+  <strong>Logic operations</strong> are operations performed on binary values
+  (0 and 1) to produce an output. The three basic logic operations are
+  AND, OR, and NOT.
+</p>
+
+
+<h2 id="and-operation">1. AND Operation</h2>
+
+<p>
+  The <strong>AND operation</strong> produces an output of 1 only when both
+  inputs are 1. Otherwise, the output is 0.
+</p>
+
+<p><strong>Symbol:</strong> ∧ or ·</p>
+
+<p><strong>Truth Table:</strong></p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>A</th>
+    <th>B</th>
+    <th>A · B</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
+
+<p><strong>Example:</strong> A AND B</p>
+
+
+<h2 id="or-operation">2. OR Operation</h2>
+
+<p>
+  The <strong>OR operation</strong> produces an output of 1 when at least one
+  input is 1. The output is 0 only when both inputs are 0.
+</p>
+
+<p><strong>Symbol:</strong> ∨ or +</p>
+
+<p><strong>Truth Table:</strong></p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>A</th>
+    <th>B</th>
+    <th>A + B</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
+
+<p><strong>Example:</strong> A OR B</p>
+
+
+<h2 id="not-operation">3. NOT Operation</h2>
+
+<p>
+  The <strong>NOT operation</strong> reverses the input value. If the input is
+  1, the output is 0; if the input is 0, the output is 1.
+</p>
+
+<p><strong>Symbol:</strong> ¬ or a bar over the variable, such as A̅.</p>
+
+<p><strong>Truth Table:</strong></p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>A</th>
+    <th>A̅</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+</table>
+
+<p><strong>Example:</strong> NOT A</p>
+
+<h2 id="truth-table">Truth Table</h2>
+
+<p>
+  A <strong>truth table</strong> is a table that shows all possible combinations
+  of binary inputs (0 and 1) and their corresponding outputs for a logic
+  operation or Boolean expression.
+</p>
+
+<p><strong>Example:</strong> Truth table for the AND operation.</p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>A</th>
+    <th>B</th>
+    <th>A . B</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
+
+<h2 id="boolean-function-example">Given Boolean Function</h2>
+
+<p><strong>F(A, B, C) = A · B + A̅ · C</strong></p>
+<p><strong>Where:</strong></p>
+
+<ul>
+  <li><strong>AND</strong> means logical AND.</li>
+  <li><strong>OR</strong> means logical OR.</li>
+  <li><strong>NOT A</strong> means the opposite of A.</li>
+</ul>
+
+
+<h2 id="truth-table">Truth Table</h2>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>A</th>
+    <th>B</th>
+    <th>C</th>
+    <th>A̅</th>
+    <th>A · B</th>
+    <th>A̅ · C</th>
+    <th>F(A,B,C)</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+</table>
+
+<h2 id="uses-of-boolean-functions-in-computers">Uses of Boolean Functions in Computers</h2>
+
+<p>
+  <strong>Boolean functions</strong> are used in computers to perform
+  calculations, process data, and control the operations of digital systems.
+</p>
+
+<h3>1. Arithmetic Operations</h3>
+
+<p>
+  Boolean functions are used in arithmetic circuits to perform calculations
+  such as addition and subtraction. For example, logic gates help a computer
+  add two binary numbers.
+</p>
+
+<h3>2. Data Processing</h3>
+
+<p>
+  Boolean functions help computers process, compare, and manipulate data using
+  logical conditions. <strong>Example:</strong> A computer can check whether a
+  number is equal to zero or not.
+</p>
+
+<h3>3. Control Logic</h3>
+
+<p>
+  Boolean functions control the working of computer components by making
+  decisions based on specific conditions. <strong>Example:</strong> A computer
+  may allow access when the correct password is entered.
+</p>
+
+<h2 id="logic-gates-and-their-functions">Logic Gates and Their Functions</h2>
+
+<p>
+  <strong>Logic gates</strong> are electronic circuits that perform logical
+  operations on binary inputs (0 and 1) and produce a binary output (0 or 1).
+  They are the basic building blocks of digital systems and computers.
+</p>
+
+<img src="images/9-CS-IMAGES/chapter-2/logic-gates.webp" alt="logic-gates" class="post-image" loading="lazy" width="1672" height="941">
+
+<h2 id="system-troubleshooting">System Troubleshooting</h2>
+
+<p><strong>System troubleshooting</strong> is a step-by-step process of identifying, diagnosing, and fixing problems in a computer system.</p>
+
+<p><strong>Example:</strong> The laptop turns off automatically after a few minutes of use.</p>
+
+<h3>1. Identify the Problem</h3>
+<p>First, identify and understand the problem. For example, the laptop turns off automatically after running for a few minutes, even when the user is working on it.</p>
+
+<h3>2. Establish a Theory of Probable Cause</h3>
+<p>Think about the possible reasons for the problem. For example, the laptop may be overheating because its cooling fan is not working properly, its battery or charger may be faulty, or there may be a problem with the motherboard.</p>
+
+<h3>3. Test the Theory to Determine the Cause</h3>
+<p>Check the possible causes to find the actual problem. For example, check whether the laptop becomes unusually hot, whether its cooling fan is working, whether the battery and charger are functioning properly, and whether the motherboard has any faults.</p>
+
+<h3>4. Establish a Plan of Action to Resolve the Problem</h3>
+<p>Decide which steps should be taken to fix the problem. For example, if the laptop is overheating, plan to clear blocked air vents and have the cooling fan checked. If the battery, charger, or motherboard is faulty, plan to have the faulty component repaired or replaced.</p>
+
+<h3>5. Implement the Solution</h3>
+<p>Carry out the planned steps to solve the problem. For example, place the laptop on a hard, flat surface, ensure its air vents are clear, and arrange professional repair or replacement of the faulty component if necessary.</p>
+
+<h3>6. Verify Full System Functionality</h3>
+<p>Check whether the laptop is working properly after applying the solution. For example, use the laptop for a reasonable period to confirm that it stays on without shutting down unexpectedly.</p>
+
+<h3>7. Document Findings, Actions, and Outcomes</h3>
+<p>Record the problem, its cause, the steps taken, and the final result. For example, document that the laptop was overheating because of a faulty cooling fan, the fan was repaired, and the laptop now works properly without shutting down.</p>
+
+<h2 id="importance-of-troubleshooting-in-computing-systems">Importance of Troubleshooting in Computing Systems</h2>
+
+<p>Troubleshooting is important because it helps find and fix computer problems before they become serious. It keeps computers working properly, protects data, improves performance, and saves money.</p>
+
+<h3>1. Preventing Downtime</h3>
+<p>Troubleshooting helps find and fix problems early so that a computer does not stop working unexpectedly. This helps users continue their work without long interruptions.</p>
+<p><strong>Example:</strong> Finding a faulty power supply early can prevent a computer from shutting down suddenly during important work.</p>
+
+<h3>2. Ensuring Data Integrity</h3>
+<p>Troubleshooting helps find problems that may cause data loss or damage. Fixing these problems helps keep stored information accurate and safe.</p>
+<p><strong>Example:</strong> Detecting a failing hard drive allows users to back up important files before the drive stops working.</p>
+
+<h3>3. Improving Security</h3>
+<p>Troubleshooting helps find and fix security problems, such as viruses, malware, and unauthorized access. This protects important files and personal information from damage or theft.</p>
+<p><strong>Example:</strong> Removing malware can prevent it from damaging files or stealing private information.</p>
+
+<h3>4. Enhancing System Performance</h3>
+<p>Troubleshooting helps find the causes of a slow computer, frequent freezing, and system errors. Fixing these problems helps the computer run smoothly and efficiently.</p>
+<p><strong>Example:</strong> Finding and replacing faulty RAM can help prevent frequent computer crashes.</p>
+
+<h3>5. Extending Equipment Life</h3>
+<p>Troubleshooting helps find hardware problems early and prevents further damage to computer parts. This helps the equipment last longer.</p>
+<p><strong>Example:</strong> Fixing a faulty cooling fan can prevent overheating and protect the processor and motherboard from damage.</p>
+
+<h3>6. Saving Costs</h3>
+<p>Troubleshooting helps fix small problems before they become serious and expensive. This reduces repair costs and may prevent the need to replace costly computer parts.</p>
+<p><strong>Example:</strong> Replacing a faulty power supply early may prevent damage to the motherboard and other components.</p>
+
+<h2 id="basic-hardware-related-issues">Basic Hardware-Related Issues</h2>
+
+<h3 id="common-hardware-issues-and-their-solutions">Common Hardware Issues and Their Solutions</h3>
+
+<p><strong>Issue: Cable Disconnection</strong></p>
+<p><strong>Solution:</strong> Check that all cables are properly connected to the computer and their respective devices. If a cable is loose, reconnect it securely. Also, check for damaged cables and replace them if necessary.</p>
+
+<p><strong>Issue: Overheating</strong></p>
+<p><strong>Solution:</strong> Ensure the computer's air vents are not blocked and the cooling fan is working properly. Keep the computer in a well-ventilated area and clean dust from the vents. If the problem continues, have the cooling system checked.</p>
+
+<p><strong>Issue: Peripheral Devices Not Working</strong></p>
+<p><strong>Solution:</strong> Check that peripheral devices, such as the keyboard, mouse, printer, or scanner, are properly connected to the computer. Try another USB port, check the power supply if required, and update or reinstall the device drivers if necessary.</p>
+
+<h2 id="hardware-diagnosis-and-maintenance">Hardware Diagnosis and Maintenance</h2>
+
+<p>Hardware diagnosis and maintenance help identify computer hardware problems, repair or replace faulty components, and keep the computer working properly.</p>
+
+<h2 id="recognizing-hardware-failures">1. Recognizing Hardware Failures</h2>
+
+<p>Recognizing hardware failures means identifying signs that a computer component is damaged or not working correctly. Finding these problems early can prevent further damage and data loss.</p>
+
+<h3>A. RAM Failures</h3>
+
+<p><strong>RAM (Random Access Memory)</strong> is the temporary memory a computer uses to run programs and process data.</p>
+
+<p><strong>Common Symptoms:</strong></p>
+<ul>
+    <li>Frequent system crashes.</li>
+    <li>Blue Screen of Death (BSOD).</li>
+    <li>Computer restarting randomly.</li>
+    <li>Computer failing to start.</li>
+    <li>Poor performance or unexpected errors.</li>
+</ul>
+
+<p><strong>RAM Diagnostic Tools:</strong> Tools such as Windows Memory Diagnostic and MemTest86 can check RAM for memory errors.</p>
+
+<p><strong>Example:</strong> If a computer frequently crashes while running several applications, faulty RAM may be one possible cause.</p>
+
+<h3>B. Hard Drive Failures</h3>
+
+<p>A <strong>hard drive</strong> is a storage device used to store the operating system, programs, and files.</p>
+
+<p><strong>Common Symptoms:</strong></p>
+<ul>
+    <li>Unusual clicking or grinding noises from a mechanical hard drive.</li>
+    <li>Slow performance.</li>
+    <li>Frequent system crashes.</li>
+    <li>Files becoming corrupted or inaccessible.</li>
+    <li>Computer failing to start or showing disk error messages.</li>
+</ul>
+
+<p><strong>Hard Drive Diagnostic Tools:</strong> SMART (Self-Monitoring, Analysis, and Reporting Technology) checks and tools such as CrystalDiskInfo help monitor drive health.</p>
+
+<p><strong>Example:</strong> If a computer becomes unusually slow and files become inaccessible, the hard drive may be failing. Back up important files as soon as possible.</p>
+
+<h2 id="replacement-and-upgrading-of-components">2. Replacement and Upgrading of Components</h2>
+
+<p>Replacing or upgrading hardware components can improve computer performance and extend its useful life.</p>
+
+<h3>A. Replacing or Upgrading RAM</h3>
+
+<p>To upgrade RAM, check the type, capacity, and speed supported by the motherboard. Purchase compatible RAM, turn off the computer, disconnect its power, and install the RAM correctly.</p>
+
+<p><strong>Example:</strong> If a computer becomes slow when several applications are open, adding more RAM may help it run more smoothly, provided insufficient memory is the cause.</p>
+
+<h3>B. Replacing a Hard Drive</h3>
+
+<p>To replace a hard drive, back up important data, choose a compatible drive, turn off the computer, disconnect its power, and replace the old drive. Then install the operating system if needed and restore the backed-up files.</p>
+
+<p><strong>Example:</strong> If a hard drive is failing, replacing it with a new drive can restore normal operation and reduce the risk of further data loss.</p>
+
+<p><strong>Note:</strong> An SSD (Solid-State Drive) can replace a compatible hard drive and often improves startup speed and overall responsiveness.</p>
+
+<h2 id="security-and-maintenance">3. Security and Maintenance</h2>
+
+<p>Regular security and maintenance help keep a computer safe, stable, and efficient. They include updating software, fixing software problems, protecting against malware, and checking system performance.</p>
+
+<h3>A. Maintaining Software</h3>
+
+<p>Maintaining software means keeping programs updated and resolving problems that affect their performance or security.</p>
+
+<h3>Installing Updates and Software Patches</h3>
+
+<p>Software updates and patches fix errors, improve performance, and address security weaknesses.</p>
+
+<p><strong>Example:</strong> Updating Windows and installed applications can fix bugs, improve stability, and protect the computer against known security threats.</p>
+
+<h3>Resolving Software Conflicts</h3>
+
+<p>Software conflicts occur when two or more programs interfere with each other or cause system problems. These issues can sometimes be fixed by updating, reinstalling, or removing the conflicting software.</p>
+
+<p><strong>Example:</strong> If installing a particular application causes another program to crash, updating the affected programs or removing incompatible software may resolve the problem.</p>
+
+<h2 id="exercise-short-questions-and-answers">Exercise Short Questions and Answers</h2>
+
+<h3>1. Define a Boolean function.</h3>
+<p>A <strong>Boolean function</strong> is a mathematical expression that uses binary values (0 and 1) and logical operations such as AND, OR, and NOT to produce an output of either 0 or 1.</p>
+
+<h3>2. What is the significance of the truth table in digital logic?</h3>
+<p>A <strong>truth table</strong> is a table that shows all possible combinations of input values and their corresponding outputs. It helps us understand how logic gates and digital circuits work. Truth tables are also used to verify Boolean expressions and design digital systems correctly.</p>
+
+<h3>3. Describe the function of a NOT gate with its truth table.</h3>
+<p>A <strong>NOT gate</strong> is a logic gate that reverses or inverts its input. If the input is 0, the output becomes 1. If the input is 1, the output becomes 0. A NOT gate has one input and one output.</p>
+
+<p><strong>Truth Table of NOT Gate:</strong></p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Input (A)</th>
+            <th>Output (A̅)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>4. Write the purpose of ADC and DAC.</h3>
+<p><strong>ADC (Analog-to-Digital Converter):</strong> An ADC converts analog signals into digital data that a computer can understand and process. For example, it converts sound from a microphone into digital data.</p>
+
+<p><strong>DAC (Digital-to-Analog Converter):</strong> A DAC converts digital data into analog signals that can be used by analog devices. For example, it converts digital audio data into sound signals that are played through speakers or headphones.</p>
+
+<h3>5. Make the truth table of two variables A and B for AND operation.</h3>
+<p>The <strong>AND operation</strong> produces an output of 1 only when both inputs are 1. If either or both inputs are 0, the output is 0. The AND operation is represented by the symbol (·).</p>
+
+<p><strong>Truth Table of AND Gate:</strong></p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>Output (A · B)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>6. What is the first step in the systematic process of troubleshooting?</h3>
+<p>The first step in the systematic troubleshooting process is to <strong>identify the problem</strong>. This involves observing the symptoms, gathering information, and understanding what is not working correctly. For example, if a laptop turns off automatically after a few minutes, this behavior should be identified as the problem.</p>
+
+<h3>7. After identifying a problem, what is the next step in troubleshooting?</h3>
+<p>After identifying the problem, the next step is to <strong>establish a theory of probable cause</strong>. This means considering the possible reasons for the problem. For example, if a laptop shuts down unexpectedly, possible causes may include overheating, a faulty battery or charger, or a motherboard problem.</p>
+
+<h3>8. Describe the importance of testing a theory during the troubleshooting process.</h3>
+<p>Testing a theory is important because it helps determine the actual cause of a computer problem. It allows the technician to check whether a suspected cause is correct before applying a solution. This reduces unnecessary repairs, saves time and money, and helps ensure that the correct problem is fixed.</p>
+
+
+<h2 id="mcqs">Multiple Choice Questions (MCQs) on System Design, Digital Systems, Boolean Algebra, and Troubleshooting</h2>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What is system design?</div>
+  <div class="mcq-options">
+    a. The process of deleting computer files<br>
+    b. The process of planning and creating a system<br>
+    c. The process of removing software<br>
+    d. The process of scanning documents
+  </div>
+  <div class="mcq-answer">Answer: b. The process of planning and creating a system</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. What is troubleshooting?</div>
+  <div class="mcq-options">
+    a. Creating new computer games<br>
+    b. Installing every available application<br>
+    c. Identifying, diagnosing, and fixing problems<br>
+    d. Deleting all stored data
+  </div>
+  <div class="mcq-answer">Answer: c. Identifying, diagnosing, and fixing problems</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. Which of the following is an example of system design?</div>
+  <div class="mcq-options">
+    a. Designing a school management system<br>
+    b. Cleaning a computer screen<br>
+    c. Replacing a keyboard battery<br>
+    d. Disconnecting a printer
+  </div>
+  <div class="mcq-answer">Answer: a. Designing a school management system</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. What does a digital system use to represent data?</div>
+  <div class="mcq-options">
+    a. Only letters<br>
+    b. Only decimal numbers<br>
+    c. Only sound waves<br>
+    d. Binary digits, usually 0 and 1
+  </div>
+  <div class="mcq-answer">Answer: d. Binary digits, usually 0 and 1</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. Which of the following is an example of a digital system?</div>
+  <div class="mcq-options">
+    a. Traditional mercury thermometer<br>
+    b. Smartphone<br>
+    c. Analog clock<br>
+    d. Analog speedometer
+  </div>
+  <div class="mcq-answer">Answer: b. Smartphone</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. What is an analog signal?</div>
+  <div class="mcq-options">
+    a. A signal that changes continuously over time<br>
+    b. A signal that always remains zero<br>
+    c. A signal that contains only text<br>
+    d. A signal that cannot change its value
+  </div>
+  <div class="mcq-answer">Answer: a. A signal that changes continuously over time</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. Which of the following is an example of an analog signal?</div>
+  <div class="mcq-options">
+    a. Binary data<br>
+    b. Calculator display<br>
+    c. Sound waves<br>
+    d. Data stored on a USB drive
+  </div>
+  <div class="mcq-answer">Answer: c. Sound waves</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. What is a digital signal?</div>
+  <div class="mcq-options">
+    a. A signal that changes continuously without distinct levels<br>
+    b. A signal that represents information using distinct values<br>
+    c. A signal used only in analog clocks<br>
+    d. A signal that cannot carry information
+  </div>
+  <div class="mcq-answer">Answer: b. A signal that represents information using distinct values</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. Which statement correctly describes an analog signal?</div>
+  <div class="mcq-options">
+    a. It is always represented by 0 and 1 only<br>
+    b. It has no measurable values<br>
+    c. It is always constant<br>
+    d. It can have infinitely many possible values within a range
+  </div>
+  <div class="mcq-answer">Answer: d. It can have infinitely many possible values within a range</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. What is the main purpose of an Analog-to-Digital Converter (ADC)?</div>
+  <div class="mcq-options">
+    a. To convert analog signals into digital data<br>
+    b. To convert digital data into printed documents<br>
+    c. To increase computer storage capacity<br>
+    d. To repair damaged hardware
+  </div>
+  <div class="mcq-answer">Answer: a. To convert analog signals into digital data</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. What does a Digital-to-Analog Converter (DAC) do?</div>
+  <div class="mcq-options">
+    a. Converts analog signals into digital data<br>
+    b. Deletes digital information<br>
+    c. Converts digital data into analog signals<br>
+    d. Checks computer memory errors
+  </div>
+  <div class="mcq-answer">Answer: c. Converts digital data into analog signals</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. Which component converts microphone audio signals into digital data for a computer?</div>
+  <div class="mcq-options">
+    a. DAC<br>
+    b. ADC<br>
+    c. RAM<br>
+    d. Hard drive
+  </div>
+  <div class="mcq-answer">Answer: b. ADC</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. Which component helps convert digital audio data into an analog signal for speakers?</div>
+  <div class="mcq-options">
+    a. ADC<br>
+    b. RAM<br>
+    c. CPU<br>
+    d. DAC
+  </div>
+  <div class="mcq-answer">Answer: d. DAC</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. How many possible values can a binary variable have?</div>
+  <div class="mcq-options">
+    a. Two<br>
+    b. Three<br>
+    c. Eight<br>
+    d. Ten
+  </div>
+  <div class="mcq-answer">Answer: a. Two</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. Which two values are used in Boolean algebra?</div>
+  <div class="mcq-options">
+    a. 1 and 2<br>
+    b. 2 and 3<br>
+    c. 0 and 1<br>
+    d. 5 and 10
+  </div>
+  <div class="mcq-answer">Answer: c. 0 and 1</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">16. What is Boolean algebra?</div>
+  <div class="mcq-options">
+    a. A method of repairing computer hardware<br>
+    b. A mathematical system based on two values, 0 and 1<br>
+    c. A type of computer storage<br>
+    d. A programming language used only for websites
+  </div>
+  <div class="mcq-answer">Answer: b. A mathematical system based on two values, 0 and 1</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">17. What is the main function of a logic gate?</div>
+  <div class="mcq-options">
+    a. To store files permanently<br>
+    b. To display images on a monitor<br>
+    c. To connect a computer to the internet<br>
+    d. To perform logical operations on binary inputs
+  </div>
+  <div class="mcq-answer">Answer: d. To perform logical operations on binary inputs</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">18. Which logic gate produces an output of 1 only when all its inputs are 1?</div>
+  <div class="mcq-options">
+    a. AND gate<br>
+    b. OR gate<br>
+    c. NOT gate<br>
+    d. NAND gate
+  </div>
+  <div class="mcq-answer">Answer: a. AND gate</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">19. When does an OR gate produce an output of 1?</div>
+  <div class="mcq-options">
+    a. Only when all inputs are 0<br>
+    b. Only when all inputs are 1<br>
+    c. When at least one input is 1<br>
+    d. Only when the inputs are equal
+  </div>
+  <div class="mcq-answer">Answer: c. When at least one input is 1</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">20. What is the function of a NOT gate?</div>
+  <div class="mcq-options">
+    a. Adds two binary inputs<br>
+    b. Reverses the input value<br>
+    c. Stores binary data<br>
+    d. Produces 1 for every input
+  </div>
+  <div class="mcq-answer">Answer: b. Reverses the input value</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">21. Which gate is the opposite of an AND gate?</div>
+  <div class="mcq-options">
+    a. OR gate<br>
+    b. XOR gate<br>
+    c. NOT gate<br>
+    d. NAND gate
+  </div>
+  <div class="mcq-answer">Answer: d. NAND gate</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">22. When does an XOR gate produce an output of 1?</div>
+  <div class="mcq-options">
+    a. When its inputs are different<br>
+    b. When both inputs are 0<br>
+    c. When both inputs are 1<br>
+    d. When all inputs are equal
+  </div>
+  <div class="mcq-answer">Answer: a. When its inputs are different</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">23. What is a Boolean function?</div>
+  <div class="mcq-options">
+    a. A function that stores images<br>
+    b. A function that converts analog signals into sound<br>
+    c. A mathematical expression that produces a binary output<br>
+    d. A function that repairs a hard drive
+  </div>
+  <div class="mcq-answer">Answer: c. A mathematical expression that produces a binary output</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">24. What does the dot (·) symbol represent in Boolean algebra?</div>
+  <div class="mcq-options">
+    a. NOT operation<br>
+    b. AND operation<br>
+    c. OR operation<br>
+    d. XOR operation
+  </div>
+  <div class="mcq-answer">Answer: b. AND operation</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">25. What is a truth table used for?</div>
+  <div class="mcq-options">
+    a. Measuring computer temperature<br>
+    b. Recording hardware prices<br>
+    c. Listing installed applications<br>
+    d. Showing input combinations and their corresponding outputs
+  </div>
+  <div class="mcq-answer">Answer: d. Showing input combinations and their corresponding outputs</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">26. What is the output of an AND operation when A = 1 and B = 1?</div>
+  <div class="mcq-options">
+    a. 1<br>
+    b. 0<br>
+    c. 2<br>
+    d. Undefined
+  </div>
+  <div class="mcq-answer">Answer: a. 1</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">27. What is the output of an OR operation when A = 0 and B = 0?</div>
+  <div class="mcq-options">
+    a. 1<br>
+    b. 2<br>
+    c. 0<br>
+    d. Undefined
+  </div>
+  <div class="mcq-answer">Answer: c. 0</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">28. What is the output of a NOT gate when its input is 0?</div>
+  <div class="mcq-options">
+    a. 0<br>
+    b. 1<br>
+    c. 2<br>
+    d. 10
+  </div>
+  <div class="mcq-answer">Answer: b. 1</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">29. In the Boolean function F = A · B + A̅ · C, what does A̅ represent?</div>
+  <div class="mcq-options">
+    a. A AND B<br>
+    b. A OR C<br>
+    c. A multiplied by C<br>
+    d. NOT A
+  </div>
+  <div class="mcq-answer">Answer: d. NOT A</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">30. Which of the following is a use of Boolean functions in computers?</div>
+  <div class="mcq-options">
+    a. Performing arithmetic operations<br>
+    b. Making logical decisions<br>
+    c. Controlling computer operations<br>
+    d. All of the above
+  </div>
+  <div class="mcq-answer">Answer: d. All of the above</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">31. What is the first step in systematic troubleshooting?</div>
+  <div class="mcq-options">
+    a. Replace the motherboard<br>
+    b. Identify the problem<br>
+    c. Reinstall the operating system<br>
+    d. Document the final result
+  </div>
+  <div class="mcq-answer">Answer: b. Identify the problem</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">32. What is the purpose of establishing a theory of probable cause?</div>
+  <div class="mcq-options">
+    a. To delete unnecessary files<br>
+    b. To upgrade the computer automatically<br>
+    c. To identify possible reasons for a problem<br>
+    d. To replace every hardware component
+  </div>
+  <div class="mcq-answer">Answer: c. To identify possible reasons for a problem</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">33. Why should a technician verify system functionality after applying a solution?</div>
+  <div class="mcq-options">
+    a. To confirm that the problem has been resolved<br>
+    b. To increase the number of computer files<br>
+    c. To remove all installed applications<br>
+    d. To change the computer's name
+  </div>
+  <div class="mcq-answer">Answer: a. To confirm that the problem has been resolved</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">34. Which of the following is a possible cause of a laptop shutting down unexpectedly?</div>
+  <div class="mcq-options">
+    a. A correctly connected mouse<br>
+    b. A clean computer screen<br>
+    c. A properly functioning keyboard<br>
+    d. Overheating
+  </div>
+  <div class="mcq-answer">Answer: d. Overheating</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">35. Which of the following is a common symptom of RAM failure?</div>
+  <div class="mcq-options">
+    a. Better system performance<br>
+    b. Frequent system crashes<br>
+    c. Faster internet speed<br>
+    d. Increased storage capacity
+  </div>
+  <div class="mcq-answer">Answer: b. Frequent system crashes</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">36. Which tool can be used to test computer RAM for memory errors?</div>
+  <div class="mcq-options">
+    a. Microsoft Paint<br>
+    b. Notepad<br>
+    c. Windows Memory Diagnostic<br>
+    d. Calculator
+  </div>
+  <div class="mcq-answer">Answer: c. Windows Memory Diagnostic</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">37. Which of the following may indicate a mechanical hard drive failure?</div>
+  <div class="mcq-options">
+    a. Unusual clicking or grinding noises<br>
+    b. A brighter monitor display<br>
+    c. A working keyboard<br>
+    d. A fully charged battery
+  </div>
+  <div class="mcq-answer">Answer: a. Unusual clicking or grinding noises</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">38. What should you do first if a hard drive shows signs of failure?</div>
+  <div class="mcq-options">
+    a. Install unnecessary applications<br>
+    b. Ignore all error messages<br>
+    c. Format every connected drive<br>
+    d. Back up important files as soon as possible
+  </div>
+  <div class="mcq-answer">Answer: d. Back up important files as soon as possible</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">39. Why are software updates and patches important?</div>
+  <div class="mcq-options">
+    a. They always increase screen size<br>
+    b. They fix bugs and address security weaknesses<br>
+    c. They replace the computer's processor<br>
+    d. They eliminate the need for backups
+  </div>
+  <div class="mcq-answer">Answer: b. They fix bugs and address security weaknesses</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">40. Which action can help prevent computer overheating?</div>
+  <div class="mcq-options">
+    a. Blocking the air vents<br>
+    b. Placing the laptop on a soft surface that blocks ventilation<br>
+    c. Keeping air vents clear and ensuring proper cooling<br>
+    d. Covering the cooling fan
+  </div>
+  <div class="mcq-answer">Answer: c. Keeping air vents clear and ensuring proper cooling</div>
+</div>
+
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+<section class="test-mcqs" id="test-mcqs">
+<h2>Test Yourself: Interactive MCQs (System Design, Digital Systems, Boolean Algebra, and Troubleshooting)</h2>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">1. What is system design?</div>
+  <div class="mcq-options">
+    <button>a. The process of deleting computer files</button>
+    <button>b. The process of planning and creating a system</button>
+    <button>c. The process of removing software</button>
+    <button>d. The process of scanning documents</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">2. What is troubleshooting?</div>
+  <div class="mcq-options">
+    <button>a. Creating new computer games</button>
+    <button>b. Installing every available application</button>
+    <button>c. Identifying, diagnosing, and fixing problems</button>
+    <button>d. Deleting all stored data</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">3. Which of the following is an example of system design?</div>
+  <div class="mcq-options">
+    <button>a. Designing a school management system</button>
+    <button>b. Cleaning a computer screen</button>
+    <button>c. Replacing a keyboard battery</button>
+    <button>d. Disconnecting a printer</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">4. What does a digital system commonly use to represent data?</div>
+  <div class="mcq-options">
+    <button>a. Only letters</button>
+    <button>b. Only decimal numbers</button>
+    <button>c. Only sound waves</button>
+    <button>d. Binary digits, usually 0 and 1</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">5. Which of the following is an example of a digital system?</div>
+  <div class="mcq-options">
+    <button>a. Traditional analog clock</button>
+    <button>b. Smartphone</button>
+    <button>c. Analog speedometer</button>
+    <button>d. Mercury thermometer</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">6. What is an analog signal?</div>
+  <div class="mcq-options">
+    <button>a. A signal that changes continuously over time</button>
+    <button>b. A signal that always remains zero</button>
+    <button>c. A signal that contains only text</button>
+    <button>d. A signal that cannot change its value</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">7. Which of the following is an example of an analog signal?</div>
+  <div class="mcq-options">
+    <button>a. Binary data</button>
+    <button>b. Calculator display</button>
+    <button>c. Sound waves</button>
+    <button>d. Data stored on a USB drive</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">8. What is a digital signal?</div>
+  <div class="mcq-options">
+    <button>a. A signal that changes continuously without distinct levels</button>
+    <button>b. A signal that represents information using distinct values</button>
+    <button>c. A signal used only in analog clocks</button>
+    <button>d. A signal that cannot carry information</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">9. Which statement correctly describes an analog signal?</div>
+  <div class="mcq-options">
+    <button>a. It is always represented by 0 and 1 only</button>
+    <button>b. It has no measurable values</button>
+    <button>c. It is always constant</button>
+    <button>d. It can have infinitely many possible values within a range</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">10. What is the main purpose of an Analog-to-Digital Converter (ADC)?</div>
+  <div class="mcq-options">
+    <button>a. To convert analog signals into digital data</button>
+    <button>b. To convert digital data into printed documents</button>
+    <button>c. To increase computer storage capacity</button>
+    <button>d. To repair damaged hardware</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">11. What does a Digital-to-Analog Converter (DAC) do?</div>
+  <div class="mcq-options">
+    <button>a. Converts analog signals into digital data</button>
+    <button>b. Deletes digital information</button>
+    <button>c. Converts digital data into analog signals</button>
+    <button>d. Checks computer memory errors</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">12. Which component converts analog audio signals into digital data for a computer?</div>
+  <div class="mcq-options">
+    <button>a. DAC</button>
+    <button>b. ADC</button>
+    <button>c. RAM</button>
+    <button>d. Hard drive</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">13. Which component converts digital audio data into an analog signal for speakers?</div>
+  <div class="mcq-options">
+    <button>a. ADC</button>
+    <button>b. RAM</button>
+    <button>c. CPU</button>
+    <button>d. DAC</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">14. How many possible values can a binary variable have?</div>
+  <div class="mcq-options">
+    <button>a. Two</button>
+    <button>b. Three</button>
+    <button>c. Eight</button>
+    <button>d. Ten</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">15. Which two values are used in Boolean algebra?</div>
+  <div class="mcq-options">
+    <button>a. 1 and 2</button>
+    <button>b. 2 and 3</button>
+    <button>c. 0 and 1</button>
+    <button>d. 5 and 10</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">16. What is Boolean algebra?</div>
+  <div class="mcq-options">
+    <button>a. A method of repairing computer hardware</button>
+    <button>b. A mathematical system based on two values, 0 and 1</button>
+    <button>c. A type of computer storage</button>
+    <button>d. A programming language used only for websites</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">17. What is the main function of a logic gate?</div>
+  <div class="mcq-options">
+    <button>a. To store files permanently</button>
+    <button>b. To display images on a monitor</button>
+    <button>c. To connect a computer to the internet</button>
+    <button>d. To perform logical operations on binary inputs</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">18. Which logic gate produces an output of 1 only when all its inputs are 1?</div>
+  <div class="mcq-options">
+    <button>a. AND gate</button>
+    <button>b. OR gate</button>
+    <button>c. NOT gate</button>
+    <button>d. NAND gate</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">19. When does an OR gate produce an output of 1?</div>
+  <div class="mcq-options">
+    <button>a. Only when all inputs are 0</button>
+    <button>b. Only when all inputs are 1</button>
+    <button>c. When at least one input is 1</button>
+    <button>d. Only when the inputs are equal</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">20. What is the function of a NOT gate?</div>
+  <div class="mcq-options">
+    <button>a. Adds two binary inputs</button>
+    <button>b. Reverses the input value</button>
+    <button>c. Stores binary data</button>
+    <button>d. Produces 1 for every input</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">21. Which gate is the opposite of an AND gate?</div>
+  <div class="mcq-options">
+    <button>a. OR gate</button>
+    <button>b. XOR gate</button>
+    <button>c. NOT gate</button>
+    <button>d. NAND gate</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">22. When does an XOR gate produce an output of 1?</div>
+  <div class="mcq-options">
+    <button>a. When its inputs are different</button>
+    <button>b. When both inputs are 0</button>
+    <button>c. When both inputs are 1</button>
+    <button>d. When its inputs are always equal</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">23. What is a Boolean function?</div>
+  <div class="mcq-options">
+    <button>a. A function that stores images</button>
+    <button>b. A function that converts analog signals into sound</button>
+    <button>c. A mathematical function that produces a binary output</button>
+    <button>d. A function that repairs a hard drive</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">24. What does the dot (·) symbol represent in Boolean algebra?</div>
+  <div class="mcq-options">
+    <button>a. NOT operation</button>
+    <button>b. AND operation</button>
+    <button>c. OR operation</button>
+    <button>d. XOR operation</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">25. What is a truth table used for?</div>
+  <div class="mcq-options">
+    <button>a. Measuring computer temperature</button>
+    <button>b. Recording hardware prices</button>
+    <button>c. Listing installed applications</button>
+    <button>d. Showing input combinations and their corresponding outputs</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">26. What is the output of an AND operation when A = 1 and B = 1?</div>
+  <div class="mcq-options">
+    <button>a. 1</button>
+    <button>b. 0</button>
+    <button>c. 2</button>
+    <button>d. Undefined</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">27. What is the output of an OR operation when A = 0 and B = 0?</div>
+  <div class="mcq-options">
+    <button>a. 1</button>
+    <button>b. 2</button>
+    <button>c. 0</button>
+    <button>d. Undefined</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">28. What is the output of a NOT gate when its input is 0?</div>
+  <div class="mcq-options">
+    <button>a. 0</button>
+    <button>b. 1</button>
+    <button>c. 2</button>
+    <button>d. 10</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">29. In the Boolean function F = A · B + A̅ · C, what does A̅ represent?</div>
+  <div class="mcq-options">
+    <button>a. A AND B</button>
+    <button>b. A OR C</button>
+    <button>c. A multiplied by C</button>
+    <button>d. NOT A</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">30. Which of the following is a use of Boolean functions in computers?</div>
+  <div class="mcq-options">
+    <button>a. Performing arithmetic operations</button>
+    <button>b. Making logical decisions</button>
+    <button>c. Controlling computer operations</button>
+    <button>d. All of the above</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">31. What is the first step in systematic troubleshooting?</div>
+  <div class="mcq-options">
+    <button>a. Replace the motherboard</button>
+    <button>b. Identify the problem</button>
+    <button>c. Reinstall the operating system</button>
+    <button>d. Document the final result</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">32. What is the purpose of establishing a theory of probable cause?</div>
+  <div class="mcq-options">
+    <button>a. To delete unnecessary files</button>
+    <button>b. To upgrade the computer automatically</button>
+    <button>c. To identify possible reasons for a problem</button>
+    <button>d. To replace every hardware component</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">33. Why should a technician verify system functionality after applying a solution?</div>
+  <div class="mcq-options">
+    <button>a. To confirm that the problem has been resolved</button>
+    <button>b. To increase the number of computer files</button>
+    <button>c. To remove all installed applications</button>
+    <button>d. To change the computer's name</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">34. Which of the following is a possible cause of a laptop shutting down unexpectedly?</div>
+  <div class="mcq-options">
+    <button>a. A correctly connected mouse</button>
+    <button>b. A clean computer screen</button>
+    <button>c. A properly functioning keyboard</button>
+    <button>d. Overheating</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">35. Which of the following is a common symptom of RAM failure?</div>
+  <div class="mcq-options">
+    <button>a. Better system performance</button>
+    <button>b. Frequent system crashes</button>
+    <button>c. Faster internet speed</button>
+    <button>d. Increased storage capacity</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">36. Which tool can be used to test computer RAM for memory errors?</div>
+  <div class="mcq-options">
+    <button>a. Microsoft Paint</button>
+    <button>b. Notepad</button>
+    <button>c. Windows Memory Diagnostic</button>
+    <button>d. Calculator</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="a">
+  <div class="mcq-question">37. Which of the following may indicate a mechanical hard drive failure?</div>
+  <div class="mcq-options">
+    <button>a. Unusual clicking or grinding noises</button>
+    <button>b. A brighter monitor display</button>
+    <button>c. A working keyboard</button>
+    <button>d. A fully charged battery</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="d">
+  <div class="mcq-question">38. What should you do first if a hard drive shows signs of failure?</div>
+  <div class="mcq-options">
+    <button>a. Install unnecessary applications</button>
+    <button>b. Ignore all error messages</button>
+    <button>c. Format every connected drive</button>
+    <button>d. Back up important files as soon as possible</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="b">
+  <div class="mcq-question">39. Why are software updates and patches important?</div>
+  <div class="mcq-options">
+    <button>a. They always increase screen size</button>
+    <button>b. They fix bugs and address security weaknesses</button>
+    <button>c. They replace the computer's processor</button>
+    <button>d. They eliminate the need for backups</button>
+  </div>
+</div>
+
+<div class="mcq-item" data-answer="c">
+  <div class="mcq-question">40. Which action can help prevent computer overheating?</div>
+  <div class="mcq-options">
+    <button>a. Blocking the air vents</button>
+    <button>b. Placing the laptop on a soft surface that blocks ventilation</button>
+    <button>c. Keeping air vents clear and ensuring proper cooling</button>
+    <button>d. Covering the cooling fan</button>
+  </div>
+</div>
+
+</section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>      
+
+<h2 id="faqs">FAQs</h2>
+
+<section class="notes-post-faq" id="faq">
+
+    <div class="section-title">
+
+        <span>
+            Frequently Asked Questions
+        </span>
+
+        <h2>
+            System Design, Digital Systems, Boolean Algebra, and Troubleshooting FAQs
+        </h2>
+
+        <p>
+            Find answers to common questions about system design, analog and digital signals,
+            ADC and DAC conversion, Boolean algebra, logic gates, truth tables, system
+            troubleshooting, hardware diagnosis, computer maintenance, and software security.
+        </p>
+
+    </div>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is system design?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    System design is the process of planning and creating a system by
+                    deciding how its different components will work together to achieve
+                    a specific goal. For example, a school management system can manage
+                    student records, attendance, and examination results.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is troubleshooting in computing?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Troubleshooting is the systematic process of identifying, diagnosing,
+                    and fixing problems in computer hardware, software, or networks.
+                    It helps restore a computer system to its normal working condition
+                    and reduces unnecessary downtime.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is a digital system?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    A digital system is a system that uses digital technology to receive,
+                    process, store, and share data. Computers, smartphones, ATMs, and
+                    digital cameras are common examples. Digital systems commonly
+                    represent information using binary digits 0 and 1.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is the difference between analog and digital signals?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    An analog signal changes continuously over time and can have many
+                    possible values within a range. A digital signal represents information
+                    using distinct values, commonly 0 and 1 in computer systems.
+                    Sound waves are an example of analog signals, while binary computer
+                    data is an example of digital information.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is an Analog-to-Digital Converter (ADC)?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    An Analog-to-Digital Converter (ADC) converts an analog signal into
+                    digital data that a computer or digital device can process and store.
+                    For example, an ADC converts an analog electrical signal from a
+                    microphone into digital audio data.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is a Digital-to-Analog Converter (DAC)?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    A Digital-to-Analog Converter (DAC) converts digital data into an
+                    analog signal. It is commonly used in audio systems to convert
+                    digital audio data into an electrical signal that can drive speakers
+                    or headphones and produce sound.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Why are ADC and DAC used in computer systems?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    ADC and DAC are used to convert information between analog and
+                    digital forms. An ADC allows a computer to process real-world
+                    signals, such as sound from a microphone. A DAC converts digital
+                    information into analog signals, such as the audio signal sent
+                    to speakers or headphones.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is Boolean algebra?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Boolean algebra is a mathematical system that uses two values,
+                    0 (False) and 1 (True), to represent logical conditions. It uses
+                    operations such as AND, OR, and NOT and is important in designing
+                    digital circuits and computer systems.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What are logic gates?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Logic gates are electronic circuits that perform logical operations
+                    on binary inputs and produce binary outputs. Common types include
+                    AND, OR, NOT, NAND, and XOR gates. They are the basic building
+                    blocks of digital circuits and are used in computer processors
+                    and other digital devices.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is a Boolean function?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    A Boolean function is a mathematical function that uses binary
+                    variables and logical operations to produce an output of 0 or 1.
+                    For example, F = A · B represents an AND operation, which produces
+                    an output of 1 only when both A and B are 1.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is a truth table, and why is it important?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    A truth table displays all possible combinations of input values
+                    and their corresponding outputs for a logical operation or Boolean
+                    expression. It helps students understand logic gates, verify
+                    Boolean expressions, and design digital circuits correctly.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What are the main steps in systematic troubleshooting?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    The main steps are identifying the problem, establishing a theory
+                    of probable cause, testing the theory, creating a plan of action,
+                    implementing the solution, verifying system functionality, and
+                    documenting the findings and results.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Why is troubleshooting important in computer maintenance?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Troubleshooting helps prevent downtime, protect data, improve
+                    system performance, identify security problems, extend hardware
+                    life, and reduce repair costs. Finding problems early can prevent
+                    minor faults from developing into more serious and expensive issues.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What are the common symptoms of RAM and hard drive failures?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    RAM failures may cause frequent crashes, unexpected restarts,
+                    blue screen errors, and boot problems. Hard drive failures may
+                    cause slow performance, corrupted or inaccessible files, disk
+                    errors, and unusual clicking or grinding noises from mechanical
+                    drives. Important files should be backed up promptly if drive
+                    failure is suspected.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                How can regular software maintenance improve computer security?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Regular software maintenance includes installing updates and
+                    security patches, removing malware, and resolving software
+                    conflicts. These actions help fix bugs, address known security
+                    weaknesses, improve system stability, and protect files and
+                    personal information from potential threats.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/9-class/chapter-1/class-9-computer-chapter-1-introduction-to-computational-systems-notes.pdf">
+  Download PDF
+</a>
+
+</div>
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+<div class="social-icons">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=100009953895352" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/@ComputerWithSalman" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-youtube"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/salmannicksallu" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/923089051710" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</div>
+
+
+</div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+    <h3>Categories</h3>
+
+    <ul>
+
+        <li><a href="technology.html">Technology</a></li>
+
+        <li><a href="computer-science.html">Computer Science</a></li>
+
+        <li><a href="how-to-guides.html">How-To Guides</a></li>
+
+        <li><a href="education.html">Education</a></li>
+
+        <li><a href="ai-tools.html">AI Tools</a></li>
+
+        <li><a href="roadmaps.html">Career Roadmaps</a></li>
+
+        <li><a href="8-computer-science.html">Class 8 Computer</a></li>
+
+        <li><a href="9-computer-science.html">Class 9 Computer</a></li>
+
+        <li><a href="10-computer-science.html">Class 10 Computer</a></li>
+
+        <li><a href="11-computer-science.html">Class 11 Computer</a></li>
+
+        <li><a href="12-computer-science.html">Class 12 Computer</a></li>
+
+    </ul>
+
+</div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                question.classList.toggle("active");
+
+                const answer = question.nextElementSibling;
+
+                if (answer.style.maxHeight) {
+
+                    answer.style.maxHeight = null;
+
+                } else {
+
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+    
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
