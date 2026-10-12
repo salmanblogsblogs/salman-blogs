@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ <title>Class 12 Computer Science Chapter 1: Computer Networks | MCQs, Short & Long Questions, FAQs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="notes-post.css">
+
+  <meta name="description" content="Class 12 Computer Science Chapter 1 Notes: Computer Networks. Complete study material covering computer networks, network architecture, types of networks, networking devices, network topologies, OSI model, network protocols and services, IP addressing, subnetting, NAT, home network setup, Wi-Fi security, network diagnostic tools, network performance, load balancing, network security, data backup and recovery, and usability and security tradeoffs." />
+
+<meta name="keywords" content="class 12 computer science notes, class 12 computer chapter 1, computer networks class 12, computer networks notes, computer network, uses of computer network, network architecture, types of computer network, LAN, WAN, private WAN, public WAN, networking devices, NIC, switch, router, modem, wireless access point, bus topology, star topology, ring topology, mesh topology, network models and layers, OSI model, OSI model layers, application layer, presentation layer, session layer, transport layer, network layer, data link layer, physical layer, network protocols and services, TCP IP, HTTP, FTP, DNS, IP addressing, IPv4, IPv6, subnetting, NAT, network address translation, home network setup, Wi-Fi security, router configuration, network diagnostic tools, ping command, ipconfig, ifconfig, Telnet, PuTTY, SSH, network performance, network bandwidth, network latency, network delay, network load balancing, round robin, least connection, IP hash, network security, firewall, encryption, access control, malware, phishing, DoS attack, MITM attack, password attacks, data backup and recovery, full backup, incremental backup, differential backup, usability and security tradeoffs, class 12 computer MCQs, computer science short questions, computer science long questions, FBISE computer notes, Punjab board computer notes, chapter 1 computer science notes, computer networks exam preparation, class 12 computer solved MCQs, class 12 computer full notes" />
+<meta name="author" content="Salman Ahmad" />
+
+  <link rel="canonical" href="https://salmanblogs.com/12-class-computer-chap-1-computer-networks" />
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+<!-- Open Graph -->
+<meta property="og:title" content="Class 12 Computer Science Chapter 1: Computer Networks | OSI, IP Addressing, Subnetting, Security & More" />
+
+<meta property="og:description" content="Complete Class 12 Computer Science Chapter 1 Notes on Computer Networks. Covers computer networks, network architecture, types of networks, networking devices, network topologies, OSI model and layers, network protocols and services, IP addressing, IPv4, IPv6, subnetting, NAT, home network setup, Wi-Fi security, router configuration, network diagnostic tools, network performance, load balancing, network security, data backup and recovery, and usability and security tradeoffs." />
+
+<meta property="og:image" content="https://salmanblogs.com/images/12-CS-IMAGES/CHAPTER-1/12-class-computer-chapter-1-computer-networks.webp" />
+
+<meta property="og:url" content="https://salmanblogs.com/12-class-computer-chap-1-computer-networks" />
+
+<meta property="og:type" content="article" />
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:title" content="Class 12 Computer Science Chapter 1: Computer Networks | OSI, IP Addressing, Subnetting & Network Security" />
+
+<meta name="twitter:description" content="Study Class 12 Computer Science Chapter 1: Computer Networks with complete notes on computer networks, network architecture, types of networks, networking devices, network topologies, OSI model and layers, network protocols and services, IP addressing, IPv4, IPv6, subnetting, NAT, home network setup, Wi-Fi security, router configuration, network diagnostic tools, network performance, load balancing, network security, data backup and recovery, and usability and security tradeoffs." />
+
+<meta name="twitter:image" content="https://salmanblogs.com/images/12-CS-IMAGES/CHAPTER-1/12-class-computer-chapter-1-computer-networks.webp" />
+
+ <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="favicon.ico">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Class 12 Computer Science Chapter 1: Computer Networks",
+  "author": {
+    "@type": "Person",
+    "name": "Salman Ahmad"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Salman Blogs"
+  },
+  "description": "Complete Class 12 Computer Science Chapter 1 Notes on Computer Networks covering computer networks, network architecture, types of networks, networking devices, bus, star, ring and mesh topologies, network models and layers, OSI model, network protocols and services, IP addressing, IPv4, IPv6, subnetting, NAT, home network setup, Wi-Fi security, router configuration, network diagnostic tools, network performance, network load balancing, network security, data backup and recovery, and usability and security tradeoffs.",
+  "mainEntityOfPage": "https://salmanblogs.com/12-class-computer-chap-1-computer-networks"
+}
+</script>
+</head>
+<body>
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<span class="logo-first">Salman</span>
+
+<span class="logo-last">Blogs</span>
+
+</a>
+
+<nav>
+
+<div class="nav-toggle" id="navToggle">
+    &#9776;
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+<li><a href="terms.html">Terms</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="hero-badge">
+
+🔥 Applications of Computer Science
+
+</span>
+<br>
+
+<h1>
+
+<span>Chapter 8 Notes</span>
+
+</h1>
+
+<p>
+    Complete lecture notes covering Emerging Technology, Artificial Intelligence (AI), Machine Learning (ML), How AI Works, Common AI Applications, Benefits and Challenges of AI in Society, Internet of Things (IoT), IoT Data Collection and Automation, Cloud Computing, Advantages of Cloud Computing, Blockchain Technology, Cultural and Ethical Implications of AI Systems, Stakeholders in AI Systems, Cultural Awareness and Diversity, Ethical Principles in AI, Conflicts of Interest Among Stakeholders, Policy and Legal Frameworks, and Short and Long Questions with Answers for FBISE and Punjab Board students.
+</p>
+
+<div class="hero-buttons">
+
+<a href="categories.html" class="btn-secondary">
+
+Browse Categories
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<main class="post-container">
+  <article class="blog-post">
+    <h1 class="post-title">Computer Networks</h1>
+    <div class="post-meta">Posted in <strong>12 Computer Science</strong></div>
+    <img src="images/12-CS-IMAGES/CHAPTER-8/12-class-computer-chapter-8-applications-of-computer-science.png"
+                 alt="12-class-computer-chapter-8-applications-of-computer-science"
+                 loading="lazy">
+
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 10 Computer Science.
+
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#emerging-technology">Emerging Technology</a></li>
+<li><a href="#artificial-intelligence">Artificial Intelligence (AI)</a></li>
+<li><a href="#machine-learning">Machine Learning (ML)</a></li>
+<li><a href="#how-ai-works">How Artificial Intelligence (AI) Works</a></li>
+<li><a href="#common-ai-applications">Common AI Applications</a></li>
+<li><a href="#benefits-of-ai-in-society">Benefits of AI in Society</a></li>
+<li><a href="#challenges-of-ai-in-society">Challenges of AI in Society</a></li>
+<li><a href="#internet-of-things">Internet of Things (IoT)</a></li>
+<li><a href="#how-iot-works">How IoT Works</a></li>
+<li><a href="#cloud-computing">Cloud Computing</a></li>
+<li><a href="#advantages-of-cloud-computing">Advantages of Cloud Computing</a></li>
+<li><a href="#blockchain-technology">Blockchain Technology</a></li>
+<li><a href="#cultural-and-ethical-implications-of-ai-systems">Cultural and Ethical Implications of AI Systems</a></li>
+<li><a href="#stakeholders-in-ai-systems">Stakeholders in AI Systems</a></li>
+<li><a href="#cultural-awareness-and-diversity">Cultural Awareness and Diversity</a></li>
+<li><a href="#ethical-principles-in-ai">Ethical Principles in AI</a></li>
+<li><a href="#exercise-short-questions-and-answers">Exercise: Short Questions and Answers</a></li>
+<li><a href="#exercise-long-questions-and-answers">Exercise: Long Questions and Answers</a></li>
+  <li><a href="#mcqs">MCQs</a></li>
+  <li><a href="#test-mcqs">MCQs for Testing</a></li>
+  <li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+
+
+<div class="post-content">
+
+<h2 id="emerging-technology">Emerging Technology</h2>
+
+<p><strong>Emerging technology</strong> refers to new or developing technologies that have the potential to change how people live, work, communicate, and solve problems.</p>
+
+<p><strong>Examples:</strong> Artificial Intelligence (AI), Robotics, Virtual Reality (VR), Augmented Reality (AR), and the Internet of Things (IoT).</p>
+
+<p><strong>Example in Daily Life:</strong> AI-powered assistants can answer questions, understand voice commands, and help users perform tasks more efficiently.</p>
+
+<h2 id="artificial-intelligence">Artificial Intelligence (AI)</h2>
+
+<p><strong>Artificial Intelligence (AI)</strong> is a technology that allows computers and machines to learn from data, recognize patterns, understand information, and perform tasks that normally require human intelligence.</p>
+
+<p><strong>Example:</strong> AI can recognize faces in photos, translate languages, and recommend videos based on a user's interests.</p>
+
+<h2 id="machine-learning">Machine Learning (ML)</h2>
+
+<p><strong>Machine Learning (ML)</strong> is a branch of Artificial Intelligence that enables computers to learn from data, identify patterns, and make predictions or decisions without being explicitly programmed for every task.</p>
+
+<h3>Examples or Uses [Mention any 1 or 2 Examples during writing exam]</h3>
+
+<ol>
+    <li><strong>YouTube:</strong> Machine learning algorithms recommend videos based on users' viewing histories and interests.</li>
+    <li><strong>Email:</strong> Machine learning algorithms analyze incoming emails and identify spam messages based on suspicious words, links, and patterns.</li>
+    <li><strong>Online Shopping:</strong> Machine learning systems suggest products based on users' previous purchases, searches, and interests.</li>
+    <li><strong>Banking:</strong> Machine learning systems analyze transaction patterns to detect unusual activities that may indicate fraud.</li>
+    <li><strong>Healthcare:</strong> Machine learning models analyze medical data and images to help doctors identify possible diseases.</li>
+    <li><strong>Weather Forecasting:</strong> Machine learning models analyze past and current weather data to predict future weather conditions.</li>
+</ol>
+
+<h2 id="how-ai-works">How Artificial Intelligence (AI) Works</h2>
+
+<p><strong>Artificial Intelligence (AI)</strong> works by using data, algorithms, and computing power to learn patterns, understand information, and make predictions or decisions. Technologies such as <strong>Neural Networks (NN)</strong> and <strong>Natural Language Processing (NLP)</strong> help AI recognize images, understand human language, respond to questions, and solve complex problems.</p>
+
+<h2 id="common-ai-applications">Common AI Applications</h2>
+
+<ul>
+    <li><strong>Voice Assistants:</strong> AI-powered assistants like Siri, Alexa, and Google Assistant understand spoken commands and respond with useful information or perform tasks.</li>
+
+    <li><strong>Chatbots:</strong> AI-powered chatbots on websites answer questions and help customers solve problems.</li>
+
+    <li><strong>Image Recognition:</strong> AI identifies faces, objects, and possible medical conditions from images and medical scans.</li>
+
+    <li><strong>Recommendation Systems:</strong> AI recommends videos or products based on users' interests and preferences. For example, YouTube suggests videos, while Daraz and Amazon recommend products.</li>
+
+    <li><strong>Self-Driving Cars:</strong> AI uses cameras and sensors to understand the surroundings, recognize obstacles, and make driving decisions to help vehicles travel safely.</li>
+</ul>
+
+<h2 id="benefits-of-ai-in-society">Benefits of AI in Society</h2>
+
+
+<ul>
+    <li><strong>Increased Efficiency:</strong> AI performs repetitive tasks faster than humans and saves time.</li>
+    <li><strong>Improved Healthcare:</strong> AI helps doctors diagnose diseases and predict health problems.</li>
+    <li><strong>Better Agriculture:</strong> AI helps farmers monitor crops and improve farming methods.</li>
+    <li><strong>Customer Support:</strong> AI chatbots answer customer questions, such as "Where is my order?" for many users at the same time.</li>
+    <li><strong>Better Business Decisions:</strong> AI analyses customer behaviour and predicts trends to help businesses make better decisions.</li>
+    <li><strong>Personalized Education:</strong> AI provides personalized learning and adaptive tutoring according to students' needs.</li>
+</ul>
+
+<h2 id="challenges-of-ai-in-society">Challenges of AI in Society</h2>
+
+
+<ul>
+    <li><strong>Data Privacy:</strong> AI systems may collect and process personal information, creating privacy risks.</li>
+    <li><strong>Job Displacement:</strong> AI can automate tasks previously performed by humans, reducing the need for some jobs.</li>
+    <li><strong>Algorithmic Bias:</strong> AI may produce unfair results if it is trained on biased or unbalanced data.</li>
+    <li><strong>Ethical Issues:</strong> AI decisions can affect people's lives, raising concerns about fairness and responsibility.</li>
+    <li><strong>Lack of Transparency:</strong> Some AI systems make decisions that are difficult for people to understand.</li>
+</ul>
+
+<h2>Conclusion</h2>
+
+<p>AI offers many benefits, but its challenges must be managed carefully. Responsible, fair, and ethical use of AI can help ensure that it benefits society.</p>
+
+<h2 id="internet-of-things">Internet of Things (IoT)</h2>
+
+<p><strong>Definition:</strong> The Internet of Things (IoT) is a technology that connects physical devices to the internet so they can collect, share, and exchange data.</p>
+
+<ul>
+
+    <li><strong>Smart Watches:</strong> IoT-enabled smartwatches collect information such as heart rate and physical activity and share it with connected applications.</li>
+
+    <li><strong>Smart Cities:</strong> IoT sensors monitor traffic and streetlights to improve traffic management and save energy.</li>
+</ul>
+
+<ul>
+  <strong>Must to do all the below points. These are mentioned in the book.</strong>
+    <li><strong>Smart Homes:</strong> IoT connects devices such as smart lights, air conditioners, and security cameras to the internet. Users can control these devices using their smartphones, even when they are away from home.</li>
+
+    <li><strong>Healthcare:</strong> IoT connects devices such as smartwatches and health monitors to the internet. These devices measure health information, such as heart rate and blood pressure, and share it with doctors to help them monitor patients' health remotely.</li>
+
+    <li><strong>Agriculture:</strong> IoT uses sensors to monitor soil moisture, temperature, and crop conditions. It helps farmers decide when to water crops, check their growth, and estimate the right time to harvest. This helps farmers save water, improve crop production, and manage their fields more effectively.</li>
+</ul>
+
+<h2>Data Collection, Communication and Automation</h2>
+<h2 id="how-iot-works">How IoT Works</h2>
+
+<p>IoT works through three main processes:</p>
+
+<ol>
+    <li><strong>Data Collection:</strong> IoT devices use sensors to collect different types of information from their surroundings, such as temperature, humidity, movement, air quality, soil moisture, and health information.</li>
+
+    <li><strong>Communication:</strong> IoT devices send the collected data to other devices, computers, or applications through communication networks, such as the internet or Bluetooth.</li>
+
+    <li><strong>Automation:</strong> IoT devices use the collected data to perform tasks automatically with little or no human involvement, making daily activities easier and more efficient.</li>
+</ol>
+
+<p><strong>Example:</strong> In smart agriculture, IoT sensors collect information about soil moisture and send it to a control system. If the soil becomes too dry, the system automatically turns on the water pump to water the crops.</p>
+
+<h2 id="cloud-computing">Cloud Computing</h2>
+
+<p><strong>Definition:</strong> Cloud computing is a technology that allows users to store data, use software, and access computing services over the internet instead of relying only on their own computers.</p>
+
+<h3>Example</h3>
+
+<ul>
+    <li><strong>Online Storage:</strong> Google Drive and Dropbox allow users to store files online and access them from anywhere with an internet connection.</li>
+</ul>
+
+<h3>Examples from Textbook</h3>
+
+<ul>
+    <li><strong>Amazon Web Services (AWS):</strong> AWS provides cloud services that allow users and businesses to store data, run applications, and use computing resources over the internet.</li>
+
+    <li><strong>Microsoft Azure:</strong> Microsoft Azure provides cloud services for storing files, hosting websites, running applications, and managing data over the internet.</li>
+</ul>
+
+<h2 id="advantages-of-cloud-computing">Advantages of Cloud Computing</h2>
+
+<ul>
+    <li><strong>Scalability:</strong> Cloud computing allows users to increase or decrease storage and computing resources according to their needs.</li>
+
+    <li><strong>Accessibility:</strong> Users can access their files, applications, and data from different devices and locations through the internet.</li>
+
+    <li><strong>Cost-Effectiveness:</strong> Cloud computing reduces the need to buy expensive hardware and maintain physical servers, helping users and businesses save money.</li>
+</ul>
+
+<h2 id="blockchain-technology">Blockchain Technology</h2>
+
+<p><strong>Definition:</strong> Blockchain is a technology that stores information in blocks connected in a chain. The information is shared across multiple computers, making it difficult to change or delete recorded data without detection.</p>
+
+<h3>Examples or Uses [Mention any 1 or 2 Examples during writing exam]</h3>
+
+<ol>
+    <li><strong>Cryptocurrency Transactions:</strong> Blockchain is used to send and receive digital currencies such as Bitcoin and Ethereum without relying on a traditional bank to record each transaction.</li>
+
+    <li><strong>Banking and Finance:</strong> Some banks and financial companies use blockchain to transfer money, settle payments, and maintain secure transaction records.</li>
+
+    <li><strong>Supply Chain Management:</strong> Companies use blockchain to track products from manufacturers to shops and check where products come from.</li>
+
+    <li><strong>Digital Identity:</strong> Blockchain can be used to verify identities and help protect digital identity records.</li>
+
+    <li><strong>Healthcare:</strong> Hospitals and healthcare organizations can use blockchain to help maintain secure medical records and track access to information.</li>
+
+    <li><strong>Smart Contracts:</strong> Blockchain can run programs called smart contracts that automatically perform agreed actions when specific conditions are met.</li>
+
+    <li><strong>Bitcoin:</strong> Bitcoin is a digital currency that uses blockchain technology to record and verify transactions between users without requiring a traditional bank to process them.</li>
+</ol>
+
+<h2 id="cultural-and-ethical-implications-of-ai-systems">Cultural and Ethical Implications of AI Systems</h2>
+
+<p>AI systems can affect people's culture, values, privacy, and daily lives. Therefore, AI should be developed and used fairly, responsibly, and respectfully.</p>
+
+<h3 id="stakeholders-in-ai-systems">Stakeholders in AI Systems</h3>
+
+<ul>
+    <li><strong>Developers:</strong> Developers design and create AI systems. They should make sure AI works fairly, protects users' data, and does not produce biased results.</li>
+
+    <li><strong>Users:</strong> Users interact with AI systems in their daily lives. They should use AI responsibly and be careful when sharing personal information.</li>
+
+    <li><strong>Government:</strong> Governments make laws and rules to ensure AI is used safely, protects people's rights, and prevents misuse.</li>
+
+    <li><strong>Communities:</strong> Communities are groups of people affected by AI systems. AI should respect their cultures, traditions, and values and should not unfairly discriminate against any group.</li>
+</ul>
+
+<h3 id="cultural-awareness-and-diversity">Cultural Awareness and Diversity</h3>
+
+<p><strong>Cultural awareness and diversity</strong> means understanding and respecting the different cultures, languages, traditions, and beliefs of people.</p>
+
+<p>AI systems should respect different cultures and languages and treat people fairly. They should be designed to work well for people from different backgrounds without showing unfair preferences toward any group.</p>
+
+<h3>Example</h3>
+    <p>AI Translation:</strong> An AI translation system should support different languages so that people from different countries can communicate easily.</p>
+
+<h2 id="ethical-principles-in-ai">Ethical Principles in AI</h2>
+<h3>Fairness, Accountability, Transparency</h3>
+<ul>
+    <li><strong>Fairness:</strong> AI systems should treat all people equally and should not discriminate against anyone based on their gender, culture, or background.</li>
+
+    <li><strong>Accountability:</strong> Developers and organizations should take responsibility for the decisions and actions of their AI systems.</li>
+
+    <li><strong>Transparency:</strong> AI systems should provide clear information about how they work and how they make decisions.</li>
+</ul>
+<h3>Avoiding Bias and Ensuring Inclusivity Design </h3>
+    <p>AI systems should be designed to work fairly for people from different backgrounds, languages, and abilities. Developers should reduce bias so that no group is treated unfairly. </p>
+
+<h3>Conflicts of Interest Among Stakeholders</h2>
+
+<p><strong>Definition:</strong> Conflicts of interest occur when different stakeholders have different goals or interests regarding the development and use of AI systems.</p>
+
+<h3>Examples or Conflicts [Mention any 1 or 2 Examples during writing exam]</h3>
+
+<ul>
+    <li><strong>Developers vs. Users:</strong> Developers may want to collect more data to improve AI, while users want to protect their personal information.</li>
+
+    <li><strong>Businesses vs. Communities:</strong> Businesses may use AI to reduce costs, but this may lead to job losses in communities.</li>
+
+    <li><strong>Government vs. Users:</strong> Governments may use AI for security and monitoring, while users want to protect their privacy.</li>
+
+    <li><strong>Businesses vs. Government:</strong> Businesses may want fewer restrictions on AI, while governments want rules to ensure its safe and fair use.</li>
+</ul>
+
+<p><strong>Importance:</strong> These conflicts should be managed carefully to ensure that AI benefits society while respecting people's rights, privacy, and interests.</p>
+
+<h3>Policy and Legal Frameworks</h3>
+
+<p><strong>Definition:</strong> Policy and legal frameworks are rules and guidelines that help ensure AI is developed and used safely, fairly, and responsibly.</p>
+
+<h3>Examples or Frameworks</h3>
+
+<ol>
+    <li><strong>GDPR:</strong> The General Data Protection Regulation (GDPR) protects personal data and gives people rights over how their information is collected and used.</li>
+
+    <li><strong>AI Ethics Guidelines:</strong> These guidelines encourage fairness, transparency, accountability, and respect for human rights when developing and using AI systems.</li>
+
+    <li><strong>National AI Policies in Pakistan:</strong> These policies help promote AI research, protect data, and encourage the responsible use of AI according to local needs.</li>
+</ol>
+
+<h2 id="exercise-short-questions-and-answers">Exercise: Short Questions and Answers</h2>
+
+<h3>1. What is Artificial Intelligence (AI) and how is it used in daily life?</h3>
+
+<p>Artificial Intelligence (AI) is a technology that enables computers and machines to perform tasks that normally require human intelligence. It is used in voice assistants, chatbots, image recognition, video recommendations, and self-driving cars.</p>
+
+<h3>2. How does the Internet of Things (IoT) connect smart devices together?</h3>
+
+<p>The Internet of Things (IoT) connects physical devices through networks such as the internet. These devices collect and share data, allowing users to monitor and control them remotely.</p>
+
+<p><strong>Example:</strong> Smart lights and air conditioners can be controlled using a smartphone.</p>
+
+<h3>3. What are the main advantages of using Cloud Computing?</h3>
+
+<p>The main advantages of cloud computing are:</p>
+
+<ul>
+    <li><strong>Scalability:</strong> Resources can be increased or decreased according to needs.</li>
+    <li><strong>Accessibility:</strong> Files and applications can be accessed from different devices through the internet.</li>
+    <li><strong>Cost-Effectiveness:</strong> It reduces the need to buy expensive hardware and maintain physical servers.</li>
+</ul>
+
+<h3>4. How does Blockchain ensure security and transparency in transactions?</h3>
+
+<p>Blockchain stores transaction records in connected blocks shared across multiple computers. Cryptographic methods help protect these records, while authorized participants can view and verify transactions. Changes to recorded information are difficult to make without detection.</p>
+
+<h3>5. Why is it important to consider ethics while developing AI systems?</h3>
+
+<p>AI ethics is important because it helps ensure that AI systems are fair, protect people's privacy, avoid discrimination, and respect human rights. Ethical AI builds public trust and reduces the risk of harm.</p>
+
+<h3>6. What role do stakeholders play in the design and regulation of AI technologies?</h3>
+
+<p>Stakeholders help ensure that AI is developed and used responsibly.</p>
+
+<ul>
+    <li><strong>Developers:</strong> Design safe and fair AI systems.</li>
+    <li><strong>Users:</strong> Use AI responsibly and protect their personal information.</li>
+    <li><strong>Government:</strong> Creates laws and rules for AI.</li>
+    <li><strong>Communities:</strong> Help ensure that AI respects different cultures, values, and needs.</li>
+</ul>
+
+<h3>7. How can emerging technologies help solve national challenges in Pakistan?</h3>
+
+<p>Emerging technologies can help Pakistan improve healthcare, education, agriculture, transportation, and business. For example, AI can help doctors identify diseases, IoT can help farmers monitor crops, and cloud computing can make online education more accessible.</p>
+
+<h3>8. What is the importance of cultural awareness when designing technological solutions?</h3>
+
+<p>Cultural awareness helps developers create technologies that respect different languages, traditions, beliefs, and values. It makes technology more inclusive and useful for people from different backgrounds.</p>
+
+<h3>9. How can AI, IoT, and Cloud work together to improve agriculture?</h3>
+
+<p>IoT sensors collect information about soil moisture, temperature, and crop conditions. AI analyses this information to help farmers make better decisions, while cloud computing stores the data and makes it accessible online. Together, these technologies help farmers manage crops, save water, and improve production.</p>
+
+<h3>10. Why are laws and policies necessary for the responsible and safe use of technology?</h3>
+
+<p>Laws and policies protect people's privacy and rights, prevent the misuse of technology, and encourage fairness and accountability. They help ensure that technologies are developed and used safely and responsibly.</p>
+
+<h2 id="exercise-long-questions-and-answers">Exercise: Long Questions and Answers</h2>
+
+<h3>1. Explain how AI, IoT, Cloud Computing, and Blockchain are transforming modern industries. Give suitable examples for each technology.</h3>
+
+<p>Modern technologies are improving the way businesses, industries, and people work.</p>
+
+<h4>1. Artificial Intelligence (AI)</h4>
+<p>Artificial Intelligence (AI) enables computers to perform tasks that normally require human intelligence. It helps businesses make decisions, doctors diagnose diseases, and websites recommend products.</p>
+<p><strong>Example:</strong> YouTube uses AI to recommend videos based on users' interests.</p>
+
+<h4>2. Internet of Things (IoT)</h4>
+<p>The Internet of Things (IoT) connects physical devices to networks so they can collect and share data. It allows devices to be monitored and controlled remotely.</p>
+<p><strong>Example:</strong> Smart agriculture uses IoT sensors to monitor soil moisture and help farmers decide when to water crops.</p>
+
+<h4>3. Cloud Computing</h4>
+<p>Cloud computing allows users to store data, run applications, and access computing resources over the internet.</p>
+<p><strong>Example:</strong> Google Drive allows users to store files online and access them from different devices.</p>
+
+<h4>4. Blockchain</h4>
+<p>Blockchain stores information in connected blocks, making recorded information difficult to change without detection.</p>
+<p><strong>Example:</strong> Bitcoin uses blockchain to record financial transactions securely.</p>
+
+<p>These technologies improve efficiency, save time, support better decisions, and help solve problems in different industries.</p>
+
+<h3>2. Discuss the benefits and challenges of AI in society. How can ethical principles ensure fair and responsible use of AI?</h3>
+
+<p>Artificial Intelligence (AI) provides many benefits to society, but it also creates challenges that must be managed carefully.</p>
+
+<h4>Benefits of AI</h4>
+<ul>
+    <li><strong>Increased Efficiency:</strong> AI performs repetitive tasks quickly and saves time.</li>
+    <li><strong>Improved Healthcare:</strong> AI helps doctors identify diseases and analyse medical information.</li>
+    <li><strong>Better Education:</strong> AI supports personalized learning according to students' needs.</li>
+    <li><strong>Business Improvement:</strong> AI analyses customer behaviour and helps businesses make better decisions.</li>
+</ul>
+
+<h4>Challenges of AI</h4>
+<ul>
+    <li><strong>Data Privacy:</strong> AI may collect and process personal information, creating privacy risks.</li>
+    <li><strong>Job Displacement:</strong> Automation may reduce the need for workers in some jobs.</li>
+    <li><strong>Bias:</strong> AI may produce unfair results if trained on biased data.</li>
+    <li><strong>Ethical Issues:</strong> AI decisions may affect people's lives and rights.</li>
+</ul>
+
+<h4>Role of Ethical Principles</h4>
+<ul>
+    <li><strong>Fairness:</strong> AI should treat people equally and avoid discrimination.</li>
+    <li><strong>Accountability:</strong> Developers and organizations should take responsibility for AI decisions.</li>
+    <li><strong>Transparency:</strong> AI decisions should be understandable wherever possible.</li>
+    <li><strong>Privacy:</strong> AI systems should protect people's personal information.</li>
+</ul>
+
+<p>Following these principles helps make AI safer, fairer, and more trustworthy.</p>
+
+<h3>3. Describe how IoT devices collect and communicate data for automation. How is IoT improving healthcare, agriculture, and smart homes?</h3>
+
+<p>The Internet of Things (IoT) connects physical devices through networks, allowing them to collect and share data and perform tasks automatically.</p>
+
+<h4>How IoT Works</h4>
+<ol>
+    <li><strong>Data Collection:</strong> Sensors collect information from the surroundings, such as temperature, movement, humidity, and soil moisture.</li>
+    <li><strong>Communication:</strong> Devices send collected data to other devices or applications through networks such as the internet.</li>
+    <li><strong>Automation:</strong> A device or control system uses the data to perform actions automatically.</li>
+</ol>
+
+<h4>Uses of IoT [Mention any 1 or 2 Examples during writing exam]</h4>
+<ul>
+    <li><strong>Healthcare:</strong> Smartwatches and health monitors measure information such as heart rate and blood pressure and share it with healthcare professionals.</li>
+    <li><strong>Agriculture:</strong> Sensors monitor soil moisture and crop conditions, helping farmers decide when to water crops and estimate the right time to harvest.</li>
+    <li><strong>Smart Homes:</strong> Connected lights, air conditioners, and security cameras can be monitored and controlled remotely using smartphones.</li>
+</ul>
+
+<p>IoT improves convenience, saves resources, and helps people make decisions using real-time information.</p>
+
+<h3>4. Explain how Cloud Computing supports scalability, accessibility, and collaboration. Compare Google Drive, AWS, and Microsoft Azure.</h3>
+
+<p>Cloud computing provides storage, software, and computing resources over the internet instead of relying entirely on local computers.</p>
+
+<h4>Advantages of Cloud Computing</h4>
+<ul>
+    <li><strong>Scalability:</strong> Users can increase or decrease computing resources according to their needs.</li>
+    <li><strong>Accessibility:</strong> Users can access files and services from different devices and locations through the internet.</li>
+    <li><strong>Collaboration:</strong> Multiple users can work on shared files and documents online.</li>
+</ul>
+
+<h4>Comparison of Cloud Platforms</h4>
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Platform</th>
+            <th>Main Purpose</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Google Drive</td>
+            <td>Online file storage and sharing</td>
+            <td>Students share assignments and documents.</td>
+        </tr>
+        <tr>
+            <td>Amazon Web Services (AWS)</td>
+            <td>Cloud computing, storage, and application hosting</td>
+            <td>Businesses run websites and applications.</td>
+        </tr>
+        <tr>
+            <td>Microsoft Azure</td>
+            <td>Cloud computing, data storage, and application development</td>
+            <td>Organizations host applications and manage business data.</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Google Drive mainly helps individuals and teams store and share files, while AWS and Microsoft Azure provide a wider range of computing services for developers and organizations.</p>
+
+<h3>5. What is Blockchain technology? Discuss how its decentralized nature improves transparency and security in financial and non-financial applications.</h3>
+
+<p>Blockchain is a technology that stores information in blocks connected in a chain. Copies of these records can be stored across multiple computers, making unauthorized changes difficult to make without detection.</p>
+
+<h4>How Blockchain Improves Security and Transparency</h4>
+<ul>
+    <li><strong>Decentralization:</strong> Records are shared across multiple computers instead of being controlled by a single central authority.</li>
+    <li><strong>Security:</strong> Cryptographic methods help protect recorded information from unauthorized changes.</li>
+    <li><strong>Transparency:</strong> Participants can view and verify transactions recorded on the blockchain.</li>
+    <li><strong>Data Integrity:</strong> Changes to previous records are difficult to make without detection.</li>
+</ul>
+
+<h4>Financial Applications [Mention any 1 or 2 Examples during writing exam]</h4>
+<ul>
+    <li><strong>Cryptocurrency:</strong> Bitcoin uses blockchain to record financial transactions between users.</li>
+    <li><strong>Banking:</strong> Blockchain can help record and verify financial transactions securely.</li>
+</ul>
+
+<h4>Non-Financial Applications [Mention any 1 or 2 Examples during writing exam]</h4>
+<ul>
+    <li><strong>Supply Chain Management:</strong> Blockchain helps track products from manufacturers to customers.</li>
+    <li><strong>Digital Records:</strong> Blockchain can maintain verifiable records of important information, such as certificates and documents.</li>
+</ul>
+
+<h2 id="mcqs">Multiple Choice Questions (MCQs) on Computer Networks</h2>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What is a computer network?</div>
+  <div class="mcq-options">
+    a. A single computer without any connection<br>
+    b. A group of computers and devices connected to communicate and share resources<br>
+    c. A type of storage device<br>
+    d. A computer programming language
+  </div>
+  <div class="mcq-answer">Answer: b. A group of computers and devices connected to communicate and share resources</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. Which of the following is a common use of a computer network?</div>
+  <div class="mcq-options">
+    a. Internet browsing<br>
+    b. Increasing monitor size<br>
+    c. Changing keyboard color<br>
+    d. Increasing processor temperature
+  </div>
+  <div class="mcq-answer">Answer: a. Internet browsing</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. What does network architecture describe?</div>
+  <div class="mcq-options">
+    a. The physical size of a computer<br>
+    b. The speed of a processor<br>
+    c. The design and structure of a computer network<br>
+    d. The storage capacity of a hard drive
+  </div>
+  <div class="mcq-answer">Answer: c. The design and structure of a computer network</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. Which of the following is a component of network architecture?</div>
+  <div class="mcq-options">
+    a. Only printers<br>
+    b. Only computers<br>
+    c. Only software<br>
+    d. Hardware, software, and communication rules
+  </div>
+  <div class="mcq-answer">Answer: d. Hardware, software, and communication rules</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. What does LAN stand for?</div>
+  <div class="mcq-options">
+    a. Local Area Network<br>
+    b. Large Access Network<br>
+    c. Local Access Node<br>
+    d. Long Area Network
+  </div>
+  <div class="mcq-answer">Answer: a. Local Area Network</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. Which network is designed to cover a large geographical area?</div>
+  <div class="mcq-options">
+    a. LAN<br>
+    b. WAN<br>
+    c. PAN<br>
+    d. CAN
+  </div>
+  <div class="mcq-answer">Answer: b. WAN</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. A WAN used by a specific organization is called a:</div>
+  <div class="mcq-options">
+    a. Public WAN<br>
+    b. Local WAN<br>
+    c. Private WAN<br>
+    d. Home LAN
+  </div>
+  <div class="mcq-answer">Answer: c. Private WAN</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. Which is an example of a public WAN?</div>
+  <div class="mcq-options">
+    a. A school computer lab<br>
+    b. A home Wi-Fi network<br>
+    c. A company's private network<br>
+    d. The Internet
+  </div>
+  <div class="mcq-answer">Answer: d. The Internet</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. Which device allows a computer to connect to a network?</div>
+  <div class="mcq-options">
+    a. NIC<br>
+    b. Monitor<br>
+    c. Keyboard<br>
+    d. Speaker
+  </div>
+  <div class="mcq-answer">Answer: a. NIC</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. What is the main function of a switch?</div>
+  <div class="mcq-options">
+    a. Connect different cities<br>
+    b. Connect multiple devices within the same network<br>
+    c. Convert electrical power<br>
+    d. Store network files
+  </div>
+  <div class="mcq-answer">Answer: b. Connect multiple devices within the same network</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. Which device connects different networks and directs data between them?</div>
+  <div class="mcq-options">
+    a. NIC<br>
+    b. Modem<br>
+    c. Router<br>
+    d. Hub
+  </div>
+  <div class="mcq-answer">Answer: c. Router</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. What is the primary purpose of a modem?</div>
+  <div class="mcq-options">
+    a. To display web pages<br>
+    b. To store passwords<br>
+    c. To connect printers<br>
+    d. To provide a connection between the local network and an ISP
+  </div>
+  <div class="mcq-answer">Answer: d. To provide a connection between the local network and an ISP</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. In which topology are all devices connected to a central device?</div>
+  <div class="mcq-options">
+    a. Star topology<br>
+    b. Bus topology<br>
+    c. Ring topology<br>
+    d. Mesh topology
+  </div>
+  <div class="mcq-answer">Answer: a. Star topology</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. Which topology uses a single main backbone cable?</div>
+  <div class="mcq-options">
+    a. Ring topology<br>
+    b. Bus topology<br>
+    c. Star topology<br>
+    d. Mesh topology
+  </div>
+  <div class="mcq-answer">Answer: b. Bus topology</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. Which topology connects devices in a circular arrangement?</div>
+  <div class="mcq-options">
+    a. Bus topology<br>
+    b. Star topology<br>
+    c. Ring topology<br>
+    d. Mesh topology
+  </div>
+  <div class="mcq-answer">Answer: c. Ring topology</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">16. Which topology provides multiple paths between devices and is highly reliable?</div>
+  <div class="mcq-options">
+    a. Bus topology<br>
+    b. Star topology<br>
+    c. Ring topology<br>
+    d. Mesh topology
+  </div>
+  <div class="mcq-answer">Answer: d. Mesh topology</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">17. Which network model divides communication into seven layers?</div>
+  <div class="mcq-options">
+    a. OSI model<br>
+    b. TCP model<br>
+    c. LAN model<br>
+    d. Internet model
+  </div>
+  <div class="mcq-answer">Answer: a. OSI model</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">18. How many layers are present in the OSI model?</div>
+  <div class="mcq-options">
+    a. 4<br>
+    b. 7<br>
+    c. 5<br>
+    d. 8
+  </div>
+  <div class="mcq-answer">Answer: b. 7</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">19. Which OSI layer provides services directly to applications?</div>
+  <div class="mcq-options">
+    a. Transport Layer<br>
+    b. Network Layer<br>
+    c. Application Layer<br>
+    d. Physical Layer
+  </div>
+  <div class="mcq-answer">Answer: c. Application Layer</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">20. Which OSI layer is responsible for formatting, encryption, decryption, and compression of data?</div>
+  <div class="mcq-options">
+    a. Session Layer<br>
+    b. Transport Layer<br>
+    c. Data Link Layer<br>
+    d. Presentation Layer
+  </div>
+  <div class="mcq-answer">Answer: d. Presentation Layer</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">21. Which OSI layer establishes, manages, and terminates communication sessions?</div>
+  <div class="mcq-options">
+    a. Session Layer<br>
+    b. Network Layer<br>
+    c. Physical Layer<br>
+    d. Application Layer
+  </div>
+  <div class="mcq-answer">Answer: a. Session Layer</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">22. Which OSI layer is responsible for reliable delivery and proper ordering of data?</div>
+  <div class="mcq-options">
+    a. Presentation Layer<br>
+    b. Transport Layer<br>
+    c. Data Link Layer<br>
+    d. Physical Layer
+  </div>
+  <div class="mcq-answer">Answer: b. Transport Layer</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">23. Which OSI layer uses logical addressing such as IP addresses?</div>
+  <div class="mcq-options">
+    a. Data Link Layer<br>
+    b. Transport Layer<br>
+    c. Network Layer<br>
+    d. Application Layer
+  </div>
+  <div class="mcq-answer">Answer: c. Network Layer</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">24. Which OSI layer uses MAC addresses for local network communication?</div>
+  <div class="mcq-options">
+    a. Network Layer<br>
+    b. Session Layer<br>
+    c. Physical Layer<br>
+    d. Data Link Layer
+  </div>
+  <div class="mcq-answer">Answer: d. Data Link Layer</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">25. Which OSI layer transmits data as electrical signals, radio waves, or light?</div>
+  <div class="mcq-options">
+    a. Physical Layer<br>
+    b. Network Layer<br>
+    c. Transport Layer<br>
+    d. Presentation Layer
+  </div>
+  <div class="mcq-answer">Answer: a. Physical Layer</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">26. Which protocol is mainly responsible for addressing and routing data?</div>
+  <div class="mcq-options">
+    a. FTP<br>
+    b. IP<br>
+    c. HTTP<br>
+    d. DNS
+  </div>
+  <div class="mcq-answer">Answer: b. IP</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">27. Which protocol is used to transfer files between computers?</div>
+  <div class="mcq-options">
+    a. DNS<br>
+    b. HTTP<br>
+    c. FTP<br>
+    d. IP
+  </div>
+  <div class="mcq-answer">Answer: c. FTP</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">28. What is the main purpose of DNS?</div>
+  <div class="mcq-options">
+    a. Encrypting files<br>
+    b. Sending emails<br>
+    c. Blocking viruses<br>
+    d. Converting domain names into IP addresses
+  </div>
+  <div class="mcq-answer">Answer: d. Converting domain names into IP addresses</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">29. How many bits are used in an IPv4 address?</div>
+  <div class="mcq-options">
+    a. 32 bits<br>
+    b. 64 bits<br>
+    c. 128 bits<br>
+    d. 16 bits
+  </div>
+  <div class="mcq-answer">Answer: a. 32 bits</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">30. Which of the following is a valid example of an IPv4 address?</div>
+  <div class="mcq-options">
+    a. 2001:db8::1<br>
+    b. 192.168.1.10<br>
+    c. 192:168:1:10<br>
+    d. 192-168-1-10
+  </div>
+  <div class="mcq-answer">Answer: b. 192.168.1.10</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">31. How many bits are used in an IPv6 address?</div>
+  <div class="mcq-options">
+    a. 32 bits<br>
+    b. 64 bits<br>
+    c. 128 bits<br>
+    d. 256 bits
+  </div>
+  <div class="mcq-answer">Answer: c. 128 bits</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">32. What is subnetting?</div>
+  <div class="mcq-options">
+    a. Connecting two computers with a cable<br>
+    b. Increasing Internet speed<br>
+    c. Converting IPv4 into IPv6<br>
+    d. Dividing one large network into smaller networks
+  </div>
+  <div class="mcq-answer">Answer: d. Dividing one large network into smaller networks</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">33. What does NAT stand for?</div>
+  <div class="mcq-options">
+    a. Network Address Translation<br>
+    b. Network Access Technology<br>
+    c. Network Application Transfer<br>
+    d. New Address Type
+  </div>
+  <div class="mcq-answer">Answer: a. Network Address Translation</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">34. What does NAT commonly translate when a device accesses the Internet?</div>
+  <div class="mcq-options">
+    a. Public IP into a MAC address<br>
+    b. Private IP address into a public IP address<br>
+    c. Domain name into a password<br>
+    d. MAC address into a domain name
+  </div>
+  <div class="mcq-answer">Answer: b. Private IP address into a public IP address</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">35. Which technology is normally used for wireless communication in a home network?</div>
+  <div class="mcq-options">
+    a. Ethernet<br>
+    b. Fiber optic cable<br>
+    c. Wi-Fi<br>
+    d. USB
+  </div>
+  <div class="mcq-answer">Answer: c. Wi-Fi</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">36. Which command is commonly used to check whether a network device is reachable?</div>
+  <div class="mcq-options">
+    a. format<br>
+    b. mkdir<br>
+    c. copy<br>
+    d. ping
+  </div>
+  <div class="mcq-answer">Answer: d. ping</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">37. Which tool displays network configuration information on Windows?</div>
+  <div class="mcq-options">
+    a. ipconfig<br>
+    b. ping<br>
+    c. Telnet<br>
+    d. SSH
+  </div>
+  <div class="mcq-answer">Answer: a. ipconfig</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">38. Which of the following is a network security threat?</div>
+  <div class="mcq-options">
+    a. Data backup<br>
+    b. Phishing<br>
+    c. Encryption<br>
+    d. Access control
+  </div>
+  <div class="mcq-answer">Answer: b. Phishing</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">39. Which backup type stores only the data changed since the previous backup?</div>
+  <div class="mcq-options">
+    a. Full backup<br>
+    b. Differential backup<br>
+    c. Incremental backup<br>
+    d. Complete recovery
+  </div>
+  <div class="mcq-answer">Answer: c. Incremental backup</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">40. What is the main goal of balancing usability and security?</div>
+  <div class="mcq-options">
+    a. To remove all security controls<br>
+    b. To make systems difficult to use<br>
+    c. To eliminate passwords completely<br>
+    d. To provide strong security while keeping the system reasonably easy to use
+  </div>
+  <div class="mcq-answer">Answer: d. To provide strong security while keeping the system reasonably easy to use</div>
+</div>
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Computer Networks)</h2>
+
+  <h2 id="mcqs">Multiple Choice Questions (MCQs) on Computer Networks</h2>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">1. Which of the following is an example of a computer network in an educational environment?</div>
+    <div class="mcq-options">
+      <button>a. A standalone calculator</button>
+      <button>b. A digital camera</button>
+      <button>c. A school computer lab</button>
+      <button>d. A USB flash drive</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">2. Which network use allows users to share a printer between multiple computers?</div>
+    <div class="mcq-options">
+      <button>a. Resource sharing</button>
+      <button>b. Data encryption</button>
+      <button>c. Virus scanning</button>
+      <button>d. Screen sharing only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">3. Which part of network architecture defines the rules for communication?</div>
+    <div class="mcq-options">
+      <button>a. Hardware</button>
+      <button>b. Storage</button>
+      <button>c. Processor</button>
+      <button>d. Protocols</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">4. Which network would normally be suitable for connecting computers within a small office?</div>
+    <div class="mcq-options">
+      <button>a. Public WAN</button>
+      <button>b. LAN</button>
+      <button>c. Global WAN</button>
+      <button>d. Internet backbone</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">5. What is the main characteristic of a private WAN?</div>
+    <div class="mcq-options">
+      <button>a. It can only cover one room</button>
+      <button>b. It is available to everyone</button>
+      <button>c. It is used by a particular organization</button>
+      <button>d. It does not use communication links</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">6. Which device forwards data to the appropriate device within a local network?</div>
+    <div class="mcq-options">
+      <button>a. Switch</button>
+      <button>b. Modem</button>
+      <button>c. Projector</button>
+      <button>d. Scanner</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">7. Which device commonly provides the connection between a home LAN and the Internet?</div>
+    <div class="mcq-options">
+      <button>a. NIC</button>
+      <button>b. Access point</button>
+      <button>c. Switch</button>
+      <button>d. Router</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">8. Which device provides wireless connectivity to devices using Wi-Fi?</div>
+    <div class="mcq-options">
+      <button>a. Modem</button>
+      <button>b. Wireless Access Point</button>
+      <button>c. Network cable</button>
+      <button>d. Printer</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">9. What is a major disadvantage of bus topology?</div>
+    <div class="mcq-options">
+      <button>a. It requires a separate switch for every computer</button>
+      <button>b. It has no shared communication medium</button>
+      <button>c. Failure of the backbone can affect the entire network</button>
+      <button>d. Every device needs a direct connection to every other device</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">10. Why are terminators used at both ends of a bus topology?</div>
+    <div class="mcq-options">
+      <button>a. To prevent signal reflection</button>
+      <button>b. To increase storage capacity</button>
+      <button>c. To assign IP addresses</button>
+      <button>d. To encrypt network traffic</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">11. What happens in a star topology if one device's connecting cable fails?</div>
+    <div class="mcq-options">
+      <button>a. The entire network always stops</button>
+      <button>b. All devices lose their IP addresses</button>
+      <button>c. The backbone cable fails</button>
+      <button>d. Usually only that device is affected</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">12. What is the major weakness of a star topology?</div>
+    <div class="mcq-options">
+      <button>a. It cannot connect computers</button>
+      <button>b. Failure of the central device can affect the entire network</button>
+      <button>c. It does not use cables</button>
+      <button>d. It has no central connection</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">13. In a ring topology, how is data normally passed?</div>
+    <div class="mcq-options">
+      <button>a. Directly from every device to the Internet</button>
+      <button>b. Through a central router only</button>
+      <button>c. From one device to the next around the ring</button>
+      <button>d. Through a single wireless access point</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">14. What is a major advantage of mesh topology?</div>
+    <div class="mcq-options">
+      <button>a. Multiple paths provide high reliability</button>
+      <button>b. It always uses the least amount of cable</button>
+      <button>c. It requires no network devices</button>
+      <button>d. It can only connect two computers</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">15. Why is a full mesh network expensive to install?</div>
+    <div class="mcq-options">
+      <button>a. It cannot transmit data</button>
+      <button>b. It requires only one cable</button>
+      <button>c. It does not support multiple devices</button>
+      <button>d. It requires many connections between devices</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">16. What is the purpose of dividing networking tasks into layers?</div>
+    <div class="mcq-options">
+      <button>a. To increase monitor resolution</button>
+      <button>b. To organize communication functions into manageable parts</button>
+      <button>c. To remove the need for protocols</button>
+      <button>d. To reduce computer storage</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">17. Which two models are commonly used to explain network communication?</div>
+    <div class="mcq-options">
+      <button>a. HTML and CSS</button>
+      <button>b. USB and HDMI</button>
+      <button>c. OSI and TCP/IP</button>
+      <button>d. LAN and NIC</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">18. Which OSI layer is responsible for maintaining organized communication sessions?</div>
+    <div class="mcq-options">
+      <button>a. Session Layer</button>
+      <button>b. Physical Layer</button>
+      <button>c. Network Layer</button>
+      <button>d. Data Link Layer</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">19. Which OSI layer is closest to the end-user applications?</div>
+    <div class="mcq-options">
+      <button>a. Physical Layer</button>
+      <button>b. Data Link Layer</button>
+      <button>c. Network Layer</button>
+      <button>d. Application Layer</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">20. Which OSI layer is responsible for detecting errors in local data transmission?</div>
+    <div class="mcq-options">
+      <button>a. Application Layer</button>
+      <button>b. Data Link Layer</button>
+      <button>c. Session Layer</button>
+      <button>d. Presentation Layer</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">21. Which layer determines the best path for data between networks?</div>
+    <div class="mcq-options">
+      <button>a. Physical Layer</button>
+      <button>b. Presentation Layer</button>
+      <button>c. Network Layer</button>
+      <button>d. Session Layer</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">22. Which OSI layer handles the actual transmission medium?</div>
+    <div class="mcq-options">
+      <button>a. Physical Layer</button>
+      <button>b. Application Layer</button>
+      <button>c. Transport Layer</button>
+      <button>d. Network Layer</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">23. Which protocol is mainly associated with displaying web pages between browsers and web servers?</div>
+    <div class="mcq-options">
+      <button>a. FTP</button>
+      <button>b. DNS</button>
+      <button>c. IP</button>
+      <button>d. HTTP</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">24. What is the main role of TCP?</div>
+    <div class="mcq-options">
+      <button>a. Translate domain names</button>
+      <button>b. Control reliable transmission and ordering of data</button>
+      <button>c. Assign MAC addresses</button>
+      <button>d. Encrypt Wi-Fi passwords</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">25. Which type of address identifies a device logically on a network?</div>
+    <div class="mcq-options">
+      <button>a. MAC address only</button>
+      <button>b. Email address</button>
+      <button>c. IP address</button>
+      <button>d. Website address only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">26. What is the total number of possible IPv4 addresses?</div>
+    <div class="mcq-options">
+      <button>a. 4,294,967,296</button>
+      <button>b. 65,536</button>
+      <button>c. 128</button>
+      <button>d. 340,282</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">27. Which notation is normally used to write an IPv6 address?</div>
+    <div class="mcq-options">
+      <button>a. Four decimal numbers separated by dots</button>
+      <button>b. Binary digits separated by commas</button>
+      <button>c. Decimal numbers separated by hyphens</button>
+      <button>d. Hexadecimal groups separated by colons</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">28. In IPv6 addressing, which part identifies a specific device/interface?</div>
+    <div class="mcq-options">
+      <button>a. Global Routing Prefix</button>
+      <button>b. Interface ID</button>
+      <button>c. Subnet ID</button>
+      <button>d. Network protocol</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">29. Why is subnetting useful in a large organization?</div>
+    <div class="mcq-options">
+      <button>a. It removes all IP addresses</button>
+      <button>b. It converts all networks into public networks</button>
+      <button>c. It divides a large network into smaller manageable networks</button>
+      <button>d. It replaces the need for routers</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">30. Which situation is an example of subnetting?</div>
+    <div class="mcq-options">
+      <button>a. Separating a school's network into lab, teachers, and administration networks</button>
+      <button>b. Connecting a keyboard to a computer</button>
+      <button>c. Increasing a monitor's brightness</button>
+      <button>d. Installing a printer driver</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">31. What is the main purpose of a default gateway?</div>
+    <div class="mcq-options">
+      <button>a. To store backup files</button>
+      <button>b. To identify a printer</button>
+      <button>c. To provide wireless encryption only</button>
+      <button>d. To provide a path from the local network to other networks</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">32. Which Wi-Fi security standard is newer and generally stronger than WPA2?</div>
+    <div class="mcq-options">
+      <button>a. WEP</button>
+      <button>b. WPA3</button>
+      <button>c. FTP</button>
+      <button>d. HTTP</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">33. What is the purpose of a guest network on a router?</div>
+    <div class="mcq-options">
+      <button>a. To disable Internet access</button>
+      <button>b. To replace the main router</button>
+      <button>c. To provide visitors with network access while separating them from the main network</button>
+      <button>d. To increase the size of the hard drive</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">34. Which command can be used on Linux/Unix systems to view network interface information?</div>
+    <div class="mcq-options">
+      <button>a. ifconfig</button>
+      <button>b. ipconfig</button>
+      <button>c. format</button>
+      <button>d. mkdir</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">35. Which secure protocol is preferred over Telnet for remote access?</div>
+    <div class="mcq-options">
+      <button>a. HTTP</button>
+      <button>b. FTP</button>
+      <button>c. DNS</button>
+      <button>d. SSH</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">36. What does network bandwidth measure?</div>
+    <div class="mcq-options">
+      <button>a. The physical length of a cable</button>
+      <button>b. The maximum amount of data that can be transmitted in a given time</button>
+      <button>c. The number of computers in a room</button>
+      <button>d. The delay of a single packet only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">37. Which load-balancing method sends a request to the server with the fewest active connections?</div>
+    <div class="mcq-options">
+      <button>a. Round Robin</button>
+      <button>b. IP Hash</button>
+      <button>c. Least Connection</button>
+      <button>d. Random Backup</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">38. Which security mechanism monitors and controls incoming and outgoing network traffic?</div>
+    <div class="mcq-options">
+      <button>a. Firewall</button>
+      <button>b. Modem</button>
+      <button>c. Switch</button>
+      <button>d. DNS</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">39. Which backup stores all selected data during each backup operation?</div>
+    <div class="mcq-options">
+      <button>a. Incremental backup</button>
+      <button>b. Differential backup</button>
+      <button>c. Partial backup</button>
+      <button>d. Full backup</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">40. Which situation best represents a usability and security tradeoff?</div>
+    <div class="mcq-options">
+      <button>a. Removing all passwords to make login faster</button>
+      <button>b. Using stronger security even though additional login steps may take more time</button>
+      <button>c. Disabling encryption to improve privacy</button>
+      <button>d. Removing access control from a network</button>
+    </div>
+  </div>
+
+</section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+      
+<h2 id="faqs">FAQs</h2>
+
+<section class="faq-section">
+
+<h2 id="faqs">Computer Networks FAQs</h2>
+
+<div class="faq-item">
+  <button class="faq-question">What is a computer network?</button>
+  <div class="faq-answer">
+    <p>A computer network is a group of computers and devices connected to communicate and share resources.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a LAN?</button>
+  <div class="faq-answer">
+    <p>LAN (Local Area Network) is a network that connects devices within a small geographical area such as a home, school, office, or computer lab.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a WAN?</button>
+  <div class="faq-answer">
+    <p>WAN (Wide Area Network) is a network that connects devices or networks across a large geographical area such as cities, countries, or continents.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a network switch?</button>
+  <div class="faq-answer">
+    <p>A switch is a networking device that connects multiple devices within the same network and forwards data to the appropriate destination.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is a router?</button>
+  <div class="faq-answer">
+    <p>A router is a networking device that connects different networks and directs data between them. A home router commonly connects a local network to the Internet.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is network topology?</button>
+  <div class="faq-answer">
+    <p>Network topology is the arrangement or structure of devices and connections in a computer network. Common topologies include bus, star, ring, and mesh.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is the OSI model?</button>
+  <div class="faq-answer">
+    <p>The OSI model is a framework that explains network communication by dividing it into seven different layers, each with a specific function.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">How many layers are in the OSI model?</button>
+  <div class="faq-answer">
+    <p>The OSI model has seven layers: Application, Presentation, Session, Transport, Network, Data Link, and Physical.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is an IP address?</button>
+  <div class="faq-answer">
+    <p>An IP address is a logical address assigned to a device on a network so that devices can identify and communicate with each other.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is IPv4?</button>
+  <div class="faq-answer">
+    <p>IPv4 is a 32-bit addressing system that uses four decimal numbers separated by dots, such as 192.168.1.10.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is IPv6?</button>
+  <div class="faq-answer">
+    <p>IPv6 is a 128-bit addressing system that uses hexadecimal numbers separated by colons and provides a much larger number of addresses than IPv4.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is subnetting?</button>
+  <div class="faq-answer">
+    <p>Subnetting is the process of dividing one large network into smaller networks called subnets.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is NAT?</button>
+  <div class="faq-answer">
+    <p>NAT (Network Address Translation) is a technique used by a router to translate private IP addresses into a public IP address when devices communicate over the Internet.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is network security?</button>
+  <div class="faq-answer">
+    <p>Network security is the protection of networks, devices, and data from unauthorized access, attacks, and other security threats.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">What is data backup and recovery?</button>
+  <div class="faq-answer">
+    <p>Data backup is the process of creating copies of important data, while recovery is the process of restoring lost or damaged data from a backup.</p>
+  </div>
+</div>
+
+</div>
+
+</section>
+      
+<h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/12-class/chapter-1/class-12-computer-chapter-1-computer-networks.pdf">
+  Download PDF
+</a>
+</div>
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+<div class="social-icons">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=100009953895352" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/@ComputerWithSalman" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-youtube"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/salmannicksallu" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/923089051710" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</div>
+
+
+</div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+    <h3>Categories</h3>
+
+    <ul>
+
+        <li><a href="technology.html">Technology</a></li>
+
+        <li><a href="computer-science.html">Computer Science</a></li>
+
+        <li><a href="how-to-guides.html">How-To Guides</a></li>
+
+        <li><a href="education.html">Education</a></li>
+
+        <li><a href="ai-tools.html">AI Tools</a></li>
+
+        <li><a href="roadmaps.html">Career Roadmaps</a></li>
+
+        <li><a href="8-computer-science.html">Class 8 Computer</a></li>
+
+        <li><a href="9-computer-science.html">Class 9 Computer</a></li>
+
+        <li><a href="10-computer-science.html">Class 10 Computer</a></li>
+
+        <li><a href="11-computer-science.html">Class 11 Computer</a></li>
+
+        <li><a href="12-computer-science.html">Class 12 Computer</a></li>
+
+    </ul>
+
+</div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                question.classList.toggle("active");
+
+                const answer = question.nextElementSibling;
+
+                if (answer.style.maxHeight) {
+
+                    answer.style.maxHeight = null;
+
+                } else {
+
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+    
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
