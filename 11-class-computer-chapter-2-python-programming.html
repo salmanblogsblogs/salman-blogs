@@ -1,0 +1,2357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ <title>Class 10 Computer Science Chapter 6 Notes: Introduction to Artificial Intelligence (AI) and Machine Learning (ML) | MCQs, Short & Long Questions</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="notes-post.css">
+
+  <meta name="description" content="Class 10 Computer Science Chapter 6 Notes: Introduction to Artificial Intelligence (AI) and Machine Learning (ML), AI applications, supervised and unsupervised learning, algorithms, confusion matrix, and model performance evaluation. Includes examples, MCQs, short questions, long questions, FAQs, and exam preparation." />
+
+<meta name="keywords" content="class 10 computer science notes, 10th class computer science chapter 6, class 10 computer chapter 6, introduction to artificial intelligence class 10, artificial intelligence notes class 10, AI notes class 10, machine learning class 10, machine learning notes class 10, AI and ML class 10, applications of artificial intelligence, AI applications examples, supervised learning, unsupervised learning, linear regression, decision trees, K-means clustering, machine learning algorithms, labeled data, unlabeled data, model performance evaluation, confusion matrix, true positive, true negative, false positive, false negative, accuracy in machine learning, AI bias, AI privacy, AI ethics, responsible AI, AI MCQs class 10, short questions AI and ML, long questions AI and ML, AI and ML FAQs, FBISE computer science notes, Punjab board computer science notes, chapter 6 computer science notes, computer science exam preparation, important questions chapter 6, class 10 computer solved MCQs, class 10 computer science full notes" />
+
+<meta name="author" content="Salman Ahmad" />
+
+  <link rel="canonical" href="https://salmanblogs.com/10-class-computer-chap-5-introduction-to-data-science" />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+ <!-- Open Graph -->
+<meta property="og:title" content="Class 10 Computer Science Chapter 6 Notes: Introduction to AI and Machine Learning | MCQs, Short & Long Questions, FAQs" />
+
+<meta property="og:description" content="Complete Class 10 Computer Science Chapter 6 Notes on Introduction to Artificial Intelligence (AI) and Machine Learning (ML), AI applications, supervised and unsupervised learning, machine learning algorithms, confusion matrix, and model performance evaluation. Includes examples, MCQs, short questions, long questions, and FAQs for FBISE and Punjab Board exam preparation." />
+
+<meta property="og:image" content="https://salmanblogs.com/images/10-CS-IMAGES/chapter-5/10-class-computer-chapter-5-introduction-to-data-science.webp" />
+
+<meta property="og:url" content="https://salmanblogs.com/10-class-computer-chap-5-introduction-to-data-science" />
+
+<meta property="og:type" content="article" />
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:title" content="Class 10 Computer Science Chapter 6 Notes: Introduction to AI and Machine Learning | MCQs, Short & Long Questions, FAQs" />
+
+<meta name="twitter:description" content="Study Class 10 Computer Science Chapter 6 with complete notes on Artificial Intelligence (AI), Machine Learning (ML), AI applications, supervised and unsupervised learning, machine learning algorithms, confusion matrix, and model performance evaluation. Includes examples, MCQs, short questions, long questions, and FAQs for FBISE and Punjab Board exam preparation." />
+
+<meta name="twitter:image" content="https://salmanblogs.com/images/10-CS-IMAGES/chapter-5/10-class-computer-chapter-5-introduction-to-data-science.webp" />
+
+ <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="favicon.ico">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Class 10 Computer Science Chapter 6 Notes: Introduction to Artificial Intelligence (AI) and Machine Learning (ML)",
+  "author": {
+    "@type": "Person",
+    "name": "Salman Ahmad"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Salman Blogs"
+  },
+  "description": "Complete Class 10 Computer Science Chapter 6 notes covering Artificial Intelligence (AI), Machine Learning (ML), AI applications, supervised and unsupervised learning, machine learning algorithms, confusion matrix, and model performance evaluation. Includes examples, MCQs, short questions, long questions, and FAQs for FBISE and Punjab Board exam preparation.",
+  "mainEntityOfPage": "https://salmanblogs.com/class-10-computer-science-chapter-6-introduction-to-ai-and-machine-learning"
+}
+</script>
+
+</head>
+<body>
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<span class="logo-first">Salman</span>
+
+<span class="logo-last">Blogs</span>
+
+</a>
+
+<nav>
+
+<div class="nav-toggle" id="navToggle">
+    &#9776;
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+<li><a href="terms.html">Terms</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="hero-badge">
+
+🤖 Class 10 Computer Science Chapter 6
+
+</span>
+<br>
+<h1>
+
+<span>Introduction to Artificial Intelligence (AI) and Machine Learning (ML)</span>
+
+</h1>
+
+<p>
+    Complete Class 10 Computer Science Chapter 6 notes covering Artificial Intelligence (AI), Machine Learning (ML), AI applications, supervised and unsupervised learning, machine learning algorithms, confusion matrix, and model performance evaluation. Includes simple examples, MCQs, short questions, long questions, and FAQs for FBISE and Punjab Board students.
+</p>
+
+<div class="hero-buttons">
+
+<a href="categories.html" class="btn-secondary">
+
+Browse Categories
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<main class="post-container">
+  <article class="blog-post">
+<h1 class="post-title">Class 10 Computer Science Chapter 6: Introduction to AI and Machine Learning</h1>    <div class="post-meta">Posted in <strong>10 Computer Science</strong></div>
+    <img src="images/10-CS-IMAGES/chapter-6/10-class-computer-chapter-6-introduction-to-ai-and-ml.webp"
+                 alt="10-class-computer-chapter-6-introduction-to-ai-and-ml"  class="post-image"
+               width="1672" height="940"  loading="lazy">
+
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 10 Computer Science.
+
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#artificial-intelligence-ai">Artificial Intelligence (AI)</a></li>
+<li><a href="#machine-learning-ml">Machine Learning (ML)</a></li>
+<li><a href="#difference-between-ai-and-ml">Difference Between Artificial Intelligence (AI) and Machine Learning (ML)</a></li>
+<li><a href="#types-of-machine-learning">Types of Machine Learning</a></li>
+<li><a href="#difference-between-supervised-and-unsupervised-learning">Difference Between Supervised and Unsupervised Learning</a></li>
+<li><a href="#practical-applications-of-ai-ml">Practical Applications of AI/ML</a></li>
+<li><a href="#bias-privacy-and-responsibility-in-ai">Bias, Privacy, and Responsibility in AI</a></li>
+<li><a href="#supervised-and-unsupervised-learning-algorithms">Supervised and Unsupervised Learning Algorithms</a></li>
+<li><a href="#evaluating-model-performance">Evaluating Model Performance</a></li>
+<li><a href="#exercise-short-answer-questions">Exercise: Short Answer Questions</a></li>
+<li><a href="#exercise-long-answer-questions">Exercise: Long Answer Questions</a></li>
+<li><a href="#mcqs">MCQs</a></li>
+<li><a href="#test-mcqs">MCQs for Testing</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+<div class="post-content">
+  <h1 id="what-is-python-programming">What is Python Programming?</h1>
+
+<p>Python is a high-level, easy-to-read programming language used to create software, websites, mobile applications, games, artificial intelligence (AI), data analysis applications, and many other types of programs.</p>
+
+<h2 id="why-is-python-called-versatile">Why is Python Called Versatile?</h2>
+
+<p>Python is called <strong>versatile</strong> because it can be used for many different types of work. Instead of learning a different programming language for every task, you can use Python for a wide variety of applications.</p>
+
+<ul>
+  <li>Web Development</li>
+  <li>Artificial Intelligence (AI)</li>
+  <li>Machine Learning</li>
+  <li>Data Science</li>
+  <li>Data Analysis</li>
+  <li>Automation</li>
+  <li>Game Development</li>
+  <li>Desktop Applications</li>
+  <li>Mobile App Development</li>
+  <li>Cybersecurity</li>
+  <li>Web Scraping</li>
+  <li>Cloud Computing</li>
+  <li>Internet of Things (IoT)</li>
+  <li>Robotics</li>
+  <li>Scientific Computing</li>
+  <li>Software Development</li>
+  <li>Networking</li>
+  <li>Blockchain</li>
+  <li>Image Processing</li>
+  <li>Computer Vision</li>
+</ul>
+
+<h1 id="what-is-computer-programming">What is Computer Programming?</h1>
+
+<p>Computer programming is the process of writing instructions (called <strong>code</strong>) that tell a computer what to do and how to do it.</p>
+
+<p>A computer cannot think or make decisions on its own. It only follows the instructions given by a programmer.</p>
+
+<p>It is also called <strong>coding</strong>, <strong>programming</strong>, or <strong>software</strong> in everyday language.</p>
+
+<h2 id="setting-up-python-development-environment">Setting Up Python Development Environment</h2>
+
+<p>Setting up a Python development environment means installing and configuring the tools needed to write and run Python programs.</p>
+
+<h3>Examples of Python Development Environments</h3>
+
+<p><strong>These tools are commonly called Integrated Development Environments (IDEs).</strong></p>
+
+<ul>
+  <li>Visual Studio Code (VS Code)</li>
+  <li>PyCharm</li>
+  <li>Google Colab (Colab)</li>
+  <li>Jupyter Notebook</li>
+  <li>IDLE</li>
+  <li>Spyder</li>
+</ul>
+
+<h3>1. Compiler</h3>
+
+<p>A compiler translates the whole program into machine code before execution. If errors are found during compilation, they must be corrected before the program can run successfully.</p>
+
+<p><strong>Examples:</strong> C and C++ commonly use compilers.</p>
+
+<h3>2. Interpreter</h3>
+
+<p>An interpreter translates and executes program code line by line. If an error occurs, it may stop execution and show an error message.</p>
+
+<p><strong>Example:</strong> Python uses interpreter.</p>
+
+<h2 id="python-comments">Python Comments</h2>
+
+<h3>What are Comments?</h3>
+
+<p>Comments are notes written inside a Python program to explain the code. They are ignored by the Python interpreter, so they are not executed.</p>
+
+<h3>Purpose of Comments</h3>
+
+<p>Comments are used to:</p>
+
+<ul>
+  <li>Explain what the code does.</li>
+  <li>Make the code easier to read and understand.</li>
+  <li>Help other programmers understand the program.</li>
+  <li>Remind yourself why you wrote a particular piece of code.</li>
+</ul>
+
+<h3>Types of Comments</h3>
+
+<p>Python mainly has two types of comments:</p>
+
+<h4>1. Single-Line Comment</h4>
+
+<p>A single-line comment starts with the <code>#</code> symbol.</p>
+
+<h5>Syntax</h5>
+
+<pre><code># This is a single-line comment
+</code></pre>
+
+<h5>Example</h5>
+
+<pre><code># Print a welcome message
+print("Welcome")
+</code></pre>
+
+<h4>2. Multi-Line Comment</h4>
+
+<p>Python does not have a special multi-line comment symbol. A common way is to use triple quotes (<code>'''</code> or <code>'''</code>) to write comments that span multiple lines.</p>
+
+<h5>Example</h5>
+
+<pre><code>"""
+This program
+prints a welcome
+message.
+"""
+
+print("Welcome")
+</code></pre>
+
+<h2 id="variables-in-python">Variables in Python</h2>
+
+<h3>What is a Variable?</h3>
+<p>A variable is a named location in memory that is used to store data. The value stored in a variable can be used or changed during the execution of a program.</p>
+
+<h3>Python Variables Example</h3>
+<pre ><code class="language-python">
+x = 55
+y = 66.6
+name = "Salman"
+age = 28
+is_student = True
+
+print(x)
+print(y)
+print(name)
+print(age)
+print(is_student)
+</code></pre>
+
+<p><strong>Output:</strong></p>
+<pre><code>
+55
+66.6
+Salman
+28
+True
+</code></pre>
+
+<h3>Rules for Naming Variables</h3>
+<p>Python has some rules for naming variables.</p>
+
+<h4>1. Variable names must start with a letter or an underscore (_).</h4>
+
+<p><strong>✅ Correct</strong></p>
+<pre><code class="language-python">
+name = "Ali"
+_age = 20
+</code></pre>
+
+<p><strong>❌ Incorrect</strong></p>
+<pre><code class="language-python">
+2name = "Ali"
+</code></pre>
+
+<h4>2. Variable names can contain letters, numbers, and underscores.</h4>
+
+<p><strong>✅ Correct</strong></p>
+<pre><code class="language-python">
+student1 = "Ahmed"
+total_marks = 450
+</code></pre>
+
+<p><strong>❌ Incorrect</strong></p>
+<pre><code class="language-python">
+student-name = "Ahmed"
+</code></pre>
+
+<p><em>(- is not allowed.)</em></p>
+
+<h4>3. Variable names cannot contain spaces.</h4>
+
+<p><strong>✅ Correct</strong></p>
+<pre><code class="language-python">
+first_name = "Ali"
+</code></pre>
+
+<p><strong>❌ Incorrect</strong></p>
+<pre><code class="language-python">
+first name = "Ali"
+</code></pre>
+
+<h4>4. Variable names are case-sensitive.</h4>
+
+<p>This means uppercase and lowercase letters are treated as different names.</p>
+
+<pre><code class="language-python">
+name = "Ali"
+Name = "Ahmed"
+
+print(name)
+print(Name)
+</code></pre>
+
+<p><strong>Output:</strong></p>
+<pre><code>
+Ali
+Ahmed
+</code></pre>
+
+<p><strong>name</strong> and <strong>Name</strong> are two different variables.</p>
+
+<h4>5. Do not use Python keywords as variable names.</h4>
+
+<p><strong>❌ Incorrect</strong></p>
+<pre><code class="language-python">
+if = 10
+class = 5
+</code></pre>
+
+<p>These words are reserved by Python.</p>
+
+<div style="background-color:#fff3cd; border-left:5px solid #ffc107; padding:12px 15px; margin:15px 0; border-radius:4px; color:#664d03;">
+    <strong>Note:</strong> Reserved words (keywords) are predefined words in Python that have a special meaning. They cannot be used as variable names, function names, or class names.
+</div>
+
+<h2 id="types-of-variables-in-python">Types of Variables in Python</h2>
+
+<p>In Python, variables are commonly classified based on the type of value they store.</p>
+
+<h3>1. Integer (int)</h3>
+
+<p>An integer stores whole numbers (without decimal points).</p>
+
+<h4>Example</h4>
+
+<pre><code>
+age = 20
+marks = 95
+</code></pre>
+
+<h4>Explanation</h4>
+
+<p><strong>20</strong> and <strong>95</strong> are integers because they are whole numbers.</p>
+
+<h3>2. Float (float)</h3>
+
+<p>A float stores decimal numbers.</p>
+
+<h4>Example</h4>
+
+<pre><code>
+height = 5.8
+price = 99.99
+</code></pre>
+
+<h4>Explanation</h4>
+
+<p><strong>5.8</strong> and <strong>99.99</strong> are floats because they contain decimal points.</p>
+
+<h3>3. String (str)</h3>
+
+<p>A string stores text. Text is written inside single (<code>' '</code>) or double (<code>" "</code>) quotes.</p>
+
+<h4>Example</h4>
+
+<pre><code>
+name = "Ali"
+city = 'Lahore'
+</code></pre>
+
+<h4>Explanation</h4>
+
+<p><strong>"Ali"</strong> and <strong>'Lahore'</strong> are strings because they contain text.</p>
+
+<h3>4. Boolean (bool)</h3>
+
+<p>A boolean stores only two values:</p>
+
+<ul>
+  <li><strong>True</strong></li>
+  <li><strong>False</strong></li>
+</ul>
+
+<h4>Example</h4>
+
+<pre><code>
+is_student = True
+is_logged_in = False
+</code></pre>
+
+<h4>Explanation</h4>
+
+<ul>
+  <li><strong>True</strong> means <strong>Yes</strong> or <strong>Correct</strong>.</li>
+  <li><strong>False</strong> means <strong>No</strong> or <strong>Incorrect</strong>.</li>
+</ul>
+
+<h3>Real-Life Example</h3>
+
+<p>Imagine a student registration form.</p>
+
+<pre><code>
+name = "Ali"
+age = 20
+height = 5.8
+is_student = True
+</code></pre>
+
+<p>Here:</p>
+
+<ul>
+  <li><strong>name</strong> → String</li>
+  <li><strong>age</strong> → Integer</li>
+  <li><strong>height</strong> → Float</li>
+  <li><strong>is_student</strong> → Boolean</li>
+</ul>
+
+<h2 id="input-operation">1. Input Operation</h2>
+
+<p>An input operation allows the user to enter data into a program.</p>
+
+<p>In Python, the <code>input()</code> function is used to take input from the user.</p>
+
+<h3>Input an Integer (int)</h3>
+
+<p>Use <code>int(input())</code> to take a whole number as input.</p>
+
+<pre><code>
+age = int(input("Enter your age: "))
+
+print(age)
+</code></pre>
+
+<p><strong>Sample Output:</strong></p>
+
+<pre><code>
+Enter your age: 20
+20
+</code></pre>
+
+<h3>Input a Float (float)</h3>
+
+<p>Use <code>float(input())</code> to take a decimal number as input.</p>
+
+<pre><code>
+height = float(input("Enter your height: "))
+
+print(height)
+</code></pre>
+
+<p><strong>Sample Output:</strong></p>
+
+<pre><code>
+Enter your height: 5.8
+5.8
+</code></pre>
+
+<h3>Input a String (str)</h3>
+
+<p>Use <code>str(input())</code> to take text as input.</p>
+
+<pre><code>
+name = str(input("Enter your name: "))
+
+print(name)
+</code></pre>
+
+<p><strong>Sample Output:</strong></p>
+
+<pre><code>
+Enter your name: Ali
+Ali
+</code></pre>
+
+<h2 id="output-operation">2. Output Operation</h2>
+
+<p>An output operation displays information to the user.</p>
+
+<p>In Python, the <code>print()</code> function is used to display output.</p>
+
+<h3>Syntax</h3>
+
+<pre><code>
+print(value)
+</code></pre>
+
+<h3>Example</h3>
+
+<pre><code>
+print("Hello, World!")
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+Hello, World!
+</code></pre>
+
+<h2 id="operators-and-expressions-in-python">Operators and Expressions in Python</h2>
+
+<h3>What are Operators?</h3>
+
+<p>Operators are special symbols that perform operations on values or variables.</p>
+
+<h3>Example</h3>
+
+<pre><code>
+a = 10
+b = 5
+
+print(a + b)
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+15
+</code></pre>
+
+<p>Here:</p>
+
+<ul>
+  <li><code>+</code> is the operator.</li>
+  <li>It adds the values of <code>a</code> and <code>b</code>.</li>
+</ul>
+
+<h3>Types of Operators</h3>
+
+<h4>1. Arithmetic Operators</h4>
+
+<p>Arithmetic operators are used to perform mathematical calculations.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Meaning</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>+</code></td>
+      <td>Addition</td>
+      <td>10 + 5 = 15</td>
+    </tr>
+    <tr>
+      <td><code>-</code></td>
+      <td>Subtraction</td>
+      <td>10 - 5 = 5</td>
+    </tr>
+    <tr>
+      <td><code>*</code></td>
+      <td>Multiplication</td>
+      <td>10 * 5 = 50</td>
+    </tr>
+    <tr>
+      <td><code>/</code></td>
+      <td>Division</td>
+      <td>10 / 5 = 2.0</td>
+    </tr>
+    <tr>
+      <td><code>%</code></td>
+      <td>Modulus (Remainder)</td>
+      <td>10 % 3 = 1</td>
+    </tr>
+    <tr>
+      <td><code>**</code></td>
+      <td>Exponent (Power)</td>
+      <td>2 ** 3 = 8</td>
+    </tr>
+    <tr>
+      <td><code>//</code></td>
+      <td>Floor Division</td>
+      <td>10 // 3 = 3</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Python Arithmetic Operators Example</h3>
+
+<pre><code>
+a = 10
+b = 5
+
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+print("Modulus:", a % 3)
+print("Exponent:", 2 ** 3)
+print("Floor Division:", 10 // 3)
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2.0
+Modulus: 1
+Exponent: 8
+Floor Division: 3
+</code></pre>
+
+<h4>2. Comparison (Relational) Operators</h4>
+
+<p>These operators compare two values and return <strong>True</strong> or <strong>False</strong>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Meaning</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>==</code></td>
+      <td>Equal to</td>
+      <td>5 == 5 → True</td>
+    </tr>
+    <tr>
+      <td><code>!=</code></td>
+      <td>Not equal to</td>
+      <td>5 != 3 → True</td>
+    </tr>
+    <tr>
+      <td><code>&gt;</code></td>
+      <td>Greater than</td>
+      <td>10 &gt; 5 → True</td>
+    </tr>
+    <tr>
+      <td><code>&lt;</code></td>
+      <td>Less than</td>
+      <td>5 &lt; 10 → True</td>
+    </tr>
+    <tr>
+      <td><code>&gt;=</code></td>
+      <td>Greater than or equal to</td>
+      <td>10 &gt;= 10 → True</td>
+    </tr>
+    <tr>
+      <td><code>&lt;=</code></td>
+      <td>Less than or equal to</td>
+      <td>5 &lt;= 10 → True</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Python Comparison (Relational) Operators Example</h3>
+
+<pre><code>
+a = 10
+b = 5
+
+print("Equal to:", a == b)
+print("Not equal to:", a != b)
+print("Greater than:", a > b)
+print("Less than:", a < b)
+print("Greater than or equal to:", a >= b)
+print("Less than or equal to:", a <= b)
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+Equal to: False
+Not equal to: True
+Greater than: True
+Less than: False
+Greater than or equal to: True
+Less than or equal to: False
+</code></pre>
+
+<h4>3. Assignment Operators</h4>
+
+<p>These operators assign values to variables.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Meaning</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>=</code></td>
+      <td>Assign</td>
+      <td>x = 10</td>
+    </tr>
+    <tr>
+      <td><code>+=</code></td>
+      <td>Add and assign</td>
+      <td>x += 5</td>
+    </tr>
+    <tr>
+      <td><code>-=</code></td>
+      <td>Subtract and assign</td>
+      <td>x -= 5</td>
+    </tr>
+    <tr>
+      <td><code>*=</code></td>
+      <td>Multiply and assign</td>
+      <td>x *= 2</td>
+    </tr>
+    <tr>
+      <td><code>/=</code></td>
+      <td>Divide and assign</td>
+      <td>x /= 2</td>
+    </tr>
+    <tr>
+      <td><code>%=</code></td>
+      <td>Modulus and assign</td>
+      <td>x %= 3</td>
+    </tr>
+    <tr>
+      <td><code>//=</code></td>
+      <td>Floor divide and assign</td>
+      <td>x //= 2</td>
+    </tr>
+    <tr>
+      <td><code>**=</code></td>
+      <td>Exponent and assign</td>
+      <td>x **= 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Python Assignment Operators Example</h3>
+
+<pre><code>
+x = 10
+x += 5
+print(x)
+
+x = 10
+x -= 5
+print(x)
+
+x = 10
+x *= 2
+print(x)
+
+x = 10
+x /= 2
+print(x)
+
+x = 10
+x %= 3
+print(x)
+
+x = 10
+x //= 3
+print(x)
+
+x = 5
+x **= 2
+print(x)
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+15
+5
+20
+5.0
+1
+3
+25
+</code></pre>
+
+<h4>4. Logical Operators</h4>
+
+<p>Logical operators combine two or more conditions into a single expression and return <strong>True</strong> or <strong>False</strong>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>and</code></td>
+      <td>True if both conditions are True.</td>
+    </tr>
+    <tr>
+      <td><code>or</code></td>
+      <td>True if at least one condition is True.</td>
+    </tr>
+    <tr>
+      <td><code>not</code></td>
+      <td>Reverses the result.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Python Logical Operators Example</h3>
+
+<pre><code>
+x = 10
+y = 5
+
+print(x > 5 and y < 10)
+print(x > 20 or y < 10)
+print(not(x > 5))
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+True
+True
+False
+</code></pre>
+
+<h2 id="operator-precedence-in-python">Operator Precedence in Python</h2>
+
+<h3>What is Operator Precedence?</h3>
+
+<p>Operator precedence is the order in which Python evaluates operators in an expression.</p>
+
+<p><strong>Simple Definition:</strong></p>
+
+<p>Operator precedence is the set of rules that determines which operation is performed first in an expression.</p>
+
+<h3>Operator Precedence Table</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Precedence</th>
+      <th>Operator</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 (Highest)</td>
+      <td><code>()</code></td>
+      <td>Parentheses</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><code>**</code></td>
+      <td>Exponent</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><code>*</code>, <code>/</code>, <code>//</code>, <code>%</code></td>
+      <td>Multiplication, Division, Floor Division, Modulus</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><code>+</code>, <code>-</code></td>
+      <td>Addition, Subtraction</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></td>
+      <td>Comparison Operators</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><code>not</code></td>
+      <td>Logical NOT</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><code>and</code></td>
+      <td>Logical AND</td>
+    </tr>
+    <tr>
+      <td>8 (Lowest)</td>
+      <td><code>or</code></td>
+      <td>Logical OR</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="expression-in-python">Expression in Python</h2>
+
+<p>An <strong>expression</strong> is a combination of values, variables, and operators that produces a result.</p>
+
+<h3>Examples of Expressions in Python</h3>
+
+<ul>
+  <li><code>2 + 2</code></li>
+  <li><code>2 + x</code></li>
+  <li><code>x + y</code></li>
+  <li><code>x * y + 2 - 2 + y</code></li>
+  <li><code>a - b</code></li>
+  <li><code>x * 5</code></li>
+  <li><code>a / b</code></li>
+  <li><code>x + y * 2</code></li>
+  <li><code>a + b - c</code></li>
+  <li><code>x ** 2</code></li>
+  <li><code>x % 2</code></li>
+  <li><code>(a + b) * c</code></li>
+  <li><code>x - y + z</code></li>
+  <li><code>a * b + c / 2</code></li>
+  <li><code>(x + y) * (a - b)</code></li>
+</ul>
+
+<h1 id="control-structure-in-python">What is a Control Structure in Python?</h1>
+
+<p>A <strong>control structure</strong> in Python is a way of <strong>controlling the order in which a program's instructions are executed</strong>.</p>
+
+<h2 id="main-types-of-control-structures">Main Types of Control Structures</h2>
+
+<p>There are mainly <strong>3 types</strong>:</p>
+
+<h3>1. Sequence</h3>
+
+<p>Code runs <strong>from top to bottom</strong>, one statement after another.</p>
+
+<pre><code>
+print("Step 1")
+print("Step 2")
+print("Step 3")
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+Step 1
+Step 2
+Step 3
+</code></pre>
+
+<p>Python executes the statements in order.</p>
+
+<p><strong>Real-life example:</strong></p>
+
+<p>This is <strong>sequence</strong>.</p>
+
+<h3>2. Selection / Decision</h3>
+
+<p>The program <strong>makes a decision</strong> based on a condition.</p>
+
+<p>Python uses:</p>
+
+<ul>
+  <li><code>if</code></li>
+  <li><code>if-else</code></li>
+  <li><code>if-elif-else</code></li>
+</ul>
+
+<h4>Example</h4>
+
+<pre><code>
+age = 20
+
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are a minor")
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+You are an adult
+</code></pre>
+
+<h3>3. Repetition / Iteration</h3>
+
+<p>Sometimes we want to <strong>repeat the same code multiple times</strong>.</p>
+
+<p>Python uses:</p>
+
+<ul>
+  <li><code>for</code> loop</li>
+  <li><code>while</code> loop</li>
+</ul>
+
+<h4>Example using <code>for</code> loop</h4>
+
+<pre><code>
+for i in range(5):
+    print("Hello")
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>
+Hello
+Hello
+Hello
+Hello
+Hello
+</code></pre>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What is Artificial Intelligence (AI)?</div>
+  <div class="mcq-options">
+    a. A technology that enables machines to perform tasks requiring human intelligence<br>
+    b. A method of repairing computer hardware<br>
+    c. A type of computer storage<br>
+    d. A programming language
+  </div>
+  <div class="mcq-answer">Answer: a. A technology that enables machines to perform tasks requiring human intelligence</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. What does AI stand for?</div>
+  <div class="mcq-options">
+    a. Automated Internet<br>
+    b. Artificial Intelligence<br>
+    c. Advanced Information<br>
+    d. Automatic Integration
+  </div>
+  <div class="mcq-answer">Answer: b. Artificial Intelligence</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. What does ML stand for?</div>
+  <div class="mcq-options">
+    a. Machine Learning<br>
+    b. Manual Logic<br>
+    c. Modern Language<br>
+    d. Memory Location
+  </div>
+  <div class="mcq-answer">Answer: a. Machine Learning</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. What is Machine Learning (ML)?</div>
+  <div class="mcq-options">
+    a. A method of manually entering all instructions for every situation<br>
+    b. A branch of AI that allows computers to learn from data<br>
+    c. A technique for manufacturing computer parts<br>
+    d. A method of connecting printers
+  </div>
+  <div class="mcq-answer">Answer: b. A branch of AI that allows computers to learn from data</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. What is the relationship between AI and ML?</div>
+  <div class="mcq-options">
+    a. AI is a branch of ML<br>
+    b. Both are exactly the same<br>
+    c. ML is a branch of AI<br>
+    d. Neither is related to computers
+  </div>
+  <div class="mcq-answer">Answer: c. ML is a branch of AI</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. Which of the following is an example of AI?</div>
+  <div class="mcq-options">
+    a. A basic wooden table<br>
+    b. A voice assistant that understands spoken commands<br>
+    c. A simple notebook<br>
+    d. A manual pencil sharpener
+  </div>
+  <div class="mcq-answer">Answer: b. A voice assistant that understands spoken commands</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. Which of the following is a smart voice assistant?</div>
+  <div class="mcq-options">
+    a. Microsoft Paint<br>
+    b. Notepad<br>
+    c. Siri<br>
+    d. WordPad
+  </div>
+  <div class="mcq-answer">Answer: c. Siri</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. What is a common use of AI in recommendation systems?</div>
+  <div class="mcq-options">
+    a. Suggesting content based on user interests<br>
+    b. Increasing the size of a monitor<br>
+    c. Replacing computer keyboards<br>
+    d. Repairing damaged hardware
+  </div>
+  <div class="mcq-answer">Answer: a. Suggesting content based on user interests</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. Which platform uses recommendations to suggest videos?</div>
+  <div class="mcq-options">
+    a. Notepad<br>
+    b. Paint<br>
+    c. WordPad<br>
+    d. YouTube
+  </div>
+  <div class="mcq-answer">Answer: d. YouTube</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. What is the purpose of a chatbot?</div>
+  <div class="mcq-options">
+    a. To repair damaged hardware<br>
+    b. To answer questions and assist users<br>
+    c. To increase screen brightness only<br>
+    d. To store electricity
+  </div>
+  <div class="mcq-answer">Answer: b. To answer questions and assist users</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. What is bias in AI?</div>
+  <div class="mcq-options">
+    a. When an AI system produces unfair results<br>
+    b. When a computer starts normally<br>
+    c. When data is stored correctly<br>
+    d. When a printer prints a document
+  </div>
+  <div class="mcq-answer">Answer: a. When an AI system produces unfair results</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. What can cause bias in an AI system?</div>
+  <div class="mcq-options">
+    a. Using suitable and diverse training data<br>
+    b. Using incomplete or unbalanced training data<br>
+    c. Turning off a monitor<br>
+    d. Increasing keyboard speed
+  </div>
+  <div class="mcq-answer">Answer: b. Using incomplete or unbalanced training data</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. Why is data privacy important in AI?</div>
+  <div class="mcq-options">
+    a. It protects personal information from misuse<br>
+    b. It makes computers heavier<br>
+    c. It increases the size of files<br>
+    d. It removes the need for software
+  </div>
+  <div class="mcq-answer">Answer: a. It protects personal information from misuse</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. Who is responsible for designing, testing, and fixing AI systems?</div>
+  <div class="mcq-options">
+    a. Printers<br>
+    b. Speakers<br>
+    c. Developers<br>
+    d. Monitors
+  </div>
+  <div class="mcq-answer">Answer: c. Developers</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. What is supervised learning?</div>
+  <div class="mcq-options">
+    a. Learning from unlabeled data only<br>
+    b. Learning without using data<br>
+    c. Learning only from computer hardware<br>
+    d. Learning from labeled data
+  </div>
+  <div class="mcq-answer">Answer: d. Learning from labeled data</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">16. What is labeled data?</div>
+  <div class="mcq-options">
+    a. Data that cannot be stored<br>
+    b. Data with known answers or categories<br>
+    c. Data used only for printing<br>
+    d. Data without any information
+  </div>
+  <div class="mcq-answer">Answer: b. Data with known answers or categories</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">17. What is unsupervised learning?</div>
+  <div class="mcq-options">
+    a. Learning from unlabeled data to discover patterns<br>
+    b. Learning from labeled data only<br>
+    c. Learning without examining data<br>
+    d. Learning by following fixed answers for every example
+  </div>
+  <div class="mcq-answer">Answer: a. Learning from unlabeled data to discover patterns</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">18. Which learning method uses labeled data?</div>
+  <div class="mcq-options">
+    a. Unsupervised learning<br>
+    b. Manual data entry<br>
+    c. Supervised learning<br>
+    d. Random grouping only
+  </div>
+  <div class="mcq-answer">Answer: c. Supervised learning</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">19. Which learning method discovers patterns in unlabeled data?</div>
+  <div class="mcq-options">
+    a. Supervised learning<br>
+    b. Manual programming only<br>
+    c. Data printing<br>
+    d. Unsupervised learning
+  </div>
+  <div class="mcq-answer">Answer: d. Unsupervised learning</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">20. Which of the following is a supervised learning algorithm?</div>
+  <div class="mcq-options">
+    a. Linear Regression<br>
+    b. K-Means Clustering<br>
+    c. Manual file copying<br>
+    d. Random data sorting without labels
+  </div>
+  <div class="mcq-answer">Answer: a. Linear Regression</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">21. What is the main purpose of Linear Regression?</div>
+  <div class="mcq-options">
+    a. To create computer hardware<br>
+    b. To predict numerical values<br>
+    c. To delete data automatically<br>
+    d. To design web pages only
+  </div>
+  <div class="mcq-answer">Answer: b. To predict numerical values</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">22. Which example is suitable for Linear Regression?</div>
+  <div class="mcq-options">
+    a. Grouping customers without predefined categories<br>
+    b. Turning a computer on<br>
+    c. Predicting exam scores from study hours<br>
+    d. Formatting a document
+  </div>
+  <div class="mcq-answer">Answer: c. Predicting exam scores from study hours</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">23. What is a Decision Tree?</div>
+  <div class="mcq-options">
+    a. A physical tree connected to a computer<br>
+    b. A type of computer cable<br>
+    c. A tool used only for drawing pictures<br>
+    d. An algorithm that makes predictions using questions and conditions
+  </div>
+  <div class="mcq-answer">Answer: d. An algorithm that makes predictions using questions and conditions</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">24. Which structure does a Decision Tree use?</div>
+  <div class="mcq-options">
+    a. Tree-like structure<br>
+    b. Keyboard layout<br>
+    c. Network cable structure<br>
+    d. Circular storage structure only
+  </div>
+  <div class="mcq-answer">Answer: a. Tree-like structure</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">25. Which of the following is an unsupervised learning algorithm?</div>
+  <div class="mcq-options">
+    a. Linear Regression<br>
+    b. Decision Trees<br>
+    c. K-Means Clustering<br>
+    d. Logistic Regression
+  </div>
+  <div class="mcq-answer">Answer: c. K-Means Clustering</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">26. What is the main purpose of K-Means Clustering?</div>
+  <div class="mcq-options">
+    a. To predict numerical values using a straight line<br>
+    b. To group similar data points into clusters<br>
+    c. To repair computer hardware<br>
+    d. To create passwords automatically
+  </div>
+  <div class="mcq-answer">Answer: b. To group similar data points into clusters</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">27. Which is an example of K-Means Clustering?</div>
+  <div class="mcq-options">
+    a. Predicting exam scores from study hours<br>
+    b. Calculating a percentage manually<br>
+    c. Printing a report<br>
+    d. Grouping customers according to shopping habits
+  </div>
+  <div class="mcq-answer">Answer: d. Grouping customers according to shopping habits</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">28. What is model performance evaluation?</div>
+  <div class="mcq-options">
+    a. Checking how accurately a model makes predictions<br>
+    b. Checking the physical size of a computer<br>
+    c. Measuring the length of a keyboard<br>
+    d. Installing an operating system
+  </div>
+  <div class="mcq-answer">Answer: a. Checking how accurately a model makes predictions</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">29. What is a confusion matrix?</div>
+  <div class="mcq-options">
+    a. A device used to store files<br>
+    b. A programming language<br>
+    c. A table that compares predicted results with actual results<br>
+    d. A tool used to connect computers
+  </div>
+  <div class="mcq-answer">Answer: c. A table that compares predicted results with actual results</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">30. What is the purpose of a confusion matrix?</div>
+  <div class="mcq-options">
+    a. To increase computer memory<br>
+    b. To check model performance and identify correct and incorrect predictions<br>
+    c. To create database tables only<br>
+    d. To improve internet speed directly
+  </div>
+  <div class="mcq-answer">Answer: b. To check model performance and identify correct and incorrect predictions</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">31. What does TP stand for in a confusion matrix?</div>
+  <div class="mcq-options">
+    a. Total Prediction<br>
+    b. Tested Program<br>
+    c. Training Process<br>
+    d. True Positive
+  </div>
+  <div class="mcq-answer">Answer: d. True Positive</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">32. What does TN stand for in a confusion matrix?</div>
+  <div class="mcq-options">
+    a. True Negative<br>
+    b. Total Number<br>
+    c. Training Network<br>
+    d. Tested Number
+  </div>
+  <div class="mcq-answer">Answer: a. True Negative</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">33. What does FP stand for in a confusion matrix?</div>
+  <div class="mcq-options">
+    a. Final Prediction<br>
+    b. False Positive<br>
+    c. First Program<br>
+    d. Fixed Process
+  </div>
+  <div class="mcq-answer">Answer: b. False Positive</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">34. What does FN stand for in a confusion matrix?</div>
+  <div class="mcq-options">
+    a. Final Number<br>
+    b. Fixed Network<br>
+    c. False Negative<br>
+    d. First Name
+  </div>
+  <div class="mcq-answer">Answer: c. False Negative</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">35. When does a True Positive (TP) occur?</div>
+  <div class="mcq-options">
+    a. The model predicts positive, and the actual result is positive<br>
+    b. The model predicts negative, and the actual result is positive<br>
+    c. The model predicts positive, and the actual result is negative<br>
+    d. The model predicts negative, and the actual result is negative
+  </div>
+  <div class="mcq-answer">Answer: a. The model predicts positive, and the actual result is positive</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">36. When does a False Positive (FP) occur?</div>
+  <div class="mcq-options">
+    a. The model predicts positive, and the actual result is positive<br>
+    b. The model predicts negative, and the actual result is negative<br>
+    c. The model predicts negative, and the actual result is positive<br>
+    d. The model predicts positive, but the actual result is negative
+  </div>
+  <div class="mcq-answer">Answer: d. The model predicts positive, but the actual result is negative</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">37. What does accuracy measure in machine learning?</div>
+  <div class="mcq-options">
+    a. The number of computers in a lab<br>
+    b. The percentage of all predictions that are correct<br>
+    c. The amount of data stored on a disk<br>
+    d. The speed of a keyboard
+  </div>
+  <div class="mcq-answer">Answer: b. The percentage of all predictions that are correct</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">38. Which formula is used to calculate accuracy?</div>
+  <div class="mcq-options">
+    a. (FP + FN) / (TP + TN) × 100<br>
+    b. (TP + FP) / (TN + FN) × 100<br>
+    c. (TP + TN) / (TP + TN + FP + FN) × 100<br>
+    d. (TP + TN + FP + FN) × 100
+  </div>
+  <div class="mcq-answer">Answer: c. (TP + TN) / (TP + TN + FP + FN) × 100</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">39. A model makes 85 correct predictions out of 100. What is its accuracy?</div>
+  <div class="mcq-options">
+    a. 85%<br>
+    b. 65%<br>
+    c. 75%<br>
+    d. 95%
+  </div>
+  <div class="mcq-answer">Answer: a. 85%</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">40. In a confusion matrix, what does a False Negative (FN) mean?</div>
+  <div class="mcq-options">
+    a. The model predicts positive, and the actual result is positive<br>
+    b. The model predicts negative, and the actual result is negative<br>
+    c. The model predicts positive, and the actual result is negative<br>
+    d. The model predicts negative, but the actual result is positive
+  </div>
+  <div class="mcq-answer">Answer: d. The model predicts negative, but the actual result is positive</div>
+</div>
+
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (AI and Machine Learning)</h2>
+
+  <h2 id="mcqs">Class 10 Computer Science Chapter 6 MCQs: Introduction to AI and Machine Learning</h2>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">1. What is Artificial Intelligence (AI)?</div>
+    <div class="mcq-options">
+      <button>a. Technology that enables machines to perform tasks requiring human intelligence</button>
+      <button>b. The process of creating computer hardware</button>
+      <button>c. A method of designing websites only</button>
+      <button>d. A language used only for writing programs</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">2. What is Machine Learning (ML)?</div>
+    <div class="mcq-options">
+      <button>a. A method of repairing computers</button>
+      <button>b. A branch of AI that learns patterns from data</button>
+      <button>c. A process of designing computer networks</button>
+      <button>d. A type of computer hardware</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">3. Which of the following is an example of AI?</div>
+    <div class="mcq-options">
+      <button>a. A simple wooden table</button>
+      <button>b. A manual pencil sharpener</button>
+      <button>c. A voice assistant that understands commands</button>
+      <button>d. A regular notebook</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">4. Which of the following is a smart assistant?</div>
+    <div class="mcq-options">
+      <button>a. Microsoft Paint</button>
+      <button>b. Notepad</button>
+      <button>c. Calculator without AI features</button>
+      <button>d. Google Assistant</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">5. What is a common use of smart assistants?</div>
+    <div class="mcq-options">
+      <button>a. Understanding voice commands and answering questions</button>
+      <button>b. Printing paper without a printer</button>
+      <button>c. Replacing all computer hardware</button>
+      <button>d. Increasing the physical size of a computer</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">6. Which technology helps YouTube recommend videos?</div>
+    <div class="mcq-options">
+      <button>a. Word processing</button>
+      <button>b. AI and Machine Learning</button>
+      <button>c. Computer hardware repair</button>
+      <button>d. Manual data entry only</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">7. What is the purpose of a recommendation system?</div>
+    <div class="mcq-options">
+      <button>a. To delete all user information</button>
+      <button>b. To repair damaged computer parts</button>
+      <button>c. To suggest items based on user interests and activities</button>
+      <button>d. To create computer hardware</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">8. Which platform uses recommendation systems?</div>
+    <div class="mcq-options">
+      <button>a. A basic wall clock</button>
+      <button>b. A paper notebook</button>
+      <button>c. A manual typewriter</button>
+      <button>d. Netflix</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">9. What is a chatbot?</div>
+    <div class="mcq-options">
+      <button>a. A computer program that communicates with users</button>
+      <button>b. A device used only to print documents</button>
+      <button>c. A computer storage cable</button>
+      <button>d. A type of computer monitor</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">10. What is image recognition?</div>
+    <div class="mcq-options">
+      <button>a. Creating a keyboard layout</button>
+      <button>b. Identifying objects, faces, or patterns in images</button>
+      <button>c. Printing text on paper</button>
+      <button>d. Connecting a computer to electricity</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">11. What does AI bias mean?</div>
+    <div class="mcq-options">
+      <button>a. The computer has no storage space</button>
+      <button>b. The computer cannot connect to the internet</button>
+      <button>c. An AI system produces unfair results for some people or groups</button>
+      <button>d. A computer has a broken keyboard</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">12. What can cause bias in an AI system?</div>
+    <div class="mcq-options">
+      <button>a. Using a clean computer screen</button>
+      <button>b. Installing a new keyboard</button>
+      <button>c. Using a larger monitor</button>
+      <button>d. Training the system on incomplete or unbalanced data</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">13. What does data privacy mean?</div>
+    <div class="mcq-options">
+      <button>a. Protecting personal information from unauthorized access or use</button>
+      <button>b. Sharing everyone's personal information publicly</button>
+      <button>c. Deleting every computer program</button>
+      <button>d. Making all files available to everyone</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. Which practice helps protect personal data?</div>
+    <div class="mcq-options">
+      <button>a. Sharing passwords with strangers</button>
+      <button>b. Using encryption to protect sensitive information</button>
+      <button>c. Publishing private information online</button>
+      <button>d. Collecting unnecessary personal information</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">15. Who should help ensure an AI system is designed responsibly?</div>
+    <div class="mcq-options">
+      <button>a. Only the computer monitor manufacturer</button>
+      <button>b. Only the internet service provider</button>
+      <button>c. Developers and the people responsible for the system</button>
+      <button>d. No one</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">16. What is Machine Learning mainly used for?</div>
+    <div class="mcq-options">
+      <button>a. Increasing the weight of a computer</button>
+      <button>b. Painting computer cases</button>
+      <button>c. Replacing electricity</button>
+      <button>d. Learning patterns from data to make predictions or decisions</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">17. What is supervised learning?</div>
+    <div class="mcq-options">
+      <button>a. Learning from labeled data with known answers</button>
+      <button>b. Learning without using any data</button>
+      <button>c. Grouping data without predefined labels</button>
+      <button>d. A method of repairing hardware</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">18. What is unsupervised learning?</div>
+    <div class="mcq-options">
+      <button>a. Learning only from labeled examples</button>
+      <button>b. Finding patterns in data without predefined labels</button>
+      <button>c. Learning only from a teacher's spoken instructions</button>
+      <button>d. A method of creating websites</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">19. What is labeled data?</div>
+    <div class="mcq-options">
+      <button>a. Data that has been permanently deleted</button>
+      <button>b. Data that contains no information</button>
+      <button>c. Data that includes known answers or categories</button>
+      <button>d. Data stored only on paper</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">20. Which type of learning uses unlabeled data?</div>
+    <div class="mcq-options">
+      <button>a. Supervised learning</button>
+      <button>b. Manual learning only</button>
+      <button>c. Traditional data entry</button>
+      <button>d. Unsupervised learning</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">21. Which is an example of supervised learning?</div>
+    <div class="mcq-options">
+      <button>a. Predicting student marks using study hours and known scores</button>
+      <button>b. Grouping customers without predefined categories</button>
+      <button>c. Arranging files randomly</button>
+      <button>d. Turning off a computer</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">22. Which is an example of unsupervised learning?</div>
+    <div class="mcq-options">
+      <button>a. Predicting a house price using known prices</button>
+      <button>b. Grouping customers according to similar shopping habits</button>
+      <button>c. Predicting exam marks from labeled examples</button>
+      <button>d. Checking a password manually</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">23. What is a machine learning algorithm?</div>
+    <div class="mcq-options">
+      <button>a. A physical part of a computer</button>
+      <button>b. A type of computer screen</button>
+      <button>c. A set of steps or rules used to learn patterns from data</button>
+      <button>d. A device used to print photographs</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">24. What does Linear Regression predict?</div>
+    <div class="mcq-options">
+      <button>a. Only image colors</button>
+      <button>b. Computer hardware failures only</button>
+      <button>c. Categories without using data</button>
+      <button>d. Numerical values based on relationships between variables</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">25. Which is an example of Linear Regression?</div>
+    <div class="mcq-options">
+      <button>a. Predicting student scores based on study hours</button>
+      <button>b. Grouping customers into clusters</button>
+      <button>c. Identifying a face in a photograph only</button>
+      <button>d. Sorting computer cables by color</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">26. What is a Decision Tree?</div>
+    <div class="mcq-options">
+      <button>a. A device used to store files</button>
+      <button>b. A model that makes decisions using a tree-like structure of questions or conditions</button>
+      <button>c. A method of encrypting every file</button>
+      <button>d. A tool used only for drawing pictures</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">27. Which problem can a Decision Tree help solve?</div>
+    <div class="mcq-options">
+      <button>a. Increasing the screen size</button>
+      <button>b. Repairing a broken mouse physically</button>
+      <button>c. Predicting whether a student will pass or fail</button>
+      <button>d. Charging a laptop battery</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">28. What is clustering?</div>
+    <div class="mcq-options">
+      <button>a. Deleting data from a computer</button>
+      <button>b. Converting text into printed pages</button>
+      <button>c. Giving every data point a different random value</button>
+      <button>d. Grouping similar data points together</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">29. K-Means is an example of which type of algorithm?</div>
+    <div class="mcq-options">
+      <button>a. Unsupervised learning algorithm</button>
+      <button>b. Supervised learning algorithm only</button>
+      <button>c. Word processing algorithm</button>
+      <button>d. Computer hardware algorithm</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">30. What is the purpose of K-Means Clustering?</div>
+    <div class="mcq-options">
+      <button>a. To predict values using a straight line only</button>
+      <button>b. To divide data into groups based on similarity</button>
+      <button>c. To encrypt passwords</button>
+      <button>d. To design computer networks</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">31. What is model performance evaluation?</div>
+    <div class="mcq-options">
+      <button>a. The process of changing a computer's appearance</button>
+      <button>b. The process of collecting computer parts</button>
+      <button>c. The process of checking how accurately a model makes predictions</button>
+      <button>d. The process of installing an operating system</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">32. What is a confusion matrix?</div>
+    <div class="mcq-options">
+      <button>a. A table of computer prices</button>
+      <button>b. A list of programming languages</button>
+      <button>c. A diagram of computer hardware</button>
+      <button>d. A table comparing actual results with predicted results</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">33. What does True Positive (TP) mean?</div>
+    <div class="mcq-options">
+      <button>a. The model correctly predicts a positive result</button>
+      <button>b. The model incorrectly predicts a positive result</button>
+      <button>c. The model correctly predicts a negative result</button>
+      <button>d. The model incorrectly predicts a negative result</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">34. What does True Negative (TN) mean?</div>
+    <div class="mcq-options">
+      <button>a. The model incorrectly predicts a positive result</button>
+      <button>b. The model correctly predicts a negative result</button>
+      <button>c. The model correctly predicts a positive result</button>
+      <button>d. The model misses a positive result</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">35. What does False Positive (FP) mean?</div>
+    <div class="mcq-options">
+      <button>a. The model correctly predicts a positive result</button>
+      <button>b. The model correctly predicts a negative result</button>
+      <button>c. The model predicts positive when the actual result is negative</button>
+      <button>d. The model predicts negative when the actual result is positive</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">36. What does False Negative (FN) mean?</div>
+    <div class="mcq-options">
+      <button>a. The model correctly predicts a negative result</button>
+      <button>b. The model correctly predicts a positive result</button>
+      <button>c. The model predicts positive when the actual result is negative</button>
+      <button>d. The model predicts negative when the actual result is positive</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">37. Which formula is used to calculate accuracy?</div>
+    <div class="mcq-options">
+      <button>a. (TP + TN) / (TP + TN + FP + FN) × 100</button>
+      <button>b. (FP + FN) / (TP + TN) × 100</button>
+      <button>c. (TP + FP) / (TN + FN) × 100</button>
+      <button>d. (TP + TN + FP + FN) × 100</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">38. A model makes 85 correct predictions out of 100. What is its accuracy?</div>
+    <div class="mcq-options">
+      <button>a. 50%</button>
+      <button>b. 85%</button>
+      <button>c. 90%</button>
+      <button>d. 100%</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">39. If TP = 40, TN = 45, FP = 10, and FN = 5, how many predictions are correct?</div>
+    <div class="mcq-options">
+      <button>a. 10</button>
+      <button>b. 45</button>
+      <button>c. 85</button>
+      <button>d. 100</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">40. Using TP = 40, TN = 45, FP = 10, and FN = 5, what is the model's accuracy?</div>
+    <div class="mcq-options">
+      <button>a. 40%</button>
+      <button>b. 45%</button>
+      <button>c. 80%</button>
+      <button>d. 85%</button>
+    </div>
+  </div>
+</section>
+
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+      
+<h2 id="faqs">FAQs</h2>
+
+<section class="faq-section">
+
+<h2>Class 10 Computer Science Chapter 6: AI and Machine Learning FAQs</h2>
+
+<div class="faq-item">
+  <button class="faq-question">1. What is Artificial Intelligence (AI)?</button>
+  <div class="faq-answer">
+    <p>Artificial Intelligence (AI) is a technology that enables computers and machines to perform tasks that normally require human intelligence, such as understanding language, recognizing images, and solving problems.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">2. What is Machine Learning (ML)?</button>
+  <div class="faq-answer">
+    <p>Machine Learning (ML) is a branch of AI that allows computers to learn from data, identify patterns, and make predictions or decisions.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">3. What is the difference between AI and ML?</button>
+  <div class="faq-answer">
+    <p>AI enables machines to perform tasks that require human intelligence, while ML is a branch of AI that helps machines learn from data and improve their predictions.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">4. What are some common applications of AI?</button>
+  <div class="faq-answer">
+    <p>Common applications of AI include smart assistants, chatbots, image recognition, recommendation systems, and voice recognition.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">5. What are smart assistants?</button>
+  <div class="faq-answer">
+    <p>Smart assistants are AI-powered tools that understand voice commands and help users perform tasks. Examples include Siri, Google Assistant, and Alexa.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">6. What is a recommendation system?</button>
+  <div class="faq-answer">
+    <p>A recommendation system suggests videos, products, music, or other content based on users' interests and activities. Examples include YouTube, Netflix, and Daraz.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">7. What is AI bias?</button>
+  <div class="faq-answer">
+    <p>AI bias occurs when an AI system produces unfair results for certain people or groups, often because of incomplete or unbalanced training data.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">8. Why is data privacy important in AI?</button>
+  <div class="faq-answer">
+    <p>Data privacy is important because AI systems may use personal information. Protecting this information helps prevent unauthorized access and misuse.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">9. What is supervised learning?</button>
+  <div class="faq-answer">
+    <p>Supervised learning is a type of machine learning that uses labeled data, where the correct answers are already known. For example, predicting student marks using study hours and previous scores.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">10. What is unsupervised learning?</button>
+  <div class="faq-answer">
+    <p>Unsupervised learning is a type of machine learning that identifies patterns and groups similar data without predefined labels. For example, grouping customers by their shopping habits.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">11. What is Linear Regression?</button>
+  <div class="faq-answer">
+    <p>Linear Regression is a machine learning algorithm used to predict numerical values based on the relationship between variables. For example, predicting student marks from study hours.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">12. What is a Decision Tree?</button>
+  <div class="faq-answer">
+    <p>A Decision Tree is a machine learning model that makes predictions by following a tree-like structure of questions and conditions. For example, it can predict whether a student will pass or fail.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">13. What is K-Means Clustering?</button>
+  <div class="faq-answer">
+    <p>K-Means Clustering is an unsupervised learning algorithm that divides data into groups based on similarities between data points.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">14. What is a confusion matrix?</button>
+  <div class="faq-answer">
+    <p>A confusion matrix is a table that compares actual results with predicted results. It helps evaluate a machine learning model by showing correct and incorrect predictions using TP, TN, FP, and FN.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">15. What is model accuracy, and how is it calculated?</button>
+  <div class="faq-answer">
+    <p>Model accuracy measures the percentage of predictions a model gets correct. It is calculated using the formula: Accuracy = (TP + TN) / (TP + TN + FP + FN) × 100, where TP is True Positive, TN is True Negative, FP is False Positive, and FN is False Negative.</p>
+  </div>
+</div>
+
+</section>
+
+      
+<h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/10-class/chapter-6/class-10-computer-chapter-6-introduction-to-ai-and-ml.pdf">
+  Download PDF
+</a>
+</div>
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+<div class="social-icons">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=100009953895352" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/@ComputerWithSalman" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-youtube"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/salmannicksallu" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/923089051710" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</div>
+
+
+</div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+    <h3>Categories</h3>
+
+    <ul>
+
+        <li><a href="technology.html">Technology</a></li>
+
+        <li><a href="computer-science.html">Computer Science</a></li>
+
+        <li><a href="how-to-guides.html">How-To Guides</a></li>
+
+        <li><a href="education.html">Education</a></li>
+
+        <li><a href="ai-tools.html">AI Tools</a></li>
+
+        <li><a href="roadmaps.html">Career Roadmaps</a></li>
+
+        <li><a href="8-computer-science.html">Class 8 Computer</a></li>
+
+        <li><a href="9-computer-science.html">Class 9 Computer</a></li>
+
+        <li><a href="10-computer-science.html">Class 10 Computer</a></li>
+
+        <li><a href="11-computer-science.html">Class 11 Computer</a></li>
+
+        <li><a href="12-computer-science.html">Class 12 Computer</a></li>
+
+    </ul>
+
+</div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                question.classList.toggle("active");
+
+                const answer = question.nextElementSibling;
+
+                if (answer.style.maxHeight) {
+
+                    answer.style.maxHeight = null;
+
+                } else {
+
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+    
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
