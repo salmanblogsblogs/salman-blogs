@@ -710,6 +710,608 @@ A Mobile Operating System is designed for smartphones and tablets. It is optimiz
   <li>Smartwatches ⌚</li>
 </ul>
 
+<h2 id="short-questions">Short Questions</h2>
+
+<h3>1. Why is the Operating System referred to as the "Central Controller"?</h3>
+
+<p>The operating system is called the central controller because it manages and controls all computer resources, including the CPU, memory, storage, and input/output devices. It decides which tasks should run and how resources should be used.</p>
+
+<h3>2. How does the OS act as a translator between the user and hardware?</h3>
+
+<p>The operating system acts as a bridge between the user and hardware. It receives user actions, such as clicking an icon or typing on a keyboard, and sends the required instructions to the hardware through system software and device drivers.</p>
+
+<h3>3. Define one way to create a new user account in Windows.</h3>
+
+<p>A new user account can be created in Windows through Settings.</p>
+
+<p><strong>Steps:</strong></p>
+
+<ol>
+    <li>Open Settings.</li>
+    <li>Go to Accounts.</li>
+    <li>Select Other Users.</li>
+    <li>Click Add Account.</li>
+    <li>Enter the required account details.</li>
+</ol>
+
+<h3>4. How is Kernel different from Shell?</h3>
+
+<ul>
+    <li><strong>Kernel:</strong> The core part of an operating system that manages hardware, memory, CPU, and processes.</li>
+    <li><strong>Shell:</strong> The interface between the user and the kernel. It receives user commands and sends them to the kernel.</li>
+</ul>
+
+<h3>5. Give one example of a system library and its purpose.</h3>
+
+<p>A file-handling library is an example of a system library. It provides reusable functions that applications use to request file operations, such as opening, reading, and saving files.</p>
+
+<h3>6. Explain one advantage and one disadvantage of FCFS scheduling.</h3>
+
+<ul>
+    <li><strong>Advantage:</strong> It is simple and easy to understand because processes are executed in their arrival order.</li>
+    <li><strong>Disadvantage:</strong> Short processes may wait too long if a long process arrives before them. This is called the <strong>Convoy Effect</strong>.</li>
+</ul>
+
+<h3>7. Why is Virtual Memory slower than RAM?</h3>
+
+<p>Virtual memory is slower because it uses secondary storage, such as an HDD or SSD, instead of fast RAM. When the CPU needs data that is not available in RAM, the operating system transfers that data from secondary storage to RAM. This transfer takes more time, so the CPU has to wait longer to process the data.</p>
+
+<h3>8. Define a System Call.</h3>
+
+<p>A system call is a request made by a program to the operating system to perform a task that the program cannot perform directly.</p>
+
+<p><strong>Example:</strong> Saving a file using a system call.</p>
+
+<h3>9. What is the role of a File System?</h3>
+
+<p>A file system helps the operating system store, organize, locate, and manage files on storage devices such as HDDs, SSDs, and USB drives.</p>
+
+<h3>10. Define Multitasking in a Computer System.</h3>
+
+<p>Multitasking means running or using more than one program at the same time. The operating system manages CPU time to keep different tasks running smoothly.</p>
+
+<p><strong>Example:</strong> Listening to music while browsing the internet.</p>
+
+
+<h2 id="long-questions">Long Questions</h2>
+
+<h3>1. Describe the architecture of an operating system, explaining Kernel, Shell, and Layered Design with examples.</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>OS architecture means how different parts of an operating system are organized and work together. Each part performs a specific task to make the computer work properly.</p>
+
+<h4>1. Kernel</h4>
+
+<p>The kernel is the core part of the operating system. It directly manages computer hardware and resources.</p>
+
+<p><strong>Its responsibilities include:</strong></p>
+
+<ul>
+    <li>Managing CPU and memory.</li>
+    <li>Controlling hardware devices.</li>
+    <li>Managing running processes.</li>
+    <li>Allocating system resources.</li>
+</ul>
+
+<p><strong>Example:</strong> When you open a program, the kernel helps load it into memory and provides CPU time for execution.</p>
+
+<h4>2. Shell</h4>
+
+<p>The shell is the interface between the user and the kernel. It receives user commands and sends them to the kernel for processing.</p>
+
+<p>There are two main types of shells:</p>
+
+<p><strong>Command Line Shell (CLI):</strong> Allows users to interact with the operating system by typing commands.</p>
+
+<p><strong>Examples:</strong> Bash and Windows Command Prompt.</p>
+
+<p><strong>Graphical Shell (GUI):</strong> Allows users to interact with the operating system through icons, windows, and menus.</p>
+
+<p><strong>Examples:</strong> Windows Desktop Environment and macOS Finder.</p>
+
+<h4>3. Layered Design</h4>
+
+<p>In layered design, the operating system is divided into different layers. Each layer performs a specific task and depends on the layer below it.</p>
+
+<p><strong>The three main layers are:</strong></p>
+
+<p><strong>Lower Layer:</strong></p>
+<ul>
+    <li>Closest to the hardware.</li>
+    <li>Includes the kernel and device drivers.</li>
+    <li>Manages CPU, memory, and hardware devices.</li>
+</ul>
+
+<p><strong>Middle Layer:</strong></p>
+<ul>
+    <li>Works as a bridge between hardware and applications.</li>
+    <li>Handles memory management, process management, and system calls.</li>
+</ul>
+
+<p><strong>Upper Layer:</strong></p>
+<ul>
+    <li>The user-facing layer.</li>
+    <li>Includes the graphical interface, command-line interface, and user applications.</li>
+    <li>Allows users to interact with the computer.</li>
+</ul>
+
+<p><strong>Example: Restaurant System</strong></p>
+
+<ul>
+    <li><strong>Lower Layer:</strong> Kitchen staff prepare food.</li>
+    <li><strong>Middle Layer:</strong> Manager manages orders and food delivery.</li>
+    <li><strong>Upper Layer:</strong> Customers place orders and receive food.</li>
+</ul>
+
+<h4>Benefits of Layered Design</h4>
+
+<ul>
+    <li>Easier to manage.</li>
+    <li>Easier to repair.</li>
+    <li>Easier to upgrade.</li>
+    <li>Changes in one layer do not always require changes to the entire operating system.</li>
+</ul>
+
+
+<h3>2. Explain the Process Lifecycle in Detail with Examples.</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>A process is a program that is currently running on a computer. The operating system manages processes and provides them with resources such as CPU time and memory.</p>
+
+<p>The process lifecycle has three main stages:</p>
+
+<h4>1. Creation</h4>
+
+<p>A process is created when a user opens a program. The operating system loads the program into memory and provides the required resources.</p>
+
+<p><strong>Example:</strong> When you click the Google Chrome icon, the operating system starts a new Chrome process.</p>
+
+<h4>2. Execution</h4>
+
+<p>In this stage, the process runs and performs its assigned tasks using CPU time and memory.</p>
+
+<p><strong>Example:</strong> When Chrome loads websites, plays videos, and responds to user clicks, it is in the execution stage.</p>
+
+<h4>3. Termination</h4>
+
+<p>A process terminates when the program is closed or its execution is completed. The operating system releases the resources used by that process.</p>
+
+<p><strong>Example:</strong> When you close Google Chrome, its process ends and the operating system releases its allocated resources.</p>
+
+<h4>Complete Example: Google Chrome</h4>
+
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Stage</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Creation</td>
+            <td>Click the Chrome icon to open it.</td>
+        </tr>
+        <tr>
+            <td>Execution</td>
+            <td>Browse websites and play videos.</td>
+        </tr>
+        <tr>
+            <td>Termination</td>
+            <td>Close Chrome and release its resources.</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h3>3. Differentiate Between RAM and Virtual Memory, and Explain How Multithreading Improves Performance.</h3>
+
+<p><strong>Answer:</strong></p>
+
+<h4>RAM (Random Access Memory)</h4>
+
+<p>RAM is the main working memory of a computer. It stores data and instructions that the CPU needs while running programs.</p>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+    <li>Very fast memory.</li>
+    <li>Temporary storage.</li>
+    <li>Data is lost when the power is turned off.</li>
+    <li>Helps programs run quickly.</li>
+</ul>
+
+<p><strong>Example:</strong> When you open an MS Word document, it is loaded into RAM so you can work on it quickly.</p>
+
+<h4>Virtual Memory</h4>
+
+<p>Virtual memory is a memory management technique in which the operating system uses secondary storage (HDD or SSD) to provide additional memory when RAM is insufficient.</p>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+    <li>Uses HDD or SSD as additional memory.</li>
+    <li>Slower than RAM.</li>
+    <li>Helps run multiple applications when RAM is full.</li>
+    <li>Allows less-used data to be moved from RAM to storage.</li>
+</ul>
+
+<p><strong>Example:</strong> When you open many applications, the operating system may move less-used data from RAM to storage to free up RAM for active applications.</p>
+
+<h4>Difference Between RAM and Virtual Memory</h4>
+
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>RAM</th>
+            <th>Virtual Memory</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>It is the main working memory.</td>
+            <td>It uses storage as additional memory.</td>
+        </tr>
+        <tr>
+            <td>Very fast.</td>
+            <td>Slower than RAM.</td>
+        </tr>
+        <tr>
+            <td>Uses physical memory modules.</td>
+            <td>Uses HDD or SSD space.</td>
+        </tr>
+        <tr>
+            <td>Temporary memory.</td>
+            <td>Helps manage memory when RAM is insufficient.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Multithreading and Its Benefits</h4>
+
+<p>Multithreading means one program uses multiple threads to perform different tasks. A thread is a small unit of execution within a process. Multiple threads of the same process share its memory and resources.</p>
+
+<h4>Benefits of Multithreading</h4>
+
+<p><strong>1. Enhanced Performance:</strong> Multiple threads can perform different tasks efficiently, reducing the time needed to complete work.</p>
+
+<p><strong>Example:</strong> Video editing software processes audio and video at the same time.</p>
+
+<p><strong>2. Improved Responsiveness:</strong> It allows background tasks to run without stopping the main program.</p>
+
+<p><strong>Example:</strong> You can browse a website while a file is downloading.</p>
+
+<p><strong>3. Support for Concurrent/Parallel Operations:</strong> Multiple threads allow different tasks to make progress together. On multi-core processors, they can also run in parallel.</p>
+
+<p><strong>Example:</strong> A video plays while comments load and recommendations update.</p>
+
+<p><strong>4. Efficient Use of Resources:</strong> Threads share the memory and resources of their process, reducing the need to create separate processes for every task.</p>
+
+<p><strong>Example:</strong> A music application plays a song while you browse other songs.</p>
+
+
+<h3>4. Describe System Calls, Their Purpose, and Give Examples of at Least Three Types.</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>A system call is a request made by a program to the operating system to perform a task that the program cannot perform directly.</p>
+
+<h4>Purpose of System Calls</h4>
+
+<p>System calls allow applications to access operating system services, such as file handling, process creation, and input/output operations.</p>
+
+<h4>Types of System Calls</h4>
+
+<p><strong>1. open</strong></p>
+
+<p>The <code>open</code> system call is used to open a file for reading or writing.</p>
+
+<p><strong>Example:</strong> Opening a music file to play it.</p>
+
+<p><strong>2. read</strong></p>
+
+<p>The <code>read</code> system call is used to read data from a file or input device.</p>
+
+<p><strong>Example:</strong> Reading text from a document.</p>
+
+<p><strong>3. write</strong></p>
+
+<p>The <code>write</code> system call is used to write or save data into a file or output device.</p>
+
+<p><strong>Example:</strong> Saving a photo or document on a computer.</p>
+
+<p><strong>4. fork</strong></p>
+
+<p>The <code>fork</code> system call is used to create a new process by duplicating an existing process.</p>
+
+<p><strong>Example:</strong> A program creates a new process to perform another task.</p>
+
+<h4>Conclusion</h4>
+
+<p>System calls provide a way for applications to request services from the operating system safely and properly.</p>
+
+
+<h3>5. A Computer System Uses the First-Come, First-Served (FCFS) Scheduling Method to Manage Processes. Calculate the Waiting Time and Turnaround Time for Each Process.</h3>
+
+<p><strong>Answer:</strong></p>
+
+<h4>Given Data</h4>
+
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Process</th>
+            <th>Arrival Time (AT)</th>
+            <th>Burst Time (BT)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>P1</td>
+            <td>0</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>P2</td>
+            <td>1</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>P3</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Step 1: Determine Execution Order</h4>
+
+<p>In FCFS scheduling, the process that arrives first gets the CPU first.</p>
+
+<p>Therefore, the execution order is:</p>
+
+<p><strong>P1 → P2 → P3</strong></p>
+
+<h4>Step 2: Draw the Gantt Chart</h4>
+
+<p>A Gantt chart shows the order and time duration of process execution.</p>
+
+ <img src="images/10-CS-IMAGES/CHAPTER-1/gaant-chart.png" alt="gaant-chart" class="post-image" loading="lazy">
+
+<h4>Step 3: Calculate Completion Time (CT)</h4>
+
+<p>Completion time is the time when a process finishes its execution.</p>
+
+<ul>
+    <li>P1 = 0 + 4 = 4</li>
+    <li>P2 = 4 + 3 = 7</li>
+    <li>P3 = 7 + 1 = 8</li>
+</ul>
+
+<h4>Step 4: Calculate Turnaround Time (TAT)</h4>
+
+<p><strong>Formula:</strong></p>
+
+<p>TAT = CT − AT</p>
+
+<ul>
+    <li>P1 = 4 − 0 = 4 seconds</li>
+    <li>P2 = 7 − 1 = 6 seconds</li>
+    <li>P3 = 8 − 2 = 6 seconds</li>
+</ul>
+
+<h4>Step 5: Calculate Waiting Time (WT)</h4>
+
+<p><strong>Formula:</strong></p>
+
+<p>WT = TAT − BT</p>
+
+<ul>
+    <li>P1 = 4 − 4 = 0 seconds</li>
+    <li>P2 = 6 − 3 = 3 seconds</li>
+    <li>P3 = 6 − 1 = 5 seconds</li>
+</ul>
+
+<h4>Step 6: Final Calculation Table</h4>
+
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Process</th>
+            <th>AT</th>
+            <th>BT</th>
+            <th>CT</th>
+            <th>TAT</th>
+            <th>WT</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>P1</td>
+            <td>0</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>P2</td>
+            <td>1</td>
+            <td>3</td>
+            <td>7</td>
+            <td>6</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>P3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>8</td>
+            <td>6</td>
+            <td>5</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Step 7: Calculate Average Waiting Time</h4>
+
+<p><strong>Formula:</strong></p>
+
+<p>Average Waiting Time = Total Waiting Time ÷ Number of Processes</p>
+
+<p>AWT = (0 + 3 + 5) ÷ 3</p>
+
+<p><strong>AWT = 8 ÷ 3 = 2.67 seconds</strong></p>
+
+<h4>Step 8: Calculate Average Turnaround Time</h4>
+
+<p><strong>Formula:</strong></p>
+
+<p>Average Turnaround Time = Total Turnaround Time ÷ Number of Processes</p>
+
+<p>ATAT = (4 + 6 + 6) ÷ 3</p>
+
+<p><strong>ATAT = 16 ÷ 3 = 5.33 seconds</strong></p>
+
+<h4>Final Answer</h4>
+
+<ul>
+    <li><strong>Average Waiting Time = 2.67 seconds</strong></li>
+    <li><strong>Average Turnaround Time = 5.33 seconds</strong></li>
+</ul>
+
+
+<h2 id="important-definitions-in-fcfs-scheduling">Important Definitions in FCFS Scheduling[Just for knowledge. No need to learn for exams. Just read one time.]</h2>
+
+<h3>1. Completion Time (CT)</h3>
+
+<p>Completion time is the time at which a process finishes its execution.</p>
+
+<p><strong>Formula:</strong></p>
+
+<p>CT = Time at which the process finishes</p>
+
+<p><strong>Example:</strong> If a process starts at 0 seconds and takes 4 seconds to execute, its completion time is 4 seconds.</p>
+
+<h3>2. Turnaround Time (TAT)</h3>
+
+<p>Turnaround time is the total time taken by a process from its arrival until its completion.</p>
+
+<p><strong>Formula:</strong></p>
+
+<p>TAT = CT − AT</p>
+
+<p><strong>Where:</strong></p>
+
+<ul>
+    <li>CT = Completion Time</li>
+    <li>AT = Arrival Time</li>
+</ul>
+
+<p><strong>Example:</strong> If a process arrives at 1 second and completes at 7 seconds:</p>
+
+<p>TAT = 7 − 1 = 6 seconds</p>
+
+<h3>3. Waiting Time (WT)</h3>
+
+<p>Waiting time is the total time a process spends waiting in the ready queue before getting CPU time.</p>
+
+<p><strong>Formula:</strong></p>
+
+<p>WT = TAT − BT</p>
+
+<p><strong>Where:</strong></p>
+
+<ul>
+    <li>TAT = Turnaround Time</li>
+    <li>BT = Burst Time</li>
+</ul>
+
+<p><strong>Example:</strong> If turnaround time is 6 seconds and burst time is 3 seconds:</p>
+
+<p>WT = 6 − 3 = 3 seconds</p>
+
+<h3>4. Average Waiting Time (AWT)</h3>
+
+<p>Average waiting time is the average time that all processes spend waiting in the ready queue.</p>
+
+<p><strong>Formula:</strong></p>
+
+<p>AWT = Total Waiting Time ÷ Number of Processes</p>
+
+<p><strong>Example:</strong> If three processes have waiting times of 0, 3, and 5 seconds:</p>
+
+<p>AWT = (0 + 3 + 5) ÷ 3</p>
+
+<p><strong>AWT = 2.67 seconds</strong></p>
+
+<h3>5. Average Turnaround Time (ATAT)</h3>
+
+<p>Average turnaround time is the average total time taken by all processes from arrival to completion.</p>
+
+<p><strong>Formula:</strong></p>
+
+<p>ATAT = Total Turnaround Time ÷ Number of Processes</p>
+
+<p><strong>Example:</strong> If three processes have turnaround times of 4, 6, and 6 seconds:</p>
+
+<p>ATAT = (4 + 6 + 6) ÷ 3</p>
+
+<p><strong>ATAT = 5.33 seconds</strong></p>
+
+
+<h3>Quick Revision Table</h3>
+
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Term</th>
+            <th>Meaning</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>AT</td>
+            <td>Time when a process arrives.</td>
+        </tr>
+        <tr>
+            <td>BT</td>
+            <td>Total CPU time required by a process.</td>
+        </tr>
+        <tr>
+            <td>CT</td>
+            <td>Time when a process finishes.</td>
+        </tr>
+        <tr>
+            <td>TAT</td>
+            <td>Total time from arrival to completion.</td>
+        </tr>
+        <tr>
+            <td>WT</td>
+            <td>Time spent waiting for CPU execution.</td>
+        </tr>
+        <tr>
+            <td>AWT</td>
+            <td>Average waiting time of all processes.</td>
+        </tr>
+        <tr>
+            <td>ATAT</td>
+            <td>Average turnaround time of all processes.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Remember for Exams</h3>
+
+<ul>
+    <li>Completion Time = Finishing time</li>
+    <li>Turnaround Time = Completion Time − Arrival Time</li>
+    <li>Waiting Time = Turnaround Time − Burst Time</li>
+    <li>Average = Total of all values ÷ Number of processes</li>
+</ul>
+
 <h2 id="mcqs">Multiple Choice Questions (MCQs) on Operating System</h2>
 
 <div class="mcq-item">
