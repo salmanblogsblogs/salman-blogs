@@ -206,61 +206,88 @@ Free Downloadable Notes
 <div class="container">
 
 <!-- ========================================= -->
-<!-- SEARCH SECTION -->
+<!-- MAIN CONTENT -->
 <!-- ========================================= -->
 
-<section class="search-section">
+<main class="technology-page">
 
-<div class="section-heading">
+    <div class="container">
 
-<span class="section-badge">
+        <!-- ========================================= -->
+        <!-- SEARCH SECTION -->
+        <!-- ========================================= -->
 
-🔍 Find Notes
+        <section class="search-section">
 
-</span>
+            <div class="section-heading">
 
-<h2>
+                <span class="section-badge">
 
-Search 10th Class Computer Science Articles
+                    🔍 Find Notes
 
-</h2>
+                </span>
 
-<p>
+                <h2>
 
-Quickly search chapter notes, lectures,
-MCQs, daily tests, important questions,
-past papers, and study resources.
+                    Search 10th Class Computer Science Articles
 
-</p>
+                </h2>
 
-</div>
+                <p>
 
-<div class="search-container">
+                    Quickly search chapter notes, lectures,
+                    MCQs, daily tests, important questions,
+                    past papers, and study resources.
 
-<div class="search-box">
+                </p>
 
-<span class="search-icon">
+            </div>
 
-🔍
+            <div class="search-container">
 
-</span>
+                <div class="search-box">
 
-<input type="text"
-       id="searchInput"
-       placeholder="Search notes, chapters, lectures...">
+                    <span class="search-icon">
 
-</div>
+                        🔍
 
-</div>
+                    </span>
 
-<p id="noResults"
-   class="no-results">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search notes, chapters, lectures by Name"
+                        autocomplete="off"
+                        aria-label="Search 10th Class Computer Science articles"
+                    >
 
-No matching articles found.
+                </div>
 
-</p>
+            </div>
 
-</section>
+            <!-- ========================================= -->
+            <!-- SEARCH RESULT MESSAGE -->
+            <!-- ========================================= -->
+
+            <p id="noResults"
+               class="no-results"
+               style="display:none;"
+               aria-live="polite">
+
+            </p>
+
+            <!-- ========================================= -->
+            <!-- SEARCH RESULTS -->
+            <!-- Actual article cards are moved here -->
+            <!-- ========================================= -->
+
+            <div id="searchResultsGrid"
+                 class="posts-grid"
+                 style="display:none;">
+
+            </div>
+
+        </section>
 
 
 <article class="featured-card">
@@ -300,12 +327,11 @@ No matching articles found.
 
     </div>
 
-    <a href="https://drive.google.com/file/d/1KZzof6iCV6mqEdUIxRzDzObJmjNXHkxg/view?usp=sharing"
-       class="read-btn"
-       target="_blank"
-       rel="noopener noreferrer">
-      Download Smart Syllabus →
-    </a>
+   <a href="https://drive.google.com/uc?export=download&id=1KZzof6iCV6mqEdUIxRzDzObJmjNXHkxg"
+   class="read-btn"
+   download>
+   Download Smart Syllabus
+</a>
 
   </div>
 
@@ -872,98 +898,6 @@ exam preparation guides.
 
 </article>
 
-<!-- ========================================= -->
-<!-- ARTICLE CARD 5 -->
-<!-- ========================================= -->
-
-<!-- <article class="post-card">
-
-    <a href="10-boys-result.html">
-
-        <div class="post-image">
-
-            <img src="images/10-CS-IMAGES/student-marks.webp"
-                 alt="10 Class Boys Result"
-                 loading="lazy">
-
-        </div>
-
-        <div class="post-content">
-
-            <span class="post-category">
-                Results
-            </span>
-
-            <h3>
-                10th Class Results for Boys
-            </h3>
-
-            <p>
-                View the latest results for boys by clicking here.
-            </p>
-
-            <div class="post-footer">
-
-                <span>📅 Updated: July 2026</span>
-
-                <span class="read-more">
-                    Read More →
-                </span>
-
-            </div>
-
-        </div>
-
-    </a>
-
-</article> -->
-
-<!-- ========================================= -->
-<!-- ARTICLE CARD 6 -->
-<!-- ========================================= -->
-
-<!-- <article class="post-card">
-
-    <a href="10-girls-result.html">
-
-        <div class="post-image">
-
-            <img src="images/10-CS-IMAGES/student-marks.webp"
-                 alt="10 Class Girls Result"
-                 loading="lazy">
-
-        </div>
-
-        <div class="post-content">
-
-            <span class="post-category">
-                Results
-            </span>
-
-            <h3>
-                10th Class Results for Girls
-            </h3>
-
-            <p>
-                View the latest results for girls by clicking here.
-            </p>
-
-            <div class="post-footer">
-
-                <span>📅 Updated: July 2026</span>
-
-                <span class="read-more">
-                    Read More →
-                </span>
-
-            </div>
-
-        </div>
-
-    </a>
-
-</article> -->
-
 </div>
 
 </section>
@@ -1088,191 +1022,13 @@ Contact Us
 
 </div>
 
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
 </footer>
-
-<!-- Mobile Navigation -->
-
-<script>
-
-const navToggle = document.getElementById("navToggle");
-
-const navLinks = document.getElementById("navLinks");
-
-navToggle.addEventListener("click", () => {
-
-navLinks.classList.toggle("show");
-
-});
-
-</script>
-
-<script>
-
-    /* =========================================
-       ARTICLE SEARCH
-    ========================================= */
-
-    const searchInput = document.getElementById("searchInput");
-
-    const posts = document.querySelectorAll(".post-card");
-
-    const noResults = document.getElementById("noResults");
-
-    const postsGrid = document.querySelector(".posts-grid");
-
-
-    /* Store original text */
-
-    posts.forEach(post=>{
-
-        const title = post.querySelector("h3");
-
-        const desc = post.querySelector("p");
-
-        title.dataset.original = title.textContent.trim();
-
-        desc.dataset.original = desc.textContent.trim();
-
-    });
-
-
-    function normalizeText(text){
-
-        return text
-            .toLowerCase()
-            .replace(/chap/g,"chapter")
-            .replace(/lec/g,"lecture")
-            .replace(/[^a-z0-9 ]/g," ");
-
-    }
-
-
-    function fuzzyMatch(text,word){
-
-        return text.includes(word) ||
-               text.includes(word.slice(0,word.length-1));
-
-    }
-
-
-    searchInput.addEventListener("input", function(){
-
-        const searchWords = normalizeText(this.value)
-            .trim()
-            .split(" ")
-            .filter(word => word !== "");
-
-
-        /* Fixed grid while searching */
-
-        if(searchWords.length > 0){
-
-            postsGrid.classList.add("search-active");
-
-        }
-
-        else{
-
-            postsGrid.classList.remove("search-active");
-
-        }
-
-
-        let visibleCount = 0;
-
-
-        posts.forEach(post=>{
-
-            const title = post.querySelector("h3");
-
-            const desc = post.querySelector("p");
-
-
-            const originalTitle = title.dataset.original;
-
-            const originalDesc = desc.dataset.original;
-
-
-            const combinedText = normalizeText(
-
-                originalTitle + " " + originalDesc
-
-            );
-
-
-            const isMatch =
-
-                searchWords.length === 0 ||
-
-                searchWords.every(word =>
-
-                    fuzzyMatch(combinedText, word)
-
-                );
-
-
-            if(isMatch){
-
-                post.style.display = "";
-
-                visibleCount++;
-
-                let highlightedTitle = originalTitle;
-
-                let highlightedDesc = originalDesc;
-
-
-                searchWords.forEach(word=>{
-
-                    const regex = new RegExp("(" + word + ")", "gi");
-
-                    highlightedTitle = highlightedTitle.replace(
-
-                        regex,
-
-                        "<mark>$1</mark>"
-
-                    );
-
-                    highlightedDesc = highlightedDesc.replace(
-
-                        regex,
-
-                        "<mark>$1</mark>"
-
-                    );
-
-                });
-
-
-                title.innerHTML = highlightedTitle;
-
-                desc.innerHTML = highlightedDesc;
-
-            }
-
-            else{
-
-                post.style.display = "none";
-
-            }
-
-        });
-
-
-        noResults.style.display =
-
-            visibleCount === 0 ? "block" : "none";
-
-    });
-
-</script>
-
-<script>
-    const postCount = document.querySelectorAll('.post-card').length;
-    document.getElementById('post-count').textContent = postCount + '+';
-</script>
 
 </body>
 
 </html>
+
+<!-- EXTERNAL JS -->
+ <script src="script.js"></script>
