@@ -666,6 +666,203 @@ else:
 <li>Solving Logical Problems</li>
 </ol>
 
+<h2 id="propositional-satisfiability">Propositional Satisfiability</h2>
+
+<p>Propositional Satisfiability is the process of determining whether a logical expression can be True for at least one possible combination of truth values of its propositions.</p>
+
+<p>A logical proposition is <strong>satisfiable</strong> when it produces True (T) for at least one possible combination of truth values in its truth table. It is <strong>unsatisfiable</strong> when it produces False (F) for every possible combination of truth values.</p>
+
+<h3>1. Truth Table Example</h3>
+
+<p>Consider the expression:</p>
+
+<p><strong>P ∧ Q</strong></p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+<thead>
+<tr>
+<th>P</th>
+<th>Q</th>
+<th>P ∧ Q</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>T</td><td>T</td><td>T</td></tr>
+<tr><td>T</td><td>F</td><td>F</td></tr>
+<tr><td>F</td><td>T</td><td>F</td></tr>
+<tr><td>F</td><td>F</td><td>F</td></tr>
+</tbody>
+</table>
+
+<p><strong>Result:</strong> This expression is satisfiable because it produces True when both P and Q are True.</p>
+
+<h3>2. Satisfiable and Unsatisfiable Expressions[Condition]</h3>
+
+<ul>
+<li><strong>Satisfiable:</strong> An expression is satisfiable if its truth table contains at least one True (T) result.</li>
+<li><strong>Unsatisfiable:</strong> An expression is unsatisfiable if its truth table contains only False (F) results.</li>
+</ul>
+
+<p><strong>Remember:</strong> A proposition is satisfiable if its truth table contains at least one True (T) result.</p>
+
+<h2 id="predicate-logic">Predicate Logic</h2>
+
+<p>Predicate Logic is a branch of logic that deals with objects, their properties, and relationships between them. It is used to express statements that involve variables and conditions.</p>
+
+<h3>Example</h3>
+
+<p><strong>P(x): x &gt; 10</strong></p>
+
+<p>Here:</p>
+<ul>
+<li><strong>P(x):</strong> The predicate.</li>
+<li><strong>x:</strong> A variable.</li>
+<li><strong>x &gt; 10:</strong> The condition.</li>
+</ul>
+
+<p>If x = 15, the statement is True because 15 is greater than 10.</p>
+<p>If x = 5, the statement is False because 5 is not greater than 10.</p>
+
+<h2 id="quantifiers-in-predicate-logic">Quantifiers in Predicate Logic</h2>
+
+<p>Quantifiers specify how many objects satisfy a given condition. There are two main types of quantifiers:</p>
+
+<h3>1. Universal Quantifier ( ∀ )</h3>
+
+<p>The Universal Quantifier means <strong>"For All"</strong> or <strong>"Every."</strong> It states that a condition is true for every object in a given group.</p>
+
+<p><strong>Example:</strong></p>
+
+<p><strong>∀x, x &gt; 0</strong></p>
+
+<p><strong>Meaning:</strong> All values of x are greater than zero.</p>
+
+<h3>2. Existential Quantifier ( ∃ )</h3>
+
+<p>The Existential Quantifier means <strong>"There Exists"</strong> or <strong>"At Least One."</strong> It states that a condition is true for at least one object in a given group.</p>
+
+<p><strong>Example:</strong></p>
+
+<p><strong>∃x, x &gt; 10</strong></p>
+
+<p><strong>Meaning:</strong> There is at least one value of x greater than 10.</p>
+
+<h2 id="predicates-and-variables">Predicates and Variables</h2>
+
+<h3>1. Predicate</h3>
+
+<p>A predicate is a statement that describes a property or condition of an object. Its truth value depends on the value assigned to its variable.</p>
+
+<p>In simple words, a predicate tells us something about a person, place, or object.</p>
+
+<p><strong>Example:</strong></p>
+
+<p><strong>P(x): x &gt; 10</strong></p>
+
+<p>Here, P(x) represents the condition that a number is greater than 10.</p>
+
+<ul>
+<li>If x = 15, the statement is True.</li>
+<li>If x = 5, the statement is False.</li>
+</ul>
+
+<h3>2. Variable</h3>
+
+<p>A variable is a symbol, usually a letter such as x, y, or z, that represents an unknown or changing value.</p>
+
+<p>In Predicate Logic, variables represent objects or values about which we want to make statements.</p>
+
+<p><strong>Example:</strong></p>
+
+<p><strong>P(x): x is a student</strong></p>
+
+<p>Here:</p>
+<ul>
+<li><strong>x:</strong> A variable representing a person.</li>
+<li><strong>P(x):</strong> A predicate describing that the person is a student.</li>
+</ul>
+
+<p>If x = Ali, then P(Ali) means "Ali is a student."</p>
+
+<h3>3. Difference Between Predicate and Variable</h3>
+
+<table border="1" cellpadding="8" cellspacing="0">
+<thead>
+<tr>
+<th>Predicate</th>
+<th>Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Describes a property or condition.</td>
+<td>Represents an object or value.</td>
+</tr>
+<tr>
+<td>Usually written as P(x).</td>
+<td>Usually represented by x, y, or z.</td>
+</tr>
+<tr>
+<td>Example: x is greater than 10.</td>
+<td>Example: x = 15.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="exercise-short-questions">Exercise: Short Questions</h2>
+
+<ol>
+<li>
+<strong>What is meant by computational thinking?</strong>
+<p>Computational Thinking is a way of solving problems in a logical and organized manner by breaking them into smaller parts and creating step-by-step solutions.</p>
+</li>
+
+<li>
+<strong>Why is computational thinking important in problem solving?</strong>
+<p>It is important because it helps us understand problems, break them into smaller parts, identify patterns, and find effective solutions.</p>
+</li>
+
+<li>
+<strong>What is decomposition in problem solving?</strong>
+<p>Decomposition is the process of breaking a complex problem into smaller and easier parts so that each part can be solved separately.</p>
+</li>
+
+<li>
+<strong>What is an algorithm?</strong>
+<p>An algorithm is a step-by-step procedure or set of instructions used to solve a problem or complete a task.</p>
+</li>
+
+<li>
+<strong>What is logic in computer science?</strong>
+<p>Logic is a way of representing facts, information, and relationships using statements and rules. It helps computers process information, make decisions, and draw conclusions.</p>
+</li>
+
+<li>
+<strong>What is a proposition?</strong>
+<p>A proposition is a declarative statement that has a definite truth value. It can be either True or False.</p>
+</li>
+
+<li>
+<strong>What are truth values?</strong>
+<p>Truth values represent the result of a logical statement. There are two truth values: True (T or 1) and False (F or 0).</p>
+</li>
+
+<li>
+<strong>What is a truth table?</strong>
+<p>A truth table is a table that shows all possible combinations of truth values of propositions and the results of a logical expression.</p>
+</li>
+
+<li>
+<strong>What is propositional satisfiability?</strong>
+<p>Propositional Satisfiability is the process of determining whether a logical expression can be True for at least one possible combination of truth values.</p>
+</li>
+
+<li>
+<strong>What is a predicate in predicate logic?</strong>
+<p>A predicate is a statement that describes a property or condition of an object. Its truth value depends on the value assigned to its variable.</p>
+</li>
+</ol>
+
 <h2 id="mcqs">Multiple Choice Questions (MCQs) on Applications of Computer Science</h2>
 
 <div class="mcq-item">
