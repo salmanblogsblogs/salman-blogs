@@ -13,7 +13,7 @@
         content="Learn about Salman Blogs, our mission, vision, free Computer Science notes, online tests, and educational resources.">
 
     <meta name="keywords"
-        content="Salman Blogs, About Salman Blogs, Computer Science Notes, Online Tests, Programming Tutorials">
+        content="Salman Blogs, About Salman Blogs, Computer Science Notes, Online Tests, Programming Tutorials, Salman, Sir salman, Sallu">
 
     <meta name="author" content="Salman Ahmad">
 
@@ -21,6 +21,7 @@
 
     <link rel="stylesheet" href="about.css">
 
+    <link rel="stylesheet" href="notes-post.css">
   
     <!-- Fonts -->
 
@@ -346,33 +347,6 @@ Browse Categories
             </p>
 
         </div>
-
-
-
-        <!-- <div class="offer-card">
-
-            <div class="offer-icon">
-
-                💻
-
-            </div>
-
-            <h3>
-
-                Programming Tutorials
-
-            </h3>
-
-            <p>
-
-                Learn programming concepts with beginner-friendly
-                examples and practical projects.
-
-            </p>
-
-        </div> -->
-
-
 
         <div class="offer-card">
 
@@ -877,6 +851,8 @@ Browse Categories
 </section>
 
 </main>
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
 
 <!-- ========================================= -->
 <!-- FOOTER -->
@@ -897,26 +873,37 @@ Browse Categories
             </h2>
 
             <p>
-
-                Salman Blogs is your destination for Technology,
-                Artificial Intelligence, Programming,
-                Education, Health, Business and Lifestyle content.
-
+                Salman Blogs is your destination for Technology, Computer Science,
+                How-To Guides, Education, AI Tools, Career Roadmaps, and
+                Class 8 to Class 12 Computer Science Notes.
             </p>
 
-            <div class="social-icons">
+<div class="social-icons">
 
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=100009953895352" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i>
+    </a>
 
-                <a href="#"><i class="fab fa-youtube"></i></a>
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/@ComputerWithSalman" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-youtube"></i>
+    </a>
 
-                <a href="#"><i class="fab fa-instagram"></i></a>
+    <!-- Instagram -->
+    <a href="https://instagram.com/salmannicksallu" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+    </a>
 
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/923089051710" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-            </div>
+</div>
 
-        </div>
+
+</div>
 
         <!-- Quick Links -->
 
@@ -946,32 +933,35 @@ Browse Categories
 
         <div class="footer-column">
 
-            <h3>Categories</h3>
+    <h3>Categories</h3>
 
-            <ul>
+    <ul>
 
-                <li><a href="#">Technology</a></li>
+        <li><a href="technology.html">Technology</a></li>
 
-                <li><a href="#">LifeStyle</a></li>
+        <li><a href="computer-science.html">Computer Science</a></li>
 
-                <li><a href="#">Health</a></li>
+        <li><a href="how-to-guides.html">How-To Guides</a></li>
 
-                <li><a href="#">Education</a></li>
+        <li><a href="education.html">Education</a></li>
 
-                <li><a href="#">Business</a></li>
+        <li><a href="ai-tools.html">AI Tools</a></li>
 
-                <li><a href="#">Travel</a></li>
+        <li><a href="roadmaps.html">Career Roadmaps</a></li>
 
-                <li><a href="#">9 Computer Science</a></li>
+        <li><a href="8-computer-science.html">Class 8 Computer</a></li>
 
-                <li><a href="#">10 Computer Science</a></li>
+        <li><a href="9-computer-science.html">Class 9 Computer</a></li>
 
-                <li><a href="#">11 Computer Science</a></li>
+        <li><a href="10-computer-science.html">Class 10 Computer</a></li>
 
+        <li><a href="11-computer-science.html">Class 11 Computer</a></li>
 
-            </ul>
+        <li><a href="12-computer-science.html">Class 12 Computer</a></li>
 
-        </div>
+    </ul>
+
+</div>
 
         <!-- Contact -->
 
@@ -1009,6 +999,7 @@ Browse Categories
 
 
 
+<!-- USE OF JAVASCRIPT. -->
 <script>
 
 document.getElementById("navToggle")
@@ -1060,6 +1051,25 @@ answer.style.display="block";
 
 </script>
 
+<!-- BACK TO TOP SCRIPT. -->
+ <script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 
 </body>
 
