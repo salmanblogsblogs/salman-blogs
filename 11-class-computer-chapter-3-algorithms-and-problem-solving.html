@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ <title>Class 11 Computer Science Chapter 3 Notes: Algorithms and Problem Solving | MCQs, Short & Long Questions</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="notes-post.css">
+
+  <meta name="description" content="Class 11 Computer Science Chapter 3 Notes: Algorithms and Problem Solving, computational problems, problem-solving techniques, algorithm analysis, time complexity, space complexity, Big O notation, algorithm design techniques, sorting algorithms, and search algorithms. Includes examples, MCQs, short questions, long questions, FAQs, and exam preparation." />
+
+<meta name="keywords" content="class 11 computer science notes, 11th class computer science chapter 3, class 11 computer chapter 3, algorithms and problem solving class 11, algorithms and problem solving notes, problem solving in computer science, computational problems, types of computational problems, decision problems, search problems, optimization problems, counting problems, well-defined and ill-defined problems, generate and test method, problem solvability, solvable and unsolvable problems, tractable and intractable problems, algorithm analysis, time complexity, space complexity, Big O notation, O(1) constant time, O(n) linear time, O(n squared) quadratic time, O(log n) logarithmic time, algorithm design techniques, divide and conquer, greedy algorithms, dynamic programming, backtracking, sorting algorithms, bubble sort, selection sort, search algorithms, linear search, binary search, algorithm examples, algorithms and problem solving MCQs class 11, short questions algorithms and problem solving, long questions algorithms and problem solving, algorithms and problem solving FAQs, FBISE class 11 computer science notes, Punjab board 1st year computer science notes, chapter 3 computer science notes, class 11 computer science exam preparation, important questions chapter 3, class 11 computer solved MCQs, class 11 computer science full notes" />
+
+<meta name="author" content="Salman Ahmad" />
+
+  <link rel="canonical" href="https://salmanblogs.com/10-class-computer-chap-5-introduction-to-data-science" />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625023142781121"
+     crossorigin="anonymous"></script>
+
+ <!-- Open Graph -->
+<meta property="og:title" content="Class 11 Computer Science Chapter 2 Notes: Introduction to Programming | MCQs, Short & Long Questions, FAQs" />
+
+<meta property="og:description" content="Complete Class 11 Computer Science Chapter 3 Notes on Algorithms and Problem Solving, computational problems, problem-solving techniques, algorithm analysis, time complexity, space complexity, Big O notation, algorithm design techniques, sorting algorithms, and search algorithms. Includes examples, MCQs, short questions, long questions, and FAQs for FBISE and Punjab Board exam preparation." />
+
+<meta property="og:image" content="https://salmanblogs.com/images/10-CS-IMAGES/chapter-5/10-class-computer-chapter-5-introduction-to-data-science.webp" />
+
+<meta property="og:url" content="https://salmanblogs.com/10-class-computer-chap-5-introduction-to-data-science" />
+
+<meta property="og:type" content="article" />
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:title" content="Class 11 Computer Science Chapter 2 Notes: Introduction to Programming | MCQs, Short & Long Questions, FAQs" />
+
+<meta name="twitter:description" content="Study Class 11 Computer Science Chapter 3 with complete notes on Algorithms and Problem Solving, computational problems, problem-solving techniques, algorithm analysis, time complexity, space complexity, Big O notation, algorithm design techniques, sorting algorithms, and search algorithms. Includes examples, MCQs, short questions, long questions, and FAQs for FBISE and Punjab Board exam preparation." />
+
+<meta name="twitter:image" content="https://salmanblogs.com/images/10-CS-IMAGES/chapter-5/10-class-computer-chapter-5-introduction-to-data-science.webp" />
+
+ <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="favicon.ico">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Class 11 Computer Science Chapter 3 Notes: Algorithms and Problem Solving",
+  "author": {
+    "@type": "Person",
+    "name": "Salman Ahmad"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Salman Blogs"
+  },
+  "description": "Complete Class 11 Computer Science Chapter 3 notes covering algorithms and problem solving, computational problems, problem-solving techniques, problem solvability, algorithm analysis, time complexity, space complexity, Big O notation, algorithm design techniques, sorting algorithms, and search algorithms. Includes examples, MCQs, short questions, long questions, and FAQs for FBISE and Punjab Board exam preparation.",
+  "mainEntityOfPage": "https://salmanblogs.com/class-11-computer-science-chapter-3-algorithms-and-problem-solving"
+}
+</script>
+
+</head>
+<body>
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<span class="logo-first">Salman</span>
+
+<span class="logo-last">Blogs</span>
+
+</a>
+
+<nav>
+
+<div class="nav-toggle" id="navToggle">
+    &#9776;
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+<li><a href="terms.html">Terms</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="hero-badge">
+💻 Class 11 Computer Science Chapter 3
+</span>
+<br>
+<h1>
+<span>Algorithms and Problem Solving</span>
+</h1>
+
+<p>
+    Complete Class 11 Computer Science Chapter 3 notes covering problem solving, algorithms, computational problems, types of computational problems, well-defined and ill-defined problems, generate and test method, problem solvability, tractable and intractable problems, algorithm analysis, time complexity, space complexity, Big O notation, algorithm design techniques, divide and conquer, greedy algorithms, dynamic programming, backtracking, sorting algorithms, and search algorithms. Includes simple examples, MCQs, short questions, long questions, and FAQs for FBISE and Punjab Board students.
+</p>
+
+<div class="hero-buttons">
+
+<a href="categories.html" class="btn-secondary">
+
+Browse Categories
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<main class="post-container">
+  <article class="blog-post">
+<h1 class="post-title">Class 11 Computer Science Chapter 3: Algorithms and Problem Solving</h1>
+ <div class="post-meta">Posted in <strong>11 Computer Science</strong></div>
+ <img src="images/11-CS-IMAGES/CHAPTER-3/class-11-computer-chapter-3-algorithms-and-problem-solving.webp"
+                 alt="class-11-computer-chapter-3-algorithms-and-problem-solving"  class="post-image"
+               width="1672" height="941"  loading="lazy">
+
+    <p>
+    These lecture notes are prepared by <strong>Salman Ahmad</strong>, who is both a <strong>teacher</strong> and a <strong>web developer</strong>.  
+        The purpose of this material is to make the topic clear and useful for students of Class 11 Computer Science.
+
+<nav class="toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#algorithms-and-problem-solving">Algorithms and Problem Solving</a></li>
+<li><a href="#understanding-computational-problems">Understanding Computational Problems</a></li>
+<li><a href="#classifying-computational-problems">Classifying Computational Problems</a></li>
+<li><a href="#well-defined-vs-ill-defined-problems">Well-Defined vs. Ill-Defined Problems</a></li>
+<li><a href="#algorithms-for-problem-solving">Algorithms for Problem Solving</a></li>
+<li><a href="#problem-solvability-and-complexity">Problem Solvability and Complexity</a></li>
+<li><a href="#algorithm-analysis">Algorithm Analysis</a></li>
+<li><a href="#algorithm-design-techniques">Algorithm Design Techniques</a></li>
+<li><a href="#commonly-used-algorithms">Commonly Used Algorithms</a></li>
+<li><a href="#exercise-short-questions">Exercise Short Questions</a></li>
+<li><a href="#mcqs">MCQs</a></li>
+<li><a href="#test-mcqs">MCQs for Testing</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+</nav>
+<div class="post-content">
+  <h2 id="algorithms-and-problem-solving">Algorithms and Problem Solving</h2>
+
+<p>Algorithms and problem solving are important concepts in computer science. They help us understand problems and develop step-by-step solutions to solve them efficiently.</p>
+
+<h3>1. Problem Solving</h3>
+
+<p>Problem solving is the process of identifying a problem, understanding its requirements, and finding a suitable solution.</p>
+
+<h3>2. Algorithm</h3>
+
+<p>An algorithm is a set of clear, step-by-step instructions used to solve a problem or perform a particular task.</p>
+
+<h4>Example: Algorithm to Make Tea</h4>
+
+<ol>
+<li>Start.</li>
+<li>Boil water.</li>
+<li>Add tea and sugar.</li>
+<li>Add milk.</li>
+<li>Boil for a few minutes.</li>
+<li>Pour tea into a cup.</li>
+<li>Stop.</li>
+</ol>
+
+<h2 id="understanding-computational-problems">Understanding Computational Problems</h2>
+
+<p>A computational problem is a problem that can be solved using a computer by following a set of instructions or an algorithm.</p>
+
+<p>To understand a computational problem, we need to identify three main things:</p>
+
+<ol>
+<li><strong>Input:</strong> The data or information provided to solve the problem.</li>
+<li><strong>Process:</strong> The steps or operations performed on the input data.</li>
+<li><strong>Output:</strong> The final result produced after processing the input.</li>
+</ol>
+
+<h3>Example: Adding Two Numbers</h3>
+
+<ul>
+<li><strong>Input:</strong> Two numbers (10 and 20).</li>
+<li><strong>Process:</strong> Add both numbers.</li>
+<li><strong>Output:</strong> 30.</li>
+</ul>
+
+<h2 id="classifying-computational-problems">Classifying Computational Problems</h2>
+
+<p>Computational problems can be classified into different types based on the results they require. The four common types are Decision, Search, Optimization, and Counting problems.</p>
+
+<h3>1. Decision Problems</h3>
+
+<p>Decision problems require a <strong>Yes or No</strong> answer. They determine whether a particular condition is true or false.</p>
+
+<p><strong>Example:</strong> Is 10 greater than 5?</p>
+
+<p><strong>Answer:</strong> Yes.</p>
+
+<h3>2. Search Problems</h3>
+
+<p>Search problems involve finding a specific item or solution from a given set of data.</p>
+
+<p><strong>Example:</strong> Find a student's name in a class list.</p>
+
+<h3>3. Optimization Problems</h3>
+
+<p>Optimization problems involve finding the best possible solution from several available options.</p>
+
+<p><strong>Example:</strong> Finding the shortest route from home to school.</p>
+
+<h3>4. Counting Problems</h3>
+
+<p>Counting problems involve finding the total number of items or solutions that meet specific conditions.</p>
+
+<p><strong>Example:</strong> Count the total number of students who passed an exam.</p>
+
+<h2 id="well-defined-vs-ill-defined-problems">Well-Defined vs. Ill-Defined Problems</h2>
+
+<p>Problems can be classified into two types based on how clearly their goals, requirements, and solutions are described.</p>
+
+<h3>1. Well-Defined Problems</h3>
+
+<p>A well-defined problem is a problem that has a clear goal, specific requirements, and enough information to find a solution.</p>
+
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Adding two numbers.</li>
+<li>Finding the largest number in a list.</li>
+<li>Calculating the average marks of students.</li>
+</ul>
+
+<h3>2. Ill-Defined Problems</h3>
+
+<p>An ill-defined problem is a problem that does not have a clearly defined goal, requirements, or a single correct solution. It may have several possible solutions.</p>
+
+<p><strong>Examples:</strong></p>
+<ul>
+<li>How to make a city more beautiful.</li>
+<li>How to improve the education system.</li>
+<li>How to make people happier.</li>
+</ul>
+
+<h2 id="algorithms-for-problem-solving">Algorithms for Problem Solving</h2>
+
+<p>Algorithms provide step-by-step instructions to solve computational problems. Different methods can be used to develop algorithms depending on the nature of the problem.</p>
+
+<h3>Generate and Test Method</h3>
+
+<p>The Generate and Test method is a problem-solving technique in which we generate possible solutions and test each one to find the correct solution.</p>
+
+<p>In simple words, we try different possible solutions until we find one that works.</p>
+
+<h4>Example: Finding a Number</h4>
+
+<p>Suppose we want to find a number between 1 and 10 that is divisible by both 2 and 3.</p>
+
+<ol>
+<li><strong>Generate:</strong> 4</li>
+<li><strong>Test:</strong> 4 is not divisible by 3.</li>
+<li><strong>Generate:</strong> 6</li>
+<li><strong>Test:</strong> 6 is divisible by both 2 and 3.</li>
+<li><strong>Result:</strong> 6 is the correct solution.</li>
+</ol>
+
+<h2 id="problem-solvability-and-complexity">Problem Solvability and Complexity</h2>
+
+<p>Problem solvability and complexity are important concepts in computer science. They help us understand whether a problem can be solved by a computer and how much time or resources are required to solve it.</p>
+
+<h3>1. Solvable vs. Unsolvable Problems</h3>
+
+<h4>A. Solvable Problems</h4>
+
+<p>A solvable problem is a problem for which an algorithm exists that can produce the correct solution in a finite amount of time.</p>
+
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Adding two numbers.</li>
+<li>Finding the largest number in a list.</li>
+<li>Calculating the average of marks.</li>
+</ul>
+
+<h4>B. Unsolvable Problems</h4>
+
+<p>An unsolvable problem is a problem for which no algorithm can produce a correct solution for every possible input.</p>
+
+<p><strong>Example: Halting Problem</strong></p>
+
+<p>The Halting Problem involves determining whether a given computer program will eventually stop or run forever.</p>
+
+<h3>2. Tractable vs. Intractable Problems</h3>
+
+<h4>A. Tractable Problems</h4>
+
+<p>A tractable problem is a problem that can be solved by a computer in a reasonable amount of time, even when the amount of input data increases.</p>
+
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Sorting a list of numbers.</li>
+<li>Finding an item in a list.</li>
+<li>Adding two numbers.</li>
+</ul>
+
+<h4>B. Intractable Problems</h4>
+
+<p>An intractable problem is a problem that becomes very difficult and time-consuming to solve as the amount of input data increases. Finding an exact solution may require too much time and computing power.</p>
+
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Finding the shortest possible route when visiting many cities.</li>
+<li>Creating the best possible timetable for hundreds of classes and teachers.</li>
+</ul>
+
+<h2 id="algorithm-analysis">Algorithm Analysis</h2>
+
+<p>Algorithm analysis is the process of evaluating an algorithm to understand how efficiently it solves a problem.</p>
+
+<p>There are two main factors used in algorithm analysis:</p>
+
+<ol>
+<li><strong>Time Complexity:</strong> Measures how much time an algorithm takes to complete its task.</li>
+<li><strong>Space Complexity:</strong> Measures how much memory an algorithm requires to complete its task.</li>
+</ol>
+
+<h3>1. Time Complexity</h3>
+
+<p>Time Complexity measures how the execution time of an algorithm increases when the input size increases.</p>
+
+<p>In simple words, it tells us how much time an algorithm takes to solve a problem based on the amount of input data.</p>
+
+<h3>2. Big O Notation</h3>
+
+<p>Big O Notation is a mathematical method used to describe the time complexity of an algorithm.</p>
+
+<p>Big O notation is written using the letter <strong>O</strong>.</p>
+
+<h3>3. How Big O Notation Works</h3>
+
+<p>Big O notation describes how the number of operations performed by an algorithm changes as the input size (n) increases.</p>
+
+<h3>A. O(1) – Constant Time</h3>
+
+<p>Constant Time means an algorithm takes the same amount of time to perform an operation, regardless of the input size.</p>
+
+<p><strong>Example:</strong> Accessing an element from a list using its index.</p>
+
+<pre><code>numbers = [10, 20, 30, 40, 50]
+
+print(numbers[2])</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>30</code></pre>
+
+<p>Whether the list contains 5 or 1,000 elements, accessing an element by its index takes constant time.</p>
+
+<h3>B. O(n) – Linear Time</h3>
+
+<p>Linear Time means the number of operations increases directly with the input size.</p>
+
+<p><strong>Example:</strong> Printing all elements of a list.</p>
+
+<pre><code>numbers = [10, 20, 30, 40, 50]
+
+for num in numbers:
+    print(num)</code></pre>
+
+<p>If the list contains 5 elements, the loop runs 5 times. If it contains 100 elements, the loop runs 100 times.</p>
+
+<h3>C. O(n²) – Quadratic Time</h3>
+
+<p>Quadratic Time means the number of operations increases with the square of the input size. It commonly occurs when one loop is placed inside another loop.</p>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>numbers = [1, 2, 3]
+
+for i in numbers:
+    for j in numbers:
+        print(i, j)</code></pre>
+
+<p>If the list contains 3 elements, the operation runs 9 times. If it contains 5 elements, it runs 25 times.</p>
+
+<h3>D. O(log n) – Logarithmic Time</h3>
+
+<p>Logarithmic Time means the problem size is reduced by a fixed factor during each step, commonly by half.</p>
+
+<p><strong>Example:</strong> Finding a number in a sorted list using Binary Search.</p>
+
+<p>Suppose we want to find 40 in the following sorted list:</p>
+
+<p><strong>[10, 20, 30, 40, 50, 60, 70]</strong></p>
+
+<p>Instead of checking every element, Binary Search repeatedly divides the search area into half until the required number is found.</p>
+
+<p>This makes searching faster, especially when dealing with large lists.</p>
+
+<h3>2. Space Complexity</h3>
+
+<p>Space Complexity measures how much memory an algorithm requires to complete its task.</p>
+
+<p>In simple words, it tells us how much computer memory an algorithm uses while solving a problem.</p>
+
+<h2 id="algorithm-design-techniques">Algorithm Design Techniques</h2>
+
+<p>Algorithm Design Techniques are different methods used to develop algorithms for solving problems efficiently. Each technique follows a specific approach to find a solution.</p>
+
+<p>There are four common algorithm design techniques:</p>
+
+<h3>1. Divide and Conquer</h3>
+
+<p>Divide and Conquer is an algorithm design technique in which a large problem is divided into smaller subproblems. Each subproblem is solved separately, and their results are combined to get the final solution.</p>
+
+<p><strong>Example: Merge Sort</strong> – Divides a list into smaller parts, sorts them, and combines them into a sorted list.</p>
+
+<h3>2. Greedy Algorithms</h3>
+
+<p>A Greedy Algorithm is a technique that solves a problem by choosing the best available option at each step, hoping to achieve the overall best solution.</p>
+
+<p><strong>Examples:</strong></p>
+
+<ul>
+<li><strong>Shopping:</strong> Choosing the cheapest available item at each step to reduce the total cost.</li>
+<li><strong>Shortest Path:</strong> Choosing the nearest available route at each step to find the shortest path.</li>
+</ul>
+
+<h3>3. Dynamic Programming</h3>
+
+<p>Dynamic Programming is a technique used to solve a complex problem by solving smaller parts of it and saving their results to use them again when needed.</p>
+
+<p><strong>Example:</strong> If we have already calculated 2 + 3 = 5, we can save the result 5 and use it again whenever needed instead of calculating it again.</p>
+
+<h3>4. Backtracking</h3>
+
+<p>Backtracking is an algorithm design technique that tries different possible solutions and goes back whenever a choice does not lead to a correct solution.</p>
+
+<p><strong>Examples:</strong></p>
+
+<ul>
+<li><strong>Finding a Word in a Puzzle:</strong> Trying different letter combinations and going back when they do not form the required word.</li>
+<li><strong>Password Combination:</strong> Trying different possible combinations to find the correct combination in a puzzle.</li>
+</ul>
+
+<h2 id="commonly-used-algorithms">Commonly Used Algorithms</h2>
+
+<p>Commonly used algorithms are step-by-step methods used to solve different computational problems. Sorting and searching are two common types of algorithms used in computer science.</p>
+
+<h3>1. Sorting Algorithms</h3>
+
+<p>Sorting Algorithms are used to arrange data in a specific order, such as ascending or descending order.</p>
+
+<h4>A. Bubble Sort</h4>
+
+<p>Bubble Sort is a sorting algorithm that repeatedly compares two adjacent elements and swaps them if they are in the wrong order. This process continues until the list is sorted.</p>
+
+<p><strong>Example:</strong></p>
+
+<p>Suppose we have the following numbers:</p>
+
+<p><strong>[5, 3, 8, 2]</strong></p>
+
+<p>After sorting in ascending order:</p>
+
+<p><strong>[2, 3, 5, 8]</strong></p>
+
+<p><strong>Complexity:</strong> O(n²)</p>
+
+<h4>Explanation: Sorting Numbers in Ascending Order</h4>
+
+<p>We compare adjacent numbers and arrange them from smallest to largest.</p>
+
+<p><strong>Step 1:</strong> Compare 5 and 3. Since 3 is smaller, swap their positions.</p>
+
+<p><strong>[3, 5, 8, 2]</strong></p>
+
+<p><strong>Step 2:</strong> Compare 5 and 8. Since 5 is smaller, keep their positions.</p>
+
+<p><strong>[3, 5, 8, 2]</strong></p>
+
+<p><strong>Step 3:</strong> Compare 8 and 2. Since 2 is smaller, swap their positions.</p>
+
+<p><strong>[3, 5, 2, 8]</strong></p>
+
+<p><strong>Step 4:</strong> Compare 5 and 2. Since 2 is smaller, swap their positions.</p>
+
+<p><strong>[3, 2, 5, 8]</strong></p>
+
+<p><strong>Step 5:</strong> Compare 3 and 2. Since 2 is smaller, swap their positions.</p>
+
+<p><strong>Final Result:</strong></p>
+
+<p><strong>[2, 3, 5, 8]</strong></p>
+
+<h4>B. Selection Sort</h4>
+
+<p>Selection Sort is a sorting algorithm that repeatedly finds the smallest element from the unsorted part of a list and places it at the beginning. This process continues until the entire list is sorted.</p>
+
+<p><strong>Example:</strong></p>
+
+<p>Suppose we have the following numbers:</p>
+
+<p><strong>[5, 3, 8, 2]</strong></p>
+
+<p>After sorting in ascending order:</p>
+
+<p><strong>[2, 3, 5, 8]</strong></p>
+
+<p><strong>Complexity:</strong> O(n²)</p>
+
+<h4>Explanation: Sorting Numbers in Ascending Order</h4>
+
+<p>We find the smallest number from the unsorted part and place it at the beginning.</p>
+
+<p><strong>Step 1:</strong> Find the smallest number from [5, 3, 8, 2]. The smallest number is 2. Swap it with 5.</p>
+
+<p><strong>[2, 3, 8, 5]</strong></p>
+
+<p><strong>Step 2:</strong> Find the smallest number from the remaining unsorted part [3, 8, 5]. The smallest number is 3. It is already in the correct position.</p>
+
+<p><strong>[2, 3, 8, 5]</strong></p>
+
+<p><strong>Step 3:</strong> Find the smallest number from the remaining unsorted part [8, 5]. The smallest number is 5. Swap it with 8.</p>
+
+<p><strong>[2, 3, 5, 8]</strong></p>
+
+<p><strong>Step 4:</strong> The remaining number 8 is already in the correct position.</p>
+
+<p><strong>Final Result:</strong></p>
+
+<p><strong>[2, 3, 5, 8]</strong></p>
+
+<h3>2. Search Algorithms</h3>
+
+<p>Search Algorithms are used to find a specific element or value from a collection of data.</p>
+
+<h4>A. Linear Search</h4>
+
+<p>Linear Search is a searching algorithm that checks each element one by one until the required element is found or the list ends.</p>
+
+<p><strong>Complexity:</strong> O(n)</p>
+
+<h4>B. Binary Search</h4>
+
+<p>Binary Search is a searching algorithm that finds an element by repeatedly dividing a sorted list into two halves and searching in the half where the element may exist.</p>
+
+<p><strong>Complexity:</strong> O(log n)</p>
+
+<img src="images/11-CS-IMAGES/CHAPTER-3/bfs-and-dfs-algorithms.webp"
+                 alt="bfs-and-dfs-algorithms"  class="post-image"
+               width="1188" height="589"  loading="lazy">
+
+
+<h2 id="exercise-short-questions">Exercise Short Questions</h2>
+
+<h3>1. Differentiate between well-defined and ill-defined problems within the realm of computational problem-solving.</h3>
+
+<p><strong>Well-Defined Problems:</strong> These problems have clear goals, specific requirements, and enough information to find a solution.</p>
+
+<p><strong>Ill-Defined Problems:</strong> These problems do not have clearly defined goals or requirements and may have several possible solutions.</p>
+
+<h3>2. Outline the main steps involved in the Generate-and-Test method.</h3>
+
+<p>The main steps of the Generate-and-Test method are:</p>
+
+<ol>
+    <li><strong>Generate:</strong> Create a possible solution.</li>
+    <li><strong>Test:</strong> Check whether the solution meets the required conditions.</li>
+    <li><strong>Repeat:</strong> If the solution is incorrect, generate and test another solution.</li>
+    <li><strong>Stop:</strong> Continue until a correct solution is found or all possibilities are tested.</li>
+</ol>
+
+<h3>3. Compare tractable and intractable problems in the context of computational complexity.</h3>
+
+<p><strong>Tractable Problems:</strong> These problems can be solved by a computer in a reasonable amount of time, even when the input size increases.</p>
+
+<p><strong>Intractable Problems:</strong> These problems become very difficult and time-consuming to solve as the input size increases. They may require too much time and computing power.</p>
+
+<h3>4. Summarize the key idea behind Greedy Algorithms.</h3>
+
+<p>Greedy Algorithms solve a problem by choosing the best available option at each step, hoping to achieve the overall best solution.</p>
+
+<h3>5. Discuss the advantages of using Dynamic Programming.</h3>
+
+<p>Dynamic Programming has the following advantages:</p>
+
+<ul>
+    <li>It breaks complex problems into smaller subproblems.</li>
+    <li>It stores the results of solved subproblems and reuses them when needed.</li>
+    <li>It avoids repeated calculations and reduces execution time.</li>
+    <li>It helps solve complex problems more efficiently.</li>
+</ul>
+
+<h3>6. Compare the advantages of Breadth-First Search (BFS) with Depth-First Search (DFS) in graph traversal.</h3>
+
+<p><strong>Breadth-First Search (BFS):</strong></p>
+<ul>
+    <li>It visits neighboring vertices before moving to the next level.</li>
+    <li>It can find the shortest path in an unweighted graph.</li>
+</ul>
+
+<p><strong>Depth-First Search (DFS):</strong></p>
+<ul>
+    <li>It explores one path as deeply as possible before going back.</li>
+    <li>It can use less memory than BFS in some graphs.</li>
+</ul>
+
+<h3>7. Explain the importance of breaking down a problem into smaller components in algorithmic thinking.</h3>
+
+<p>Breaking down a problem into smaller components makes it easier to understand and solve. Each smaller part can be solved separately, and their results can be combined to solve the complete problem.</p>
+
+<h3>8. Identify the key factors used to evaluate the performance of an algorithm.</h3>
+
+<p>Two main factors are used to evaluate the performance of an algorithm:</p>
+
+<ol>
+    <li><strong>Time Complexity:</strong> Measures how much time an algorithm takes as the input size increases.</li>
+    <li><strong>Space Complexity:</strong> Measures how much memory an algorithm requires to complete its task.</li>
+</ol>
+
+<div class="mcq-item">
+  <div class="mcq-question">1. What is Bubble Sort?</div>
+  <div class="mcq-options">
+    a. A searching algorithm<br>
+    b. A sorting algorithm<br>
+    c. A programming language<br>
+    d. An operating system
+  </div>
+  <div class="mcq-answer">Answer: b. A sorting algorithm</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">2. What does Bubble Sort compare during sorting?</div>
+  <div class="mcq-options">
+    a. Random elements<br>
+    b. First and last elements<br>
+    c. Adjacent elements<br>
+    d. Only the smallest elements
+  </div>
+  <div class="mcq-answer">Answer: c. Adjacent elements</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">3. When does Bubble Sort swap two elements?</div>
+  <div class="mcq-options">
+    a. When they are equal<br>
+    b. When they are in the wrong order<br>
+    c. When they are at the end<br>
+    d. When they are already sorted
+  </div>
+  <div class="mcq-answer">Answer: b. When they are in the wrong order</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">4. What is the time complexity of Bubble Sort in the average and worst cases?</div>
+  <div class="mcq-options">
+    a. O(1)<br>
+    b. O(n)<br>
+    c. O(log n)<br>
+    d. O(n²)
+  </div>
+  <div class="mcq-answer">Answer: d. O(n²)</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">5. What is the purpose of sorting in ascending order?</div>
+  <div class="mcq-options">
+    a. Arranging elements from largest to smallest<br>
+    b. Arranging elements from smallest to largest<br>
+    c. Arranging elements randomly<br>
+    d. Removing duplicate elements
+  </div>
+  <div class="mcq-answer">Answer: b. Arranging elements from smallest to largest</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">6. Which of the following is the correct ascending order of [5, 3, 8, 2]?</div>
+  <div class="mcq-options">
+    a. [8, 5, 3, 2]<br>
+    b. [3, 2, 5, 8]<br>
+    c. [2, 3, 5, 8]<br>
+    d. [5, 3, 2, 8]
+  </div>
+  <div class="mcq-answer">Answer: c. [2, 3, 5, 8]</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">7. What is the first pair compared in Bubble Sort for [5, 3, 8, 2]?</div>
+  <div class="mcq-options">
+    a. 5 and 8<br>
+    b. 3 and 8<br>
+    c. 8 and 2<br>
+    d. 5 and 3
+  </div>
+  <div class="mcq-answer">Answer: d. 5 and 3</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">8. What will be the list after swapping 5 and 3 in [5, 3, 8, 2]?</div>
+  <div class="mcq-options">
+    a. [5, 8, 3, 2]<br>
+    b. [3, 5, 8, 2]<br>
+    c. [2, 3, 5, 8]<br>
+    d. [5, 3, 2, 8]
+  </div>
+  <div class="mcq-answer">Answer: b. [3, 5, 8, 2]</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">9. What happens when Bubble Sort compares 5 and 8 in ascending order?</div>
+  <div class="mcq-options">
+    a. They are swapped<br>
+    b. Both are removed<br>
+    c. Their positions remain unchanged<br>
+    d. 8 is moved to the beginning
+  </div>
+  <div class="mcq-answer">Answer: c. Their positions remain unchanged</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">10. Which element moves to the end after the first complete pass of Bubble Sort on [5, 3, 8, 2]?</div>
+  <div class="mcq-options">
+    a. 2<br>
+    b. 3<br>
+    c. 5<br>
+    d. 8
+  </div>
+  <div class="mcq-answer">Answer: d. 8</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">11. What is Selection Sort?</div>
+  <div class="mcq-options">
+    a. A searching technique<br>
+    b. A sorting algorithm<br>
+    c. A programming language<br>
+    d. A database
+  </div>
+  <div class="mcq-answer">Answer: b. A sorting algorithm</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">12. What does Selection Sort find in each pass when sorting in ascending order?</div>
+  <div class="mcq-options">
+    a. Largest element<br>
+    b. Middle element<br>
+    c. Smallest element<br>
+    d. Last element
+  </div>
+  <div class="mcq-answer">Answer: c. Smallest element</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">13. Where is the smallest element placed in Selection Sort?</div>
+  <div class="mcq-options">
+    a. At the end of the list<br>
+    b. At the beginning of the unsorted part<br>
+    c. In the middle of the list<br>
+    d. At a random position
+  </div>
+  <div class="mcq-answer">Answer: b. At the beginning of the unsorted part</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">14. What is the time complexity of Selection Sort?</div>
+  <div class="mcq-options">
+    a. O(1)<br>
+    b. O(n)<br>
+    c. O(log n)<br>
+    d. O(n²)
+  </div>
+  <div class="mcq-answer">Answer: d. O(n²)</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">15. Which element is selected first in Selection Sort for [5, 3, 8, 2]?</div>
+  <div class="mcq-options">
+    a. 5<br>
+    b. 3<br>
+    c. 8<br>
+    d. 2
+  </div>
+  <div class="mcq-answer">Answer: d. 2</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">16. What will be the list after the first pass of Selection Sort on [5, 3, 8, 2]?</div>
+  <div class="mcq-options">
+    a. [3, 5, 8, 2]<br>
+    b. [2, 3, 8, 5]<br>
+    c. [5, 2, 3, 8]<br>
+    d. [2, 5, 3, 8]
+  </div>
+  <div class="mcq-answer">Answer: b. [2, 3, 8, 5]</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">17. What happens in the second pass of Selection Sort on [2, 3, 8, 5]?</div>
+  <div class="mcq-options">
+    a. 2 is swapped with 3<br>
+    b. 3 is swapped with 8<br>
+    c. 3 is already in the correct position<br>
+    d. 5 is moved to the beginning
+  </div>
+  <div class="mcq-answer">Answer: c. 3 is already in the correct position</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">18. Which element is selected in the third pass of Selection Sort on [2, 3, 8, 5]?</div>
+  <div class="mcq-options">
+    a. 2<br>
+    b. 3<br>
+    c. 5<br>
+    d. 8
+  </div>
+  <div class="mcq-answer">Answer: c. 5</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">19. What is the final sorted list after applying Selection Sort to [5, 3, 8, 2]?</div>
+  <div class="mcq-options">
+    a. [8, 5, 3, 2]<br>
+    b. [3, 2, 5, 8]<br>
+    c. [2, 3, 5, 8]<br>
+    d. [5, 3, 8, 2]
+  </div>
+  <div class="mcq-answer">Answer: c. [2, 3, 5, 8]</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">20. What is the main difference between Bubble Sort and Selection Sort?</div>
+  <div class="mcq-options">
+    a. Bubble Sort compares adjacent elements, while Selection Sort finds the smallest element<br>
+    b. Both use the same method<br>
+    c. Selection Sort is a searching algorithm<br>
+    d. Bubble Sort does not compare elements
+  </div>
+  <div class="mcq-answer">Answer: a. Bubble Sort compares adjacent elements, while Selection Sort finds the smallest element</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">21. What is an algorithm?</div>
+  <div class="mcq-options">
+    a. A set of step-by-step instructions<br>
+    b. A computer device<br>
+    c. A programming error<br>
+    d. A storage unit
+  </div>
+  <div class="mcq-answer">Answer: a. A set of step-by-step instructions</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">22. What is problem solving in computer science?</div>
+  <div class="mcq-options">
+    a. Installing software<br>
+    b. Identifying a problem and finding a suitable solution<br>
+    c. Deleting computer files<br>
+    d. Designing computer hardware
+  </div>
+  <div class="mcq-answer">Answer: b. Identifying a problem and finding a suitable solution</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">23. Which of the following is the correct order of a computational problem?</div>
+  <div class="mcq-options">
+    a. Output, Input, Process<br>
+    b. Process, Output, Input<br>
+    c. Input, Process, Output<br>
+    d. Input, Output, Process
+  </div>
+  <div class="mcq-answer">Answer: c. Input, Process, Output</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">24. Which part of a computational problem contains the data provided to solve it?</div>
+  <div class="mcq-options">
+    a. Input<br>
+    b. Process<br>
+    c. Output<br>
+    d. Result
+  </div>
+  <div class="mcq-answer">Answer: a. Input</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">25. Which type of computational problem requires a Yes or No answer?</div>
+  <div class="mcq-options">
+    a. Search problem<br>
+    b. Decision problem<br>
+    c. Counting problem<br>
+    d. Optimization problem
+  </div>
+  <div class="mcq-answer">Answer: b. Decision problem</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">26. Finding a student's name in a class list is an example of which problem?</div>
+  <div class="mcq-options">
+    a. Decision problem<br>
+    b. Counting problem<br>
+    c. Search problem<br>
+    d. Optimization problem
+  </div>
+  <div class="mcq-answer">Answer: c. Search problem</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">27. Finding the shortest route from home to school is an example of which problem?</div>
+  <div class="mcq-options">
+    a. Search problem<br>
+    b. Counting problem<br>
+    c. Decision problem<br>
+    d. Optimization problem
+  </div>
+  <div class="mcq-answer">Answer: d. Optimization problem</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">28. Counting the number of students who passed an exam is an example of which problem?</div>
+  <div class="mcq-options">
+    a. Counting problem<br>
+    b. Search problem<br>
+    c. Decision problem<br>
+    d. Optimization problem
+  </div>
+  <div class="mcq-answer">Answer: a. Counting problem</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">29. Which type of problem has a clear goal and specific requirements?</div>
+  <div class="mcq-options">
+    a. Ill-defined problem<br>
+    b. Well-defined problem<br>
+    c. Unsolvable problem<br>
+    d. Intractable problem
+  </div>
+  <div class="mcq-answer">Answer: b. Well-defined problem</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">30. Which of the following is an example of an ill-defined problem?</div>
+  <div class="mcq-options">
+    a. Adding two numbers<br>
+    b. Calculating the average marks<br>
+    c. Finding the largest number<br>
+    d. Making a city more beautiful
+  </div>
+  <div class="mcq-answer">Answer: d. Making a city more beautiful</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">31. What is the Generate and Test method?</div>
+  <div class="mcq-options">
+    a. A method of generating possible solutions and testing them<br>
+    b. A method of deleting data<br>
+    c. A method of sorting numbers only<br>
+    d. A method of writing programs without testing
+  </div>
+  <div class="mcq-answer">Answer: a. A method of generating possible solutions and testing them</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">32. Which problem is an example of an unsolvable problem?</div>
+  <div class="mcq-options">
+    a. Adding two numbers<br>
+    b. Finding the largest number<br>
+    c. Halting Problem<br>
+    d. Sorting a list
+  </div>
+  <div class="mcq-answer">Answer: c. Halting Problem</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">33. What is a tractable problem?</div>
+  <div class="mcq-options">
+    a. A problem that cannot be solved<br>
+    b. A problem that can be solved in a reasonable amount of time<br>
+    c. A problem without input<br>
+    d. A problem with no solution
+  </div>
+  <div class="mcq-answer">Answer: b. A problem that can be solved in a reasonable amount of time</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">34. What does Time Complexity measure?</div>
+  <div class="mcq-options">
+    a. Computer screen size<br>
+    b. Storage capacity<br>
+    c. How execution time increases with input size<br>
+    d. Internet speed
+  </div>
+  <div class="mcq-answer">Answer: c. How execution time increases with input size</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">35. What does Space Complexity measure?</div>
+  <div class="mcq-options">
+    a. Memory required by an algorithm<br>
+    b. Time required by an algorithm<br>
+    c. Screen resolution<br>
+    d. Number of users
+  </div>
+  <div class="mcq-answer">Answer: a. Memory required by an algorithm</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">36. Which Big O notation represents constant time?</div>
+  <div class="mcq-options">
+    a. O(n)<br>
+    b. O(n²)<br>
+    c. O(log n)<br>
+    d. O(1)
+  </div>
+  <div class="mcq-answer">Answer: d. O(1)</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">37. Which Big O notation represents linear time?</div>
+  <div class="mcq-options">
+    a. O(1)<br>
+    b. O(n)<br>
+    c. O(n²)<br>
+    d. O(log n)
+  </div>
+  <div class="mcq-answer">Answer: b. O(n)</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">38. Which algorithm design technique divides a large problem into smaller subproblems?</div>
+  <div class="mcq-options">
+    a. Greedy Algorithm<br>
+    b. Backtracking<br>
+    c. Divide and Conquer<br>
+    d. Linear Search
+  </div>
+  <div class="mcq-answer">Answer: c. Divide and Conquer</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">39. Which algorithm design technique saves the results of smaller problems for reuse?</div>
+  <div class="mcq-options">
+    a. Dynamic Programming<br>
+    b. Bubble Sort<br>
+    c. Linear Search<br>
+    d. Greedy Algorithm
+  </div>
+  <div class="mcq-answer">Answer: a. Dynamic Programming</div>
+</div>
+
+<div class="mcq-item">
+  <div class="mcq-question">40. Which searching algorithm repeatedly divides a sorted list into two halves?</div>
+  <div class="mcq-options">
+    a. Linear Search<br>
+    b. Bubble Sort<br>
+    c. Selection Sort<br>
+    d. Binary Search
+  </div>
+  <div class="mcq-answer">Answer: d. Binary Search</div>
+</div>
+
+<div class="user-info">
+  <input type="text" id="username" placeholder="Enter your name" />
+</div>
+
+<section class="test-mcqs" id="test-mcqs">
+  <h2>Test Yourself: Interactive MCQs (Algorithms and Problem Solving)</h2>
+
+  <h2 id="mcqs">Algorithms and Problem Solving MCQs: Class 11 Computer Science</h2>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">1. What is an algorithm?</div>
+    <div class="mcq-options">
+      <button>a. A computer hardware component</button>
+      <button>b. A set of step-by-step instructions</button>
+      <button>c. An operating system</button>
+      <button>d. A storage device</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">2. What is problem solving?</div>
+    <div class="mcq-options">
+      <button>a. Installing software</button>
+      <button>b. Deleting computer files</button>
+      <button>c. Identifying a problem and finding a suitable solution</button>
+      <button>d. Designing computer hardware</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">3. Which of the following represents the correct order of a computational problem?</div>
+    <div class="mcq-options">
+      <button>a. Input, Process, Output</button>
+      <button>b. Output, Input, Process</button>
+      <button>c. Process, Output, Input</button>
+      <button>d. Input, Output, Process</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">4. What is input in a computational problem?</div>
+    <div class="mcq-options">
+      <button>a. Data provided to solve a problem</button>
+      <button>b. The final result</button>
+      <button>c. The processing steps</button>
+      <button>d. The computer memory</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">5. What is output in a computational problem?</div>
+    <div class="mcq-options">
+      <button>a. The data provided to the computer</button>
+      <button>b. The final result produced after processing</button>
+      <button>c. The instructions given to the computer</button>
+      <button>d. The input device</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">6. Which type of computational problem requires a Yes or No answer?</div>
+    <div class="mcq-options">
+      <button>a. Search problem</button>
+      <button>b. Decision problem</button>
+      <button>c. Counting problem</button>
+      <button>d. Optimization problem</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">7. Finding a student's name in a class list is an example of which problem?</div>
+    <div class="mcq-options">
+      <button>a. Decision problem</button>
+      <button>b. Counting problem</button>
+      <button>c. Search problem</button>
+      <button>d. Optimization problem</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">8. Finding the shortest route from home to school is an example of which problem?</div>
+    <div class="mcq-options">
+      <button>a. Search problem</button>
+      <button>b. Counting problem</button>
+      <button>c. Decision problem</button>
+      <button>d. Optimization problem</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">9. Counting the number of students who passed an exam is an example of which problem?</div>
+    <div class="mcq-options">
+      <button>a. Counting problem</button>
+      <button>b. Search problem</button>
+      <button>c. Decision problem</button>
+      <button>d. Optimization problem</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">10. Which type of problem has a clear goal and specific requirements?</div>
+    <div class="mcq-options">
+      <button>a. Ill-defined problem</button>
+      <button>b. Well-defined problem</button>
+      <button>c. Unsolvable problem</button>
+      <button>d. Intractable problem</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">11. Which of the following is an example of an ill-defined problem?</div>
+    <div class="mcq-options">
+      <button>a. Adding two numbers</button>
+      <button>b. Calculating average marks</button>
+      <button>c. Finding the largest number</button>
+      <button>d. Making a city more beautiful</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">12. What is the Generate and Test method?</div>
+    <div class="mcq-options">
+      <button>a. Generating possible solutions and testing them</button>
+      <button>b. Deleting unnecessary data</button>
+      <button>c. Sorting numbers in ascending order</button>
+      <button>d. Writing programs without testing</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">13. Which of the following is an example of an unsolvable problem?</div>
+    <div class="mcq-options">
+      <button>a. Adding two numbers</button>
+      <button>b. Sorting a list</button>
+      <button>c. Halting Problem</button>
+      <button>d. Finding the largest number</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">14. What is a tractable problem?</div>
+    <div class="mcq-options">
+      <button>a. A problem that cannot be solved</button>
+      <button>b. A problem that can be solved in a reasonable amount of time</button>
+      <button>c. A problem without input</button>
+      <button>d. A problem with no possible solution</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">15. What is an intractable problem?</div>
+    <div class="mcq-options">
+      <button>a. A problem that takes no time</button>
+      <button>b. A problem that is always easy to solve</button>
+      <button>c. A problem with a simple solution</button>
+      <button>d. A problem that requires too much time and computing power to solve efficiently</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">16. What is Algorithm Analysis?</div>
+    <div class="mcq-options">
+      <button>a. Evaluating how efficiently an algorithm solves a problem</button>
+      <button>b. Installing an algorithm</button>
+      <button>c. Deleting an algorithm</button>
+      <button>d. Creating computer hardware</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">17. Which two factors are mainly used in algorithm analysis?</div>
+    <div class="mcq-options">
+      <button>a. Input and Output</button>
+      <button>b. Hardware and Software</button>
+      <button>c. Time Complexity and Space Complexity</button>
+      <button>d. Speed and Internet Connection</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">18. What does Time Complexity measure?</div>
+    <div class="mcq-options">
+      <button>a. Memory required by an algorithm</button>
+      <button>b. How execution time increases with input size</button>
+      <button>c. Computer screen size</button>
+      <button>d. Internet speed</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">19. What does Space Complexity measure?</div>
+    <div class="mcq-options">
+      <button>a. Memory required by an algorithm</button>
+      <button>b. Time required by an algorithm</button>
+      <button>c. Screen resolution</button>
+      <button>d. Number of users</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">20. What is Big O Notation?</div>
+    <div class="mcq-options">
+      <button>a. A programming language</button>
+      <button>b. A sorting technique</button>
+      <button>c. A mathematical method used to describe algorithm complexity</button>
+      <button>d. A computer hardware component</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">21. Which letter is used in Big O Notation?</div>
+    <div class="mcq-options">
+      <button>a. A</button>
+      <button>b. B</button>
+      <button>c. C</button>
+      <button>d. O</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">22. Which Big O notation represents Constant Time?</div>
+    <div class="mcq-options">
+      <button>a. O(1)</button>
+      <button>b. O(n)</button>
+      <button>c. O(n²)</button>
+      <button>d. O(log n)</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">23. Which operation is an example of O(1) time complexity?</div>
+    <div class="mcq-options">
+      <button>a. Printing all elements of a list</button>
+      <button>b. Accessing an element using its index</button>
+      <button>c. Comparing every pair of elements</button>
+      <button>d. Searching every element one by one</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">24. Which Big O notation represents Linear Time?</div>
+    <div class="mcq-options">
+      <button>a. O(1)</button>
+      <button>b. O(log n)</button>
+      <button>c. O(n)</button>
+      <button>d. O(n²)</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">25. Which operation is an example of O(n) time complexity?</div>
+    <div class="mcq-options">
+      <button>a. Printing all elements of a list</button>
+      <button>b. Accessing one list element by index</button>
+      <button>c. Performing one addition</button>
+      <button>d. Accessing a fixed memory location</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">26. Which Big O notation represents Quadratic Time?</div>
+    <div class="mcq-options">
+      <button>a. O(1)</button>
+      <button>b. O(n)</button>
+      <button>c. O(log n)</button>
+      <button>d. O(n²)</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">27. Which programming structure commonly produces O(n²) time complexity?</div>
+    <div class="mcq-options">
+      <button>a. A single statement</button>
+      <button>b. A single loop</button>
+      <button>c. A loop inside another loop</button>
+      <button>d. A simple variable assignment</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">28. If a nested loop runs over a list of 3 elements in both loops, how many times does the inner operation run?</div>
+    <div class="mcq-options">
+      <button>a. 3 times</button>
+      <button>b. 9 times</button>
+      <button>c. 6 times</button>
+      <button>d. 12 times</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">29. Which Big O notation represents Logarithmic Time?</div>
+    <div class="mcq-options">
+      <button>a. O(1)</button>
+      <button>b. O(n)</button>
+      <button>c. O(n²)</button>
+      <button>d. O(log n)</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">30. Which searching algorithm commonly has O(log n) time complexity?</div>
+    <div class="mcq-options">
+      <button>a. Binary Search</button>
+      <button>b. Linear Search</button>
+      <button>c. Bubble Sort</button>
+      <button>d. Selection Sort</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">31. Which algorithm design technique divides a large problem into smaller subproblems?</div>
+    <div class="mcq-options">
+      <button>a. Greedy Algorithm</button>
+      <button>b. Backtracking</button>
+      <button>c. Divide and Conquer</button>
+      <button>d. Linear Search</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">32. Which sorting algorithm uses the Divide and Conquer technique?</div>
+    <div class="mcq-options">
+      <button>a. Bubble Sort</button>
+      <button>b. Merge Sort</button>
+      <button>c. Selection Sort</button>
+      <button>d. Linear Search</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">33. What does a Greedy Algorithm choose at each step?</div>
+    <div class="mcq-options">
+      <button>a. The best available option</button>
+      <button>b. A random option</button>
+      <button>c. The last available option</button>
+      <button>d. All possible options</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">34. Which technique stores the results of smaller problems for reuse?</div>
+    <div class="mcq-options">
+      <button>a. Bubble Sort</button>
+      <button>b. Greedy Algorithm</button>
+      <button>c. Dynamic Programming</button>
+      <button>d. Linear Search</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">35. Which algorithm design technique tries different possible solutions and goes back when a choice is incorrect?</div>
+    <div class="mcq-options">
+      <button>a. Divide and Conquer</button>
+      <button>b. Greedy Algorithm</button>
+      <button>c. Dynamic Programming</button>
+      <button>d. Backtracking</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">36. Which sorting algorithm repeatedly compares adjacent elements?</div>
+    <div class="mcq-options">
+      <button>a. Selection Sort</button>
+      <button>b. Bubble Sort</button>
+      <button>c. Binary Search</button>
+      <button>d. Linear Search</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="c">
+    <div class="mcq-question">37. Which sorting algorithm repeatedly finds the smallest element from the unsorted part?</div>
+    <div class="mcq-options">
+      <button>a. Bubble Sort</button>
+      <button>b. Merge Sort</button>
+      <button>c. Selection Sort</button>
+      <button>d. Binary Search</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="a">
+    <div class="mcq-question">38. Which searching algorithm checks elements one by one?</div>
+    <div class="mcq-options">
+      <button>a. Linear Search</button>
+      <button>b. Binary Search</button>
+      <button>c. Bubble Sort</button>
+      <button>d. Selection Sort</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="d">
+    <div class="mcq-question">39. What is the time complexity of Linear Search in the worst case?</div>
+    <div class="mcq-options">
+      <button>a. O(1)</button>
+      <button>b. O(log n)</button>
+      <button>c. O(n²)</button>
+      <button>d. O(n)</button>
+    </div>
+  </div>
+
+  <div class="mcq-item" data-answer="b">
+    <div class="mcq-question">40. What is the time complexity of Binary Search?</div>
+    <div class="mcq-options">
+      <button>a. O(n)</button>
+      <button>b. O(log n)</button>
+      <button>c. O(n²)</button>
+      <button>d. O(1)</button>
+    </div>
+  </div>
+
+</section>
+
+<div class="result-box">
+  <button id="showResult">Show Result</button>
+  <p id="resultText"></p>
+</div>
+      
+<h2 id="faqs">FAQs</h2>
+
+<section class="faq-section">
+
+<h2>Class 11 Computer Science Chapter 3: Algorithms and Problem Solving FAQs</h2>
+
+<div class="faq-item">
+  <button class="faq-question">1. What is Problem Solving in Computer Science?</button>
+  <div class="faq-answer">
+    <p>Problem solving in computer science is the process of identifying a problem and finding a suitable solution using logical steps and computational methods.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">2. What is an Algorithm?</button>
+  <div class="faq-answer">
+    <p>An algorithm is a step-by-step set of instructions used to solve a problem or complete a specific task.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">3. What are the three main parts of a computational problem?</button>
+  <div class="faq-answer">
+    <p>The three main parts are Input, Process, and Output. Input is the data provided, Process is the work performed on the data, and Output is the final result.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">4. What are the main types of computational problems?</button>
+  <div class="faq-answer">
+    <p>The main types of computational problems are Decision Problems, Search Problems, Optimization Problems, and Counting Problems.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">5. What is the difference between well-defined and ill-defined problems?</button>
+  <div class="faq-answer">
+    <p>A well-defined problem has clear goals, inputs, and rules for finding a solution. An ill-defined problem has unclear goals or requirements and may have several possible solutions.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">6. What is the Generate and Test method?</button>
+  <div class="faq-answer">
+    <p>Generate and Test is a problem-solving method in which possible solutions are created one by one and tested until a correct solution is found.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">7. What is the difference between solvable and unsolvable problems?</button>
+  <div class="faq-answer">
+    <p>A solvable problem can be solved by an algorithm in a finite number of steps. An unsolvable problem cannot be solved by any algorithm for all possible cases.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">8. What is the difference between tractable and intractable problems?</button>
+  <div class="faq-answer">
+    <p>Tractable problems can be solved efficiently using available computing resources. Intractable problems require an impractically large amount of time or resources as the input size increases.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">9. What is Algorithm Analysis?</button>
+  <div class="faq-answer">
+    <p>Algorithm analysis is the process of evaluating an algorithm to understand how efficiently it solves a problem in terms of time and memory usage.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">10. What is the difference between Time Complexity and Space Complexity?</button>
+  <div class="faq-answer">
+    <p>Time Complexity measures how the execution time of an algorithm increases with input size, while Space Complexity measures how much memory the algorithm requires.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">11. What is Big O Notation?</button>
+  <div class="faq-answer">
+    <p>Big O Notation is used to describe how an algorithm's time or memory requirements grow as the input size increases. It helps compare the efficiency of algorithms.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">12. What are the main Algorithm Design Techniques?</button>
+  <div class="faq-answer">
+    <p>The main algorithm design techniques include Divide and Conquer, Greedy Algorithms, Dynamic Programming, and Backtracking. These techniques help solve problems in different ways.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">13. What is the difference between Bubble Sort and Selection Sort?</button>
+  <div class="faq-answer">
+    <p>Bubble Sort repeatedly compares adjacent elements and swaps them if they are in the wrong order. Selection Sort repeatedly finds the smallest element from the unsorted part and places it in the correct position.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">14. What is the difference between Linear Search and Binary Search?</button>
+  <div class="faq-answer">
+    <p>Linear Search checks elements one by one until the required value is found. Binary Search repeatedly divides a sorted list into halves to find the required value more quickly.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">15. Which searching algorithm is faster: Linear Search or Binary Search?</button>
+  <div class="faq-answer">
+    <p>Binary Search is generally faster for large, sorted lists because it has O(log n) time complexity. Linear Search has O(n) time complexity and can be used even when the data is not sorted.</p>
+  </div>
+</div>
+
+</section>
+
+<h2>Download Notes</h2>
+  <a href="https://raw.githubusercontent.com/salmanblogsblogs/salman-blogs/main/notes/11-class/chapter-2/class-11-computer-chapter-2-python-programming.pdf">
+  Download PDF
+</a>
+</div>
+</article>
+</main>
+
+<!-- Back to Top Arrow -->
+<button id="backToTop" title="Go to top">&#8679;</button>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <!-- Logo -->
+
+        <div class="footer-column">
+
+            <h2 class="footer-logo">
+
+                Salman<span>Blogs</span>
+
+            </h2>
+
+            <p>
+
+                Salman Blogs is your destination for Technology,
+                Artificial Intelligence, Programming,
+                Education, Health, Business and Lifestyle content.
+
+            </p>
+
+<div class="social-icons">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=100009953895352" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/@ComputerWithSalman" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-youtube"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/salmannicksallu" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/923089051710" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</div>
+
+
+</div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+
+                <li><a href="terms.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+    <h3>Categories</h3>
+
+    <ul>
+
+        <li><a href="technology.html">Technology</a></li>
+
+        <li><a href="computer-science.html">Computer Science</a></li>
+
+        <li><a href="how-to-guides.html">How-To Guides</a></li>
+
+        <li><a href="education.html">Education</a></li>
+
+        <li><a href="ai-tools.html">AI Tools</a></li>
+
+        <li><a href="roadmaps.html">Career Roadmaps</a></li>
+
+        <li><a href="8-computer-science.html">Class 8 Computer</a></li>
+
+        <li><a href="9-computer-science.html">Class 9 Computer</a></li>
+
+        <li><a href="10-computer-science.html">Class 10 Computer</a></li>
+
+        <li><a href="11-computer-science.html">Class 11 Computer</a></li>
+
+        <li><a href="12-computer-science.html">Class 12 Computer</a></li>
+
+    </ul>
+
+</div>
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+
+                Have questions or suggestions?
+
+            </p>
+
+            <a href="contact.html" class="footer-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Salman Blogs. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                question.classList.toggle("active");
+
+                const answer = question.nextElementSibling;
+
+                if (answer.style.maxHeight) {
+
+                    answer.style.maxHeight = null;
+
+                } else {
+
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+    
+</script>
+
+<!-- JS FOR MCQs TESTING. -->
+<script>
+let score = 0;
+
+// Select only interactive MCQs (those with data-answer)
+const mcqs = document.querySelectorAll(".mcq-item[data-answer]");
+const totalQuestions = mcqs.length;
+
+// Object to track answers
+const answers = {};
+
+// Add click listeners to each MCQ
+mcqs.forEach((item, index) => {
+  const correctAnswer = item.getAttribute("data-answer");
+
+  item.querySelectorAll(".mcq-options button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Prevent multiple clicks
+      if (answers[index] !== undefined) return;
+
+      const selected = button.textContent.trim().charAt(0).toLowerCase();
+
+      // Store answer
+      answers[index] = selected;
+
+      if (selected === correctAnswer) {
+        button.classList.add("correct");
+        score++;
+      } else {
+        button.classList.add("wrong");
+
+        // Highlight correct option
+        item.querySelectorAll("button").forEach(btn => {
+          if (btn.textContent.trim().charAt(0).toLowerCase() === correctAnswer) {
+            btn.classList.add("correct");
+          }
+        });
+      }
+
+      // Remove highlight if MCQ was previously highlighted
+      item.classList.remove("highlight-unanswered");
+    });
+  });
+});
+
+// Show result button
+document.getElementById("showResult").addEventListener("click", () => {
+  const nameBox = document.getElementById("username");
+  const name = nameBox.value.trim();
+  let hasUnanswered = false;
+
+  // Highlight empty name box
+  if (name === "") {
+    nameBox.classList.add("highlight-unanswered");
+    nameBox.focus();
+    return;
+  } else {
+    nameBox.classList.remove("highlight-unanswered");
+  }
+
+  // Highlight unanswered MCQs
+  mcqs.forEach((item, index) => {
+    if (answers[index] === undefined) {
+      item.classList.add("highlight-unanswered");
+      hasUnanswered = true;
+    } else {
+      item.classList.remove("highlight-unanswered");
+    }
+  });
+
+  if (hasUnanswered) {
+    // Scroll to first unanswered MCQ
+    document.querySelector(".mcq-item.highlight-unanswered").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  // Show result
+  document.getElementById("resultText").innerHTML =
+    `Name: <strong>${name}</strong><br>Marks: <strong>${score} / ${totalQuestions}</strong>`;
+});
+</script>
+
+<script>
+  // Get the button
+  const backToTop = document.getElementById("backToTop");
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top on click
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
