@@ -2357,7 +2357,8 @@ Browse Categories
     </div>
   </div>
 
-</section>
+  
+
 
  <!-- Final -->
          <div class="highlight">
@@ -2386,6 +2387,58 @@ Browse Categories
     
   </main>
 
+  <div class="article-share">
+  <button id="shareArticleBtn" type="button">
+    <span>↗</span>
+    Share This Article
+  </button>
+</div>
+
+<div id="sharePopup" class="share-popup">
+  <div class="share-box">
+
+    <button id="closeShare" class="close-share" type="button">
+      ×
+    </button>
+
+    <h3>Share This Article</h3>
+
+    <p>Share this article with your friends and followers.</p>
+
+    <div class="share-options">
+
+      <a id="whatsappShare" class="share-option whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+        <span>WhatsApp</span>
+      </a>
+
+      <a id="facebookShare" class="share-option facebook" href="#" target="_blank" rel="noopener noreferrer">
+        <span>Facebook</span>
+      </a>
+
+      <a id="twitterShare" class="share-option twitter" href="#" target="_blank" rel="noopener noreferrer">
+        <span>X</span>
+      </a>
+
+     <a id="instagramShare" class="share-option instagram" href="#" target="_blank" rel="noopener noreferrer">
+      <span>Instagram</span>
+      </a>
+
+      <a id="emailShare" class="share-option email" href="#">
+        <span>Email</span>
+      </a>
+
+      <button id="copyLink" class="share-option copy-link" type="button">
+        <span>Copy Link</span>
+      </button>
+
+    </div>
+
+    <p id="copyMessage" class="copy-message"></p>
+
+  </div>
+</div>
+
+</section>
 <!-- Back to Top Arrow -->
 <button id="backToTop" title="Go to top">&#8679;</button>
 
@@ -2595,8 +2648,6 @@ behavior:"smooth"
 
 </script>
 
-</body>
-
 <!-- BACK TO TOP SCRIPT. -->
  <script>
   // Get the button
@@ -2617,5 +2668,217 @@ behavior:"smooth"
   });
 </script>
 
+<!-- USE OF SHARING SCRIPT. -->
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
 
+  const shareButton = document.getElementById("shareArticleBtn");
+  const sharePopup = document.getElementById("sharePopup");
+  const closeShare = document.getElementById("closeShare");
+
+  const whatsappShare = document.getElementById("whatsappShare");
+  const facebookShare = document.getElementById("facebookShare");
+  const twitterShare = document.getElementById("twitterShare");
+  const instagramShare = document.getElementById("instagramShare");
+  const emailShare = document.getElementById("emailShare");
+  const copyLink = document.getElementById("copyLink");
+  const copyMessage = document.getElementById("copyMessage");
+
+  const pageTitle = document.title;
+  const pageURL = window.location.href;
+
+
+  /* =========================
+     OPEN SHARE POPUP
+  ========================= */
+
+  shareButton.addEventListener("click", function () {
+    sharePopup.classList.add("active");
+  });
+
+
+  /* =========================
+     CLOSE SHARE POPUP
+  ========================= */
+
+  closeShare.addEventListener("click", function () {
+    sharePopup.classList.remove("active");
+  });
+
+
+  /* Close when clicking outside */
+
+  sharePopup.addEventListener("click", function (event) {
+
+    if (event.target === sharePopup) {
+      sharePopup.classList.remove("active");
+    }
+
+  });
+
+
+  /* =========================
+     OPEN SHARE WINDOW
+  ========================= */
+
+  function openShareWindow(url) {
+
+    window.open(
+      url,
+      "_blank",
+      "width=650,height=600,noopener,noreferrer"
+    );
+
+  }
+
+
+  /* =========================
+     WHATSAPP
+  ========================= */
+
+  whatsappShare.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+    const message =
+      pageTitle +
+      "\n\n" +
+      pageURL;
+
+    const url =
+      "https://api.whatsapp.com/send?text=" +
+      encodeURIComponent(message);
+
+    openShareWindow(url);
+
+  });
+
+
+  /* =========================
+     FACEBOOK
+  ========================= */
+
+  facebookShare.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+    const url =
+      "https://www.facebook.com/sharer/sharer.php?u=" +
+      encodeURIComponent(pageURL);
+
+    openShareWindow(url);
+
+  });
+
+
+  /* =========================
+     X / TWITTER
+  ========================= */
+
+  twitterShare.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+    const url =
+      "https://twitter.com/intent/tweet?text=" +
+      encodeURIComponent(pageTitle) +
+      "&url=" +
+      encodeURIComponent(pageURL);
+
+    openShareWindow(url);
+
+  });
+
+
+  /* =========================
+   INSTAGRAM
+========================= */
+
+instagramShare.addEventListener("click", function (event) {
+
+  event.preventDefault();
+
+  window.open(
+    "https://www.instagram.com/",
+    "_blank"
+  );
+
+});
+
+
+  /* =========================
+     EMAIL
+  ========================= */
+
+  emailShare.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+    const subject =
+      encodeURIComponent(pageTitle);
+
+    const body =
+      encodeURIComponent(
+        "Check out this article from Salman Blogs:\n\n" +
+        pageTitle +
+        "\n\n" +
+        pageURL
+      );
+
+    window.location.href =
+      "mailto:?subject=" +
+      subject +
+      "&body=" +
+      body;
+
+  });
+
+
+  /* =========================
+     COPY LINK
+  ========================= */
+
+  copyLink.addEventListener("click", async function () {
+
+    try {
+
+      await navigator.clipboard.writeText(pageURL);
+
+      copyMessage.textContent =
+        "✓ Article link copied!";
+
+      setTimeout(function () {
+        copyMessage.textContent = "";
+      }, 2500);
+
+    } catch (error) {
+
+      const textArea =
+        document.createElement("textarea");
+
+      textArea.value = pageURL;
+
+      document.body.appendChild(textArea);
+
+      textArea.select();
+
+      document.execCommand("copy");
+
+      textArea.remove();
+
+      copyMessage.textContent =
+        "✓ Article link copied!";
+
+      setTimeout(function () {
+        copyMessage.textContent = "";
+      }, 2500);
+
+    }
+
+  });
+
+});
+</script>
+
+</body>
 </html>
